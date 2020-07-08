@@ -100,6 +100,7 @@ struct TeamMemberEditor: View {
                     }
                 }
 
+                SegmentedControl(titles: ["Male", "Female", "Unspecified"], values: [Gender.male, .female, .unspecified], selectedSegmentIndex: $viewModel.gender)
                 SegmentedControl(titles: ["Shiny", "Not Shiny"], values: [true, false], selectedSegmentIndex: $viewModel.isShiny)
             }
 

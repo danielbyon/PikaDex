@@ -6,7 +6,7 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 import Combine
 
 class TeamBuilderViewModel: ObservableObject {
@@ -44,6 +44,11 @@ class TeamBuilderViewModel: ObservableObject {
 
     func removeTeams(atOffsets offsets: IndexSet) {
         teams.remove(atOffsets: offsets)
+    }
+
+    func exportTeam(_ viewModel: TeamViewModel) {
+        let team = viewModel.makeTeam()
+        UIPasteboard.general.string = team.pokePaste
     }
 
     private func load() {

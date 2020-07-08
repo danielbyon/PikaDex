@@ -18,6 +18,7 @@ struct DescriptionCell: View {
                 .monospacedBody()
                 .multilineTextAlignment(.leading)
                 .padding(.vertical, 4.0)
+                .fixedSize(horizontal: false, vertical: true)
             Spacer()
         }
     }

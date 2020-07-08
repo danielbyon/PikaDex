@@ -121,7 +121,7 @@ private struct TeamMemberCell: View {
     var body: some View {
         Card {
             VStack(alignment: .leading, spacing: 16.0) {
-                TeamMemberFormInfo(form: member.pokemonForm)
+                TeamMemberFormInfo(form: member.pokemonForm, gender: member.gender)
                 TeamMemberMoves(member: member)
                 TeamMemberStats(member: member)
                 TeamMemberFactoids(member: member)
@@ -153,7 +153,15 @@ private struct AddTeamMemberCell: View {
 private struct TeamMemberFormInfo: View {
 
     let form: PokemonForm
+    let gender: Gender
 
+    private var resolvedName: String {
+        var retVal = form.pokemon.name
+        if let abbreviation = gender.abbreviation {
+            retVal += " (\(abbreviation))"
+        }
+        return retVal
+    }
     private var shouldShowFormName: Bool { form.name != form.pokemon.name }
 
     var body: some View {
@@ -161,7 +169,7 @@ private struct TeamMemberFormInfo: View {
             // TODO: 1.0 release
 //            PokemonFormSprite(form: form)
             VStack(alignment: .leading) {
-                Text(form.pokemon.name)
+                Text(resolvedName)
                     .monospacedBody()
                     .fixedSize(horizontal: false, vertical: true)
                 if shouldShowFormName {
@@ -334,6 +342,21 @@ private struct TeamMemberFactoids: View {
                 Factoid(title: "Happiness", value: "\(member.happiness)")
                 Spacer(minLength: 0)
             }
+        }
+    }
+
+}
+
+private extension Gender {
+
+    var abbreviation: String? {
+        switch self {
+        case .male:
+            return "M"
+        case .female:
+            return "F"
+        case .unspecified:
+            return nil
         }
     }
 
