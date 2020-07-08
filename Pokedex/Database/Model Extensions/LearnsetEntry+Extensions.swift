@@ -1,0 +1,14 @@
+//
+//  LearnsetEntry+Extensions.swift
+//  Database
+//
+//  Created by Daniel Byon on 2/17/20.
+//  Copyright © 2020 Daniel Byon. All rights reserved.
+//
+
+import Foundation
+
+// MARK: - Values
+public extension LearnsetEntry {
+
+}

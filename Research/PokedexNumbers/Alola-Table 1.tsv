@@ -1,0 +1,303 @@
+alola	melemele	akala	ulaula	poni	national	name
+#001	#001				#722	Rowlet
+#002	#002				#723	Dartrix
+#003	#003				#724	Decidueye
+#004	#004				#725	Litten
+#005	#005				#726	Torracat
+#006	#006				#727	Incineroar
+#007	#007				#728	Popplio
+#008	#008				#729	Brionne
+#009	#009				#730	Primarina
+#010	#010	#001	#001	#001	#731	Pikipek
+#011	#011	#002	#002	#002	#732	Trumbeak
+#012	#012	#003	#003	#003	#733	Toucannon
+#013	#013	#004	#004	#004	#734	Yungoos
+#014	#014	#005	#005	#005	#735	Gumshoos
+#015	#015	#006	#006	#006	#019	Rattata
+#016	#016	#007	#007	#007	#020	Raticate
+#017	#017	#008			#010	Caterpie
+#018	#018	#009			#011	Metapod
+#019	#019	#010			#012	Butterfree
+#020	#020		#008		#165	Ledyba
+#021	#021		#009		#166	Ledian
+#022	#022		#010		#167	Spinarak
+#023	#023		#011		#168	Ariados
+#024	#024				#172	Pichu
+#025	#025				#025	Pikachu
+#026	#026				#026	Raichu
+#027	#027	#011	#012		#736	Grubbin
+#028	#028	#012	#013		#737	Charjabug
+#029	#029	#013	#014		#738	Vikavolt
+#030	#030	#014			#438	Bonsly
+#031	#031	#015			#185	Sudowoodo
+#032	#032	#016	#015	#008	#440	Happiny
+#033	#033	#017	#016	#009	#113	Chansey
+#034	#034	#018	#017	#010	#242	Blissey
+#035	#035				#446	Munchlax
+#036	#036				#143	Snorlax
+#037	#037		#018		#079	Slowpoke
+#038	#038		#019		#080	Slowbro
+#039	#039		#020		#199	Slowking
+#040	#040	#019	#021	#011	#278	Wingull
+#041	#041	#020	#022	#012	#279	Pelipper
+#042	#042				#063	Abra
+#043	#043				#064	Kadabra
+#044	#044				#065	Alakazam
+#045	#045		#023		#052	Meowth
+#046	#046		#024		#053	Persian
+#047	#047		#025		#081	Magnemite
+#048	#048		#026		#082	Magneton
+#049	#049		#027		#462	Magnezone
+#050	#050		#028		#088	Grimer
+#051	#051		#029		#089	Muk
+#052	#052				#058	Growlithe
+#053	#053				#059	Arcanine
+#054	#054			#013	#096	Drowzee
+#055	#055			#014	#097	Hypno
+#056	#056			#015	#296	Makuhita
+#057	#057			#016	#297	Hariyama
+#058	#058				#235	Smeargle
+#059	#059	#021	#030	#017	#739	Crabrawler
+#060	#060	#022	#031	#018	#740	Crabominable
+#061	#061	#023	#032		#092	Gastly
+#062	#062	#024	#033		#093	Haunter
+#063	#063	#025	#034		#094	Gengar
+#064	#064				#425	Drifloon
+#065	#065				#426	Drifblim
+#066	#066				#200	Misdreavus
+#067	#067				#429	Mismagius
+#068	#068	#026	#035	#019	#041	Zubat
+#069	#069	#027	#036	#020	#042	Golbat
+#070	#070	#028	#037	#021	#169	Crobat
+#071	#071	#029	#038	#022	#050	Diglett
+#072	#072	#030	#039	#023	#051	Dugtrio
+#073	#073		#040	#024	#021	Spearow
+#074	#074		#041	#025	#022	Fearow
+#075	#075			#026	#627	Rufflet
+#076	#076			#027	#628	Braviary
+#077	#077			#028	#629	Vullaby
+#078	#078			#029	#630	Mandibuzz
+#079	#079			#030	#056	Mankey
+#080	#080			#031	#057	Primeape
+#081	#081				#225	Delibird
+#082	#082	#031	#042	#032	#741	Oricorio
+#083	#083		#043	#033	#742	Cutiefly
+#084	#084		#044	#034	#743	Ribombee
+#085	#085		#045	#035	#548	Petilil
+#086	#086		#046	#036	#549	Lilligant
+#087	#087		#047	#037	#546	Cottonee
+#088	#088		#048	#038	#547	Whimsicott
+#089	#089	#032	#049	#039	#054	Psyduck
+#090	#090	#033	#050	#040	#055	Golduck
+#091	#091	#034	#051	#041	#129	Magikarp
+#092	#092	#035	#052	#042	#130	Gyarados
+#093	#093	#036		#043	#339	Barboach
+#094	#094	#037		#044	#340	Whiscash
+#095	#095			#045	#066	Machop
+#096	#096			#046	#067	Machoke
+#097	#097			#047	#068	Machamp
+#098	#098			#048	#524	Roggenrola
+#099	#099			#049	#525	Boldore
+#100	#100			#050	#526	Gigalith
+#101	#101			#051	#703	Carbink
+#102	#102			#052	#302	Sableye
+#103	#103			#053	#744	Rockruff
+#104	#104			#054	#745	Lycanroc
+#105	#105				#327	Spinda
+#106	#106	#038	#053	#055	#072	Tentacool
+#107	#107	#039	#054	#056	#073	Tentacruel
+#108	#108	#040	#055	#057	#456	Finneon
+#109	#109	#041	#056	#058	#457	Lumineon
+#110	#110	#042	#057		#746	Wishiwashi
+#111	#111	#043			#370	Luvdisc
+#112	#112	#044			#222	Corsola
+#113	#113	#045			#747	Mareanie
+#114	#114	#046			#748	Toxapex
+#115	#115				#090	Shellder
+#116	#116				#091	Cloyster
+#117	#117				#371	Bagon
+#118	#118				#372	Shelgon
+#119	#119				#373	Salamence
+#120		#047			#506	Lillipup
+#121		#048			#507	Herdier
+#122		#049			#508	Stoutland
+#123		#050			#133	Eevee
+#124		#051			#134	Vaporeon
+#125		#052			#135	Jolteon
+#126		#053			#136	Flareon
+#127		#054			#196	Espeon
+#128		#055			#197	Umbreon
+#129		#056			#470	Leafeon
+#130		#057			#471	Glaceon
+#131		#058			#700	Sylveon
+#132		#059	#058	#059	#749	Mudbray
+#133		#060	#059	#060	#750	Mudsdale
+#134		#061			#174	Igglybuff
+#135		#062			#039	Jigglypuff
+#136		#063			#040	Wigglytuff
+#137		#064		#061	#128	Tauros
+#138		#065		#062	#241	Miltank
+#139		#066	#060		#283	Surskit
+#140		#067	#061		#284	Masquerain
+#141		#068	#062		#751	Dewpider
+#142		#069	#063		#752	Araquanid
+#143		#070			#753	Fomantis
+#144		#071			#754	Lurantis
+#145		#072	#064		#755	Morelull
+#146		#073	#065		#756	Shiinotic
+#147		#074	#066		#046	Paras
+#148		#075	#067		#047	Parasect
+#149		#076	#068		#060	Poliwag
+#150		#077	#069		#061	Poliwhirl
+#151		#078	#070		#062	Poliwrath
+#152		#079	#071		#186	Politoed
+#153		#080	#072		#118	Goldeen
+#154		#081	#073		#119	Seaking
+#155		#082			#349	Feebas
+#156		#083			#350	Milotic
+#157		#084			#594	Alomomola
+#158		#085			#661	Fletchling
+#159		#086			#662	Fletchinder
+#160		#087			#663	Talonflame
+#161		#088			#757	Salandit
+#162		#089			#758	Salazzle
+#163		#090			#104	Cubone
+#164		#091			#105	Marowak
+#165		#092			#115	Kangaskhan
+#166		#093			#240	Magby
+#167		#094			#126	Magmar
+#168		#095			#467	Magmortar
+#169		#096		#063	#759	Stufful
+#170		#097		#064	#760	Bewear
+#171		#098			#761	Bounsweet
+#172		#099			#762	Steenee
+#173		#100			#763	Tsareena
+#174		#101			#764	Comfey
+#175		#102		#065	#127	Pinsir
+#176		#103			#765	Oranguru
+#177		#104			#766	Passimian
+#178		#105	#074	#066	#704	Goomy
+#179		#106	#075	#067	#705	Sliggoo
+#180		#107	#076	#068	#706	Goodra
+#181		#108	#077	#069	#351	Castform
+#182		#109		#070	#767	Wimpod
+#183		#110		#071	#768	Golisopod
+#184		#111			#120	Staryu
+#185		#112			#121	Starmie
+#186		#113			#769	Sandygast
+#187		#114			#770	Palossand
+#188		#115			#408	Cranidos
+#189		#116			#409	Rampardos
+#190		#117			#410	Shieldon
+#191		#118			#411	Bastiodon
+#192		#119			#566	Archen
+#193		#120			#567	Archeops
+#194		#121			#564	Tirtouga
+#195		#122			#565	Carracosta
+#196		#123			#708	Phantump
+#197		#124			#709	Trevenant
+#198		#125			#299	Nosepass
+#199		#126			#476	Probopass
+#200		#127			#771	Pyukumuku
+#201		#128			#170	Chinchou
+#202		#129			#171	Lanturn
+#203					#772	Type: Null
+#204					#773	Silvally
+#205					#718	Zygarde
+#206			#078		#568	Trubbish
+#207			#079		#569	Garbodor
+#208			#080	#072	#227	Skarmory
+#209			#081		#132	Ditto
+#210			#082		#173	Cleffa
+#211			#083		#035	Clefairy
+#212			#084		#036	Clefable
+#213			#085		#774	Minior
+#214			#086		#374	Beldum
+#215			#087		#375	Metang
+#216			#088		#376	Metagross
+#217			#089		#137	Porygon
+#218			#090		#233	Porygon2
+#219			#091		#474	Porygon-Z
+#220			#092		#674	Pancham
+#221			#093		#675	Pangoro
+#222			#094		#775	Komala
+#223			#095		#324	Torkoal
+#224			#096		#776	Turtonator
+#225			#097		#777	Togedemaru
+#226			#098		#239	Elekid
+#227			#099		#125	Electabuzz
+#228			#100		#466	Electivire
+#229			#101		#074	Geodude
+#230			#102		#075	Graveler
+#231			#103		#076	Golem
+#232			#104		#551	Sandile
+#233			#105		#552	Krokorok
+#234			#106		#553	Krookodile
+#235			#107		#328	Trapinch
+#236			#108		#329	Vibrava
+#237			#109		#330	Flygon
+#238			#110		#443	Gible
+#239			#111		#444	Gabite
+#240			#112		#445	Garchomp
+#241			#113		#707	Klefki
+#242			#114		#778	Mimikyu
+#243			#115		#779	Bruxish
+#244			#116		#780	Drampa
+#245			#117		#359	Absol
+#246			#118		#361	Snorunt
+#247			#119		#362	Glalie
+#248			#120		#478	Froslass
+#249			#121		#215	Sneasel
+#250			#122		#461	Weavile
+#251			#123		#027	Sandshrew
+#252			#124		#028	Sandslash
+#253			#125		#037	Vulpix
+#254			#126		#038	Ninetales
+#255			#127		#582	Vanillite
+#256			#128		#583	Vanillish
+#257			#129		#584	Vanilluxe
+#258				#073	#209	Snubbull
+#259				#074	#210	Granbull
+#260				#075	#422	Shellos
+#261				#076	#423	Gastrodon
+#262				#077	#369	Relicanth
+#263				#078	#781	Dhelmise
+#264				#079	#318	Carvanha
+#265				#080	#319	Sharpedo
+#266				#081	#320	Wailmer
+#267				#082	#321	Wailord
+#268				#083	#131	Lapras
+#269				#084	#102	Exeggcute
+#270				#085	#103	Exeggutor
+#271				#086	#782	Jangmo-o
+#272				#087	#783	Hakamo-o
+#273				#088	#784	Kommo-o
+#274				#089	#587	Emolga
+#275				#090	#123	Scyther
+#276				#091	#212	Scizor
+#277				#092	#198	Murkrow
+#278				#093	#430	Honchkrow
+#279				#094	#447	Riolu
+#280				#095	#448	Lucario
+#281				#096	#147	Dratini
+#282				#097	#148	Dragonair
+#283				#098	#149	Dragonite
+#284				#099	#142	Aerodactyl
+#285	#120				#785	Tapu Koko
+#286		#130			#786	Tapu Lele
+#287			#130		#787	Tapu Bulu
+#288				#100	#788	Tapu Fini
+#289					#789	Cosmog
+#290					#790	Cosmoem
+#291					#791	Solgaleo
+#292					#792	Lunala
+#293					#793	Nihilego
+#294					#794	Buzzwole
+#295					#795	Pheromosa
+#296					#796	Xurkitree
+#297					#797	Celesteela
+#298					#798	Kartana
+#299					#799	Guzzlord
+#300					#800	Necrozma
+#301					#801	Magearna
+#302					#802	Marshadow

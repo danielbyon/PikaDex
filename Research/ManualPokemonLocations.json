@@ -1,0 +1,3804 @@
+{
+  "johto": {
+    "Safari Zone": {
+      "4": {
+        "Peak": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Fearow",
+                  "rarity": "10%",
+                  "levels": "44",
+                  "description": "5 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Paras",
+                  "rarity": "10%",
+                  "levels": "42",
+                  "description": "3 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Geodude",
+                  "rarity": "15%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Graveler",
+                  "rarity": "20%",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Slowbro",
+                  "rarity": "10%",
+                  "levels": "45",
+                  "description": "5 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magnemite",
+                  "rarity": "20%",
+                  "levels": "15-16"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magneton",
+                  "rarity": "20%",
+                  "levels": "17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magmar",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magmar",
+                  "rarity": "10%",
+                  "levels": "41",
+                  "description": "10 Peak Blocks",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wobbuffet",
+                  "rarity": "10%",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wobbuffet",
+                  "rarity": "10%",
+                  "levels": "41",
+                  "description": "10 Peak Blocks",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Linoone",
+                  "rarity": "10%",
+                  "levels": "46",
+                  "description": "5 Plain Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Vigoroth",
+                  "rarity": "10%",
+                  "levels": "47",
+                  "description": "56 Forest & 28 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lairon",
+                  "rarity": "10%",
+                  "levels": "45",
+                  "description": "24 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Zangoose",
+                  "rarity": "10%",
+                  "levels": "43-45",
+                  "description": "12 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Spheal",
+                  "rarity": "10%",
+                  "levels": "44-45",
+                  "description": "35 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Bronzor",
+                  "rarity": "10%",
+                  "levels": "45-46",
+                  "description": "35 Peak & 14 Forest Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Desert": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Fearow",
+                  "rarity": "30%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Fearow",
+                  "rarity": "10%",
+                  "levels": "38",
+                  "description": "3 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Fearow",
+                  "rarity": "10%",
+                  "levels": "41",
+                  "description": "6 Peak Blocks",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Sandshrew",
+                  "rarity": "40%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Sandslash",
+                  "rarity": "30%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Cubone",
+                  "rarity": "20%",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Marowak",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Marowak",
+                  "rarity": "10%",
+                  "levels": "41",
+                  "description": "6 Peak Blocks",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lotad",
+                  "rarity": "10%",
+                  "levels": "38",
+                  "description": "8 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Spinda",
+                  "rarity": "10%",
+                  "levels": "45",
+                  "description": "14 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Trapinch",
+                  "rarity": "10%",
+                  "levels": "46-47",
+                  "description": "50 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Vibrava",
+                  "rarity": "10%",
+                  "levels": "44-45",
+                  "description": "49 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Cacnea",
+                  "rarity": "10%",
+                  "levels": "35",
+                  "description": "35 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Cacturne",
+                  "rarity": "10%",
+                  "levels": "48",
+                  "description": "42 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Hippopotas",
+                  "rarity": "10%",
+                  "levels": "43",
+                  "description": "28 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Carnivine",
+                  "rarity": "10%",
+                  "levels": "48",
+                  "description": "49 Plains Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Plains": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Rattata",
+                  "rarity": "30%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Raticate",
+                  "rarity": "30%",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Abra",
+                  "rarity": "30%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Ponyta",
+                  "rarity": "10%",
+                  "levels": "42",
+                  "description": "5 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Girafarig",
+                  "rarity": "10%",
+                  "levels": "15"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Girafarig",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Girafarig",
+                  "rarity": "10%",
+                  "levels": "40",
+                  "description": "3 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Houndoom",
+                  "rarity": "10%",
+                  "levels": "43-44",
+                  "description": "10 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Stantler",
+                  "rarity": "40%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Stantler",
+                  "rarity": "10%",
+                  "levels": "40",
+                  "description": "3 Plains Blocks",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Smeargle",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Smeargle",
+                  "rarity": "10%",
+                  "levels": "41",
+                  "description": "3 Forest Blocks",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Zigzagoon",
+                  "rarity": "10%",
+                  "levels": "44",
+                  "description": "15 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lotad",
+                  "rarity": "10%",
+                  "levels": "42",
+                  "description": "12 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Surskit",
+                  "rarity": "10%",
+                  "levels": "46",
+                  "description": "28 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Manectric",
+                  "rarity": "10%",
+                  "levels": "45",
+                  "description": "15 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Zangoose",
+                  "rarity": "10%",
+                  "levels": "43-45",
+                  "description": "15 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Shinx",
+                  "rarity": "10%",
+                  "levels": "43-44",
+                  "description": "15 Plains Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Meadow": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Raticate",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "5 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Clefairy",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Clefairy",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "3 Peak Blocks",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Jigglypuff",
+                  "rarity": "40%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Geodude",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "3 Peak Blocks",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Chansey",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "12 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Marill",
+                  "rarity": "20%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Hoppip",
+                  "rarity": "30%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Skiploom",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Skiploom",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "8 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Sunkern",
+                  "rarity": "20%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wooper",
+                  "rarity": "30%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wooper",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "3 Waterside Blocks",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seedot",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "35 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Nuzleaf",
+                  "rarity": "unknown",
+                  "levels": "38",
+                  "description": "28 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Nuzleaf",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "35 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Nosepass",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "35 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Riolu",
+                  "rarity": "unknown",
+                  "levels": "45-46",
+                  "description": "42 Peak & 28 Forest Blocks"
+                }
+              ]
+            }
+          },
+          "Old Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "12-15"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "15",
+                  "description": "2 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "16",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "12-15"
+                }
+              ]
+            }
+          },
+          "Good Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "22-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "24-25"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "27",
+                  "description": "5 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "22-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "unknown",
+                  "levels": "28",
+                  "description": "7 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Super Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "22-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "35-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "14 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Surfing": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Marill",
+                  "rarity": "unknown",
+                  "levels": "16-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Skiploom",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wooper",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Masquerain",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Masquerain",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "14 Waterside Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Forest": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Pidgey",
+                  "rarity": "20%",
+                  "levels": "15-17",
+                  "description": "5 Plains Blocks",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Bellsprout",
+                  "rarity": "45%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gastly",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Haunter",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lickitung",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Mr. Mime",
+                  "rarity": "15%",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Mr. Mime",
+                  "rarity": "15%",
+                  "levels": "45",
+                  "description": "3 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Electabuzz",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "4 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Misdreavus",
+                  "rarity": "15%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Misdreavus",
+                  "rarity": "15%",
+                  "levels": "42",
+                  "description": "4 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Surskit",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "24 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Shuppet",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "35 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Beldum",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "63 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Bidoof",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Budew",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "24 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Bronzong",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "56 Peak & 35 Forest Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Swamp": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Jigglypuff",
+                  "rarity": "40%",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Paras",
+                  "rarity": "20%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Parasect",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "3 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Weepinbell",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "3 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Drowzee",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Hypno",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Voltorb",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "10 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Sentret",
+                  "rarity": "30%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Furret",
+                  "rarity": "unknown",
+                  "levels": "42"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Murkrow",
+                  "rarity": "10%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Murkrow",
+                  "rarity": "unknown",
+                  "levels": "37",
+                  "description": "5 Forest Blocks",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Duskull",
+                  "rarity": "unknown",
+                  "levels": "38",
+                  "description": "28 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Chimecho",
+                  "rarity": "unknown",
+                  "levels": "46-47",
+                  "description": "15 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Bagon",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "56 Peak & 35 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Pachirisu",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "10 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Floatzel",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "10 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Old Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Goldeen",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "description": "2 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seaking",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "100%",
+                  "levels": "12-15"
+                }
+              ]
+            }
+          },
+          "Good Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Goldeen",
+                  "rarity": "30%",
+                  "levels": "22-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seaking",
+                  "rarity": "20%",
+                  "levels": "24-27"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seaking",
+                  "rarity": "unknown",
+                  "levels": "24-25",
+                  "description": "6 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "50%",
+                  "levels": "22-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Dratini",
+                  "rarity": "unknown",
+                  "levels": "29",
+                  "description": "10 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Super Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Goldeen",
+                  "rarity": "50%",
+                  "levels": "35-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seaking",
+                  "rarity": "30%",
+                  "levels": "35-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Dratini",
+                  "rarity": "20%",
+                  "levels": "36-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Dragonair",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "15 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Dragonair",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "20 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Surfing": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Goldeen",
+                  "rarity": "50%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seaking",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "4 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "50%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Murkrow",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Duskull",
+                  "rarity": "unknown",
+                  "levels": "48",
+                  "description": "35 Waterside Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Marshland": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Ekans",
+                  "rarity": "20%",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Arbok",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Oddish",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gloom",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gloom",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "2 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Diglett",
+                  "rarity": "unknown",
+                  "levels": "43",
+                  "description": "5 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Grimer",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Muk",
+                  "rarity": "unknown",
+                  "levels": "38",
+                  "description": "8 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Koffing",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Weezing",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Jumpluff",
+                  "rarity": "unknown",
+                  "levels": "38",
+                  "description": "5 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wooper",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Shuckle",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "8 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Roselia",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "49 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seviper",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "35 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Banette",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "49 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Croagunk",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "42 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Carnivine",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "35 Forest Blocks"
+                }
+              ]
+            }
+          },
+          "Old Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "12-15"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "description": "2 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "16-18",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "12-15"
+                }
+              ]
+            }
+          },
+          "Good Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "25%",
+                  "levels": "22"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "75%",
+                  "levels": "22-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "unknown",
+                  "levels": "24-25",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "50%",
+                  "levels": "28-29",
+                  "description": "4 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Super Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "35-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "unknown",
+                  "levels": "36-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Barboach",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "4 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Barboach",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "5 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Surfing": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "16-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Grimer",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Muk",
+                  "rarity": "unknown",
+                  "levels": "48",
+                  "description": "16 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Jumpluff",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wooper",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                }
+              ]
+            }
+          }
+        },
+        "Mountain": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Rattata",
+                  "rarity": "30%",
+                  "levels": "15-16",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Rattata",
+                  "rarity": "10%",
+                  "levels": "15-16",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Raticate",
+                  "rarity": "30%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Zubat",
+                  "rarity": "50%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Golbat",
+                  "rarity": "30%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magneton",
+                  "rarity": "10%",
+                  "levels": "17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magneton",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "3 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Krabby",
+                  "rarity": "unknown",
+                  "levels": "43",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lickitung",
+                  "rarity": "20%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Larvitar",
+                  "rarity": "10%",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Larvitar",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "5 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Meditite",
+                  "rarity": "unknown",
+                  "levels": "43",
+                  "description": "20 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Volbeat",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "10 Plain Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lunatone",
+                  "rarity": "20%",
+                  "levels": "46",
+                  "description": "15 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Dusclops",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "35 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Sealeo",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "49 Waterside & 21 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Metang",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "56 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Chingling",
+                  "rarity": "unknown",
+                  "levels": "38",
+                  "description": "10 Forest Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Rocky Beach": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Zubat",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Slowpoke",
+                  "rarity": "unknown",
+                  "levels": "16-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Slowbro",
+                  "rarity": "unknown",
+                  "levels": "17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Slowbro",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "3 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Slowbro",
+                  "rarity": "unknown",
+                  "levels": "37",
+                  "description": "5 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Doduo",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Dodrio",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "4 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Krabby",
+                  "rarity": "unknown",
+                  "levels": "16-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Kingler",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "8 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Mareep",
+                  "rarity": "unknown",
+                  "levels": "43",
+                  "description": "5 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Aron",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "24 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Electrike",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "10 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Manectric",
+                  "rarity": "unknown",
+                  "levels": "37",
+                  "description": "10 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Budew",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "18 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gible",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "52 Plains & 68 Peak Blocks"
+                }
+              ]
+            }
+          },
+          "Old Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Krabby",
+                  "rarity": "30%",
+                  "levels": "13-15"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Krabby",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "description": "2 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Krabby",
+                  "rarity": "unknown",
+                  "levels": "18",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Goldeen",
+                  "rarity": "unknown",
+                  "levels": "13-15"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "12-14"
+                }
+              ]
+            }
+          },
+          "Good Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "40%",
+                  "levels": "22-25"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Kingler",
+                  "rarity": "unknown",
+                  "levels": "—",
+                  "description": "5 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Kingler",
+                  "rarity": "unknown",
+                  "levels": "—",
+                  "description": "8 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Goldeen",
+                  "rarity": "unknown",
+                  "levels": "22"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "50%",
+                  "levels": "22"
+                }
+              ]
+            }
+          },
+          "Super Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Kingler",
+                  "rarity": "unknown",
+                  "levels": "38-39"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Goldeen",
+                  "rarity": "unknown",
+                  "levels": "35-38"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Seaking",
+                  "rarity": "unknown",
+                  "levels": "36-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Corphish",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "15 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Corphish",
+                  "rarity": "unknown",
+                  "levels": "48",
+                  "description": "20 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Surfing": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "15-16"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "15-16"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "15-16"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "36",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "—",
+                  "description": "14 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "41-46",
+                  "description": "18 Waterside Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Wasteland": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Fearow",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Golduck",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "3 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Machop",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Machoke",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Machoke",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "5 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Bellsprout",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "description": "3 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magnemite",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Onix",
+                  "rarity": "20%",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Krabby",
+                  "rarity": "unknown",
+                  "levels": "48",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Kangaskhan",
+                  "rarity": "10%",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Breloom",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "42 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Medicham",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "35 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Manectric",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "3 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Illumise",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "10 Plain Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Solrock",
+                  "rarity": "unknown",
+                  "levels": "45-46",
+                  "description": "42 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Skorupi",
+                  "rarity": "10%",
+                  "levels": "44-45",
+                  "description": "28 Peak Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Savannah": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Nidoran♀",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Nidorina",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Nidoran♂",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Nidorino",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Zubat",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Golbat",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Rhyhorn",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Rhyhorn",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "5 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Rhydon",
+                  "rarity": "unknown",
+                  "levels": "44",
+                  "description": "10 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Tauros",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Tauros",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "5 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Houndour",
+                  "rarity": "unknown",
+                  "levels": "41-42",
+                  "description": "4 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Zigzagoon",
+                  "rarity": "unknown",
+                  "levels": "38",
+                  "description": "10 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Shroomish",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "35 Forest & 12 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Azurill",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "5 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Torkoal",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "35 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Cacturne",
+                  "rarity": "unknown",
+                  "levels": "42",
+                  "description": "35 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Luxio",
+                  "rarity": "unknown",
+                  "levels": "45-46",
+                  "description": "24 Plains Blocks"
+                }
+              ]
+            }
+          }
+        },
+        "Wetland": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Spearow",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Psyduck",
+                  "rarity": "unknown",
+                  "levels": "16",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Golduck",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Golduck",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "5 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Farfetch'd",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Farfetch'd",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "3 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Doduo",
+                  "rarity": "unknown",
+                  "levels": "45-46",
+                  "description": "4 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Ditto",
+                  "rarity": "unknown",
+                  "levels": "17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Ditto",
+                  "rarity": "unknown",
+                  "levels": "41",
+                  "description": "15 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Sentret",
+                  "rarity": "unknown",
+                  "levels": "15-17",
+                  "times_of_day": [
+                    "Morning",
+                    "Day"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Furret",
+                  "rarity": "unknown",
+                  "levels": "37",
+                  "description": "2 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Wooper",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Quagsire",
+                  "rarity": "unknown",
+                  "levels": "16-17",
+                  "times_of_day": [
+                    "Night"
+                  ]
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lombre",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "14 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Surskit",
+                  "rarity": "unknown",
+                  "levels": "40",
+                  "description": "6 Plains Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Shelgon",
+                  "rarity": "unknown",
+                  "levels": "46",
+                  "description": "63 Peak Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Pachirisu",
+                  "rarity": "unknown",
+                  "levels": "43",
+                  "description": "8 Forest Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Buizel",
+                  "rarity": "unknown",
+                  "levels": "45",
+                  "description": "35 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Old Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "12-15"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "23-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "12-15"
+                }
+              ]
+            }
+          },
+          "Good Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "22-24"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "24-25"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Corphish",
+                  "rarity": "unknown",
+                  "levels": "26",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Corphish",
+                  "rarity": "unknown",
+                  "levels": "28",
+                  "description": "14 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Super Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "36-37"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "35-36"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "unknown",
+                  "levels": "—",
+                  "description": "6 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Gyarados",
+                  "rarity": "unknown",
+                  "levels": "47",
+                  "description": "9 Waterside Blocks"
+                }
+              ]
+            }
+          },
+          "Surfing": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwag",
+                  "rarity": "unknown",
+                  "levels": "15-16"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Poliwhirl",
+                  "rarity": "unknown",
+                  "levels": "15-17"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "unknown",
+                  "levels": "15-16"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "15-16"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "36",
+                  "description": "10 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "—",
+                  "description": "14 Waterside Blocks"
+                },
+                {
+                  "games": [
+                    "HG",
+                    "SS"
+                  ],
+                  "name": "Lapras",
+                  "rarity": "unknown",
+                  "levels": "41-46",
+                  "description": "18 Waterside Blocks"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "hoenn": {
+    "Fortree City": {
+      "3": {
+        "Main": {
+          "Trade": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "R",
+                    "S"
+                  ],
+                  "name": "Skitty",
+                  "rarity": "Limited",
+                  "levels": "—",
+                  "description": "Trade Pikachu"
+                },
+                {
+                  "games": [
+                    "E"
+                  ],
+                  "name": "Plusle",
+                  "rarity": "Limited",
+                  "levels": "—",
+                  "description": "Trade Volbeat"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "6": {
+        "Main": {
+          "Trade": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Skitty",
+                  "rarity": "Limited",
+                  "levels": "30",
+                  "description": "Trade Spinda"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Island Cave": {
+      "3": {
+        "Main": {
+          "Interact": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "R",
+                    "S",
+                    "E"
+                  ],
+                  "name": "Regice",
+                  "rarity": "Limited",
+                  "levels": "40"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "6": {
+        "Main": {
+          "Interact": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Regice",
+                  "rarity": "Limited",
+                  "levels": "40"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Regigigas",
+                  "rarity": "Limited",
+                  "levels": "50"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Lavaridge Town": {
+      "3": {
+        "Main": {
+          "Gift": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "R",
+                    "S",
+                    "E"
+                  ],
+                  "name": "Wynaut",
+                  "rarity": "Limited",
+                  "levels": "5"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "6": {
+        "Main": {
+          "Gift": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Wynaut",
+                  "rarity": "Limited",
+                  "levels": "1"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Togepi",
+                  "rarity": "Limited",
+                  "levels": "1"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Kecleon",
+                  "rarity": "Limited",
+                  "levels": "40"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Littleroot Town": {
+      "3": {
+        "Main": {
+          "Gift": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "E"
+                  ],
+                  "name": "Chikorita",
+                  "rarity": "Limited",
+                  "levels": "5"
+                },
+                {
+                  "games": [
+                    "E"
+                  ],
+                  "name": "Cyndaquil",
+                  "rarity": "Limited",
+                  "levels": "5"
+                },
+                {
+                  "games": [
+                    "E"
+                  ],
+                  "name": "Totodile",
+                  "rarity": "Limited",
+                  "levels": "5"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Sealed Chamber": {
+      "6": {
+        "Main": {
+          "Surfing": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Zubat",
+                  "rarity": "30%",
+                  "levels": "20"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Golbat",
+                  "rarity": "5%",
+                  "levels": "25-30"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Tentacool",
+                  "rarity": "65%",
+                  "levels": "20-25"
+                }
+              ]
+            }
+          },
+          "Old Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Tentacool",
+                  "rarity": "35%",
+                  "levels": "5"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "65%",
+                  "levels": "10-15"
+                }
+              ]
+            }
+          },
+          "Good Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Tentacool",
+                  "rarity": "35%",
+                  "levels": "25"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Magikarp",
+                  "rarity": "60%",
+                  "levels": "25"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Wailmer",
+                  "rarity": "5%",
+                  "levels": "25"
+                }
+              ]
+            }
+          },
+          "Super Rod": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Horsea",
+                  "rarity": "40%",
+                  "levels": "30-40"
+                },
+                {
+                  "games": [
+                    "OR",
+                    "AS"
+                  ],
+                  "name": "Wailmer",
+                  "rarity": "60%",
+                  "levels": "35"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "sinnoh": {
+    "Hearthome City": {
+      "4": {
+        "Main": {
+          "Gift": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "D",
+                    "P"
+                  ],
+                  "name": "Eevee",
+                  "rarity": "Limited",
+                  "levels": "5"
+                },
+                {
+                  "games": [
+                    "D",
+                    "P"
+                  ],
+                  "name": "Happiny",
+                  "rarity": "Limited",
+                  "levels": "1"
+                },
+                {
+                  "games": [
+                    "Pt"
+                  ],
+                  "name": "Eevee",
+                  "rarity": "Limited",
+                  "levels": "20"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "unova": {
+    "Floccesy Town": {
+      "5": {
+        "Main": {
+          "Gift": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "B2"
+                  ],
+                  "name": "Gible",
+                  "rarity": "Limited",
+                  "levels": "1"
+                },
+                {
+                  "games": [
+                    "W2"
+                  ],
+                  "name": "Dratini",
+                  "rarity": "Limited",
+                  "levels": "1"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "alola": {
+    "Trainers' School": {
+      "7": {
+        "Main": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "S",
+                    "M"
+                  ],
+                  "name": "Meowth",
+                  "rarity": "30%",
+                  "levels": "6-8"
+                },
+                {
+                  "games": [
+                    "S",
+                    "M"
+                  ],
+                  "name": "Magnemite",
+                  "rarity": "50%",
+                  "levels": "6-8"
+                },
+                {
+                  "games": [
+                    "S",
+                    "M"
+                  ],
+                  "name": "Grimer",
+                  "rarity": "20%",
+                  "levels": "6-8"
+                },
+                {
+                  "games": [
+                    "US",
+                    "UM"
+                  ],
+                  "name": "Meowth",
+                  "rarity": "50%",
+                  "levels": "5-8"
+                },
+                {
+                  "games": [
+                    "US",
+                    "UM"
+                  ],
+                  "name": "Magnemite",
+                  "rarity": "10%",
+                  "levels": "5-8"
+                },
+                {
+                  "games": [
+                    "US",
+                    "UM"
+                  ],
+                  "name": "Grimer",
+                  "rarity": "10%",
+                  "levels": "5-8"
+                },
+                {
+                  "games": [
+                    "US",
+                    "UM"
+                  ],
+                  "name": "Zorua",
+                  "rarity": "30%",
+                  "levels": "5-8"
+                }
+              ],
+              "Solving Mysteries": [
+                {
+                  "games": [
+                    "US",
+                    "UM"
+                  ],
+                  "name": "Gastly",
+                  "rarity": "Limited",
+                  "levels": "19"
+                },
+                {
+                  "games": [
+                    "US",
+                    "UM"
+                  ],
+                  "name": "Drifloon",
+                  "rarity": "Limited",
+                  "levels": "19"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

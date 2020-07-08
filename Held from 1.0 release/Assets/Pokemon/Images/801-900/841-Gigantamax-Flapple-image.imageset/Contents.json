@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "841-Gigantamax-Flapple-image.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "841-Gigantamax-Flapple-image-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "841-Gigantamax-Flapple-image-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

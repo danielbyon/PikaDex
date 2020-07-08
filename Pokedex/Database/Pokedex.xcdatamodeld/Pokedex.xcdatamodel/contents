@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Ability" representedClassName="Ability" syncable="YES" codeGenerationType="class">
+        <attribute name="z_alphaSapphire" optional="YES" attributeType="String"/>
+        <attribute name="z_black" optional="YES" attributeType="String"/>
+        <attribute name="z_black2" optional="YES" attributeType="String"/>
+        <attribute name="z_canonicalName" attributeType="String"/>
+        <attribute name="z_diamond" optional="YES" attributeType="String"/>
+        <attribute name="z_emerald" optional="YES" attributeType="String"/>
+        <attribute name="z_fireRed" optional="YES" attributeType="String"/>
+        <attribute name="z_generationIntroduced" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_heartGold" optional="YES" attributeType="String"/>
+        <attribute name="z_index" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_leafGreen" optional="YES" attributeType="String"/>
+        <attribute name="z_letsGoEevee" optional="YES" attributeType="String"/>
+        <attribute name="z_letsGoPikachu" optional="YES" attributeType="String"/>
+        <attribute name="z_moon" optional="YES" attributeType="String"/>
+        <attribute name="z_name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_omegaRuby" optional="YES" attributeType="String"/>
+        <attribute name="z_pearl" optional="YES" attributeType="String"/>
+        <attribute name="z_platinum" optional="YES" attributeType="String"/>
+        <attribute name="z_ruby" optional="YES" attributeType="String"/>
+        <attribute name="z_sapphire" optional="YES" attributeType="String"/>
+        <attribute name="z_shield" optional="YES" attributeType="String"/>
+        <attribute name="z_soulSilver" optional="YES" attributeType="String"/>
+        <attribute name="z_sun" optional="YES" attributeType="String"/>
+        <attribute name="z_sword" optional="YES" attributeType="String"/>
+        <attribute name="z_ultraMoon" optional="YES" attributeType="String"/>
+        <attribute name="z_ultraSun" optional="YES" attributeType="String"/>
+        <attribute name="z_white" optional="YES" attributeType="String"/>
+        <attribute name="z_white2" optional="YES" attributeType="String"/>
+        <attribute name="z_x" optional="YES" attributeType="String"/>
+        <attribute name="z_y" optional="YES" attributeType="String"/>
+        <relationship name="zUNUSED_Evolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evolution" inverseName="ability" inverseEntity="Evolution"/>
+        <relationship name="zUNUSED_form_hiddenAbilities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_hiddenAbility" inverseEntity="PokemonForm"/>
+        <relationship name="zUNUSED_form_primaryAbilities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_primaryAbility" inverseEntity="PokemonForm"/>
+        <relationship name="zUNUSED_form_secondaryAbilities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_secondaryAbility" inverseEntity="PokemonForm"/>
+        <fetchIndex name="byName">
+            <fetchIndexElement property="z_name" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="BagItemInfo" representedClassName="BagItemInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="cost" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sell" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="z_itemDescription" optional="YES" attributeType="String"/>
+        <attribute name="z_pocket" optional="YES" attributeType="String"/>
+        <relationship name="z_item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="bagInfo" inverseEntity="Item"/>
+    </entity>
+    <entity name="BerryItemInfo" representedClassName="BerryItemInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="bitter" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dry" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sizeInCm" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spicy" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sweet" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_firmness" optional="YES" attributeType="String"/>
+        <attribute name="z_itemDescription" optional="YES" attributeType="String"/>
+        <relationship name="z_item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="berryInfo" inverseEntity="Item"/>
+    </entity>
+    <entity name="BreedLearnsetEntry" representedClassName="BreedLearnsetEntry" parentEntity="LearnsetEntry" syncable="YES" codeGenerationType="class">
+        <relationship name="z_fathers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pokemon" inverseName="zUNUSED_BreedLearnsetEntryFathers" inverseEntity="Pokemon"/>
+        <relationship name="z_form" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_learnsetBreeding" inverseEntity="PokemonForm"/>
+        <relationship name="z_move" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Move" inverseName="zUNUSED_BreedLearnsetEntries" inverseEntity="Move" spotlightIndexingEnabled="YES"/>
+        <fetchIndex name="byFormMove">
+            <fetchIndexElement property="z_form" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_move" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byMoveForm">
+            <fetchIndexElement property="z_move" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_form" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Evolution" representedClassName="Evolution" syncable="YES" codeGenerationType="class">
+        <attribute name="z_conditionData" optional="YES" attributeType="String"/>
+        <attribute name="z_conditionName" optional="YES" attributeType="String"/>
+        <attribute name="z_familyName" optional="YES" attributeType="String"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_methodData" optional="YES" attributeType="String"/>
+        <attribute name="z_methodName" optional="YES" attributeType="String"/>
+        <attribute name="z_name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <relationship name="ability" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ability" inverseName="zUNUSED_Evolution" inverseEntity="Ability"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="zUNUSED_Evolution" inverseEntity="Item"/>
+        <relationship name="move" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Move" inverseName="zUNUSED_Evolution" inverseEntity="Move"/>
+        <relationship name="pokemon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pokemon" inverseName="zUNUSED_Evolution" inverseEntity="Pokemon"/>
+        <relationship name="z_from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="zUNUSED_Evolution_from" inverseEntity="PokemonForm"/>
+        <relationship name="z_to" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="zUNUSED_Evolution_to" inverseEntity="PokemonForm"/>
+        <relationship name="zUNUSED_PokemonForm" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_evolutions" inverseEntity="PokemonForm"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="i_gameIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="i_nameIndex" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_canonicalName" attributeType="String"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_generationIntroduced" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_imageName" optional="YES" attributeType="String"/>
+        <attribute name="z_itemType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_name" optional="YES" attributeType="String"/>
+        <relationship name="bagInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="BagItemInfo" inverseName="z_item" inverseEntity="BagItemInfo"/>
+        <relationship name="berryInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="BerryItemInfo" inverseName="z_item" inverseEntity="BerryItemInfo"/>
+        <relationship name="zUNUSED_Evolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evolution" inverseName="item" inverseEntity="Evolution"/>
+        <fetchIndex name="byGameAndName">
+            <fetchIndexElement property="i_gameIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="i_nameIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_generationIntroduced" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="LearnsetEntry" representedClassName="LearnsetEntry" isAbstract="YES" syncable="YES" codeGenerationType="class"/>
+    <entity name="LevelLearnsetEntry" representedClassName="LevelLearnsetEntry" parentEntity="LearnsetEntry" syncable="YES" codeGenerationType="class">
+        <attribute name="z_level" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <relationship name="z_form" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_learnsetLevel" inverseEntity="PokemonForm"/>
+        <relationship name="z_move" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Move" inverseName="zUNUSED_LevelLearnsetEntries" inverseEntity="Move" spotlightIndexingEnabled="YES"/>
+        <fetchIndex name="byForm">
+            <fetchIndexElement property="z_form" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_level" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_move" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byMove">
+            <fetchIndexElement property="z_move" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_level" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_form" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="i_nameIndex" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_canonicalName" attributeType="String"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_name" attributeType="String"/>
+        <attribute name="z_region" attributeType="String"/>
+        <relationship name="locationPokemon" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LocationPokemon" inverseName="z_location" inverseEntity="LocationPokemon"/>
+        <relationship name="z_maps" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocationMap" inverseName="z_location" inverseEntity="LocationMap"/>
+        <fetchIndex name="byName">
+            <fetchIndexElement property="z_game" type="Binary" order="ascending"/>
+            <fetchIndexElement property="i_nameIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_region" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="LocationMap" representedClassName="LocationMap" syncable="YES" codeGenerationType="class">
+        <attribute name="z_areaName" attributeType="String"/>
+        <attribute name="z_filename" attributeType="String"/>
+        <relationship name="z_location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="z_maps" inverseEntity="Location"/>
+    </entity>
+    <entity name="LocationPokemon" representedClassName="LocationPokemon" syncable="YES" codeGenerationType="class">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="z_area" optional="YES" attributeType="String"/>
+        <attribute name="z_captureMethod" optional="YES" attributeType="String"/>
+        <attribute name="z_encounterCondition" optional="YES" attributeType="String"/>
+        <attribute name="z_encounterRate" optional="YES" attributeType="String"/>
+        <attribute name="z_encounterRateType" optional="YES" attributeType="String"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_levelHigh" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_levelLow" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_timeOfDay" optional="YES" attributeType="String"/>
+        <relationship name="z_location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationPokemon" inverseEntity="Location"/>
+        <relationship name="z_pokemon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pokemon" inverseName="z_locationPokemons" inverseEntity="Pokemon"/>
+        <fetchIndex name="byLocation">
+            <fetchIndexElement property="z_location" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_game" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_area" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_captureMethod" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_pokemon" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPokemon">
+            <fetchIndexElement property="z_pokemon" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_game" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_area" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_captureMethod" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_location" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Machine" representedClassName="Machine" syncable="YES" codeGenerationType="class">
+        <attribute name="i_gameIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_number" optional="YES" attributeType="Integer 32" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="z_move" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Move" inverseName="zUNUSED_machines" inverseEntity="Move"/>
+        <relationship name="zUNUSED_machineLearnsetEntries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MachineLearnsetEntry" inverseName="z_machine" inverseEntity="MachineLearnsetEntry"/>
+        <fetchIndex name="byNumber">
+            <fetchIndexElement property="i_gameIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_number" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="MachineLearnsetEntry" representedClassName="MachineLearnsetEntry" parentEntity="LearnsetEntry" syncable="YES" codeGenerationType="class">
+        <relationship name="z_form" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_learnsetMachine" inverseEntity="PokemonForm"/>
+        <relationship name="z_machine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Machine" inverseName="zUNUSED_machineLearnsetEntries" inverseEntity="Machine" spotlightIndexingEnabled="YES"/>
+        <fetchIndex name="byFormMachine">
+            <fetchIndexElement property="z_form" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_machine" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Move" representedClassName="Move" syncable="YES" codeGenerationType="class">
+        <attribute name="i_gameIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_canonicalName" attributeType="String"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_generationIntroduced" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_index" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_type" optional="YES" attributeType="String"/>
+        <relationship name="z_moveInfo" maxCount="1" deletionRule="Cascade" destinationEntity="MoveInfo" inverseName="z_move" inverseEntity="MoveInfo"/>
+        <relationship name="zUNUSED_BreedLearnsetEntries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BreedLearnsetEntry" inverseName="z_move" inverseEntity="BreedLearnsetEntry"/>
+        <relationship name="zUNUSED_Evolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evolution" inverseName="move" inverseEntity="Evolution"/>
+        <relationship name="zUNUSED_LevelLearnsetEntries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LevelLearnsetEntry" inverseName="z_move" inverseEntity="LevelLearnsetEntry"/>
+        <relationship name="zUNUSED_machines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Machine" inverseName="z_move" inverseEntity="Machine"/>
+        <relationship name="zUNUSED_TutorLearnsetEntries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TutorLearnsetEntry" inverseName="z_move" inverseEntity="TutorLearnsetEntry"/>
+        <fetchIndex name="byName">
+            <fetchIndexElement property="z_game" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_name" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="MoveInfo" representedClassName="MoveInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="z_accuracy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_category" optional="YES" attributeType="String"/>
+        <attribute name="z_maxPP" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_moveDescription" optional="YES" attributeType="String"/>
+        <attribute name="z_power" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_pp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_priority" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_targetAlly1" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="z_targetAlly2" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="z_targetDescription" optional="YES" attributeType="String"/>
+        <attribute name="z_targetEnemy1" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="z_targetEnemy2" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="z_targetEnemy3" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="z_targetSelf" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="z_move" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Move" inverseName="z_moveInfo" inverseEntity="Move"/>
+    </entity>
+    <entity name="PokedexNumbers" representedClassName="PokedexNumbers" syncable="YES" codeGenerationType="class">
+        <attribute name="z_akala" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_alola" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_centralKalos" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_coastalKalos" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_galar" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_hoenn" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_isleOfArmor" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_johto" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_kanto" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_letsGoKanto" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_melemele" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_mountainKalos" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_national" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_newHoenn" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_newJohto" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_newUnova" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_poni" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_sinnoh" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_ulaula" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_ultraAkala" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_ultraAlola" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_ultraMelemele" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_ultraPoni" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_ultraUlaula" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_unova" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <relationship name="z_pokemon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pokemon" inverseName="z_pokedexNumbers" inverseEntity="Pokemon"/>
+    </entity>
+    <entity name="Pokemon" representedClassName="Pokemon" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="Pokemon">
+        <attribute name="i_gameIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_canonicalName" attributeType="String"/>
+        <attribute name="z_catchRate" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_eggGroups" optional="YES" attributeType="String"/>
+        <attribute name="z_formCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_generationIntroduced" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_index" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_levelingRate" optional="YES" attributeType="String"/>
+        <attribute name="z_maleRatio" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
+        <attribute name="z_name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <relationship name="z_forms" toMany="YES" minCount="1" deletionRule="Cascade" destinationEntity="PokemonForm" inverseName="z_pokemon" inverseEntity="PokemonForm"/>
+        <relationship name="z_locationPokemons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LocationPokemon" inverseName="z_pokemon" inverseEntity="LocationPokemon"/>
+        <relationship name="z_pokedexNumbers" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PokedexNumbers" inverseName="z_pokemon" inverseEntity="PokedexNumbers"/>
+        <relationship name="zUNUSED_BreedLearnsetEntryFathers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BreedLearnsetEntry" inverseName="z_fathers" inverseEntity="BreedLearnsetEntry"/>
+        <relationship name="zUNUSED_Evolution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evolution" inverseName="pokemon" inverseEntity="Evolution"/>
+        <fetchIndex name="byIndex">
+            <fetchIndexElement property="i_gameIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_index" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="PokemonForm" representedClassName="PokemonForm" syncable="YES" codeGenerationType="class">
+        <attribute name="i_formIndex" attributeType="Integer 32" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="i_gameIndex" attributeType="Integer 32" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="i_hiddenAbilityIndex" attributeType="Integer 32" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="i_pokemonIndex" attributeType="Integer 32" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="i_pokemonNameIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="i_primaryAbilityIndex" attributeType="Integer 32" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="i_secondaryAbilityIndex" attributeType="Integer 32" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_baseExperienceYield" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_baseFriendship" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_color" optional="YES" attributeType="String"/>
+        <attribute name="z_familyName" optional="YES" attributeType="String"/>
+        <attribute name="z_formIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_game" optional="YES" attributeType="String"/>
+        <attribute name="z_heightInMeters" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="z_index" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_pokedexEntry" optional="YES" attributeType="String"/>
+        <attribute name="z_primaryType" optional="YES" attributeType="String"/>
+        <attribute name="z_secondaryType" optional="YES" attributeType="String"/>
+        <attribute name="z_species" optional="YES" attributeType="String"/>
+        <attribute name="z_weightInKilograms" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="z_baseStats" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Stats" inverseName="zUNUSED_form" inverseEntity="Stats"/>
+        <relationship name="z_evolutions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Evolution" inverseName="zUNUSED_PokemonForm" inverseEntity="Evolution"/>
+        <relationship name="z_evYield" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Stats" inverseName="zUNUSED_form_evYield" inverseEntity="Stats"/>
+        <relationship name="z_hiddenAbility" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ability" inverseName="zUNUSED_form_hiddenAbilities" inverseEntity="Ability"/>
+        <relationship name="z_learnsetBreeding" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BreedLearnsetEntry" inverseName="z_form" inverseEntity="BreedLearnsetEntry"/>
+        <relationship name="z_learnsetLevel" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LevelLearnsetEntry" inverseName="z_form" inverseEntity="LevelLearnsetEntry"/>
+        <relationship name="z_learnsetMachine" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MachineLearnsetEntry" inverseName="z_form" inverseEntity="MachineLearnsetEntry"/>
+        <relationship name="z_learnsetTutoring" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TutorLearnsetEntry" inverseName="z_form" inverseEntity="TutorLearnsetEntry"/>
+        <relationship name="z_pokemon" maxCount="1" deletionRule="Nullify" destinationEntity="Pokemon" inverseName="z_forms" inverseEntity="Pokemon"/>
+        <relationship name="z_primaryAbility" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ability" inverseName="zUNUSED_form_primaryAbilities" inverseEntity="Ability"/>
+        <relationship name="z_secondaryAbility" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ability" inverseName="zUNUSED_form_secondaryAbilities" inverseEntity="Ability"/>
+        <relationship name="zUNUSED_Evolution_from" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Evolution" inverseName="z_from" inverseEntity="Evolution"/>
+        <relationship name="zUNUSED_Evolution_to" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Evolution" inverseName="z_to" inverseEntity="Evolution"/>
+        <fetchIndex name="byAbility">
+            <fetchIndexElement property="i_gameIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="i_primaryAbilityIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="i_secondaryAbilityIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="i_hiddenAbilityIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="i_pokemonNameIndex" type="Binary" order="ascending"/>
+            <fetchIndexElement property="i_formIndex" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byGame">
+            <fetchIndexElement property="i_gameIndex" type="RTree" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Stats" representedClassName="Stats" syncable="YES" codeGenerationType="class">
+        <attribute name="z_attack" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_defense" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_hp" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_specialAttack" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_specialDefense" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="z_speed" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="zUNUSED_form" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_baseStats" inverseEntity="PokemonForm"/>
+        <relationship name="zUNUSED_form_evYield" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_evYield" inverseEntity="PokemonForm"/>
+    </entity>
+    <entity name="TutorLearnsetEntry" representedClassName="TutorLearnsetEntry" parentEntity="LearnsetEntry" syncable="YES" codeGenerationType="class">
+        <relationship name="z_form" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonForm" inverseName="z_learnsetTutoring" inverseEntity="PokemonForm"/>
+        <relationship name="z_move" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Move" inverseName="zUNUSED_TutorLearnsetEntries" inverseEntity="Move" spotlightIndexingEnabled="YES"/>
+        <fetchIndex name="byFormMove">
+            <fetchIndexElement property="z_form" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_move" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byMoveForm">
+            <fetchIndexElement property="z_move" type="Binary" order="ascending"/>
+            <fetchIndexElement property="z_form" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <elements>
+        <element name="Ability" positionX="-36" positionY="135" width="128" height="553"/>
+        <element name="BagItemInfo" positionX="63" positionY="207" width="128" height="118"/>
+        <element name="BerryItemInfo" positionX="81" positionY="225" width="128" height="178"/>
+        <element name="BreedLearnsetEntry" positionX="18" positionY="180" width="128" height="28"/>
+        <element name="Evolution" positionX="-54" positionY="45" width="128" height="253"/>
+        <element name="Item" positionX="54" positionY="198" width="128" height="208"/>
+        <element name="LearnsetEntry" positionX="-9" positionY="198" width="128" height="43"/>
+        <element name="LevelLearnsetEntry" positionX="9" positionY="171" width="128" height="28"/>
+        <element name="Location" positionX="54" positionY="198" width="128" height="148"/>
+        <element name="LocationMap" positionX="54" positionY="198" width="128" height="88"/>
+        <element name="LocationPokemon" positionX="72" positionY="216" width="128" height="223"/>
+        <element name="Machine" positionX="54" positionY="198" width="128" height="133"/>
+        <element name="MachineLearnsetEntry" positionX="36" positionY="189" width="128" height="28"/>
+        <element name="Move" positionX="-18" positionY="144" width="128" height="28"/>
+        <element name="MoveInfo" positionX="-9" positionY="153" width="128" height="268"/>
+        <element name="PokedexNumbers" positionX="-9" positionY="135" width="128" height="433"/>
+        <element name="Pokemon" positionX="160" positionY="192" width="128" height="283"/>
+        <element name="PokemonForm" positionX="0" positionY="117" width="128" height="553"/>
+        <element name="Stats" positionX="-27" positionY="99" width="128" height="163"/>
+        <element name="TutorLearnsetEntry" positionX="-9" positionY="135" width="128" height="28"/>
+    </elements>
+</model>

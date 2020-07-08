@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "037-Alolan-Vulpix-image.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "037-Alolan-Vulpix-image-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "037-Alolan-Vulpix-image-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

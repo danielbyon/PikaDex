@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1140"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6547F7F1237968D20091A083"
+               BuildableName = "PikaDex.app"
+               BlueprintName = "Pokedex"
+               ReferencedContainer = "container:Pokedex.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6547F80A237968D50091A083"
+               BuildableName = "PokedexTests.xctest"
+               BlueprintName = "PokedexTests"
+               ReferencedContainer = "container:Pokedex.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6547F815237968D50091A083"
+               BuildableName = "PokedexUITests.xctest"
+               BlueprintName = "PokedexUITests"
+               ReferencedContainer = "container:Pokedex.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      enableAddressSanitizer = "YES"
+      enableASanStackUseAfterReturn = "YES"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6547F7F1237968D20091A083"
+            BuildableName = "PikaDex.app"
+            BlueprintName = "Pokedex"
+            ReferencedContainer = "container:Pokedex.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-com.apple.CoreData.SQLDebug 2"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-com.apple.CoreData.SQLDebug 3"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-com.apple.CoreData.SQLDebug 4"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "DYLD_PRINT_STATISTICS"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
+      <AdditionalOptions>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "MallocScribble"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6547F7F1237968D20091A083"
+            BuildableName = "PikaDex.app"
+            BlueprintName = "Pokedex"
+            ReferencedContainer = "container:Pokedex.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

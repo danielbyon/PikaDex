@@ -1,0 +1,1 @@
+pokemon,pokedex,dex,prodex,oak,pikachu,sword,shield,switch,nintendo,gameboy,ds,3ds,dexter,team

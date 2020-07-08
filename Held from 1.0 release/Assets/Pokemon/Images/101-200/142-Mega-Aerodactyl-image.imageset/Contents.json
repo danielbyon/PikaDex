@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "142-Mega-Aerodactyl-image.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "142-Mega-Aerodactyl-image-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "142-Mega-Aerodactyl-image-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,53 @@
+//
+//  Value3Cell.swift
+//  Pokedex
+//
+//  Created by Daniel Byon on 4/14/20.
+//  Copyright © 2020 Daniel Byon. All rights reserved.
+//
+
+import SwiftUI
+
+struct Value3Cell: View {
+
+    let title: String
+    var subtitle: String? = nil
+    var detail: String? = nil
+    var image: UIImage? = nil
+
+    var body: some View {
+        HStack {
+            if image != nil {
+                Image(uiImage: image!)
+                    .resizable()
+                    .frame(width: 40.0, height: 40.0)
+                    .scaledToFit()
+            }
+            VStack(alignment: .leading, spacing: 2.0) {
+                Text(title)
+                    .monospacedBody()
+                    .multilineTextAlignment(.leading)
+                if subtitle != nil {
+                    Text(subtitle!)
+                        .monospacedCaption()
+                        .multilineTextAlignment(.leading)
+                }
+            }
+            Spacer()
+            if detail != nil {
+                Text(detail!)
+                    .alignmentGuide(.trailing, computeValue: { d in d[.trailing] })
+                    .monospacedBody()
+                    .multilineTextAlignment(.trailing)
+            }
+        }
+        .contentShape(Rectangle())
+    }
+
+}
+
+struct Value3Cell_Previews: PreviewProvider {
+    static var previews: some View {
+        Value3Cell(title: "Charizard", subtitle: "Mega Charizard X", detail: "Level 01", image: UIImage(named: Pokemon.generateCharizard().defaultForm.spriteName))
+    }
+}

@@ -1,0 +1,42 @@
+//
+//  FilterablePokemonList.swift
+//  Pokedex
+//
+//  Created by Daniel Byon on 5/23/20.
+//  Copyright © 2020 Daniel Byon. All rights reserved.
+//
+
+import SwiftUI
+
+struct FilterablePokemonList: View {
+
+    @EnvironmentObject var appContext: AppContext
+    @ObservedObject var viewModel: FilterablePokemonListViewModel
+    @State private var isShowingFilter = false
+
+    var body: some View {
+        PokemonList(fetchRequest: Pokemon.allFetchRequest(for: appContext.currentGame, filter: viewModel.filter), game: appContext.currentGame, numberKeyPath: viewModel.filter.filterBy.keyPath)
+            .navigationBarItems(trailing: Button(action: {
+                self.isShowingFilter.toggle()
+            }) {
+                Image(systemName: viewModel.filter == .defaultFilter(forGame: appContext.currentGame) ? "line.horizontal.3.decrease.circle" : "line.horizontal.3.decrease.circle.fill")
+                    .padding([.leading, .top, .bottom])
+            })
+            .sheet(isPresented: $isShowingFilter) {
+                PokemonListFilter(game: self.appContext.currentGame, viewModel: self.viewModel)
+                    .injectDependencies()
+        }
+    }
+
+    init() {
+        self.viewModel = .init()
+    }
+
+}
+
+struct FilterablePokemonList_Previews: PreviewProvider {
+    static var previews: some View {
+        FilterablePokemonList()
+            .injectDependencies()
+    }
+}

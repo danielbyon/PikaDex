@@ -1,0 +1,1631 @@
+{
+  "Stench": {
+    "Pok\u00e9mon Ruby and Sapphire Versions": "Helps repel wild Pok\u00e9mon.",
+    "Pok\u00e9mon Emerald Version": "Helps repel wild Pok\u00e9mon.",
+    "Pok\u00e9mon FireRed and LeafGreen Versions": "Helps repel wild Pok\u00e9mon.",
+    "Pok\u00e9mon XD: Gale of Darkness": "Repels wild Pok\u00e9mon.",
+    "Generation IV": "The stench helps keep wild Pok\u00e9mon away.",
+    "Generation V": "The stench may cause the target to flinch.",
+    "Generation VI": "The stench may cause the target to flinch.",
+    "Generation VII": "By releasing stench when attacking, this Pok\u00e9mon may cause the target to flinch.",
+    "Generation VIII": "By releasing stench when attacking, this Pok\u00e9mon may cause the target to flinch."
+  },
+  "Drizzle": {
+    "Generation III": "Summons rain in battle.",
+    "Generation IV": "The Pok\u00e9mon makes it rain if it appears in battle.",
+    "Generation V": "The Pok\u00e9mon makes it rain if it appears in battle.",
+    "Generation VI": "The Pok\u00e9mon makes it rain when it enters a battle.",
+    "Generation VII": "The Pok\u00e9mon makes it rain when it enters a battle.",
+    "Generation VIII": "The Pok\u00e9mon makes it rain when it enters a battle."
+  },
+  "Speed Boost": {
+    "Generation III": "Gradually boosts Speed.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "The Pok\u00e9mon's Speed stat is gradually boosted.",
+    "Pok\u00e9mon Platinum Version": "The Pok\u00e9mon's Speed stat is gradually boosted.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Its Speed stat is gradually boosted.",
+    "Generation V": "Its Speed stat is gradually boosted.",
+    "Generation VI": "Its Speed stat is gradually boosted.",
+    "Generation VII": "Its Speed stat is boosted every turn.",
+    "Generation VIII": "Its Speed stat is boosted every turn."
+  },
+  "Battle Armor": {
+    "Generation III": "Blocks critical hits.",
+    "Generation IV": "The Pok\u00e9mon is protected against critical hits.",
+    "Generation V": "The Pok\u00e9mon is protected against critical hits.",
+    "Generation VI": "Protects the Pok\u00e9mon from critical hits.",
+    "Generation VII": "Hard armor protects the Pok\u00e9mon from critical hits.",
+    "Generation VIII": "Hard armor protects the Pok\u00e9mon from critical hits."
+  },
+  "Sturdy": {
+    "Generation III": "Negates 1-hit KO attacks.",
+    "Generation IV": "The Pok\u00e9mon is protected against 1-hit KO attacks.",
+    "Generation V": "It cannot be knocked out with one hit.",
+    "Generation VI": "It cannot be knocked out with one hit.",
+    "Generation VII": "It cannot be knocked out with one hit. One-hit KO moves cannot knock it out, either.",
+    "Generation VIII": "It cannot be knocked out with one hit. One-hit KO moves cannot knock it out, either."
+  },
+  "Damp": {
+    "Generation III": "Prevents self-destruction.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Prevents combatants from self destructing.",
+    "Pok\u00e9mon Platinum Version": "Prevents combatants from self destructing.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Prevents combatants from self-destructing.",
+    "Generation V": "Prevents the use of self-destructing moves.",
+    "Generation VI": "Prevents the use of self-destructing moves.",
+    "Generation VII": "Prevents the use of explosive moves such as Self-Destruct by dampening its surroundings.",
+    "Generation VIII": "Prevents the use of explosive moves, such as Self-Destruct, by dampening its surroundings."
+  },
+  "Limber": {
+    "Generation III": "Prevents paralysis.",
+    "Generation IV": "The Pok\u00e9mon is protected from paralysis.",
+    "Generation V": "The Pok\u00e9mon is protected from paralysis.",
+    "Generation VI": "Protects the Pok\u00e9mon from paralysis.",
+    "Generation VII": "Its limber body protects the Pok\u00e9mon from paralysis.",
+    "Generation VIII": "Its limber body protects the Pok\u00e9mon from paralysis."
+  },
+  "Sand Veil": {
+    "Generation III": "Ups evasion in a sandstorm.",
+    "Generation IV": "Boosts the Pok\u00e9mon's evasion in a sandstorm.",
+    "Generation V": "Boosts the Pok\u00e9mon's evasion in a sandstorm.",
+    "Generation VI": "Boosts the Pok\u00e9mon's evasion in a sandstorm.",
+    "Generation VII": "Boosts the Pok\u00e9mon's evasion in a sandstorm.",
+    "Generation VIII": "Boosts the Pok\u00e9mon's evasiveness in a sandstorm."
+  },
+  "Static": {
+    "Generation III": "Paralyzes on contact.",
+    "Generation IV": "Contact with the Pok\u00e9mon may cause paralysis.",
+    "Generation V": "Contact with the Pok\u00e9mon may cause paralysis.",
+    "Generation VI": "Contact with the Pok\u00e9mon may cause paralysis.",
+    "Generation VII": "The Pok\u00e9mon is charged with static electricity, so contact with it may cause paralysis.",
+    "Generation VIII": "The Pok\u00e9mon is charged with static electricity, so contact with it may cause paralysis."
+  },
+  "Volt Absorb": {
+    "Generation III": "Turns electricity into HP.",
+    "Generation IV": "Restores HP if hit by an Electric-type move.",
+    "Generation V": "Restores HP if hit by an Electric-type move.",
+    "Generation VI": "Restores HP if hit by an Electric-type move.",
+    "Generation VII": "Restores HP if hit by an Electric-type move, instead of taking damage.",
+    "Generation VIII": "Restores HP if hit by an Electric-type move instead of taking damage."
+  },
+  "Water Absorb": {
+    "Generation III": "Changes water into HP.",
+    "Generation IV": "Restores HP if hit by a Water-type move.",
+    "Generation V": "Restores HP if hit by a Water-type move.",
+    "Generation VI": "Restores HP if hit by a Water-type move.",
+    "Generation VII": "Restores HP if hit by a Water-type move, instead of taking damage.",
+    "Generation VIII": "Restores HP if hit by a Water-type move instead of taking damage."
+  },
+  "Oblivious": {
+    "Generation III": "Prevents attraction.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Prevents the Pok\u00e9mon from becoming infatuated.",
+    "Pok\u00e9mon Platinum Version": "Prevents the Pok\u00e9mon from becoming infatuated.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Prevents it from becoming infatuated.",
+    "Generation V": "Prevents it from becoming infatuated.",
+    "Generation VI": "Keeps the Pok\u00e9mon from being infatuated or falling for taunts.",
+    "Generation VII": "The Pok\u00e9mon is oblivious, and that keeps it from being infatuated or falling for taunts.",
+    "Generation VIII": "The Pok\u00e9mon is oblivious, and that keeps it from being infatuated or falling for taunts."
+  },
+  "Cloud Nine": {
+    "Generation III": "Negates weather effects.",
+    "Generation IV": "Eliminates the effects of weather.",
+    "Generation V": "Eliminates the effects of weather.",
+    "Generation VI": "Eliminates the effects of weather.",
+    "Generation VII": "Eliminates the effects of weather.",
+    "Generation VIII": "Eliminates the effects of weather."
+  },
+  "Compound Eyes": {
+    "Generation III": "Raises accuracy.",
+    "Generation IV": "The Pok\u00e9mon's accuracy is boosted.",
+    "Generation V": "The Pok\u00e9mon's accuracy is boosted.",
+    "Generation VI": "Boosts the Pok\u00e9mon's accuracy.",
+    "Generation VII": "The Pok\u00e9mon's compound eyes boost its accuracy.",
+    "Generation VIII": "The Pok\u00e9mon's compound eyes boost its accuracy."
+  },
+  "Insomnia": {
+    "Generation III": "Prevents sleep.",
+    "Generation IV": "Prevents the Pok\u00e9mon from falling asleep.",
+    "Generation V": "Prevents the Pok\u00e9mon from falling asleep.",
+    "Generation VI": "Prevents the Pok\u00e9mon from falling asleep.",
+    "Generation VII": "The Pok\u00e9mon is suffering from insomnia and cannot fall asleep.",
+    "Generation VIII": "The Pok\u00e9mon is suffering from insomnia and cannot fall asleep."
+  },
+  "Color Change": {
+    "Pok\u00e9mon Ruby and Sapphire Versions": "Changes type to foe's move.",
+    "Pok\u00e9mon Emerald Version": "Changes type to foe's move.",
+    "Pok\u00e9mon FireRed and LeafGreen Versions": "Changes type to foe's move.",
+    "Pok\u00e9mon XD: Gale of Darkness": "Changes type to target's move.",
+    "Generation IV": "Changes the Pok\u00e9mon's type to the foe's move.",
+    "Generation V": "Changes the Pok\u00e9mon's type to the foe's move.",
+    "Generation VI": "The Pok\u00e9mon's type becomes the type of the move used on it.",
+    "Generation VII": "The Pok\u00e9mon's type becomes the type of the move used on it.",
+    "Generation VIII": "The Pok\u00e9mon's type becomes the type of the move used on it."
+  },
+  "Immunity": {
+    "Generation III": "Prevents poisoning.",
+    "Generation IV": "Prevents the Pok\u00e9mon from getting poisoned.",
+    "Generation V": "Prevents the Pok\u00e9mon from getting poisoned.",
+    "Generation VI": "Prevents the Pok\u00e9mon from getting poisoned.",
+    "Generation VII": "The immune system of the Pok\u00e9mon prevents it from getting poisoned.",
+    "Generation VIII": "The immune system of the Pok\u00e9mon prevents it from getting poisoned."
+  },
+  "Flash Fire": {
+    "Generation III": "Powers up if hit by fire.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Powers up Fire-type moves if hit by a Fire move.",
+    "Pok\u00e9mon Platinum Version": "Powers up Fire-type moves if hit by a Fire move.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "It powers up Fire-type moves if it's hit by one.",
+    "Generation V": "It powers up Fire-type moves if it's hit by one.",
+    "Generation VI": "Powers up the Pok\u00e9mon's Fire-type moves if it's hit by one.",
+    "Generation VII": "Powers up the Pok\u00e9mon's Fire-type moves if it's hit by one.",
+    "Generation VIII": "Powers up the Pok\u00e9mon's Fire-type moves if it's hit by one."
+  },
+  "Shield Dust": {
+    "Generation III": "Prevents added effects.",
+    "Generation IV": "Blocks the added effects of attacks taken.",
+    "Generation V": "Blocks the added effects of attacks taken.",
+    "Generation VI": "Blocks the additional effects of attacks taken.",
+    "Generation VII": "This Pok\u00e9mon's dust blocks the additional effects of attacks taken.",
+    "Generation VIII": "This Pok\u00e9mon's dust blocks the additional effects of attacks taken."
+  },
+  "Own Tempo": {
+    "Generation III": "Prevents confusion.",
+    "Generation IV": "Prevents the Pok\u00e9mon from becoming confused.",
+    "Generation V": "Prevents the Pok\u00e9mon from becoming confused.",
+    "Generation VI": "Prevents the Pok\u00e9mon from becoming confused.",
+    "Generation VII": "This Pok\u00e9mon has its own tempo, and that prevents it from becoming confused.",
+    "Generation VIII": "This Pok\u00e9mon has its own tempo, and that prevents it from becoming confused."
+  },
+  "Suction Cups": {
+    "Generation III": "Firmly anchors the body.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Negates moves that force switching out.",
+    "Pok\u00e9mon Platinum Version": "Negates moves that force switching out.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Negates foes' moves that force switching out.",
+    "Generation V": "Negates all moves that force switching out.",
+    "Generation VI": "Negates all moves and items that force switching out.",
+    "Generation VII": "This Pok\u00e9mon uses suction cups to stay in one spot to negate all moves and items that force switching out.",
+    "Generation VIII": "This Pok\u00e9mon uses suction cups to stay in one spot to negate all moves and items that force switching out."
+  },
+  "Intimidate": {
+    "Generation III": "Lowers the foe's Attack.",
+    "Generation IV": "Lowers the foe's Attack stat.",
+    "Generation V": "Lowers the foe's Attack stat.",
+    "Generation VI": "Lowers the opposing Pok\u00e9mon's Attack stat.",
+    "Generation VII": "The Pok\u00e9mon intimidates opposing Pok\u00e9mon upon entering battle, lowering their Attack stat.",
+    "Generation VIII": "The Pok\u00e9mon intimidates opposing Pok\u00e9mon upon entering battle, lowering their Attack stat."
+  },
+  "Shadow Tag": {
+    "Generation III": "Prevents the foe's escape.",
+    "Generation IV": "Prevents the foe from escaping.",
+    "Generation V": "Prevents the foe from escaping.",
+    "Generation VI": "Prevents opposing Pok\u00e9mon from escaping",
+    "Generation VII": "This Pok\u00e9mon steps on the opposing Pok\u00e9mon's shadow to prevent it from escaping.",
+    "Generation VIII": "This Pok\u00e9mon steps on the opposing Pok\u00e9mon's shadow to prevent it from escaping."
+  },
+  "Rough Skin": {
+    "Generation III": "Hurts to touch.",
+    "Generation IV": "Inflicts damage to the foe on contact.",
+    "Generation V": "Inflicts damage to the foe on contact.",
+    "Generation VI": "Inflicts damage to the attacker on contact.",
+    "Generation VII": "This Pok\u00e9mon inflicts damage with its rough skin to the attacker on contact.",
+    "Generation VIII": "This Pok\u00e9mon inflicts damage with its rough skin to the attacker on contact."
+  },
+  "Wonder Guard": {
+    "Pok\u00e9mon Ruby and Sapphire Versions": "\"Super effective\" hits.",
+    "Pok\u00e9mon Emerald Version": "\"Super effective\" hits.",
+    "Pok\u00e9mon FireRed and LeafGreen Versions": "\"Super effective\" hits.",
+    "Pok\u00e9mon XD: Gale of Darkness": "Supereffective hits.",
+    "Generation IV": "Only supereffective moves will hit.",
+    "Generation V": "Only supereffective moves will hit.",
+    "Generation VI": "Only supereffective moves will hit.",
+    "Generation VII": "Its mysterious power only lets supereffective moves hit the Pok\u00e9mon.",
+    "Generation VIII": "Its mysterious power only lets supereffective moves hit the Pok\u00e9mon."
+  },
+  "Levitate": {
+    "Generation III": "Not hit by Ground attacks.",
+    "Generation IV": "Gives full immunity to all Ground-type moves.",
+    "Generation V": "Gives full immunity to all Ground-type moves.",
+    "Generation VI": "Gives full immunity to all Ground-type moves.",
+    "Generation VII": "By floating in the air, the Pok\u00e9mon receives full immunity to all Ground-type moves.",
+    "Generation VIII": "By floating in the air, the Pok\u00e9mon receives full immunity to all Ground-type moves."
+  },
+  "Effect Spore": {
+    "Generation III": "Leaves spores on contact.",
+    "Generation IV": "Contact may paralyze, poison, or cause sleep.",
+    "Generation V": "Contact may poison or cause paralysis or sleep.",
+    "Generation VI": "Contact may poison or cause paralysis or sleep.",
+    "Generation VII": "Contact with the Pok\u00e9mon may inflict poison, sleep, or paralysis on its attacker.",
+    "Generation VIII": "Contact with the Pok\u00e9mon may inflict poison, sleep, or paralysis on its attacker."
+  },
+  "Synchronize": {
+    "Generation III": "Passes on status problems.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Passes on a burn, poison, or paralysis to the foe.",
+    "Pok\u00e9mon Platinum Version": "Passes on a burn, poison, or paralysis to the foe.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Passes a burn, poison, or paralysis to the foe.",
+    "Generation V": "Passes a burn, poison, or paralysis to the foe.",
+    "Generation VI": "Passes poison, paralyze, or burn to the Pok\u00e9mon that inflicted it.",
+    "Generation VII": "The attacker will receive the same status condition if it inflicts a burn, poison, or paralysis to the Pok\u00e9mon.",
+    "Generation VIII": "The attacker will receive the same status condition if it inflicts a burn, poison, or paralysis to the Pok\u00e9mon."
+  },
+  "Clear Body": {
+    "Generation III": "Prevents ability reduction.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Prevents the Pok\u00e9mon's stats from being lowered.",
+    "Pok\u00e9mon Platinum Version": "Prevents the Pok\u00e9mon's stats from being lowered.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Prevents its stats from being lowered.",
+    "Generation V": "Prevents other Pok\u00e9mon from lowering its stats.",
+    "Generation VI": "Prevents other Pok\u00e9mon from lowering its stats.",
+    "Generation VII": "Prevents other Pok\u00e9mon's moves or Abilities from lowering the Pok\u00e9mon's stats.",
+    "Generation VIII": "Prevents other Pok\u00e9mon's moves or Abilities from lowering the Pok\u00e9mon's stats."
+  },
+  "Natural Cure": {
+    "Generation III": "Heals upon switching out.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "All status problems are healed upon switching out.",
+    "Pok\u00e9mon Platinum Version": "All status problems are healed upon switching out.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "All status problems heal when it switches out.",
+    "Generation V": "All status problems heal when it switches out.",
+    "Generation VI": "All status conditions heal when the Pok\u00e9mon switches out.",
+    "Generation VII": "All status conditions heal when the Pok\u00e9mon switches out.",
+    "Generation VIII": "All status conditions heal when the Pok\u00e9mon switches out."
+  },
+  "Lightning Rod": {
+    "Generation III": "Draws electrical moves.",
+    "Generation IV": "The Pok\u00e9mon draws in all Electric-type moves.",
+    "Generation V": "Draws in all Electric-type moves to up Sp. Attack.",
+    "Generation VI": "Draws in all Electric-type moves to boost its Sp. Atk stat.",
+    "Generation VII": "The Pok\u00e9mon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.",
+    "Generation VIII": "The Pok\u00e9mon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk."
+  },
+  "Serene Grace": {
+    "Generation III": "Promotes added effects.",
+    "Generation IV": "Boosts the likelihood of added effects appearing.",
+    "Generation V": "Boosts the likelihood of added effects appearing.",
+    "Generation VI": "Boosts the likelihood of additional effects occurring.",
+    "Generation VII": "Boosts the likelihood of additional effects occurring when attacking.",
+    "Generation VIII": "Boosts the likelihood of additional effects occurring when attacking."
+  },
+  "Swift Swim": {
+    "Generation III": "Raises Speed in rain.",
+    "Generation IV": "Boosts the Pok\u00e9mon's Speed in rain.",
+    "Generation V": "Boosts the Pok\u00e9mon's Speed in rain.",
+    "Generation VI": "Boosts the Pok\u00e9mon's Speed stat in rain.",
+    "Generation VII": "Boosts the Pok\u00e9mon's Speed stat in rain.",
+    "Generation VIII": "Boosts the Pok\u00e9mon's Speed stat in rain."
+  },
+  "Chlorophyll": {
+    "Generation III": "Raises Speed in sunshine.",
+    "Generation IV": "Boosts the Pok\u00e9mon's Speed in sunshine.",
+    "Generation V": "Boosts the Pok\u00e9mon's Speed in sunshine.",
+    "Generation VI": "Boosts the Pok\u00e9mon's Speed stat in sunshine.",
+    "Pok\u00e9mon Sun and Moon": "Boosts the Pok\u00e9mon's Speed stat in sunshine.",
+    "Pok\u00e9mon Ultra Sun and Ultra Moon": "Boosts the Pok\u00e9mon's Speed stat in harsh sunlight.",
+    "Generation VIII": "Boosts the Pok\u00e9mon's Speed stat in harsh sunlight."
+  },
+  "Illuminate": {
+    "Generation III": "Encounter rate increases.",
+    "Generation IV": "Raises the likelihood of meeting wild Pok\u00e9mon.",
+    "Generation V": "Raises the likelihood of meeting wild Pok\u00e9mon.",
+    "Generation VI": "Raises the likelihood of meeting wild Pok\u00e9mon.",
+    "Generation VII": "Raises the likelihood of meeting wild Pok\u00e9mon by illuminating the surroundings.",
+    "Generation VIII": "Raises the likelihood of meeting wild Pok\u00e9mon by illuminating the surroundings."
+  },
+  "Trace": {
+    "Generation III": "Copies special ability.",
+    "Generation IV": "The Pok\u00e9mon copies the foe's ability.",
+    "Generation V": "The Pok\u00e9mon copies a foe's Ability.",
+    "Generation VI": "The Pok\u00e9mon copies an opposing Pok\u00e9mon's Ability.",
+    "Generation VII": "When it enters a battle, the Pok\u00e9mon copies an opposing Pok\u00e9mon's Ability.",
+    "Generation VIII": "When it enters a battle, the Pok\u00e9mon copies an opposing Pok\u00e9mon's Ability."
+  },
+  "Huge Power": {
+    "Generation III": "Raises Attack.",
+    "Generation IV": "Raises the Pok\u00e9mon's Attack stat.",
+    "Generation V": "Raises the Pok\u00e9mon's Attack stat.",
+    "Generation VI": "Boosts the Pok\u00e9mon's Attack stat.",
+    "Generation VII": "Doubles the Pok\u00e9mon's Attack stat.",
+    "Generation VIII": "Doubles the Pok\u00e9mon's Attack stat."
+  },
+  "Poison Point": {
+    "Pok\u00e9mon Ruby and Sapphire Versions": "Poisons foe on contact.",
+    "Pok\u00e9mon Emerald Version": "Poisons foe on contact.",
+    "Pok\u00e9mon FireRed and LeafGreen Versions": "Poisons foe on contact.",
+    "Pok\u00e9mon XD: Gale of Darkness": "Poisons target on contact.",
+    "Generation IV": "Contact with the Pok\u00e9mon may poison the foe.",
+    "Generation V": "Contact with the Pok\u00e9mon may poison the attacker.",
+    "Generation VI": "Contact with the Pok\u00e9mon may poison the attacker.",
+    "Generation VII": "Contact with the Pok\u00e9mon may poison the attacker.",
+    "Generation VIII": "Contact with the Pok\u00e9mon may poison the attacker."
+  },
+  "Inner Focus": {
+    "Generation III": "Prevents flinching.",
+    "Generation IV": "The Pok\u00e9mon is protected from flinching.",
+    "Generation V": "The Pok\u00e9mon is protected from flinching.",
+    "Generation VI": "Protects the Pok\u00e9mon from flinching.",
+    "Generation VII": "The Pok\u00e9mon's intensely focused, and that protects the Pok\u00e9mon from flinching.",
+    "Generation VIII": "The Pok\u00e9mon's intensely focused, and that protects the Pok\u00e9mon from flinching."
+  },
+  "Magma Armor": {
+    "Generation III": "Prevents freezing.",
+    "Generation IV": "Prevents the Pok\u00e9mon from becoming frozen.",
+    "Generation V": "Prevents the Pok\u00e9mon from becoming frozen.",
+    "Generation VI": "Prevents the Pok\u00e9mon from becoming frozen.",
+    "Generation VII": "The Pok\u00e9mon is covered with hot magma, which prevents the Pok\u00e9mon from becoming frozen.",
+    "Generation VIII": "The Pok\u00e9mon is covered with hot magma, which prevents the Pok\u00e9mon from becoming frozen."
+  },
+  "Water Veil": {
+    "Generation III": "Prevents burns.",
+    "Generation IV": "Prevents the Pok\u00e9mon from getting a burn.",
+    "Generation V": "Prevents the Pok\u00e9mon from getting a burn.",
+    "Generation VI": "Prevents the Pok\u00e9mon from getting a burn.",
+    "Generation VII": "The Pok\u00e9mon is covered with a water veil, which prevents the Pok\u00e9mon from getting a burn.",
+    "Generation VIII": "The Pok\u00e9mon is covered with a water veil, which prevents the Pok\u00e9mon from getting a burn."
+  },
+  "Magnet Pull": {
+    "Pok\u00e9mon Ruby and Sapphire Versions": "Traps Steel-type Pok\u00e9mon.",
+    "Pok\u00e9mon Emerald Version": "Traps Steel-type Pok\u00e9mon.",
+    "Pok\u00e9mon FireRed and LeafGreen Versions": "Traps Steel-type Pok\u00e9mon.",
+    "Pok\u00e9mon XD: Gale of Darkness": "Traps Steel-type foes.",
+    "Generation IV": "Prevents Steel-type Pok\u00e9mon from escaping.",
+    "Generation V": "Prevents Steel-type Pok\u00e9mon from escaping.",
+    "Generation VI": "Prevents Steel-type Pok\u00e9mon from escaping.",
+    "Generation VII": "Prevents Steel-type Pok\u00e9mon from escaping using its magnetic force.",
+    "Generation VIII": "Prevents Steel-type Pok\u00e9mon from escaping using its magnetic force."
+  },
+  "Soundproof": {
+    "Generation III": "Avoids sound-based moves.",
+    "Generation IV": "Gives full immunity to all sound-based moves.",
+    "Generation V": "Gives full immunity to all sound-based moves.",
+    "Generation VI": "Gives full immunity to all sound-based moves.",
+    "Generation VII": "Soundproofing of the Pok\u00e9mon itself gives full immunity to all sound-based moves.",
+    "Generation VIII": "Soundproofing gives the Pok\u00e9mon full immunity to all sound-based moves."
+  },
+  "Rain Dish": {
+    "Generation III": "Slight HP recovery in rain.",
+    "Generation IV": "The Pok\u00e9mon gradually recovers HP in rain.",
+    "Generation V": "The Pok\u00e9mon gradually regains HP in rain.",
+    "Generation VI": "The Pok\u00e9mon gradually regains HP in rain.",
+    "Generation VII": "The Pok\u00e9mon gradually regains HP in rain.",
+    "Generation VIII": "The Pok\u00e9mon gradually regains HP in rain."
+  },
+  "Sand Stream": {
+    "Generation III": "Summons a sandstorm.",
+    "Generation IV": "The Pok\u00e9mon summons a sandstorm in battle.",
+    "Generation V": "The Pok\u00e9mon summons a sandstorm in battle.",
+    "Generation VI": "The Pok\u00e9mon summons a sandstorm in battle.",
+    "Generation VII": "The Pok\u00e9mon summons a sandstorm when it enters a battle.",
+    "Generation VIII": "The Pok\u00e9mon summons a sandstorm when it enters a battle."
+  },
+  "Pressure": {
+    "Generation III": "Raises foe's PP usage.",
+    "Generation IV": "The Pok\u00e9mon raises the foe's PP usage.",
+    "Generation V": "The Pok\u00e9mon raises the foe's PP usage.",
+    "Generation VI": "The Pok\u00e9mon raises opposing Pok\u00e9mon's PP usage.",
+    "Generation VII": "By putting pressure on the opposing Pok\u00e9mon, it raises their PP usage.",
+    "Generation VIII": "By putting pressure on the opposing Pok\u00e9mon, it raises their PP usage."
+  },
+  "Thick Fat": {
+    "Generation III": "Heat-and-cold protection.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Raises resistance to Fire-type and Ice-type moves.",
+    "Pok\u00e9mon Platinum Version": "Raises resistance to Fire-type and Ice-type moves.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Ups resistance to Fire- and Ice-type moves.",
+    "Generation V": "Ups resistance to Fire- and Ice-type moves.",
+    "Generation VI": "Boosts resistance to Fire- and Ice-type moves.",
+    "Generation VII": "The Pok\u00e9mon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves.",
+    "Generation VIII": "The Pok\u00e9mon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves."
+  },
+  "Early Bird": {
+    "Generation III": "Awakens quickly from sleep.",
+    "Generation IV": "The Pok\u00e9mon awakens quickly from sleep.",
+    "Generation V": "The Pok\u00e9mon awakens quickly from sleep.",
+    "Generation VI": "The Pok\u00e9mon awakens quickly from sleep.",
+    "Generation VII": "The Pok\u00e9mon awakens twice as fast as other Pok\u00e9mon from sleep.",
+    "Generation VIII": "The Pok\u00e9mon awakens from sleep twice as fast as other Pok\u00e9mon."
+  },
+  "Flame Body": {
+    "Pok\u00e9mon Ruby and Sapphire Versions": "Burns the foe on contact.",
+    "Pok\u00e9mon Emerald Version": "Burns the foe on contact.",
+    "Pok\u00e9mon FireRed and LeafGreen Versions": "Burns the foe on contact.",
+    "Pok\u00e9mon XD: Gale of Darkness": "Burns the target on contact.",
+    "Generation IV": "Contact with the Pok\u00e9mon may burn the foe.",
+    "Generation V": "Contact with the Pok\u00e9mon may burn the attacker.",
+    "Generation VI": "Contact with the Pok\u00e9mon may burn the attacker.",
+    "Generation VII": "Contact with the Pok\u00e9mon may burn the attacker.",
+    "Generation VIII": "Contact with the Pok\u00e9mon may burn the attacker."
+  },
+  "Run Away": {
+    "Generation III": "Makes escaping easier.",
+    "Generation IV": "Enables sure getaway from wild Pok\u00e9mon.",
+    "Generation V": "Enables a sure getaway from wild Pok\u00e9mon.",
+    "Generation VI": "Enables a sure getaway from wild Pok\u00e9mon.",
+    "Generation VII": "Enables a sure getaway from wild Pok\u00e9mon.",
+    "Generation VIII": "Enables a sure getaway from wild Pok\u00e9mon."
+  },
+  "Keen Eye": {
+    "Generation III": "Prevents loss of accuracy.",
+    "Generation IV": "Prevents the Pok\u00e9mon from losing accuracy.",
+    "Generation V": "Prevents other Pok\u00e9mon from lowering accuracy.",
+    "Generation VI": "Prevents other Pok\u00e9mon from lowering accuracy.",
+    "Generation VII": "Keen eyes prevent other Pok\u00e9mon from lowering this Pok\u00e9mon's accuracy.",
+    "Generation VIII": "Keen eyes prevent other Pok\u00e9mon from lowering this Pok\u00e9mon's accuracy."
+  },
+  "Hyper Cutter": {
+    "Generation III": "Prevents Attack reduction.",
+    "Generation IV": "Prevents the Attack stat from being lowered.",
+    "Generation V": "Prevents other Pok\u00e9mon from lowering Attack stat.",
+    "Generation VI": "Prevents other Pok\u00e9mon from lowering its Attack stat.",
+    "Generation VII": "The Pok\u00e9mon's proud of its powerful pincers. They prevent other Pok\u00e9mon from lowering its Attack stat.",
+    "Generation VIII": "The Pok\u00e9mon's proud of its powerful pincers. They prevent other Pok\u00e9mon from lowering its Attack stat."
+  },
+  "Pickup": {
+    "Generation III": "May pick up items.",
+    "Generation IV": "The Pok\u00e9mon may pick up items.",
+    "Generation V": "The Pok\u00e9mon may pick up items.",
+    "Generation VI": "The Pok\u00e9mon may pick up items.",
+    "Generation VII": "The Pok\u00e9mon may pick up the item an opposing Pok\u00e9mon used during a battle. It may pick up items outside of battle, too.",
+    "Generation VIII": "The Pok\u00e9mon may pick up the item an opposing Pok\u00e9mon used during a battle. It may pick up items outside of battle, too."
+  },
+  "Truant": {
+    "Generation III": "Moves only every two turns.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "The Pok\u00e9mon can't attack on consecutive turns.",
+    "Pok\u00e9mon Platinum Version": "The Pok\u00e9mon can't attack on consecutive turns.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Pok\u00e9mon can't attack on consecutive turns.",
+    "Generation V": "Pok\u00e9mon can't attack on consecutive turns.",
+    "Generation VI": "The Pok\u00e9mon can't attack on consecutive turns.",
+    "Generation VII": "The Pok\u00e9mon can't use a move the following turn if it uses one.",
+    "Generation VIII": "The Pok\u00e9mon can't use a move if it had used a move on the previous turn."
+  },
+  "Hustle": {
+    "Generation III": "Trades accuracy for power.",
+    "Generation IV": "Boosts the Attack stat, but lowers accuracy.",
+    "Generation V": "Boosts the Attack stat, but lowers accuracy.",
+    "Generation VI": "Boosts the Attack stat, but lowers accuracy.",
+    "Generation VII": "Boosts the Attack stat, but lowers accuracy.",
+    "Generation VIII": "Boosts the Attack stat, but lowers accuracy."
+  },
+  "Cute Charm": {
+    "Generation III": "Infatuates on contact.",
+    "Generation IV": "Contact with the Pok\u00e9mon may cause infatuation.",
+    "Generation V": "Contact with the Pok\u00e9mon may cause infatuation.",
+    "Generation VI": "Contact with the Pok\u00e9mon may cause infatuation.",
+    "Generation VII": "Contact with the Pok\u00e9mon may cause infatuation.",
+    "Generation VIII": "Contact with the Pok\u00e9mon may cause infatuation."
+  },
+  "Plus": {
+    "Generation III": "Powers up with Minus.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Boosts Sp. Atk if another Pok\u00e9mon has Minus.",
+    "Pok\u00e9mon Platinum Version": "Boosts Sp. Atk if another Pok\u00e9mon has Minus.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Ups Sp. Atk if another Pok\u00e9mon has Minus.",
+    "Generation V": "Ups Sp. Atk if another Pok\u00e9mon has Plus or Minus.",
+    "Generation VI": "Boosts the Sp. Atk stat if another Pok\u00e9mon has Plus or Minus.",
+    "Generation VII": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
+    "Generation VIII": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle."
+  },
+  "Minus": {
+    "Generation III": "Powers up with Plus.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Boosts Sp. Atk if another Pok\u00e9mon has Plus.",
+    "Pok\u00e9mon Platinum Version": "Boosts Sp. Atk if another Pok\u00e9mon has Plus.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Ups Sp. Atk if another Pok\u00e9mon has Plus.",
+    "Generation V": "Ups Sp. Atk if another Pok\u00e9mon has Plus or Minus.",
+    "Generation VI": "Boosts the Sp. Atk stat if another Pok\u00e9mon has Plus or Minus.",
+    "Generation VII": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
+    "Generation VIII": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle."
+  },
+  "Forecast": {
+    "Generation III": "Changes with the weather.",
+    "Generation IV": "Castform transforms with the weather.",
+    "Generation V": "Castform transforms with the weather.",
+    "Generation VI": "Castform transforms with the weather.",
+    "Generation VII": "The Pok\u00e9mon transforms with the weather to change its type to Water, Fire, or Ice.",
+    "Generation VIII": "The Pok\u00e9mon transforms with the weather to change its type to Water, Fire, or Ice."
+  },
+  "Sticky Hold": {
+    "Generation III": "Prevents item theft.",
+    "Generation IV": "Protects the Pok\u00e9mon from item theft.",
+    "Generation V": "Protects the Pok\u00e9mon from item theft.",
+    "Generation VI": "Protects the Pok\u00e9mon from item theft.",
+    "Generation VII": "Items held by the Pok\u00e9mon are stuck fast and cannot be removed by other Pok\u00e9mon.",
+    "Generation VIII": "Items held by the Pok\u00e9mon are stuck fast and cannot be removed by other Pok\u00e9mon."
+  },
+  "Shed Skin": {
+    "Generation III": "Heals the body by shedding.",
+    "Generation IV": "The Pok\u00e9mon may heal its own status problems.",
+    "Generation V": "The Pok\u00e9mon may heal its own status problems.",
+    "Generation VI": "The Pok\u00e9mon may heal its own status conditions.",
+    "Generation VII": "The Pok\u00e9mon may heal its own status conditions by shedding its skin.",
+    "Generation VIII": "The Pok\u00e9mon may heal its own status conditions by shedding its skin."
+  },
+  "Guts": {
+    "Generation III": "Ups Attack if suffering.",
+    "Generation IV": "Boosts Attack if there is a status problem.",
+    "Generation V": "Boosts Attack if there is a status problem.",
+    "Generation VI": "Boosts the Attack stat if the Pok\u00e9mon has a status condition.",
+    "Generation VII": "It's so gutsy that having a status condition boosts the Pok\u00e9mon's Attack stat.",
+    "Generation VIII": "It's so gutsy that having a status condition boosts the Pok\u00e9mon's Attack stat."
+  },
+  "Marvel Scale": {
+    "Generation III": "Ups Defense if suffering.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Boosts Defense if there is a status problem.",
+    "Pok\u00e9mon Platinum Version": "Boosts Defense if there is a status problem.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Ups Defense if there is a status problem.",
+    "Generation V": "Ups Defense if there is a status problem.",
+    "Generation VI": "Boosts the Defense stat if the Pok\u00e9mon has a status condition.",
+    "Generation VII": "The Pok\u00e9mon's marvelous scales boost the Defense stat if it has a status condition.",
+    "Generation VIII": "The Pok\u00e9mon's marvelous scales boost the Defense stat if it has a status condition."
+  },
+  "Liquid Ooze": {
+    "Generation III": "Draining causes injury.",
+    "Generation IV": "Inflicts damage on foes using any draining move.",
+    "Generation V": "Damages attackers using any draining move.",
+    "Generation VI": "Damages attackers using any draining move.",
+    "Generation VII": "Oozed liquid has strong stench, which damages attackers using any draining move.",
+    "Generation VIII": "The oozed liquid has a strong stench, which damages attackers using any draining move."
+  },
+  "Overgrow": {
+    "Generation III": "Ups Grass moves in a pinch.",
+    "Generation IV": "Powers up Grass-type moves in a pinch.",
+    "Generation V": "Powers up Grass-type moves in a pinch.",
+    "Generation VI": "Powers up Grass-type moves when the Pok\u00e9mon is in trouble.",
+    "Generation VII": "Powers up Grass-type moves when the Pok\u00e9mon's HP is low.",
+    "Generation VIII": "Powers up Grass-type moves when the Pok\u00e9mon's HP is low."
+  },
+  "Blaze": {
+    "Generation III": "Ups Fire moves in a pinch.",
+    "Generation IV": "Powers up Fire-type moves in a pinch.",
+    "Generation V": "Powers up Fire-type moves in a pinch.",
+    "Generation VI": "Powers up Fire-type moves when the Pok\u00e9mon is in trouble.",
+    "Generation VII": "Powers up Fire-type moves when the Pok\u00e9mon's HP is low.",
+    "Generation VIII": "Powers up Fire-type moves when the Pok\u00e9mon's HP is low."
+  },
+  "Torrent": {
+    "Generation III": "Ups Water moves in a pinch.",
+    "Generation IV": "Powers up Water-type moves in a pinch.",
+    "Generation V": "Powers up Water-type moves in a pinch.",
+    "Generation VI": "Powers up Water-type moves when the Pok\u00e9mon is in trouble.",
+    "Generation VII": "Powers up Water-type moves when the Pok\u00e9mon's HP is low.",
+    "Generation VIII": "Powers up Water-type moves when the Pok\u00e9mon's HP is low."
+  },
+  "Swarm": {
+    "Generation III": "Ups Bug moves in a pinch.",
+    "Generation IV": "Powers up Bug-type moves in a pinch.",
+    "Generation V": "Powers up Bug-type moves in a pinch.",
+    "Generation VI": "Powers up Bug-type moves when the Pok\u00e9mon is in trouble.",
+    "Generation VII": "Powers up Bug-type moves when the Pok\u00e9mon's HP is low.",
+    "Generation VIII": "Powers up Bug-type moves when the Pok\u00e9mon\u2019s HP is low."
+  },
+  "Rock Head": {
+    "Generation III": "Prevents recoil damage.",
+    "Generation IV": "Protects the Pok\u00e9mon from recoil damage.",
+    "Generation V": "Protects the Pok\u00e9mon from recoil damage.",
+    "Generation VI": "Protects the Pok\u00e9mon from recoil damage.",
+    "Generation VII": "Protects the Pok\u00e9mon from recoil damage.",
+    "Generation VIII": "Protects the Pok\u00e9mon from recoil damage."
+  },
+  "Drought": {
+    "Generation III": "Summons sunlight in battle.",
+    "Generation IV": "The Pok\u00e9mon makes it sunny if it appears in battle.",
+    "Generation V": "Turns the sunlight harsh if it is in battle.",
+    "Generation VI": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle.",
+    "Generation VII": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle.",
+    "Generation VIII": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle."
+  },
+  "Arena Trap": {
+    "Pok\u00e9mon Ruby and Sapphire Versions": "Prevents fleeing.",
+    "Pok\u00e9mon Emerald Version": "Prevents fleeing.",
+    "Pok\u00e9mon FireRed and LeafGreen Versions": "Prevents fleeing.",
+    "Pok\u00e9mon XD: Gale of Darkness": "Prevents the foe's escape.",
+    "Generation IV": "Prevents the foe from fleeing.",
+    "Generation V": "Prevents the foe from fleeing.",
+    "Generation VI": "Prevents opposing Pok\u00e9mon from fleeing.",
+    "Generation VII": "Prevents opposing Pok\u00e9mon from fleeing.",
+    "Generation VIII": "Prevents opposing Pok\u00e9mon from fleeing."
+  },
+  "Vital Spirit": {
+    "Generation III": "Prevents sleep.",
+    "Generation IV": "Prevents the Pok\u00e9mon from falling asleep.",
+    "Generation V": "Prevents the Pok\u00e9mon from falling asleep.",
+    "Generation VI": "Prevents the Pok\u00e9mon from falling asleep.",
+    "Generation VII": "The Pok\u00e9mon is full of vitality, and that prevents it from falling asleep.",
+    "Generation VIII": "The Pok\u00e9mon is full of vitality, and that prevents it from falling asleep."
+  },
+  "White Smoke": {
+    "Generation III": "Prevents ability reduction.",
+    "Pok\u00e9mon Diamond and Pearl Versions": "Prevents the Pok\u00e9mon's stats from being lowered.",
+    "Pok\u00e9mon Platinum Version": "Prevents the Pok\u00e9mon's stats from being lowered.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Prevents its stats from being lowered.",
+    "Generation V": "Prevents other Pok\u00e9mon from lowering its stats.",
+    "Generation VI": "Prevents other Pok\u00e9mon from lowering its stats.",
+    "Generation VII": "The Pok\u00e9mon is protected by its white smoke, which prevents other Pok\u00e9mon from lowering its stats.",
+    "Generation VIII": "The Pok\u00e9mon is protected by its white smoke, which prevents other Pok\u00e9mon from lowering its stats."
+  },
+  "Pure Power": {
+    "Generation III": "Raises Attack.",
+    "Generation IV": "Boosts the power of physical attacks.",
+    "Generation V": "Raises the Pok\u00e9mon's Attack stat.",
+    "Generation VI": "Boosts the Pok\u00e9mon's Attack stat.",
+    "Generation VII": "Using its pure power, the Pok\u00e9mon doubles its Attack stat.",
+    "Generation VIII": "Using its pure power, the Pok\u00e9mon doubles its Attack stat."
+  },
+  "Shell Armor": {
+    "Generation III": "Blocks critical hits.",
+    "Generation IV": "The Pok\u00e9mon is protected against critical hits.",
+    "Generation V": "The Pok\u00e9mon is protected against critical hits.",
+    "Generation VI": "Protects the Pok\u00e9mon from critical hits.",
+    "Generation VII": "A hard shell protects the Pok\u00e9mon from critical hits.",
+    "Generation VIII": "A hard shell protects the Pok\u00e9mon from critical hits."
+  },
+  "Air Lock": {
+    "Generation III": "Negates weather effects.",
+    "Generation IV": "Eliminates the effects of weather.",
+    "Generation V": "Eliminates the effects of weather.",
+    "Generation VI": "Eliminates the effects of weather.",
+    "Generation VII": "Eliminates the effects of weather."
+  },
+  "Tangled Feet": {
+    "Generation IV": "Raises evasion if Pok\u00e9mon is confused.",
+    "Generation V": "Raises evasion if the Pok\u00e9mon is confused.",
+    "Generation VI": "Raises evasion if the Pok\u00e9mon is confused.",
+    "Generation VII": "Raises evasion if the Pok\u00e9mon is confused.",
+    "Generation VIII": "Raises evasiveness if the Pok\u00e9mon is confused."
+  },
+  "Motor Drive": {
+    "Generation IV": "Raises Speed if hit by an Electric-type move.",
+    "Generation V": "Raises Speed if hit by an Electric-type move.",
+    "Generation VI": "Boosts the Speed stat when it's hit by an Electric-type move.",
+    "Generation VII": "Boosts its Speed stat if hit by an Electric-type move, instead of taking damage.",
+    "Generation VIII": "Boosts its Speed stat if hit by an Electric-type move instead of taking damage."
+  },
+  "Rivalry": {
+    "Generation III": "",
+    "Generation IV": "Raises Attack if the foe is of the same gender.",
+    "Generation V": "Deals more damage to a Pok\u00e9mon of same gender.",
+    "Generation VI": "Deals more damage to Pok\u00e9mon of the same gender.",
+    "Generation VII": "Becomes competitive and deals more damage to Pok\u00e9mon of the same gender, but deals less to Pok\u00e9mon of the opposite gender.",
+    "Generation VIII": "Becomes competitive and deals more damage to Pok\u00e9mon of the same gender, but deals less to Pok\u00e9mon of the opposite gender."
+  },
+  "Steadfast": {
+    "Generation IV": "Raises Speed each time the Pok\u00e9mon flinches.",
+    "Generation V": "Raises Speed each time the Pok\u00e9mon flinches.",
+    "Generation VI": "Boosts the Speed stat each time the Pok\u00e9mon flinches.",
+    "Generation VII": "The Pok\u00e9mon's determination boosts the Speed stat each time the Pok\u00e9mon flinches.",
+    "Generation VIII": "The Pok\u00e9mon\u2019s determination boosts the Speed stat each time the Pok\u00e9mon flinches."
+  },
+  "Snow Cloak": {
+    "Generation IV": "Raises evasion in a hailstorm.",
+    "Generation V": "Raises evasion in a hailstorm.",
+    "Generation VI": "Boosts evasion in a hailstorm.",
+    "Generation VII": "Boosts evasion in a hailstorm.",
+    "Generation VIII": "Boosts evasiveness in a hailstorm."
+  },
+  "Gluttony": {
+    "Generation IV": "Encourages the early use of a held Berry.",
+    "Generation V": "Encourages the early use of a held Berry.",
+    "Generation VI": "Makes the Pok\u00e9mon use a held Berry earlier than usual.",
+    "Generation VII": "Makes the Pok\u00e9mon eat a held Berry when its HP drops to half or less, which is sooner than usual.",
+    "Generation VIII": "Makes the Pok\u00e9mon eat a held Berry when its HP drops to half or less, which is sooner than usual."
+  },
+  "Anger Point": {
+    "Generation IV": "Raises Attack upon taking a critical hit.",
+    "Generation V": "Maxes Attack after taking a critical hit.",
+    "Generation VI": "Maxes the Attack stat after the Pok\u00e9mon takes a critical hit.",
+    "Generation VII": "The Pok\u00e9mon is angered when it takes a critical hit, and that maxes its Attack stat.",
+    "Generation VIII": "The Pok\u00e9mon is angered when it takes a critical hit, and that maxes its Attack stat."
+  },
+  "Unburden": {
+    "Generation IV": "Raises speed if a held item is used.",
+    "Generation V": "Raises Speed if a held item is used.",
+    "Generation VI": "Boosts the Speed stat if its held item is used or lost.",
+    "Generation VII": "Boosts the Speed stat if the Pok\u00e9mon's held item is used or lost.",
+    "Generation VIII": "Boosts the Speed stat if the Pok\u00e9mon's held item is used or lost."
+  },
+  "Heatproof": {
+    "Generation IV": "Weakens the power of Fire-type moves.",
+    "Generation V": "Weakens the power of Fire-type moves.",
+    "Generation VI": "Weakens the power of Fire-type moves.",
+    "Generation VII": "The heatproof body of the Pok\u00e9mon halves the damage from Fire-type moves that hit it.",
+    "Generation VIII": "The heatproof body of the Pok\u00e9mon halves the damage from Fire-type moves that hit it."
+  },
+  "Simple": {
+    "Generation IV": "The Pok\u00e9mon is prone to wild stat changes.",
+    "Generation V": "The Pok\u00e9mon is prone to wild stat changes.",
+    "Generation VI": "The Pok\u00e9mon is prone to wild stat changes.",
+    "Generation VII": "The stat changes the Pok\u00e9mon receives are doubled.",
+    "Generation VIII": "The stat changes the Pok\u00e9mon receives are doubled."
+  },
+  "Dry Skin": {
+    "Generation IV": "Reduces HP if it is hot. Water restores HP.",
+    "Generation V": "Reduces HP if it is hot. Water restores HP.",
+    "Generation VI": "Reduces HP if it's hot. Water restores HP.",
+    "Pok\u00e9mon Sun and Moon": "Restores HP in rain or when hit by Water-type moves. Reduces HP in sunshine, and increases the damage received from Fire-type moves.",
+    "Pok\u00e9mon Ultra Sun and Ultra Moon": "Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.",
+    "Generation VIII": "Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves."
+  },
+  "Download": {
+    "Generation IV": "Adjusts power according to the foe's ability.",
+    "Generation V": "Adjusts power according to a foe's defenses.",
+    "Generation VI": "Adjusts power based on an opposing Pok\u00e9mon's stats.",
+    "Generation VII": "Compares an opposing Pok\u00e9mon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat\u2014whichever will be more effective.",
+    "Generation VIII": "Compares an opposing Pok\u00e9mon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat\u2014whichever will be more effective."
+  },
+  "Iron Fist": {
+    "Generation IV": "Boosts the power of punching moves.",
+    "Generation V": "Boosts the power of punching moves.",
+    "Generation VI": "Powers up punching moves.",
+    "Generation VII": "Powers up punching moves.",
+    "Generation VIII": "Powers up punching moves."
+  },
+  "Poison Heal": {
+    "Generation IV": "Restores HP if the Pok\u00e9mon is poisoned.",
+    "Generation V": "Restores HP if the Pok\u00e9mon is poisoned.",
+    "Generation VI": "Restores HP if the Pok\u00e9mon is poisoned.",
+    "Generation VII": "Restores HP if the Pok\u00e9mon is poisoned, instead of losing HP.",
+    "Generation VIII": "Restores HP if the Pok\u00e9mon is poisoned instead of losing HP."
+  },
+  "Adaptability": {
+    "Generation IV": "Powers up moves of the same type.",
+    "Generation V": "Powers up moves of the same type.",
+    "Generation VI": "Powers up moves of the same type as the Pok\u00e9mon.",
+    "Generation VII": "Powers up moves of the same type as the Pok\u00e9mon.",
+    "Generation VIII": "Powers up moves of the same type as the Pok\u00e9mon."
+  },
+  "Skill Link": {
+    "Generation IV": "Increases the frequency of multi-strike moves.",
+    "Generation V": "Increases the frequency of multi-strike moves.",
+    "Generation VI": "Increases the number of times multi-strike moves hit.",
+    "Generation VII": "Maximizes the number of times multi-strike moves hit.",
+    "Generation VIII": "Maximizes the number of times multistrike moves hit."
+  },
+  "Hydration": {
+    "Generation IV": "Heals status problems if it is raining.",
+    "Generation V": "Heals status problems if it is raining.",
+    "Generation VI": "Heals status conditions if it's raining.",
+    "Generation VII": "Heals status conditions if it's raining.",
+    "Generation VIII": "Heals status conditions if it's raining."
+  },
+  "Solar Power": {
+    "Generation IV": "Boosts Sp. Atk, but lowers HP in sunshine.",
+    "Generation V": "In sunshine, Sp. Atk is boosted but HP decreases.",
+    "Generation VI": "Boosts the Sp. Atk stat in sunny weather, but HP decreases.",
+    "Pok\u00e9mon Sun and Moon": "Boosts the Sp. Atk stat in sunny weather, but HP decreases every turn.",
+    "Pok\u00e9mon Ultra Sun and Ultra Moon": "Boosts the Sp. Atk stat in harsh sunlight, but HP decreases every turn.",
+    "Generation VIII": "Boosts the Sp. Atk stat in harsh sunlight, but HP decreases every turn."
+  },
+  "Quick Feet": {
+    "Generation IV": "Boosts Speed if there is a status problem.",
+    "Generation V": "Boosts Speed if there is a status problem.",
+    "Generation VI": "Boosts the Speed stat if the Pok\u00e9mon has a status condition.",
+    "Generation VII": "Boosts the Speed stat if the Pok\u00e9mon has a status condition.",
+    "Generation VIII": "Boosts the Speed stat if the Pok\u00e9mon has a status condition."
+  },
+  "Normalize": {
+    "Generation IV": "All the Pok\u00e9mon's moves become the Normal type.",
+    "Generation V": "All the Pok\u00e9mon's moves become the Normal type.",
+    "Generation VI": "All the Pok\u00e9mon's moves become Normal type.",
+    "Generation VII": "All the Pok\u00e9mon's moves become Normal type. The power of those moves is boosted a little.",
+    "Generation VIII": "All the Pok\u00e9mon's moves become Normal type. The power of those moves is boosted a little."
+  },
+  "Sniper": {
+    "Generation IV": "Powers up moves if they become critical hits.",
+    "Generation V": "Powers up moves if they become critical hits.",
+    "Generation VI": "Powers up moves if they become critical hits.",
+    "Generation VII": "Powers up moves if they become critical hits when attacking.",
+    "Generation VIII": "Powers up moves if they become critical hits when attacking."
+  },
+  "Magic Guard": {
+    "Generation IV": "The Pok\u00e9mon only takes damage from attacks.",
+    "Generation V": "The Pok\u00e9mon only takes damage from attacks.",
+    "Generation VI": "The Pok\u00e9mon only takes damage from attacks.",
+    "Generation VII": "The Pok\u00e9mon only takes damage from attacks.",
+    "Generation VIII": "The Pok\u00e9mon only takes damage from attacks."
+  },
+  "No Guard": {
+    "Pok\u00e9mon Diamond and Pearl Versions": "Ensures the Pok\u00e9mon and its foe's attacks land.",
+    "Pok\u00e9mon Platinum Version": "Ensures the Pok\u00e9mon and its foe's attacks land.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Ensures both Pok\u00e9mon's and foe's attacks land.",
+    "Generation V": "Ensures attacks by or against the Pok\u00e9mon land.",
+    "Generation VI": "Ensures attacks by or against the Pok\u00e9mon land.",
+    "Generation VII": "The Pok\u00e9mon employs no-guard tactics to ensure incoming and outgoing attacks always land.",
+    "Generation VIII": "The Pok\u00e9mon employs no-guard tactics to ensure incoming and outgoing attacks always land."
+  },
+  "Stall": {
+    "Generation IV": "The Pok\u00e9mon moves after even slower foes.",
+    "Generation V": "The Pok\u00e9mon moves after all other Pok\u00e9mon do.",
+    "Generation VI": "The Pok\u00e9mon moves after all other Pok\u00e9mon do.",
+    "Generation VII": "The Pok\u00e9mon moves after all other Pok\u00e9mon do.",
+    "Generation VIII": "The Pok\u00e9mon moves after all other Pok\u00e9mon do."
+  },
+  "Technician": {
+    "Generation IV": "Powers up the Pok\u00e9mon's weaker moves.",
+    "Generation V": "Powers up the Pok\u00e9mon's weaker moves.",
+    "Generation VI": "Powers up the Pok\u00e9mon's weaker moves.",
+    "Generation VII": "Powers up the Pok\u00e9mon's weaker moves.",
+    "Generation VIII": "Powers up the Pok\u00e9mon's weaker moves."
+  },
+  "Leaf Guard": {
+    "Pok\u00e9mon Diamond and Pearl Versions": "Prevents status problems in sunny weather.",
+    "Pok\u00e9mon Platinum Version": "Prevents status problems in sunny weather.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Prevents problems with status in sunny weather.",
+    "Generation V": "Prevents problems with status in sunny weather.",
+    "Generation VI": "Prevents status conditions in sunny weather.",
+    "Pok\u00e9mon Sun and Moon": "Prevents status conditions in sunny weather.",
+    "Pok\u00e9mon Ultra Sun and Ultra Moon": "Prevents status conditions in harsh sunlight.",
+    "Generation VIII": "Prevents status conditions in harsh sunlight."
+  },
+  "Klutz": {
+    "Generation IV": "The Pok\u00e9mon can't use any held items.",
+    "Generation V": "The Pok\u00e9mon can't use any held items.",
+    "Generation VI": "The Pok\u00e9mon can't use any held items.",
+    "Generation VII": "The Pok\u00e9mon can't use any held items.",
+    "Generation VIII": "The Pok\u00e9mon can\u2019t use any held items."
+  },
+  "Mold Breaker": {
+    "Generation IV": "Moves can be used regardless of abilities.",
+    "Generation V": "Moves can be used regardless of Abilities.",
+    "Generation VI": "Moves can be used on the target regardless of its Abilities.",
+    "Generation VII": "Moves can be used on the target regardless of its Abilities.",
+    "Generation VIII": "Moves can be used on the target regardless of its Abilities."
+  },
+  "Super Luck": {
+    "Generation IV": "Heightens the critical-hit ratios of moves.",
+    "Generation V": "Heightens the critical-hit ratios of moves.",
+    "Generation VI": "Boosts the critical-hit ratios of moves.",
+    "Generation VII": "The Pok\u00e9mon is so lucky that the critical-hit ratios of its moves are boosted.",
+    "Generation VIII": "The Pok\u00e9mon is so lucky that the critical-hit ratios of its moves are boosted."
+  },
+  "Aftermath": {
+    "Generation IV": "Damages the foe landing the finishing hit.",
+    "Generation V": "Damages the attacker landing the finishing hit.",
+    "Generation VI": "Damages the attacker landing the finishing hit.",
+    "Generation VII": "Damages the attacker if it contacts the Pok\u00e9mon with a finishing hit.",
+    "Generation VIII": "Damages the attacker if it contacts the Pok\u00e9mon with a finishing hit."
+  },
+  "Anticipation": {
+    "Generation IV": "Senses the foe's dangerous moves.",
+    "Generation V": "Senses a foe's dangerous moves.",
+    "Generation VI": "Senses an opposing Pok\u00e9mon's dangerous moves.",
+    "Generation VII": "The Pok\u00e9mon can sense an opposing Pok\u00e9mon's dangerous moves.",
+    "Generation VIII": "The Pok\u00e9mon can sense an opposing Pok\u00e9mon's dangerous moves."
+  },
+  "Forewarn": {
+    "Generation IV": "Determines what moves the foe has.",
+    "Generation V": "Determines what moves a foe has.",
+    "Generation VI": "Determines what moves an opposing Pok\u00e9mon has.",
+    "Generation VII": "When it enters a battle, the Pok\u00e9mon can tell one of the moves an opposing Pok\u00e9mon has.",
+    "Generation VIII": "When it enters a battle, the Pok\u00e9mon can tell one of the moves an opposing Pok\u00e9mon has."
+  },
+  "Unaware": {
+    "Generation IV": "Ignores any change in ability by the foe.",
+    "Generation V": "Ignores any stat changes in the Pok\u00e9mon.",
+    "Generation VI": "Ignores the opposing Pok\u00e9mon's stat changes.",
+    "Generation VII": "When attacking, the Pok\u00e9mon ignores the target Pok\u00e9mon's stat changes.",
+    "Generation VIII": "When attacking, the Pok\u00e9mon ignores the target Pok\u00e9mon\u2019s stat changes."
+  },
+  "Tinted Lens": {
+    "Generation IV": "Doubles the power of this Pok\u00e9mon's \"not very effective\" attacks.",
+    "Generation V": "Powers up \"not very effective\" moves.",
+    "Generation VI": "Powers up \"not very effective\" moves.",
+    "Generation VII": "The Pok\u00e9mon can use \"not very effective\" moves to deal regular damage.",
+    "Generation VIII": "The Pok\u00e9mon can use \"not very effective\" moves to deal regular damage."
+  },
+  "Filter": {
+    "Pok\u00e9mon Diamond and Pearl Versions": "Powers down super-effective moves.",
+    "Pok\u00e9mon Platinum Version": "Powers down super-effective moves.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Reduces damage from supereffective attacks.",
+    "Generation V": "Reduces damage from supereffective attacks.",
+    "Generation VI": "Reduces damage from supereffective attacks.",
+    "Generation VII": "Reduces the power of supereffective attacks taken.",
+    "Generation VIII": "Reduces the power of supereffective attacks taken."
+  },
+  "Slow Start": {
+    "Generation IV": "Temporarily halves Attack and Speed.",
+    "Generation V": "Temporarily halves Attack and Speed.",
+    "Generation VI": "Temporarily halves the Pok\u00e9mon's Attack and Speed stats.",
+    "Generation VII": "For five turns, the Pok\u00e9mon's Attack and Speed stats are halved.",
+    "Generation VIII": "For five turns, the Pok\u00e9mon's Attack and Speed stats are halved."
+  },
+  "Scrappy": {
+    "Generation IV": "Enables moves to hit Ghost-type foes.",
+    "Generation V": "Enables moves to hit Ghost-type Pok\u00e9mon.",
+    "Generation VI": "Makes Normal- and Fighting-type moves hit Ghost-type Pok\u00e9mon.",
+    "Generation VII": "The Pok\u00e9mon can hit Ghost-type Pok\u00e9mon with Normal- and Fighting-type moves.",
+    "Generation VIII": "The Pok\u00e9mon can hit Ghost-type Pok\u00e9mon with Normal- and Fighting-type moves."
+  },
+  "Storm Drain": {
+    "Generation IV": "The Pok\u00e9mon draws in all Water-type moves.",
+    "Generation V": "Draws in all Water-type moves to up Sp. Attack.",
+    "Generation VI": "Draws in all Water-type moves to boost its Sp. Atk stat.",
+    "Generation VII": "Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.",
+    "Generation VIII": "Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk."
+  },
+  "Ice Body": {
+    "Generation IV": "The Pok\u00e9mon regains HP in a hailstorm.",
+    "Generation V": "The Pok\u00e9mon gradually regains HP in a hailstorm.",
+    "Generation VI": "The Pok\u00e9mon gradually regains HP in a hailstorm.",
+    "Generation VII": "The Pok\u00e9mon gradually regains HP in a hailstorm.",
+    "Generation VIII": "The Pok\u00e9mon gradually regains HP in a hailstorm."
+  },
+  "Solid Rock": {
+    "Pok\u00e9mon Diamond and Pearl Versions": "Powers down super-effective moves.",
+    "Pok\u00e9mon Platinum Version": "Powers down super-effective moves.",
+    "Pok\u00e9mon HeartGold and SoulSilver Versions": "Reduces damage from supereffective attacks.",
+    "Generation V": "Reduces damage from supereffective attacks.",
+    "Generation VI": "Reduces damage from supereffective attacks.",
+    "Generation VII": "Reduces the power of supereffective attacks taken.",
+    "Generation VIII": "Reduces the power of supereffective attacks taken."
+  },
+  "Snow Warning": {
+    "Generation IV": "The Pok\u00e9mon summons a hailstorm in battle.",
+    "Generation V": "The Pok\u00e9mon summons a hailstorm in battle.",
+    "Generation VI": "The Pok\u00e9mon summons a hailstorm when it enters a battle.",
+    "Generation VII": "The Pok\u00e9mon summons a hailstorm when it enters a battle.",
+    "Generation VIII": "The Pok\u00e9mon summons a hailstorm when it enters a battle."
+  },
+  "Honey Gather": {
+    "Generation IV": "The Pok\u00e9mon may gather Honey from somewhere.",
+    "Generation V": "The Pok\u00e9mon may gather Honey from somewhere.",
+    "Generation VI": "The Pok\u00e9mon may gather Honey from somewhere.",
+    "Generation VII": "The Pok\u00e9mon may gather Honey after a battle.",
+    "Generation VIII": "The Pok\u00e9mon may gather Honey after a battle."
+  },
+  "Frisk": {
+    "Generation IV": "The Pok\u00e9mon can check the foe's held item.",
+    "Generation V": "The Pok\u00e9mon can check a foe's held item.",
+    "Generation VI": "The Pok\u00e9mon can check an opposing Pok\u00e9mon's held item.",
+    "Generation VII": "When it enters a battle, the Pok\u00e9mon can check an opposing Pok\u00e9mon's held item.",
+    "Generation VIII": "When it enters a battle, the Pok\u00e9mon can check an opposing Pok\u00e9mon's held item."
+  },
+  "Reckless": {
+    "Generation IV": "Powers up moves that have recoil damage.",
+    "Generation V": "Powers up moves that have recoil damage.",
+    "Generation VI": "Powers up moves that have recoil damage.",
+    "Generation VII": "Powers up moves that have recoil damage.",
+    "Generation VIII": "Powers up moves that have recoil damage."
+  },
+  "Multitype": {
+    "Generation IV": "Changes type to match the held Plate.",
+    "Generation V": "Changes type to match the held Plate.",
+    "Generation VI": "Changes the Pok\u00e9mon's type to match the Plate it holds.",
+    "Generation VII": "Changes the Pok\u00e9mon's type to match the Plate or Z-Crystal it holds.",
+    "Generation VIII": "Changes the Pok\u00e9mon's type to match the Plate or Z-Crystal it holds."
+  },
+  "Flower Gift": {
+    "Generation IV": "Powers up party Pok\u00e9mon when it is sunny.",
+    "Generation V": "Powers up party Pok\u00e9mon when it is sunny.",
+    "Generation VI": "Powers up party Pok\u00e9mon when it's sunny.",
+    "Pok\u00e9mon Sun and Moon": "Boosts the Attack and Sp. Def stats of itself and allies when it is sunny.",
+    "Pok\u00e9mon Ultra Sun and Ultra Moon": "Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.",
+    "Generation VIII": "Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight."
+  },
+  "Bad Dreams": {
+    "Generation IV": "Reduces a sleeping foe's HP.",
+    "Generation V": "Reduces a sleeping foe's HP.",
+    "Generation VI": "Reduces the HP of sleeping opposing Pok\u00e9mon.",
+    "Generation VII": "Reduces the HP of sleeping opposing Pok\u00e9mon.",
+    "Generation VIII": "Reduces the HP of sleeping opposing Pok\u00e9mon."
+  },
+  "Pickpocket": {
+    "Generation V": "Steals an item when hit by another Pok\u00e9mon.",
+    "Generation VI": "Steals an item from an attacker that made direct contact.",
+    "Generation VII": "Steals an item from an attacker that made direct contact.",
+    "Generation VIII": "Steals an item from an attacker that made direct contact."
+  },
+  "Sheer Force": {
+    "Generation V": "Removes added effects to increase move damage.",
+    "Generation VI": "Removes additional effects to increase move damage.",
+    "Generation VII": "Removes additional effects to increase the power of moves when attacking.",
+    "Generation VIII": "Removes additional effects to increase the power of moves when attacking."
+  },
+  "Contrary": {
+    "Generation V": "Makes stat changes have an opposite effect.",
+    "Generation VI": "Makes stat changes have an opposite effect.",
+    "Generation VII": "Makes stat changes have an opposite effect.",
+    "Generation VIII": "Makes stat changes have an opposite effect."
+  },
+  "Unnerve": {
+    "Generation V": "Makes the foe nervous and unable to eat Berries.",
+    "Generation VI": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries.",
+    "Generation VII": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries.",
+    "Generation VIII": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries."
+  },
+  "Defiant": {
+    "Generation V": "When its stats are lowered its Attack increases.",
+    "Generation VI": "Boosts the Pok\u00e9mon's Attack stat when its stats are lowered.",
+    "Generation VII": "Boosts the Pok\u00e9mon's Attack stat sharply when its stats are lowered.",
+    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Attack stat sharply when its stats are lowered."
+  },
+  "Defeatist": {
+    "Generation V": "Lowers stats when HP becomes half or less.",
+    "Generation VI": "Lowers stats when HP becomes half or less.",
+    "Generation VII": "Halves the Pok\u00e9mon's Attack and Sp. Atk stats when its HP becomes half or less.",
+    "Generation VIII": "Halves the Pok\u00e9mon's Attack and Sp. Atk stats when its HP becomes half or less."
+  },
+  "Cursed Body": {
+    "Generation V": "May disable a move used on the Pok\u00e9mon.",
+    "Generation VI": "May disable a move used on the Pok\u00e9mon.",
+    "Generation VII": "May disable a move used on the Pok\u00e9mon.",
+    "Generation VIII": "May disable a move used on the Pok\u00e9mon."
+  },
+  "Healer": {
+    "Generation V": "May heal an ally's status conditions.",
+    "Generation VI": "Sometimes heals an ally's status condition.",
+    "Generation VII": "Sometimes heals an ally's status condition.",
+    "Generation VIII": "Sometimes heals an ally's status condition."
+  },
+  "Friend Guard": {
+    "Generation V": "Reduces damage done to allies.",
+    "Generation VI": "Reduces damage done to allies.",
+    "Generation VII": "Reduces damage done to allies.",
+    "Generation VIII": "Reduces damage done to allies."
+  },
+  "Weak Armor": {
+    "Generation V": "Physical attacks lower Defense and raise Speed.",
+    "Generation VI": "Physical attacks lower its Defense stat and raise its Speed stat.",
+    "Generation VII": "Physical attacks to the Pok\u00e9mon lower its Defense stat but sharply raise its Speed stat.",
+    "Generation VIII": "Physical attacks to the Pok\u00e9mon lower its Defense stat but sharply raise its Speed stat."
+  },
+  "Heavy Metal": {
+    "Generation V": "Doubles the Pok\u00e9mon's weight.",
+    "Generation VI": "Doubles the Pok\u00e9mon's weight.",
+    "Generation VII": "Doubles the Pok\u00e9mon's weight.",
+    "Generation VIII": "Doubles the Pok\u00e9mon's weight."
+  },
+  "Light Metal": {
+    "Generation V": "Halves the Pok\u00e9mon's weight.",
+    "Generation VI": "Halves the Pok\u00e9mon's weight.",
+    "Generation VII": "Halves the Pok\u00e9mon's weight.",
+    "Generation VIII": "Halves the Pok\u00e9mon's weight."
+  },
+  "Multiscale": {
+    "Generation V": "Reduces damage when HP is full.",
+    "Generation VI": "Reduces damage the Pok\u00e9mon takes when its HP is full.",
+    "Generation VII": "Reduces the amount of damage the Pok\u00e9mon takes when its HP is full.",
+    "Generation VIII": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full."
+  },
+  "Toxic Boost": {
+    "Generation V": "Powers up physical attacks when poisoned.",
+    "Generation VI": "Powers up physical attacks when the Pok\u00e9mon is poisoned.",
+    "Generation VII": "Powers up physical attacks when the Pok\u00e9mon is poisoned.",
+    "Generation VIII": "Powers up physical attacks when the Pok\u00e9mon is poisoned."
+  },
+  "Flare Boost": {
+    "Generation V": "Powers up special attacks when burned.",
+    "Generation VI": "Powers up special attacks when the Pok\u00e9mon is burned.",
+    "Generation VII": "Powers up special attacks when the Pok\u00e9mon is burned.",
+    "Generation VIII": "Powers up special attacks when the Pok\u00e9mon is burned."
+  },
+  "Harvest": {
+    "Generation V": "May create another Berry after one is used.",
+    "Generation VI": "May create another Berry after one is used.",
+    "Generation VII": "May create another Berry after one is used.",
+    "Generation VIII": "May create another Berry after one is used."
+  },
+  "Telepathy": {
+    "Generation V": "Anticipates an ally's attack and dodges it.",
+    "Generation VI": "Anticipates an ally's attack and dodges it.",
+    "Generation VII": "Anticipates an ally's attack and dodges it.",
+    "Generation VIII": "Anticipates an ally's attack and dodges it."
+  },
+  "Moody": {
+    "Generation V": "Raises one stat and lowers another.",
+    "Generation VI": "Raises one stat and lowers another.",
+    "Generation VII": "Raises one stat sharply and lowers another every turn.",
+    "Generation VIII": "Raises one stat sharply and lowers another every turn."
+  },
+  "Overcoat": {
+    "Generation V": "Protects the Pok\u00e9mon from damage from weather.",
+    "Generation VI": "Protects the Pok\u00e9mon from things like sand, hail and powder.",
+    "Generation VII": "Protects the Pok\u00e9mon from things like sand, hail, and powder.",
+    "Generation VIII": "Protects the Pok\u00e9mon from things like sand, hail, and powder."
+  },
+  "Poison Touch": {
+    "Generation V": "May poison targets when a Pok\u00e9mon makes contact.",
+    "Generation VI": "May poison a target when the Pok\u00e9mon makes contact.",
+    "Generation VII": "May poison a target when the Pok\u00e9mon makes contact.",
+    "Generation VIII": "May poison a target when the Pok\u00e9mon makes contact."
+  },
+  "Regenerator": {
+    "Generation V": "Restores a little HP when withdrawn from battle.",
+    "Generation VI": "Restores a little HP when withdrawn from battle.",
+    "Generation VII": "Restores a little HP when withdrawn from battle.",
+    "Generation VIII": "Restores a little HP when withdrawn from battle."
+  },
+  "Big Pecks": {
+    "Generation V": "Protects the Pok\u00e9mon from Defense-lowering attacks.",
+    "Generation VI": "Protects the Pok\u00e9mon from Defense-lowering attacks.",
+    "Generation VII": "Protects the Pok\u00e9mon from Defense-lowering effects.",
+    "Generation VIII": "Protects the Pok\u00e9mon from Defense-lowering effects."
+  },
+  "Sand Rush": {
+    "Generation V": "Boosts the Pok\u00e9mon's Speed in a sandstorm.",
+    "Generation VI": "Boosts the Pok\u00e9mon's Speed stat in a sandstorm.",
+    "Generation VII": "Boosts the Pok\u00e9mon's Speed stat in a sandstorm.",
+    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Speed stat in a sandstorm."
+  },
+  "Wonder Skin": {
+    "Generation V": "Makes status-changing moves more likely to miss.",
+    "Generation VI": "Makes status moves more likely to miss.",
+    "Generation VII": "Makes status moves more likely to miss.",
+    "Generation VIII": "Makes status moves more likely to miss."
+  },
+  "Analytic": {
+    "Generation V": "Boosts move power when the Pok\u00e9mon moves last.",
+    "Generation VI": "Boosts move power when the Pok\u00e9mon moves after the target.",
+    "Generation VII": "Boosts move power when the Pok\u00e9mon moves last.",
+    "Generation VIII": "Boosts move power when the Pok\u00e9mon moves last."
+  },
+  "Illusion": {
+    "Generation V": "Comes out disguised as the Pok\u00e9mon in back.",
+    "Generation VI": "Comes out disguised as the Pok\u00e9mon in the party's last spot.",
+    "Generation VII": "Comes out disguised as the Pok\u00e9mon in the party's last spot.",
+    "Generation VIII": "Comes out disguised as the Pok\u00e9mon in the party's last spot."
+  },
+  "Imposter": {
+    "Generation V": "It transforms itself into the Pok\u00e9mon it is facing.",
+    "Generation VI": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it's facing.",
+    "Generation VII": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it's facing.",
+    "Generation VIII": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it\u2019s facing."
+  },
+  "Infiltrator": {
+    "Generation V": "Passes through the foe's barrier and strikes.",
+    "Generation VI": "Passes through the opposing Pok\u00e9mon's barrier and strikes.",
+    "Generation VII": "Passes through the opposing Pok\u00e9mon's barrier, substitute, and the like and strikes.",
+    "Generation VIII": "Passes through the opposing Pok\u00e9mon's barrier, substitute, and the like and strikes."
+  },
+  "Mummy": {
+    "Generation V": "Contact with this Pok\u00e9mon spreads this Ability.",
+    "Generation VI": "Contact with the Pok\u00e9mon spreads this Ability.",
+    "Generation VII": "Contact with the Pok\u00e9mon changes the attacker's Ability to Mummy.",
+    "Generation VIII": "Contact with the Pok\u00e9mon changes the attacker's Ability to Mummy."
+  },
+  "Moxie": {
+    "Generation V": "Boosts Attack after knocking out any Pok\u00e9mon.",
+    "Generation VI": "Boosts the Attack stat after knocking out any Pok\u00e9mon.",
+    "Generation VII": "The Pok\u00e9mon shows moxie, and that boosts the Attack stat after knocking out any Pok\u00e9mon.",
+    "Generation VIII": "The Pok\u00e9mon shows moxie, and that boosts the Attack stat after knocking out any Pok\u00e9mon."
+  },
+  "Justified": {
+    "Generation V": "Raises Attack when hit by a Dark-type move.",
+    "Generation VI": "Boosts the Attack stat when it's hit by a Dark-type move.",
+    "Generation VII": "Being hit by a Dark-type move boosts the Attack stat of the Pok\u00e9mon, for justice.",
+    "Generation VIII": "Being hit by a Dark-type move boosts the Attack stat of the Pok\u00e9mon, for justice."
+  },
+  "Rattled": {
+    "Generation V": "Some move types scare it and boost its Speed.",
+    "Generation VI": "Some move types scare it and boost its Speed stat.",
+    "Generation VII": "Dark-, Ghost-, and Bug-type moves scare the Pok\u00e9mon and boost its Speed stat.",
+    "Generation VIII": "Dark-, Ghost-, and Bug-type moves scare the Pok\u00e9mon and boost its Speed stat."
+  },
+  "Magic Bounce": {
+    "Generation V": "Reflects status-changing moves.",
+    "Generation VI": "Reflects status moves.",
+    "Generation VII": "Reflects status moves, instead of getting hit by them.",
+    "Generation VIII": "Reflects status moves instead of getting hit by them."
+  },
+  "Sap Sipper": {
+    "Generation V": "Boosts Attack when hit by a Grass-type move.",
+    "Generation VI": "Boosts the Attack stat when hit by a Grass-type move.",
+    "Generation VII": "Boosts the Attack stat if hit by a Grass-type move, instead of taking damage.",
+    "Generation VIII": "Boosts the Attack stat if hit by a Grass-type move instead of taking damage."
+  },
+  "Prankster": {
+    "Generation V": "Gives priority to a status move.",
+    "Generation VI": "Gives priority to a status move.",
+    "Generation VII": "Gives priority to a status move.",
+    "Generation VIII": "Gives priority to a status move."
+  },
+  "Sand Force": {
+    "Generation V": "Boosts certain moves' power in a sandstorm.",
+    "Generation VI": "Boosts certain moves' power in a sandstorm.",
+    "Generation VII": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.",
+    "Generation VIII": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm."
+  },
+  "Iron Barbs": {
+    "Generation V": "Inflicts damage to the Pok\u00e9mon on contact.",
+    "Generation VI": "Inflicts damage to the attacker on contact.",
+    "Generation VII": "Inflicts damage to the attacker on contact with iron barbs.",
+    "Generation VIII": "Inflicts damage on the attacker upon contact with iron barbs."
+  },
+  "Zen Mode": {
+    "Generation V": "Changes the Pok\u00e9mon's shape when HP is halved.",
+    "Generation VI": "Changes the Pok\u00e9mon's shape when HP is half or less.",
+    "Generation VII": "Changes the Pok\u00e9mon's shape when HP is half or less.",
+    "Generation VIII": "Changes the Pok\u00e9mon\u2019s shape when HP is half or less."
+  },
+  "Victory Star": {
+    "Generation V": "Boosts the accuracy of its allies and itself.",
+    "Generation VI": "Boosts the accuracy of its allies and itself.",
+    "Generation VII": "Boosts the accuracy of its allies and itself.",
+    "Generation VIII": "Boosts the accuracy of its allies and itself."
+  },
+  "Turboblaze": {
+    "Generation V": "Moves can be used regardless of Abilities.",
+    "Generation VI": "Moves can be used on the target regardless of its Abilities.",
+    "Generation VII": "Moves can be used on the target regardless of its Abilities.",
+    "Generation VIII": "Moves can be used on the target regardless of its Abilities."
+  },
+  "Teravolt": {
+    "Generation V": "Moves can be used regardless of Abilities.",
+    "Generation VI": "Moves can be used on the target regardless of its Abilities.",
+    "Generation VII": "Moves can be used on the target regardless of its Abilities.",
+    "Generation VIII": "Moves can be used on the target regardless of its Abilities."
+  },
+  "Aroma Veil": {
+    "Generation VI": "Protects allies from attacks that limit their move choices.",
+    "Generation VII": "Protects itself and its allies from attacks that limit their move choices.",
+    "Generation VIII": "Protects itself and its allies from attacks that limit their move choices."
+  },
+  "Flower Veil": {
+    "Generation VI": "Prevents lowering of ally Grass-type Pok\u00e9mon's stats.",
+    "Generation VII": "Ally Grass-type Pok\u00e9mon are protected from status conditions and the lowering of their stats.",
+    "Generation VIII": "Ally Grass-type Pok\u00e9mon are protected from status conditions and the lowering of their stats."
+  },
+  "Cheek Pouch": {
+    "Generation VI": "Restores HP as well when the Pok\u00e9mon eats a Berry.",
+    "Generation VII": "Restores HP as well when the Pok\u00e9mon eats a Berry.",
+    "Generation VIII": "Restores HP as well when the Pok\u00e9mon eats a Berry."
+  },
+  "Protean": {
+    "Generation VI": "Changes the Pok\u00e9mon's type to the type of the move it's using.",
+    "Generation VII": "Changes the Pok\u00e9mon's type to the type of the move it's about to use.",
+    "Generation VIII": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use."
+  },
+  "Fur Coat": {
+    "Generation VI": "Halves damage from physical moves.",
+    "Generation VII": "Halves the damage from physical moves.",
+    "Generation VIII": "Halves the damage from physical moves."
+  },
+  "Magician": {
+    "Generation VI": "The Pok\u00e9mon steals the held item of a Pok\u00e9mon it hits with a move.",
+    "Generation VII": "The Pok\u00e9mon steals the held item of a Pok\u00e9mon it hits with a move.",
+    "Generation VIII": "The Pok\u00e9mon steals the held item of a Pok\u00e9mon it hits with a move."
+  },
+  "Bulletproof": {
+    "Generation VI": "Protects the Pok\u00e9mon from some ball and bomb moves.",
+    "Generation VII": "Protects the Pok\u00e9mon from some ball and bomb moves.",
+    "Generation VIII": "Protects the Pok\u00e9mon from some ball and bomb moves."
+  },
+  "Competitive": {
+    "Generation VI": "Boosts the Sp. Atk stat when a stat is lowered.",
+    "Generation VII": "Boosts the Sp. Atk stat sharply when a stat is lowered.",
+    "Generation VIII": "Boosts the Sp. Atk stat sharply when a stat is lowered."
+  },
+  "Strong Jaw": {
+    "Generation VI": "The Pok\u00e9mon's strong jaw gives it tremendous biting power.",
+    "Generation VII": "The Pok\u00e9mon's strong jaw boosts the power of its biting moves.",
+    "Generation VIII": "The Pok\u00e9mon's strong jaw boosts the power of its biting moves."
+  },
+  "Refrigerate": {
+    "Generation VI": "Normal-type moves become Ice-type moves.",
+    "Generation VII": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little.",
+    "Generation VIII": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little."
+  },
+  "Sweet Veil": {
+    "Generation VI": "Prevents itself and ally Pok\u00e9mon from falling asleep.",
+    "Generation VII": "Prevents itself and ally Pok\u00e9mon from falling asleep.",
+    "Generation VIII": "Prevents itself and ally Pok\u00e9mon from falling asleep."
+  },
+  "Stance Change": {
+    "Generation VI": "The Pok\u00e9mon changes form depending on how it battles.",
+    "Generation VII": "The Pok\u00e9mon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.",
+    "Generation VIII": "The Pok\u00e9mon changes its form to Blade Forme when it uses an attack move and changes to Shield Forme when it uses King's Shield."
+  },
+  "Gale Wings": {
+    "Generation VI": "Gives priority to Flying-type moves.",
+    "Generation VII": "Gives priority to Flying-type moves when the Pok\u00e9mon's HP is full.",
+    "Generation VIII": "Gives priority to Flying-type moves when the Pok\u00e9mon's HP is full."
+  },
+  "Mega Launcher": {
+    "Generation VI": "Powers up aura and pulse moves.",
+    "Generation VII": "Powers up aura and pulse moves.",
+    "Generation VIII": "Powers up aura and pulse moves."
+  },
+  "Grass Pelt": {
+    "Generation VI": "Boosts the Defense stat in Grassy Terrain.",
+    "Generation VII": "Boosts the Pok\u00e9mon's Defense stat in Grassy Terrain.",
+    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Defense stat on Grassy Terrain."
+  },
+  "Symbiosis": {
+    "Generation VI": "The Pok\u00e9mon can pass an item to an ally.",
+    "Generation VII": "The Pok\u00e9mon passes its item to an ally that has used up an item.",
+    "Generation VIII": "The Pok\u00e9mon passes its item to an ally that has used up an item."
+  },
+  "Tough Claws": {
+    "Generation VI": "Powers up moves that make direct contact.",
+    "Generation VII": "Powers up moves that make direct contact.",
+    "Generation VIII": "Powers up moves that make direct contact."
+  },
+  "Pixilate": {
+    "Generation VI": "Normal-type moves become Fairy-type moves.",
+    "Generation VII": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.",
+    "Generation VIII": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little."
+  },
+  "Gooey": {
+    "Generation VI": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat.",
+    "Generation VII": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat.",
+    "Generation VIII": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat."
+  },
+  "Aerilate": {
+    "Generation VI": "Normal-type moves become Flying-type moves.",
+    "Generation VII": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little.",
+    "Generation VIII": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little."
+  },
+  "Parental Bond": {
+    "Generation VI": "Parent and child attack together.",
+    "Generation VII": "Parent and child each attacks.",
+    "Generation VIII": "Parent and child each attacks."
+  },
+  "Dark Aura": {
+    "Generation VI": "Powers up each Pok\u00e9mon's Dark-type moves.",
+    "Generation VII": "Powers up each Pok\u00e9mon's Dark-type moves.",
+    "Generation VIII": "Powers up each Pok\u00e9mon's Dark-type moves."
+  },
+  "Fairy Aura": {
+    "Generation VI": "Powers up each Pok\u00e9mon's Fairy-type moves.",
+    "Generation VII": "Powers up each Pok\u00e9mon's Fairy-type moves.",
+    "Generation VIII": "Powers up each Pok\u00e9mon\u2019s Fairy-type moves."
+  },
+  "Aura Break": {
+    "Generation VI": "The effects of \"Aura\" Abilities are reversed.",
+    "Generation VII": "The effects of \"Aura\" Abilities are reversed to lower the power of affected moves.",
+    "Generation VIII": "The effects of \"Aura\" Abilities are reversed to lower the power of affected moves."
+  },
+  "Primordial Sea": {
+    "Generation VI": "Affects weather and nullifies any Fire-type attacks.",
+    "Generation VII": "The Pok\u00e9mon changes the weather to nullify Fire-type attacks.",
+    "Generation VIII": "The Pok\u00e9mon changes the weather to nullify Fire-type attacks."
+  },
+  "Desolate Land": {
+    "Generation VI": "Affects weather and nullifies any Water-type attacks.",
+    "Generation VII": "The Pok\u00e9mon changes the weather to nullify Water-type attacks.",
+    "Generation VIII": "The Pok\u00e9mon changes the weather to nullify Water-type attacks."
+  },
+  "Delta Stream": {
+    "Generation VI": "Affects weather and eliminates all of the Flying type's weaknesses.",
+    "Generation VII": "The Pok\u00e9mon changes the weather to eliminate all of the Flying type's weaknesses.",
+    "Generation VIII": "The Pok\u00e9mon changes the weather to eliminate all of the Flying type's weaknesses."
+  },
+  "Stamina": {
+    "Generation VII": "Boosts the Defense stat when hit by an attack.",
+    "Generation VIII": "Boosts the Defense stat when hit by an attack."
+  },
+  "Wimp Out": {
+    "Generation VII": "The Pok\u00e9mon cowardly switches out when its HP becomes half or less.",
+    "Generation VIII": "The Pok\u00e9mon cowardly switches out when its HP becomes half or less."
+  },
+  "Emergency Exit": {
+    "Generation VII": "The Pok\u00e9mon, sensing danger, switches out when its HP becomes half or less.",
+    "Generation VIII": "The Pok\u00e9mon, sensing danger, switches out when its HP becomes half or less."
+  },
+  "Water Compaction": {
+    "Generation VII": "Boosts the Pok\u00e9mon's Defense stat sharply when hit by a Water-type move.",
+    "Generation VIII": "Boosts the Pok\u00e9mon's Defense stat sharply when hit by a Water-type move."
+  },
+  "Merciless": {
+    "Generation VII": "The Pok\u00e9mon's attacks become critical hits if the target is poisoned.",
+    "Generation VIII": "The Pok\u00e9mon's attacks become critical hits if the target is poisoned."
+  },
+  "Shields Down": {
+    "Generation VII": "When its HP becomes half or less, the Pok\u00e9mon's shell breaks and it becomes aggressive.",
+    "Generation VIII": "When its HP becomes half or less, the Pok\u00e9mon's shell breaks and it becomes aggressive."
+  },
+  "Stakeout": {
+    "Generation VII": "Doubles the damage dealt to the target's replacement if the target switches out.",
+    "Generation VIII": "Doubles the damage dealt to the target's replacement if the target switches out."
+  },
+  "Water Bubble": {
+    "Generation VII": "Lowers the power of Fire-type moves done to the Pok\u00e9mon and prevents the Pok\u00e9mon from getting a burn.",
+    "Generation VIII": "Lowers the power of Fire-type moves done to the Pok\u00e9mon and prevents the Pok\u00e9mon from getting a burn."
+  },
+  "Steelworker": {
+    "Generation VII": "Powers up Steel-type moves.",
+    "Generation VIII": "Powers up Steel-type moves."
+  },
+  "Berserk": {
+    "Generation VII": "Boosts the Pok\u00e9mon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.",
+    "Generation VIII": "Boosts the Pok\u00e9mon's Sp. Atk stat when it takes a hit that causes its HP to become half or less."
+  },
+  "Slush Rush": {
+    "Generation VII": "Boosts the Pok\u00e9mon's Speed stat in a hailstorm.",
+    "Generation VIII": "Boosts the Pok\u00e9mon's Speed stat in a hailstorm."
+  },
+  "Long Reach": {
+    "Generation VII": "The Pok\u00e9mon uses its moves without making contact with the target.",
+    "Generation VIII": "The Pok\u00e9mon uses its moves without making contact with the target."
+  },
+  "Liquid Voice": {
+    "Generation VII": "All sound-based moves become Water-type moves.",
+    "Generation VIII": "All sound-based moves become Water-type moves."
+  },
+  "Triage": {
+    "Generation VII": "Gives priority to a healing move.",
+    "Generation VIII": "Gives priority to a healing move."
+  },
+  "Galvanize": {
+    "Generation VII": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
+    "Generation VIII": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little."
+  },
+  "Surge Surfer": {
+    "Generation VII": "Doubles the Pok\u00e9mon's Speed stat on Electric Terrain.",
+    "Generation VIII": "Doubles the Pok\u00e9mon's Speed stat on Electric Terrain."
+  },
+  "Schooling": {
+    "Generation VII": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low.",
+    "Generation VIII": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low."
+  },
+  "Disguise": {
+    "Generation VII": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack.",
+    "Generation VIII": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack."
+  },
+  "Battle Bond": {
+    "Generation VII": "Defeating an opposing Pok\u00e9mon strengthens the Pok\u00e9mon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.",
+    "Generation VIII": "Defeating an opposing Pok\u00e9mon strengthens the Pok\u00e9mon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful."
+  },
+  "Power Construct": {
+    "Generation VII": "Other Cells gather to aid when its HP becomes half or less. Then the Pok\u00e9mon changes its form to Complete Forme.",
+    "Generation VIII": "Other Cells gather to aid when its HP becomes half or less. Then the Pok\u00e9mon changes its form to Complete Forme."
+  },
+  "Corrosion": {
+    "Generation VII": "The Pok\u00e9mon can poison the target even if it's a Steel or Poison type.",
+    "Generation VIII": "The Pok\u00e9mon can poison the target even if it's a Steel or Poison type."
+  },
+  "Comatose": {
+    "Generation VII": "It's always drowsing and will never wake up. It can attack without waking up.",
+    "Generation VIII": "It's always drowsing and will never wake up. It can attack without waking up."
+  },
+  "Queenly Majesty": {
+    "Generation VII": "Its majesty pressures the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
+    "Generation VIII": "Its majesty pressures the opposing Pok\u00e9mon, making it unable to attack using priority moves."
+  },
+  "Innards Out": {
+    "Generation VII": "Damages the attacker landing the finishing hit by the amount equal to its last HP.",
+    "Generation VIII": "Damages the attacker landing the finishing hit by the amount equal to its last HP."
+  },
+  "Dancer": {
+    "Generation VII": "When another Pok\u00e9mon uses a dance move, it can use a dance move following it regardless of its Speed.",
+    "Generation VIII": "When another Pok\u00e9mon uses a dance move, it can use a dance move following it regardless of its Speed."
+  },
+  "Battery": {
+    "Generation VII": "Powers up ally Pok\u00e9mon's special moves.",
+    "Generation VIII": "Powers up ally Pok\u00e9mon's special moves."
+  },
+  "Fluffy": {
+    "Generation VII": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.",
+    "Generation VIII": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves."
+  },
+  "Dazzling": {
+    "Generation VII": "Surprises the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
+    "Generation VIII": "Surprises the opposing Pok\u00e9mon, making it unable to attack using priority moves."
+  },
+  "Soul-Heart": {
+    "Generation VII": "Boosts its Sp. Atk stat every time a Pok\u00e9mon faints.",
+    "Generation VIII": "Boosts its Sp. Atk stat every time a Pok\u00e9mon faints."
+  },
+  "Tangling Hair": {
+    "Generation VII": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat.",
+    "Generation VIII": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat."
+  },
+  "Receiver": {
+    "Generation VII": "The Pok\u00e9mon copies the Ability of a defeated ally.",
+    "Generation VIII": "The Pok\u00e9mon copies the Ability of a defeated ally."
+  },
+  "Power of Alchemy": {
+    "Generation VII": "The Pok\u00e9mon copies the Ability of a defeated ally.",
+    "Generation VIII": "The Pok\u00e9mon copies the Ability of a defeated ally."
+  },
+  "Beast Boost": {
+    "Generation VII": "The Pok\u00e9mon boosts its most proficient stat each time it knocks out a Pok\u00e9mon.",
+    "Generation VIII": "The Pok\u00e9mon boosts its most proficient stat each time it knocks out a Pok\u00e9mon."
+  },
+  "RKS System": {
+    "Generation VII": "Changes the Pok\u00e9mon's type to match the memory disc it holds.",
+    "Generation VIII": "Changes the Pok\u00e9mon's type to match the memory disc it holds."
+  },
+  "Electric Surge": {
+    "Generation VII": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle.",
+    "Generation VIII": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle."
+  },
+  "Psychic Surge": {
+    "Generation VII": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle.",
+    "Generation VIII": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle."
+  },
+  "Misty Surge": {
+    "Generation VII": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle.",
+    "Generation VIII": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle."
+  },
+  "Grassy Surge": {
+    "Generation VII": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle.",
+    "Generation VIII": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle."
+  },
+  "Full Metal Body": {
+    "Generation VII": "Prevents other Pok\u00e9mon's moves or Abilities from lowering the Pok\u00e9mon's stats.",
+    "Generation VIII": "Prevents other Pok\u00e9mon's moves or Abilities from lowering the Pok\u00e9mon's stats."
+  },
+  "Shadow Shield": {
+    "Generation VII": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
+    "Generation VIII": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full."
+  },
+  "Prism Armor": {
+    "Generation VII": "Reduces the power of supereffective attacks taken.",
+    "Generation VIII": "Reduces the power of supereffective attacks taken."
+  },
+  "Neuroforce": {
+    "Generation VII": "Powers up moves that are super effective.",
+    "Generation VIII": "Powers up moves that are super effective."
+  },
+  "Intrepid Sword": {
+    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Attack stat when the Pok\u00e9mon enters a battle."
+  },
+  "Dauntless Shield": {
+    "Generation VIII": "Boosts the Pok\u00e9mon's Defense stat when the Pok\u00e9mon enters a battle."
+  },
+  "Libero": {
+    "Generation VIII": "Changes the Pok\u00e9mon's type to the type of the move it's about to use."
+  },
+  "Ball Fetch": {
+    "Generation VIII": "If the Pok\u00e9mon is not holding an item, it will fetch the Pok\u00e9 Ball from the first failed throw of the battle."
+  },
+  "Cotton Down": {
+    "Generation VIII": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pok\u00e9mon except itself."
+  },
+  "Propeller Tail": {
+    "Generation VIII": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves."
+  },
+  "Mirror Armor": {
+    "Generation VIII": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives."
+  },
+  "Gulp Missile": {
+    "Generation VIII": "When the Pok\u00e9mon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack."
+  },
+  "Stalwart": {
+    "Generation VIII": "Ignores the effects of opposing Pok\u00e9mon's Abilities and moves that draw in moves."
+  },
+  "Steam Engine": {
+    "Generation VIII": "Boosts the Pok\u00e9mon's Speed stat drastically if hit by a Fire- or Water-type move."
+  },
+  "Punk Rock": {
+    "Generation VIII": "Boosts the power of sound-based moves. The Pok\u00e9mon also takes half the damage from these kinds of moves."
+  },
+  "Sand Spit": {
+    "Generation VIII": "The Pok\u00e9mon creates a sandstorm when it's hit by an attack."
+  },
+  "Ice Scales": {
+    "Generation VIII": "The Pok\u00e9mon is protected by ice scales, which halve the damage taken from special moves."
+  },
+  "Ripen": {
+    "Generation VIII": "Ripens Berries and doubles their effect."
+  },
+  "Ice Face": {
+    "Generation VIII": "The Pok\u00e9mon's ice head can take a physical attack as a substitute, but the attack also changes the Pok\u00e9mon's appearance. The ice will be restored when it hails."
+  },
+  "Power Spot": {
+    "Generation VIII": "Just being next to the Pok\u00e9mon powers up moves."
+  },
+  "Mimicry": {
+    "Generation VIII": "Changes the Pok\u00e9mon's type depending on the terrain."
+  },
+  "Screen Cleaner": {
+    "Generation VIII": "When the Pok\u00e9mon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pok\u00e9mon."
+  },
+  "Steely Spirit": {
+    "Generation VIII": "Powers up ally Pok\u00e9mon's Steel-type moves."
+  },
+  "Perish Body": {
+    "Generation VIII": "When hit by a move that makes direct contact, the Pok\u00e9mon and the attacker will faint after three turns unless they switch out of battle."
+  },
+  "Wandering Spirit": {
+    "Generation VIII": "The Pok\u00e9mon exchanges Abilities with a Pok\u00e9mon that hits it with a move that makes direct contact."
+  },
+  "Gorilla Tactics": {
+    "Generation VIII": "Boosts the Pok\u00e9mon's Attack stat but only allows the use of the first selected move."
+  },
+  "Neutralizing Gas": {
+    "Generation VIII": "If the Pok\u00e9mon with Neutralizing Gas is in the battle, the effects of all Pok\u00e9mon's Abilities will be nullified or will not be triggered."
+  },
+  "Pastel Veil": {
+    "Generation VIII": "Protects the Pok\u00e9mon and its ally Pok\u00e9mon from being poisoned."
+  },
+  "Hunger Switch": {
+    "Generation VIII": "The Pok\u00e9mon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn."
+  },
+  "Quick Draw": {
+    "Generation VIII": "Enables the Pok\u00e9mon to move first occasionally."
+  },
+  "Unseen Fist": {
+    "Generation VIII": "If the Pok\u00e9mon uses moves that make direct contact, it can attack the target even if the target protects itself."
+  }
+}

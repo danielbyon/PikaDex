@@ -1,0 +1,541 @@
+{
+  "Magneton": {
+    "gen1": [
+      {
+        "moves": [
+          {
+            "level": "01",
+            "name": "Tackle"
+          },
+          {
+            "level": "01",
+            "name": "SonicBoom"
+          },
+          {
+            "level": "01",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "21",
+            "name": "SonicBoom"
+          },
+          {
+            "level": "25",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "29",
+            "name": "Supersonic"
+          },
+          {
+            "level": "38",
+            "name": "Thunder Wave"
+          },
+          {
+            "level": "46",
+            "name": "Swift"
+          },
+          {
+            "level": "54",
+            "name": "Screech"
+          }
+        ],
+        "formName": "Magneton"
+      }
+    ],
+    "gen2": [
+      {
+        "moves": [
+          {
+            "level": "01",
+            "name": "Tackle"
+          },
+          {
+            "level": "01",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "01",
+            "name": "Supersonic"
+          },
+          {
+            "level": "01",
+            "name": "SonicBoom"
+          },
+          {
+            "level": "06",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "11",
+            "name": "Supersonic"
+          },
+          {
+            "level": "16",
+            "name": "SonicBoom"
+          },
+          {
+            "level": "21",
+            "name": "Thunder Wave"
+          },
+          {
+            "level": "27",
+            "name": "Lock-On"
+          },
+          {
+            "level": "35",
+            "name": "Swift"
+          },
+          {
+            "level": "35",
+            "name": "Tri Attack"
+          },
+          {
+            "level": "43",
+            "name": "Screech"
+          },
+          {
+            "level": "53",
+            "name": "Zap Cannon"
+          }
+        ],
+        "formName": "Magneton"
+      }
+    ],
+    "gen3": [
+      {
+        "moves": [
+          {
+            "level": "01",
+            "name": "Tackle"
+          },
+          {
+            "level": "01",
+            "name": "Metal Sound"
+          },
+          {
+            "level": "01",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "01",
+            "name": "Supersonic"
+          },
+          {
+            "level": "06",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "11",
+            "name": "Supersonic"
+          },
+          {
+            "level": "16",
+            "name": "SonicBoom"
+          },
+          {
+            "level": "21",
+            "name": "Thunder Wave"
+          },
+          {
+            "level": "26",
+            "name": "Spark"
+          },
+          {
+            "level": "35",
+            "name": "Lock-On"
+          },
+          {
+            "level": "44",
+            "name": "Tri Attack"
+          },
+          {
+            "level": "53",
+            "name": "Screech"
+          },
+          {
+            "level": "62",
+            "name": "Zap Cannon"
+          }
+        ],
+        "formName": "Magneton"
+      }
+    ],
+    "gen4": [
+      {
+        "moves": [
+          {
+            "level": "01",
+            "name": "Tri Attack"
+          },
+          {
+            "level": "01",
+            "name": "Tackle"
+          },
+          {
+            "level": "01",
+            "name": "Metal Sound"
+          },
+          {
+            "level": "01",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "01",
+            "name": "Supersonic"
+          },
+          {
+            "level": "06",
+            "name": "ThunderShock"
+          },
+          {
+            "level": "11",
+            "name": "Supersonic"
+          },
+          {
+            "level": "14",
+            "name": "SonicBoom"
+          },
+          {
+            "level": "17",
+            "name": "Thunder Wave"
+          },
+          {
+            "level": "22",
+            "name": "Spark"
+          },
+          {
+            "level": "27",
+            "name": "Lock-On"
+          },
+          {
+            "level": "30",
+            "name": "Magnet Bomb"
+          },
+          {
+            "level": "34",
+            "name": "Screech"
+          },
+          {
+            "level": "40",
+            "name": "Discharge"
+          },
+          {
+            "level": "46",
+            "name": "Mirror Shot"
+          },
+          {
+            "level": "50",
+            "name": "Magnet Rise"
+          },
+          {
+            "level": "54",
+            "name": "Gyro Ball"
+          },
+          {
+            "level": "60",
+            "name": "Zap Cannon"
+          }
+        ],
+        "formName": "Magneton"
+      }
+    ],
+    "gen5": [
+      {
+        "moves": [
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "N/A",
+            "name": "0011"
+          },
+          {
+            "level": "011",
+            "name": "0044"
+          },
+          {
+            "level": "006",
+            "name": "0077"
+          },
+          {
+            "level": "014",
+            "name": "01111"
+          },
+          {
+            "level": "017",
+            "name": "01515"
+          },
+          {
+            "level": "034",
+            "name": "01818"
+          },
+          {
+            "level": "022",
+            "name": "02121"
+          },
+          {
+            "level": "050",
+            "name": "02525"
+          },
+          {
+            "level": "001",
+            "name": "02929"
+          },
+          {
+            "level": "027",
+            "name": "03434"
+          },
+          {
+            "level": "N/A",
+            "name": "03939"
+          },
+          {
+            "level": "040",
+            "name": "04545"
+          },
+          {
+            "level": "046",
+            "name": "05151"
+          },
+          {
+            "level": "030",
+            "name": "05656"
+          },
+          {
+            "level": "054",
+            "name": "06262"
+          },
+          {
+            "level": "060",
+            "name": "06767"
+          },
+          {
+            "level": "066",
+            "name": "07373"
+          }
+        ],
+        "formName": "Magneton"
+      }
+    ],
+    "gen6": [
+      {
+        "moves": [
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "011",
+            "name": "0011"
+          },
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "001",
+            "name": "0011"
+          },
+          {
+            "level": "004",
+            "name": "0055"
+          },
+          {
+            "level": "007",
+            "name": "0077"
+          },
+          {
+            "level": "N/A",
+            "name": "01111"
+          },
+          {
+            "level": "015",
+            "name": "01313"
+          },
+          {
+            "level": "018",
+            "name": "01717"
+          },
+          {
+            "level": "021",
+            "name": "01919"
+          },
+          {
+            "level": "025",
+            "name": "02323"
+          },
+          {
+            "level": "029",
+            "name": "02525"
+          },
+          {
+            "level": "034",
+            "name": "02929"
+          },
+          {
+            "level": "001",
+            "name": "03030"
+          },
+          {
+            "level": "039",
+            "name": "03333"
+          },
+          {
+            "level": "045",
+            "name": "03939"
+          },
+          {
+            "level": "051",
+            "name": "04343"
+          },
+          {
+            "level": "056",
+            "name": "04949"
+          },
+          {
+            "level": "062",
+            "name": "05353"
+          },
+          {
+            "level": "067",
+            "name": "05959"
+          },
+          {
+            "level": "073",
+            "name": "06363"
+          }
+        ],
+        "formName": "Magneton"
+      }
+    ],
+    "sun": [
+      {
+        "moves": [
+          {
+            "level": "1",
+            "name": "Electric Terrain"
+          },
+          {
+            "level": "1",
+            "name": "Supersonic"
+          },
+          {
+            "level": "1",
+            "name": "Tackle"
+          },
+          {
+            "level": "1",
+            "name": "Thunder Shock"
+          },
+          {
+            "level": "1",
+            "name": "Magnet Bomb"
+          },
+          {
+            "level": "1",
+            "name": "Electric Terrain"
+          },
+          {
+            "level": "1",
+            "name": "Tri Attack"
+          },
+          {
+            "level": "1",
+            "name": "Zap Cannon"
+          },
+          {
+            "level": "Evo.",
+            "name": "Tri Attack"
+          },
+          {
+            "level": "5",
+            "name": "Thunder Shock"
+          },
+          {
+            "level": "11",
+            "name": "Thunder Wave"
+          },
+          {
+            "level": "7",
+            "name": "Magnet Bomb"
+          },
+          {
+            "level": "13",
+            "name": "Light Screen"
+          },
+          {
+            "level": "17",
+            "name": "Sonic Boom"
+          },
+          {
+            "level": "19",
+            "name": "Spark"
+          },
+          {
+            "level": "23",
+            "name": "Mirror Shot"
+          },
+          {
+            "level": "25",
+            "name": "Metal Sound"
+          },
+          {
+            "level": "29",
+            "name": "Electro Ball"
+          },
+          {
+            "level": "33",
+            "name": "Flash Cannon"
+          },
+          {
+            "level": "39",
+            "name": "Screech"
+          },
+          {
+            "level": "43",
+            "name": "Discharge"
+          },
+          {
+            "level": "49",
+            "name": "Lock-On"
+          },
+          {
+            "level": "53",
+            "name": "Magnet Rise"
+          },
+          {
+            "level": "59",
+            "name": "Gyro Ball"
+          },
+          {
+            "level": "63",
+            "name": "Zap Cannon"
+          }
+        ],
+        "formName": "Magneton"
+      }
+    ]
+  }
+}

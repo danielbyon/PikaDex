@@ -1,0 +1,3213 @@
+region	game	location	areaName	filename
+kanto	red	Celadon City	Main	kanto-celadon-city-main
+kanto	red	Cerulean Cave	1F	kanto-cerulean-cave-1f
+kanto	red	Cerulean Cave	2F	kanto-cerulean-cave-2f
+kanto	red	Cerulean Cave	B1F	kanto-cerulean-cave-b1f
+kanto	red	Cerulean City	Main	kanto-cerulean-city
+kanto	red	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	red	Diglett's Cave	1F	kanto-digletts-cave
+kanto	red	Fuchsia City	Main	kanto-fuchsia-city
+kanto	red	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	red	Lavender Town	Main	kanto-lavender-town
+kanto	red	Mt. Moon	1F	kanto-mt-moon-1f
+kanto	red	Mt. Moon	B1F	kanto-mt-moon-b1f
+kanto	red	Mt. Moon	B2F	kanto-mt-moon-b2f
+kanto	red	Pallet Town	Main	kanto-pallet-town
+kanto	red	Pewter City	Main	kanto-pewter-city
+kanto	red	Pokémon Mansion	1F	kanto-pokemon-mansion-1f
+kanto	red	Pokémon Mansion	2F	kanto-pokemon-mansion-2f
+kanto	red	Pokémon Mansion	3F	kanto-pokemon-mansion-3f
+kanto	red	Pokémon Mansion	B1F	kanto-pokemon-mansion-b1f
+kanto	red	Pokémon Tower	1F	kanto-pokemon-tower-1f
+kanto	red	Pokémon Tower	2F	kanto-pokemon-tower-2f
+kanto	red	Pokémon Tower	3F	kanto-pokemon-tower-3f
+kanto	red	Pokémon Tower	4F	kanto-pokemon-tower-4f
+kanto	red	Pokémon Tower	5F	kanto-pokemon-tower-5f
+kanto	red	Pokémon Tower	6F	kanto-pokemon-tower-6f
+kanto	red	Pokémon Tower	7F	kanto-pokemon-tower-7f
+kanto	red	Power Plant	Main	kanto-power-plant
+kanto	red	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	red	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	red	Route 1	Main	kanto-route-1
+kanto	red	Route 10	Main	kanto-route-10
+kanto	red	Route 11	Main	kanto-route-11
+kanto	red	Route 12	Main	kanto-route-12
+kanto	red	Route 13	Main	kanto-route-13
+kanto	red	Route 14	Main	kanto-route-14
+kanto	red	Route 15	Main	kanto-route-15
+kanto	red	Route 16	Main	kanto-route-16
+kanto	red	Route 17	Main	kanto-route-17
+kanto	red	Route 18	Main	kanto-route-18
+kanto	red	Route 19	Main	kanto-route-19
+kanto	red	Route 2	Main	kanto-route-2
+kanto	red	Route 20	Main	kanto-route-20
+kanto	red	Route 21	Main	kanto-route-21
+kanto	red	Route 22	Main	kanto-route-22
+kanto	red	Route 23	Main	kanto-route-23
+kanto	red	Route 24	Main	kanto-route-24
+kanto	red	Route 25	Main	kanto-route-25
+kanto	red	Route 3	Main	kanto-route-3
+kanto	red	Route 4	Main	kanto-route-4
+kanto	red	Route 5	Main	kanto-route-5
+kanto	red	Route 6	Main	kanto-route-6
+kanto	red	Route 7	Main	kanto-route-7
+kanto	red	Route 8	Main	kanto-route-8
+kanto	red	Route 9	Main	kanto-route-9
+kanto	red	Safari Zone	East	kanto-safari-zone-area-1
+kanto	red	Safari Zone	North	kanto-safari-zone-area-2
+kanto	red	Safari Zone	West	kanto-safari-zone-area-3
+kanto	red	Safari Zone	Center	kanto-safari-zone-entrance
+kanto	red	Saffron City	Main	kanto-saffron-city
+kanto	red	Seafoam Islands	1F	kanto-seafoam-islands-1f
+kanto	red	Seafoam Islands	B1F	kanto-seafoam-islands-b1f
+kanto	red	Seafoam Islands	B2F	kanto-seafoam-islands-b2f
+kanto	red	Seafoam Islands	B3F	kanto-seafoam-islands-b3f
+kanto	red	Seafoam Islands	B4F	kanto-seafoam-islands-b4f
+kanto	red	Silph Co.	10F	kanto-silph-co-10f
+kanto	red	Silph Co.	11F	kanto-silph-co-11f
+kanto	red	Silph Co.	1F	kanto-silph-co-1f
+kanto	red	Silph Co.	2F	kanto-silph-co-2f
+kanto	red	Silph Co.	3F	kanto-silph-co-3f
+kanto	red	Silph Co.	4F	kanto-silph-co-4f
+kanto	red	Silph Co.	5F	kanto-silph-co-5f
+kanto	red	Silph Co.	6F	kanto-silph-co-6f
+kanto	red	Silph Co.	7F	kanto-silph-co-7f
+kanto	red	Silph Co.	8F	kanto-silph-co-8f
+kanto	red	Silph Co.	9F	kanto-silph-co-9f
+kanto	red	S.S. Anne	1F Rooms	kanto-ss-anne-1f-rooms
+kanto	red	S.S. Anne	1F	kanto-ss-anne-1f
+kanto	red	S.S. Anne	2F Rooms	kanto-ss-anne-2f-rooms
+kanto	red	S.S. Anne	2F	kanto-ss-anne-2f
+kanto	red	S.S. Anne	3F	kanto-ss-anne-3f
+kanto	red	S.S. Anne	B1F Rooms	kanto-ss-anne-b1f-rooms
+kanto	red	S.S. Anne	B1F	kanto-ss-anne-b1f
+kanto	red	Team Rocket Hideout	B1F	kanto-team-rocket-hideout-b1f
+kanto	red	Team Rocket Hideout	B2F	kanto-team-rocket-hideout-b2f
+kanto	red	Team Rocket Hideout	B3F	kanto-team-rocket-hideout-b3f
+kanto	red	Team Rocket Hideout	B4F	kanto-team-rocket-hideout-b4f
+kanto	red	Underground Path 5-6	Main	kanto-underground-path-5-6
+kanto	red	Underground Path 7-8	Main	kanto-underground-path-7-8
+kanto	red	Vermilion City	Main	kanto-vermilion-city
+kanto	red	Victory Road	1F	kanto-victory-road-1f
+kanto	red	Victory Road	2F	kanto-victory-road-2f
+kanto	red	Victory Road	3F	kanto-victory-road-3f
+kanto	red	Viridian City	Main	kanto-viridian-city
+kanto	red	Viridian Forest	Main	kanto-viridian-forest
+kanto	blue	Celadon City	Main	kanto-celadon-city-main
+kanto	blue	Cerulean Cave	1F	kanto-cerulean-cave-1f
+kanto	blue	Cerulean Cave	2F	kanto-cerulean-cave-2f
+kanto	blue	Cerulean Cave	B1F	kanto-cerulean-cave-b1f
+kanto	blue	Cerulean City	Main	kanto-cerulean-city
+kanto	blue	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	blue	Diglett's Cave	1F	kanto-digletts-cave
+kanto	blue	Fuchsia City	Main	kanto-fuchsia-city
+kanto	blue	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	blue	Lavender Town	Main	kanto-lavender-town
+kanto	blue	Mt. Moon	1F	kanto-mt-moon-1f
+kanto	blue	Mt. Moon	B1F	kanto-mt-moon-b1f
+kanto	blue	Mt. Moon	B2F	kanto-mt-moon-b2f
+kanto	blue	Pallet Town	Main	kanto-pallet-town
+kanto	blue	Pewter City	Main	kanto-pewter-city
+kanto	blue	Pokémon Mansion	1F	kanto-pokemon-mansion-1f
+kanto	blue	Pokémon Mansion	2F	kanto-pokemon-mansion-2f
+kanto	blue	Pokémon Mansion	3F	kanto-pokemon-mansion-3f
+kanto	blue	Pokémon Mansion	B1F	kanto-pokemon-mansion-b1f
+kanto	blue	Pokémon Tower	1F	kanto-pokemon-tower-1f
+kanto	blue	Pokémon Tower	2F	kanto-pokemon-tower-2f
+kanto	blue	Pokémon Tower	3F	kanto-pokemon-tower-3f
+kanto	blue	Pokémon Tower	4F	kanto-pokemon-tower-4f
+kanto	blue	Pokémon Tower	5F	kanto-pokemon-tower-5f
+kanto	blue	Pokémon Tower	6F	kanto-pokemon-tower-6f
+kanto	blue	Pokémon Tower	7F	kanto-pokemon-tower-7f
+kanto	blue	Power Plant	Main	kanto-power-plant
+kanto	blue	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	blue	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	blue	Route 1	Main	kanto-route-1
+kanto	blue	Route 10	Main	kanto-route-10
+kanto	blue	Route 11	Main	kanto-route-11
+kanto	blue	Route 12	Main	kanto-route-12
+kanto	blue	Route 13	Main	kanto-route-13
+kanto	blue	Route 14	Main	kanto-route-14
+kanto	blue	Route 15	Main	kanto-route-15
+kanto	blue	Route 16	Main	kanto-route-16
+kanto	blue	Route 17	Main	kanto-route-17
+kanto	blue	Route 18	Main	kanto-route-18
+kanto	blue	Route 19	Main	kanto-route-19
+kanto	blue	Route 2	Main	kanto-route-2
+kanto	blue	Route 20	Main	kanto-route-20
+kanto	blue	Route 21	Main	kanto-route-21
+kanto	blue	Route 22	Main	kanto-route-22
+kanto	blue	Route 23	Main	kanto-route-23
+kanto	blue	Route 24	Main	kanto-route-24
+kanto	blue	Route 25	Main	kanto-route-25
+kanto	blue	Route 3	Main	kanto-route-3
+kanto	blue	Route 4	Main	kanto-route-4
+kanto	blue	Route 5	Main	kanto-route-5
+kanto	blue	Route 6	Main	kanto-route-6
+kanto	blue	Route 7	Main	kanto-route-7
+kanto	blue	Route 8	Main	kanto-route-8
+kanto	blue	Route 9	Main	kanto-route-9
+kanto	blue	Safari Zone	East	kanto-safari-zone-area-1
+kanto	blue	Safari Zone	North	kanto-safari-zone-area-2
+kanto	blue	Safari Zone	West	kanto-safari-zone-area-3
+kanto	blue	Safari Zone	Center	kanto-safari-zone-entrance
+kanto	blue	Saffron City	Main	kanto-saffron-city
+kanto	blue	Seafoam Islands	1F	kanto-seafoam-islands-1f
+kanto	blue	Seafoam Islands	B1F	kanto-seafoam-islands-b1f
+kanto	blue	Seafoam Islands	B2F	kanto-seafoam-islands-b2f
+kanto	blue	Seafoam Islands	B3F	kanto-seafoam-islands-b3f
+kanto	blue	Seafoam Islands	B4F	kanto-seafoam-islands-b4f
+kanto	blue	Silph Co.	10F	kanto-silph-co-10f
+kanto	blue	Silph Co.	11F	kanto-silph-co-11f
+kanto	blue	Silph Co.	1F	kanto-silph-co-1f
+kanto	blue	Silph Co.	2F	kanto-silph-co-2f
+kanto	blue	Silph Co.	3F	kanto-silph-co-3f
+kanto	blue	Silph Co.	4F	kanto-silph-co-4f
+kanto	blue	Silph Co.	5F	kanto-silph-co-5f
+kanto	blue	Silph Co.	6F	kanto-silph-co-6f
+kanto	blue	Silph Co.	7F	kanto-silph-co-7f
+kanto	blue	Silph Co.	8F	kanto-silph-co-8f
+kanto	blue	Silph Co.	9F	kanto-silph-co-9f
+kanto	blue	S.S. Anne	1F Rooms	kanto-ss-anne-1f-rooms
+kanto	blue	S.S. Anne	1F	kanto-ss-anne-1f
+kanto	blue	S.S. Anne	2F Rooms	kanto-ss-anne-2f-rooms
+kanto	blue	S.S. Anne	2F	kanto-ss-anne-2f
+kanto	blue	S.S. Anne	3F	kanto-ss-anne-3f
+kanto	blue	S.S. Anne	B1F Rooms	kanto-ss-anne-b1f-rooms
+kanto	blue	S.S. Anne	B1F	kanto-ss-anne-b1f
+kanto	blue	Team Rocket Hideout	B1F	kanto-team-rocket-hideout-b1f
+kanto	blue	Team Rocket Hideout	B2F	kanto-team-rocket-hideout-b2f
+kanto	blue	Team Rocket Hideout	B3F	kanto-team-rocket-hideout-b3f
+kanto	blue	Team Rocket Hideout	B4F	kanto-team-rocket-hideout-b4f
+kanto	blue	Underground Path 5-6	Main	kanto-underground-path-5-6
+kanto	blue	Underground Path 7-8	Main	kanto-underground-path-7-8
+kanto	blue	Vermilion City	Main	kanto-vermilion-city
+kanto	blue	Victory Road	1F	kanto-victory-road-1f
+kanto	blue	Victory Road	2F	kanto-victory-road-2f
+kanto	blue	Victory Road	3F	kanto-victory-road-3f
+kanto	blue	Viridian City	Main	kanto-viridian-city
+kanto	blue	Viridian Forest	Main	kanto-viridian-forest
+kanto	yellow	Celadon City	Main	kanto-celadon-city-main
+kanto	yellow	Cerulean Cave	1F	kanto-cerulean-cave-1f
+kanto	yellow	Cerulean Cave	2F	kanto-cerulean-cave-2f
+kanto	yellow	Cerulean Cave	B1F	kanto-cerulean-cave-b1f
+kanto	yellow	Cerulean City	Main	kanto-cerulean-city
+kanto	yellow	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	yellow	Diglett's Cave	1F	kanto-digletts-cave
+kanto	yellow	Fuchsia City	Main	kanto-fuchsia-city
+kanto	yellow	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	yellow	Lavender Town	Main	kanto-lavender-town
+kanto	yellow	Mt. Moon	1F	kanto-mt-moon-1f
+kanto	yellow	Mt. Moon	B1F	kanto-mt-moon-b1f
+kanto	yellow	Mt. Moon	B2F	kanto-mt-moon-b2f
+kanto	yellow	Pallet Town	Main	kanto-pallet-town
+kanto	yellow	Pewter City	Main	kanto-pewter-city
+kanto	yellow	Pokémon Mansion	1F	kanto-pokemon-mansion-1f
+kanto	yellow	Pokémon Mansion	2F	kanto-pokemon-mansion-2f
+kanto	yellow	Pokémon Mansion	3F	kanto-pokemon-mansion-3f
+kanto	yellow	Pokémon Mansion	B1F	kanto-pokemon-mansion-b1f
+kanto	yellow	Pokémon Tower	1F	kanto-pokemon-tower-1f
+kanto	yellow	Pokémon Tower	2F	kanto-pokemon-tower-2f
+kanto	yellow	Pokémon Tower	3F	kanto-pokemon-tower-3f
+kanto	yellow	Pokémon Tower	4F	kanto-pokemon-tower-4f
+kanto	yellow	Pokémon Tower	5F	kanto-pokemon-tower-5f
+kanto	yellow	Pokémon Tower	6F	kanto-pokemon-tower-6f
+kanto	yellow	Pokémon Tower	7F	kanto-pokemon-tower-7f
+kanto	yellow	Power Plant	Main	kanto-power-plant
+kanto	yellow	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	yellow	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	yellow	Route 1	Main	kanto-route-1
+kanto	yellow	Route 10	Main	kanto-route-10
+kanto	yellow	Route 11	Main	kanto-route-11
+kanto	yellow	Route 12	Main	kanto-route-12
+kanto	yellow	Route 13	Main	kanto-route-13
+kanto	yellow	Route 14	Main	kanto-route-14
+kanto	yellow	Route 15	Main	kanto-route-15
+kanto	yellow	Route 16	Main	kanto-route-16
+kanto	yellow	Route 17	Main	kanto-route-17
+kanto	yellow	Route 18	Main	kanto-route-18
+kanto	yellow	Route 19	Main	kanto-route-19
+kanto	yellow	Route 2	Main	kanto-route-2
+kanto	yellow	Route 20	Main	kanto-route-20
+kanto	yellow	Route 21	Main	kanto-route-21
+kanto	yellow	Route 22	Main	kanto-route-22
+kanto	yellow	Route 23	Main	kanto-route-23
+kanto	yellow	Route 24	Main	kanto-route-24
+kanto	yellow	Route 25	Main	kanto-route-25
+kanto	yellow	Route 3	Main	kanto-route-3
+kanto	yellow	Route 4	Main	kanto-route-4
+kanto	yellow	Route 5	Main	kanto-route-5
+kanto	yellow	Route 6	Main	kanto-route-6
+kanto	yellow	Route 7	Main	kanto-route-7
+kanto	yellow	Route 8	Main	kanto-route-8
+kanto	yellow	Route 9	Main	kanto-route-9
+kanto	yellow	Safari Zone	East	kanto-safari-zone-area-1
+kanto	yellow	Safari Zone	North	kanto-safari-zone-area-2
+kanto	yellow	Safari Zone	West	kanto-safari-zone-area-3
+kanto	yellow	Safari Zone	Center	kanto-safari-zone-entrance
+kanto	yellow	Saffron City	Main	kanto-saffron-city
+kanto	yellow	Seafoam Islands	1F	kanto-seafoam-islands-1f
+kanto	yellow	Seafoam Islands	B1F	kanto-seafoam-islands-b1f
+kanto	yellow	Seafoam Islands	B2F	kanto-seafoam-islands-b2f
+kanto	yellow	Seafoam Islands	B3F	kanto-seafoam-islands-b3f
+kanto	yellow	Seafoam Islands	B4F	kanto-seafoam-islands-b4f
+kanto	yellow	Silph Co.	10F	kanto-silph-co-10f
+kanto	yellow	Silph Co.	11F	kanto-silph-co-11f
+kanto	yellow	Silph Co.	1F	kanto-silph-co-1f
+kanto	yellow	Silph Co.	2F	kanto-silph-co-2f
+kanto	yellow	Silph Co.	3F	kanto-silph-co-3f
+kanto	yellow	Silph Co.	4F	kanto-silph-co-4f
+kanto	yellow	Silph Co.	5F	kanto-silph-co-5f
+kanto	yellow	Silph Co.	6F	kanto-silph-co-6f
+kanto	yellow	Silph Co.	7F	kanto-silph-co-7f
+kanto	yellow	Silph Co.	8F	kanto-silph-co-8f
+kanto	yellow	Silph Co.	9F	kanto-silph-co-9f
+kanto	yellow	S.S. Anne	1F Rooms	kanto-ss-anne-1f-rooms
+kanto	yellow	S.S. Anne	1F	kanto-ss-anne-1f
+kanto	yellow	S.S. Anne	2F Rooms	kanto-ss-anne-2f-rooms
+kanto	yellow	S.S. Anne	2F	kanto-ss-anne-2f
+kanto	yellow	S.S. Anne	3F	kanto-ss-anne-3f
+kanto	yellow	S.S. Anne	B1F Rooms	kanto-ss-anne-b1f-rooms
+kanto	yellow	S.S. Anne	B1F	kanto-ss-anne-b1f
+kanto	yellow	Team Rocket Hideout	B1F	kanto-team-rocket-hideout-b1f
+kanto	yellow	Team Rocket Hideout	B2F	kanto-team-rocket-hideout-b2f
+kanto	yellow	Team Rocket Hideout	B3F	kanto-team-rocket-hideout-b3f
+kanto	yellow	Team Rocket Hideout	B4F	kanto-team-rocket-hideout-b4f
+kanto	yellow	Underground Path 5-6	Main	kanto-underground-path-5-6
+kanto	yellow	Underground Path 7-8	Main	kanto-underground-path-7-8
+kanto	yellow	Vermilion City	Main	kanto-vermilion-city
+kanto	yellow	Victory Road	1F	kanto-victory-road-1f
+kanto	yellow	Victory Road	2F	kanto-victory-road-2f
+kanto	yellow	Victory Road	3F	kanto-victory-road-3f
+kanto	yellow	Viridian City	Main	kanto-viridian-city
+kanto	yellow	Viridian Forest	Main	kanto-viridian-forest
+johto	gold	Azalea Town	Main	johto-azalea-town
+johto	gold	Blackthorn City	Main	johto-blackthorn-city
+johto	gold	Burned Tower	1F	johto-burned-tower-1f
+johto	gold	Burned Tower	B1F	johto-burned-tower-b1f
+johto	gold	Cherrygrove City	Main	johto-cherrygrove-city
+johto	gold	Cianwood City	Main	johto-cianwood-city
+johto	gold	Dark Cave	Blackthorn Side	johto-dark-cave-blackthorn-side
+johto	gold	Dark Cave	Violet Side	johto-dark-cave-violet-side
+johto	gold	Dragon's Den	Entrance	johto-dragons-den-entrance
+johto	gold	Dragon's Den	Lower Entrance	johto-dragons-den-lower-entrance
+johto	gold	Dragon's Den	Main Room	johto-dragons-den-main-room
+johto	gold	Ecruteak City	Main	johto-ecruteak-city
+johto	gold	Glitter Lighthouse	1F	johto-glitter-lighthouse-1f
+johto	gold	Glitter Lighthouse	2F	johto-glitter-lighthouse-2f
+johto	gold	Glitter Lighthouse	3F	johto-glitter-lighthouse-3f
+johto	gold	Glitter Lighthouse	4F	johto-glitter-lighthouse-4f
+johto	gold	Glitter Lighthouse	5F	johto-glitter-lighthouse-5f
+johto	gold	Glitter Lighthouse	Light Room	johto-glitter-lighthouse-light-room
+johto	gold	Goldenrod City	Main	johto-goldenrod-city
+johto	gold	Goldenrod Radio Tower	1F	johto-goldenrod-radio-tower-1f
+johto	gold	Goldenrod Radio Tower	2F	johto-goldenrod-radio-tower-2f
+johto	gold	Goldenrod Radio Tower	3F	johto-goldenrod-radio-tower-3f
+johto	gold	Goldenrod Radio Tower	4F	johto-goldenrod-radio-tower-4f
+johto	gold	Goldenrod Radio Tower	5F	johto-goldenrod-radio-tower-5f
+johto	gold	Ice Path	1F	johto-ice-path-1f
+johto	gold	Ice Path	B1F	johto-ice-path-b1f
+johto	gold	Ice Path	B2F	johto-ice-path-b2f
+johto	gold	Ice Path	B3F	johto-ice-path-b3f
+johto	gold	Ilex Forest	Main	johto-ilex-forest
+johto	gold	Lake of Rage	Main	johto-lake-of-rage
+johto	gold	Mahogany Town	Main	johto-mahogany-town
+johto	gold	Mt. Mortar	1F Back	johto-mt-mortar-1f-back
+johto	gold	Mt. Mortar	1F Entrance	johto-mt-mortar-1f-entrance
+johto	gold	Mt. Mortar	2F	johto-mt-mortar-2f
+johto	gold	Mt. Mortar	B1F	johto-mt-mortar-b1f
+johto	gold	Mt. Silver	1F	johto-mt-silver-1f
+johto	gold	Mt. Silver	2F Full Restore	johto-mt-silver-2f-full-restore
+johto	gold	Mt. Silver	2F Max Revive	johto-mt-silver-2f-max-revive
+johto	gold	Mt. Silver	2F	johto-mt-silver-2f
+johto	gold	Mt. Silver	Exterior	johto-mt-silver-exterior
+johto	gold	Mt. Silver	Summit	johto-mt-silver-summit
+johto	gold	National Park	Main	johto-national-park
+johto	gold	New Bark Town	Main	johto-new-bark-town
+johto	gold	Olivine City	Main	johto-olivine-city
+johto	gold	Route 29	Main	johto-route-29
+johto	gold	Route 30	Main	johto-route-30
+johto	gold	Route 31	Main	johto-route-31
+johto	gold	Route 32	Main	johto-route-32
+johto	gold	Route 33	Main	johto-route-33
+johto	gold	Route 34	Main	johto-route-34
+johto	gold	Route 35	Main	johto-route-35
+johto	gold	Route 36	Main	johto-route-36
+johto	gold	Route 37	Main	johto-route-37
+johto	gold	Route 38	Main	johto-route-38
+johto	gold	Route 39	Main	johto-route-39
+johto	gold	Route 40	Main	johto-route-40
+johto	gold	Route 41	Main	johto-route-41
+johto	gold	Route 42	Main	johto-route-42
+johto	gold	Route 43	Main	johto-route-43
+johto	gold	Route 44	Main	johto-route-44
+johto	gold	Route 45	Main	johto-route-45
+johto	gold	Route 46	Main	johto-route-46
+johto	gold	Ruins of Alph	Entrance 1	johto-ruins-of-alph-entrance-1
+johto	gold	Ruins of Alph	Entrance 2	johto-ruins-of-alph-entrance-2
+johto	gold	Ruins of Alph	Interior	johto-ruins-of-alph-interior
+johto	gold	Ruins of Alph	Main	johto-ruins-of-alph
+johto	gold	Slowpoke Well	B1F	johto-slowpoke-well-b1f
+johto	gold	Slowpoke Well	B2F	johto-slowpoke-well-b2f
+johto	gold	Sprout Tower	1F	johto-sprout-tower-1f
+johto	gold	Sprout Tower	2F	johto-sprout-tower-2f
+johto	gold	Sprout Tower	3F	johto-sprout-tower-3f
+johto	gold	S.S. Aqua	1F Rooms	johto-ss-aqua-1f-rooms
+johto	gold	S.S. Aqua	1F	johto-ss-aqua-1f
+johto	gold	S.S. Aqua	B1F	johto-ss-aqua-b1f
+johto	gold	S.S. Aqua	Captain's Cabin	johto-ss-aqua-captains-cabin
+johto	gold	Team Rocket HQ	1F	johto-team-rocket-hq-1f
+johto	gold	Team Rocket HQ	B1F	johto-team-rocket-hq-b1f
+johto	gold	Team Rocket HQ	B2F	johto-team-rocket-hq-b2f
+johto	gold	Team Rocket HQ	B3F	johto-team-rocket-hq-b3f
+johto	gold	The Underground	B1F	johto-the-underground-b1f
+johto	gold	The Underground	B2F	johto-the-underground-b2f
+johto	gold	The Underground	Warehouse	johto-the-underground-warehouse
+johto	gold	Tin Tower	1F	johto-tin-tower-1f
+johto	gold	Tin Tower	2F	johto-tin-tower-2f
+johto	gold	Tin Tower	3F	johto-tin-tower-3f
+johto	gold	Tin Tower	4F	johto-tin-tower-4f
+johto	gold	Tin Tower	5F	johto-tin-tower-5f
+johto	gold	Tin Tower	6F	johto-tin-tower-6f
+johto	gold	Tin Tower	7F	johto-tin-tower-7f
+johto	gold	Tin Tower	8F	johto-tin-tower-8f
+johto	gold	Tin Tower	9F	johto-tin-tower-9f
+johto	gold	Tin Tower	Roof	johto-tin-tower-roof
+johto	gold	Union Cave	1F	johto-union-cave-1f
+johto	gold	Union Cave	B1F	johto-union-cave-b1f
+johto	gold	Union Cave	B2F	johto-union-cave-b2f
+johto	gold	Violet City	Main	johto-violet-city
+johto	gold	Whirl Islands	1F Northeast	johto-whirl-islands-1f-northeast
+johto	gold	Whirl Islands	1F Northwest	johto-whirl-islands-1f-northwest
+johto	gold	Whirl Islands	1F Southeast	johto-whirl-islands-1f-southeast
+johto	gold	Whirl Islands	1F Southwest	johto-whirl-islands-1f-southwest
+johto	gold	Whirl Islands	B1F Middle	johto-whirl-islands-b1f-middle
+johto	gold	Whirl Islands	B1F	johto-whirl-islands-b1f
+johto	gold	Whirl Islands	B2F Inner	johto-whirl-islands-b2f-inner
+johto	gold	Whirl Islands	B2F	johto-whirl-islands-b2f
+kanto	gold	Celadon City	Main	kanto-celadon-city
+kanto	gold	Cerulean City	Main	kanto-cerulean-city
+kanto	gold	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	gold	Diglett's Cave	Main	kanto-digletts-cave
+kanto	gold	Fuchsia City	Main	kanto-fuchsia-city
+kanto	gold	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	gold	Lavender Town	Main	kanto-lavender-town
+kanto	gold	Mt. Moon	Square	kanto-mt-moon-square
+kanto	gold	Mt. Moon	Main	kanto-mt-moon
+kanto	gold	Pallet Town	Main	kanto-pallet-town
+kanto	gold	Pewter City	Main	kanto-pewter-city
+kanto	gold	Pokémon Tower	Main	kanto-pokemon-tower
+kanto	gold	Power Plant	Main	kanto-power-plant
+kanto	gold	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	gold	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	gold	Route 1	Main	kanto-route-1
+kanto	gold	Route 10	Main	kanto-route-10
+kanto	gold	Route 11	Main	kanto-route-11
+kanto	gold	Route 12	Main	kanto-route-12
+kanto	gold	Route 13	Main	kanto-route-13
+kanto	gold	Route 14	Main	kanto-route-14
+kanto	gold	Route 15	Main	kanto-route-15
+kanto	gold	Route 16	Main	kanto-route-16
+kanto	gold	Route 17	Main	kanto-route-17
+kanto	gold	Route 18	Main	kanto-route-18
+kanto	gold	Route 19	Main	kanto-route-19
+kanto	gold	Route 2	Main	kanto-route-2
+kanto	gold	Route 20	Main	kanto-route-20
+kanto	gold	Route 21	Main	kanto-route-21
+kanto	gold	Route 22	Main	kanto-route-22
+kanto	gold	Route 24	Main	kanto-route-24
+kanto	gold	Route 25	Main	kanto-route-25
+kanto	gold	Route 26	Main	kanto-route-26
+kanto	gold	Route 27	Main	kanto-route-27
+kanto	gold	Route 28	Main	kanto-route-28
+kanto	gold	Route 3	Main	kanto-route-3
+kanto	gold	Route 4	Main	kanto-route-4
+kanto	gold	Route 5	Main	kanto-route-5
+kanto	gold	Route 6	Main	kanto-route-6
+kanto	gold	Route 7	Main	kanto-route-7
+kanto	gold	Route 8	Main	kanto-route-8
+kanto	gold	Route 9	Main	kanto-route-9
+kanto	gold	Saffron City	Main	kanto-saffron-city
+kanto	gold	Seafoam Islands	Cinnabar Gym	kanto-seafoam-islands-cinnabar-gym
+kanto	gold	Silph Co.	Main	kanto-silph-co
+kanto	gold	Tohjo Falls	Main	kanto-tohjo-falls
+kanto	gold	Underground Path	Main	kanto-underground-path
+kanto	gold	Vermilion City	Main	kanto-vermilion-city
+kanto	gold	Victory Road	1F	kanto-victory-road-1f
+kanto	gold	Victory Road	2F	kanto-victory-road-2f
+kanto	gold	Victory Road	3F	kanto-victory-road-3f
+kanto	gold	Viridian City	Main	kanto-viridian-city
+johto	silver	Azalea Town	Main	johto-azalea-town
+johto	silver	Blackthorn City	Main	johto-blackthorn-city
+johto	silver	Burned Tower	1F	johto-burned-tower-1f
+johto	silver	Burned Tower	B1F	johto-burned-tower-b1f
+johto	silver	Cherrygrove City	Main	johto-cherrygrove-city
+johto	silver	Cianwood City	Main	johto-cianwood-city
+johto	silver	Dark Cave	Blackthorn Side	johto-dark-cave-blackthorn-side
+johto	silver	Dark Cave	Violet Side	johto-dark-cave-violet-side
+johto	silver	Dragon's Den	Entrance	johto-dragons-den-entrance
+johto	silver	Dragon's Den	Lower Entrance	johto-dragons-den-lower-entrance
+johto	silver	Dragon's Den	Main Room	johto-dragons-den-main-room
+johto	silver	Ecruteak City	Main	johto-ecruteak-city
+johto	silver	Glitter Lighthouse	1F	johto-glitter-lighthouse-1f
+johto	silver	Glitter Lighthouse	2F	johto-glitter-lighthouse-2f
+johto	silver	Glitter Lighthouse	3F	johto-glitter-lighthouse-3f
+johto	silver	Glitter Lighthouse	4F	johto-glitter-lighthouse-4f
+johto	silver	Glitter Lighthouse	5F	johto-glitter-lighthouse-5f
+johto	silver	Glitter Lighthouse	Light Room	johto-glitter-lighthouse-light-room
+johto	silver	Goldenrod City	Main	johto-goldenrod-city
+johto	silver	Goldenrod Radio Tower	1F	johto-goldenrod-radio-tower-1f
+johto	silver	Goldenrod Radio Tower	2F	johto-goldenrod-radio-tower-2f
+johto	silver	Goldenrod Radio Tower	3F	johto-goldenrod-radio-tower-3f
+johto	silver	Goldenrod Radio Tower	4F	johto-goldenrod-radio-tower-4f
+johto	silver	Goldenrod Radio Tower	5F	johto-goldenrod-radio-tower-5f
+johto	silver	Ice Path	1F	johto-ice-path-1f
+johto	silver	Ice Path	B1F	johto-ice-path-b1f
+johto	silver	Ice Path	B2F	johto-ice-path-b2f
+johto	silver	Ice Path	B3F	johto-ice-path-b3f
+johto	silver	Ilex Forest	Main	johto-ilex-forest
+johto	silver	Lake of Rage	Main	johto-lake-of-rage
+johto	silver	Mahogany Town	Main	johto-mahogany-town
+johto	silver	Mt. Mortar	1F Back	johto-mt-mortar-1f-back
+johto	silver	Mt. Mortar	1F Entrance	johto-mt-mortar-1f-entrance
+johto	silver	Mt. Mortar	2F	johto-mt-mortar-2f
+johto	silver	Mt. Mortar	B1F	johto-mt-mortar-b1f
+johto	silver	Mt. Silver	1F	johto-mt-silver-1f
+johto	silver	Mt. Silver	2F Full Restore	johto-mt-silver-2f-full-restore
+johto	silver	Mt. Silver	2F Max Revive	johto-mt-silver-2f-max-revive
+johto	silver	Mt. Silver	2F	johto-mt-silver-2f
+johto	silver	Mt. Silver	Exterior	johto-mt-silver-exterior
+johto	silver	Mt. Silver	Summit	johto-mt-silver-summit
+johto	silver	National Park	Main	johto-national-park
+johto	silver	New Bark Town	Main	johto-new-bark-town
+johto	silver	Olivine City	Main	johto-olivine-city
+johto	silver	Route 29	Main	johto-route-29
+johto	silver	Route 30	Main	johto-route-30
+johto	silver	Route 31	Main	johto-route-31
+johto	silver	Route 32	Main	johto-route-32
+johto	silver	Route 33	Main	johto-route-33
+johto	silver	Route 34	Main	johto-route-34
+johto	silver	Route 35	Main	johto-route-35
+johto	silver	Route 36	Main	johto-route-36
+johto	silver	Route 37	Main	johto-route-37
+johto	silver	Route 38	Main	johto-route-38
+johto	silver	Route 39	Main	johto-route-39
+johto	silver	Route 40	Main	johto-route-40
+johto	silver	Route 41	Main	johto-route-41
+johto	silver	Route 42	Main	johto-route-42
+johto	silver	Route 43	Main	johto-route-43
+johto	silver	Route 44	Main	johto-route-44
+johto	silver	Route 45	Main	johto-route-45
+johto	silver	Route 46	Main	johto-route-46
+johto	silver	Ruins of Alph	Entrance 1	johto-ruins-of-alph-entrance-1
+johto	silver	Ruins of Alph	Entrance 2	johto-ruins-of-alph-entrance-2
+johto	silver	Ruins of Alph	Interior	johto-ruins-of-alph-interior
+johto	silver	Ruins of Alph	Main	johto-ruins-of-alph
+johto	silver	Slowpoke Well	B1F	johto-slowpoke-well-b1f
+johto	silver	Slowpoke Well	B2F	johto-slowpoke-well-b2f
+johto	silver	Sprout Tower	1F	johto-sprout-tower-1f
+johto	silver	Sprout Tower	2F	johto-sprout-tower-2f
+johto	silver	Sprout Tower	3F	johto-sprout-tower-3f
+johto	silver	S.S. Aqua	1F Rooms	johto-ss-aqua-1f-rooms
+johto	silver	S.S. Aqua	1F	johto-ss-aqua-1f
+johto	silver	S.S. Aqua	B1F	johto-ss-aqua-b1f
+johto	silver	S.S. Aqua	Captain's Cabin	johto-ss-aqua-captains-cabin
+johto	silver	Team Rocket HQ	1F	johto-team-rocket-hq-1f
+johto	silver	Team Rocket HQ	B1F	johto-team-rocket-hq-b1f
+johto	silver	Team Rocket HQ	B2F	johto-team-rocket-hq-b2f
+johto	silver	Team Rocket HQ	B3F	johto-team-rocket-hq-b3f
+johto	silver	The Underground	B1F	johto-the-underground-b1f
+johto	silver	The Underground	B2F	johto-the-underground-b2f
+johto	silver	The Underground	Warehouse	johto-the-underground-warehouse
+johto	silver	Tin Tower	1F	johto-tin-tower-1f
+johto	silver	Tin Tower	2F	johto-tin-tower-2f
+johto	silver	Tin Tower	3F	johto-tin-tower-3f
+johto	silver	Tin Tower	4F	johto-tin-tower-4f
+johto	silver	Tin Tower	5F	johto-tin-tower-5f
+johto	silver	Tin Tower	6F	johto-tin-tower-6f
+johto	silver	Tin Tower	7F	johto-tin-tower-7f
+johto	silver	Tin Tower	8F	johto-tin-tower-8f
+johto	silver	Tin Tower	9F	johto-tin-tower-9f
+johto	silver	Tin Tower	Roof	johto-tin-tower-roof
+johto	silver	Union Cave	1F	johto-union-cave-1f
+johto	silver	Union Cave	B1F	johto-union-cave-b1f
+johto	silver	Union Cave	B2F	johto-union-cave-b2f
+johto	silver	Violet City	Main	johto-violet-city
+johto	silver	Whirl Islands	1F Northeast	johto-whirl-islands-1f-northeast
+johto	silver	Whirl Islands	1F Northwest	johto-whirl-islands-1f-northwest
+johto	silver	Whirl Islands	1F Southeast	johto-whirl-islands-1f-southeast
+johto	silver	Whirl Islands	1F Southwest	johto-whirl-islands-1f-southwest
+johto	silver	Whirl Islands	B1F Middle	johto-whirl-islands-b1f-middle
+johto	silver	Whirl Islands	B1F	johto-whirl-islands-b1f
+johto	silver	Whirl Islands	B2F Inner	johto-whirl-islands-b2f-inner
+johto	silver	Whirl Islands	B2F	johto-whirl-islands-b2f
+kanto	silver	Celadon City	Main	kanto-celadon-city
+kanto	silver	Cerulean City	Main	kanto-cerulean-city
+kanto	silver	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	silver	Diglett's Cave	Main	kanto-digletts-cave
+kanto	silver	Fuchsia City	Main	kanto-fuchsia-city
+kanto	silver	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	silver	Lavender Town	Main	kanto-lavender-town
+kanto	silver	Mt. Moon	Square	kanto-mt-moon-square
+kanto	silver	Mt. Moon	Main	kanto-mt-moon
+kanto	silver	Pallet Town	Main	kanto-pallet-town
+kanto	silver	Pewter City	Main	kanto-pewter-city
+kanto	silver	Pokémon Tower	Main	kanto-pokemon-tower
+kanto	silver	Power Plant	Main	kanto-power-plant
+kanto	silver	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	silver	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	silver	Route 1	Main	kanto-route-1
+kanto	silver	Route 10	Main	kanto-route-10
+kanto	silver	Route 11	Main	kanto-route-11
+kanto	silver	Route 12	Main	kanto-route-12
+kanto	silver	Route 13	Main	kanto-route-13
+kanto	silver	Route 14	Main	kanto-route-14
+kanto	silver	Route 15	Main	kanto-route-15
+kanto	silver	Route 16	Main	kanto-route-16
+kanto	silver	Route 17	Main	kanto-route-17
+kanto	silver	Route 18	Main	kanto-route-18
+kanto	silver	Route 19	Main	kanto-route-19
+kanto	silver	Route 2	Main	kanto-route-2
+kanto	silver	Route 20	Main	kanto-route-20
+kanto	silver	Route 21	Main	kanto-route-21
+kanto	silver	Route 22	Main	kanto-route-22
+kanto	silver	Route 24	Main	kanto-route-24
+kanto	silver	Route 25	Main	kanto-route-25
+kanto	silver	Route 26	Main	kanto-route-26
+kanto	silver	Route 27	Main	kanto-route-27
+kanto	silver	Route 28	Main	kanto-route-28
+kanto	silver	Route 3	Main	kanto-route-3
+kanto	silver	Route 4	Main	kanto-route-4
+kanto	silver	Route 5	Main	kanto-route-5
+kanto	silver	Route 6	Main	kanto-route-6
+kanto	silver	Route 7	Main	kanto-route-7
+kanto	silver	Route 8	Main	kanto-route-8
+kanto	silver	Route 9	Main	kanto-route-9
+kanto	silver	Saffron City	Main	kanto-saffron-city
+kanto	silver	Seafoam Islands	Cinnabar Gym	kanto-seafoam-islands-cinnabar-gym
+kanto	silver	Silph Co.	Main	kanto-silph-co
+kanto	silver	Tohjo Falls	Main	kanto-tohjo-falls
+kanto	silver	Underground Path	Main	kanto-underground-path
+kanto	silver	Vermilion City	Main	kanto-vermilion-city
+kanto	silver	Victory Road	1F	kanto-victory-road-1f
+kanto	silver	Victory Road	2F	kanto-victory-road-2f
+kanto	silver	Victory Road	3F	kanto-victory-road-3f
+kanto	silver	Viridian City	Main	kanto-viridian-city
+johto	crystal	Azalea Town	Main	johto-azalea-town
+johto	crystal	Blackthorn City	Main	johto-blackthorn-city
+johto	crystal	Burned Tower	1F	johto-burned-tower-1f
+johto	crystal	Burned Tower	B1F	johto-burned-tower-b1f
+johto	crystal	Cherrygrove City	Main	johto-cherrygrove-city
+johto	crystal	Cianwood City	Main	johto-cianwood-city
+johto	crystal	Dark Cave	Blackthorn Side	johto-dark-cave-blackthorn-side
+johto	crystal	Dark Cave	Violet Side	johto-dark-cave-violet-side
+johto	crystal	Dragon's Den	Entrance	johto-dragons-den-entrance
+johto	crystal	Dragon's Den	Lower Entrance	johto-dragons-den-lower-entrance
+johto	crystal	Dragon's Den	Main Room	johto-dragons-den-main-room
+johto	crystal	Dragon's Den	Dragon Shrine	johto-dragons-den-dragon-shrine
+johto	crystal	Ecruteak City	Main	johto-ecruteak-city
+johto	crystal	Glitter Lighthouse	1F	johto-glitter-lighthouse-1f
+johto	crystal	Glitter Lighthouse	2F	johto-glitter-lighthouse-2f
+johto	crystal	Glitter Lighthouse	3F	johto-glitter-lighthouse-3f
+johto	crystal	Glitter Lighthouse	4F	johto-glitter-lighthouse-4f
+johto	crystal	Glitter Lighthouse	5F	johto-glitter-lighthouse-5f
+johto	crystal	Glitter Lighthouse	Light Room	johto-glitter-lighthouse-light-room
+johto	crystal	Goldenrod City	Main	johto-goldenrod-city
+johto	crystal	Goldenrod Radio Tower	1F	johto-goldenrod-radio-tower-1f
+johto	crystal	Goldenrod Radio Tower	2F	johto-goldenrod-radio-tower-2f
+johto	crystal	Goldenrod Radio Tower	3F	johto-goldenrod-radio-tower-3f
+johto	crystal	Goldenrod Radio Tower	4F	johto-goldenrod-radio-tower-4f
+johto	crystal	Goldenrod Radio Tower	5F	johto-goldenrod-radio-tower-5f
+johto	crystal	Ice Path	1F	johto-ice-path-1f
+johto	crystal	Ice Path	B1F	johto-ice-path-b1f
+johto	crystal	Ice Path	B2F	johto-ice-path-b2f
+johto	crystal	Ice Path	B3F	johto-ice-path-b3f
+johto	crystal	Ilex Forest	Main	johto-ilex-forest
+johto	crystal	Lake of Rage	Main	johto-lake-of-rage
+johto	crystal	Mahogany Town	Main	johto-mahogany-town
+johto	crystal	Mt. Mortar	1F Back	johto-mt-mortar-1f-back
+johto	crystal	Mt. Mortar	1F Entrance	johto-mt-mortar-1f-entrance
+johto	crystal	Mt. Mortar	2F	johto-mt-mortar-2f
+johto	crystal	Mt. Mortar	B1F	johto-mt-mortar-b1f
+johto	crystal	Mt. Silver	1F	johto-mt-silver-1f
+johto	crystal	Mt. Silver	2F Full Restore	johto-mt-silver-2f-full-restore
+johto	crystal	Mt. Silver	2F Max Revive	johto-mt-silver-2f-max-revive
+johto	crystal	Mt. Silver	2F	johto-mt-silver-2f
+johto	crystal	Mt. Silver	Exterior	johto-mt-silver-exterior
+johto	crystal	Mt. Silver	Summit	johto-mt-silver-summit
+johto	crystal	National Park	Main	johto-national-park
+johto	crystal	New Bark Town	Main	johto-new-bark-town
+johto	crystal	Olivine City	Main	johto-olivine-city
+johto	crystal	Route 29	Main	johto-route-29
+johto	crystal	Route 30	Main	johto-route-30
+johto	crystal	Route 31	Main	johto-route-31
+johto	crystal	Route 32	Main	johto-route-32
+johto	crystal	Route 33	Main	johto-route-33
+johto	crystal	Route 34	Main	johto-route-34
+johto	crystal	Route 35	Main	johto-route-35
+johto	crystal	Route 36	Main	johto-route-36
+johto	crystal	Route 37	Main	johto-route-37
+johto	crystal	Route 38	Main	johto-route-38
+johto	crystal	Route 39	Main	johto-route-39
+johto	crystal	Route 40	Main	johto-route-40
+johto	crystal	Route 41	Main	johto-route-41
+johto	crystal	Route 42	Main	johto-route-42
+johto	crystal	Route 43	Main	johto-route-43
+johto	crystal	Route 44	Main	johto-route-44
+johto	crystal	Route 45	Main	johto-route-45
+johto	crystal	Route 46	Main	johto-route-46
+johto	crystal	Ruins of Alph	Entrance 1	johto-ruins-of-alph-entrance-1
+johto	crystal	Ruins of Alph	Entrance 2	johto-ruins-of-alph-entrance-2
+johto	crystal	Ruins of Alph	Interior	johto-ruins-of-alph-interior
+johto	crystal	Ruins of Alph	Main	johto-ruins-of-alph
+johto	crystal	Slowpoke Well	B1F	johto-slowpoke-well-b1f
+johto	crystal	Slowpoke Well	B2F	johto-slowpoke-well-b2f
+johto	crystal	Sprout Tower	1F	johto-sprout-tower-1f
+johto	crystal	Sprout Tower	2F	johto-sprout-tower-2f
+johto	crystal	Sprout Tower	3F	johto-sprout-tower-3f
+johto	crystal	S.S. Aqua	1F Rooms	johto-ss-aqua-1f-rooms
+johto	crystal	S.S. Aqua	1F	johto-ss-aqua-1f
+johto	crystal	S.S. Aqua	B1F	johto-ss-aqua-b1f
+johto	crystal	S.S. Aqua	Captain's Cabin	johto-ss-aqua-captains-cabin
+johto	crystal	Team Rocket HQ	1F	johto-team-rocket-hq-1f
+johto	crystal	Team Rocket HQ	B1F	johto-team-rocket-hq-b1f
+johto	crystal	Team Rocket HQ	B2F	johto-team-rocket-hq-b2f
+johto	crystal	Team Rocket HQ	B3F	johto-team-rocket-hq-b3f
+johto	crystal	The Underground	B1F	johto-the-underground-b1f
+johto	crystal	The Underground	B2F	johto-the-underground-b2f
+johto	crystal	The Underground	Warehouse	johto-the-underground-warehouse
+johto	crystal	Tin Tower	1F	johto-tin-tower-1f
+johto	crystal	Tin Tower	2F	johto-tin-tower-2f
+johto	crystal	Tin Tower	3F	johto-tin-tower-3f
+johto	crystal	Tin Tower	4F	johto-tin-tower-4f
+johto	crystal	Tin Tower	5F	johto-tin-tower-5f
+johto	crystal	Tin Tower	6F	johto-tin-tower-6f
+johto	crystal	Tin Tower	7F	johto-tin-tower-7f
+johto	crystal	Tin Tower	8F	johto-tin-tower-8f
+johto	crystal	Tin Tower	9F	johto-tin-tower-9f
+johto	crystal	Tin Tower	Roof	johto-tin-tower-roof
+johto	crystal	Union Cave	1F	johto-union-cave-1f
+johto	crystal	Union Cave	B1F	johto-union-cave-b1f
+johto	crystal	Union Cave	B2F	johto-union-cave-b2f
+johto	crystal	Violet City	Main	johto-violet-city
+johto	crystal	Whirl Islands	1F Northeast	johto-whirl-islands-1f-northeast
+johto	crystal	Whirl Islands	1F Northwest	johto-whirl-islands-1f-northwest
+johto	crystal	Whirl Islands	1F Southeast	johto-whirl-islands-1f-southeast
+johto	crystal	Whirl Islands	1F Southwest	johto-whirl-islands-1f-southwest
+johto	crystal	Whirl Islands	B1F Middle	johto-whirl-islands-b1f-middle
+johto	crystal	Whirl Islands	B1F	johto-whirl-islands-b1f
+johto	crystal	Whirl Islands	B2F Inner	johto-whirl-islands-b2f-inner
+johto	crystal	Whirl Islands	B2F	johto-whirl-islands-b2f
+kanto	crystal	Celadon City	Main	kanto-celadon-city
+kanto	crystal	Cerulean City	Main	kanto-cerulean-city
+kanto	crystal	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	crystal	Diglett's Cave	Main	kanto-digletts-cave
+kanto	crystal	Fuchsia City	Main	kanto-fuchsia-city
+kanto	crystal	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	crystal	Lavender Town	Main	kanto-lavender-town
+kanto	crystal	Mt. Moon	Square	kanto-mt-moon-square
+kanto	crystal	Mt. Moon	Main	kanto-mt-moon
+kanto	crystal	Pallet Town	Main	kanto-pallet-town
+kanto	crystal	Pewter City	Main	kanto-pewter-city
+kanto	crystal	Pokémon Tower	Main	kanto-pokemon-tower
+kanto	crystal	Power Plant	Main	kanto-power-plant
+kanto	crystal	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	crystal	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	crystal	Route 1	Main	kanto-route-1
+kanto	crystal	Route 10	Main	kanto-route-10
+kanto	crystal	Route 11	Main	kanto-route-11
+kanto	crystal	Route 12	Main	kanto-route-12
+kanto	crystal	Route 13	Main	kanto-route-13
+kanto	crystal	Route 14	Main	kanto-route-14
+kanto	crystal	Route 15	Main	kanto-route-15
+kanto	crystal	Route 16	Main	kanto-route-16
+kanto	crystal	Route 17	Main	kanto-route-17
+kanto	crystal	Route 18	Main	kanto-route-18
+kanto	crystal	Route 19	Main	kanto-route-19
+kanto	crystal	Route 2	Main	kanto-route-2
+kanto	crystal	Route 20	Main	kanto-route-20
+kanto	crystal	Route 21	Main	kanto-route-21
+kanto	crystal	Route 22	Main	kanto-route-22
+kanto	crystal	Route 24	Main	kanto-route-24
+kanto	crystal	Route 25	Main	kanto-route-25
+kanto	crystal	Route 26	Main	kanto-route-26
+kanto	crystal	Route 27	Main	kanto-route-27
+kanto	crystal	Route 28	Main	kanto-route-28
+kanto	crystal	Route 3	Main	kanto-route-3
+kanto	crystal	Route 4	Main	kanto-route-4
+kanto	crystal	Route 5	Main	kanto-route-5
+kanto	crystal	Route 6	Main	kanto-route-6
+kanto	crystal	Route 7	Main	kanto-route-7
+kanto	crystal	Route 8	Main	kanto-route-8
+kanto	crystal	Route 9	Main	kanto-route-9
+kanto	crystal	Saffron City	Main	kanto-saffron-city
+kanto	crystal	Seafoam Islands	Cinnabar Gym	kanto-seafoam-islands-cinnabar-gym
+kanto	crystal	Silph Co.	Main	kanto-silph-co
+kanto	crystal	Tohjo Falls	Main	kanto-tohjo-falls
+kanto	crystal	Underground Path	Main	kanto-underground-path
+kanto	crystal	Vermilion City	Main	kanto-vermilion-city
+kanto	crystal	Victory Road	1F	kanto-victory-road-1f
+kanto	crystal	Victory Road	2F	kanto-victory-road-2f
+kanto	crystal	Victory Road	3F	kanto-victory-road-3f
+kanto	crystal	Viridian City	Main	kanto-viridian-city
+hoenn	ruby	Abandoned Ship	1F Left Side	hoenn-abandoned-ship-1f-left-side
+hoenn	ruby	Abandoned Ship	1F	hoenn-abandoned-ship-1f
+hoenn	ruby	Abandoned Ship	B1F	hoenn-abandoned-ship-b1f
+hoenn	ruby	Abandoned Ship	Captain's Office	hoenn-abandoned-ship-captains-office
+hoenn	ruby	Abandoned Ship	Top Deck	hoenn-abandoned-ship-top-deck
+hoenn	ruby	Abandoned Ship	Underwater	hoenn-abandoned-ship-underwater
+hoenn	ruby	Ancient Tomb	Main	hoenn-ancient-tomb
+hoenn	ruby	Cave of Origin	1F	hoenn-cave-of-origin-1f
+hoenn	ruby	Cave of Origin	B1F	hoenn-cave-of-origin-b1f
+hoenn	ruby	Cave of Origin	B2F	hoenn-cave-of-origin-b2f
+hoenn	ruby	Cave of Origin	B3F	hoenn-cave-of-origin-b3f
+hoenn	ruby	Cave of Origin	B4F	hoenn-cave-of-origin-b4f
+hoenn	ruby	Cave of Origin	Entrance	hoenn-cave-of-origin-entrance
+hoenn	ruby	Dewford Town	Main	hoenn-dewford-town
+hoenn	ruby	Ever Grande City	Main	hoenn-ever-grande-city
+hoenn	ruby	Fallarbor Town	Main	hoenn-fallarbor-town
+hoenn	ruby	Fiery Path	Main	hoenn-fiery-path
+hoenn	ruby	Fortree City	Main	hoenn-fortree-city
+hoenn	ruby	Granite Cave	1F	hoenn-granite-cave-1f
+hoenn	ruby	Granite Cave	B1F	hoenn-granite-cave-b1f
+hoenn	ruby	Granite Cave	B2F	hoenn-granite-cave-b2f
+hoenn	ruby	Granite Cave	Entrance	hoenn-granite-cave-entrance
+hoenn	ruby	Granite Cave	Steven's Room	hoenn-granite-cave-stevens-room
+hoenn	ruby	Island Cave	Interior	hoenn-island-cave-interior
+hoenn	ruby	Island Cave	Main	hoenn-island-cave
+hoenn	ruby	Jagged Pass	Main	hoenn-jagged-pass
+hoenn	ruby	Lavaridge Town	Main	hoenn-lavaridge-town
+hoenn	ruby	Lilycove City	Main	hoenn-lilycove-city
+hoenn	ruby	Littleroot Town	Main	hoenn-littleroot-town
+hoenn	ruby	Mauville City	Main	hoenn-mauville-city
+hoenn	ruby	Meteor Falls	1F 1R	hoenn-meteor-falls-1f-1r
+hoenn	ruby	Meteor Falls	1F 2R	hoenn-meteor-falls-1f-2r
+hoenn	ruby	Meteor Falls	B1F 1R	hoenn-meteor-falls-b1f-r1
+hoenn	ruby	Meteor Falls	B1F 2R	hoenn-meteor-falls-b1f-r2
+hoenn	ruby	Mirage Island	Main	hoenn-mirage-island
+hoenn	ruby	Mossdeep City	Main	hoenn-mossdeep-city
+hoenn	ruby	Mt. Chimney	Main	hoenn-mt-chimney
+hoenn	ruby	Mt. Pyre	1F	hoenn-mt-pyre-1f
+hoenn	ruby	Mt. Pyre	2F	hoenn-mt-pyre-2f
+hoenn	ruby	Mt. Pyre	3F	hoenn-mt-pyre-3f
+hoenn	ruby	Mt. Pyre	4F	hoenn-mt-pyre-4f
+hoenn	ruby	Mt. Pyre	5F	hoenn-mt-pyre-5f
+hoenn	ruby	Mt. Pyre	6F	hoenn-mt-pyre-6f
+hoenn	ruby	Mt. Pyre	Exterior	hoenn-mt-pyre-exterior
+hoenn	ruby	Mt. Pyre	Summit	hoenn-mt-pyre-summit
+hoenn	ruby	New Mauville	Main	hoenn-new-mauville
+hoenn	ruby	Oldale Town	Main	hoenn-oldale-town
+hoenn	ruby	Pacifidlog Town	Main	hoenn-pacifidlog-town
+hoenn	ruby	Petalburg City	Main	hoenn-petalburg-city
+hoenn	ruby	Petalburg Woods	Main	hoenn-petalburg-woods
+hoenn	ruby	Route 101	Main	hoenn-route-101
+hoenn	ruby	Route 102	Main	hoenn-route-102
+hoenn	ruby	Route 103	Main	hoenn-route-103
+hoenn	ruby	Route 104	Main	hoenn-route-104
+hoenn	ruby	Route 105	Main	hoenn-route-105
+hoenn	ruby	Route 106	Main	hoenn-route-106
+hoenn	ruby	Route 107	Main	hoenn-route-107
+hoenn	ruby	Route 108	Main	hoenn-route-108
+hoenn	ruby	Route 109	Main	hoenn-route-109
+hoenn	ruby	Route 110	Main	hoenn-route-110
+hoenn	ruby	Route 111	Main	hoenn-route-111
+hoenn	ruby	Route 112	Main	hoenn-route-112
+hoenn	ruby	Route 113	Main	hoenn-route-113
+hoenn	ruby	Route 114	Main	hoenn-route-114
+hoenn	ruby	Route 115	Main	hoenn-route-115
+hoenn	ruby	Route 116	Main	hoenn-route-116
+hoenn	ruby	Route 117	Main	hoenn-route-117
+hoenn	ruby	Route 118	Main	hoenn-route-118
+hoenn	ruby	Route 119	Main	hoenn-route-119
+hoenn	ruby	Route 120	Main	hoenn-route-120
+hoenn	ruby	Route 121	Main	hoenn-route-121
+hoenn	ruby	Route 122	Main	hoenn-route-122
+hoenn	ruby	Route 123	Main	hoenn-route-123
+hoenn	ruby	Route 124	Underwater	hoenn-route-124-underwater
+hoenn	ruby	Route 124	Main	hoenn-route-124
+hoenn	ruby	Route 125	Main	hoenn-route-125
+hoenn	ruby	Route 126	Underwater	hoenn-route-126-underwater
+hoenn	ruby	Route 126	Main	hoenn-route-126
+hoenn	ruby	Route 127	Underwater	hoenn-route-127-underwater
+hoenn	ruby	Route 127	Main	hoenn-route-127
+hoenn	ruby	Route 128	Underwater	hoenn-route-128-underwater
+hoenn	ruby	Route 128	Main	hoenn-route-128
+hoenn	ruby	Route 129	Underwater	hoenn-route-129-underwater
+hoenn	ruby	Route 129	Main	hoenn-route-129
+hoenn	ruby	Route 130	Mirage Island	hoenn-route-130-mirage-island
+hoenn	ruby	Route 130	Main	hoenn-route-130
+hoenn	ruby	Route 131	Main	hoenn-route-131
+hoenn	ruby	Route 132	Main	hoenn-route-132
+hoenn	ruby	Route 133	Main	hoenn-route-133
+hoenn	ruby	Route 134	Sealed Chamber Underwater	hoenn-route-134-sealed-chamber-underwater
+hoenn	ruby	Route 134	Underwater	hoenn-route-134-underwater
+hoenn	ruby	Route 134	Main	hoenn-route-134
+hoenn	ruby	Rustboro City	Main	hoenn-rustboro-city
+hoenn	ruby	Rusturf Tunnel	Main	hoenn-rusturf-tunnel
+hoenn	ruby	Safari Zone	Main	hoenn-safari-zone
+hoenn	ruby	Seafloor Cavern	Entrance	hoenn-seafloor-cavern-entrance
+hoenn	ruby	Seafloor Cavern	Room 1	hoenn-seafloor-cavern-room-1
+hoenn	ruby	Seafloor Cavern	Room 2	hoenn-seafloor-cavern-room-2
+hoenn	ruby	Seafloor Cavern	Room 3	hoenn-seafloor-cavern-room-3
+hoenn	ruby	Seafloor Cavern	Room 4	hoenn-seafloor-cavern-room-4
+hoenn	ruby	Seafloor Cavern	Room 5	hoenn-seafloor-cavern-room-5
+hoenn	ruby	Seafloor Cavern	Room 6	hoenn-seafloor-cavern-room-6
+hoenn	ruby	Seafloor Cavern	Room 7	hoenn-seafloor-cavern-room-7
+hoenn	ruby	Seafloor Cavern	Room 8	hoenn-seafloor-cavern-room-8
+hoenn	ruby	Seafloor Cavern	Underwater	hoenn-seafloor-cavern-underwater
+hoenn	ruby	Seafloor Cavern	Deepest Room	hoenn-seafloor-cavern-deepest-room
+hoenn	ruby	Sealed Chamber	1st Room	hoenn-sealed-chamber-1st-room
+hoenn	ruby	Sealed Chamber	2nd Room	hoenn-sealed-chamber-2nd-room
+hoenn	ruby	Sealed Chamber	Underwater Path	hoenn-sealed-chamber-underwater-path
+hoenn	ruby	Seaside Cycling Road	Main	hoenn-seaside-cycling-road
+hoenn	ruby	Shoal Cave	Entrance High Tide	hoenn-shoal-cave-entrance-high-tide
+hoenn	ruby	Shoal Cave	Entrance Low Tide	hoenn-shoal-cave-entrance-low-tide
+hoenn	ruby	Shoal Cave	Ice Room Low Tide	hoenn-shoal-cave-ice-room-low-tide
+hoenn	ruby	Shoal Cave	Inner Room High Tide	hoenn-shoal-cave-inner-room-high-tide
+hoenn	ruby	Shoal Cave	Inner Room Low Tide	hoenn-shoal-cave-inner-room-low-tide
+hoenn	ruby	Shoal Cave	Lower Room Low Tide	hoenn-shoal-cave-lower-room-low-tide
+hoenn	ruby	Shoal Cave	Stairs Room Low Tide	hoenn-shoal-cave-stairs-room-low-tide
+hoenn	ruby	Sky Pillar	1F	hoenn-sky-pillar-1f
+hoenn	ruby	Sky Pillar	2F	hoenn-sky-pillar-2f
+hoenn	ruby	Sky Pillar	3F	hoenn-sky-pillar-3f
+hoenn	ruby	Sky Pillar	4F	hoenn-sky-pillar-4f
+hoenn	ruby	Sky Pillar	5F	hoenn-sky-pillar-5f
+hoenn	ruby	Sky Pillar	6F	hoenn-sky-pillar-6f
+hoenn	ruby	Sky Pillar	Entrance	hoenn-sky-pillar-entrance
+hoenn	ruby	Sky Pillar	Outside	hoenn-sky-pillar-outside
+hoenn	ruby	Slateport City	Main	hoenn-slateport-city
+hoenn	ruby	Sootopolis City	Main	hoenn-sootopolis-city
+hoenn	ruby	Southern Island	Exterior	hoenn-southern-island-exterior
+hoenn	ruby	Southern Island	Interior	hoenn-southern-island-interior
+hoenn	ruby	Team Magma Hideout	1F	hoenn-team-magma-hideout-1f
+hoenn	ruby	Team Magma Hideout	2F	hoenn-team-magma-hideout-2f
+hoenn	ruby	Team Magma Hideout	3F	hoenn-team-magma-hideout-3f
+hoenn	ruby	Trick House	End	hoenn-trick-house-end
+hoenn	ruby	Trick House	Entrance	hoenn-trick-house-entrance
+hoenn	ruby	Trick House	Hallway	hoenn-trick-house-hallway
+hoenn	ruby	Trick House	Room 1	hoenn-trick-house-room-1
+hoenn	ruby	Trick House	Room 2	hoenn-trick-house-room-2
+hoenn	ruby	Trick House	Room 3	hoenn-trick-house-room-3
+hoenn	ruby	Trick House	Room 4	hoenn-trick-house-room-4
+hoenn	ruby	Trick House	Room 5	hoenn-trick-house-room-5
+hoenn	ruby	Trick House	Room 6	hoenn-trick-house-room-6
+hoenn	ruby	Trick House	Room 7	hoenn-trick-house-room-7
+hoenn	ruby	Trick House	Room 8	hoenn-trick-house-room-8
+hoenn	ruby	Verdanturf Town	Main	hoenn-verdanturf-town
+hoenn	ruby	Victory Road	1F	hoenn-victory-road-1f
+hoenn	ruby	Victory Road	B1F	hoenn-victory-road-b1f
+hoenn	ruby	Victory Road	B2F	hoenn-victory-road-b2f
+hoenn	sapphire	Abandoned Ship	1F Left Side	hoenn-abandoned-ship-1f-left-side
+hoenn	sapphire	Abandoned Ship	1F	hoenn-abandoned-ship-1f
+hoenn	sapphire	Abandoned Ship	B1F	hoenn-abandoned-ship-b1f
+hoenn	sapphire	Abandoned Ship	Captain's Office	hoenn-abandoned-ship-captains-office
+hoenn	sapphire	Abandoned Ship	Top Deck	hoenn-abandoned-ship-top-deck
+hoenn	sapphire	Abandoned Ship	Underwater	hoenn-abandoned-ship-underwater
+hoenn	sapphire	Ancient Tomb	Main	hoenn-ancient-tomb
+hoenn	sapphire	Cave of Origin	1F	hoenn-cave-of-origin-1f
+hoenn	sapphire	Cave of Origin	B1F	hoenn-cave-of-origin-b1f
+hoenn	sapphire	Cave of Origin	B2F	hoenn-cave-of-origin-b2f
+hoenn	sapphire	Cave of Origin	B3F	hoenn-cave-of-origin-b3f
+hoenn	sapphire	Cave of Origin	B4F	hoenn-cave-of-origin-b4f
+hoenn	sapphire	Cave of Origin	Entrance	hoenn-cave-of-origin-entrance
+hoenn	sapphire	Dewford Town	Main	hoenn-dewford-town
+hoenn	sapphire	Ever Grande City	Main	hoenn-ever-grande-city
+hoenn	sapphire	Fallarbor Town	Main	hoenn-fallarbor-town
+hoenn	sapphire	Fiery Path	Main	hoenn-fiery-path
+hoenn	sapphire	Fortree City	Main	hoenn-fortree-city
+hoenn	sapphire	Granite Cave	1F	hoenn-granite-cave-1f
+hoenn	sapphire	Granite Cave	B1F	hoenn-granite-cave-b1f
+hoenn	sapphire	Granite Cave	B2F	hoenn-granite-cave-b2f
+hoenn	sapphire	Granite Cave	Entrance	hoenn-granite-cave-entrance
+hoenn	sapphire	Granite Cave	Steven's Room	hoenn-granite-cave-stevens-room
+hoenn	sapphire	Island Cave	Interior	hoenn-island-cave-interior
+hoenn	sapphire	Island Cave	Main	hoenn-island-cave
+hoenn	sapphire	Jagged Pass	Main	hoenn-jagged-pass
+hoenn	sapphire	Lavaridge Town	Main	hoenn-lavaridge-town
+hoenn	sapphire	Lilycove City	Main	hoenn-lilycove-city
+hoenn	sapphire	Littleroot Town	Main	hoenn-littleroot-town
+hoenn	sapphire	Mauville City	Main	hoenn-mauville-city
+hoenn	sapphire	Meteor Falls	1F 1R	hoenn-meteor-falls-1f-1r
+hoenn	sapphire	Meteor Falls	1F 2R	hoenn-meteor-falls-1f-2r
+hoenn	sapphire	Meteor Falls	B1F 1R	hoenn-meteor-falls-b1f-r1
+hoenn	sapphire	Meteor Falls	B1F 2R	hoenn-meteor-falls-b1f-r2
+hoenn	sapphire	Mirage Island	Main	hoenn-mirage-island
+hoenn	sapphire	Mossdeep City	Main	hoenn-mossdeep-city
+hoenn	sapphire	Mt. Chimney	Main	hoenn-mt-chimney
+hoenn	sapphire	Mt. Pyre	1F	hoenn-mt-pyre-1f
+hoenn	sapphire	Mt. Pyre	2F	hoenn-mt-pyre-2f
+hoenn	sapphire	Mt. Pyre	3F	hoenn-mt-pyre-3f
+hoenn	sapphire	Mt. Pyre	4F	hoenn-mt-pyre-4f
+hoenn	sapphire	Mt. Pyre	5F	hoenn-mt-pyre-5f
+hoenn	sapphire	Mt. Pyre	6F	hoenn-mt-pyre-6f
+hoenn	sapphire	Mt. Pyre	Exterior	hoenn-mt-pyre-exterior
+hoenn	sapphire	Mt. Pyre	Summit	hoenn-mt-pyre-summit
+hoenn	sapphire	New Mauville	Main	hoenn-new-mauville
+hoenn	sapphire	Oldale Town	Main	hoenn-oldale-town
+hoenn	sapphire	Pacifidlog Town	Main	hoenn-pacifidlog-town
+hoenn	sapphire	Petalburg City	Main	hoenn-petalburg-city
+hoenn	sapphire	Petalburg Woods	Main	hoenn-petalburg-woods
+hoenn	sapphire	Route 101	Main	hoenn-route-101
+hoenn	sapphire	Route 102	Main	hoenn-route-102
+hoenn	sapphire	Route 103	Main	hoenn-route-103
+hoenn	sapphire	Route 104	Main	hoenn-route-104
+hoenn	sapphire	Route 105	Main	hoenn-route-105
+hoenn	sapphire	Route 106	Main	hoenn-route-106
+hoenn	sapphire	Route 107	Main	hoenn-route-107
+hoenn	sapphire	Route 108	Main	hoenn-route-108
+hoenn	sapphire	Route 109	Main	hoenn-route-109
+hoenn	sapphire	Route 110	Main	hoenn-route-110
+hoenn	sapphire	Route 111	Main	hoenn-route-111
+hoenn	sapphire	Route 112	Main	hoenn-route-112
+hoenn	sapphire	Route 113	Main	hoenn-route-113
+hoenn	sapphire	Route 114	Main	hoenn-route-114
+hoenn	sapphire	Route 115	Main	hoenn-route-115
+hoenn	sapphire	Route 116	Main	hoenn-route-116
+hoenn	sapphire	Route 117	Main	hoenn-route-117
+hoenn	sapphire	Route 118	Main	hoenn-route-118
+hoenn	sapphire	Route 119	Main	hoenn-route-119
+hoenn	sapphire	Route 120	Main	hoenn-route-120
+hoenn	sapphire	Route 121	Main	hoenn-route-121
+hoenn	sapphire	Route 122	Main	hoenn-route-122
+hoenn	sapphire	Route 123	Main	hoenn-route-123
+hoenn	sapphire	Route 124	Underwater	hoenn-route-124-underwater
+hoenn	sapphire	Route 124	Main	hoenn-route-124
+hoenn	sapphire	Route 125	Main	hoenn-route-125
+hoenn	sapphire	Route 126	Underwater	hoenn-route-126-underwater
+hoenn	sapphire	Route 126	Main	hoenn-route-126
+hoenn	sapphire	Route 127	Underwater	hoenn-route-127-underwater
+hoenn	sapphire	Route 127	Main	hoenn-route-127
+hoenn	sapphire	Route 128	Underwater	hoenn-route-128-underwater
+hoenn	sapphire	Route 128	Main	hoenn-route-128
+hoenn	sapphire	Route 129	Underwater	hoenn-route-129-underwater
+hoenn	sapphire	Route 129	Main	hoenn-route-129
+hoenn	sapphire	Route 130	Mirage Island	hoenn-route-130-mirage-island
+hoenn	sapphire	Route 130	Main	hoenn-route-130
+hoenn	sapphire	Route 131	Main	hoenn-route-131
+hoenn	sapphire	Route 132	Main	hoenn-route-132
+hoenn	sapphire	Route 133	Main	hoenn-route-133
+hoenn	sapphire	Route 134	Sealed Chamber Underwater	hoenn-route-134-sealed-chamber-underwater
+hoenn	sapphire	Route 134	Underwater	hoenn-route-134-underwater
+hoenn	sapphire	Route 134	Main	hoenn-route-134
+hoenn	sapphire	Rustboro City	Main	hoenn-rustboro-city
+hoenn	sapphire	Rusturf Tunnel	Main	hoenn-rusturf-tunnel
+hoenn	sapphire	Safari Zone	Main	hoenn-safari-zone
+hoenn	sapphire	Seafloor Cavern	Entrance	hoenn-seafloor-cavern-entrance
+hoenn	sapphire	Seafloor Cavern	Room 1	hoenn-seafloor-cavern-room-1
+hoenn	sapphire	Seafloor Cavern	Room 2	hoenn-seafloor-cavern-room-2
+hoenn	sapphire	Seafloor Cavern	Room 3	hoenn-seafloor-cavern-room-3
+hoenn	sapphire	Seafloor Cavern	Room 4	hoenn-seafloor-cavern-room-4
+hoenn	sapphire	Seafloor Cavern	Room 5	hoenn-seafloor-cavern-room-5
+hoenn	sapphire	Seafloor Cavern	Room 6	hoenn-seafloor-cavern-room-6
+hoenn	sapphire	Seafloor Cavern	Room 7	hoenn-seafloor-cavern-room-7
+hoenn	sapphire	Seafloor Cavern	Room 8	hoenn-seafloor-cavern-room-8
+hoenn	sapphire	Seafloor Cavern	Underwater	hoenn-seafloor-cavern-underwater
+hoenn	sapphire	Seafloor Cavern	Deepest Room	hoenn-seafloor-cavern-deepest-room
+hoenn	sapphire	Sealed Chamber	1st Room	hoenn-sealed-chamber-1st-room
+hoenn	sapphire	Sealed Chamber	2nd Room	hoenn-sealed-chamber-2nd-room
+hoenn	sapphire	Sealed Chamber	Underwater Path	hoenn-sealed-chamber-underwater-path
+hoenn	sapphire	Seaside Cycling Road	Main	hoenn-seaside-cycling-road
+hoenn	sapphire	Shoal Cave	Entrance High Tide	hoenn-shoal-cave-entrance-high-tide
+hoenn	sapphire	Shoal Cave	Entrance Low Tide	hoenn-shoal-cave-entrance-low-tide
+hoenn	sapphire	Shoal Cave	Ice Room Low Tide	hoenn-shoal-cave-ice-room-low-tide
+hoenn	sapphire	Shoal Cave	Inner Room High Tide	hoenn-shoal-cave-inner-room-high-tide
+hoenn	sapphire	Shoal Cave	Inner Room Low Tide	hoenn-shoal-cave-inner-room-low-tide
+hoenn	sapphire	Shoal Cave	Lower Room Low Tide	hoenn-shoal-cave-lower-room-low-tide
+hoenn	sapphire	Shoal Cave	Stairs Room Low Tide	hoenn-shoal-cave-stairs-room-low-tide
+hoenn	sapphire	Sky Pillar	1F	hoenn-sky-pillar-1f
+hoenn	sapphire	Sky Pillar	2F	hoenn-sky-pillar-2f
+hoenn	sapphire	Sky Pillar	3F	hoenn-sky-pillar-3f
+hoenn	sapphire	Sky Pillar	4F	hoenn-sky-pillar-4f
+hoenn	sapphire	Sky Pillar	5F	hoenn-sky-pillar-5f
+hoenn	sapphire	Sky Pillar	6F	hoenn-sky-pillar-6f
+hoenn	sapphire	Sky Pillar	Entrance	hoenn-sky-pillar-entrance
+hoenn	sapphire	Sky Pillar	Outside	hoenn-sky-pillar-outside
+hoenn	sapphire	Slateport City	Main	hoenn-slateport-city
+hoenn	sapphire	Sootopolis City	Main	hoenn-sootopolis-city
+hoenn	sapphire	Southern Island	Exterior	hoenn-southern-island-exterior
+hoenn	sapphire	Southern Island	Interior	hoenn-southern-island-interior
+hoenn	sapphire	Team Aqua Hideout	1F	hoenn-team-aqua-hideout-1f
+hoenn	sapphire	Team Aqua Hideout	B1F	hoenn-team-aqua-hideout-b1f
+hoenn	sapphire	Team Aqua Hideout	Submarine Room	hoenn-team-aqua-hideout-submarine-room
+hoenn	sapphire	Trick House	End	hoenn-trick-house-end
+hoenn	sapphire	Trick House	Entrance	hoenn-trick-house-entrance
+hoenn	sapphire	Trick House	Hallway	hoenn-trick-house-hallway
+hoenn	sapphire	Trick House	Room 1	hoenn-trick-house-room-1
+hoenn	sapphire	Trick House	Room 2	hoenn-trick-house-room-2
+hoenn	sapphire	Trick House	Room 3	hoenn-trick-house-room-3
+hoenn	sapphire	Trick House	Room 4	hoenn-trick-house-room-4
+hoenn	sapphire	Trick House	Room 5	hoenn-trick-house-room-5
+hoenn	sapphire	Trick House	Room 6	hoenn-trick-house-room-6
+hoenn	sapphire	Trick House	Room 7	hoenn-trick-house-room-7
+hoenn	sapphire	Trick House	Room 8	hoenn-trick-house-room-8
+hoenn	sapphire	Verdanturf Town	Main	hoenn-verdanturf-town
+hoenn	sapphire	Victory Road	1F	hoenn-victory-road-1f
+hoenn	sapphire	Victory Road	B1F	hoenn-victory-road-b1f
+hoenn	sapphire	Victory Road	B2F	hoenn-victory-road-b2f
+hoenn	emerald	Abandoned Ship	1F Left Side	hoenn-abandoned-ship-1f-left-side
+hoenn	emerald	Abandoned Ship	1F	hoenn-abandoned-ship-1f
+hoenn	emerald	Abandoned Ship	B1F	hoenn-abandoned-ship-b1f
+hoenn	emerald	Abandoned Ship	Captain's Office	hoenn-abandoned-ship-captains-office
+hoenn	emerald	Abandoned Ship	Top Deck	hoenn-abandoned-ship-top-deck
+hoenn	emerald	Abandoned Ship	Underwater	hoenn-abandoned-ship-underwater
+hoenn	emerald	Ancient Tomb	Main	hoenn-ancient-tomb
+hoenn	emerald	Artisan Cave	1F	hoenn-artisan-cave-1f
+hoenn	emerald	Artisan Cave	B1F	hoenn-artisan-cave-b1f
+hoenn	emerald	Cave of Origin	1F	hoenn-cave-of-origin-1f
+hoenn	emerald	Cave of Origin	B1F	hoenn-cave-of-origin-b1f
+hoenn	emerald	Cave of Origin	B2F	hoenn-cave-of-origin-b2f
+hoenn	emerald	Cave of Origin	B3F	hoenn-cave-of-origin-b3f
+hoenn	emerald	Cave of Origin	Entrance	hoenn-cave-of-origin-entrance
+hoenn	emerald	Dewford Town	Main	hoenn-dewford-town
+hoenn	emerald	Ever Grande City	Main	hoenn-ever-grande-city
+hoenn	emerald	Fallarbor Town	Main	hoenn-fallarbor-town
+hoenn	emerald	Faraway Island	Exterior	hoenn-faraway-island-exterior
+hoenn	emerald	Faraway Island	Interior	hoenn-faraway-island-interior
+hoenn	emerald	Fortree City	Main	hoenn-fortree-city
+hoenn	emerald	Fiery Path	Main	hoenn-fiery-path
+hoenn	emerald	Fortree City	Main	hoenn-fortree-city
+hoenn	emerald	Granite Cave	1F	hoenn-granite-cave-1f
+hoenn	emerald	Granite Cave	B1F	hoenn-granite-cave-b1f
+hoenn	emerald	Granite Cave	B2F	hoenn-granite-cave-b2f
+hoenn	emerald	Granite Cave	Entrance	hoenn-granite-cave-entrance
+hoenn	emerald	Granite Cave	Steven's Room	hoenn-granite-cave-stevens-room
+hoenn	emerald	Island Cave	Interior	hoenn-island-cave-interior
+hoenn	emerald	Island Cave	Main	hoenn-island-cave
+hoenn	emerald	Jagged Pass	Main	hoenn-jagged-pass
+hoenn	emerald	Lavaridge Town	Main	hoenn-lavaridge-town
+hoenn	emerald	Lilycove City	Main	hoenn-lilycove-city
+hoenn	emerald	Littleroot Town	Main	hoenn-littleroot-town
+hoenn	emerald	Team Magma Hideout	1F	hoenn-magma-hideout-jagged-pass-1f
+hoenn	emerald	Team Magma Hideout	2F	hoenn-magma-hideout-jagged-pass-2f
+hoenn	emerald	Team Magma Hideout	3F	hoenn-magma-hideout-jagged-pass-3f
+hoenn	emerald	Team Magma Hideout	4F	hoenn-magma-hideout-jagged-pass-4f
+hoenn	emerald	Team Magma Hideout	5F	hoenn-magma-hideout-jagged-pass-5f
+hoenn	emerald	Team Magma Hideout	6F	hoenn-magma-hideout-jagged-pass-6f
+hoenn	emerald	Team Magma Hideout	7F	hoenn-magma-hideout-jagged-pass-7f
+hoenn	emerald	Team Magma Hideout	8F	hoenn-magma-hideout-jagged-pass-8f
+hoenn	emerald	Marine Cave	End	hoenn-marine-cave-end
+hoenn	emerald	Marine Cave	Entrance	hoenn-marine-cave-entrance
+hoenn	emerald	Marine Cave	Underwater	hoenn-marine-cave-underwater
+hoenn	emerald	Mauville City	Main	hoenn-mauville-city
+hoenn	emerald	Meteor Falls	1F 1R	hoenn-meteor-falls-1f-1r
+hoenn	emerald	Meteor Falls	1F 2R	hoenn-meteor-falls-1f-2r
+hoenn	emerald	Meteor Falls	B1F 1R	hoenn-meteor-falls-b1f-r1
+hoenn	emerald	Meteor Falls	B1F 2R	hoenn-meteor-falls-b1f-r2
+hoenn	emerald	Mirage Island	Main	hoenn-mirage-island
+hoenn	emerald	Mirage Tower	1F	hoenn-mirage-tower-1f
+hoenn	emerald	Mirage Tower	2F	hoenn-mirage-tower-2f
+hoenn	emerald	Mirage Tower	3F	hoenn-mirage-tower-3f
+hoenn	emerald	Mirage Tower	4F	hoenn-mirage-tower-4f
+hoenn	emerald	Mossdeep City	Main	hoenn-mossdeep-city
+hoenn	emerald	Mt. Chimney	Main	hoenn-mt-chimney
+hoenn	emerald	Mt. Pyre	1F	hoenn-mt-pyre-1f
+hoenn	emerald	Mt. Pyre	2F	hoenn-mt-pyre-2f
+hoenn	emerald	Mt. Pyre	3F	hoenn-mt-pyre-3f
+hoenn	emerald	Mt. Pyre	4F	hoenn-mt-pyre-4f
+hoenn	emerald	Mt. Pyre	5F	hoenn-mt-pyre-5f
+hoenn	emerald	Mt. Pyre	6F	hoenn-mt-pyre-6f
+hoenn	emerald	Mt. Pyre	Exterior	hoenn-mt-pyre-exterior
+hoenn	emerald	Mt. Pyre	Summit	hoenn-mt-pyre-summit
+hoenn	emerald	Navel Rock	B1F	hoenn-navel-rock-b1f
+hoenn	emerald	Navel Rock	Bottom	hoenn-navel-rock-bottom
+hoenn	emerald	Navel Rock	Crossroad	hoenn-navel-rock-crossroad
+hoenn	emerald	Navel Rock	Entrance	hoenn-navel-rock-entrance
+hoenn	emerald	Navel Rock	Exterior	hoenn-navel-rock-exterior
+hoenn	emerald	Navel Rock	Ladder Down	hoenn-navel-rock-ladder-down
+hoenn	emerald	Navel Rock	Ladder Up	hoenn-navel-rock-ladder-up
+hoenn	emerald	New Mauville	Main	hoenn-new-mauville
+hoenn	emerald	Oldale Town	Main	hoenn-oldale-town
+hoenn	emerald	Pacifidlog Town	Main	hoenn-pacifidlog-town
+hoenn	emerald	Petalburg City	Main	hoenn-petalburg-city
+hoenn	emerald	Petalburg Woods	Main	hoenn-petalburg-woods
+hoenn	emerald	Route 101	Main	hoenn-route-101
+hoenn	emerald	Route 102	Main	hoenn-route-102
+hoenn	emerald	Route 103	Main	hoenn-route-103
+hoenn	emerald	Route 104	Main	hoenn-route-104
+hoenn	emerald	Route 105	Main	hoenn-route-105
+hoenn	emerald	Route 105	Underwater	hoenn-route-105-underwater
+hoenn	emerald	Route 106	Main	hoenn-route-106
+hoenn	emerald	Route 107	Main	hoenn-route-107
+hoenn	emerald	Route 108	Main	hoenn-route-108
+hoenn	emerald	Route 109	Main	hoenn-route-109
+hoenn	emerald	Route 110	Main	hoenn-route-110
+hoenn	emerald	Route 111	Main	hoenn-route-111
+hoenn	emerald	Route 112	Main	hoenn-route-112
+hoenn	emerald	Route 113	Main	hoenn-route-113
+hoenn	emerald	Route 114	Main	hoenn-route-114
+hoenn	emerald	Route 115	Main	hoenn-route-115
+hoenn	emerald	Route 116	Main	hoenn-route-116
+hoenn	emerald	Route 117	Main	hoenn-route-117
+hoenn	emerald	Route 118	Main	hoenn-route-118
+hoenn	emerald	Route 119	Main	hoenn-route-119
+hoenn	emerald	Route 120	Main	hoenn-route-120
+hoenn	emerald	Route 121	Main	hoenn-route-121
+hoenn	emerald	Route 122	Main	hoenn-route-122
+hoenn	emerald	Route 123	Main	hoenn-route-123
+hoenn	emerald	Route 124	Underwater	hoenn-route-124-underwater
+hoenn	emerald	Route 124	Main	hoenn-route-124
+hoenn	emerald	Route 125	Main	hoenn-route-125
+hoenn	emerald	Route 125	Underwater	hoenn-route-125-underwater
+hoenn	emerald	Route 126	Underwater	hoenn-route-126-underwater
+hoenn	emerald	Route 126	Main	hoenn-route-126
+hoenn	emerald	Route 127	Underwater	hoenn-route-127-underwater
+hoenn	emerald	Route 127	Main	hoenn-route-127
+hoenn	emerald	Route 128	Underwater	hoenn-route-128-underwater
+hoenn	emerald	Route 128	Main	hoenn-route-128
+hoenn	emerald	Route 129	Underwater	hoenn-route-129-underwater
+hoenn	emerald	Route 129	Main	hoenn-route-129
+hoenn	emerald	Route 130	Mirage Island	hoenn-route-130-mirage-island
+hoenn	emerald	Route 130	Main	hoenn-route-130
+hoenn	emerald	Route 131	Main	hoenn-route-131
+hoenn	emerald	Route 132	Main	hoenn-route-132
+hoenn	emerald	Route 133	Main	hoenn-route-133
+hoenn	emerald	Route 134	Sealed Chamber Underwater	hoenn-route-134-sealed-chamber-underwater
+hoenn	emerald	Route 134	Underwater	hoenn-route-134-underwater
+hoenn	emerald	Route 134	Main	hoenn-route-134
+hoenn	emerald	Rustboro City	Main	hoenn-rustboro-city
+hoenn	emerald	Rusturf Tunnel	Main	hoenn-rusturf-tunnel
+hoenn	emerald	Safari Zone	Main	hoenn-safari-zone
+hoenn	emerald	Safari Zone	Expanded	hoenn-safari-zone-expanded
+hoenn	emerald	Seafloor Cavern	Entrance	hoenn-seafloor-cavern-entrance
+hoenn	emerald	Seafloor Cavern	Room 1	hoenn-seafloor-cavern-room-1
+hoenn	emerald	Seafloor Cavern	Room 2	hoenn-seafloor-cavern-room-2
+hoenn	emerald	Seafloor Cavern	Room 3	hoenn-seafloor-cavern-room-3
+hoenn	emerald	Seafloor Cavern	Room 4	hoenn-seafloor-cavern-room-4
+hoenn	emerald	Seafloor Cavern	Room 5	hoenn-seafloor-cavern-room-5
+hoenn	emerald	Seafloor Cavern	Room 6	hoenn-seafloor-cavern-room-6
+hoenn	emerald	Seafloor Cavern	Room 7	hoenn-seafloor-cavern-room-7
+hoenn	emerald	Seafloor Cavern	Room 8	hoenn-seafloor-cavern-room-8
+hoenn	emerald	Seafloor Cavern	Underwater	hoenn-seafloor-cavern-underwater
+hoenn	emerald	Seafloor Cavern	Deepest Room	hoenn-seafloor-cavern-deepest-room
+hoenn	emerald	Sealed Chamber	1st Room	hoenn-sealed-chamber-1st-room
+hoenn	emerald	Sealed Chamber	2nd Room	hoenn-sealed-chamber-2nd-room
+hoenn	emerald	Sealed Chamber	Underwater Path	hoenn-sealed-chamber-underwater-path
+hoenn	emerald	Seaside Cycling Road	Main	hoenn-seaside-cycling-road
+hoenn	emerald	Shoal Cave	Entrance High Tide	hoenn-shoal-cave-entrance-high-tide
+hoenn	emerald	Shoal Cave	Entrance Low Tide	hoenn-shoal-cave-entrance-low-tide
+hoenn	emerald	Shoal Cave	Ice Room Low Tide	hoenn-shoal-cave-ice-room-low-tide
+hoenn	emerald	Shoal Cave	Inner Room High Tide	hoenn-shoal-cave-inner-room-high-tide
+hoenn	emerald	Shoal Cave	Inner Room Low Tide	hoenn-shoal-cave-inner-room-low-tide
+hoenn	emerald	Shoal Cave	Lower Room Low Tide	hoenn-shoal-cave-lower-room-low-tide
+hoenn	emerald	Shoal Cave	Stairs Room Low Tide	hoenn-shoal-cave-stairs-room-low-tide
+hoenn	emerald	Sky Pillar	1F After Rayquaza's Awakening	hoenn-sky-pillar-1f-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	1F Before Rayquaza's Awakening	hoenn-sky-pillar-1f-before-rayquazas-awakening
+hoenn	emerald	Sky Pillar	2F After Rayquaza's Awakening	hoenn-sky-pillar-2f-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	2F Before Rayquaza's Awakening	hoenn-sky-pillar-2f-before-rayquazas-awakening
+hoenn	emerald	Sky Pillar	3F After Rayquaza's Awakening	hoenn-sky-pillar-3f-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	3F Before Rayquaza's Awakening	hoenn-sky-pillar-3f-before-rayquazas-awakening
+hoenn	emerald	Sky Pillar	4F After Rayquaza's Awakening	hoenn-sky-pillar-4f-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	4F Before Rayquaza's Awakening	hoenn-sky-pillar-4f-before-rayquazas-awakening
+hoenn	emerald	Sky Pillar	5F After Rayquaza's Awakening	hoenn-sky-pillar-5f-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	5F Before Rayquaza's Awakening	hoenn-sky-pillar-5f-before-rayquazas-awakening
+hoenn	emerald	Sky Pillar	6F After Rayquaza's Awakening	hoenn-sky-pillar-6f-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	6F Before Rayquaza's Awakening	hoenn-sky-pillar-6f-before-rayquazas-awakening
+hoenn	emerald	Sky Pillar	Entrance After Rayquaza's Awakening	hoenn-sky-pillar-entrance-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	Entrance Before Rayquaza's Awakening	hoenn-sky-pillar-entrance-before-rayquazas-awakening
+hoenn	emerald	Sky Pillar	Outside After Rayquaza's Awakening	hoenn-sky-pillar-outside-after-rayquazas-awakening
+hoenn	emerald	Sky Pillar	Outide Before Rayquaza's Awakening	hoenn-sky-pillar-outside-before-rayquazas-awakening
+hoenn	emerald	Slateport City	Main	hoenn-slateport-city
+hoenn	emerald	Sootopolis City	Main	hoenn-sootopolis-city
+hoenn	emerald	Southern Island	Exterior	hoenn-southern-island-exterior
+hoenn	emerald	Southern Island	Interior	hoenn-southern-island-interior
+hoenn	emerald	Team Aqua Hideout	1F	hoenn-team-aqua-hideout-1f
+hoenn	emerald	Team Aqua Hideout	B1F	hoenn-team-aqua-hideout-b1f
+hoenn	emerald	Team Aqua Hideout	Submarine Room	hoenn-team-aqua-hideout-submarine-room
+hoenn	emerald	Terra Cave	End	hoenn-terra-cave-end
+hoenn	emerald	Terra Cave	Entrance	hoenn-terra-cave-entrance
+hoenn	emerald	Trick House	End	hoenn-trick-house-end
+hoenn	emerald	Trick House	Entrance	hoenn-trick-house-entrance
+hoenn	emerald	Trick House	Hallway	hoenn-trick-house-hallway
+hoenn	emerald	Trick House	Room 1	hoenn-trick-house-room-1
+hoenn	emerald	Trick House	Room 2	hoenn-trick-house-room-2
+hoenn	emerald	Trick House	Room 3	hoenn-trick-house-room-3
+hoenn	emerald	Trick House	Room 4	hoenn-trick-house-room-4
+hoenn	emerald	Trick House	Room 5	hoenn-trick-house-room-5
+hoenn	emerald	Trick House	Room 6	hoenn-trick-house-room-6
+hoenn	emerald	Trick House	Room 7	hoenn-trick-house-room-7
+hoenn	emerald	Trick House	Room 8	hoenn-trick-house-room-8
+hoenn	emerald	Verdanturf Town	Main	hoenn-verdanturf-town
+hoenn	emerald	Victory Road	1F	hoenn-victory-road-1f
+hoenn	emerald	Victory Road	B1F	hoenn-victory-road-b1f
+hoenn	emerald	Victory Road	B2F	hoenn-victory-road-b2f
+sevii-islands	emerald	Altering Cave	Main	sevii-islands-altering-cave
+sevii-islands	emerald	Birth Island	Main	sevii-islands-birth-island
+kanto	fireRed	Celadon City	Main	kanto-celadon-city
+kanto	fireRed	Cerulean Cave	1F	kanto-cerulean-cave-1f
+kanto	fireRed	Cerulean Cave	2F	kanto-cerulean-cave-2f
+kanto	fireRed	Cerulean Cave	B1F	kanto-cerulean-cave-b1f
+kanto	fireRed	Cerulean City	Main	kanto-cerulean-city
+kanto	fireRed	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	fireRed	Diglett's Cave	1F	kanto-digletts-cave
+kanto	fireRed	Fuchsia City	Main	kanto-fuchsia-city
+kanto	fireRed	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	fireRed	Lavender Town	Main	kanto-lavender-town
+kanto	fireRed	Mt. Moon	1F	kanto-mt-moon-1f
+kanto	fireRed	Mt. Moon	B1F	kanto-mt-moon-b1f
+kanto	fireRed	Mt. Moon	B2F	kanto-mt-moon-b2f
+kanto	fireRed	Pallet Town	Main	kanto-pallet-town
+kanto	fireRed	Pewter City	Main	kanto-pewter-city
+kanto	fireRed	Pokémon Mansion	1F	kanto-pokemon-mansion-1f
+kanto	fireRed	Pokémon Mansion	2F	kanto-pokemon-mansion-2f
+kanto	fireRed	Pokémon Mansion	3F	kanto-pokemon-mansion-3f
+kanto	fireRed	Pokémon Mansion	B1F	kanto-pokemon-mansion-b1f
+kanto	fireRed	Pokémon Tower	1F	kanto-pokemon-tower-1f
+kanto	fireRed	Pokémon Tower	2F	kanto-pokemon-tower-2f
+kanto	fireRed	Pokémon Tower	3F	kanto-pokemon-tower-3f
+kanto	fireRed	Pokémon Tower	4F	kanto-pokemon-tower-4f
+kanto	fireRed	Pokémon Tower	5F	kanto-pokemon-tower-5f
+kanto	fireRed	Pokémon Tower	6F	kanto-pokemon-tower-6f
+kanto	fireRed	Pokémon Tower	7F	kanto-pokemon-tower-7f
+kanto	fireRed	Power Plant	Main	kanto-power-plant
+kanto	fireRed	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	fireRed	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	fireRed	Route 1	Main	kanto-route-1
+kanto	fireRed	Route 10	Main	kanto-route-10
+kanto	fireRed	Route 11	Main	kanto-route-11
+kanto	fireRed	Route 12	Main	kanto-route-12
+kanto	fireRed	Route 13	Main	kanto-route-13
+kanto	fireRed	Route 14	Main	kanto-route-14
+kanto	fireRed	Route 15	Main	kanto-route-15
+kanto	fireRed	Route 16	Main	kanto-route-16
+kanto	fireRed	Route 17	Main	kanto-route-17
+kanto	fireRed	Route 18	Main	kanto-route-18
+kanto	fireRed	Route 19	Main	kanto-route-19
+kanto	fireRed	Route 2	Main	kanto-route-2
+kanto	fireRed	Route 20	Main	kanto-route-20
+kanto	fireRed	Route 21	Main	kanto-route-21
+kanto	fireRed	Route 22	Main	kanto-route-22
+kanto	fireRed	Route 23	Main	kanto-route-23
+kanto	fireRed	Route 24	Main	kanto-route-24
+kanto	fireRed	Route 25	Main	kanto-route-25
+kanto	fireRed	Route 3	Main	kanto-route-3
+kanto	fireRed	Route 4	Main	kanto-route-4
+kanto	fireRed	Route 5	Main	kanto-route-5
+kanto	fireRed	Route 6	Main	kanto-route-6
+kanto	fireRed	Route 7	Main	kanto-route-7
+kanto	fireRed	Route 8	Main	kanto-route-8
+kanto	fireRed	Route 9	Main	kanto-route-9
+kanto	fireRed	Safari Zone	East	kanto-safari-zone-area-1
+kanto	fireRed	Safari Zone	North	kanto-safari-zone-area-2
+kanto	fireRed	Safari Zone	West	kanto-safari-zone-area-3
+kanto	fireRed	Safari Zone	Center	kanto-safari-zone-entrance
+kanto	fireRed	Saffron City	Main	kanto-saffron-city
+kanto	fireRed	Seafoam Islands	1F	kanto-seafoam-islands-1f
+kanto	fireRed	Seafoam Islands	B1F	kanto-seafoam-islands-b1f
+kanto	fireRed	Seafoam Islands	B2F	kanto-seafoam-islands-b2f
+kanto	fireRed	Seafoam Islands	B3F	kanto-seafoam-islands-b3f
+kanto	fireRed	Seafoam Islands	B4F	kanto-seafoam-islands-b4f
+kanto	fireRed	Silph Co.	10F	kanto-silph-co-10f
+kanto	fireRed	Silph Co.	11F	kanto-silph-co-11f
+kanto	fireRed	Silph Co.	1F	kanto-silph-co-1f
+kanto	fireRed	Silph Co.	2F	kanto-silph-co-2f
+kanto	fireRed	Silph Co.	3F	kanto-silph-co-3f
+kanto	fireRed	Silph Co.	4F	kanto-silph-co-4f
+kanto	fireRed	Silph Co.	5F	kanto-silph-co-5f
+kanto	fireRed	Silph Co.	6F	kanto-silph-co-6f
+kanto	fireRed	Silph Co.	7F	kanto-silph-co-7f
+kanto	fireRed	Silph Co.	8F	kanto-silph-co-8f
+kanto	fireRed	Silph Co.	9F	kanto-silph-co-9f
+kanto	fireRed	S.S. Anne	1F Rooms	kanto-ss-anne-1f-rooms
+kanto	fireRed	S.S. Anne	1F	kanto-ss-anne-1f
+kanto	fireRed	S.S. Anne	2F Rooms	kanto-ss-anne-2f-rooms
+kanto	fireRed	S.S. Anne	2F	kanto-ss-anne-2f
+kanto	fireRed	S.S. Anne	3F	kanto-ss-anne-3f
+kanto	fireRed	S.S. Anne	B1F Rooms	kanto-ss-anne-b1f-rooms
+kanto	fireRed	S.S. Anne	B1F	kanto-ss-anne-b1f
+kanto	fireRed	Team Rocket Hideout	B1F	kanto-team-rocket-hideout-b1f
+kanto	fireRed	Team Rocket Hideout	B2F	kanto-team-rocket-hideout-b2f
+kanto	fireRed	Team Rocket Hideout	B3F	kanto-team-rocket-hideout-b3f
+kanto	fireRed	Team Rocket Hideout	B4F	kanto-team-rocket-hideout-b4f
+kanto	fireRed	Underground Path 5-6	Main	kanto-underground-path-5-6
+kanto	fireRed	Underground Path 7-8	Main	kanto-underground-path-7-8
+kanto	fireRed	Vermilion City	Main	kanto-vermilion-city
+kanto	fireRed	Victory Road	1F	kanto-victory-road-1f
+kanto	fireRed	Victory Road	2F	kanto-victory-road-2f
+kanto	fireRed	Victory Road	3F	kanto-victory-road-3f
+kanto	fireRed	Viridian City	Main	kanto-viridian-city
+kanto	fireRed	Viridian Forest	Main	kanto-viridian-forest
+sevii-islands	fireRed	Altering Cave	Main	sevii-islands-altering-cave
+sevii-islands	fireRed	Berry Forest	Main	sevii-islands-berry-forest
+sevii-islands	fireRed	Birth Island	Main	sevii-islands-birth-island
+sevii-islands	fireRed	Bond Bridge	Main	sevii-islands-bond-bridge
+sevii-islands	fireRed	Canyon Entrance	Main	sevii-islands-canyon-entrance
+sevii-islands	fireRed	Cape Brink	Main	sevii-islands-cape-brink
+sevii-islands	fireRed	Dotted Hole	B1F	sevii-islands-dotted-hole-b1f
+sevii-islands	fireRed	Dotted Hole	B2F	sevii-islands-dotted-hole-b2f
+sevii-islands	fireRed	Dotted Hole	B3F	sevii-islands-dotted-hole-b3f
+sevii-islands	fireRed	Dotted Hole	B4F	sevii-islands-dotted-hole-b4f
+sevii-islands	fireRed	Dotted Hole	Ground Floor	sevii-islands-dotted-hole-ground-floor
+sevii-islands	fireRed	Dotted Hole	Sapphire Room	sevii-islands-dotted-hole-sapphire-room
+sevii-islands	fireRed	Five Island	Main	sevii-islands-five-island
+sevii-islands	fireRed	Five Isle Meadow	Main	sevii-islands-five-isle-meadow
+sevii-islands	fireRed	Four Island	Main	sevii-islands-four-island
+sevii-islands	fireRed	Green Path	Main	sevii-islands-green-path
+sevii-islands	fireRed	Icefall Cave	1F	sevii-islands-icefall-cave-1f
+sevii-islands	fireRed	Icefall Cave	B1F	sevii-islands-icefall-cave-b1f
+sevii-islands	fireRed	Icefall Cave	Back Cave	sevii-islands-icefall-cave-back-cave
+sevii-islands	fireRed	Icefall Cave	Entrance	sevii-islands-icefall-cave-entrance
+sevii-islands	fireRed	Kindle Road	Main	sevii-islands-kindle-road
+sevii-islands	fireRed	Lost Cave	1F	sevii-islands-lost-cave-1f
+sevii-islands	fireRed	Lost Cave	Cave Rare Candy	sevii-islands-lost-cave-c-rare-candy
+sevii-islands	fireRed	Lost Cave	Cave 1	sevii-islands-lost-cave-c1
+sevii-islands	fireRed	Lost Cave	Cave 10	sevii-islands-lost-cave-c10
+sevii-islands	fireRed	Lost Cave	Cave 2	sevii-islands-lost-cave-c2
+sevii-islands	fireRed	Lost Cave	Cave 3	sevii-islands-lost-cave-c3
+sevii-islands	fireRed	Lost Cave	Cave 4	sevii-islands-lost-cave-c4
+sevii-islands	fireRed	Lost Cave	Cave 5	sevii-islands-lost-cave-c5
+sevii-islands	fireRed	Lost Cave	Cave 6	sevii-islands-lost-cave-c6
+sevii-islands	fireRed	Lost Cave	Cave 7	sevii-islands-lost-cave-c7
+sevii-islands	fireRed	Lost Cave	Cave 8	sevii-islands-lost-cave-c8
+sevii-islands	fireRed	Lost Cave	Cave 9	sevii-islands-lost-cave-c9
+sevii-islands	fireRed	Lost Cave	Cave Lax Incense	sevii-islands-lost-cave-clax
+sevii-islands	fireRed	Lost Cave	Cave Max Revive	sevii-islands-lost-cave-cmax-rev
+sevii-islands	fireRed	Lost Cave	Cave Sea Incense	sevii-islands-lost-cave-csea
+sevii-islands	fireRed	Memorial Pillar	Main	sevii-islands-memorial-pillar
+sevii-islands	fireRed	Mt. Ember	Exterior Entrance	sevii-islands-mt-ember-exterior-entrance
+sevii-islands	fireRed	Mt. Ember	Exterior Summit	sevii-islands-mt-ember-exterior-summit
+sevii-islands	fireRed	Mt. Ember	Interior 1F	sevii-islands-mt-ember-interior-1f
+sevii-islands	fireRed	Mt. Ember	Interior 2F	sevii-islands-mt-ember-interior-2f
+sevii-islands	fireRed	Mt. Ember	Interior 3F	sevii-islands-mt-ember-interior-3f
+sevii-islands	fireRed	Mt. Ember	Ruby Path 1F	sevii-islands-mt-ember-ruby-path-1f
+sevii-islands	fireRed	Mt. Ember	Ruby Path B1F	sevii-islands-mt-ember-ruby-path-b1f
+sevii-islands	fireRed	Mt. Ember	Ruby Path B2F	sevii-islands-mt-ember-ruby-path-b2f
+sevii-islands	fireRed	Mt. Ember	Ruby Path B3F	sevii-islands-mt-ember-ruby-path-b3f
+sevii-islands	fireRed	Mt. Ember	Ruby Path B4F	sevii-islands-mt-ember-ruby-path-b4f
+sevii-islands	fireRed	Mt. Ember	Ruby Path B5F	sevii-islands-mt-ember-ruby-path-b5f
+sevii-islands	fireRed	Navel Rock	B1F	sevii-islands-navel-rock-b1f
+sevii-islands	fireRed	Navel Rock	Bottom	sevii-islands-navel-rock-bottom
+sevii-islands	fireRed	Navel Rock	Crossroad	sevii-islands-navel-rock-crossroad
+sevii-islands	fireRed	Navel Rock	Entrance	sevii-islands-navel-rock-entrance
+sevii-islands	fireRed	Navel Rock	Exterior	sevii-islands-navel-rock-exterior
+sevii-islands	fireRed	Navel Rock	Ladder Down	sevii-islands-navel-rock-ladder-down
+sevii-islands	fireRed	Navel Rock	Ladder Up	sevii-islands-navel-rock-ladder-up
+sevii-islands	fireRed	Navel Rock	Top	sevii-islands-navel-rock-top
+sevii-islands	fireRed	One Island	Main	sevii-islands-one-island
+sevii-islands	fireRed	Outcast Island	Main	sevii-islands-outcast-island
+sevii-islands	fireRed	Pattern Bush	Main	sevii-islands-pattern-bush
+sevii-islands	fireRed	Resort Gorgeous	Main	sevii-islands-resort-gorgeous
+sevii-islands	fireRed	Rocket Warehouse	Main	sevii-islands-rocket-warehouse
+sevii-islands	fireRed	Ruin Valley	Main	sevii-islands-ruin-valley
+sevii-islands	fireRed	Sevault Canyon	Main	sevii-islands-sevault-canyon
+sevii-islands	fireRed	Seven Island	Main	sevii-islands-seven-island
+sevii-islands	fireRed	Six Island	Main	sevii-islands-six-island
+sevii-islands	fireRed	Tanoby Key	Main	sevii-islands-tanoby-key
+sevii-islands	fireRed	Tanoby Ruins	Dilford Chamber	sevii-islands-tanoby-ruins-dilford-chamber
+sevii-islands	fireRed	Tanoby Ruins	Liptoo Chamber	sevii-islands-tanoby-ruins-liptoo-chamber
+sevii-islands	fireRed	Tanoby Ruins	Morean Chamber	sevii-islands-tanoby-ruins-morean-chamber
+sevii-islands	fireRed	Tanoby Ruins	Rixy Chamber	sevii-islands-tanoby-ruins-rixy-chamber
+sevii-islands	fireRed	Tanoby Ruins	Scufib Chamber	sevii-islands-tanoby-ruins-scufib-chamber
+sevii-islands	fireRed	Tanoby Ruins	Viapois Chamber	sevii-islands-tanoby-ruins-viapois-chamber
+sevii-islands	fireRed	Tanoby Ruins	Weepth Chamber	sevii-islands-tanoby-ruins-weepth-chamber
+sevii-islands	fireRed	Tanoby Ruins	Main	sevii-islands-tanoby-ruins
+sevii-islands	fireRed	Three Island	Main	sevii-islands-three-island
+sevii-islands	fireRed	Three Isle Path	Main	sevii-islands-three-isle-path
+sevii-islands	fireRed	Three Isle Port	Main	sevii-islands-three-isle-port
+sevii-islands	fireRed	Trainer Tower	1F	sevii-islands-trainer-tower-1f
+sevii-islands	fireRed	Trainer Tower	2F	sevii-islands-trainer-tower-2f
+sevii-islands	fireRed	Trainer Tower	3F	sevii-islands-trainer-tower-3f
+sevii-islands	fireRed	Trainer Tower	4F	sevii-islands-trainer-tower-4f
+sevii-islands	fireRed	Trainer Tower	5F	sevii-islands-trainer-tower-5f
+sevii-islands	fireRed	Trainer Tower	6F	sevii-islands-trainer-tower-6f
+sevii-islands	fireRed	Trainer Tower	7F	sevii-islands-trainer-tower-7f
+sevii-islands	fireRed	Trainer Tower	8F	sevii-islands-trainer-tower-8f
+sevii-islands	fireRed	Trainer Tower	Entrance	sevii-islands-trainer-tower-entrance
+sevii-islands	fireRed	Trainer Tower	Root	sevii-islands-trainer-tower-roof
+sevii-islands	fireRed	Trainer Tower	Main	sevii-islands-trainer-tower
+sevii-islands	fireRed	Treasure Beach	Main	sevii-islands-treasure-beach
+sevii-islands	fireRed	Two Island	Main	sevii-islands-two-island
+sevii-islands	fireRed	Water Labyrinth	Main	sevii-islands-water-labyrinth
+sevii-islands	fireRed	Water Path	Main	sevii-islands-water-path
+kanto	leafGreen	Celadon City	Main	kanto-celadon-city
+kanto	leafGreen	Cerulean Cave	1F	kanto-cerulean-cave-1f
+kanto	leafGreen	Cerulean Cave	2F	kanto-cerulean-cave-2f
+kanto	leafGreen	Cerulean Cave	B1F	kanto-cerulean-cave-b1f
+kanto	leafGreen	Cerulean City	Main	kanto-cerulean-city
+kanto	leafGreen	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	leafGreen	Diglett's Cave	1F	kanto-digletts-cave
+kanto	leafGreen	Fuchsia City	Main	kanto-fuchsia-city
+kanto	leafGreen	Indigo Plateau	Main	kanto-indigo-plateau
+kanto	leafGreen	Lavender Town	Main	kanto-lavender-town
+kanto	leafGreen	Mt. Moon	1F	kanto-mt-moon-1f
+kanto	leafGreen	Mt. Moon	B1F	kanto-mt-moon-b1f
+kanto	leafGreen	Mt. Moon	B2F	kanto-mt-moon-b2f
+kanto	leafGreen	Pallet Town	Main	kanto-pallet-town
+kanto	leafGreen	Pewter City	Main	kanto-pewter-city
+kanto	leafGreen	Pokémon Mansion	1F	kanto-pokemon-mansion-1f
+kanto	leafGreen	Pokémon Mansion	2F	kanto-pokemon-mansion-2f
+kanto	leafGreen	Pokémon Mansion	3F	kanto-pokemon-mansion-3f
+kanto	leafGreen	Pokémon Mansion	B1F	kanto-pokemon-mansion-b1f
+kanto	leafGreen	Pokémon Tower	1F	kanto-pokemon-tower-1f
+kanto	leafGreen	Pokémon Tower	2F	kanto-pokemon-tower-2f
+kanto	leafGreen	Pokémon Tower	3F	kanto-pokemon-tower-3f
+kanto	leafGreen	Pokémon Tower	4F	kanto-pokemon-tower-4f
+kanto	leafGreen	Pokémon Tower	5F	kanto-pokemon-tower-5f
+kanto	leafGreen	Pokémon Tower	6F	kanto-pokemon-tower-6f
+kanto	leafGreen	Pokémon Tower	7F	kanto-pokemon-tower-7f
+kanto	leafGreen	Power Plant	Main	kanto-power-plant
+kanto	leafGreen	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	leafGreen	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	leafGreen	Route 1	Main	kanto-route-1
+kanto	leafGreen	Route 10	Main	kanto-route-10
+kanto	leafGreen	Route 11	Main	kanto-route-11
+kanto	leafGreen	Route 12	Main	kanto-route-12
+kanto	leafGreen	Route 13	Main	kanto-route-13
+kanto	leafGreen	Route 14	Main	kanto-route-14
+kanto	leafGreen	Route 15	Main	kanto-route-15
+kanto	leafGreen	Route 16	Main	kanto-route-16
+kanto	leafGreen	Route 17	Main	kanto-route-17
+kanto	leafGreen	Route 18	Main	kanto-route-18
+kanto	leafGreen	Route 19	Main	kanto-route-19
+kanto	leafGreen	Route 2	Main	kanto-route-2
+kanto	leafGreen	Route 20	Main	kanto-route-20
+kanto	leafGreen	Route 21	Main	kanto-route-21
+kanto	leafGreen	Route 22	Main	kanto-route-22
+kanto	leafGreen	Route 23	Main	kanto-route-23
+kanto	leafGreen	Route 24	Main	kanto-route-24
+kanto	leafGreen	Route 25	Main	kanto-route-25
+kanto	leafGreen	Route 3	Main	kanto-route-3
+kanto	leafGreen	Route 4	Main	kanto-route-4
+kanto	leafGreen	Route 5	Main	kanto-route-5
+kanto	leafGreen	Route 6	Main	kanto-route-6
+kanto	leafGreen	Route 7	Main	kanto-route-7
+kanto	leafGreen	Route 8	Main	kanto-route-8
+kanto	leafGreen	Route 9	Main	kanto-route-9
+kanto	leafGreen	Safari Zone	East	kanto-safari-zone-area-1
+kanto	leafGreen	Safari Zone	North	kanto-safari-zone-area-2
+kanto	leafGreen	Safari Zone	West	kanto-safari-zone-area-3
+kanto	leafGreen	Safari Zone	Center	kanto-safari-zone-entrance
+kanto	leafGreen	Saffron City	Main	kanto-saffron-city
+kanto	leafGreen	Seafoam Islands	1F	kanto-seafoam-islands-1f
+kanto	leafGreen	Seafoam Islands	B1F	kanto-seafoam-islands-b1f
+kanto	leafGreen	Seafoam Islands	B2F	kanto-seafoam-islands-b2f
+kanto	leafGreen	Seafoam Islands	B3F	kanto-seafoam-islands-b3f
+kanto	leafGreen	Seafoam Islands	B4F	kanto-seafoam-islands-b4f
+kanto	leafGreen	Silph Co.	10F	kanto-silph-co-10f
+kanto	leafGreen	Silph Co.	11F	kanto-silph-co-11f
+kanto	leafGreen	Silph Co.	1F	kanto-silph-co-1f
+kanto	leafGreen	Silph Co.	2F	kanto-silph-co-2f
+kanto	leafGreen	Silph Co.	3F	kanto-silph-co-3f
+kanto	leafGreen	Silph Co.	4F	kanto-silph-co-4f
+kanto	leafGreen	Silph Co.	5F	kanto-silph-co-5f
+kanto	leafGreen	Silph Co.	6F	kanto-silph-co-6f
+kanto	leafGreen	Silph Co.	7F	kanto-silph-co-7f
+kanto	leafGreen	Silph Co.	8F	kanto-silph-co-8f
+kanto	leafGreen	Silph Co.	9F	kanto-silph-co-9f
+kanto	leafGreen	S.S. Anne	1F Rooms	kanto-ss-anne-1f-rooms
+kanto	leafGreen	S.S. Anne	1F	kanto-ss-anne-1f
+kanto	leafGreen	S.S. Anne	2F Rooms	kanto-ss-anne-2f-rooms
+kanto	leafGreen	S.S. Anne	2F	kanto-ss-anne-2f
+kanto	leafGreen	S.S. Anne	3F	kanto-ss-anne-3f
+kanto	leafGreen	S.S. Anne	B1F Rooms	kanto-ss-anne-b1f-rooms
+kanto	leafGreen	S.S. Anne	B1F	kanto-ss-anne-b1f
+kanto	leafGreen	Team Rocket Hideout	B1F	kanto-team-rocket-hideout-b1f
+kanto	leafGreen	Team Rocket Hideout	B2F	kanto-team-rocket-hideout-b2f
+kanto	leafGreen	Team Rocket Hideout	B3F	kanto-team-rocket-hideout-b3f
+kanto	leafGreen	Team Rocket Hideout	B4F	kanto-team-rocket-hideout-b4f
+kanto	leafGreen	Underground Path 5-6	Main	kanto-underground-path-5-6
+kanto	leafGreen	Underground Path 7-8	Main	kanto-underground-path-7-8
+kanto	leafGreen	Vermilion City	Main	kanto-vermilion-city
+kanto	leafGreen	Victory Road	1F	kanto-victory-road-1f
+kanto	leafGreen	Victory Road	2F	kanto-victory-road-2f
+kanto	leafGreen	Victory Road	3F	kanto-victory-road-3f
+kanto	leafGreen	Viridian City	Main	kanto-viridian-city
+kanto	leafGreen	Viridian Forest	Main	kanto-viridian-forest
+sevii-islands	leafGreen	Altering Cave	Main	sevii-islands-altering-cave
+sevii-islands	leafGreen	Berry Forest	Main	sevii-islands-berry-forest
+sevii-islands	leafGreen	Birth Island	Main	sevii-islands-birth-island
+sevii-islands	leafGreen	Bond Bridge	Main	sevii-islands-bond-bridge
+sevii-islands	leafGreen	Canyon Entrance	Main	sevii-islands-canyon-entrance
+sevii-islands	leafGreen	Cape Brink	Main	sevii-islands-cape-brink
+sevii-islands	leafGreen	Dotted Hole	B1F	sevii-islands-dotted-hole-b1f
+sevii-islands	leafGreen	Dotted Hole	B2F	sevii-islands-dotted-hole-b2f
+sevii-islands	leafGreen	Dotted Hole	B3F	sevii-islands-dotted-hole-b3f
+sevii-islands	leafGreen	Dotted Hole	B4F	sevii-islands-dotted-hole-b4f
+sevii-islands	leafGreen	Dotted Hole	Ground Floor	sevii-islands-dotted-hole-ground-floor
+sevii-islands	leafGreen	Dotted Hole	Sapphire Room	sevii-islands-dotted-hole-sapphire-room
+sevii-islands	leafGreen	Five Island	Main	sevii-islands-five-island
+sevii-islands	leafGreen	Five Isle Meadow	Main	sevii-islands-five-isle-meadow
+sevii-islands	leafGreen	Four Island	Main	sevii-islands-four-island
+sevii-islands	leafGreen	Green Path	Main	sevii-islands-green-path
+sevii-islands	leafGreen	Icefall Cave	1F	sevii-islands-icefall-cave-1f
+sevii-islands	leafGreen	Icefall Cave	B1F	sevii-islands-icefall-cave-b1f
+sevii-islands	leafGreen	Icefall Cave	Back Cave	sevii-islands-icefall-cave-back-cave
+sevii-islands	leafGreen	Icefall Cave	Entrance	sevii-islands-icefall-cave-entrance
+sevii-islands	leafGreen	Kindle Road	Main	sevii-islands-kindle-road
+sevii-islands	leafGreen	Lost Cave	1F	sevii-islands-lost-cave-1f
+sevii-islands	leafGreen	Lost Cave	Cave Rare Candy	sevii-islands-lost-cave-c-rare-candy
+sevii-islands	leafGreen	Lost Cave	Cave 1	sevii-islands-lost-cave-c1
+sevii-islands	leafGreen	Lost Cave	Cave 10	sevii-islands-lost-cave-c10
+sevii-islands	leafGreen	Lost Cave	Cave 2	sevii-islands-lost-cave-c2
+sevii-islands	leafGreen	Lost Cave	Cave 3	sevii-islands-lost-cave-c3
+sevii-islands	leafGreen	Lost Cave	Cave 4	sevii-islands-lost-cave-c4
+sevii-islands	leafGreen	Lost Cave	Cave 5	sevii-islands-lost-cave-c5
+sevii-islands	leafGreen	Lost Cave	Cave 6	sevii-islands-lost-cave-c6
+sevii-islands	leafGreen	Lost Cave	Cave 7	sevii-islands-lost-cave-c7
+sevii-islands	leafGreen	Lost Cave	Cave 8	sevii-islands-lost-cave-c8
+sevii-islands	leafGreen	Lost Cave	Cave 9	sevii-islands-lost-cave-c9
+sevii-islands	leafGreen	Lost Cave	Cave Lax Incense	sevii-islands-lost-cave-clax
+sevii-islands	leafGreen	Lost Cave	Cave Max Revive	sevii-islands-lost-cave-cmax-rev
+sevii-islands	leafGreen	Lost Cave	Cave Sea Incense	sevii-islands-lost-cave-csea
+sevii-islands	leafGreen	Memorial Pillar	Main	sevii-islands-memorial-pillar
+sevii-islands	leafGreen	Mt. Ember	Exterior Entrance	sevii-islands-mt-ember-exterior-entrance
+sevii-islands	leafGreen	Mt. Ember	Exterior Summit	sevii-islands-mt-ember-exterior-summit
+sevii-islands	leafGreen	Mt. Ember	Interior 1F	sevii-islands-mt-ember-interior-1f
+sevii-islands	leafGreen	Mt. Ember	Interior 2F	sevii-islands-mt-ember-interior-2f
+sevii-islands	leafGreen	Mt. Ember	Interior 3F	sevii-islands-mt-ember-interior-3f
+sevii-islands	leafGreen	Mt. Ember	Ruby Path 1F	sevii-islands-mt-ember-ruby-path-1f
+sevii-islands	leafGreen	Mt. Ember	Ruby Path B1F	sevii-islands-mt-ember-ruby-path-b1f
+sevii-islands	leafGreen	Mt. Ember	Ruby Path B2F	sevii-islands-mt-ember-ruby-path-b2f
+sevii-islands	leafGreen	Mt. Ember	Ruby Path B3F	sevii-islands-mt-ember-ruby-path-b3f
+sevii-islands	leafGreen	Mt. Ember	Ruby Path B4F	sevii-islands-mt-ember-ruby-path-b4f
+sevii-islands	leafGreen	Mt. Ember	Ruby Path B5F	sevii-islands-mt-ember-ruby-path-b5f
+sevii-islands	leafGreen	Navel Rock	B1F	sevii-islands-navel-rock-b1f
+sevii-islands	leafGreen	Navel Rock	Bottom	sevii-islands-navel-rock-bottom
+sevii-islands	leafGreen	Navel Rock	Crossroad	sevii-islands-navel-rock-crossroad
+sevii-islands	leafGreen	Navel Rock	Entrance	sevii-islands-navel-rock-entrance
+sevii-islands	leafGreen	Navel Rock	Exterior	sevii-islands-navel-rock-exterior
+sevii-islands	leafGreen	Navel Rock	Ladder Down	sevii-islands-navel-rock-ladder-down
+sevii-islands	leafGreen	Navel Rock	Ladder Up	sevii-islands-navel-rock-ladder-up
+sevii-islands	leafGreen	Navel Rock	Top	sevii-islands-navel-rock-top
+sevii-islands	leafGreen	One Island	Main	sevii-islands-one-island
+sevii-islands	leafGreen	Outcast Island	Main	sevii-islands-outcast-island
+sevii-islands	leafGreen	Pattern Bush	Main	sevii-islands-pattern-bush
+sevii-islands	leafGreen	Resort Gorgeous	Main	sevii-islands-resort-gorgeous
+sevii-islands	leafGreen	Rocket Warehouse	Main	sevii-islands-rocket-warehouse
+sevii-islands	leafGreen	Ruin Valley	Main	sevii-islands-ruin-valley
+sevii-islands	leafGreen	Sevault Canyon	Main	sevii-islands-sevault-canyon
+sevii-islands	leafGreen	Seven Island	Main	sevii-islands-seven-island
+sevii-islands	leafGreen	Six Island	Main	sevii-islands-six-island
+sevii-islands	leafGreen	Tanoby Key	Main	sevii-islands-tanoby-key
+sevii-islands	leafGreen	Tanoby Ruins	Dilford Chamber	sevii-islands-tanoby-ruins-dilford-chamber
+sevii-islands	leafGreen	Tanoby Ruins	Liptoo Chamber	sevii-islands-tanoby-ruins-liptoo-chamber
+sevii-islands	leafGreen	Tanoby Ruins	Morean Chamber	sevii-islands-tanoby-ruins-morean-chamber
+sevii-islands	leafGreen	Tanoby Ruins	Rixy Chamber	sevii-islands-tanoby-ruins-rixy-chamber
+sevii-islands	leafGreen	Tanoby Ruins	Scufib Chamber	sevii-islands-tanoby-ruins-scufib-chamber
+sevii-islands	leafGreen	Tanoby Ruins	Viapois Chamber	sevii-islands-tanoby-ruins-viapois-chamber
+sevii-islands	leafGreen	Tanoby Ruins	Weepth Chamber	sevii-islands-tanoby-ruins-weepth-chamber
+sevii-islands	leafGreen	Tanoby Ruins	Main	sevii-islands-tanoby-ruins
+sevii-islands	leafGreen	Three Island	Main	sevii-islands-three-island
+sevii-islands	leafGreen	Three Isle Path	Main	sevii-islands-three-isle-path
+sevii-islands	leafGreen	Three Isle Port	Main	sevii-islands-three-isle-port
+sevii-islands	leafGreen	Trainer Tower	1F	sevii-islands-trainer-tower-1f
+sevii-islands	leafGreen	Trainer Tower	2F	sevii-islands-trainer-tower-2f
+sevii-islands	leafGreen	Trainer Tower	3F	sevii-islands-trainer-tower-3f
+sevii-islands	leafGreen	Trainer Tower	4F	sevii-islands-trainer-tower-4f
+sevii-islands	leafGreen	Trainer Tower	5F	sevii-islands-trainer-tower-5f
+sevii-islands	leafGreen	Trainer Tower	6F	sevii-islands-trainer-tower-6f
+sevii-islands	leafGreen	Trainer Tower	7F	sevii-islands-trainer-tower-7f
+sevii-islands	leafGreen	Trainer Tower	8F	sevii-islands-trainer-tower-8f
+sevii-islands	leafGreen	Trainer Tower	Entrance	sevii-islands-trainer-tower-entrance
+sevii-islands	leafGreen	Trainer Tower	Root	sevii-islands-trainer-tower-roof
+sevii-islands	leafGreen	Trainer Tower	Main	sevii-islands-trainer-tower
+sevii-islands	leafGreen	Treasure Beach	Main	sevii-islands-treasure-beach
+sevii-islands	leafGreen	Two Island	Main	sevii-islands-two-island
+sevii-islands	leafGreen	Water Labyrinth	Main	sevii-islands-water-labyrinth
+sevii-islands	leafGreen	Water Path	Main	sevii-islands-water-path
+sinnoh	diamond	Acuity Lakefront	Main	sinnoh-acuity-lakefront
+sinnoh	diamond	Amity Square	Main	sinnoh-amity-square
+sinnoh	diamond	Canalave City	Main	sinnoh-canalave-city
+sinnoh	diamond	Celestic Town	Main	sinnoh-celestic-town
+sinnoh	diamond	Eterna City	Main	sinnoh-eterna-city
+sinnoh	diamond	Eterna Forest	Exterior	sinnoh-eterna-forest-exterior
+sinnoh	diamond	Eterna Forest	Interior	sinnoh-eterna-forest-interior
+sinnoh	diamond	Fight Area	Main	sinnoh-fight-area
+sinnoh	diamond	Floaroma Meadow	Main	sinnoh-floaroma-meadow
+sinnoh	diamond	Floaroma Town	Main	sinnoh-floaroma-town
+sinnoh	diamond	Flower Paradise	Main	sinnoh-flower-paradise
+sinnoh	diamond	Fuego Ironworks	Exterior	sinnoh-fuego-ironworks-exterior
+sinnoh	diamond	Fuego Ironworks	Interior	sinnoh-fuego-ironworks-interior
+sinnoh	diamond	Fullmoon Island	Exterior	sinnoh-fullmoon-island-exterior
+sinnoh	diamond	Fullmoon Island	Interior	sinnoh-fullmoon-island-interior
+sinnoh	diamond	Great Marsh	Entrance 1F	sinnoh-great-marsh-entrance-1f
+sinnoh	diamond	Great Marsh	Entrance 2F	sinnoh-great-marsh-entrance-2f
+sinnoh	diamond	Great Marsh	Marsh	sinnoh-great-marsh-marsh
+sinnoh	diamond	Hall of Origin	Main	sinnoh-hall-of-origin
+sinnoh	diamond	Hearthome City	Main	sinnoh-hearthome-city
+sinnoh	diamond	Iron Island	1F	sinnoh-iron-island-1f
+sinnoh	diamond	Iron Island	B1F 1	sinnoh-iron-island-b1f-1
+sinnoh	diamond	Iron Island	B1F 2	sinnoh-iron-island-b1f-2
+sinnoh	diamond	Iron Island	B2F 1	sinnoh-iron-island-b2f-1
+sinnoh	diamond	Iron Island	B2F 2	sinnoh-iron-island-b2f-2
+sinnoh	diamond	Iron Island	B3F	sinnoh-iron-island-b3f
+sinnoh	diamond	Iron Island	Exterior	sinnoh-iron-island-exterior
+sinnoh	diamond	Jubilife City	Main	sinnoh-jubilife-city
+sinnoh	diamond	Lake Acuity	Cavern	sinnoh-lake-acuity-cavern
+sinnoh	diamond	Lake Acuity	Main	sinnoh-lake-acuity-lake
+sinnoh	diamond	Lake Valor	Cavern	sinnoh-lake-valor-cavern
+sinnoh	diamond	Lake Valor	Dry Lake	sinnoh-lake-valor-dry-lake
+sinnoh	diamond	Lake Valor	Lake	sinnoh-lake-valor-lake
+sinnoh	diamond	Lake Verity	Cavern	sinnoh-lake-verity-cavern
+sinnoh	diamond	Lake Verity	Lake Low	sinnoh-lake-verity-lake-low
+sinnoh	diamond	Lake Verity	Lake Low with Cavern	sinnoh-lake-verity-lake-with-cavern
+sinnoh	diamond	Lost Tower	1F	sinnoh-lost-tower-1f
+sinnoh	diamond	Lost Tower	2F	sinnoh-lost-tower-2f
+sinnoh	diamond	Lost Tower	3F	sinnoh-lost-tower-3f
+sinnoh	diamond	Lost Tower	4F	sinnoh-lost-tower-4f
+sinnoh	diamond	Lost Tower	5F	sinnoh-lost-tower-5f
+sinnoh	diamond	Maniac Tunnel	First Stage	sinnoh-maniac-tunnel-first-stage
+sinnoh	diamond	Maniac Tunnel	Second Stage	sinnoh-maniac-tunnel-second-stage
+sinnoh	diamond	Maniac Tunnel	Third Stage	sinnoh-maniac-tunnel-third-stage
+sinnoh	diamond	Mt. Coronet	1F 1	sinnoh-mt-coronet-1f-1
+sinnoh	diamond	Mt. Coronet	1F 2	sinnoh-mt-coronet-1f-2
+sinnoh	diamond	Mt. Coronet	2F	sinnoh-mt-coronet-2f
+sinnoh	diamond	Mt. Coronet	3F	sinnoh-mt-coronet-3f
+sinnoh	diamond	Mt. Coronet	4F 1	sinnoh-mt-coronet-4f-1
+sinnoh	diamond	Mt. Coronet	4F 2	sinnoh-mt-coronet-4f-2
+sinnoh	diamond	Mt. Coronet	4F 3	sinnoh-mt-coronet-4f-3
+sinnoh	diamond	Mt. Coronet	5F	sinnoh-mt-coronet-5f
+sinnoh	diamond	Mt. Coronet	6F	sinnoh-mt-coronet-6f
+sinnoh	diamond	Mt. Coronet	Peak	sinnoh-mt-coronet-peak
+sinnoh	diamond	Mt. Coronet	Upper 1F 1	sinnoh-mt-coronet-upper-1f-1
+sinnoh	diamond	Mt. Coronet	Upper 1F 2	sinnoh-mt-coronet-upper-1f-2
+sinnoh	diamond	Mt. Coronet	Upper 1F 3	sinnoh-mt-coronet-upper-1f-3
+sinnoh	diamond	Mt. Coronet	B1F	sinnoh-mt-coronet-upper-b1f
+sinnoh	diamond	Newmoon Island	Exterior	sinnoh-newmoon-island-exterior
+sinnoh	diamond	Newmoon Island	Interior	sinnoh-newmoon-island-interior
+sinnoh	diamond	Old Chateau	1F Dining Room	sinnoh-old-chateau-1f-dining-room
+sinnoh	diamond	Old Chateau	1F	sinnoh-old-chateau-1f
+sinnoh	diamond	Old Chateau	2F	sinnoh-old-chateau-2f
+sinnoh	diamond	Oreburgh City	Main	sinnoh-oreburgh-city
+sinnoh	diamond	Oreburgh Gate	Gate 1F	sinnoh-oreburgh-gate-1f
+sinnoh	diamond	Oreburgh Gate	Gate B1F	sinnoh-oreburgh-gate-b1f
+sinnoh	diamond	Oreburgh Mine	Mine B1F	sinnoh-oreburgh-mine-b1f
+sinnoh	diamond	Oreburgh Mine	Mine B2F	sinnoh-oreburgh-mine-b2f
+sinnoh	diamond	Pal Park	Main	sinnoh-pal-park
+sinnoh	diamond	Pastoria City	Main	sinnoh-pastoria-city
+sinnoh	diamond	Pokémon League	Main	sinnoh-pokemon-league
+sinnoh	diamond	Pokémon Mansion	Main	sinnoh-pokemon-mansion
+sinnoh	diamond	Ravaged Path	Main	sinnoh-ravaged-path
+sinnoh	diamond	Resort Area	Main	sinnoh-resort-area
+sinnoh	diamond	Route 201	Main	sinnoh-route-201
+sinnoh	diamond	Route 202	Main	sinnoh-route-202
+sinnoh	diamond	Route 203	Main	sinnoh-route-203
+sinnoh	diamond	Route 204	Main	sinnoh-route-204
+sinnoh	diamond	Route 205	Main	sinnoh-route-205
+sinnoh	diamond	Route 206	Main	sinnoh-route-206
+sinnoh	diamond	Route 207	Main	sinnoh-route-207
+sinnoh	diamond	Route 208	Main	sinnoh-route-208
+sinnoh	diamond	Route 209	Main	sinnoh-route-209
+sinnoh	diamond	Route 210	Main	sinnoh-route-210
+sinnoh	diamond	Route 211	Main	sinnoh-route-211
+sinnoh	diamond	Route 212	Main	sinnoh-route-212
+sinnoh	diamond	Route 213	Main	sinnoh-route-213
+sinnoh	diamond	Route 214	Main	sinnoh-route-214
+sinnoh	diamond	Route 215	Main	sinnoh-route-215
+sinnoh	diamond	Route 216	Main	sinnoh-route-216
+sinnoh	diamond	Route 217	Main	sinnoh-route-217
+sinnoh	diamond	Route 218	Main	sinnoh-route-218
+sinnoh	diamond	Route 219	Main	sinnoh-route-219
+sinnoh	diamond	Route 220	Main	sinnoh-route-220
+sinnoh	diamond	Route 221	Main	sinnoh-route-221
+sinnoh	diamond	Route 222	Main	sinnoh-route-222
+sinnoh	diamond	Route 223	Main	sinnoh-route-223
+sinnoh	diamond	Route 224	Main	sinnoh-route-224
+sinnoh	diamond	Route 225	Main	sinnoh-route-225
+sinnoh	diamond	Route 226	Main	sinnoh-route-226
+sinnoh	diamond	Route 227	Main	sinnoh-route-227
+sinnoh	diamond	Route 228	Main	sinnoh-route-228
+sinnoh	diamond	Route 229	Main	sinnoh-route-229
+sinnoh	diamond	Route 230	Main	sinnoh-route-230
+sinnoh	diamond	Sandgem Town	Main	sinnoh-sandgem-town
+sinnoh	diamond	Seabreak Path	Main	sinnoh-seabreak-path
+sinnoh	diamond	Sendoff Spring	Main	sinnoh-sendoff-spring
+sinnoh	diamond	Snowpoint City	Main	sinnoh-snowpoint-city
+sinnoh	diamond	Snowpoint Temple	1F	sinnoh-snowpoint-temple-1f
+sinnoh	diamond	Snowpoint Temple	B1F	sinnoh-snowpoint-temple-b1f
+sinnoh	diamond	Snowpoint Temple	B2F	sinnoh-snowpoint-temple-b2f
+sinnoh	diamond	Snowpoint Temple	B3F	sinnoh-snowpoint-temple-b3f
+sinnoh	diamond	Snowpoint Temple	B4F	sinnoh-snowpoint-temple-b4f
+sinnoh	diamond	Snowpoint Temple	B5F	sinnoh-snowpoint-temple-b5f
+sinnoh	diamond	Solaceon Ruins	1F	sinnoh-solaceon-ruins-1f
+sinnoh	diamond	Solaceon Ruins	2F	sinnoh-solaceon-ruins-2f
+sinnoh	diamond	Solaceon Ruins	B1F	sinnoh-solaceon-ruins-b1f
+sinnoh	diamond	Solaceon Ruins	B2F	sinnoh-solaceon-ruins-b2f
+sinnoh	diamond	Solaceon Ruins	B3F	sinnoh-solaceon-ruins-b3f
+sinnoh	diamond	Solaceon Ruins	B4F	sinnoh-solaceon-ruins-b4f
+sinnoh	diamond	Solaceon Town	Main	sinnoh-solaceon-town
+sinnoh	diamond	Spear Pillar	Main	sinnoh-spear-pillar
+sinnoh	diamond	Spring Path	Main	sinnoh-spring-path
+sinnoh	diamond	Stark Mountain	Exterior	sinnoh-stark-mountain-exterior
+sinnoh	diamond	Stark Mountain	Interior 1	sinnoh-stark-mountain-interior-1
+sinnoh	diamond	Stark Mountain	Interior 2	sinnoh-stark-mountain-interior-2
+sinnoh	diamond	Stark Mountain	Interior 3	sinnoh-stark-mountain-interior-3
+sinnoh	diamond	Sunyshore City	Main	sinnoh-sunyshore-city
+sinnoh	diamond	Survival Area	Main	sinnoh-survival-area
+sinnoh	diamond	Trophy Garden	Main	sinnoh-trophy-garden
+sinnoh	diamond	Turnback Cave	Entrance	sinnoh-turnback-cave-entrance
+sinnoh	diamond	Turnback Cave	Giratina's Room	sinnoh-turnback-cave-giratinas-room
+sinnoh	diamond	Turnback Cave	No Pillar Random Rooms	sinnoh-turnback-cave-no-pillar-random-rooms
+sinnoh	diamond	Turnback Cave	One Pillar Random Rooms	sinnoh-turnback-cave-one-pillar-random-rooms
+sinnoh	diamond	Turnback Cave	Pillar Room	sinnoh-turnback-cave-pillar-room
+sinnoh	diamond	Turnback Cave	Two Pillars Random Rooms	sinnoh-turnback-cave-two-pillars-random-rooms
+sinnoh	diamond	Twinleaf Town	Main	sinnoh-twinleaf-town
+sinnoh	diamond	Valley Windworks	Main	sinnoh-valley-windworks
+sinnoh	diamond	Valor Lakefront	Main	sinnoh-valor-lakefront
+sinnoh	diamond	Veilstone City	Main	sinnoh-veilstone-city
+sinnoh	diamond	Victory Road	1F Back 1	sinnoh-victory-road-1f-back-1
+sinnoh	diamond	Victory Road	1F Back 2	sinnoh-victory-road-1f-back-2
+sinnoh	diamond	Victory Road	1F Back 3	sinnoh-victory-road-1f-back-3
+sinnoh	diamond	Victory Road	1F	sinnoh-victory-road-1f
+sinnoh	diamond	Victory Road	2F	sinnoh-victory-road-2f
+sinnoh	diamond	Victory Road	B1F	sinnoh-victory-road-b1f
+sinnoh	diamond	Wayward Cave	1F	sinnoh-wayward-cave-1f
+sinnoh	diamond	Wayward Cave	B1F	sinnoh-wayward-cave-b1f
+sinnoh	pearl	Acuity Lakefront	Main	sinnoh-acuity-lakefront
+sinnoh	pearl	Amity Square	Main	sinnoh-amity-square
+sinnoh	pearl	Canalave City	Main	sinnoh-canalave-city
+sinnoh	pearl	Celestic Town	Main	sinnoh-celestic-town
+sinnoh	pearl	Eterna City	Main	sinnoh-eterna-city
+sinnoh	pearl	Eterna Forest	Exterior	sinnoh-eterna-forest-exterior
+sinnoh	pearl	Eterna Forest	Interior	sinnoh-eterna-forest-interior
+sinnoh	pearl	Fight Area	Main	sinnoh-fight-area
+sinnoh	pearl	Floaroma Meadow	Main	sinnoh-floaroma-meadow
+sinnoh	pearl	Floaroma Town	Main	sinnoh-floaroma-town
+sinnoh	pearl	Flower Paradise	Main	sinnoh-flower-paradise
+sinnoh	pearl	Fuego Ironworks	Exterior	sinnoh-fuego-ironworks-exterior
+sinnoh	pearl	Fuego Ironworks	Interior	sinnoh-fuego-ironworks-interior
+sinnoh	pearl	Fullmoon Island	Exterior	sinnoh-fullmoon-island-exterior
+sinnoh	pearl	Fullmoon Island	Interior	sinnoh-fullmoon-island-interior
+sinnoh	pearl	Great Marsh	Entrance 1F	sinnoh-great-marsh-entrance-1f
+sinnoh	pearl	Great Marsh	Entrance 2F	sinnoh-great-marsh-entrance-2f
+sinnoh	pearl	Great Marsh	Marsh	sinnoh-great-marsh-marsh
+sinnoh	pearl	Hall of Origin	Main	sinnoh-hall-of-origin
+sinnoh	pearl	Hearthome City	Main	sinnoh-hearthome-city
+sinnoh	pearl	Iron Island	1F	sinnoh-iron-island-1f
+sinnoh	pearl	Iron Island	B1F 1	sinnoh-iron-island-b1f-1
+sinnoh	pearl	Iron Island	B1F 2	sinnoh-iron-island-b1f-2
+sinnoh	pearl	Iron Island	B2F 1	sinnoh-iron-island-b2f-1
+sinnoh	pearl	Iron Island	B2F 2	sinnoh-iron-island-b2f-2
+sinnoh	pearl	Iron Island	B3F	sinnoh-iron-island-b3f
+sinnoh	pearl	Iron Island	Exterior	sinnoh-iron-island-exterior
+sinnoh	pearl	Jubilife City	Main	sinnoh-jubilife-city
+sinnoh	pearl	Lake Acuity	Cavern	sinnoh-lake-acuity-cavern
+sinnoh	pearl	Lake Acuity	Main	sinnoh-lake-acuity-lake
+sinnoh	pearl	Lake Valor	Cavern	sinnoh-lake-valor-cavern
+sinnoh	pearl	Lake Valor	Dry Lake	sinnoh-lake-valor-dry-lake
+sinnoh	pearl	Lake Valor	Lake	sinnoh-lake-valor-lake
+sinnoh	pearl	Lake Verity	Cavern	sinnoh-lake-verity-cavern
+sinnoh	pearl	Lake Verity	Lake Low	sinnoh-lake-verity-lake-low
+sinnoh	pearl	Lake Verity	Lake Low with Cavern	sinnoh-lake-verity-lake-with-cavern
+sinnoh	pearl	Lost Tower	1F	sinnoh-lost-tower-1f
+sinnoh	pearl	Lost Tower	2F	sinnoh-lost-tower-2f
+sinnoh	pearl	Lost Tower	3F	sinnoh-lost-tower-3f
+sinnoh	pearl	Lost Tower	4F	sinnoh-lost-tower-4f
+sinnoh	pearl	Lost Tower	5F	sinnoh-lost-tower-5f
+sinnoh	pearl	Maniac Tunnel	First Stage	sinnoh-maniac-tunnel-first-stage
+sinnoh	pearl	Maniac Tunnel	Second Stage	sinnoh-maniac-tunnel-second-stage
+sinnoh	pearl	Maniac Tunnel	Third Stage	sinnoh-maniac-tunnel-third-stage
+sinnoh	pearl	Mt. Coronet	1F 1	sinnoh-mt-coronet-1f-1
+sinnoh	pearl	Mt. Coronet	1F 2	sinnoh-mt-coronet-1f-2
+sinnoh	pearl	Mt. Coronet	2F	sinnoh-mt-coronet-2f
+sinnoh	pearl	Mt. Coronet	3F	sinnoh-mt-coronet-3f
+sinnoh	pearl	Mt. Coronet	4F 1	sinnoh-mt-coronet-4f-1
+sinnoh	pearl	Mt. Coronet	4F 2	sinnoh-mt-coronet-4f-2
+sinnoh	pearl	Mt. Coronet	4F 3	sinnoh-mt-coronet-4f-3
+sinnoh	pearl	Mt. Coronet	5F	sinnoh-mt-coronet-5f
+sinnoh	pearl	Mt. Coronet	6F	sinnoh-mt-coronet-6f
+sinnoh	pearl	Mt. Coronet	Peak	sinnoh-mt-coronet-peak
+sinnoh	pearl	Mt. Coronet	Upper 1F 1	sinnoh-mt-coronet-upper-1f-1
+sinnoh	pearl	Mt. Coronet	Upper 1F 2	sinnoh-mt-coronet-upper-1f-2
+sinnoh	pearl	Mt. Coronet	Upper 1F 3	sinnoh-mt-coronet-upper-1f-3
+sinnoh	pearl	Mt. Coronet	B1F	sinnoh-mt-coronet-upper-b1f
+sinnoh	pearl	Newmoon Island	Exterior	sinnoh-newmoon-island-exterior
+sinnoh	pearl	Newmoon Island	Interior	sinnoh-newmoon-island-interior
+sinnoh	pearl	Old Chateau	1F Dining Room	sinnoh-old-chateau-1f-dining-room
+sinnoh	pearl	Old Chateau	1F	sinnoh-old-chateau-1f
+sinnoh	pearl	Old Chateau	2F	sinnoh-old-chateau-2f
+sinnoh	pearl	Oreburgh City	Main	sinnoh-oreburgh-city
+sinnoh	pearl	Oreburgh Gate	Gate 1F	sinnoh-oreburgh-gate-1f
+sinnoh	pearl	Oreburgh Gate	Gate B1F	sinnoh-oreburgh-gate-b1f
+sinnoh	pearl	Oreburgh Mine	Mine B1F	sinnoh-oreburgh-mine-b1f
+sinnoh	pearl	Oreburgh Mine	Mine B2F	sinnoh-oreburgh-mine-b2f
+sinnoh	pearl	Pal Park	Main	sinnoh-pal-park
+sinnoh	pearl	Pastoria City	Main	sinnoh-pastoria-city
+sinnoh	pearl	Pokémon League	Main	sinnoh-pokemon-league
+sinnoh	pearl	Pokémon Mansion	Main	sinnoh-pokemon-mansion
+sinnoh	pearl	Ravaged Path	Main	sinnoh-ravaged-path
+sinnoh	pearl	Resort Area	Main	sinnoh-resort-area
+sinnoh	pearl	Route 201	Main	sinnoh-route-201
+sinnoh	pearl	Route 202	Main	sinnoh-route-202
+sinnoh	pearl	Route 203	Main	sinnoh-route-203
+sinnoh	pearl	Route 204	Main	sinnoh-route-204
+sinnoh	pearl	Route 205	Main	sinnoh-route-205
+sinnoh	pearl	Route 206	Main	sinnoh-route-206
+sinnoh	pearl	Route 207	Main	sinnoh-route-207
+sinnoh	pearl	Route 208	Main	sinnoh-route-208
+sinnoh	pearl	Route 209	Main	sinnoh-route-209
+sinnoh	pearl	Route 210	Main	sinnoh-route-210
+sinnoh	pearl	Route 211	Main	sinnoh-route-211
+sinnoh	pearl	Route 212	Main	sinnoh-route-212
+sinnoh	pearl	Route 213	Main	sinnoh-route-213
+sinnoh	pearl	Route 214	Main	sinnoh-route-214
+sinnoh	pearl	Route 215	Main	sinnoh-route-215
+sinnoh	pearl	Route 216	Main	sinnoh-route-216
+sinnoh	pearl	Route 217	Main	sinnoh-route-217
+sinnoh	pearl	Route 218	Main	sinnoh-route-218
+sinnoh	pearl	Route 219	Main	sinnoh-route-219
+sinnoh	pearl	Route 220	Main	sinnoh-route-220
+sinnoh	pearl	Route 221	Main	sinnoh-route-221
+sinnoh	pearl	Route 222	Main	sinnoh-route-222
+sinnoh	pearl	Route 223	Main	sinnoh-route-223
+sinnoh	pearl	Route 224	Main	sinnoh-route-224
+sinnoh	pearl	Route 225	Main	sinnoh-route-225
+sinnoh	pearl	Route 226	Main	sinnoh-route-226
+sinnoh	pearl	Route 227	Main	sinnoh-route-227
+sinnoh	pearl	Route 228	Main	sinnoh-route-228
+sinnoh	pearl	Route 229	Main	sinnoh-route-229
+sinnoh	pearl	Route 230	Main	sinnoh-route-230
+sinnoh	pearl	Sandgem Town	Main	sinnoh-sandgem-town
+sinnoh	pearl	Seabreak Path	Main	sinnoh-seabreak-path
+sinnoh	pearl	Sendoff Spring	Main	sinnoh-sendoff-spring
+sinnoh	pearl	Snowpoint City	Main	sinnoh-snowpoint-city
+sinnoh	pearl	Snowpoint Temple	1F	sinnoh-snowpoint-temple-1f
+sinnoh	pearl	Snowpoint Temple	B1F	sinnoh-snowpoint-temple-b1f
+sinnoh	pearl	Snowpoint Temple	B2F	sinnoh-snowpoint-temple-b2f
+sinnoh	pearl	Snowpoint Temple	B3F	sinnoh-snowpoint-temple-b3f
+sinnoh	pearl	Snowpoint Temple	B4F	sinnoh-snowpoint-temple-b4f
+sinnoh	pearl	Snowpoint Temple	B5F	sinnoh-snowpoint-temple-b5f
+sinnoh	pearl	Solaceon Ruins	1F	sinnoh-solaceon-ruins-1f
+sinnoh	pearl	Solaceon Ruins	2F	sinnoh-solaceon-ruins-2f
+sinnoh	pearl	Solaceon Ruins	B1F	sinnoh-solaceon-ruins-b1f
+sinnoh	pearl	Solaceon Ruins	B2F	sinnoh-solaceon-ruins-b2f
+sinnoh	pearl	Solaceon Ruins	B3F	sinnoh-solaceon-ruins-b3f
+sinnoh	pearl	Solaceon Ruins	B4F	sinnoh-solaceon-ruins-b4f
+sinnoh	pearl	Solaceon Town	Main	sinnoh-solaceon-town
+sinnoh	pearl	Spear Pillar	Main	sinnoh-spear-pillar
+sinnoh	pearl	Spring Path	Main	sinnoh-spring-path
+sinnoh	pearl	Stark Mountain	Exterior	sinnoh-stark-mountain-exterior
+sinnoh	pearl	Stark Mountain	Interior 1	sinnoh-stark-mountain-interior-1
+sinnoh	pearl	Stark Mountain	Interior 2	sinnoh-stark-mountain-interior-2
+sinnoh	pearl	Stark Mountain	Interior 3	sinnoh-stark-mountain-interior-3
+sinnoh	pearl	Sunyshore City	Main	sinnoh-sunyshore-city
+sinnoh	pearl	Survival Area	Main	sinnoh-survival-area
+sinnoh	pearl	Trophy Garden	Main	sinnoh-trophy-garden
+sinnoh	pearl	Turnback Cave	Entrance	sinnoh-turnback-cave-entrance
+sinnoh	pearl	Turnback Cave	Giratina's Room	sinnoh-turnback-cave-giratinas-room
+sinnoh	pearl	Turnback Cave	No Pillar Random Rooms	sinnoh-turnback-cave-no-pillar-random-rooms
+sinnoh	pearl	Turnback Cave	One Pillar Random Rooms	sinnoh-turnback-cave-one-pillar-random-rooms
+sinnoh	pearl	Turnback Cave	Pillar Room	sinnoh-turnback-cave-pillar-room
+sinnoh	pearl	Turnback Cave	Two Pillars Random Rooms	sinnoh-turnback-cave-two-pillars-random-rooms
+sinnoh	pearl	Twinleaf Town	Main	sinnoh-twinleaf-town
+sinnoh	pearl	Valley Windworks	Main	sinnoh-valley-windworks
+sinnoh	pearl	Valor Lakefront	Main	sinnoh-valor-lakefront
+sinnoh	pearl	Veilstone City	Main	sinnoh-veilstone-city
+sinnoh	pearl	Victory Road	1F Back 1	sinnoh-victory-road-1f-back-1
+sinnoh	pearl	Victory Road	1F Back 2	sinnoh-victory-road-1f-back-2
+sinnoh	pearl	Victory Road	1F Back 3	sinnoh-victory-road-1f-back-3
+sinnoh	pearl	Victory Road	1F	sinnoh-victory-road-1f
+sinnoh	pearl	Victory Road	2F	sinnoh-victory-road-2f
+sinnoh	pearl	Victory Road	B1F	sinnoh-victory-road-b1f
+sinnoh	pearl	Wayward Cave	1F	sinnoh-wayward-cave-1f
+sinnoh	pearl	Wayward Cave	B1F	sinnoh-wayward-cave-b1f
+sinnoh	platinum	Acuity Lakefront	Main	sinnoh-acuity-lakefront
+sinnoh	platinum	Amity Square	Main	sinnoh-amity-square
+sinnoh	platinum	Canalave City	Main	sinnoh-canalave-city
+sinnoh	platinum	Celestic Town	Main	sinnoh-celestic-town
+sinnoh	platinum	Eterna City	Main	sinnoh-eterna-city
+sinnoh	platinum	Eterna Forest	Exterior	sinnoh-eterna-forest-exterior
+sinnoh	platinum	Eterna Forest	Interior	sinnoh-eterna-forest-interior
+sinnoh	platinum	Fight Area	Main	sinnoh-fight-area
+sinnoh	platinum	Floaroma Meadow	Main	sinnoh-floaroma-meadow
+sinnoh	platinum	Floaroma Town	Main	sinnoh-floaroma-town
+sinnoh	platinum	Flower Paradise	Main	sinnoh-flower-paradise
+sinnoh	platinum	Fuego Ironworks	Exterior	sinnoh-fuego-ironworks-exterior
+sinnoh	platinum	Fuego Ironworks	Interior	sinnoh-fuego-ironworks-interior
+sinnoh	platinum	Fullmoon Island	Exterior	sinnoh-fullmoon-island-exterior
+sinnoh	platinum	Fullmoon Island	Interior	sinnoh-fullmoon-island-interior
+sinnoh	platinum	Great Marsh	Entrance 1F	sinnoh-great-marsh-entrance-1f
+sinnoh	platinum	Great Marsh	Entrance 2F	sinnoh-great-marsh-entrance-2f
+sinnoh	platinum	Great Marsh	Marsh	sinnoh-great-marsh-marsh
+sinnoh	platinum	Hall of Origin	Main	sinnoh-hall-of-origin
+sinnoh	platinum	Hearthome City	Main	sinnoh-hearthome-city
+sinnoh	platinum	Iron Island	1F	sinnoh-iron-island-1f
+sinnoh	platinum	Iron Island	B1F 1	sinnoh-iron-island-b1f-1
+sinnoh	platinum	Iron Island	B1F 2	sinnoh-iron-island-b1f-2
+sinnoh	platinum	Iron Island	B2F 1	sinnoh-iron-island-b2f-1
+sinnoh	platinum	Iron Island	B2F 2	sinnoh-iron-island-b2f-2
+sinnoh	platinum	Iron Island	B3F 1	sinnoh-iron-island-b3f-1
+sinnoh	platinum	Iron Island	B3F 2	sinnoh-iron-island-b3f-2
+sinnoh	platinum	Iron Island	Exterior	sinnoh-iron-island-exterior
+sinnoh	platinum	Jubilife City	Main	sinnoh-jubilife-city
+sinnoh	platinum	Lake Acuity	Cavern	sinnoh-lake-acuity-cavern
+sinnoh	platinum	Lake Acuity	Main	sinnoh-lake-acuity-lake
+sinnoh	platinum	Lake Valor	Cavern	sinnoh-lake-valor-cavern
+sinnoh	platinum	Lake Valor	Dry Lake	sinnoh-lake-valor-dry-lake
+sinnoh	platinum	Lake Valor	Lake	sinnoh-lake-valor-lake
+sinnoh	platinum	Lake Verity	Cavern	sinnoh-lake-verity-cavern
+sinnoh	platinum	Lake Verity	Lake Low	sinnoh-lake-verity-lake-low
+sinnoh	platinum	Lake Verity	Lake Low with Cavern	sinnoh-lake-verity-lake-with-cavern
+sinnoh	platinum	Lost Tower	1F	sinnoh-lost-tower-1f
+sinnoh	platinum	Lost Tower	2F	sinnoh-lost-tower-2f
+sinnoh	platinum	Lost Tower	3F	sinnoh-lost-tower-3f
+sinnoh	platinum	Lost Tower	4F	sinnoh-lost-tower-4f
+sinnoh	platinum	Lost Tower	5F	sinnoh-lost-tower-5f
+sinnoh	platinum	Maniac Tunnel	First Stage	sinnoh-maniac-tunnel-first-stage
+sinnoh	platinum	Maniac Tunnel	Second Stage	sinnoh-maniac-tunnel-second-stage
+sinnoh	platinum	Maniac Tunnel	Third Stage	sinnoh-maniac-tunnel-third-stage
+sinnoh	platinum	Mt. Coronet	1F 1	sinnoh-mt-coronet-1f-1
+sinnoh	platinum	Mt. Coronet	1F 2	sinnoh-mt-coronet-1f-2
+sinnoh	platinum	Mt. Coronet	2F	sinnoh-mt-coronet-2f
+sinnoh	platinum	Mt. Coronet	3F	sinnoh-mt-coronet-3f
+sinnoh	platinum	Mt. Coronet	4F 1	sinnoh-mt-coronet-4f-1
+sinnoh	platinum	Mt. Coronet	4F 2	sinnoh-mt-coronet-4f-2
+sinnoh	platinum	Mt. Coronet	4F 3	sinnoh-mt-coronet-4f-3
+sinnoh	platinum	Mt. Coronet	5F	sinnoh-mt-coronet-5f
+sinnoh	platinum	Mt. Coronet	6F	sinnoh-mt-coronet-6f
+sinnoh	platinum	Mt. Coronet	Peak	sinnoh-mt-coronet-peak
+sinnoh	platinum	Mt. Coronet	Upper 1F 1	sinnoh-mt-coronet-upper-1f-1
+sinnoh	platinum	Mt. Coronet	Upper 1F 2	sinnoh-mt-coronet-upper-1f-2
+sinnoh	platinum	Mt. Coronet	Upper 1F 3	sinnoh-mt-coronet-upper-1f-3
+sinnoh	platinum	Mt. Coronet	B1F	sinnoh-mt-coronet-upper-b1f
+sinnoh	platinum	Newmoon Island	Exterior	sinnoh-newmoon-island-exterior
+sinnoh	platinum	Newmoon Island	Interior	sinnoh-newmoon-island-interior
+sinnoh	platinum	Old Chateau	1F Dining Room	sinnoh-old-chateau-1f-dining-room
+sinnoh	platinum	Old Chateau	1F	sinnoh-old-chateau-1f
+sinnoh	platinum	Old Chateau	2F	sinnoh-old-chateau-2f
+sinnoh	platinum	Oreburgh City	Main	sinnoh-oreburgh-city
+sinnoh	platinum	Oreburgh Gate	Gate 1F	sinnoh-oreburgh-gate-1f
+sinnoh	platinum	Oreburgh Gate	Gate B1F	sinnoh-oreburgh-gate-b1f
+sinnoh	platinum	Oreburgh Mine	B1F	sinnoh-oreburgh-mine-b1f
+sinnoh	platinum	Oreburgh Mine	B2F	sinnoh-oreburgh-mine-b2f
+sinnoh	platinum	Pal Park	Main	sinnoh-pal-park
+sinnoh	platinum	Pastoria City	Main	sinnoh-pastoria-city
+sinnoh	platinum	Pokémon League	Main	sinnoh-pokemon-league
+sinnoh	platinum	Pokémon Mansion	Main	sinnoh-pokemon-mansion
+sinnoh	platinum	Ravaged Path	Main	sinnoh-ravaged-path
+sinnoh	platinum	Resort Area	Main	sinnoh-resort-area
+sinnoh	platinum	Route 201	Main	sinnoh-route-201
+sinnoh	platinum	Route 202	Main	sinnoh-route-202
+sinnoh	platinum	Route 203	Main	sinnoh-route-203
+sinnoh	platinum	Route 204	Main	sinnoh-route-204
+sinnoh	platinum	Route 205	Main	sinnoh-route-205
+sinnoh	platinum	Route 206	Main	sinnoh-route-206
+sinnoh	platinum	Route 207	Main	sinnoh-route-207
+sinnoh	platinum	Route 208	Main	sinnoh-route-208
+sinnoh	platinum	Route 209	Main	sinnoh-route-209
+sinnoh	platinum	Route 210	Main	sinnoh-route-210
+sinnoh	platinum	Route 211	Main	sinnoh-route-211
+sinnoh	platinum	Route 212	Main	sinnoh-route-212
+sinnoh	platinum	Route 213	Main	sinnoh-route-213
+sinnoh	platinum	Route 214	Main	sinnoh-route-214
+sinnoh	platinum	Route 215	Main	sinnoh-route-215
+sinnoh	platinum	Route 216	Main	sinnoh-route-216
+sinnoh	platinum	Route 217	Main	sinnoh-route-217
+sinnoh	platinum	Route 218	Main	sinnoh-route-218
+sinnoh	platinum	Route 219	Main	sinnoh-route-219
+sinnoh	platinum	Route 220	Main	sinnoh-route-220
+sinnoh	platinum	Route 221	Main	sinnoh-route-221
+sinnoh	platinum	Route 222	Main	sinnoh-route-222
+sinnoh	platinum	Route 223	Main	sinnoh-route-223
+sinnoh	platinum	Route 224	Main	sinnoh-route-224
+sinnoh	platinum	Route 225	Main	sinnoh-route-225
+sinnoh	platinum	Route 226	Main	sinnoh-route-226
+sinnoh	platinum	Route 227	Main	sinnoh-route-227
+sinnoh	platinum	Route 228	Main	sinnoh-route-228
+sinnoh	platinum	Route 229	Main	sinnoh-route-229
+sinnoh	platinum	Route 230	Main	sinnoh-route-230
+sinnoh	platinum	Sandgem Town	Main	sinnoh-sandgem-town
+sinnoh	platinum	Seabreak Path	Main	sinnoh-seabreak-path
+sinnoh	platinum	Sendoff Spring	Main	sinnoh-sendoff-spring
+sinnoh	platinum	Snowpoint City	Main	sinnoh-snowpoint-city
+sinnoh	platinum	Snowpoint Temple	1F	sinnoh-snowpoint-temple-1f
+sinnoh	platinum	Snowpoint Temple	B1F	sinnoh-snowpoint-temple-b1f
+sinnoh	platinum	Snowpoint Temple	B2F	sinnoh-snowpoint-temple-b2f
+sinnoh	platinum	Snowpoint Temple	B3F	sinnoh-snowpoint-temple-b3f
+sinnoh	platinum	Snowpoint Temple	B4F	sinnoh-snowpoint-temple-b4f
+sinnoh	platinum	Snowpoint Temple	B5F	sinnoh-snowpoint-temple-b5f
+sinnoh	platinum	Solaceon Ruins	1F	sinnoh-solaceon-ruins-1f
+sinnoh	platinum	Solaceon Ruins	2F	sinnoh-solaceon-ruins-2f
+sinnoh	platinum	Solaceon Ruins	B1F	sinnoh-solaceon-ruins-b1f
+sinnoh	platinum	Solaceon Ruins	B2F	sinnoh-solaceon-ruins-b2f
+sinnoh	platinum	Solaceon Ruins	B3F	sinnoh-solaceon-ruins-b3f
+sinnoh	platinum	Solaceon Ruins	B4F	sinnoh-solaceon-ruins-b4f
+sinnoh	platinum	Solaceon Town	Main	sinnoh-solaceon-town
+sinnoh	platinum	Spear Pillar	Main	sinnoh-spear-pillar
+sinnoh	platinum	Spring Path	Main	sinnoh-spring-path
+sinnoh	platinum	Stark Mountain	Exterior	sinnoh-stark-mountain-exterior
+sinnoh	platinum	Stark Mountain	Interior 1	sinnoh-stark-mountain-interior-1
+sinnoh	platinum	Stark Mountain	Interior 2	sinnoh-stark-mountain-interior-2
+sinnoh	platinum	Stark Mountain	Interior 3	sinnoh-stark-mountain-interior-3
+sinnoh	platinum	Sunyshore City	Main	sinnoh-sunyshore-city
+sinnoh	platinum	Survival Area	Main	sinnoh-survival-area
+sinnoh	platinum	Trophy Garden	Main	sinnoh-trophy-garden
+sinnoh	platinum	Turnback Cave	Entrance	sinnoh-turnback-cave-entrance
+sinnoh	platinum	Turnback Cave	Giratina's Room	sinnoh-turnback-cave-giratinas-room
+sinnoh	platinum	Turnback Cave	No Pillar Random Rooms	sinnoh-turnback-cave-no-pillar-random-rooms
+sinnoh	platinum	Turnback Cave	One Pillar Random Rooms	sinnoh-turnback-cave-one-pillar-random-rooms
+sinnoh	platinum	Turnback Cave	Pillar Room	sinnoh-turnback-cave-pillar-room
+sinnoh	platinum	Turnback Cave	Two Pillars Random Rooms	sinnoh-turnback-cave-two-pillars-random-rooms
+sinnoh	platinum	Twinleaf Town	Main	sinnoh-twinleaf-town
+sinnoh	platinum	Valley Windworks	Main	sinnoh-valley-windworks
+sinnoh	platinum	Valor Lakefront	Main	sinnoh-valor-lakefront
+sinnoh	platinum	Veilstone City	Main	sinnoh-veilstone-city
+sinnoh	platinum	Victory Road	1F Back 1	sinnoh-victory-road-1f-back-1
+sinnoh	platinum	Victory Road	1F Back 2	sinnoh-victory-road-1f-back-2
+sinnoh	platinum	Victory Road	1F Back 3	sinnoh-victory-road-1f-back-3
+sinnoh	platinum	Victory Road	1F	sinnoh-victory-road-1f
+sinnoh	platinum	Victory Road	2F	sinnoh-victory-road-2f
+sinnoh	platinum	Victory Road	B1F	sinnoh-victory-road-b1f
+sinnoh	platinum	Wayward Cave	1F	sinnoh-wayward-cave-1f
+sinnoh	platinum	Wayward Cave	B1F	sinnoh-wayward-cave-b1f
+johto	heartGold	Azalea Town	Main	johto-azalea-town
+johto	heartGold	Blackthorn City	Main	johto-blackthorn-city
+johto	heartGold	Burned Tower	1F	johto-burned-tower-1f
+johto	heartGold	Burned Tower	B1F	johto-burned-tower-b1f
+johto	heartGold	Cherrygrove City	Main	johto-cherrygrove-city
+johto	heartGold	Cianwood City	Main	johto-cianwood-city
+johto	heartGold	Cliff Cave	1F	johto-cliff-cave-1f
+johto	heartGold	Cliff Cave	2F	johto-cliff-cave-2f
+johto	heartGold	Cliff Cave	B1F	johto-cliff-cave-b1f
+johto	heartGold	Cliff Cave	Edge Gate	johto-cliff-edge-gate
+johto	heartGold	Dark Cave	Blackthorn Side	johto-dark-cave-blackthorn-side
+johto	heartGold	Dark Cave	Violet Side	johto-dark-cave-violet-side
+johto	heartGold	Dragon's Den	Entrance	johto-dragons-den-dragon-shrine
+johto	heartGold	Dragon's Den	Lower Entrance	johto-dragons-den-entrance
+johto	heartGold	Dragon's Den	Main Room	johto-dragons-den-main-room
+johto	heartGold	Ecruteak City	Main	johto-ecruteak-city
+johto	heartGold	Glitter Lighthouse	1F	johto-glitter-lighthouse-1f
+johto	heartGold	Glitter Lighthouse	2F	johto-glitter-lighthouse-2f
+johto	heartGold	Glitter Lighthouse	3F	johto-glitter-lighthouse-3f
+johto	heartGold	Glitter Lighthouse	4F	johto-glitter-lighthouse-4f
+johto	heartGold	Glitter Lighthouse	5F	johto-glitter-lighthouse-5f
+johto	heartGold	Glitter Lighthouse	Exterior	johto-glitter-lighthouse-exterior
+johto	heartGold	Glitter Lighthouse	Light Room	johto-glitter-lighthouse-light-room
+johto	heartGold	Goldenrod City	Main	johto-goldenrod-city
+johto	heartGold	Goldenrod Radio Tower	1F	johto-goldenrod-radio-tower-1f
+johto	heartGold	Goldenrod Radio Tower	2F	johto-goldenrod-radio-tower-2f
+johto	heartGold	Goldenrod Radio Tower	3F	johto-goldenrod-radio-tower-3f
+johto	heartGold	Goldenrod Radio Tower	4F	johto-goldenrod-radio-tower-4f
+johto	heartGold	Goldenrod Radio Tower	5F	johto-goldenrod-radio-tower-5f
+johto	heartGold	Goldenrod Radio Tower	Observation Deck	johto-goldenrod-radio-tower-observation-deck
+johto	heartGold	Ice Path	1F	johto-ice-path-1f
+johto	heartGold	Ice Path	B1F	johto-ice-path-b1f
+johto	heartGold	Ice Path	B2F	johto-ice-path-b2f
+johto	heartGold	Ice Path	B3F	johto-ice-path-b3f
+johto	heartGold	Ilex Forest	Main	johto-ilex-forest
+johto	heartGold	Lake of Rage	Main	johto-lake-of-rage
+johto	heartGold	Mahogany Town	Main	johto-mahogany-town
+johto	heartGold	Mt. Mortar	1F Back	johto-mt-mortar-1f-back
+johto	heartGold	Mt. Mortar	1F Entrance	johto-mt-mortar-1f-entrance
+johto	heartGold	Mt. Mortar	2F	johto-mt-mortar-2f
+johto	heartGold	Mt. Mortar	B1F	johto-mt-mortar-b1f
+johto	heartGold	Mt. Silver	1F	johto-mt-silver-1f
+johto	heartGold	Mt. Silver	2F	johto-mt-silver-2f
+johto	heartGold	Mt. Silver	3F	johto-mt-silver-3f
+johto	heartGold	Mt. Silver	2F	johto-mt-silver-expert-belt-chamber
+johto	heartGold	Mt. Silver	Exterior	johto-mt-silver-exterior
+johto	heartGold	Mt. Silver	Mountainside	johto-mt-silver-lower-mountainside
+johto	heartGold	Mt. Silver	Moltres Chamber	johto-mt-silver-moltres-chamber
+johto	heartGold	Mt. Silver	Summit	johto-mt-silver-summit
+johto	heartGold	Mt. Silver	Upper Mountainside	johto-mt-silver-upper-mountainside
+johto	heartGold	National Park	Main	johto-national-park
+johto	heartGold	New Bark Town	Main	johto-new-bark-town
+johto	heartGold	Olivine City	Main	johto-olivine-city
+johto	heartGold	Route 29	Main	johto-route-29
+johto	heartGold	Route 30	Main	johto-route-30
+johto	heartGold	Route 31	Main	johto-route-31
+johto	heartGold	Route 32	Main	johto-route-32
+johto	heartGold	Route 33	Main	johto-route-33
+johto	heartGold	Route 34	Main	johto-route-34
+johto	heartGold	Route 35	Main	johto-route-35
+johto	heartGold	Route 36	Main	johto-route-36
+johto	heartGold	Route 37	Main	johto-route-37
+johto	heartGold	Route 38	Main	johto-route-38
+johto	heartGold	Route 39	Main	johto-route-39
+johto	heartGold	Route 40	Main	johto-route-40
+johto	heartGold	Route 41	Main	johto-route-41
+johto	heartGold	Route 42	Main	johto-route-42
+johto	heartGold	Route 43	Main	johto-route-43
+johto	heartGold	Route 44	Main	johto-route-44
+johto	heartGold	Route 45	Main	johto-route-45
+johto	heartGold	Route 46	Main	johto-route-46
+johto	heartGold	Route 47	Main	johto-route-47
+johto	heartGold	Route 48	Main	johto-route-48
+johto	heartGold	Ruins of Alph	Entrance 1	johto-ruins-of-alph-entrance-1
+johto	heartGold	Ruins of Alph	Entrance 2	johto-ruins-of-alph-entrance-2
+johto	heartGold	Ruins of Alph	Hall Entrance	johto-ruins-of-alph-hall-entrance
+johto	heartGold	Ruins of Alph	Underground Hall	Johto-ruins-of-alph-underground-hall
+johto	heartGold	Ruins of Alph	Main	johto-ruins-of-alph
+johto	heartGold	Safari Zone	Desert	johto-safari-zone-desert
+johto	heartGold	Safari Zone	Forest	johto-safari-zone-forest
+johto	heartGold	Safari Zone	Marshland	johto-safari-zone-marshland
+johto	heartGold	Safari Zone	Meadow	johto-safari-zone-meadow
+johto	heartGold	Safari Zone	Mountain	johto-safari-zone-mountain
+johto	heartGold	Safari Zone	Peak	johto-safari-zone-peak
+johto	heartGold	Safari Zone	Plains	johto-safari-zone-plains
+johto	heartGold	Safari Zone	Rocky Beach	johto-safari-zone-rocky-beach
+johto	heartGold	Safari Zone	Savannah	johto-safari-zone-savannah
+johto	heartGold	Safari Zone	Swamp	johto-safari-zone-swamp
+johto	heartGold	Safari Zone	Wasteland	johto-safari-zone-wasteland
+johto	heartGold	Safari Zone	Wetland	johto-safari-zone-wetland
+johto	heartGold	Slowpoke Well	B1F	johto-slowpoke-well-b1f
+johto	heartGold	Slowpoke Well	B2F	johto-slowpoke-well-b2f
+johto	heartGold	Slowpoke Well	Entrance	johto-slowpoke-well-entrance
+johto	heartGold	Sprout Tower	1F	johto-sprout-tower-1f
+johto	heartGold	Sprout Tower	2F	johto-sprout-tower-2f
+johto	heartGold	Sprout Tower	3F	johto-sprout-tower-3f
+johto	heartGold	S.S. Aqua	1F Rooms	johto-ss-aqua-1f-rooms
+johto	heartGold	S.S. Aqua	1F	johto-ss-aqua-1f
+johto	heartGold	S.S. Aqua	B1F	johto-ss-aqua-b1f
+johto	heartGold	S.S. Aqua	Captain's Cabin	johto-ss-aqua-captains-cabin
+johto	heartGold	Team Rocket HQ	1F	johto-team-rocket-hq-1f
+johto	heartGold	Team Rocket HQ	B1F	johto-team-rocket-hq-b1f
+johto	heartGold	Team Rocket HQ	B2F	johto-team-rocket-hq-b2f
+johto	heartGold	Team Rocket HQ	B3F	johto-team-rocket-hq-b3f
+johto	heartGold	Bell Tower	10F	johto-tin-tower-10f
+johto	heartGold	Bell Tower	1F	johto-tin-tower-1f
+johto	heartGold	Bell Tower	2F	johto-tin-tower-2f
+johto	heartGold	Bell Tower	3F	johto-tin-tower-3f
+johto	heartGold	Bell Tower	4F	johto-tin-tower-4f
+johto	heartGold	Bell Tower	5F	johto-tin-tower-5f
+johto	heartGold	Bell Tower	6F	johto-tin-tower-6f
+johto	heartGold	Bell Tower	7F	johto-tin-tower-7f
+johto	heartGold	Bell Tower	8F	johto-tin-tower-8f
+johto	heartGold	Bell Tower	9F	johto-tin-tower-9f
+johto	heartGold	Bell Tower	Roof	johto-tin-tower-roof
+johto	heartGold	Union Cave	1F	johto-union-cave-1f
+johto	heartGold	Union Cave	B1F	johto-union-cave-b1f
+johto	heartGold	Union Cave	B2F	johto-union-cave-b2f
+johto	heartGold	Violet City	Main	johto-violet-city
+johto	heartGold	Whirl Islands	1F Northeast	johto-whirl-islands-1f-northeast
+johto	heartGold	Whirl Islands	1F Northwest	johto-whirl-islands-1f-northwest
+johto	heartGold	Whirl Islands	1F Southeast	johto-whirl-islands-1f-southeast
+johto	heartGold	Whirl Islands	1F Southwest	johto-whirl-islands-1f-southwest
+johto	heartGold	Whirl Islands	B1F	johto-whirl-islands-b1f
+johto	heartGold	Whirl Islands	B2F	johto-whirl-islands-b2f
+johto	heartGold	Whirl Islands	B3F Lugia's Cave	johto-whirl-islands-b3f-lugias-cave
+johto	heartGold	Whirl Islands	B3F	johto-whirl-islands-b3f
+kanto	heartGold	Celadon City	Main	kanto-celadon-city
+kanto	heartGold	Cerulean Cave	1F	kanto-cerulean-cave-1f
+kanto	heartGold	Cerulean Cave	2F	kanto-cerulean-cave-2f
+kanto	heartGold	Cerulean Cave	B1F	kanto-cerulean-cave-b1f
+kanto	heartGold	Cerulean City	Main	kanto-cerulean-city
+kanto	heartGold	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	heartGold	Diglett's Cave	Main	kanto-digletts-cave
+kanto	heartGold	Fuchsia City	Main	kanto-fuchsia-city
+kanto	heartGold	Lavender Town	Main	kanto-lavender-town
+kanto	heartGold	Mt. Moon	Square	kanto-mt-moon-square
+kanto	heartGold	Mt. Moon	Main	kanto-mt-moon
+kanto	heartGold	Pal Park	Main	kanto-pal-park
+kanto	heartGold	Pallet Town	Main	kanto-pallet-town
+kanto	heartGold	Pewter City	Main	kanto-pewter-city
+kanto	heartGold	Pokémon Tower	Main	kanto-pokemon-tower
+kanto	heartGold	Power Plant	Main	kanto-power-plant
+kanto	heartGold	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	heartGold	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	heartGold	Route 1	Main	kanto-route-1
+kanto	heartGold	Route 10	Main	kanto-route-10
+kanto	heartGold	Route 11	Main	kanto-route-11
+kanto	heartGold	Route 12	Main	kanto-route-12
+kanto	heartGold	Route 13	Main	kanto-route-13
+kanto	heartGold	Route 14	Main	kanto-route-14
+kanto	heartGold	Route 15	Main	kanto-route-15
+kanto	heartGold	Route 16	Main	kanto-route-16
+kanto	heartGold	Route 17	Main	kanto-route-17
+kanto	heartGold	Route 18	Main	kanto-route-18
+kanto	heartGold	Route 19	Main	kanto-route-19
+kanto	heartGold	Route 2	Main	kanto-route-2
+kanto	heartGold	Route 20	Main	kanto-route-20
+kanto	heartGold	Route 21	Main	kanto-route-21
+kanto	heartGold	Route 22	Main	kanto-route-22
+kanto	heartGold	Route 24	Main	kanto-route-24
+kanto	heartGold	Route 25	Main	kanto-route-25
+kanto	heartGold	Route 26	Main	kanto-route-26
+kanto	heartGold	Route 27	Main	kanto-route-27
+kanto	heartGold	Route 28	Main	kanto-route-28
+kanto	heartGold	Route 3	Main	kanto-route-3
+kanto	heartGold	Route 4	Main	kanto-route-4
+kanto	heartGold	Route 5	Main	kanto-route-5
+kanto	heartGold	Route 6	Main	kanto-route-6
+kanto	heartGold	Route 7	Main	kanto-route-7
+kanto	heartGold	Route 8	Main	kanto-route-8
+kanto	heartGold	Route 9	Main	kanto-route-9
+kanto	heartGold	Saffron City	Main	kanto-saffron-city
+kanto	heartGold	Seafoam Islands	1F	kanto-seafoam-islands-1f
+kanto	heartGold	Seafoam Islands	B1F	kanto-seafoam-islands-b1f
+kanto	heartGold	Seafoam Islands	B2F	kanto-seafoam-islands-b2f
+kanto	heartGold	Seafoam Islands	B3F	kanto-seafoam-islands-b3f
+kanto	heartGold	Seafoam Islands	B4F	kanto-seafoam-islands-b4f
+kanto	heartGold	Seafoam Islands	Cinnabar Gym	kanto-seafoam-islands-cinnabar-gym
+kanto	heartGold	Silph Co.	Main	kanto-silph-co
+kanto	heartGold	Tohjo Falls	Hidden Room	kanto-tohjo-falls-hidden-room
+kanto	heartGold	Tohjo Falls	Main	kanto-tohjo-falls
+kanto	heartGold	Underground Path	Main	kanto-underground-path
+kanto	heartGold	Vermilion City	Main	kanto-vermilion-city
+kanto	heartGold	Victory Road	1F	kanto-victory-road-1f
+kanto	heartGold	Victory Road	2F	kanto-victory-road-2f
+kanto	heartGold	Victory Road	3F	kanto-victory-road-3f
+kanto	heartGold	Viridian City	Main	kanto-viridian-city
+kanto	heartGold	Viridian Forest	Main	kanto-viridian-forest
+johto	soulSilver	Azalea Town	Main	johto-azalea-town
+johto	soulSilver	Blackthorn City	Main	johto-blackthorn-city
+johto	soulSilver	Burned Tower	1F	johto-burned-tower-1f
+johto	soulSilver	Burned Tower	B1F	johto-burned-tower-b1f
+johto	soulSilver	Cherrygrove City	Main	johto-cherrygrove-city
+johto	soulSilver	Cianwood City	Main	johto-cianwood-city
+johto	soulSilver	Cliff Cave	1F	johto-cliff-cave-1f
+johto	soulSilver	Cliff Cave	2F	johto-cliff-cave-2f
+johto	soulSilver	Cliff Cave	B1F	johto-cliff-cave-b1f
+johto	soulSilver	Cliff Cave	Edge Gate	johto-cliff-edge-gate
+johto	soulSilver	Dark Cave	Blackthorn Side	johto-dark-cave-blackthorn-side
+johto	soulSilver	Dark Cave	Violet Side	johto-dark-cave-violet-side
+johto	soulSilver	Dragon's Den	Entrance	johto-dragons-den-dragon-shrine
+johto	soulSilver	Dragon's Den	Lower Entrance	johto-dragons-den-entrance
+johto	soulSilver	Dragon's Den	Main Room	johto-dragons-den-main-room
+johto	soulSilver	Ecruteak City	Main	johto-ecruteak-city
+johto	soulSilver	Glitter Lighthouse	1F	johto-glitter-lighthouse-1f
+johto	soulSilver	Glitter Lighthouse	2F	johto-glitter-lighthouse-2f
+johto	soulSilver	Glitter Lighthouse	3F	johto-glitter-lighthouse-3f
+johto	soulSilver	Glitter Lighthouse	4F	johto-glitter-lighthouse-4f
+johto	soulSilver	Glitter Lighthouse	5F	johto-glitter-lighthouse-5f
+johto	soulSilver	Glitter Lighthouse	Exterior	johto-glitter-lighthouse-exterior
+johto	soulSilver	Glitter Lighthouse	Light Room	johto-glitter-lighthouse-light-room
+johto	soulSilver	Goldenrod City	Main	johto-goldenrod-city
+johto	soulSilver	Goldenrod Radio Tower	1F	johto-goldenrod-radio-tower-1f
+johto	soulSilver	Goldenrod Radio Tower	2F	johto-goldenrod-radio-tower-2f
+johto	soulSilver	Goldenrod Radio Tower	3F	johto-goldenrod-radio-tower-3f
+johto	soulSilver	Goldenrod Radio Tower	4F	johto-goldenrod-radio-tower-4f
+johto	soulSilver	Goldenrod Radio Tower	5F	johto-goldenrod-radio-tower-5f
+johto	soulSilver	Goldenrod Radio Tower	Observation Deck	johto-goldenrod-radio-tower-observation-deck
+johto	soulSilver	Ice Path	1F	johto-ice-path-1f
+johto	soulSilver	Ice Path	B1F	johto-ice-path-b1f
+johto	soulSilver	Ice Path	B2F	johto-ice-path-b2f
+johto	soulSilver	Ice Path	B3F	johto-ice-path-b3f
+johto	soulSilver	Ilex Forest	Main	johto-ilex-forest
+johto	soulSilver	Lake of Rage	Main	johto-lake-of-rage
+johto	soulSilver	Mahogany Town	Main	johto-mahogany-town
+johto	soulSilver	Mt. Mortar	1F Back	johto-mt-mortar-1f-back
+johto	soulSilver	Mt. Mortar	1F Entrance	johto-mt-mortar-1f-entrance
+johto	soulSilver	Mt. Mortar	2F	johto-mt-mortar-2f
+johto	soulSilver	Mt. Mortar	B1F	johto-mt-mortar-b1f
+johto	soulSilver	Mt. Silver	1F	johto-mt-silver-1f
+johto	soulSilver	Mt. Silver	2F	johto-mt-silver-2f
+johto	soulSilver	Mt. Silver	3F	johto-mt-silver-3f
+johto	soulSilver	Mt. Silver	2F	johto-mt-silver-expert-belt-chamber
+johto	soulSilver	Mt. Silver	Exterior	johto-mt-silver-exterior
+johto	soulSilver	Mt. Silver	Mountainside	johto-mt-silver-lower-mountainside
+johto	soulSilver	Mt. Silver	Moltres Chamber	johto-mt-silver-moltres-chamber
+johto	soulSilver	Mt. Silver	Summit	johto-mt-silver-summit
+johto	soulSilver	Mt. Silver	Upper Mountainside	johto-mt-silver-upper-mountainside
+johto	soulSilver	National Park	Main	johto-national-park
+johto	soulSilver	New Bark Town	Main	johto-new-bark-town
+johto	soulSilver	Olivine City	Main	johto-olivine-city
+johto	soulSilver	Route 29	Main	johto-route-29
+johto	soulSilver	Route 30	Main	johto-route-30
+johto	soulSilver	Route 31	Main	johto-route-31
+johto	soulSilver	Route 32	Main	johto-route-32
+johto	soulSilver	Route 33	Main	johto-route-33
+johto	soulSilver	Route 34	Main	johto-route-34
+johto	soulSilver	Route 35	Main	johto-route-35
+johto	soulSilver	Route 36	Main	johto-route-36
+johto	soulSilver	Route 37	Main	johto-route-37
+johto	soulSilver	Route 38	Main	johto-route-38
+johto	soulSilver	Route 39	Main	johto-route-39
+johto	soulSilver	Route 40	Main	johto-route-40
+johto	soulSilver	Route 41	Main	johto-route-41
+johto	soulSilver	Route 42	Main	johto-route-42
+johto	soulSilver	Route 43	Main	johto-route-43
+johto	soulSilver	Route 44	Main	johto-route-44
+johto	soulSilver	Route 45	Main	johto-route-45
+johto	soulSilver	Route 46	Main	johto-route-46
+johto	soulSilver	Route 47	Main	johto-route-47
+johto	soulSilver	Route 48	Main	johto-route-48
+johto	soulSilver	Ruins of Alph	Entrance 1	johto-ruins-of-alph-entrance-1
+johto	soulSilver	Ruins of Alph	Entrance 2	johto-ruins-of-alph-entrance-2
+johto	soulSilver	Ruins of Alph	Hall Entrance	johto-ruins-of-alph-hall-entrance
+johto	soulSilver	Ruins of Alph	Underground Hall	Johto-ruins-of-alph-underground-hall
+johto	soulSilver	Ruins of Alph	Main	johto-ruins-of-alph
+johto	soulSilver	Safari Zone	Desert	johto-safari-zone-desert
+johto	soulSilver	Safari Zone	Forest	johto-safari-zone-forest
+johto	soulSilver	Safari Zone	Marshland	johto-safari-zone-marshland
+johto	soulSilver	Safari Zone	Meadow	johto-safari-zone-meadow
+johto	soulSilver	Safari Zone	Mountain	johto-safari-zone-mountain
+johto	soulSilver	Safari Zone	Peak	johto-safari-zone-peak
+johto	soulSilver	Safari Zone	Plains	johto-safari-zone-plains
+johto	soulSilver	Safari Zone	Rocky Beach	johto-safari-zone-rocky-beach
+johto	soulSilver	Safari Zone	Savannah	johto-safari-zone-savannah
+johto	soulSilver	Safari Zone	Swamp	johto-safari-zone-swamp
+johto	soulSilver	Safari Zone	Wasteland	johto-safari-zone-wasteland
+johto	soulSilver	Safari Zone	Wetland	johto-safari-zone-wetland
+johto	soulSilver	Slowpoke Well	B1F	johto-slowpoke-well-b1f
+johto	soulSilver	Slowpoke Well	B2F	johto-slowpoke-well-b2f
+johto	soulSilver	Slowpoke Well	Entrance	johto-slowpoke-well-entrance
+johto	soulSilver	Sprout Tower	1F	johto-sprout-tower-1f
+johto	soulSilver	Sprout Tower	2F	johto-sprout-tower-2f
+johto	soulSilver	Sprout Tower	3F	johto-sprout-tower-3f
+johto	soulSilver	S.S. Aqua	1F Rooms	johto-ss-aqua-1f-rooms
+johto	soulSilver	S.S. Aqua	1F	johto-ss-aqua-1f
+johto	soulSilver	S.S. Aqua	B1F	johto-ss-aqua-b1f
+johto	soulSilver	S.S. Aqua	Captain's Cabin	johto-ss-aqua-captains-cabin
+johto	soulSilver	Team Rocket HQ	1F	johto-team-rocket-hq-1f
+johto	soulSilver	Team Rocket HQ	B1F	johto-team-rocket-hq-b1f
+johto	soulSilver	Team Rocket HQ	B2F	johto-team-rocket-hq-b2f
+johto	soulSilver	Team Rocket HQ	B3F	johto-team-rocket-hq-b3f
+johto	soulSilver	Bell Tower	10F	johto-tin-tower-10f
+johto	soulSilver	Bell Tower	1F	johto-tin-tower-1f
+johto	soulSilver	Bell Tower	2F	johto-tin-tower-2f
+johto	soulSilver	Bell Tower	3F	johto-tin-tower-3f
+johto	soulSilver	Bell Tower	4F	johto-tin-tower-4f
+johto	soulSilver	Bell Tower	5F	johto-tin-tower-5f
+johto	soulSilver	Bell Tower	6F	johto-tin-tower-6f
+johto	soulSilver	Bell Tower	7F	johto-tin-tower-7f
+johto	soulSilver	Bell Tower	8F	johto-tin-tower-8f
+johto	soulSilver	Bell Tower	9F	johto-tin-tower-9f
+johto	soulSilver	Bell Tower	Roof	johto-tin-tower-roof
+johto	soulSilver	Union Cave	1F	johto-union-cave-1f
+johto	soulSilver	Union Cave	B1F	johto-union-cave-b1f
+johto	soulSilver	Union Cave	B2F	johto-union-cave-b2f
+johto	soulSilver	Violet City	Main	johto-violet-city
+johto	soulSilver	Whirl Islands	1F Northeast	johto-whirl-islands-1f-northeast
+johto	soulSilver	Whirl Islands	1F Northwest	johto-whirl-islands-1f-northwest
+johto	soulSilver	Whirl Islands	1F Southeast	johto-whirl-islands-1f-southeast
+johto	soulSilver	Whirl Islands	1F Southwest	johto-whirl-islands-1f-southwest
+johto	soulSilver	Whirl Islands	B1F	johto-whirl-islands-b1f
+johto	soulSilver	Whirl Islands	B2F	johto-whirl-islands-b2f
+johto	soulSilver	Whirl Islands	B3F Lugia's Cave	johto-whirl-islands-b3f-lugias-cave
+johto	soulSilver	Whirl Islands	B3F	johto-whirl-islands-b3f
+kanto	soulSilver	Celadon City	Main	kanto-celadon-city
+kanto	soulSilver	Cerulean Cave	1F	kanto-cerulean-cave-1f
+kanto	soulSilver	Cerulean Cave	2F	kanto-cerulean-cave-2f
+kanto	soulSilver	Cerulean Cave	B1F	kanto-cerulean-cave-b1f
+kanto	soulSilver	Cerulean City	Main	kanto-cerulean-city
+kanto	soulSilver	Cinnabar Island	Main	kanto-cinnabar-island
+kanto	soulSilver	Diglett's Cave	Main	kanto-digletts-cave
+kanto	soulSilver	Fuchsia City	Main	kanto-fuchsia-city
+kanto	soulSilver	Lavender Town	Main	kanto-lavender-town
+kanto	soulSilver	Mt. Moon	Square	kanto-mt-moon-square
+kanto	soulSilver	Mt. Moon	Main	kanto-mt-moon
+kanto	soulSilver	Pal Park	Main	kanto-pal-park
+kanto	soulSilver	Pallet Town	Main	kanto-pallet-town
+kanto	soulSilver	Pewter City	Main	kanto-pewter-city
+kanto	soulSilver	Pokémon Tower	Main	kanto-pokemon-tower
+kanto	soulSilver	Power Plant	Main	kanto-power-plant
+kanto	soulSilver	Rock Tunnel	1F	kanto-rock-tunnel-1f
+kanto	soulSilver	Rock Tunnel	B1F	kanto-rock-tunnel-b1f
+kanto	soulSilver	Route 1	Main	kanto-route-1
+kanto	soulSilver	Route 10	Main	kanto-route-10
+kanto	soulSilver	Route 11	Main	kanto-route-11
+kanto	soulSilver	Route 12	Main	kanto-route-12
+kanto	soulSilver	Route 13	Main	kanto-route-13
+kanto	soulSilver	Route 14	Main	kanto-route-14
+kanto	soulSilver	Route 15	Main	kanto-route-15
+kanto	soulSilver	Route 16	Main	kanto-route-16
+kanto	soulSilver	Route 17	Main	kanto-route-17
+kanto	soulSilver	Route 18	Main	kanto-route-18
+kanto	soulSilver	Route 19	Main	kanto-route-19
+kanto	soulSilver	Route 2	Main	kanto-route-2
+kanto	soulSilver	Route 20	Main	kanto-route-20
+kanto	soulSilver	Route 21	Main	kanto-route-21
+kanto	soulSilver	Route 22	Main	kanto-route-22
+kanto	soulSilver	Route 24	Main	kanto-route-24
+kanto	soulSilver	Route 25	Main	kanto-route-25
+kanto	soulSilver	Route 26	Main	kanto-route-26
+kanto	soulSilver	Route 27	Main	kanto-route-27
+kanto	soulSilver	Route 28	Main	kanto-route-28
+kanto	soulSilver	Route 3	Main	kanto-route-3
+kanto	soulSilver	Route 4	Main	kanto-route-4
+kanto	soulSilver	Route 5	Main	kanto-route-5
+kanto	soulSilver	Route 6	Main	kanto-route-6
+kanto	soulSilver	Route 7	Main	kanto-route-7
+kanto	soulSilver	Route 8	Main	kanto-route-8
+kanto	soulSilver	Route 9	Main	kanto-route-9
+kanto	soulSilver	Saffron City	Main	kanto-saffron-city
+kanto	soulSilver	Seafoam Islands	1F	kanto-seafoam-islands-1f
+kanto	soulSilver	Seafoam Islands	B1F	kanto-seafoam-islands-b1f
+kanto	soulSilver	Seafoam Islands	B2F	kanto-seafoam-islands-b2f
+kanto	soulSilver	Seafoam Islands	B3F	kanto-seafoam-islands-b3f
+kanto	soulSilver	Seafoam Islands	B4F	kanto-seafoam-islands-b4f
+kanto	soulSilver	Seafoam Islands	Cinnabar Gym	kanto-seafoam-islands-cinnabar-gym
+kanto	soulSilver	Silph Co.	Main	kanto-silph-co
+kanto	soulSilver	Tohjo Falls	Hidden Room	kanto-tohjo-falls-hidden-room
+kanto	soulSilver	Tohjo Falls	Main	kanto-tohjo-falls
+kanto	soulSilver	Underground Path	Main	kanto-underground-path
+kanto	soulSilver	Vermilion City	Main	kanto-vermilion-city
+kanto	soulSilver	Victory Road	1F	kanto-victory-road-1f
+kanto	soulSilver	Victory Road	2F	kanto-victory-road-2f
+kanto	soulSilver	Victory Road	3F	kanto-victory-road-3f
+kanto	soulSilver	Viridian City	Main	kanto-viridian-city
+kanto	soulSilver	Viridian Forest	Main	kanto-viridian-forest
+unova	black	Abundant Shrine	Main	unova-abundant-shrine
+unova	black	Abyssal Ruins	1F	unova-abyssal-ruins-1f
+unova	black	Abyssal Ruins	2F	unova-abyssal-ruins-2f
+unova	black	Abyssal Ruins	3F	unova-abyssal-ruins-3f
+unova	black	Abyssal Ruins	4F	unova-abyssal-ruins-4f
+unova	black	Accumula Town	Main	unova-accumula-town
+unova	black	Anville Town	Main	unova-anville-town
+unova	black	Celestial Tower	1F	unova-celestial-tower-1f
+unova	black	Celestial Tower	2F	unova-celestial-tower-2f
+unova	black	Celestial Tower	3F	unova-celestial-tower-3f
+unova	black	Celestial Tower	4F	unova-celestial-tower-4f
+unova	black	Celestial Tower	5F	unova-celestial-tower-5f
+unova	black	Celestial Tower	Exterior	unova-celestial-tower-exterior
+unova	black	Challenger's Cave	1F	unova-challengers-cave-1f
+unova	black	Challenger's Cave	B1F	unova-challengers-cave-b1f
+unova	black	Challenger's Cave	B2F	unova-challengers-cave-b2f
+unova	black	Cold Storage	Container	unova-cold-storage-container
+unova	black	Cold Storage	Exterior	unova-cold-storage-exterior
+unova	black	Cold Storage	Storage Building	unova-cold-storage-storage-building
+unova	black	Desert Resort	Entrance	unova-desert-resort-entrance
+unova	black	Desert Resort	Resort	unova-desert-resort-resort
+unova	black	Dreamyard	Main	unova-dreamyard-ruins
+unova	black	Driftveil City	Main	unova-driftveil-city
+unova	black	Giant Chasm	Cave Depths	unova-giant-chasm-cave-depths
+unova	black	Giant Chasm	Cave	unova-giant-chasm-cave
+unova	black	Giant Chasm	Crater Forest	unova-giant-chasm-crater-forest
+unova	black	Giant Chasm	Entrance	unova-giant-chasm-entrance
+unova	black	Icirrus City	Main	unova-icirrus-city
+unova	black	Lacunosa Town	Main	unova-lacunosa-town
+unova	black	Liberty Island	Basement	unova-liberty-garden-basement
+unova	black	Liberty Island	Lighthouse	unova-liberty-garden-lighthouse
+unova	black	Liberty Island	Main	unova-liberty-garden
+unova	black	Mistralton Cave	1F	unova-mistralton-cave-1f
+unova	black	Mistralton Cave	2F	unova-mistralton-cave-2f
+unova	black	Mistralton Cave	3F	unova-mistralton-cave-3f
+unova	black	Mistralton City	Main	unova-mistralton-city
+unova	black	Moor of Icirrus	Main	unova-moor-of-icirrus
+unova	black	Nacrene City	Main	unova-nacrene-city
+unova	black	Nimbasa City	Main	unova-nimbasa-city
+unova	black	N's Castle	4F N's Room	unova-ns-castle-4f-n-room
+unova	black	N's Castle	4F	unova-ns-castle-4f
+unova	black	N's Castle	5F Throne Room	unova-ns-castle-5f-throne-room
+unova	black	N's Castle	5F	unova-ns-castle-5f
+unova	black	Nuvema Town	Main	unova-nuvema-town
+unova	black	Opelucid City	Main	unova-opelucid-city
+unova	black	P2 Laboratory	Exterior	unova-p2-laboratory-exterior
+unova	black	P2 Laboratory	Interior	unova-p2-laboratory-interior
+unova	black	Pinwheel Forest	Main	unova-pinwheel-forest
+unova	black	Pledge Grove	Main	unova-pledge-grove
+unova	black	Relic Castle	1F L	unova-relic-castle-1f-l
+unova	black	Relic Castle	1F R	unova-relic-castle-1f-r
+unova	black	Relic Castle	B1F L	unova-relic-castle-b1f-l
+unova	black	Relic Castle	B1F R	unova-relic-castle-b1f-r
+unova	black	Relic Castle	B2F L	unova-relic-castle-b2f-l
+unova	black	Relic Castle	B2F R	unova-relic-castle-b2f-r
+unova	black	Relic Castle	B3F L	unova-relic-castle-b3f-l
+unova	black	Relic Castle	B3F R	unova-relic-castle-b3f-r
+unova	black	Relic Castle	B4F L	unova-relic-castle-b4f-l
+unova	black	Relic Castle	B4F R	unova-relic-castle-b4f-r
+unova	black	Relic Castle	B5F L	unova-relic-castle-b5f-l
+unova	black	Relic Castle	B5F R	unova-relic-castle-b5f-r
+unova	black	Relic Castle	B6F	unova-relic-castle-b6f
+unova	black	Relic Castle	B7F L	unova-relic-castle-b7f-l
+unova	black	Relic Castle	B7F Maze	unova-relic-castle-b7f-maze
+unova	black	Relic Castle	B7F R	unova-relic-castle-b7f-r
+unova	black	Relic Castle	Deepest Part	unova-relic-castle-deepest-part
+unova	black	Route 1	Main	unova-route-1
+unova	black	Route 10	Main	unova-route-10
+unova	black	Route 11	Main	unova-route-11
+unova	black	Route 12	Main	unova-route-12
+unova	black	Route 13	Main	unova-route-13
+unova	black	Route 14	Main	unova-route-14
+unova	black	Route 15	Main	unova-route-15
+unova	black	Route 16	Main	unova-route-16
+unova	black	Route 17	Main	unova-route-17
+unova	black	Route 18	Main	unova-route-18
+unova	black	Route 2	Main	unova-route-2
+unova	black	Route 3	Main	unova-route-3
+unova	black	Route 4	Main	unova-route-4
+unova	black	Route 5	Main	unova-route-5
+unova	black	Route 6	Main	unova-route-6
+unova	black	Route 7	Main	unova-route-7
+unova	black	Route 8	Main	unova-route-8
+unova	black	Route 9	Main	unova-route-9
+unova	black	Royal Unova	Main	unova-royal-unova
+unova	black	Striaton City	Main	unova-striaton-city
+unova	black	Twist Mountain	Exterior Entrance	unova-twist-mountain-exterior-entrance
+unova	black	Twist Mountain	Exterior Outside	unova-twist-mountain-exterior-outside
+unova	black	Twist Mountain	Lower Level	unova-twist-mountain-lower-level
+unova	black	Twist Mountain	Lowest Level	unova-twist-mountain-lowest-level
+unova	black	Twist Mountain	Middle Level	unova-twist-mountain-middle-level
+unova	black	Twist Mountain	Upper Level	unova-twist-mountain-upper-level
+unova	black	Undella Bay	Main	unova-undella-bay
+unova	black	Undella Town	Main	unova-undella-town
+unova	black	Victory Road	1F L	unova-victory-road-1f-l
+unova	black	Victory Road	1F M	unova-victory-road-1f-m
+unova	black	Victory Road	1F R	unova-victory-road-1f-r
+unova	black	Victory Road	2F L	unova-victory-road-2f-l
+unova	black	Victory Road	2F R	unova-victory-road-2f-r
+unova	black	Victory Road	3F L	unova-victory-road-3f-l
+unova	black	Victory Road	3F M	unova-victory-road-3f-m
+unova	black	Victory Road	3F R	unova-victory-road-3f-r
+unova	black	Victory Road	4F L	unova-victory-road-4f-l
+unova	black	Victory Road	4F M	unova-victory-road-4f-m
+unova	black	Victory Road	4F R	unova-victory-road-4f-r
+unova	black	Victory Road	5F	unova-victory-road-5f
+unova	black	Victory Road	6F Trial Chamber	unova-victory-road-6f-trial-chamber
+unova	black	Victory Road	6F	unova-victory-road-6f
+unova	black	Victory Road	7F	unova-victory-road-7f
+unova	black	Village Bridge	Main	unova-village-bridge
+unova	black	Wellspring Cave	1F	unova-wellspring-cave-1f
+unova	black	Wellspring Cave	B1F	unova-wellspring-cave-b1f
+unova	white	Abundant Shrine	Main	unova-abundant-shrine
+unova	white	Abyssal Ruins	1F	unova-abyssal-ruins-1f
+unova	white	Abyssal Ruins	2F	unova-abyssal-ruins-2f
+unova	white	Abyssal Ruins	3F	unova-abyssal-ruins-3f
+unova	white	Abyssal Ruins	4F	unova-abyssal-ruins-4f
+unova	white	Accumula Town	Main	unova-accumula-town
+unova	white	Anville Town	Main	unova-anville-town
+unova	white	Celestial Tower	1F	unova-celestial-tower-1f
+unova	white	Celestial Tower	2F	unova-celestial-tower-2f
+unova	white	Celestial Tower	3F	unova-celestial-tower-3f
+unova	white	Celestial Tower	4F	unova-celestial-tower-4f
+unova	white	Celestial Tower	5F	unova-celestial-tower-5f
+unova	white	Celestial Tower	Exterior	unova-celestial-tower-exterior
+unova	white	Challenger's Cave	1F	unova-challengers-cave-1f
+unova	white	Challenger's Cave	B1F	unova-challengers-cave-b1f
+unova	white	Challenger's Cave	B2F	unova-challengers-cave-b2f
+unova	white	Cold Storage	Container	unova-cold-storage-container
+unova	white	Cold Storage	Exterior	unova-cold-storage-exterior
+unova	white	Cold Storage	Storage Building	unova-cold-storage-storage-building
+unova	white	Desert Resort	Entrance	unova-desert-resort-entrance
+unova	white	Desert Resort	Resort	unova-desert-resort-resort
+unova	white	Dreamyard Ruins	Main	unova-dreamyard-ruins
+unova	white	Driftveil City	Main	unova-driftveil-city
+unova	white	Giant Chasm	Cave Depths	unova-giant-chasm-cave-depths
+unova	white	Giant Chasm	Cave	unova-giant-chasm-cave
+unova	white	Giant Chasm	Crater Forest	unova-giant-chasm-crater-forest
+unova	white	Giant Chasm	Entrance	unova-giant-chasm-entrance
+unova	white	Icirrus City	Main	unova-icirrus-city
+unova	white	Lacunosa Town	Main	unova-lacunosa-town
+unova	white	Liberty Island	Basement	unova-liberty-garden-basement
+unova	white	Liberty Island	Lighthouse	unova-liberty-garden-lighthouse
+unova	white	Liberty Island	Main	unova-liberty-garden
+unova	white	Mistralton Cave	1F	unova-mistralton-cave-1f
+unova	white	Mistralton Cave	2F	unova-mistralton-cave-2f
+unova	white	Mistralton Cave	3F	unova-mistralton-cave-3f
+unova	white	Mistralton City	Main	unova-mistralton-city
+unova	white	Moor of Icirrus	Main	unova-moor-of-icirrus
+unova	white	Nacrene City	Main	unova-nacrene-city
+unova	white	Nimbasa City	Main	unova-nimbasa-city
+unova	white	N's Castle	4F N's Room	unova-ns-castle-4f-n-room
+unova	white	N's Castle	4F	unova-ns-castle-4f
+unova	white	N's Castle	5F Throne Room	unova-ns-castle-5f-throne-room
+unova	white	N's Castle	5F	unova-ns-castle-5f
+unova	white	Nuvema Town	Main	unova-nuvema-town
+unova	white	Opelucid City	Main	unova-opelucid-city
+unova	white	P2 Laboratory	Exterior	unova-p2-laboratory-exterior
+unova	white	P2 Laboratory	Interior	unova-p2-laboratory-interior
+unova	white	Pinwheel Forest	Main	unova-pinwheel-forest
+unova	white	Pledge Grove	Main	unova-pledge-grove
+unova	white	Relic Castle	1F L	unova-relic-castle-1f-l
+unova	white	Relic Castle	1F R	unova-relic-castle-1f-r
+unova	white	Relic Castle	B1F L	unova-relic-castle-b1f-l
+unova	white	Relic Castle	B1F R	unova-relic-castle-b1f-r
+unova	white	Relic Castle	B2F L	unova-relic-castle-b2f-l
+unova	white	Relic Castle	B2F R	unova-relic-castle-b2f-r
+unova	white	Relic Castle	B3F L	unova-relic-castle-b3f-l
+unova	white	Relic Castle	B3F R	unova-relic-castle-b3f-r
+unova	white	Relic Castle	B4F L	unova-relic-castle-b4f-l
+unova	white	Relic Castle	B4F R	unova-relic-castle-b4f-r
+unova	white	Relic Castle	B5F L	unova-relic-castle-b5f-l
+unova	white	Relic Castle	B5F R	unova-relic-castle-b5f-r
+unova	white	Relic Castle	B6F	unova-relic-castle-b6f
+unova	white	Relic Castle	B7F L	unova-relic-castle-b7f-l
+unova	white	Relic Castle	B7F Maze	unova-relic-castle-b7f-maze
+unova	white	Relic Castle	B7F R	unova-relic-castle-b7f-r
+unova	white	Relic Castle	Deepest Part	unova-relic-castle-deepest-part
+unova	white	Route 1	Main	unova-route-1
+unova	white	Route 10	Main	unova-route-10
+unova	white	Route 11	Main	unova-route-11
+unova	white	Route 12	Main	unova-route-12
+unova	white	Route 13	Main	unova-route-13
+unova	white	Route 14	Main	unova-route-14
+unova	white	Route 15	Main	unova-route-15
+unova	white	Route 16	Main	unova-route-16
+unova	white	Route 17	Main	unova-route-17
+unova	white	Route 18	Main	unova-route-18
+unova	white	Route 2	Main	unova-route-2
+unova	white	Route 3	Main	unova-route-3
+unova	white	Route 4	Main	unova-route-4
+unova	white	Route 5	Main	unova-route-5
+unova	white	Route 6	Main	unova-route-6
+unova	white	Route 7	Main	unova-route-7
+unova	white	Route 8	Main	unova-route-8
+unova	white	Route 9	Main	unova-route-9
+unova	white	Royal Unova	Main	unova-royal-unova
+unova	white	Striaton City	Main	unova-striaton-city
+unova	white	Twist Mountain	Exterior Entrance	unova-twist-mountain-exterior-entrance
+unova	white	Twist Mountain	Exterior Outside	unova-twist-mountain-exterior-outside
+unova	white	Twist Mountain	Lower Level	unova-twist-mountain-lower-level
+unova	white	Twist Mountain	Lowest Level	unova-twist-mountain-lowest-level
+unova	white	Twist Mountain	Middle Level	unova-twist-mountain-middle-level
+unova	white	Twist Mountain	Upper Level	unova-twist-mountain-upper-level
+unova	white	Undella Bay	Main	unova-undella-bay
+unova	white	Undella Town	Main	unova-undella-town
+unova	white	Victory Road	1F L	unova-victory-road-1f-l
+unova	white	Victory Road	1F M	unova-victory-road-1f-m
+unova	white	Victory Road	1F R	unova-victory-road-1f-r
+unova	white	Victory Road	2F L	unova-victory-road-2f-l
+unova	white	Victory Road	2F R	unova-victory-road-2f-r
+unova	white	Victory Road	3F L	unova-victory-road-3f-l
+unova	white	Victory Road	3F M	unova-victory-road-3f-m
+unova	white	Victory Road	3F R	unova-victory-road-3f-r
+unova	white	Victory Road	4F L	unova-victory-road-4f-l
+unova	white	Victory Road	4F M	unova-victory-road-4f-m
+unova	white	Victory Road	4F R	unova-victory-road-4f-r
+unova	white	Victory Road	5F	unova-victory-road-5f
+unova	white	Victory Road	6F Trial Chamber	unova-victory-road-6f-trial-chamber
+unova	white	Victory Road	6F	unova-victory-road-6f
+unova	white	Victory Road	7F	unova-victory-road-7f
+unova	white	Village Bridge	Main	unova-village-bridge
+unova	white	Wellspring Cave	1F	unova-wellspring-cave-1f
+unova	white	Wellspring Cave	B1F	unova-wellspring-cave-b1f
+unova	black2	Abundant Shrine	Main	unova-abundant-shrine
+unova	black2	Abyssal Ruins	1F	unova-abyssal-ruins-1f
+unova	black2	Abyssal Ruins	2F	unova-abyssal-ruins-2f
+unova	black2	Abyssal Ruins	3F	unova-abyssal-ruins-3f
+unova	black2	Abyssal Ruins	4F	unova-abyssal-ruins-4f
+unova	black2	Accumula Town	Main	unova-accumula-town
+unova	black2	Anville Town	Main	unova-anville-town
+unova	black2	Aspertia City	Main	unova-aspertia-city
+unova	black2	Castelia Sewers	Back Rooms	unova-castelia-sewers-back-rooms
+unova	black2	Castelia Sewers	Dry	unova-castelia-sewers-dry
+unova	black2	Castelia Sewers	Flooded	unova-castelia-sewers-flooded
+unova	black2	Cave of Being	Main	unova-cave-of-being
+unova	black2	Celestial Tower	1F	unova-celestial-tower-1f
+unova	black2	Celestial Tower	2F	unova-celestial-tower-2f
+unova	black2	Celestial Tower	3F	unova-celestial-tower-3f
+unova	black2	Celestial Tower	4F	unova-celestial-tower-4f
+unova	black2	Celestial Tower	5F	unova-celestial-tower-5f
+unova	black2	Celestial Tower	Exterior	unova-celestial-tower-exterior
+unova	black2	Chargestone Cave	1F	unova-chargestone-cave-1f
+unova	black2	Chargestone Cave	B1F	unova-chargestone-cave-b1f
+unova	black2	Chargestone Cave	B2F	unova-chargestone-cave-b2f
+unova	black2	Chargestone Cave	Entrance	unova-chargestone-cave-entrance
+unova	black2	Clay Tunnel	Cave 1	unova-clay-tunnel-cave-1
+unova	black2	Clay Tunnel	Cave 2	unova-clay-tunnel-cave-2
+unova	black2	Clay Tunnel	Cave 3	unova-clay-tunnel-cave-3
+unova	black2	Clay Tunnel	Cave 4	unova-clay-tunnel-cave-4
+unova	black2	Desert Resort	Entrance	unova-desert-resort-entrance
+unova	black2	Desert Resort	Resort	unova-desert-resort-resort
+unova	black2	Dreamyard Ruins	Main	unova-dreamyard-ruins
+unova	black2	Driftveil City	Main	unova-driftveil-city
+unova	black2	Floccesy Ranch	Main	unova-floccesy-ranch
+unova	black2	Floccesy Town	Main	unova-floccesy-town
+unova	black2	Giant Chasm	Cave	unova-giant-chasm-cave
+unova	black2	Giant Chasm	Cave Depths	unova-giant-chasm-cave-depths
+unova	black2	Giant Chasm	Crater Forest	unova-giant-chasm-crater-forest
+unova	black2	Giant Chasm	Entrance	unova-giant-chasm-entrance
+unova	black2	Humilau City	Main	unova-humilau-city
+unova	black2	Icirrus City	Main	unova-icirrus-city
+unova	black2	Lacunosa Town	Main	unova-lacunosa-town
+unova	black2	Lentimas Town	Main	unova-lentimas-town
+unova	black2	Liberty Island	Main	unova-liberty-garden
+unova	black2	Liberty Island	Basement	unova-liberty-garden-basement
+unova	black2	Liberty Island	Lighthouse	unova-liberty-garden-lighthouse
+unova	black2	Lostlorn Forest	Main	unova-lostlorn-forest
+unova	black2	Mistralton Cave	1F	unova-mistralton-cave-1f
+unova	black2	Mistralton Cave	2F	unova-mistralton-cave-2f
+unova	black2	Mistralton Cave	3F	unova-mistralton-cave-3f
+unova	black2	Mistralton City	Main	unova-mistralton-city
+unova	black2	Moor of Icirrus	Main	unova-moor-of-icirrus
+unova	black2	Nacrene City	Main	unova-nacrene-city
+unova	black2	Nature Preserve	Main	unova-nature-preserve
+unova	black2	Nimbasa City	Main	unova-nimbasa-city
+unova	black2	N's Castle	4F	unova-ns-castle-4f
+unova	black2	N's Castle	4F N's Room	unova-ns-castle-4f-n-room
+unova	black2	N's Castle	5F	unova-ns-castle-5f
+unova	black2	N's Castle	5F Throne Room	unova-ns-castle-5f-throne-room
+unova	black2	Nuvema Town	Main	unova-nuvema-town
+unova	black2	Opelucid City	Main	unova-opelucid-city
+unova	black2	P2 Laboratory	Exterior	unova-p2-laboratory-exterior
+unova	black2	P2 Laboratory	Interior	unova-p2-laboratory-interior
+unova	black2	Pinwheel Forest	Main	unova-pinwheel-forest
+unova	black2	Pledge Grove	Main	unova-pledge-grove
+unova	black2	Pokémon World Tournament	Exterior	unova-pokemon-world-tournament-exterior
+unova	black2	Pokémon World Tournament	Interior	unova-pokemon-world-tournament-interior
+unova	black2	Pokéstar Studios	Dressing Room	unova-pokestar-studios-dressing-room
+unova	black2	Pokéstar Studios	Film Room	unova-pokestar-studios-film-room
+unova	black2	Pokéstar Studios	Movie Theater	unova-pokestar-studios-movie-theater
+unova	black2	Pokéstar Studios	Plaza	unova-pokestar-studios-plaza
+unova	black2	Pokéstar Studios	Studio	unova-pokestar-studios-studio
+unova	black2	Relic Castle	1F	unova-relic-castle-1f
+unova	black2	Relic Castle	B1F	unova-relic-castle-b1f
+unova	black2	Relic Castle	Deepest Part	unova-relic-castle-deepest-part
+unova	black2	Relic Castle	Lowest Floor	unova-relic-castle-lowest-floor
+unova	black2	Relic Passage	Center	unova-relic-passage-center
+unova	black2	Relic Passage	North	unova-relic-passage-north
+unova	black2	Relic Passage	South	unova-relic-passage-south
+unova	black2	Reversal Mountain	1F	unova-reversal-mountain-1f
+unova	black2	Reversal Mountain	B1F	unova-reversal-mountain-b1f
+unova	black2	Reversal Mountain	Exterior	unova-reversal-mountain-exterior
+unova	black2	Route 1	Main	unova-route-1
+unova	black2	Route 11	Main	unova-route-11
+unova	black2	Route 12	Main	unova-route-12
+unova	black2	Route 13	Main	unova-route-13
+unova	black2	Route 14	Main	unova-route-14
+unova	black2	Route 15	Main	unova-route-15
+unova	black2	Route 16	Main	unova-route-16
+unova	black2	Route 17	Main	unova-route-17
+unova	black2	Route 18	Main	unova-route-18
+unova	black2	Route 19	Main	unova-route-19
+unova	black2	Route 2	Main	unova-route-2
+unova	black2	Route 20	Main	unova-route-20
+unova	black2	Route 21	Main	unova-route-21
+unova	black2	Route 22	Main	unova-route-22
+unova	black2	Route 23	Main	unova-route-23
+unova	black2	Route 3	Main	unova-route-3
+unova	black2	Route 4	Main	unova-route-4
+unova	black2	Route 5	Main	unova-route-5
+unova	black2	Route 6	Main	unova-route-6
+unova	black2	Route 7	Main	unova-route-7
+unova	black2	Route 8	Main	unova-route-8
+unova	black2	Route 9	Main	unova-route-9
+unova	black2	Royal Unova	Main	unova-royal-unova
+unova	black2	Seaside Cave	1F	unova-seaside-cave-1f
+unova	black2	Seaside Cave	B1F	unova-seaside-cave-b1f
+unova	black2	Strange House	1F	unova-strange-house-1f
+unova	black2	Strange House	2F	unova-strange-house-2f
+unova	black2	Strange House	B1F	unova-strange-house-b1f
+unova	black2	Strange House	Entrance	unova-strange-house-entrance
+unova	black2	Striaton City	Main	unova-striaton-city
+unova	black2	Twist Mountain	Exterior Entrance	unova-twist-mountain-exterior-entrance
+unova	black2	Twist Mountain	Exterior Outside	unova-twist-mountain-exterior-outside
+unova	black2	Twist Mountain	Lower Level	unova-twist-mountain-lower-level
+unova	black2	Twist Mountain	Lowest Level 1	unova-twist-mountain-lowest-level-1
+unova	black2	Twist Mountain	Lowest Level 2	unova-twist-mountain-lowest-level-2
+unova	black2	Twist Mountain	Middle Level	unova-twist-mountain-middle-level
+unova	black2	Twist Mountain	Upper Level	unova-twist-mountain-upper-level
+unova	black2	Undella Bay	Main	unova-undella-bay
+unova	black2	Undella Town	Main	unova-undella-town
+unova	black2	Underground Ruins	Entrance	unova-underground-ruins-1
+unova	black2	Underground Ruins	Plain	unova-underground-ruins-2
+unova	black2	Underground Ruins	Iceberg Chamber	unova-underground-ruins-iceberg-chamber
+unova	black2	Underground Ruins	Iron Chamber	unova-underground-ruins-iron-chamber
+unova	black2	Underground Ruins	Rock Peak Chamber	unova-underground-ruins-rock-peak-chamber
+unova	black2	Victory Road	1F L	unova-victory-road-1f-l
+unova	black2	Victory Road	1F M	unova-victory-road-1f-m
+unova	black2	Victory Road	1F R	unova-victory-road-1f-r
+unova	black2	Victory Road	2F L	unova-victory-road-2f-l
+unova	black2	Victory Road	2F R	unova-victory-road-2f-r
+unova	black2	Victory Road	3F L	unova-victory-road-3f-l
+unova	black2	Victory Road	3F M	unova-victory-road-3f-m
+unova	black2	Victory Road	3F R	unova-victory-road-3f-r
+unova	black2	Victory Road	4F L	unova-victory-road-4f-l
+unova	black2	Victory Road	4F M	unova-victory-road-4f-m
+unova	black2	Victory Road	4F R	unova-victory-road-4f-r
+unova	black2	Victory Road	5F	unova-victory-road-5f
+unova	black2	Victory Road	6F	unova-victory-road-6f
+unova	black2	Victory Road	6F Trial Chamber	unova-victory-road-6f-trial-chamber
+unova	black2	Victory Road	7F	unova-victory-road-7f
+unova	black2	Victory Road	1F	unova-victory-road-cave-1f
+unova	black2	Victory Road	2F	unova-victory-road-cave-2f
+unova	black2	Victory Road	2F Back	unova-victory-road-cave-2f-back
+unova	black2	Victory Road	3F	unova-victory-road-cave-3f
+unova	black2	Victory Road	3F Back	unova-victory-road-cave-3f-back
+unova	black2	Victory Road	4F	unova-victory-road-cave-4f
+unova	black2	Victory Road	Exterior Entrance	unova-victory-road-exterior-entrance
+unova	black2	Victory Road	Exterior Grove	unova-victory-road-exterior-grove
+unova	black2	Victory Road	Exterior Outside 1	unova-victory-road-exterior-outside-1
+unova	black2	Victory Road	Exterior Outside 2	unova-victory-road-exterior-outside-2
+unova	black2	Village Bridge	Main	unova-village-bridge
+unova	black2	Virbank City	Main	unova-virbank-city
+unova	black2	Virbank City	Exterior	unova-virbank-complex-exterior
+unova	black2	Virbank City	Interior	unova-virbank-complex-interior
+unova	black2	Wellspring Cave	1F	unova-wellspring-cave-1f
+unova	black2	Wellspring Cave	B1F	unova-wellspring-cave-b1f
+unova	white2	Abundant Shrine	Main	unova-abundant-shrine
+unova	white2	Abyssal Ruins	1F	unova-abyssal-ruins-1f
+unova	white2	Abyssal Ruins	2F	unova-abyssal-ruins-2f
+unova	white2	Abyssal Ruins	3F	unova-abyssal-ruins-3f
+unova	white2	Abyssal Ruins	4F	unova-abyssal-ruins-4f
+unova	white2	Accumula Town	Main	unova-accumula-town
+unova	white2	Anville Town	Main	unova-anville-town
+unova	white2	Aspertia City	Main	unova-aspertia-city
+unova	white2	Castelia Sewers	Back Rooms	unova-castelia-sewers-back-rooms
+unova	white2	Castelia Sewers	Dry	unova-castelia-sewers-dry
+unova	white2	Castelia Sewers	Flooded	unova-castelia-sewers-flooded
+unova	white2	Cave of Being	Main	unova-cave-of-being
+unova	white2	Celestial Tower	1F	unova-celestial-tower-1f
+unova	white2	Celestial Tower	2F	unova-celestial-tower-2f
+unova	white2	Celestial Tower	3F	unova-celestial-tower-3f
+unova	white2	Celestial Tower	4F	unova-celestial-tower-4f
+unova	white2	Celestial Tower	5F	unova-celestial-tower-5f
+unova	white2	Celestial Tower	Exterior	unova-celestial-tower-exterior
+unova	white2	Chargestone Cave	1F	unova-chargestone-cave-1f
+unova	white2	Chargestone Cave	B1F	unova-chargestone-cave-b1f
+unova	white2	Chargestone Cave	B2F	unova-chargestone-cave-b2f
+unova	white2	Chargestone Cave	Entrance	unova-chargestone-cave-entrance
+unova	white2	Clay Tunnel	Cave 1	unova-clay-tunnel-cave-1
+unova	white2	Clay Tunnel	Cave 2	unova-clay-tunnel-cave-2
+unova	white2	Clay Tunnel	Cave 3	unova-clay-tunnel-cave-3
+unova	white2	Clay Tunnel	Cave 4	unova-clay-tunnel-cave-4
+unova	white2	Desert Resort	Entrance	unova-desert-resort-entrance
+unova	white2	Desert Resort	Resort	unova-desert-resort-resort
+unova	white2	Dreamyard Ruins	Main	unova-dreamyard-ruins
+unova	white2	Driftveil City	Main	unova-driftveil-city
+unova	white2	Floccesy Ranch	Main	unova-floccesy-ranch
+unova	white2	Floccesy Town	Main	unova-floccesy-town
+unova	white2	Giant Chasm	Cave	unova-giant-chasm-cave
+unova	white2	Giant Chasm	Cave Depths	unova-giant-chasm-cave-depths
+unova	white2	Giant Chasm	Crater Forest	unova-giant-chasm-crater-forest
+unova	white2	Giant Chasm	Entrance	unova-giant-chasm-entrance
+unova	white2	Humilau City	Main	unova-humilau-city
+unova	white2	Icirrus City	Main	unova-icirrus-city
+unova	white2	Lacunosa Town	Main	unova-lacunosa-town
+unova	white2	Lentimas Town	Main	unova-lentimas-town
+unova	white2	Liberty Island	Main	unova-liberty-garden
+unova	white2	Liberty Island	Basement	unova-liberty-garden-basement
+unova	white2	Liberty Island	Lighthouse	unova-liberty-garden-lighthouse
+unova	white2	Lostlorn Forest	Main	unova-lostlorn-forest
+unova	white2	Mistralton Cave	1F	unova-mistralton-cave-1f
+unova	white2	Mistralton Cave	2F	unova-mistralton-cave-2f
+unova	white2	Mistralton Cave	3F	unova-mistralton-cave-3f
+unova	white2	Mistralton City	Main	unova-mistralton-city
+unova	white2	Moor of Icirrus	Main	unova-moor-of-icirrus
+unova	white2	Nacrene City	Main	unova-nacrene-city
+unova	white2	Nature Preserve	Main	unova-nature-preserve
+unova	white2	Nimbasa City	Main	unova-nimbasa-city
+unova	white2	N's Castle	4F	unova-ns-castle-4f
+unova	white2	N's Castle	4F N's Room	unova-ns-castle-4f-n-room
+unova	white2	N's Castle	5F	unova-ns-castle-5f
+unova	white2	N's Castle	5F Throne Room	unova-ns-castle-5f-throne-room
+unova	white2	Nuvema Town	Main	unova-nuvema-town
+unova	white2	Opelucid City	Main	unova-opelucid-city
+unova	white2	P2 Laboratory	Exterior	unova-p2-laboratory-exterior
+unova	white2	P2 Laboratory	Interior	unova-p2-laboratory-interior
+unova	white2	Pinwheel Forest	Main	unova-pinwheel-forest
+unova	white2	Pledge Grove	Main	unova-pledge-grove
+unova	white2	Pokémon World Tournament	Exterior	unova-pokemon-world-tournament-exterior
+unova	white2	Pokémon World Tournament	Interior	unova-pokemon-world-tournament-interior
+unova	white2	Pokéstar Studios	Dressing Room	unova-pokestar-studios-dressing-room
+unova	white2	Pokéstar Studios	Film Room	unova-pokestar-studios-film-room
+unova	white2	Pokéstar Studios	Movie Theater	unova-pokestar-studios-movie-theater
+unova	white2	Pokéstar Studios	Plaza	unova-pokestar-studios-plaza
+unova	white2	Pokéstar Studios	Studio	unova-pokestar-studios-studio
+unova	white2	Relic Castle	1F	unova-relic-castle-1f
+unova	white2	Relic Castle	B1F	unova-relic-castle-b1f
+unova	white2	Relic Castle	Deepest Part	unova-relic-castle-deepest-part
+unova	white2	Relic Castle	Lowest Floor	unova-relic-castle-lowest-floor
+unova	white2	Relic Passage	Center	unova-relic-passage-center
+unova	white2	Relic Passage	North	unova-relic-passage-north
+unova	white2	Relic Passage	South	unova-relic-passage-south
+unova	white2	Reversal Mountain	1F	unova-reversal-mountain-1f
+unova	white2	Reversal Mountain	B1F	unova-reversal-mountain-b1f
+unova	white2	Reversal Mountain	Exterior	unova-reversal-mountain-exterior
+unova	white2	Route 1	Main	unova-route-1
+unova	white2	Route 11	Main	unova-route-11
+unova	white2	Route 12	Main	unova-route-12
+unova	white2	Route 13	Main	unova-route-13
+unova	white2	Route 14	Main	unova-route-14
+unova	white2	Route 15	Main	unova-route-15
+unova	white2	Route 16	Main	unova-route-16
+unova	white2	Route 17	Main	unova-route-17
+unova	white2	Route 18	Main	unova-route-18
+unova	white2	Route 19	Main	unova-route-19
+unova	white2	Route 2	Main	unova-route-2
+unova	white2	Route 20	Main	unova-route-20
+unova	white2	Route 21	Main	unova-route-21
+unova	white2	Route 22	Main	unova-route-22
+unova	white2	Route 23	Main	unova-route-23
+unova	white2	Route 3	Main	unova-route-3
+unova	white2	Route 4	Main	unova-route-4
+unova	white2	Route 5	Main	unova-route-5
+unova	white2	Route 6	Main	unova-route-6
+unova	white2	Route 7	Main	unova-route-7
+unova	white2	Route 8	Main	unova-route-8
+unova	white2	Route 9	Main	unova-route-9
+unova	white2	Royal Unova	Main	unova-royal-unova
+unova	white2	Seaside Cave	1F	unova-seaside-cave-1f
+unova	white2	Seaside Cave	B1F	unova-seaside-cave-b1f
+unova	white2	Strange House	1F	unova-strange-house-1f
+unova	white2	Strange House	2F	unova-strange-house-2f
+unova	white2	Strange House	B1F	unova-strange-house-b1f
+unova	white2	Strange House	Entrance	unova-strange-house-entrance
+unova	white2	Striaton City	Main	unova-striaton-city
+unova	white2	Twist Mountain	Exterior Entrance	unova-twist-mountain-exterior-entrance
+unova	white2	Twist Mountain	Exterior Outside	unova-twist-mountain-exterior-outside
+unova	white2	Twist Mountain	Lower Level	unova-twist-mountain-lower-level
+unova	white2	Twist Mountain	Lowest Level 1	unova-twist-mountain-lowest-level-1
+unova	white2	Twist Mountain	Lowest Level 2	unova-twist-mountain-lowest-level-2
+unova	white2	Twist Mountain	Middle Level	unova-twist-mountain-middle-level
+unova	white2	Twist Mountain	Upper Level	unova-twist-mountain-upper-level
+unova	white2	Undella Bay	Main	unova-undella-bay
+unova	white2	Undella Town	Main	unova-undella-town
+unova	white2	Underground Ruins	Entrance	unova-underground-ruins-1
+unova	white2	Underground Ruins	Plain	unova-underground-ruins-2
+unova	white2	Underground Ruins	Iceberg Chamber	unova-underground-ruins-iceberg-chamber
+unova	white2	Underground Ruins	Iron Chamber	unova-underground-ruins-iron-chamber
+unova	white2	Underground Ruins	Rock Peak Chamber	unova-underground-ruins-rock-peak-chamber
+unova	white2	Victory Road	1F L	unova-victory-road-1f-l
+unova	white2	Victory Road	1F M	unova-victory-road-1f-m
+unova	white2	Victory Road	1F R	unova-victory-road-1f-r
+unova	white2	Victory Road	2F L	unova-victory-road-2f-l
+unova	white2	Victory Road	2F R	unova-victory-road-2f-r
+unova	white2	Victory Road	3F L	unova-victory-road-3f-l
+unova	white2	Victory Road	3F M	unova-victory-road-3f-m
+unova	white2	Victory Road	3F R	unova-victory-road-3f-r
+unova	white2	Victory Road	4F L	unova-victory-road-4f-l
+unova	white2	Victory Road	4F M	unova-victory-road-4f-m
+unova	white2	Victory Road	4F R	unova-victory-road-4f-r
+unova	white2	Victory Road	5F	unova-victory-road-5f
+unova	white2	Victory Road	6F	unova-victory-road-6f
+unova	white2	Victory Road	6F Trial Chamber	unova-victory-road-6f-trial-chamber
+unova	white2	Victory Road	7F	unova-victory-road-7f
+unova	white2	Victory Road	1F	unova-victory-road-cave-1f
+unova	white2	Victory Road	2F	unova-victory-road-cave-2f
+unova	white2	Victory Road	2F Back	unova-victory-road-cave-2f-back
+unova	white2	Victory Road	3F	unova-victory-road-cave-3f
+unova	white2	Victory Road	3F Back	unova-victory-road-cave-3f-back
+unova	white2	Victory Road	4F	unova-victory-road-cave-4f
+unova	white2	Victory Road	Exterior Entrance	unova-victory-road-exterior-entrance
+unova	white2	Victory Road	Exterior Grove	unova-victory-road-exterior-grove
+unova	white2	Victory Road	Exterior Outside 1	unova-victory-road-exterior-outside-1
+unova	white2	Victory Road	Exterior Outside 2	unova-victory-road-exterior-outside-2
+unova	white2	Village Bridge	Main	unova-village-bridge
+unova	white2	Virbank City	Main	unova-virbank-city
+unova	white2	Virbank City	Exterior	unova-virbank-complex-exterior
+unova	white2	Virbank City	Interior	unova-virbank-complex-interior
+unova	white2	Wellspring Cave	1F	unova-wellspring-cave-1f
+unova	white2	Wellspring Cave	B1F	unova-wellspring-cave-b1f
+kalos	x	Chamber of Emptiness	Main	kalos-chamber-of-emptiness
+kalos	x	Lost Hotel	Main	kalos-lost-hotel
+kalos	x	Lumiose City	Alley	kalos-lumiose-city-alley
+kalos	x	Lumiose City	Centrico Plaza	kalos-lumiose-city-centrico-plaza
+kalos	x	Lumiose City	Middle	kalos-lumiose-city-middle
+kalos	x	Lumiose City	North Boulevard	kalos-lumiose-city-north-boulevard
+kalos	x	Lumiose City	South Boulevard	kalos-lumiose-city-south-boulevard
+kalos	x	Poké Ball Factory	Main	kalos-poke-ball-factory
+kalos	x	Route 1	Main	kalos-route-1
+kalos	x	Route 6	Main	kalos-route-6
+kalos	y	Chamber of Emptiness	Main	kalos-chamber-of-emptiness
+kalos	y	Lost Hotel	Main	kalos-lost-hotel
+kalos	y	Lumiose City	Alley	kalos-lumiose-city-alley
+kalos	y	Lumiose City	Centrico Plaza	kalos-lumiose-city-centrico-plaza
+kalos	y	Lumiose City	Middle	kalos-lumiose-city-middle
+kalos	y	Lumiose City	North Boulevard	kalos-lumiose-city-north-boulevard
+kalos	y	Lumiose City	South Boulevard	kalos-lumiose-city-south-boulevard
+kalos	y	Poké Ball Factory	Main	kalos-poke-ball-factory
+kalos	y	Route 1	Main	kalos-route-1
+kalos	y	Route 6	Main	kalos-route-6
+hoenn	omegaRuby	Fiery Path	Main	hoenn-fiery-path
+hoenn	omegaRuby	Oldale Town	Main	hoenn-oldale-town
+hoenn	omegaRuby	Pacifidlog Town	Main	hoenn-pacifidlog-town
+hoenn	omegaRuby	Petalburg City	Main	hoenn-petalburg-city
+hoenn	omegaRuby	Route 101	Main	hoenn-route-101
+hoenn	omegaRuby	Route 102	Main	hoenn-route-102
+hoenn	omegaRuby	Route 103	Main	hoenn-route-103
+hoenn	omegaRuby	Route 107	Main	hoenn-route-107
+hoenn	omegaRuby	Route 108	Main	hoenn-route-108
+hoenn	omegaRuby	Rusturf Tunnel	Main	hoenn-rusturf-tunnel
+hoenn	omegaRuby	Seaside Cycling Road	Main	hoenn-seaside-cycling-road
+hoenn	omegaRuby	Trick House	End	hoenn-trick-house-end
+hoenn	omegaRuby	Trick House	Entrance	hoenn-trick-house-entrance
+hoenn	omegaRuby	Trick House	Room 1	hoenn-trick-house-room-1
+hoenn	omegaRuby	Trick House	Room 2	hoenn-trick-house-room-2
+hoenn	omegaRuby	Trick House	Room 3	hoenn-trick-house-room-3
+hoenn	omegaRuby	Trick House	Room 4	hoenn-trick-house-room-4
+hoenn	omegaRuby	Trick House	Room 5	hoenn-trick-house-room-5
+hoenn	omegaRuby	Trick House	Room 6	hoenn-trick-house-room-6
+hoenn	alphaSapphire	Fiery Path	Main	hoenn-fiery-path
+hoenn	alphaSapphire	Oldale Town	Main	hoenn-oldale-town
+hoenn	alphaSapphire	Pacifidlog Town	Main	hoenn-pacifidlog-town
+hoenn	alphaSapphire	Petalburg City	Main	hoenn-petalburg-city
+hoenn	alphaSapphire	Route 101	Main	hoenn-route-101
+hoenn	alphaSapphire	Route 102	Main	hoenn-route-102
+hoenn	alphaSapphire	Route 103	Main	hoenn-route-103
+hoenn	alphaSapphire	Route 107	Main	hoenn-route-107
+hoenn	alphaSapphire	Route 108	Main	hoenn-route-108
+hoenn	alphaSapphire	Rusturf Tunnel	Main	hoenn-rusturf-tunnel
+hoenn	alphaSapphire	Seaside Cycling Road	Main	hoenn-seaside-cycling-road
+hoenn	alphaSapphire	Trick House	End	hoenn-trick-house-end
+hoenn	alphaSapphire	Trick House	Entrance	hoenn-trick-house-entrance
+hoenn	alphaSapphire	Trick House	Room 1	hoenn-trick-house-room-1
+hoenn	alphaSapphire	Trick House	Room 2	hoenn-trick-house-room-2
+hoenn	alphaSapphire	Trick House	Room 3	hoenn-trick-house-room-3
+hoenn	alphaSapphire	Trick House	Room 4	hoenn-trick-house-room-4
+hoenn	alphaSapphire	Trick House	Room 5	hoenn-trick-house-room-5
+hoenn	alphaSapphire	Trick House	Room 6	hoenn-trick-house-room-6
+alola	sun	Akala Outskirts	Main	alola-akala-outskirts
+alola	sun	Altar of the Sunne	Main	alola-altar-of-the-sunne
+alola	sun	Berry Fields	House	alola-berry-fields-house
+alola	sun	Berry Fields	Outside	alola-berry-fields-outside
+alola	sun	Brooklet Hill	Totem's Den	alola-brooklet-hill-totems-den
+alola	sun	Brooklet Hill	Main	alola-brooklet-hill
+alola	sun	Diglett's Tunnel	Main	alola-digletts-tunnel
+alola	sun	Dividing Peak Tunnel	Main	alola-dividing-peak-tunnel
+alola	sun	Exeggutor Island	Main	alola-exeggutor-island
+alola	sun	Haina Desert	Area 1	alola-haina-desert-area-1
+alola	sun	Haina Desert	Area 2	alola-haina-desert-area-2
+alola	sun	Haina Desert	Area 3	alola-haina-desert-area-3
+alola	sun	Haina Desert	Area 4	alola-haina-desert-area-4
+alola	sun	Haina Desert	Area 5	alola-haina-desert-area-5
+alola	sun	Haina Desert	Area 6	alola-haina-desert-area-6
+alola	sun	Haina Desert	Area 7	alola-haina-desert-area-7
+alola	sun	Haina Desert	Area 8	alola-haina-desert-area-8
+alola	sun	Hau'oli Cemetery	Main	alola-hauoli-cemetery
+alola	sun	Iki Town	Main	alola-iki-town
+alola	sun	Konikoni City	Main	alola-konikoni-city
+alola	sun	Lake of the Sunne	Altar	alola-lake-of-the-sunne-altar
+alola	sun	Lake of the Sunne	Exterior	alola-lake-of-the-sunne-exterior
+alola	sun	Mahalo Trail	Main	alola-mahalo-trail
+alola	sun	Memorial Hill	Main	alola-memorial-hill
+alola	sun	Po Town	After Defeating Guzma	alola-po-town-after-defeating-guzma
+alola	sun	Po Town	Before Defeating Guzma	alola-po-town-before-defeating-guzma
+alola	sun	Poni Beach	Main	alola-poni-beach
+alola	sun	Poni Coast	Main	alola-poni-coast
+alola	sun	Route 2	Main	alola-route-2
+alola	sun	Route 4	Main	alola-route-4
+alola	sun	Route 6	Main	alola-route-6
+alola	sun	Royal Avenue	Main	alola-royal-avenue
+alola	sun	Ruins of Abundance	Exterior	alola-ruins-of-abundance-exterior
+alola	sun	Ruins of Abundance	Walkway	alola-ruins-of-abundance-walkway
+alola	sun	Ruins of Conflict	Altar	alola-ruins-of-conflict-altar
+alola	sun	Ruins of Conflict	Exterior	alola-ruins-of-conflict-exterior
+alola	sun	Ruins of Conflict	Walkway	alola-ruins-of-conflict-walkway
+alola	sun	Seafolk Village	Main	alola-seafolk-village
+alola	sun	Ten Carat Hill	Farthest Hollow	alola-ten-carat-hill-farthest-hollow
+alola	sun	Ten Carat Hill	Ocean Cave	alola-ten-carat-hill-ocean-cave
+alola	sun	Trainers' School	1F Classroom	alola-trainers-school-1f-classroom
+alola	sun	Trainers' School	1F	alola-trainers-school-1f
+alola	sun	Trainers' School	2F Classroom	alola-trainers-school-2f-classroom
+alola	sun	Trainers' School	2F Teacher's Lounge	alola-trainers-school-2f-teachers-lounge
+alola	sun	Trainers' School	2F	alola-trainers-school-2f
+alola	sun	Trainers' School	3F Classroom	alola-trainers-school-3f-classroom
+alola	sun	Trainers' School	3F	alola-trainers-school-3f
+alola	sun	Trainers' School	Exterior	alola-trainers-school-exterior
+alola	moon	Akala Outskirts	Main	alola-akala-outskirts
+alola	moon	Altar of the Moone	Main	alola-altar-of-the-moone
+alola	moon	Berry Fields	House	alola-berry-fields-house
+alola	moon	Berry Fields	Outside	alola-berry-fields-outside
+alola	moon	Brooklet Hill	Totem's Den	alola-brooklet-hill-totems-den
+alola	moon	Brooklet Hill	Main	alola-brooklet-hill
+alola	moon	Diglett's Tunnel	Main	alola-digletts-tunnel
+alola	moon	Dividing Peak Tunnel	Main	alola-dividing-peak-tunnel
+alola	moon	Exeggutor Island	Main	alola-exeggutor-island
+alola	moon	Haina Desert	Area 1	alola-haina-desert-area-1
+alola	moon	Haina Desert	Area 2	alola-haina-desert-area-2
+alola	moon	Haina Desert	Area 3	alola-haina-desert-area-3
+alola	moon	Haina Desert	Area 4	alola-haina-desert-area-4
+alola	moon	Haina Desert	Area 5	alola-haina-desert-area-5
+alola	moon	Haina Desert	Area 6	alola-haina-desert-area-6
+alola	moon	Haina Desert	Area 7	alola-haina-desert-area-7
+alola	moon	Haina Desert	Area 8	alola-haina-desert-area-8
+alola	moon	Hau'oli Cemetery	Main	alola-hauoli-cemetery
+alola	moon	Iki Town	Main	alola-iki-town
+alola	moon	Konikoni City	Main	alola-konikoni-city
+alola	moon	Lake of the Moone	Altar	alola-lake-of-the-moone-altar
+alola	moon	Lake of the Moone	Exterior	alola-lake-of-the-moone-exterior
+alola	moon	Mahalo Trail	Main	alola-mahalo-trail
+alola	moon	Memorial Hill	Main	alola-memorial-hill
+alola	moon	Po Town	After Defeating Guzma	alola-po-town-after-defeating-guzma
+alola	moon	Po Town	Before Defeating Guzma	alola-po-town-before-defeating-guzma
+alola	moon	Poni Beach	Main	alola-poni-beach
+alola	moon	Poni Coast	Main	alola-poni-coast
+alola	moon	Route 2	Main	alola-route-2
+alola	moon	Route 4	Main	alola-route-4
+alola	moon	Route 6	Main	alola-route-6
+alola	moon	Royal Avenue	Main	alola-royal-avenue
+alola	moon	Ruins of Abundance	Exterior	alola-ruins-of-abundance-exterior
+alola	moon	Ruins of Abundance	Walkway	alola-ruins-of-abundance-walkway
+alola	moon	Ruins of Conflict	Altar	alola-ruins-of-conflict-altar
+alola	moon	Ruins of Conflict	Exterior	alola-ruins-of-conflict-exterior
+alola	moon	Ruins of Conflict	Walkway	alola-ruins-of-conflict-walkway
+alola	moon	Seafolk Village	Main	alola-seafolk-village
+alola	moon	Ten Carat Hill	Farthest Hollow	alola-ten-carat-hill-farthest-hollow
+alola	moon	Ten Carat Hill	Ocean Cave	alola-ten-carat-hill-ocean-cave
+alola	moon	Trainers' School	1F Classroom	alola-trainers-school-1f-classroom
+alola	moon	Trainers' School	1F	alola-trainers-school-1f
+alola	moon	Trainers' School	2F Classroom	alola-trainers-school-2f-classroom
+alola	moon	Trainers' School	2F Teacher's Lounge	alola-trainers-school-2f-teachers-lounge
+alola	moon	Trainers' School	2F	alola-trainers-school-2f
+alola	moon	Trainers' School	3F Classroom	alola-trainers-school-3f-classroom
+alola	moon	Trainers' School	3F	alola-trainers-school-3f
+alola	moon	Trainers' School	Exterior	alola-trainers-school-exterior
+alola	ultraSun	Akala Outskirts	Main	alola-akala-outskirts
+alola	ultraSun	Altar of the Sunne	Main	alola-altar-of-the-sunne
+alola	ultraSun	Berry Fields	House	alola-berry-fields-house
+alola	ultraSun	Berry Fields	Outside	alola-berry-fields-outside
+alola	ultraSun	Brooklet Hill	Main	alola-brooklet-hill
+alola	ultraSun	Brooklet Hill	Totem's Den	alola-brooklet-hill-totems-den
+alola	ultraSun	Diglett's Tunnel	Main	alola-digletts-tunnel
+alola	ultraSun	Dividing Peak Tunnel	Main	alola-dividing-peak-tunnel
+alola	ultraSun	Exeggutor Island	Main	alola-exeggutor-island
+alola	ultraSun	Haina Desert	Area 1	alola-haina-desert-area-1
+alola	ultraSun	Haina Desert	Area 2	alola-haina-desert-area-2
+alola	ultraSun	Haina Desert	Area 3	alola-haina-desert-area-3
+alola	ultraSun	Haina Desert	Area 4	alola-haina-desert-area-4
+alola	ultraSun	Haina Desert	Area 5	alola-haina-desert-area-5
+alola	ultraSun	Haina Desert	Area 6	alola-haina-desert-area-6
+alola	ultraSun	Haina Desert	Area 7	alola-haina-desert-area-7
+alola	ultraSun	Haina Desert	Area 8	alola-haina-desert-area-8
+alola	ultraSun	Hau'oli Cemetery	Main	alola-hauoli-cemetery
+alola	ultraSun	Iki Town	Main	alola-iki-town
+alola	ultraSun	Konikoni City	Main	alola-konikoni-city
+alola	ultraSun	Lake of the Sunne	Altar	alola-lake-of-the-sunne-altar
+alola	ultraSun	Lake of the Sunne	Exterior	alola-lake-of-the-sunne-exterior
+alola	ultraSun	Mahalo Trail	Main	alola-mahalo-trail
+alola	ultraSun	Memorial Hill	Main	alola-memorial-hill
+alola	ultraSun	Plains Grotto	Main	alola-plains-grotto
+alola	ultraSun	Po Town	After Defeating Guzma	alola-po-town-after-defeating-guzma
+alola	ultraSun	Po Town	Before Defeating Guzma	alola-po-town-before-defeating-guzma
+alola	ultraSun	Poni Beach	Main	alola-poni-beach
+alola	ultraSun	Poni Coast	Main	alola-poni-coast
+alola	ultraSun	Route 2	Main	alola-route-2
+alola	ultraSun	Route 4	Main	alola-route-4
+alola	ultraSun	Route 6	Main	alola-route-6
+alola	ultraSun	Royal Avenue	Main	alola-royal-avenue
+alola	ultraSun	Ruins of Abundance	Exterior	alola-ruins-of-abundance-exterior
+alola	ultraSun	Ruins of Abundance	Walkway	alola-ruins-of-abundance-walkway
+alola	ultraSun	Ruins of Conflict	Altar	alola-ruins-of-conflict-altar
+alola	ultraSun	Ruins of Conflict	Exterior	alola-ruins-of-conflict-exterior
+alola	ultraSun	Ruins of Conflict	Walkway	alola-ruins-of-conflict-walkway
+alola	ultraSun	Seafolk Village	Main	alola-seafolk-village
+alola	ultraSun	Ten Carat Hill	Farthest Hollow	alola-ten-carat-hill-farthest-hollow
+alola	ultraSun	Ten Carat Hill	Ocean Cave	alola-ten-carat-hill-ocean-cave
+alola	ultraSun	Trainers' School	1F	alola-trainers-school-1f
+alola	ultraSun	Trainers' School	1F Classroom	alola-trainers-school-1f-classroom
+alola	ultraSun	Trainers' School	2F	alola-trainers-school-2f
+alola	ultraSun	Trainers' School	2F Classroom	alola-trainers-school-2f-classroom
+alola	ultraSun	Trainers' School	2F Teacher's Lounge	alola-trainers-school-2f-teachers-lounge
+alola	ultraSun	Trainers' School	3F	alola-trainers-school-3f
+alola	ultraSun	Trainers' School	3F Classroom	alola-trainers-school-3f-classroom
+alola	ultraSun	Trainers' School	Exterior	alola-trainers-school-exterior
+alola	ultraMoon	Akala Outskirts	Main	alola-akala-outskirts
+alola	ultraMoon	Altar of the Moone	Main	alola-altar-of-the-moone
+alola	ultraMoon	Berry Fields	House	alola-berry-fields-house
+alola	ultraMoon	Berry Fields	Outside	alola-berry-fields-outside
+alola	ultraMoon	Brooklet Hill	Main	alola-brooklet-hill
+alola	ultraMoon	Brooklet Hill	Totem's Den	alola-brooklet-hill-totems-den
+alola	ultraMoon	Diglett's Tunnel	Main	alola-digletts-tunnel
+alola	ultraMoon	Dividing Peak Tunnel	Main	alola-dividing-peak-tunnel
+alola	ultraMoon	Exeggutor Island	Main	alola-exeggutor-island
+alola	ultraMoon	Haina Desert	Area 1	alola-haina-desert-area-1
+alola	ultraMoon	Haina Desert	Area 2	alola-haina-desert-area-2
+alola	ultraMoon	Haina Desert	Area 3	alola-haina-desert-area-3
+alola	ultraMoon	Haina Desert	Area 4	alola-haina-desert-area-4
+alola	ultraMoon	Haina Desert	Area 5	alola-haina-desert-area-5
+alola	ultraMoon	Haina Desert	Area 6	alola-haina-desert-area-6
+alola	ultraMoon	Haina Desert	Area 7	alola-haina-desert-area-7
+alola	ultraMoon	Haina Desert	Area 8	alola-haina-desert-area-8
+alola	ultraMoon	Hau'oli Cemetery	Main	alola-hauoli-cemetery
+alola	ultraMoon	Iki Town	Main	alola-iki-town
+alola	ultraMoon	Konikoni City	Main	alola-konikoni-city
+alola	ultraMoon	Lake of the Moone	Altar	alola-lake-of-the-moone-altar
+alola	ultraMoon	Lake of the Moone	Exterior	alola-lake-of-the-moone-exterior
+alola	ultraMoon	Mahalo Trail	Main	alola-mahalo-trail
+alola	ultraMoon	Memorial Hill	Main	alola-memorial-hill
+alola	ultraMoon	Plains Grotto	Main	alola-plains-grotto
+alola	ultraMoon	Po Town	After Defeating Guzma	alola-po-town-after-defeating-guzma
+alola	ultraMoon	Po Town	Before Defeating Guzma	alola-po-town-before-defeating-guzma
+alola	ultraMoon	Poni Beach	Main	alola-poni-beach
+alola	ultraMoon	Poni Coast	Main	alola-poni-coast
+alola	ultraMoon	Route 2	Main	alola-route-2
+alola	ultraMoon	Route 4	Main	alola-route-4
+alola	ultraMoon	Route 6	Main	alola-route-6
+alola	ultraMoon	Royal Avenue	Main	alola-royal-avenue
+alola	ultraMoon	Ruins of Abundance	Exterior	alola-ruins-of-abundance-exterior
+alola	ultraMoon	Ruins of Abundance	Walkway	alola-ruins-of-abundance-walkway
+alola	ultraMoon	Ruins of Conflict	Altar	alola-ruins-of-conflict-altar
+alola	ultraMoon	Ruins of Conflict	Exterior	alola-ruins-of-conflict-exterior
+alola	ultraMoon	Ruins of Conflict	Walkway	alola-ruins-of-conflict-walkway
+alola	ultraMoon	Seafolk Village	Main	alola-seafolk-village
+alola	ultraMoon	Ten Carat Hill	Farthest Hollow	alola-ten-carat-hill-farthest-hollow
+alola	ultraMoon	Ten Carat Hill	Ocean Cave	alola-ten-carat-hill-ocean-cave
+alola	ultraMoon	Trainers' School	1F	alola-trainers-school-1f
+alola	ultraMoon	Trainers' School	1F Classroom	alola-trainers-school-1f-classroom
+alola	ultraMoon	Trainers' School	2F	alola-trainers-school-2f
+alola	ultraMoon	Trainers' School	2F Classroom	alola-trainers-school-2f-classroom
+alola	ultraMoon	Trainers' School	2F Teacher's Lounge	alola-trainers-school-2f-teachers-lounge
+alola	ultraMoon	Trainers' School	3F	alola-trainers-school-3f
+alola	ultraMoon	Trainers' School	3F Classroom	alola-trainers-school-3f-classroom
+alola	ultraMoon	Trainers' School	Exterior	alola-trainers-school-exterior

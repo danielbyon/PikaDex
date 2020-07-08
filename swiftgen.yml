@@ -1,0 +1,15 @@
+input_dir: Pokedex/Resources
+output_dir: Pokedex/Generated/
+strings:
+  inputs: Base.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift4
+      output: Strings.swift
+xcassets:
+  - inputs: Assets.xcassets
+    outputs:
+      - templateName: swift4
+        output: Assets.swift
+        # params:
+        #   enumName: Asset

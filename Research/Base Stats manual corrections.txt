@@ -1,0 +1,75 @@
+Darmanitan:
+- "Galarian form" -> "Galarian Standard Mode"
+- "Galarian form, Zen Mode" -> "Galarian Zen Mode"
+
+"Galarian form" -> "Galarian PokemonName"
+- Linoone
+- Zigzagoon
+- Corsola
+- Meowth
+- Ponyta
+- Rapidash
+- Farfetch'd
+- Weezing
+- Mr. Mime
+- Darumaka
+- Yamask
+- Stunfisk
+
+Morpeko:
+- Duplicate row, add form names "Full Belly Mode" and "Hangry Mode"
+
+Alcremie:
+- Duplicate rows, add forms
+-- Vanilla Cream
+-- Ruby Cream
+-- Matcha Cream
+-- Mint Cream
+-- Lemon Cream
+-- Salted Cream
+-- Ruby Swirl
+-- Caramel Swirl
+-- Rainbow Swirl
+
+Eternatus:
+- "Eternamax" -> "Eternamax Eternatus"
+
+Sinistea/Polteageist:
+- Add forms "Phony Form" and "Antique Form"
+
+Necrozma
+"Dusk Mane" -> "Dusk Mane Necrozma"
+"Dawn Wings" -> "Dawn Wings Necrozma"
+
+Mimikyu
+Add forms "Disguised Form" and "Busted Form"
+
+Minior
+"Core Form" -> "Core"
+
+Oricorio
+Add forms "Baile Style", "Pom-Pom Style" , "Pa'u Style", "Sensu Style"
+
+Kyurem
+"Kyurem (Normal Kyurem)" -> "Kyurem"
+
+Darmanitan
+"Standard Mode" -> "Darmanitan Standard Mode"
+"Zen Mode" -> "Darmanitan Zen Mode"
+Add "Galarian Darmanitan Standard Mode" and "Galarian Darmanitan Zen Mode"
+
+Keldeo
+Add "Ordinary Form" and "Resolute Form"
+
+Rotom
+Remove "Normal Rotom"
+
+Castform
+Add "Normal", "Sunny Form", "Rainy Form", "Snowy Form"
+
+8th Gen
+Unfezant
+
+Floette
+Add "Eternal Flower"
+

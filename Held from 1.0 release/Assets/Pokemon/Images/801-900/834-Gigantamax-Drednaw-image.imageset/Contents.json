@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "834-Gigantamax-Drednaw-image.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "834-Gigantamax-Drednaw-image-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "834-Gigantamax-Drednaw-image-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

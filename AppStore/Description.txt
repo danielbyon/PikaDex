@@ -1,0 +1,41 @@
+PikaDex is the ULTIMATE encyclopedia for all things in the Pokémon world! This is the best companion app for playing through all the core games, from Red/Blue/Yellow to Sword/Shield.
+
+
+All the information you need to succeed:
+- Pokémon Info
+- Moves
+- Items
+- Locations
+-- Capture methods for each Pokémon
+-- Maps for Generation 5 and earlier
+- Abilities
+- Evolutions
+- Types
+- Natures
+- TMs/HMs/TRs
+
+Dual Type Checker
+Check type effectiveness for dual-type Pokémon, and see all the Pokémon with those types!
+
+Battle Assistant
+Never before seen in any other app, select the Pokémon you're fighting against and its level, and view compiled tactical information in a streamlined interface. No more looking through multiple pages to figure out how to fight it!
+
+Teams
+PikaDex comes with a built-in team builder from the initial release! Keep track of all your teams, specific to each game. Track your Pokémon's stats, moves, natures, held items, and more!
+
+Other Features
+- Dark Mode (!!!)
+- Search in all major lists
+- Filters for Pokémon list
+- Dynamic text sizing for improved readability
+
+
+Disclaimer
+PikaDex is an unofficial app for fans, made by a fan. Thousands of hours by a sole developer have gone into making this the best Pokémon app to help you while playing the games!
+
+This app is not affiliated with Nintendo, GAME FREAK, or The Pokémon Company. Pokémon and Pokémon characters are trademarks of Nintendo. Use of Pokémon characters, images, and information is supported under fair use, no copyright infringement is intended.
+
+If you have any questions, suggestions or corrections, please reach out to me, contact options available in the app!
+
+Credits
+Our preview images were created using 'Previewed' at previewed.app.
