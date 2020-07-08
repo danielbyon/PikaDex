@@ -17,14 +17,19 @@ struct SelectItem: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Text("None")
-                Spacer()
+            Card {
+                HStack {
+                    Text("None")
+                        .monospacedBody()
+                    Spacer()
+                }
             }
             .contentShape(Rectangle())
+            .padding()
             .onTapGesture {
                 self.onSelect(nil)
             }
+
             SearchableList(viewModel: SearchableListViewModel(objects: items), searchPlaceholder: "Search for an item") { item in
                 ItemCell(item: item).onTapGesture {
                     self.onSelect(item)

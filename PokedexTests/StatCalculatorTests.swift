@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Pokepedia
+@testable import PikaDex
 
 class StatCalculatorTests: XCTestCase {
 
