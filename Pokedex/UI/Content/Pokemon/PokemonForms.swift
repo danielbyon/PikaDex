@@ -21,25 +21,16 @@ struct PokemonForms: View {
                     Button(action: {
                         self.currentIndex = i
                     }) {
-                        Text(self.forms[i].name)
-                            .monospacedCaption()
-                            .padding(8)
+                        Image(self.forms[i].spriteName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .padding(2)
                             .background(RoundedRectangle(cornerRadius: 5.0)
                                 .stroke(lineWidth: i == self.currentIndex ? 2 : 0)
                                 .fill(self.backgroundColor)
                                 .animation(.default))
                             .padding(2)
-                        // TODO: 1.0 release
-//                        Image(self.forms[i].spriteName)
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(width: 40, height: 40)
-//                            .padding(2)
-//                            .background(RoundedRectangle(cornerRadius: 5.0)
-//                                .stroke(lineWidth: i == self.currentIndex ? 2 : 0)
-//                                .fill(self.backgroundColor)
-//                                .animation(.default))
-//                            .padding(2)
                     }
                     .buttonStyle(PlainButtonStyle())
                 }

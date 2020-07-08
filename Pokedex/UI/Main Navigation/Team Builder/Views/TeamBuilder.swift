@@ -126,38 +126,36 @@ private struct TeamCell: View {
 
     var body: some View {
         Card {
-            // TODO: 1.0 release
-//            VStack(alignment: .leading) {
-            HStack {
-                Text(team.name)
-                    .monospacedTitle()
-                    .bold()
-                Spacer()
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(team.name)
+                        .monospacedTitle()
+                        .bold()
+                    Spacer()
+                }
+                HStack {
+                    Card(backgroundColor: Color(UIColor.systemGray3)) {
+                        HStack(spacing: 0) {
+                            ForEach(team.members) { member in
+                                if !self.team.isFirstMember(member) {
+                                    Spacer(minLength: 0)
+                                }
+                                PokemonFormSprite(form: member.pokemonForm)
+                            }
+                            if team.members.count < 6 {
+                                ForEach(emptySlots) { i in
+                                    if (self.team.members.count > 0 || i.index > 0) {
+                                        Spacer(minLength: 0)
+                                    }
+                                    Rectangle()
+                                        .fill(Color.clear)
+                                        .frame(width: 40, height: 40.0)
+                                }
+                            }
+                        }
+                    }
+                }
             }
-                // TODO: 1.0 release
-//                HStack {
-//                    Card(backgroundColor: Color(UIColor.systemGray3)) {
-//                        HStack(spacing: 0) {
-//                            ForEach(team.members) { member in
-//                                if !self.team.isFirstMember(member) {
-//                                    Spacer(minLength: 0)
-//                                }
-//                                PokemonFormSprite(form: member.pokemonForm)
-//                            }
-//                            if team.members.count < 6 {
-//                                ForEach(emptySlots) { i in
-//                                    if (self.team.members.count > 0 || i.index > 0) {
-//                                        Spacer(minLength: 0)
-//                                    }
-//                                    Rectangle()
-//                                        .fill(Color.clear)
-//                                        .frame(width: 40, height: 40.0)
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
         }
     }
 }

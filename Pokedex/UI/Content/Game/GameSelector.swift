@@ -64,12 +64,11 @@ struct GameSelectorCell: View {
 
     var body: some View {
         HStack {
-            // TODO: 1.0 release
-//            Image("BoxArt/\(game.rawValue)")
-//                .renderingMode(.original)
-//                .resizable()
-//                .scaledToFit()
-//                .frame(width: 60.0, height: 60.0)
+            Image("BoxArt/\(game.rawValue)")
+                .renderingMode(.original)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 60.0, height: 60.0)
             Text(game.title)
                 .monospacedHeadline()
             Spacer()
