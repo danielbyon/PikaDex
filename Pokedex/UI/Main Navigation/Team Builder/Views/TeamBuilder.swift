@@ -10,9 +10,11 @@ import SwiftUI
 
 struct TeamBuilder: View {
 
+    @Environment(\.editMode) var editMode
     @EnvironmentObject var appContext: AppContext
     @ObservedObject var viewModel: TeamBuilderViewModel
     @State private var currentEditingTeam: TeamViewModel?
+    @State private var isPresentingExportConfirmaton = false
 
     var body: some View {
         Group {
@@ -26,23 +28,42 @@ struct TeamBuilder: View {
                             Button(action: {
                                 self.currentEditingTeam = team
                             }) {
-                                TeamCell(team: team)
-                                    .contextMenu(ContextMenu {
+                                ZStack(alignment: .topTrailing) {
+                                    TeamCell(team: team)
+                                        .contextMenu(ContextMenu {
+                                            Button(action: {
+                                                self.viewModel.deleteTeam(team)
+                                            }) {
+                                                Text("Delete")
+                                            }
+                                            Button(action: {
+                                                self.viewModel.exportTeam(team)
+                                                self.isPresentingExportConfirmaton.toggle()
+                                            }) {
+                                                Text("Export PokéPaste")
+                                            }
+                                        })
+                                    if self.editMode?.wrappedValue.isEditing == true {
                                         Button(action: {
                                             self.viewModel.deleteTeam(team)
                                         }) {
-                                            Text("Delete")
+                                            Image(systemName: "minus.circle.fill")
+                                                .resizable()
+                                                .foregroundColor(Color(.systemRed))
+                                                .frame(width: 20.0, height: 20.0)
+                                                .offset(x: 10.0, y: -10.0)
                                         }
-                                    })
+                                    }
+                                }
                             }
                         }
 
                         if !viewModel.teams.isEmpty {
                             #if targetEnvironment(macCatalyst)
-                            Text("Right-click on a team to remove")
+                            Text("Right-click on a team for options")
                                 .monospacedCaption()
                             #else
-                            Text("Tap and hold on a team to remove")
+                            Text("Tap and hold on a team for options")
                                 .monospacedCaption()
                             #endif
                         }
@@ -52,12 +73,16 @@ struct TeamBuilder: View {
             }
         }
         .navigationBarTitle("Teams", displayMode: .inline)
-        .navigationBarItems(trailing: Button(action: {
-            let newTeam = self.viewModel.addNewTeam()
-            self.currentEditingTeam = newTeam
-        }) {
-            Image(systemName: "plus")
-                .padding([.leading, .top, .bottom])
+        .navigationBarItems(trailing: HStack {
+            Button(action: {
+                let newTeam = self.viewModel.addNewTeam()
+                self.currentEditingTeam = newTeam
+            }) {
+                Image(systemName: "plus")
+                    .padding(8.0)
+            }
+            EditButton()
+                .padding(8.0)
         })
             .sheet(item: self.$currentEditingTeam) { viewModel in
                 NavigationView {
@@ -65,6 +90,12 @@ struct TeamBuilder: View {
                 }
                 .navigationViewStyle(StackNavigationViewStyle())
                 .injectDependencies()
+        }
+        .alert(isPresented: $isPresentingExportConfirmaton) {
+            Alert(
+                title: Text("Copied to clipboard!"),
+                message: Text("Your team has been exported to the PokéPaste format and copied to the clipboard."),
+                dismissButton: .default(Text("Dismiss")))
         }
     }
 
@@ -97,13 +128,13 @@ private struct TeamCell: View {
         Card {
             // TODO: 1.0 release
 //            VStack(alignment: .leading) {
-                HStack {
-                    Text(team.name)
-                        .monospacedTitle()
-                        .bold()
-                    Spacer()
-                }
-            // TODO: 1.0 release
+            HStack {
+                Text(team.name)
+                    .monospacedTitle()
+                    .bold()
+                Spacer()
+            }
+                // TODO: 1.0 release
 //                HStack {
 //                    Card(backgroundColor: Color(UIColor.systemGray3)) {
 //                        HStack(spacing: 0) {

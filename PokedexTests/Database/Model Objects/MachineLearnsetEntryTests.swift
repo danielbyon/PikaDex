@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreData
-@testable import Pokepedia
+@testable import PikaDex
 
 class MachineLearnsetEntryTests: ModelObjectBaseTestCase {
     
