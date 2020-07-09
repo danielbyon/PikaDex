@@ -166,8 +166,7 @@ private struct TeamMemberFormInfo: View {
 
     var body: some View {
         HStack {
-            // TODO: 1.0 release
-//            PokemonFormSprite(form: form)
+            PokemonFormSprite(form: form)
             VStack(alignment: .leading) {
                 Text(resolvedName)
                     .monospacedBody()

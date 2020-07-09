@@ -19,8 +19,7 @@ struct PokemonFormCellInfo: View {
 
     var body: some View {
         HStack {
-            // TODO: 1.0 release
-//            PokemonFormSprite(form: form)
+            PokemonFormSprite(form: form)
             Text(pokemon.pokedexNumberString(forKeyPath: numberKeyPath))
                 .monospacedBody()
                 .frame(alignment: .trailing)

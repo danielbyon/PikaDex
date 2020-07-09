@@ -55,12 +55,11 @@ private struct PokemonEvolution: View {
                 Spacer()
             }
             HStack(spacing: 0) {
-                // TODO: 1.0 release
-//                VStack(spacing: 0) {
-//                    Spacer()
-//                    EvolutionSprite(form: evolution.from, borderColor: Color(evolution.from.color.uiColor))
-//                    Spacer()
-//                }
+                VStack(spacing: 0) {
+                    Spacer()
+                    EvolutionSprite(form: evolution.from, borderColor: Color(evolution.from.color.uiColor))
+                    Spacer()
+                }
                 Spacer(minLength: 8.0)
                 VStack {
                     if evolution.sprite != nil {
@@ -77,12 +76,11 @@ private struct PokemonEvolution: View {
                         .frame(width: 20.0, height: 20.0)
                 }
                 Spacer(minLength: 8.0)
-                // TODO: 1.0 release
-//                VStack(spacing: 0) {
-//                    Spacer()
-//                    EvolutionSprite(form: evolution.to, borderColor: Color(evolution.to.color.uiColor))
-//                    Spacer()
-//                }
+                VStack(spacing: 0) {
+                    Spacer()
+                    EvolutionSprite(form: evolution.to, borderColor: Color(evolution.to.color.uiColor))
+                    Spacer()
+                }
             }
             HStack {
                 Spacer()
@@ -102,20 +100,20 @@ private struct PokemonEvolution: View {
 
 }
 
-//private struct EvolutionSprite: View {
-//
-//    let form: PokemonForm
-//    let borderColor: Color
-//
-//    var body: some View {
-//        PokemonFormSprite(form: form)
-//            .background(
-//                RoundedRectangle(cornerRadius: 4.0)
-//                    .stroke()
-//                    .foregroundColor(borderColor))
-//    }
-//
-//}
+private struct EvolutionSprite: View {
+
+    let form: PokemonForm
+    let borderColor: Color
+
+    var body: some View {
+        PokemonFormSprite(form: form)
+            .background(
+                RoundedRectangle(cornerRadius: 4.0)
+                    .stroke()
+                    .foregroundColor(borderColor))
+    }
+
+}
 
 private extension Evolution {
 

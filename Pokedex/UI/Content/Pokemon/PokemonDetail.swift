@@ -76,9 +76,9 @@ struct PokemonDetail: View {
                                 forms: pokemon.forms,
                                 backgroundColor: Color(self.currentForm.color.uiColor),
                                 currentIndex: $currentFormIndex)
-//                            Text(currentForm.name)
-//                                .monospacedCaption()
-//                                .animation(.none)
+                            Text(currentForm.name)
+                                .monospacedCaption()
+                                .animation(.none)
                         }
                     }
                     .padding(.vertical, verticalPadding)
@@ -177,7 +177,7 @@ struct PokemonDetail: View {
     }
 
     private func makeHeaderView() -> some View {
-//        let image = PokemonImage(form: currentForm)
+        let image = PokemonImage(form: currentForm)
 
         let metadata = VStack(alignment: .leading, spacing: 16.0) {
             VStack(alignment: .leading) {
@@ -196,9 +196,9 @@ struct PokemonDetail: View {
         #if targetEnvironment(macCatalyst)
         return Section {
             HStack(spacing: 16.0) {
-//                image
-//                    .scaledToFit()
-//                    .frame(width: 300, height: 300)
+                image
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
                 metadata
                 Spacer()
             }
@@ -206,16 +206,16 @@ struct PokemonDetail: View {
         #else
         if horizontalSizeClass == .compact {
             return AnyView(Section {
-//                image
-//                    .frame(idealWidth: 300, idealHeight: 300, alignment: .center)
+                image
+                    .frame(idealWidth: 300, idealHeight: 300, alignment: .center)
                 metadata
             })
         } else {
             return AnyView(Section {
                 HStack(spacing: 16.0) {
-//                    image
-//                        .scaledToFit()
-//                        .frame(width: 300, height: 300)
+                    image
+                        .scaledToFit()
+                        .frame(width: 300, height: 300)
                     metadata
                     Spacer()
                 }

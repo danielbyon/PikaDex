@@ -1,0 +1,9 @@
+1. Pokemon list, Sword
+2. Game Selector, Pokemon Sword selected
+3. Battle Assistant, Zacian, level 70
+4. Teams, Pokemon Sword 
+  - My Team, Venusaur, Charizard, Blastoise, Zacian, Zamazenta, Zarude
+  - Gym Battling, Pikachu, Charizard, Corviknight, Arrokuda, Boltund, Rillaboom
+5. Hyper Beam
+6. Galar Mine
+7. Zarude

@@ -25,7 +25,6 @@ struct PokemonTypeEffectiveness: View {
         VStack(spacing: 16) {
             ForEach(0..<(PokemonType.allCases.count / self.numberOfColumns), id: \.self) { row in
                 HStack(spacing: 0) {
-//                    Spacer(minLength: 0)
                     ForEach(0..<self.numberOfColumns, id: \.self) { column in
                         HStack(spacing: 0) {
                             Spacer(minLength: 0)
@@ -33,7 +32,6 @@ struct PokemonTypeEffectiveness: View {
                             Spacer(minLength: 0)
                         }
                     }
-//                    Spacer(minLength: 0)
                 }
             }
         }
