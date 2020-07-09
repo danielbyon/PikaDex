@@ -19,14 +19,8 @@ struct ProductViewModel {
 
     init?(product: SKProduct, discountPercent: Int?, showDescription: Bool) {
         guard let pokepediaProduct = PokepediaProduct(rawValue: product.productIdentifier) else { return nil }
-        let discountSuffix: String
-        if let discountPercent = discountPercent {
-            discountSuffix = ", with a \(discountPercent)% discount compared to purchasing individual games"
-        } else {
-            discountSuffix = ""
-        }
         self.init(
-            description: showDescription ? product.localizedDescription + discountSuffix : nil,
+            description: showDescription ? product.localizedDescription : nil,
             pokepediaProduct: pokepediaProduct,
             price: product.localizedPrice,
             product: product,
@@ -69,9 +63,3 @@ extension ProductViewModel: Identifiable {
     var id: String { title + String(describing: description) + String(describing: price) }
 
 }
-
-private let percentFormatter: NumberFormatter = {
-    let formatter = NumberFormatter()
-    formatter.numberStyle = .percent
-    return formatter
-}()

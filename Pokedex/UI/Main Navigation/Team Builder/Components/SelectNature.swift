@@ -13,12 +13,13 @@ struct SelectNature: View {
     let onSelect: (Nature) -> Void
 
     var body: some View {
-        List {
-            AlternatingBackgroundForEach(Nature.all) { nature in
+        ScrollView {
+            GridView(elements: Nature.all, numberOfItemsPerRow: 2) { nature in
                 NatureCell(viewModel: .init(nature: nature)).onTapGesture {
                     self.onSelect(nature)
                 }
             }
+            .padding()
         }
         .navigationBarTitle("Natures")
     }

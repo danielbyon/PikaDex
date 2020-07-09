@@ -11,24 +11,13 @@ import SwiftUI
 struct StoreHeader: View {
 
     var body: some View {
-        VStack(spacing: 24.0) {
-            Text("Premium Access")
-                .font(.largeTitle)
-                .bold()
-                .centered()
-            Text("Get premium by game family or per console!")
-                .bold()
-            Text("Premium gives the following benefits")
-                .multilineTextAlignment(.center)
-                .font(.callout)
-            VStack(alignment: .leading) {
-                StoreHeaderCell(imageSystemName: "gamecontroller", text: "Game data for each game purchased")
-                StoreHeaderCell(imageSystemName: "checkmark.seal", text: "Unlocks advanced features such as Battle Assistant, Teams, Dual Type Checker, and location maps", detailText: "(Maps are fully supported for Generation 5 and earlier games)")
-                StoreHeaderCell(imageSystemName: "nosign", text: "Never see advertisements")
-                StoreHeaderCell(imageSystemName: "heart", text: "Supports the project and future updates")
-            }
-            .padding(.horizontal, 8.0)
+        VStack(alignment: .leading, spacing: 24.0) {
+            StoreHeaderCell(imageSystemName: "gamecontroller", text: "Game data for all games")
+            StoreHeaderCell(imageSystemName: "checkmark.seal", text: "Unlocks advanced features such as Battle Assistant, Teams, Dual Type Checker, and location maps", detailText: "(Maps are fully supported for Generation 5 and earlier games)")
+            StoreHeaderCell(imageSystemName: "nosign", text: "Never see advertisements")
+            StoreHeaderCell(imageSystemName: "heart", text: "Supports the project and future updates")
         }
+        .padding(.horizontal, 8.0)
     }
 
 }

@@ -20,7 +20,7 @@ struct PokedexTab: View {
 
     private var spacing: CGFloat { 16.0 }
     private var largeButtonHeight: CGFloat { 150.0 }
-    private var mediumButtonHeight: CGFloat { (largeButtonHeight - spacing) * 2.0 / 3.0 }
+    private var mediumButtonHeight: CGFloat { 80 }
     private var smallButtonHeight: CGFloat { (largeButtonHeight - spacing) / 3.0 }
     private var normalItemColor: UIColor { AppColor.gray.uiColor }
     private var machineListTitle: String {
@@ -84,21 +84,21 @@ struct PokedexTab: View {
                             BigColoredButton(title: "Pokémon", fillColor: AppColor.red.uiColor)
                     }
                     .isDetailLink(false)
-                    .frame(minHeight: largeButtonHeight)
+                    .frame(minHeight: mediumButtonHeight)
 
-                    TwoItemGrid(
-                        item1: NavigationLink(destination: MoveList(game: appContext.currentGame)
-                            .injectDependencies(), tag: .moves, selection: $selectedTab) {
-                                BigColoredButton(title: "Moves", fillColor: AppColor.blue.uiColor)
-                        }
-                        .isDetailLink(false),
-                        item2: NavigationLink(destination: LocationList(game: appContext.currentGame)
-                            .injectDependencies(), tag: .locations, selection: $selectedTab) {
-                                BigColoredButton(title: "Locations", fillColor: AppColor.orange.uiColor)
-                        }
-                        .isDetailLink(false),
-                        spacing: spacing)
-                        .frame(minHeight: mediumButtonHeight)
+                    NavigationLink(destination: MoveList(game: appContext.currentGame)
+                        .injectDependencies(), tag: .moves, selection: $selectedTab) {
+                            BigColoredButton(title: "Moves", fillColor: AppColor.blue.uiColor)
+                    }
+                    .isDetailLink(false)
+                    .frame(minHeight: mediumButtonHeight)
+
+                    NavigationLink(destination: LocationList(game: appContext.currentGame)
+                        .injectDependencies(), tag: .locations, selection: $selectedTab) {
+                            BigColoredButton(title: "Locations", fillColor: AppColor.orange.uiColor)
+                    }
+                    .isDetailLink(false)
+                    .frame(minHeight: mediumButtonHeight)
 
                     NavigationLink(destination: ItemList(game: appContext.currentGame)
                         .injectDependencies(), tag: .items, selection: $selectedTab) {
@@ -108,22 +108,18 @@ struct PokedexTab: View {
                     .frame(minHeight: mediumButtonHeight)
 
                     if appContext.currentGame.hasAbilities {
-                        ThreeItemGrid(
-                            item1: NavigationLink(destination: AbilityList(game: appContext.currentGame)
-                                .injectDependencies(), tag: .abilities, selection: $selectedTab) {
-                                    BigColoredButton(title: "Abilities", textColor: .black, fillColor: normalItemColor)
-                            }
-                            .isDetailLink(false),
-                            item2: naturesButton,
-                            item3: typesButton,
-                            spacing: spacing,
-                            largeItemOnLeftSide: false)
-                            .frame(minHeight: largeButtonHeight)
+                        NavigationLink(destination: AbilityList(game: appContext.currentGame)
+                            .injectDependencies(), tag: .abilities, selection: $selectedTab) {
+                                BigColoredButton(title: "Abilities", textColor: .black, fillColor: normalItemColor)
+                        }
+                        .isDetailLink(false)
+
+                        naturesButton
+
+                        typesButton
                     } else {
-                        TwoItemGrid(
-                            item1: naturesButton,
-                            item2: typesButton,
-                            spacing: spacing)
+                        naturesButton
+                        typesButton
                     }
 
                     NavigationLink(destination: MachineList(title: machineListTitle, game: appContext.currentGame)

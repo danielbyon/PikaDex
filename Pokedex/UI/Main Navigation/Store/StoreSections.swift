@@ -27,13 +27,13 @@ struct StoreSections: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 44.0) {
-            StoreSection(header: "Console Bundles", footer: nil, products: consoleProducts, isPurchasing: isPurchasing) {
+            StoreSection(header: nil, footer: nil, products: consoleProducts, isPurchasing: isPurchasing) {
                 self.onTap($0)
             }
 
-            StoreSection(header: "Per Game Family", footer: nil, products: gameProducts, isPurchasing: isPurchasing) {
-                self.onTap($0)
-            }
+//            StoreSection(header: "Per Game Family", footer: nil, products: gameProducts, isPurchasing: isPurchasing) {
+//                self.onTap($0)
+//            }
 
             StoreSection(header: "Tips", footer: tipFooter, products: tipProducts, isPurchasing: isPurchasing) {
                 self.onTap($0)

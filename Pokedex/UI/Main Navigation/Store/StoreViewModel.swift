@@ -124,9 +124,9 @@ final class StoreViewModel: ObservableObject {
         let allConsoleProducts = PokepediaProduct.allConsoleProductsInOrder
             .compactMap { productsByidentifier[$0.productIdentifier] }
             .compactMap { ProductViewModel(product: $0, discountPercent: PokepediaProduct.allBundleDiscounts[$0.productIdentifier], showDescription: true) }
-        let allGameProducts = PokepediaProduct.allGameProductsInOrder
-            .compactMap { productsByidentifier[$0.productIdentifier] }
-            .compactMap { ProductViewModel(product: $0, discountPercent: nil, showDescription: false) }
+//        let allGameProducts = PokepediaProduct.allGameProductsInOrder
+//            .compactMap { productsByidentifier[$0.productIdentifier] }
+//            .compactMap { ProductViewModel(product: $0, discountPercent: nil, showDescription: false) }
         let allTipProducts = PokepediaProduct.allTipProductsInOrder
             .compactMap { productsByidentifier[$0.productIdentifier] }
             .compactMap { ProductViewModel(product: $0, discountPercent: nil, showDescription: false) }
@@ -136,9 +136,9 @@ final class StoreViewModel: ObservableObject {
             if allConsoleProducts != self.allConsoleProducts {
                 self.allConsoleProducts = allConsoleProducts
             }
-            if allGameProducts != self.allGameProducts {
-                self.allGameProducts = allGameProducts
-            }
+//            if allGameProducts != self.allGameProducts {
+//                self.allGameProducts = allGameProducts
+//            }
             if allTipProducts != self.allTipProducts {
                 self.allTipProducts = allTipProducts
             }
@@ -154,17 +154,6 @@ final class StoreViewModel: ObservableObject {
                 message: "Check your network settings and try again.")
             self.error = .init(error: error)
         }
-    }
-
-    private func calculateDiscount(for product: SKProduct, products: [String: SKProduct]) -> Int? {
-        guard let pokepediaProduct = PokepediaProduct(rawValue: product.productIdentifier),
-            let bundleProducts = PokepediaProduct.allBundleProducts[pokepediaProduct] else { return nil }
-        let totalIndividualPrice = bundleProducts.compactMap { products[$0.productIdentifier] }.map { $0.price.doubleValue }.reduce(0.0, +)
-        let bundlePrice = product.price.doubleValue
-        let discount = Int((totalIndividualPrice - bundlePrice) / totalIndividualPrice * 100)
-        guard discount > 0 else { return nil }
-        debugPrint("Calculated a \(discount) discount for \(product.productIdentifier)")
-        return discount
     }
 
 }
