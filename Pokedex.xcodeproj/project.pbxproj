@@ -218,6 +218,8 @@
 		6598259E249E2CEA002BEB17 /* Sequence+UniqueValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6598259D249E2CEA002BEB17 /* Sequence+UniqueValues.swift */; };
 		659825A0249EEE3C002BEB17 /* LocationPokemon+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6598259F249EEE3C002BEB17 /* LocationPokemon+Strings.swift */; };
 		659825A2249F0DAE002BEB17 /* LocationSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659825A1249F0DAE002BEB17 /* LocationSectionHeader.swift */; };
+		659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FC24B7BA9800640EB3 /* Icon.xcassets */; };
+		659AA9FF24B7CF5D00640EB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FE24B7CF5300640EB3 /* Images.xcassets */; };
 		659C7CDB2466C10200E92C1C /* Icon+PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CD72466C10200E92C1C /* Icon+PreviewHelpers.swift */; };
 		659C7CDC2466C10200E92C1C /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CD82466C10200E92C1C /* Icon.swift */; };
 		659C7CE12466F91F00E92C1C /* PokemonFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CE02466F91F00E92C1C /* PokemonFormCell.swift */; };
@@ -572,6 +574,8 @@
 		6598259D249E2CEA002BEB17 /* Sequence+UniqueValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+UniqueValues.swift"; sourceTree = "<group>"; };
 		6598259F249EEE3C002BEB17 /* LocationPokemon+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationPokemon+Strings.swift"; sourceTree = "<group>"; };
 		659825A1249F0DAE002BEB17 /* LocationSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSectionHeader.swift; sourceTree = "<group>"; };
+		659AA9FC24B7BA9800640EB3 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
+		659AA9FE24B7CF5300640EB3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		659C7CD72466C10200E92C1C /* Icon+PreviewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icon+PreviewHelpers.swift"; sourceTree = "<group>"; };
 		659C7CD82466C10200E92C1C /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		659C7CD92466C10200E92C1C /* IconGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconGenerator.swift; sourceTree = "<group>"; };
@@ -857,6 +861,8 @@
 			isa = PBXGroup;
 			children = (
 				6547F7FE237968D50091A083 /* Assets.xcassets */,
+				659AA9FC24B7BA9800640EB3 /* Icon.xcassets */,
+				659AA9FE24B7CF5300640EB3 /* Images.xcassets */,
 				6597D5E623D020F50081482E /* Database */,
 				659C7CD62466C10200E92C1C /* Icon */,
 				6547F803237968D50091A083 /* LaunchScreen.storyboard */,
@@ -1510,8 +1516,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659AA9FF24B7CF5D00640EB3 /* Images.xcassets in Resources */,
 				65A5ED6024A1FC2F00742986 /* Assets.xcassets in Resources */,
 				6547F805237968D50091A083 /* LaunchScreen.storyboard in Resources */,
+				659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */,
 				6597D5EC23D020F50081482E /* Pokedex.sqlite in Resources */,
 				6597D5EB23D020F50081482E /* Pokedex.sqlite-shm in Resources */,
 				6597D5EA23D020F50081482E /* Pokedex.sqlite-wal in Resources */,
@@ -1572,7 +1580,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#[[ \"$ENABLE_PREVIEWS\" = \"NO\" ]] || exit 0\n#[[ \"$MAC_OS_X_VERSION_MAJOR\" -ge \"101500\" ]] || exit 0\n#\n#TMPFILE=`mktemp /tmp/SwiftUIcon.swift.XXXXXX` || exit 1\n#trap \"rm -f $TMPFILE\" EXIT\n#\n#if [ -z \"$SCRIPT_INPUT_FILE_0\" ]\n#then\n#    echo \"error: You must specify your Icon.swift as the first Input File in the Build Phase.\"\n#    exit 1\n#fi\n#\n#cat ${SCRIPT_INPUT_FILE_0%/*}/*.swift > $TMPFILE\n#\n#xcrun -sdk macosx swift $TMPFILE\n";
+			shellScript = "[[ \"$ENABLE_PREVIEWS\" = \"NO\" ]] || exit 0\n[[ \"$MAC_OS_X_VERSION_MAJOR\" -ge \"101500\" ]] || exit 0\n\nTMPFILE=`mktemp /tmp/SwiftUIcon.swift.XXXXXX` || exit 1\ntrap \"rm -f $TMPFILE\" EXIT\n\nif [ -z \"$SCRIPT_INPUT_FILE_0\" ]\nthen\n    echo \"error: You must specify your Icon.swift as the first Input File in the Build Phase.\"\n    exit 1\nfi\n\ncat ${SCRIPT_INPUT_FILE_0%/*}/*.swift > $TMPFILE\n\nxcrun -sdk macosx swift $TMPFILE\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2109,7 +2117,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -2134,7 +2142,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
