@@ -15,10 +15,11 @@ struct NatureList: View {
     var natures: [NatureCellViewModel] { Nature.all.map { .init(nature: $0) } }
 
     var body: some View {
-        List {
-            AlternatingBackgroundForEach(natures) { nature in
+        ScrollView {
+            GridView(elements: natures, numberOfItemsPerRow: 2) { nature in
                 NatureCell(viewModel: nature)
             }
+            .padding()
         }
         .navigationBarTitle("Natures")
         .navigationBarItems(trailing: DoneButton(action: dismiss))
@@ -83,46 +84,47 @@ struct NatureCell: View {
     let viewModel: NatureCellViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8.0) {
-            Text(viewModel.title)
-                .monospacedBody()
-            if viewModel.isNeutral {
-                Text("Neutral")
-                    .foregroundColor(Color(AppColor.red.uiColor))
+        Card {
+            VStack(alignment: .leading, spacing: 8.0) {
+                Text(viewModel.title)
+                    .monospacedBody()
+                if viewModel.isNeutral {
+                    HStack {
+                        Text("Neutral")
+                            .foregroundColor(Color(AppColor.red.uiColor))
+                            .monospacedCaption()
+                        Spacer()
+                    }
+                    Spacer()
+                } else {
+                    VStack(alignment: .leading, spacing: 4.0) {
+                        HStack {
+                            Text(viewModel.increasedStatTitle)
+                                .foregroundColor(Color(AppColor.green.uiColor))
+                            Spacer()
+                        }
+                        HStack {
+                            Text(viewModel.decreasedStatTitle)
+                                .foregroundColor(Color(AppColor.red.uiColor))
+                            Spacer()
+                        }
+                        HStack {
+                            Text(viewModel.likedFlavorTitle)
+                                .foregroundColor(Color(AppColor.green.uiColor))
+                            Spacer()
+                        }
+                        HStack {
+                            Text(viewModel.dislikedFlavorTitle)
+                                .foregroundColor(Color(AppColor.red.uiColor))
+                            Spacer()
+                        }
+                    }
                     .monospacedCaption()
                     .centered()
-            } else {
-                HStack {
-                    HStack(spacing: 0.0) {
-                        Spacer(minLength: 0.0)
-                        Text(viewModel.increasedStatTitle)
-                            .foregroundColor(Color(AppColor.green.uiColor))
-                        Spacer(minLength: 0.0)
-                    }
-                    HStack(spacing: 0.0) {
-                        Spacer(minLength: 0.0)
-                        Text(viewModel.decreasedStatTitle)
-                            .foregroundColor(Color(AppColor.red.uiColor))
-                        Spacer(minLength: 0.0)
-                    }
-                    HStack(spacing: 0.0) {
-                        Spacer(minLength: 0.0)
-                        Text(viewModel.likedFlavorTitle)
-                            .foregroundColor(Color(AppColor.green.uiColor))
-                        Spacer(minLength: 0.0)
-                    }
-                    HStack(spacing: 0.0) {
-                        Spacer(minLength: 0.0)
-                        Text(viewModel.dislikedFlavorTitle)
-                            .foregroundColor(Color(AppColor.red.uiColor))
-                        Spacer(minLength: 0.0)
-                    }
                 }
-                .monospacedCaption()
-                .centered()
             }
+            .contentShape(Rectangle())
         }
-        .contentShape(Rectangle())
     }
 
 }

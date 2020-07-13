@@ -11,7 +11,7 @@ import StoreKit
 
 struct StoreSection: View {
 
-    let header: String
+    let header: String?
     let footer: String?
     let products: [ProductViewModel]
     let isPurchasing: Bool
@@ -23,7 +23,14 @@ struct StoreSection: View {
                 Button(action: {
                     self.onTap(product)
                 }) {
-                    StoreCell(product: product)
+                    Card {
+                        VStack(alignment: .leading, spacing: 16.0) {
+                            StoreCell(product: product)
+                            if product.pokepediaProduct == .allGames {
+                                StoreHeader()
+                            }
+                        }
+                    }
                 }
                 .disabled(self.isPurchasing)
             }
@@ -34,11 +41,13 @@ struct StoreSection: View {
         if !products.isEmpty {
             return AnyView(
                 VStack(alignment: .leading, spacing: 8.0) {
-                    HStack {
-                        Text(header)
-                            .font(.title)
-                            .bold()
-                        Spacer()
+                    if header != nil {
+                        HStack {
+                            Text(header!)
+                                .font(.title)
+                                .bold()
+                            Spacer()
+                        }
                     }
                     cells
                     if footer != nil {

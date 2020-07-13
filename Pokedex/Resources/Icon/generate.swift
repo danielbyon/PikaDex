@@ -53,7 +53,7 @@ guard let deviceFamily = env["TARGETED_DEVICE_FAMILY"],
 let assetCatalogURL = URL(fileURLWithPath: projectPath)
     .appendingPathComponent(project)
     .appendingPathComponent("Resources")
-    .appendingPathComponent("Assets.xcassets")
+    .appendingPathComponent("Icon.xcassets")
 
 renderAppIcon(assetCatalogURL: assetCatalogURL)
 renderLaunchIcon(assetCatalogURL: assetCatalogURL)
