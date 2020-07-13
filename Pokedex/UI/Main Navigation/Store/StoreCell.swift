@@ -14,23 +14,21 @@ struct StoreCell: View {
     let product: ProductViewModel
 
     var body: some View {
-        Card {
-            VStack(alignment: .leading, spacing: 8.0) {
-                HStack(alignment: .firstTextBaseline) {
-                    Text(product.title)
-                        .monospacedHeadline()
-                        .fixedSize(horizontal: false, vertical: true)
-                    Spacer()
-                    if product.price != nil {
-                        Badge(title: product.price!, fillColor: AppColor.red.uiColor)
-                    }
+        VStack(alignment: .leading, spacing: 8.0) {
+            HStack(alignment: .firstTextBaseline) {
+                Text(product.title)
+                    .monospacedHeadline()
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer()
+                if product.price != nil {
+                    Badge(title: product.price!, fillColor: AppColor.red.uiColor)
                 }
-                if product.description != nil {
-                    Text(product.description!)
-                        .monospacedCaption()
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
+            }
+            if product.description != nil {
+                Text(product.description!)
+                    .monospacedCaption()
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
         .contentShape(Rectangle())

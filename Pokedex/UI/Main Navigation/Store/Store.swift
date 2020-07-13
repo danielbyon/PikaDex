@@ -20,7 +20,6 @@ struct Store: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 44.0) {
                     if storeViewModel.hasProducts {
-                        StoreHeader()
                         StoreSections(
                             consoleProducts: storeViewModel.allConsoleProducts,
                             gameProducts: storeViewModel.allGameProducts,
