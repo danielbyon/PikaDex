@@ -1042,7 +1042,7 @@ for bulbapediaItem in bulbapediaItems {
         item.game = game
         item.i_gameIndex = Int32(game.index)
         item.generationIntroduced = generationIntroduced
-        item.imageName = bulbapediaItem.imageName
+        item.imageName = bulbapediaItem.imageName.removingDiacritics()
         item.itemType = .item
 
         let info = BagItemInfo(context: moc)
