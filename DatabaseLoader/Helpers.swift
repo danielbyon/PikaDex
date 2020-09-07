@@ -110,6 +110,10 @@ extension String {
         self = self.removingQuotes()
     }
 
+    func removingDiacritics() -> String {
+        folding(options: .diacriticInsensitive, locale: .current)
+    }
+
 }
 
 // MARK: - Struct Declaration
