@@ -79,12 +79,12 @@ extension PokemonForm: CanonicallyNamed {
 
 }
 
-// MARK: - Identifiable
-extension PokemonForm: Identifiable {
-
-    public var id: String { "\(index) \(formIndex) \(game)" }
-
-}
+//// MARK: - Identifiable
+//extension PokemonForm: Identifiable {
+//
+//    public var id: String { "\(index) \(formIndex) \(game)" }
+//
+//}
 
 // MARK: - Computed Properties
 public extension PokemonForm {

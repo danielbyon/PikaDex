@@ -197,6 +197,11 @@ MANUAL_ITEMS = [
         'generationIntroduced': '8',
         'url': 'https://bulbapedia.bulbagarden.net/wiki/Galarica_Twig',
     },
+    {
+        'name': 'Galarica Wreath',
+        'generationIntroduced': '8',
+        'url': 'https://bulbapedia.bulbagarden.net/wiki/Galarica_Wreath',
+    },
 #    {
 #        'name': '',
 #        'generationIntroduced': '',

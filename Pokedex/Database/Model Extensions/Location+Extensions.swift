@@ -53,12 +53,12 @@ extension Location: CanonicallyNamed {
 
 }
 
-// MARK: - Identifiable
-extension Location: Identifiable {
-
-    public var id: String { name + region.rawValue }
-
-}
+//// MARK: - Identifiable
+//extension Location: Identifiable {
+//
+//    public var id: String { name + region.rawValue }
+//
+//}
 
 // MARK: - Values
 public extension Location {

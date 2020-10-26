@@ -45,12 +45,12 @@ public extension TutorLearnsetEntry {
 
 }
 
-// MARK: - Identifiable
-extension TutorLearnsetEntry: Identifiable {
-
-    public var id: String { move.name }
-
-}
+//// MARK: - Identifiable
+//extension TutorLearnsetEntry: Identifiable {
+//
+//    public var id: String { move.name }
+//
+//}
 
 // MARK: - Values
 public extension TutorLearnsetEntry {

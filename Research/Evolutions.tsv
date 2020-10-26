@@ -64,6 +64,8 @@ Ponyta		Ponyta	Galarian Ponyta	Rapidash	Galarian Rapidash	levelUp	40
 Slowpoke		Slowpoke		Slowbro		levelUp	37		
 Slowpoke		Slowpoke	Galarian Slowpoke	Slowbro	Galarian Slowbro	useItem	Galarica Cuff		
 Slowpoke		Slowpoke		Slowking		tradeHoldingItem	King's Rock		
+Slowpoke	Sword	Slowpoke		Slowking	Galarian Slowking	useItem	Galarica Wreath		
+Slowpoke	Shield	Slowpoke		Slowking	Galarian Slowking	useItem	Galarica Wreath		
 Magnemite		Magnemite		Magneton		levelUp	30		
 Magnemite		Magneton		Magnezone		levelUpInArea	Special magnetic field		
 Farfetch'd		Farfetch'd	Galarian Farfetch'd	Sirfetch'd		completeBattlePerformingAction	3 critical hits in a single battle		

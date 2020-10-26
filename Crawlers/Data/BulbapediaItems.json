@@ -55923,5 +55923,27 @@
     "name": "Galarica Twig",
     "imageName": "galarica-twig",
     "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "other items"
+    },
+    "prices": {
+      "sword": {
+        "cost": "N/A",
+        "sell": "3000"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "3000"
+      }
+    },
+    "descriptions": {
+      "sword": "A wreath made from woven-together Galarica Twigs. Placing it on the head of a Galarian Slowpoke makes the Pok\u00e9mon very happy.",
+      "shield": "A wreath made from woven-together Galarica Twigs. Placing it on the head of a Galarian Slowpoke makes the Pok\u00e9mon very happy."
+    },
+    "name": "Galarica Wreath",
+    "imageName": "galarica-wreath",
+    "generationIntroduced": "8"
   }
 ]

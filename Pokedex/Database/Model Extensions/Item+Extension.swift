@@ -50,12 +50,12 @@ extension Item: CanonicallyNamed {
 
 }
 
-// MARK: - Identifiable
-extension Item: Identifiable {
-
-    public var id: String { name + game.title }
-
-}
+//// MARK: - Identifiable
+//extension Item: Identifiable {
+//
+//    public var id: String { name + game.title }
+//
+//}
 
 // MARK: - Values
 public extension Item {

@@ -1627,5 +1627,23 @@
   },
   "Unseen Fist": {
     "Generation VIII": "If the Pok\u00e9mon uses moves that make direct contact, it can attack the target even if the target protects itself."
+  },
+  "Transistor": {
+    "Generation VIII": "Powers up Electric-type moves."
+  },
+  "Dragon's Maw": {
+    "Generation VIII": "Powers up Dragon-type moves."
+  },
+  "Chilling Neigh": {
+    "Generation VIII": "When the Pok\u00e9mon knocks out a target, it utters a chilling neigh, which boosts its Attack stat."
+  },
+  "Grim Neigh": {
+    "Generation VIII": "When the Pok\u00e9mon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat."
+  },
+  "As One": {
+    "Generation VIII": "This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.*This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.*"
+  },
+  "Curious Medicine": {
+    "Generation VIII": "When the Pok\u00e9mon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies."
   }
 }

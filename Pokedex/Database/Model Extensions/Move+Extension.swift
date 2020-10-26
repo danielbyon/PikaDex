@@ -49,12 +49,12 @@ extension Move: CanonicallyNamed {
 
 }
 
-// MARK: - Identifiable
-extension Move: Identifiable {
-
-    public var id: String { name }
-
-}
+//// MARK: - Identifiable
+//extension Move: Identifiable {
+//
+//    public var id: String { name }
+//
+//}
 
 // MARK: - Properties
 public extension Move {

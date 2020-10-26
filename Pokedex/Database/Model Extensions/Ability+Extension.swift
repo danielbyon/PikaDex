@@ -37,12 +37,12 @@ extension Ability: CanonicallyNamed {
 
 }
 
-// MARK: - Identifiable
-extension Ability: Identifiable {
-
-    public var id: String { name }
-
-}
+//// MARK: - Identifiable
+//extension Ability: Identifiable {
+//
+//    public var id: String { name }
+//
+//}
 
 // MARK: - Properties
 public extension Ability {

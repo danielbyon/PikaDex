@@ -53,6 +53,14 @@ func getPokemon(forName name: String, game: Game) -> Pokemon {
         name = "Boltund"
     } else if name == "Shifty" {
         name = "Shiftry"
+    } else if name == "Grimmsanrl" {
+        name = "Grimmsnarl"
+    } else if name == "Lycnaroc" {
+        name = "Lycanroc"
+    } else if name == "Pinchurchin" {
+        name = "Pincurchin"
+    } else if name == "NidoranM" {
+        name = "Nidoran\u{2642}"
     }
     return allPokemonByName[sanitizedName(name)]![game]!
 }
@@ -135,7 +143,7 @@ for (abilityName, dict) in Helper.loadJSON(from: "Data/Abilities.json") as! [Str
 
     for key in dict.keys {
         let games = gamesForAbilityKey(key)
-        let description = dict[key]?.removingQuotes()
+        let description = dict[key]?.removingQuotes().replacingOccurrences(of: "*", with: " ")
         games?.forEach { game in
             ability.setDescription(description, forGame: game)
         }
@@ -445,6 +453,7 @@ processPokedexNumberTSV(filename: "Research/PokedexNumbers/Alola-Table 1.tsv", d
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/Alola-Table 1.tsv", dictKey: "poni", pokedexNumberKey: #keyPath(PokedexNumbers.z_poni))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/CentralKalos-Table 1.tsv", dictKey: "centralKalos", pokedexNumberKey: #keyPath(PokedexNumbers.z_centralKalos))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/CoastalKalos-Table 1.tsv", dictKey: "coastalKalos", pokedexNumberKey: #keyPath(PokedexNumbers.z_coastalKalos))
+processPokedexNumberTSV(filename: "Research/PokedexNumbers/CrownTundra-Table 1.tsv", dictKey: "crownTundra", pokedexNumberKey: #keyPath(PokedexNumbers.z_crownTundra))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/Galar-Table 1.tsv", dictKey: "galar", pokedexNumberKey: #keyPath(PokedexNumbers.z_galar))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/Hoenn-Table 1.tsv", dictKey: "hoenn", pokedexNumberKey: #keyPath(PokedexNumbers.z_hoenn))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/IsleOfArmor-Table 1.tsv", dictKey: "isleOfArmor", pokedexNumberKey: #keyPath(PokedexNumbers.z_isleOfArmor))
@@ -671,6 +680,18 @@ for (pokemonName, rawMachines) in Helper.loadJSON(from: "Data/LearnsetMachines-T
 
 // MARK: Breeding
 print("Breeding")
+
+func correctBreedingName(_ name: String) -> String {
+    guard name.lowercased().hasPrefix("Nidoran") else { return name }
+    if name == "NidoranM" {
+        return "Nidoran\u{2642}"
+    } else if name == "Lycnaroc" {
+        return "Lycanroc"
+    } else {
+        return name
+    }
+}
+
 var breedingLearnsetEntries: [BreedLearnsetEntry] = []
 for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") as! [String: [String: [String: [String]]]] {
     for (generationKey, moveDicts) in dict {
@@ -683,11 +704,18 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") a
                 guard let move = getMove(forName: moveName, game: game) else {
                     continue
                 }
-                let fathers: [Pokemon] = parentNames.compactMap {
-                    let candidate = getPokemon(forName: $0, game: game)
-                    guard !candidate.forms.isEmpty else { return nil }
-                    return candidate
-                }
+                let fathers: [Pokemon] = parentNames
+                    .filter {
+                        $0 != "Missingno."
+                            && $0 != "866"
+                            && $0 != "Pokémon XD: Gale of Darkness"
+                    }
+                    .compactMap {
+                        let fatherName = correctBreedingName($0)
+                        let candidate = getPokemon(forName: fatherName, game: game)
+                        guard !candidate.forms.isEmpty else { return nil }
+                        return candidate
+                    }
                 for form in forms {
                     let entry = BreedLearnsetEntry(context: moc)
                     entry.form = form
@@ -1066,6 +1094,41 @@ for bulbapediaItem in bulbapediaItems {
         }
     }
 }
+
+// Manual items
+// For items that are now in Sword/Shield, but their individual Bulbapedia
+// wiki pages haven't been updated with Sword/Shield data yet. This copies over
+// the data from UltraSun.
+func insertSwordShieldItem(forName name: String, game: Game) {
+    let usumItem = allItems[sanitizedItemName(name, game: .ultraSun)]![.ultraSun]!
+
+    let item = Item(context: moc)
+    item.name = usumItem.name
+    item.game = game
+    item.i_gameIndex = Int32(game.index)
+    item.generationIntroduced = usumItem.generationIntroduced
+    item.imageName = usumItem.imageName
+    item.itemType = usumItem.itemType
+
+    let info = BagItemInfo(context: moc)
+    info.itemDescription = usumItem.bagInfo!.itemDescription
+    info.cost = usumItem.bagInfo!.cost
+    info.sell = usumItem.bagInfo!.sell
+    info.pocket = usumItem.bagInfo!.pocket
+    item.bagInfo = info
+
+    let key = sanitizedItemName(item.name, game: game)
+    if var items = allItems[key] {
+        items[game] = item
+        allItems[key] = items
+    } else {
+        allItems[key] = [game: item]
+    }
+}
+insertSwordShieldItem(forName: "Electirizer", game: .sword)
+insertSwordShieldItem(forName: "Electirizer", game: .shield)
+insertSwordShieldItem(forName: "Magmarizer", game: .sword)
+insertSwordShieldItem(forName: "Magmarizer", game: .shield)
 
 for dict in Helper.loadTSV(from: "Research/Berries.tsv") {
     let game = Game(rawValue: dict["game"]!)!

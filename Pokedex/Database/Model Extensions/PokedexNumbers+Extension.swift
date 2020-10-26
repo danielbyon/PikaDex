@@ -53,6 +53,7 @@ public extension PokedexNumbers {
         case .sword, .shield:
             retVal.append(("Galar", galar ?? -1))
             retVal.append(("Isle of Armor", isleOfArmor ?? -1))
+            retVal.append(("Crown Tundra", crownTundra ?? -1))
         }
 
         retVal.removeAll { $0.1 == -1 }
@@ -79,6 +80,10 @@ public extension PokedexNumbers {
     var coastalKalos: Int? {
         get { (value(forKeyPath: #keyPath(PokedexNumbers.z_coastalKalos)) as? Int64)?.toInt() }
         set { z_coastalKalos = newValue?.toInt64() ?? 0 }
+    }
+    var crownTundra: Int? {
+        get { (value(forKeyPath: #keyPath(PokedexNumbers.z_crownTundra)) as? Int64)?.toInt() }
+        set { z_crownTundra = newValue?.toInt64() ?? 0 }
     }
     var galar: Int? {
         get { (value(forKeyPath: #keyPath(PokedexNumbers.z_galar)) as? Int64)?.toInt() }

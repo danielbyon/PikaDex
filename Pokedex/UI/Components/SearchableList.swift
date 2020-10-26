@@ -23,6 +23,7 @@ struct SearchableList<Element, Content>: View where Element: NSFetchRequestResul
                 self.content(object)
             }
         }
+        .listStyle(PlainListStyle())
         .avoidKeyboard()
     }
 

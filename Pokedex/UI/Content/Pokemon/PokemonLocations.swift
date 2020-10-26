@@ -65,7 +65,7 @@ struct PokemonLocations_Previews: PreviewProvider {
 
 extension PokemonLocations.LocationSection: Identifiable {
 
-    var id: String { location.id }
+    var id: ObjectIdentifier { location.id }
 
 }
 

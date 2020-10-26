@@ -29,9 +29,9 @@ public extension LocationMap {
 
 }
 
-// MARK: Identifiable
-extension LocationMap: Identifiable {
-
-    public var id: String { location.name + location.game.rawValue + areaName + filename }
-
-}
+//// MARK: Identifiable
+//extension LocationMap: Identifiable {
+//
+//    public var id: String { location.name + location.game.rawValue + areaName + filename }
+//
+//}
