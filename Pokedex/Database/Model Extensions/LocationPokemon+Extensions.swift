@@ -46,22 +46,22 @@ extension LocationPokemon {
 
 }
 
-// MARK: - Identifiable
-extension LocationPokemon: Identifiable {
-
-    public var id: String {
-        pokemon.name
-            + area
-            + captureMethod.rawValue
-            + String(describing: z_encounterRateType)
-            + String(describing: z_encounterRate)
-            + String(levelLow)
-            + String(describing: levelHigh)
-            + encounterCondition
-            + (timeOfDay ?? []).map { $0.rawValue }.joined()
-    }
-
-}
+//// MARK: - Identifiable
+//extension LocationPokemon: Identifiable {
+//
+//    public var id: String {
+//        pokemon.name
+//            + area
+//            + captureMethod.rawValue
+//            + String(describing: z_encounterRateType)
+//            + String(describing: z_encounterRate)
+//            + String(levelLow)
+//            + String(describing: levelHigh)
+//            + encounterCondition
+//            + (timeOfDay ?? []).map { $0.rawValue }.joined()
+//    }
+//
+//}
 
 // MARK: - Properties
 public extension LocationPokemon {

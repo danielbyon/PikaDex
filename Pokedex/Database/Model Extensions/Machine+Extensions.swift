@@ -29,12 +29,12 @@ public extension Machine {
 
 }
 
-// MARK: - Identifiable
-extension Machine: Identifiable {
-
-    public var id: String { "\(number) \(move.name) \(game.rawValue)" }
-
-}
+//// MARK: - Identifiable
+//extension Machine: Identifiable {
+//
+//    public var id: String { "\(number) \(move.name) \(game.rawValue)" }
+//
+//}
 
 // MARK: - Values
 public extension Machine {

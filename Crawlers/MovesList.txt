@@ -814,3 +814,7 @@ Steel Roller
 Flip Turn
 Misty Explosion
 Scorching Sands
+Astral Barrage
+Glacial Lance
+Dragon Energy
+Thunder Cage

@@ -61,6 +61,7 @@ struct MachineList: View {
                 }
             }
         }
+        .listStyle(PlainListStyle())
         .navigationBarTitle(title)
     }
 

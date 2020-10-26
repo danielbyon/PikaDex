@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Ability" representedClassName="Ability" syncable="YES" codeGenerationType="class">
         <attribute name="z_alphaSapphire" optional="YES" attributeType="String"/>
         <attribute name="z_black" optional="YES" attributeType="String"/>
@@ -228,6 +228,7 @@
         <attribute name="z_alola" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_centralKalos" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_coastalKalos" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_crownTundra" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="z_galar" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_hoenn" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_isleOfArmor" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
@@ -358,7 +359,7 @@
         <element name="MachineLearnsetEntry" positionX="36" positionY="189" width="128" height="28"/>
         <element name="Move" positionX="-18" positionY="144" width="128" height="28"/>
         <element name="MoveInfo" positionX="-9" positionY="153" width="128" height="268"/>
-        <element name="PokedexNumbers" positionX="-9" positionY="135" width="128" height="433"/>
+        <element name="PokedexNumbers" positionX="-9" positionY="135" width="128" height="448"/>
         <element name="Pokemon" positionX="160" positionY="192" width="128" height="283"/>
         <element name="PokemonForm" positionX="0" positionY="117" width="128" height="553"/>
         <element name="Stats" positionX="-27" positionY="99" width="128" height="163"/>

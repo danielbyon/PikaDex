@@ -58,12 +58,12 @@ public extension LevelLearnsetEntry {
 
 }
 
-// MARK: - Identifiable
-extension LevelLearnsetEntry: Identifiable {
-
-    public var id: String { "\(move.name) \(level)" }
-
-}
+//// MARK: - Identifiable
+//extension LevelLearnsetEntry: Identifiable {
+//
+//    public var id: String { "\(move.name) \(level)" }
+//
+//}
 
 // MARK: - Values
 public extension LevelLearnsetEntry {

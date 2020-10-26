@@ -15,7 +15,7 @@ struct Settings: View {
 
     var body: some View {
         NavigationView {
-            Form {
+            List {
                 Section(footer: About().padding(.top, 10.0)) {
                     Toggle(isOn: $appSettings.shouldUseKilogramsForWeight) {
                         Text("Show weight in kilograms")
@@ -25,6 +25,7 @@ struct Settings: View {
                     }
                 }
             }
+            .listStyle(PlainListStyle())
             .navigationBarTitle("Settings")
             .navigationBarItems(trailing: DoneButton(action: dismiss))
         }

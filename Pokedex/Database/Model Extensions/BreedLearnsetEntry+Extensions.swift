@@ -44,14 +44,14 @@ public extension BreedLearnsetEntry {
 
 }
 
-// MARK: - Identifiable
-extension BreedLearnsetEntry: Identifiable {
-
-    public var id: String {
-        "\(move.name) \(fathers.compactMap { $0.name }.joined(separator: ","))"
-    }
-
-}
+//// MARK: - Identifiable
+//extension BreedLearnsetEntry: Identifiable {
+//
+//    public var id: String {
+//        "\(move.name) \(fathers.compactMap { $0.name }.joined(separator: ","))"
+//    }
+//
+//}
 
 // MARK: - Values
 public extension BreedLearnsetEntry {

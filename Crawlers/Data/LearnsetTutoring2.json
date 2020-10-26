@@ -931,7 +931,10 @@
     "gen1": {}
   },
   "Nidoqueen": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scorching Sands",
+      "shield": "Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Dragon Pulse,Drill Run,Earth Power,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Icy Wind,Iron Tail,Outrage,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Super Fang,Superpower,Throat Chop,Thunder Punch,Uproar,Water Pulse",
       "ultraMoon": "Aqua Tail,Dragon Pulse,Drill Run,Earth Power,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Icy Wind,Iron Tail,Outrage,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Super Fang,Superpower,Throat Chop,Thunder Punch,Uproar,Water Pulse"
@@ -1018,7 +1021,10 @@
     "gen1": {}
   },
   "Nidoking": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scorching Sands",
+      "shield": "Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Dragon Pulse,Drill Run,Earth Power,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Icy Wind,Iron Tail,Outrage,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Super Fang,Superpower,Throat Chop,Thunder Punch,Uproar,Water Pulse",
       "ultraMoon": "Aqua Tail,Dragon Pulse,Drill Run,Earth Power,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Icy Wind,Iron Tail,Outrage,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Super Fang,Superpower,Throat Chop,Thunder Punch,Uproar,Water Pulse"
@@ -1245,7 +1251,10 @@
     "gen1": {}
   },
   "Zubat": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat",
+      "shield": "Dual Wingbeat"
+    },
     "gen7": {
       "ultraSun": "Defog,Giga Drain,Heat Wave,Snatch,Snore,Super Fang,Tailwind,Uproar,Zen Headbutt",
       "ultraMoon": "Defog,Giga Drain,Heat Wave,Snatch,Snore,Super Fang,Tailwind,Uproar,Zen Headbutt"
@@ -1272,7 +1281,10 @@
     "gen1": {}
   },
   "Golbat": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat",
+      "shield": "Dual Wingbeat"
+    },
     "gen7": {
       "ultraSun": "Defog,Giga Drain,Heat Wave,Snatch,Snore,Super Fang,Tailwind,Uproar,Zen Headbutt",
       "ultraMoon": "Defog,Giga Drain,Heat Wave,Snatch,Snore,Super Fang,Tailwind,Uproar,Zen Headbutt"
@@ -3775,7 +3787,10 @@
     "gen1": {}
   },
   "Jynx": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force,Triple Axel",
+      "shield": "Expanding Force,Triple Axel"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Covet,Drain Punch,Focus Punch,Heal Bell,Helping Hand,Hyper Voice,Ice Punch,Icy Wind,Magic Coat,Magic Room,Recycle,Role Play,Signal Beam,Skill Swap,Snore,Telekinesis,Trick,Water Pulse,Wonder Room,Zen Headbutt",
       "ultraMoon": "Ally Switch,Covet,Drain Punch,Focus Punch,Heal Bell,Helping Hand,Hyper Voice,Ice Punch,Icy Wind,Magic Coat,Magic Room,Recycle,Role Play,Signal Beam,Skill Swap,Snore,Telekinesis,Trick,Water Pulse,Wonder Room,Zen Headbutt"
@@ -3804,7 +3819,10 @@
     "gen1": {}
   },
   "Electabuzz": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Rising Voltage",
+      "shield": "Rising Voltage"
+    },
     "gen7": {
       "ultraSun": "Covet,Dual Chop,Electroweb,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Iron Tail,Low Kick,Magnet Rise,Shock Wave,Signal Beam,Snore,Thunder Punch",
       "ultraMoon": "Covet,Dual Chop,Electroweb,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Iron Tail,Low Kick,Magnet Rise,Shock Wave,Signal Beam,Snore,Thunder Punch"
@@ -3833,7 +3851,10 @@
     "gen1": {}
   },
   "Magmar": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Burning Jealousy,Scorching Sands",
+      "shield": "Burning Jealousy,Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Covet,Dual Chop,Fire Punch,Focus Punch,Heat Wave,Helping Hand,Iron Tail,Low Kick,Snore,Thunder Punch",
       "ultraMoon": "Covet,Dual Chop,Fire Punch,Focus Punch,Heat Wave,Helping Hand,Iron Tail,Low Kick,Snore,Thunder Punch"
@@ -4169,7 +4190,10 @@
     "gen1": {}
   },
   "Omanyte": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Bind,Earth Power,Icy Wind,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse",
       "ultraMoon": "Bind,Earth Power,Icy Wind,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse"
@@ -4198,7 +4222,10 @@
     "gen1": {}
   },
   "Omastar": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Bind,Earth Power,Icy Wind,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse",
       "ultraMoon": "Bind,Earth Power,Icy Wind,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse"
@@ -4227,7 +4254,10 @@
     "gen1": {}
   },
   "Kabuto": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Earth Power,Giga Drain,Icy Wind,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse",
       "ultraMoon": "Earth Power,Giga Drain,Icy Wind,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse"
@@ -4256,7 +4286,10 @@
     "gen1": {}
   },
   "Kabutops": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Flip Turn,Meteor Beam",
+      "shield": "Flip Turn,Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Earth Power,Giga Drain,Icy Wind,Iron Defense,Knock Off,Liquidation,Low Kick,Snore,Stealth Rock,Superpower,Water Pulse",
       "ultraMoon": "Aqua Tail,Earth Power,Giga Drain,Icy Wind,Iron Defense,Knock Off,Liquidation,Low Kick,Snore,Stealth Rock,Superpower,Water Pulse"
@@ -4285,7 +4318,10 @@
     "gen1": {}
   },
   "Aerodactyl": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Meteor Beam",
+      "shield": "Dual Wingbeat,Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Defog,Dragon Pulse,Earth Power,Heat Wave,Iron Head,Iron Tail,Laser Focus,Sky Attack,Snore,Stealth Rock,Tailwind",
       "ultraMoon": "Aqua Tail,Defog,Dragon Pulse,Earth Power,Heat Wave,Iron Head,Iron Tail,Laser Focus,Sky Attack,Snore,Stealth Rock,Tailwind"
@@ -4346,7 +4382,12 @@
     "gen1": {}
   },
   "Articuno": {
-    "gen8": {},
+    "gen8": {
+      "sword.Articuno": "Dual Wingbeat,Triple Axel",
+      "sword.Galarian Articuno": "Dual Wingbeat,Triple Axel",
+      "shield.Articuno": "Dual Wingbeat,Triple Axel",
+      "shield.Galarian Articuno": "Dual Wingbeat,Triple Axel"
+    },
     "gen7": {
       "ultraSun": "Defog,Icy Wind,Laser Focus,Signal Beam,Sky Attack,Snore,Tailwind,Water Pulse",
       "ultraMoon": "Defog,Icy Wind,Laser Focus,Signal Beam,Sky Attack,Snore,Tailwind,Water Pulse"
@@ -4375,7 +4416,12 @@
     "gen1": {}
   },
   "Zapdos": {
-    "gen8": {},
+    "gen8": {
+      "sword.Zapdos": "Dual Wingbeat,Rising Voltage",
+      "sword.Galarian Zapdos": "Dual Wingbeat,Rising Voltage",
+      "shield.Zapdos": "Dual Wingbeat,Rising Voltage",
+      "shield.Galarian Zapdos": "Dual Wingbeat,Rising Voltage"
+    },
     "gen7": {
       "ultraSun": "Defog,Heat Wave,Laser Focus,Shock Wave,Signal Beam,Sky Attack,Snore,Tailwind",
       "ultraMoon": "Defog,Heat Wave,Laser Focus,Shock Wave,Signal Beam,Sky Attack,Snore,Tailwind"
@@ -4404,7 +4450,12 @@
     "gen1": {}
   },
   "Moltres": {
-    "gen8": {},
+    "gen8": {
+      "sword.Moltres": "Burning Jealousy,Dual Wingbeat,Scorching Sands",
+      "sword.Galarian Moltres": "Burning Jealousy,Dual Wingbeat,Scorching Sands",
+      "shield.Moltres": "Burning Jealousy,Dual Wingbeat,Scorching Sands",
+      "shield.Galarian Moltres": "Burning Jealousy,Dual Wingbeat,Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Defog,Heat Wave,Laser Focus,Sky Attack,Snore,Tailwind",
       "ultraMoon": "Defog,Heat Wave,Laser Focus,Sky Attack,Snore,Tailwind"
@@ -4433,7 +4484,10 @@
     "gen1": {}
   },
   "Dratini": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scale Shot",
+      "shield": "Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -4470,7 +4524,10 @@
     "gen1": {}
   },
   "Dragonair": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scale Shot",
+      "shield": "Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -4507,7 +4564,10 @@
     "gen1": {}
   },
   "Dragonite": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Scale Shot",
+      "shield": "Dual Wingbeat,Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -5128,7 +5188,10 @@
     "gen2": {}
   },
   "Crobat": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat",
+      "shield": "Dual Wingbeat"
+    },
     "gen7": {
       "ultraSun": "Defog,Giga Drain,Heat Wave,Sky Attack,Snatch,Snore,Super Fang,Tailwind,Uproar,Zen Headbutt",
       "ultraMoon": "Defog,Giga Drain,Heat Wave,Sky Attack,Snatch,Snore,Super Fang,Tailwind,Uproar,Zen Headbutt"
@@ -7174,7 +7237,10 @@
     }
   },
   "Raikou": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Rising Voltage",
+      "shield": "Rising Voltage"
+    },
     "gen7": {
       "ultraSun": "Iron Head,Iron Tail,Laser Focus,Magnet Rise,Shock Wave,Signal Beam,Snore,Throat Chop",
       "ultraMoon": "Iron Head,Iron Tail,Laser Focus,Magnet Rise,Shock Wave,Signal Beam,Snore,Throat Chop"
@@ -7202,7 +7268,10 @@
     }
   },
   "Entei": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scorching Sands",
+      "shield": "Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Heat Wave,Iron Head,Iron Tail,Laser Focus,Snore,Stomping Tantrum",
       "ultraMoon": "Heat Wave,Iron Head,Iron Tail,Laser Focus,Snore,Stomping Tantrum"
@@ -7341,7 +7410,10 @@
     }
   },
   "Lugia": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Scale Shot",
+      "shield": "Dual Wingbeat,Scale Shot"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Defog,Dragon Pulse,Earth Power,Giga Drain,Hyper Voice,Icy Wind,Iron Head,Iron Tail,Laser Focus,Shock Wave,Signal Beam,Skill Swap,Sky Attack,Snore,Tailwind,Telekinesis,Trick,Water Pulse,Wonder Room,Zen Headbutt",
       "ultraMoon": "Aqua Tail,Defog,Dragon Pulse,Earth Power,Giga Drain,Hyper Voice,Icy Wind,Iron Head,Iron Tail,Laser Focus,Shock Wave,Signal Beam,Skill Swap,Sky Attack,Snore,Tailwind,Telekinesis,Trick,Water Pulse,Wonder Room,Zen Headbutt"
@@ -7369,7 +7441,10 @@
     }
   },
   "Ho-oh": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Scorching Sands",
+      "shield": "Dual Wingbeat,Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Defog,Earth Power,Giga Drain,Heat Wave,Hyper Voice,Iron Head,Laser Focus,Shock Wave,Signal Beam,Sky Attack,Snore,Tailwind,Zen Headbutt",
       "ultraMoon": "Defog,Earth Power,Giga Drain,Heat Wave,Hyper Voice,Iron Head,Laser Focus,Shock Wave,Signal Beam,Sky Attack,Snore,Tailwind,Zen Headbutt"
@@ -7426,7 +7501,10 @@
     "gen2": {}
   },
   "Treecko": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Grassy Glide",
+      "shield": "Grassy Glide"
+    },
     "gen7": {
       "sun": "Grass Pledge",
       "moon": "Grass Pledge",
@@ -7457,7 +7535,10 @@
     }
   },
   "Grovyle": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Grassy Glide",
+      "shield": "Grassy Glide"
+    },
     "gen7": {
       "sun": "Grass Pledge",
       "moon": "Grass Pledge",
@@ -7488,7 +7569,10 @@
     }
   },
   "Sceptile": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Grassy Glide,Scale Shot",
+      "shield": "Grassy Glide,Scale Shot"
+    },
     "gen7": {
       "sun": "Frenzy Plant,Grass Pledge",
       "moon": "Frenzy Plant,Grass Pledge",
@@ -7552,7 +7636,10 @@
     }
   },
   "Combusken": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Coaching",
+      "shield": "Coaching"
+    },
     "gen7": {
       "sun": "Fire Pledge",
       "moon": "Fire Pledge",
@@ -7583,7 +7670,10 @@
     }
   },
   "Blaziken": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Coaching,Scorching Sands",
+      "shield": "Coaching,Scorching Sands"
+    },
     "gen7": {
       "sun": "Blast Burn,Fire Pledge",
       "moon": "Blast Burn,Fire Pledge",
@@ -7678,7 +7768,10 @@
     }
   },
   "Swampert": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Flip Turn",
+      "shield": "Flip Turn"
+    },
     "gen7": {
       "sun": "Hydro Cannon,Water Pledge",
       "moon": "Hydro Cannon,Water Pledge",
@@ -8828,7 +8921,10 @@
     }
   },
   "Aron": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Steel Roller",
+      "shield": "Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Earth Power,Endeavor,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Shock Wave,Snore,Spite,Stealth Rock,Superpower,Uproar,Water Pulse",
       "ultraMoon": "Earth Power,Endeavor,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Shock Wave,Snore,Spite,Stealth Rock,Superpower,Uproar,Water Pulse"
@@ -8853,7 +8949,10 @@
     }
   },
   "Lairon": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Steel Roller",
+      "shield": "Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Earth Power,Endeavor,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Shock Wave,Snore,Spite,Stealth Rock,Stomping Tantrum,Superpower,Uproar,Water Pulse",
       "ultraMoon": "Earth Power,Endeavor,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Shock Wave,Snore,Spite,Stealth Rock,Stomping Tantrum,Superpower,Uproar,Water Pulse"
@@ -8878,7 +8977,10 @@
     }
   },
   "Aggron": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Steel Roller",
+      "shield": "Meteor Beam,Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Block,Dragon Pulse,Earth Power,Endeavor,Fire Punch,Focus Punch,Ice Punch,Icy Wind,Iron Defense,Iron Head,Iron Tail,Low Kick,Magnet Rise,Outrage,Shock Wave,Snore,Spite,Stealth Rock,Stomping Tantrum,Superpower,Thunder Punch,Uproar,Water Pulse",
       "ultraMoon": "Aqua Tail,Block,Dragon Pulse,Earth Power,Endeavor,Fire Punch,Focus Punch,Ice Punch,Icy Wind,Iron Defense,Iron Head,Iron Tail,Low Kick,Magnet Rise,Outrage,Shock Wave,Snore,Spite,Stealth Rock,Stomping Tantrum,Superpower,Thunder Punch,Uproar,Water Pulse"
@@ -9602,7 +9704,10 @@
     }
   },
   "Swablu": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat",
+      "shield": "Dual Wingbeat"
+    },
     "gen7": {
       "ultraSun": "Defog,Dragon Pulse,Heal Bell,Heat Wave,Hyper Voice,Outrage,Sky Attack,Snore,Tailwind,Uproar",
       "ultraMoon": "Defog,Dragon Pulse,Heal Bell,Heat Wave,Hyper Voice,Outrage,Sky Attack,Snore,Tailwind,Uproar"
@@ -9627,7 +9732,10 @@
     }
   },
   "Altaria": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat",
+      "shield": "Dual Wingbeat"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -9925,7 +10033,10 @@
     }
   },
   "Lileep": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Bind,Earth Power,Gastro Acid,Giga Drain,Pain Split,Seed Bomb,Snore,Stealth Rock,Synthesis,Worry Seed",
       "ultraMoon": "Bind,Earth Power,Gastro Acid,Giga Drain,Pain Split,Seed Bomb,Snore,Stealth Rock,Synthesis,Worry Seed"
@@ -9950,7 +10061,10 @@
     }
   },
   "Cradily": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Bind,Block,Earth Power,Gastro Acid,Giga Drain,Pain Split,Seed Bomb,Snore,Stealth Rock,Synthesis,Worry Seed",
       "ultraMoon": "Bind,Block,Earth Power,Gastro Acid,Giga Drain,Pain Split,Seed Bomb,Snore,Stealth Rock,Synthesis,Worry Seed"
@@ -9975,7 +10089,10 @@
     }
   },
   "Anorith": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Bug Bite,Earth Power,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse",
       "ultraMoon": "Bug Bite,Earth Power,Iron Defense,Knock Off,Snore,Stealth Rock,Water Pulse"
@@ -10000,7 +10117,10 @@
     }
   },
   "Armaldo": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Block,Bug Bite,Earth Power,Iron Defense,Iron Tail,Knock Off,Liquidation,Low Kick,Snore,Stealth Rock,Stomping Tantrum,Superpower,Water Pulse",
       "ultraMoon": "Aqua Tail,Block,Bug Bite,Earth Power,Iron Defense,Iron Tail,Knock Off,Liquidation,Low Kick,Snore,Stealth Rock,Stomping Tantrum,Superpower,Water Pulse"
@@ -10373,7 +10493,10 @@
     }
   },
   "Spheal": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Steel Roller",
+      "shield": "Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Icy Wind,Iron Tail,Signal Beam,Snore,Super Fang,Water Pulse",
       "ultraMoon": "Aqua Tail,Icy Wind,Iron Tail,Signal Beam,Snore,Super Fang,Water Pulse"
@@ -10398,7 +10521,10 @@
     }
   },
   "Sealeo": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Steel Roller",
+      "shield": "Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Icy Wind,Iron Tail,Signal Beam,Snore,Super Fang,Water Pulse",
       "ultraMoon": "Aqua Tail,Icy Wind,Iron Tail,Signal Beam,Snore,Super Fang,Water Pulse"
@@ -10423,7 +10549,10 @@
     }
   },
   "Walrein": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Steel Roller",
+      "shield": "Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Block,Icy Wind,Iron Head,Iron Tail,Signal Beam,Snore,Stomping Tantrum,Super Fang,Water Pulse",
       "ultraMoon": "Aqua Tail,Block,Icy Wind,Iron Head,Iron Tail,Signal Beam,Snore,Stomping Tantrum,Super Fang,Water Pulse"
@@ -10523,7 +10652,10 @@
     }
   },
   "Relicanth": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Scale Shot",
+      "shield": "Meteor Beam,Scale Shot"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Bounce,Earth Power,Icy Wind,Snore,Stealth Rock,Stomping Tantrum,Water Pulse,Zen Headbutt",
       "ultraMoon": "Aqua Tail,Bounce,Earth Power,Icy Wind,Snore,Stealth Rock,Stomping Tantrum,Water Pulse,Zen Headbutt"
@@ -10639,7 +10771,10 @@
     }
   },
   "Salamence": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat",
+      "shield": "Dual Wingbeat"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -10693,7 +10828,10 @@
     "gen3": {}
   },
   "Metang": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force,Meteor Beam,Steel Roller",
+      "shield": "Expanding Force,Meteor Beam,Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Gravity,Ice Punch,Icy Wind,Iron Defense,Iron Head,Magnet Rise,Signal Beam,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Zen Headbutt",
       "ultraMoon": "Ally Switch,Gravity,Ice Punch,Icy Wind,Iron Defense,Iron Head,Magnet Rise,Signal Beam,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Zen Headbutt"
@@ -10718,7 +10856,10 @@
     }
   },
   "Metagross": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force,Meteor Beam,Steel Roller",
+      "shield": "Expanding Force,Meteor Beam,Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Block,Gravity,Ice Punch,Icy Wind,Iron Defense,Iron Head,Laser Focus,Magnet Rise,Signal Beam,Snore,Stealth Rock,Stomping Tantrum,Telekinesis,Thunder Punch,Trick,Zen Headbutt",
       "ultraMoon": "Ally Switch,Block,Gravity,Ice Punch,Icy Wind,Iron Defense,Iron Head,Laser Focus,Magnet Rise,Signal Beam,Snore,Stealth Rock,Stomping Tantrum,Telekinesis,Thunder Punch,Trick,Zen Headbutt"
@@ -10743,7 +10884,10 @@
     }
   },
   "Regirock": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Block,Drain Punch,Earth Power,Fire Punch,Focus Punch,Gravity,Ice Punch,Iron Defense,Iron Head,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Superpower,Thunder Punch",
       "ultraMoon": "Block,Drain Punch,Earth Power,Fire Punch,Focus Punch,Gravity,Ice Punch,Iron Defense,Iron Head,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Superpower,Thunder Punch"
@@ -10793,7 +10937,10 @@
     }
   },
   "Registeel": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Steel Roller",
+      "shield": "Meteor Beam,Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Block,Focus Punch,Gravity,Ice Punch,Iron Defense,Iron Head,Magnet Rise,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Superpower,Thunder Punch",
       "ultraMoon": "Block,Focus Punch,Gravity,Ice Punch,Iron Defense,Iron Head,Magnet Rise,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Superpower,Thunder Punch"
@@ -10818,7 +10965,10 @@
     }
   },
   "Latias": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Scale Shot",
+      "shield": "Dual Wingbeat,Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -10851,7 +11001,10 @@
     }
   },
   "Latios": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Scale Shot",
+      "shield": "Dual Wingbeat,Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -10909,7 +11062,10 @@
     }
   },
   "Groudon": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scorching Sands",
+      "shield": "Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Block,Dragon Pulse,Earth Power,Fire Punch,Iron Head,Iron Tail,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Thunder Punch,Uproar",
       "ultraMoon": "Block,Dragon Pulse,Earth Power,Fire Punch,Iron Head,Iron Tail,Shock Wave,Snore,Stealth Rock,Stomping Tantrum,Thunder Punch,Uproar"
@@ -10934,7 +11090,10 @@
     }
   },
   "Rayquaza": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Scale Shot",
+      "shield": "Meteor Beam,Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor,Dragon Ascent",
       "moon": "Draco Meteor,Dragon Ascent",
@@ -12278,7 +12437,10 @@
     }
   },
   "Spiritomb": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Burning Jealousy,Lash Out,Poltergeist",
+      "shield": "Burning Jealousy,Lash Out,Poltergeist"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Foul Play,Icy Wind,Pain Split,Shock Wave,Snatch,Snore,Spite,Telekinesis,Trick,Uproar,Water Pulse,Wonder Room",
       "ultraMoon": "Ally Switch,Foul Play,Icy Wind,Pain Split,Shock Wave,Snatch,Snore,Spite,Telekinesis,Trick,Uproar,Water Pulse,Wonder Room"
@@ -12298,7 +12460,10 @@
     }
   },
   "Gible": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scale Shot,Scorching Sands",
+      "shield": "Scale Shot,Scorching Sands"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -12326,7 +12491,10 @@
     }
   },
   "Gabite": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scale Shot,Scorching Sands",
+      "shield": "Scale Shot,Scorching Sands"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -12354,7 +12522,10 @@
     }
   },
   "Garchomp": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scale Shot,Scorching Sands",
+      "shield": "Scale Shot,Scorching Sands"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -12827,7 +12998,10 @@
     }
   },
   "Electivire": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Rising Voltage",
+      "shield": "Rising Voltage"
+    },
     "gen7": {
       "ultraSun": "Covet,Dual Chop,Electroweb,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Iron Tail,Low Kick,Magnet Rise,Shock Wave,Signal Beam,Snore,Stomping Tantrum,Thunder Punch",
       "ultraMoon": "Covet,Dual Chop,Electroweb,Fire Punch,Focus Punch,Helping Hand,Ice Punch,Iron Tail,Low Kick,Magnet Rise,Shock Wave,Signal Beam,Snore,Stomping Tantrum,Thunder Punch"
@@ -12847,7 +13021,10 @@
     }
   },
   "Magmortar": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Burning Jealousy,Scorching Sands",
+      "shield": "Burning Jealousy,Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Covet,Dual Chop,Fire Punch,Focus Punch,Heat Wave,Helping Hand,Iron Tail,Low Kick,Snore,Stomping Tantrum,Thunder Punch",
       "ultraMoon": "Covet,Dual Chop,Fire Punch,Focus Punch,Heat Wave,Helping Hand,Iron Tail,Low Kick,Snore,Stomping Tantrum,Thunder Punch"
@@ -13128,7 +13305,10 @@
     }
   },
   "Uxie": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force",
+      "shield": "Expanding Force"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Fire Punch,Foul Play,Giga Drain,Heal Bell,Helping Hand,Ice Punch,Iron Tail,Knock Off,Laser Focus,Magic Coat,Magic Room,Recycle,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Water Pulse,Wonder Room,Zen Headbutt",
       "ultraMoon": "Ally Switch,Fire Punch,Foul Play,Giga Drain,Heal Bell,Helping Hand,Ice Punch,Iron Tail,Knock Off,Laser Focus,Magic Coat,Magic Room,Recycle,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Water Pulse,Wonder Room,Zen Headbutt"
@@ -13148,7 +13328,10 @@
     }
   },
   "Mesprit": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force",
+      "shield": "Expanding Force"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Fire Punch,Helping Hand,Ice Punch,Iron Tail,Knock Off,Laser Focus,Magic Coat,Magic Room,Recycle,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Water Pulse,Wonder Room,Zen Headbutt",
       "ultraMoon": "Ally Switch,Fire Punch,Helping Hand,Ice Punch,Iron Tail,Knock Off,Laser Focus,Magic Coat,Magic Room,Recycle,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Water Pulse,Wonder Room,Zen Headbutt"
@@ -13168,7 +13351,10 @@
     }
   },
   "Azelf": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force",
+      "shield": "Expanding Force"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Fire Punch,Helping Hand,Ice Punch,Iron Tail,Knock Off,Laser Focus,Last Resort,Magic Coat,Magic Room,Recycle,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Uproar,Water Pulse,Wonder Room,Zen Headbutt",
       "ultraMoon": "Ally Switch,Fire Punch,Helping Hand,Ice Punch,Iron Tail,Knock Off,Laser Focus,Last Resort,Magic Coat,Magic Room,Recycle,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Stealth Rock,Telekinesis,Thunder Punch,Trick,Uproar,Water Pulse,Wonder Room,Zen Headbutt"
@@ -13188,7 +13374,10 @@
     }
   },
   "Dialga": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scale Shot",
+      "shield": "Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -13216,7 +13405,10 @@
     }
   },
   "Palkia": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Scale Shot",
+      "shield": "Dual Wingbeat,Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -13244,7 +13436,10 @@
     }
   },
   "Heatran": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Burning Jealousy,Scorching Sands,Steel Roller",
+      "shield": "Burning Jealousy,Scorching Sands,Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Bug Bite,Dragon Pulse,Earth Power,Heat Wave,Iron Defense,Iron Head,Snore,Stealth Rock,Stomping Tantrum,Uproar",
       "ultraMoon": "Bug Bite,Dragon Pulse,Earth Power,Heat Wave,Iron Defense,Iron Head,Snore,Stealth Rock,Stomping Tantrum,Uproar"
@@ -13264,7 +13459,10 @@
     }
   },
   "Regigigas": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Terrain Pulse",
+      "shield": "Terrain Pulse"
+    },
     "gen7": {
       "ultraSun": "Block,Drain Punch,Earth Power,Fire Punch,Focus Punch,Gravity,Ice Punch,Icy Wind,Iron Head,Knock Off,Shock Wave,Snore,Stomping Tantrum,Superpower,Thunder Punch,Zen Headbutt",
       "ultraMoon": "Block,Drain Punch,Earth Power,Fire Punch,Focus Punch,Gravity,Ice Punch,Icy Wind,Iron Head,Knock Off,Shock Wave,Snore,Stomping Tantrum,Superpower,Thunder Punch,Zen Headbutt"
@@ -13284,7 +13482,10 @@
     }
   },
   "Giratina": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Poltergeist",
+      "shield": "Dual Wingbeat,Poltergeist"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -13320,7 +13521,10 @@
     }
   },
   "Cresselia": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force",
+      "shield": "Expanding Force"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Gravity,Helping Hand,Icy Wind,Magic Coat,Magic Room,Recycle,Signal Beam,Skill Swap,Snore,Telekinesis,Trick,Zen Headbutt",
       "ultraMoon": "Ally Switch,Gravity,Helping Hand,Icy Wind,Magic Coat,Magic Room,Recycle,Signal Beam,Skill Swap,Snore,Telekinesis,Trick,Zen Headbutt"
@@ -13457,7 +13661,10 @@
     }
   },
   "Victini": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force,Scorching Sands",
+      "shield": "Expanding Force,Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Bounce,Fire Punch,Heat Wave,Helping Hand,Laser Focus,Last Resort,Magic Coat,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Telekinesis,Thunder Punch,Trick,Uproar,Zen Headbutt",
       "ultraMoon": "Bounce,Fire Punch,Heat Wave,Helping Hand,Laser Focus,Last Resort,Magic Coat,Role Play,Shock Wave,Signal Beam,Skill Swap,Snore,Telekinesis,Thunder Punch,Trick,Uproar,Zen Headbutt"
@@ -14692,7 +14899,10 @@
     }
   },
   "Tirtouga": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Block,Earth Power,Icy Wind,Iron Defense,Iron Tail,Knock Off,Liquidation,Snore,Stealth Rock,Water Pulse,Zen Headbutt",
       "ultraMoon": "Aqua Tail,Block,Earth Power,Icy Wind,Iron Defense,Iron Tail,Knock Off,Liquidation,Snore,Stealth Rock,Water Pulse,Zen Headbutt"
@@ -14707,7 +14917,10 @@
     }
   },
   "Carracosta": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Block,Earth Power,Icy Wind,Iron Defense,Iron Head,Iron Tail,Knock Off,Liquidation,Low Kick,Snore,Stealth Rock,Superpower,Water Pulse,Zen Headbutt",
       "ultraMoon": "Aqua Tail,Block,Earth Power,Icy Wind,Iron Defense,Iron Head,Iron Tail,Knock Off,Liquidation,Low Kick,Snore,Stealth Rock,Superpower,Water Pulse,Zen Headbutt"
@@ -14722,7 +14935,10 @@
     }
   },
   "Archen": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Lash Out,Meteor Beam",
+      "shield": "Dual Wingbeat,Lash Out,Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Aqua Tail,Bounce,Defog,Dragon Pulse,Earth Power,Endeavor,Heat Wave,Iron Defense,Iron Tail,Knock Off,Snore,Stealth Rock,Tailwind,Uproar,Zen Headbutt",
       "ultraMoon": "Ally Switch,Aqua Tail,Bounce,Defog,Dragon Pulse,Earth Power,Endeavor,Heat Wave,Iron Defense,Iron Tail,Knock Off,Snore,Stealth Rock,Tailwind,Uproar,Zen Headbutt"
@@ -14737,7 +14953,10 @@
     }
   },
   "Archeops": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Lash Out,Meteor Beam",
+      "shield": "Dual Wingbeat,Lash Out,Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Aqua Tail,Bounce,Defog,Dragon Pulse,Earth Power,Endeavor,Heat Wave,Iron Defense,Iron Tail,Knock Off,Outrage,Sky Attack,Snore,Stealth Rock,Tailwind,Uproar,Zen Headbutt",
       "ultraMoon": "Ally Switch,Aqua Tail,Bounce,Defog,Dragon Pulse,Earth Power,Endeavor,Heat Wave,Iron Defense,Iron Tail,Knock Off,Outrage,Sky Attack,Snore,Stealth Rock,Tailwind,Uproar,Zen Headbutt"
@@ -15565,7 +15784,10 @@
     }
   },
   "Cryogonal": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Triple Axel",
+      "shield": "Triple Axel"
+    },
     "gen7": {
       "ultraSun": "Bind,Defog,Icy Wind,Iron Defense,Knock Off,Laser Focus,Magic Coat,Signal Beam,Snore,Water Pulse",
       "ultraMoon": "Bind,Defog,Icy Wind,Iron Defense,Knock Off,Laser Focus,Magic Coat,Signal Beam,Snore,Water Pulse"
@@ -16050,7 +16272,10 @@
     }
   },
   "Tornadus": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Lash Out",
+      "shield": "Lash Out"
+    },
     "gen7": {
       "ultraSun": "Defog,Foul Play,Heat Wave,Icy Wind,Iron Tail,Knock Off,Role Play,Snore,Superpower,Tailwind,Uproar",
       "ultraMoon": "Defog,Foul Play,Heat Wave,Icy Wind,Iron Tail,Knock Off,Role Play,Snore,Superpower,Tailwind,Uproar"
@@ -16065,7 +16290,10 @@
     }
   },
   "Thundurus": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Lash Out,Rising Voltage",
+      "shield": "Lash Out,Rising Voltage"
+    },
     "gen7": {
       "ultraSun": "Defog,Electroweb,Foul Play,Iron Tail,Knock Off,Role Play,Shock Wave,Snore,Superpower,Thunder Punch,Uproar",
       "ultraMoon": "Defog,Electroweb,Foul Play,Iron Tail,Knock Off,Role Play,Shock Wave,Snore,Superpower,Thunder Punch,Uproar"
@@ -16838,7 +17066,10 @@
     }
   },
   "Tyrunt": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Lash Out,Meteor Beam,Scale Shot",
+      "shield": "Lash Out,Meteor Beam,Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -16853,7 +17084,10 @@
     }
   },
   "Tyrantrum": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Lash Out,Meteor Beam,Scale Shot",
+      "shield": "Lash Out,Meteor Beam,Scale Shot"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -16868,7 +17102,10 @@
     }
   },
   "Amaura": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Earth Power,Hyper Voice,Icy Wind,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Outrage,Snore,Stealth Rock,Water Pulse,Zen Headbutt",
       "ultraMoon": "Aqua Tail,Earth Power,Hyper Voice,Icy Wind,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Outrage,Snore,Stealth Rock,Water Pulse,Zen Headbutt"
@@ -16879,7 +17116,10 @@
     }
   },
   "Aurorus": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam",
+      "shield": "Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Aqua Tail,Earth Power,Hyper Voice,Icy Wind,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Outrage,Snore,Stealth Rock,Water Pulse,Zen Headbutt",
       "ultraMoon": "Aqua Tail,Earth Power,Hyper Voice,Icy Wind,Iron Defense,Iron Head,Iron Tail,Magnet Rise,Outrage,Snore,Stealth Rock,Water Pulse,Zen Headbutt"
@@ -16932,7 +17172,10 @@
     }
   },
   "Carbink": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Misty Explosion,Terrain Pulse",
+      "shield": "Meteor Beam,Misty Explosion,Terrain Pulse"
+    },
     "gen7": {
       "ultraSun": "After You,Ally Switch,Covet,Earth Power,Gravity,Iron Defense,Magic Coat,Magnet Rise,Skill Swap,Snore,Stealth Rock,Stomping Tantrum,Telekinesis,Wonder Room",
       "ultraMoon": "After You,Ally Switch,Covet,Earth Power,Gravity,Iron Defense,Magic Coat,Magnet Rise,Skill Swap,Snore,Stealth Rock,Stomping Tantrum,Telekinesis,Wonder Room"
@@ -17122,7 +17365,10 @@
     }
   },
   "Xerneas": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Misty Explosion,Terrain Pulse",
+      "shield": "Misty Explosion,Terrain Pulse"
+    },
     "gen7": {
       "ultraSun": "Block,Defog,Endeavor,Gravity,Hyper Voice,Laser Focus,Outrage,Snore,Wonder Room,Zen Headbutt",
       "ultraMoon": "Block,Defog,Endeavor,Gravity,Hyper Voice,Laser Focus,Outrage,Snore,Wonder Room,Zen Headbutt"
@@ -17133,7 +17379,10 @@
     }
   },
   "Yveltal": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Lash Out",
+      "shield": "Dual Wingbeat,Lash Out"
+    },
     "gen7": {
       "ultraSun": "Block,Defog,Foul Play,Heat Wave,Hyper Voice,Knock Off,Laser Focus,Sky Attack,Snore,Tailwind,Zen Headbutt",
       "ultraMoon": "Block,Defog,Foul Play,Heat Wave,Hyper Voice,Knock Off,Laser Focus,Sky Attack,Snore,Tailwind,Zen Headbutt"
@@ -17144,7 +17393,10 @@
     }
   },
   "Zygarde": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scale Shot,Scorching Sands,Skitter Smack",
+      "shield": "Scale Shot,Scorching Sands,Skitter Smack"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -17159,7 +17411,10 @@
     }
   },
   "Diancie": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Misty Explosion,Terrain Pulse",
+      "shield": "Meteor Beam,Misty Explosion,Terrain Pulse"
+    },
     "gen7": {
       "ultraSun": "After You,Covet,Earth Power,Endeavor,Gravity,Heal Bell,Helping Hand,Iron Defense,Last Resort,Magnet Rise,Skill Swap,Snore,Stealth Rock,Telekinesis,Wonder Room",
       "ultraMoon": "After You,Covet,Earth Power,Endeavor,Gravity,Heal Bell,Helping Hand,Iron Defense,Last Resort,Magnet Rise,Skill Swap,Snore,Stealth Rock,Telekinesis,Wonder Room"
@@ -17181,7 +17436,10 @@
     }
   },
   "Volcanion": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Scorching Sands",
+      "shield": "Scorching Sands"
+    },
     "gen7": {
       "ultraSun": "Defog,Earth Power,Heat Wave,Liquidation,Snore,Stomping Tantrum,Superpower,Water Pulse",
       "ultraMoon": "Defog,Earth Power,Heat Wave,Liquidation,Snore,Stomping Tantrum,Superpower,Water Pulse"
@@ -17852,35 +18110,50 @@
     }
   },
   "Nihilego": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Corrosive Gas,Meteor Beam",
+      "shield": "Corrosive Gas,Meteor Beam"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Bind,Foul Play,Gunk Shot,Iron Head,Knock Off,Magic Coat,Pain Split,Role Play,Snore,Spite,Stealth Rock,Telekinesis,Wonder Room,Worry Seed,Zen Headbutt",
       "ultraMoon": "Ally Switch,Bind,Foul Play,Gunk Shot,Iron Head,Knock Off,Magic Coat,Pain Split,Role Play,Snore,Spite,Stealth Rock,Telekinesis,Wonder Room,Worry Seed,Zen Headbutt"
     }
   },
   "Buzzwole": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Coaching,Dual Wingbeat",
+      "shield": "Coaching,Dual Wingbeat"
+    },
     "gen7": {
       "ultraSun": "Bounce,Bug Bite,Drain Punch,Dual Chop,Endeavor,Focus Punch,Ice Punch,Iron Head,Outrage,Snore,Stomping Tantrum,Superpower,Thunder Punch",
       "ultraMoon": "Bounce,Bug Bite,Drain Punch,Dual Chop,Endeavor,Focus Punch,Ice Punch,Iron Head,Outrage,Snore,Stomping Tantrum,Superpower,Thunder Punch"
     }
   },
   "Pheromosa": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Coaching,Skitter Smack,Triple Axel",
+      "shield": "Coaching,Skitter Smack,Triple Axel"
+    },
     "gen7": {
       "ultraSun": "Block,Bounce,Bug Bite,Drill Run,Electroweb,Foul Play,Icy Wind,Laser Focus,Low Kick,Outrage,Shock Wave,Signal Beam,Snatch,Snore,Throat Chop",
       "ultraMoon": "Block,Bounce,Bug Bite,Drill Run,Electroweb,Foul Play,Icy Wind,Laser Focus,Low Kick,Outrage,Shock Wave,Signal Beam,Snatch,Snore,Throat Chop"
     }
   },
   "Xurkitree": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Rising Voltage",
+      "shield": "Rising Voltage"
+    },
     "gen7": {
       "ultraSun": "Bind,Electroweb,Gravity,Magic Coat,Magnet Rise,Shock Wave,Signal Beam,Snore,Thunder Punch",
       "ultraMoon": "Bind,Electroweb,Gravity,Magic Coat,Magnet Rise,Shock Wave,Signal Beam,Snore,Thunder Punch"
     }
   },
   "Celesteela": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Steel Roller",
+      "shield": "Meteor Beam,Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Block,Giga Drain,Gravity,Iron Defense,Iron Head,Magnet Rise,Seed Bomb,Shock Wave,Snore,Stomping Tantrum,Superpower,Zen Headbutt",
       "ultraMoon": "Block,Giga Drain,Gravity,Iron Defense,Iron Head,Magnet Rise,Seed Bomb,Shock Wave,Snore,Stomping Tantrum,Superpower,Zen Headbutt"
@@ -17894,7 +18167,10 @@
     }
   },
   "Guzzlord": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Corrosive Gas,Lash Out,Steel Roller",
+      "shield": "Corrosive Gas,Lash Out,Steel Roller"
+    },
     "gen7": {
       "sun": "Draco Meteor",
       "moon": "Draco Meteor",
@@ -17940,21 +18216,30 @@
     }
   },
   "Naganadel": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Dual Wingbeat,Scale Shot",
+      "shield": "Dual Wingbeat,Scale Shot"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Draco Meteor,Dragon Pulse,Gastro Acid,Gunk Shot,Heat Wave,Helping Hand,Iron Tail,Laser Focus,Outrage,Shock Wave,Signal Beam,Sky Attack,Snatch,Snore,Tailwind,Throat Chop,Uproar",
       "ultraMoon": "Ally Switch,Draco Meteor,Dragon Pulse,Gastro Acid,Gunk Shot,Heat Wave,Helping Hand,Iron Tail,Laser Focus,Outrage,Shock Wave,Signal Beam,Sky Attack,Snatch,Snore,Tailwind,Throat Chop,Uproar"
     }
   },
   "Stakataka": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Meteor Beam,Steel Roller",
+      "shield": "Meteor Beam,Steel Roller"
+    },
     "gen7": {
       "ultraSun": "Ally Switch,Bind,Block,Gravity,Iron Defense,Iron Head,Magic Coat,Magic Room,Magnet Rise,Recycle,Role Play,Skill Swap,Snore,Stealth Rock,Stomping Tantrum,Superpower,Telekinesis,Wonder Room,Zen Headbutt",
       "ultraMoon": "Ally Switch,Bind,Block,Gravity,Iron Defense,Iron Head,Magic Coat,Magic Room,Magnet Rise,Recycle,Role Play,Skill Swap,Snore,Stealth Rock,Stomping Tantrum,Superpower,Telekinesis,Wonder Room,Zen Headbutt"
     }
   },
   "Blacephalon": {
-    "gen8": {},
+    "gen8": {
+      "sword": "Expanding Force",
+      "shield": "Expanding Force"
+    },
     "gen7": {
       "ultraSun": "After You,Foul Play,Heat Wave,Knock Off,Last Resort,Pain Split,Recycle,Snore,Spite,Trick,Uproar",
       "ultraMoon": "After You,Foul Play,Heat Wave,Knock Off,Last Resort,Pain Split,Recycle,Snore,Spite,Trick,Uproar"
@@ -18443,6 +18728,40 @@
     "gen8": {
       "sword": "Grassy Glide,Lash Out",
       "shield": "Grassy Glide,Lash Out"
+    }
+  },
+  "Regieleki": {
+    "gen8": {
+      "sword": "Rising Voltage",
+      "shield": "Rising Voltage"
+    }
+  },
+  "Regidrago": {
+    "gen8": {
+      "sword": "Scale Shot",
+      "shield": "Scale Shot"
+    }
+  },
+  "Glastrier": {
+    "gen8": {
+      "sword": "Lash Out",
+      "shield": "Lash Out"
+    }
+  },
+  "Spectrier": {
+    "gen8": {
+      "sword": "Lash Out",
+      "shield": "Lash Out"
+    }
+  },
+  "Calyrex": {
+    "gen8": {
+      "sword.Calyrex": "Expanding Force",
+      "sword.Ice Rider": "Expanding Force",
+      "sword.Shadow Rider": "Expanding Force",
+      "shield.Calyrex": "Expanding Force",
+      "shield.Ice Rider": "Expanding Force",
+      "shield.Shadow Rider": "Expanding Force"
     }
   }
 }

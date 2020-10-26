@@ -86,12 +86,12 @@ extension Pokemon: CanonicallyNamed {
 
 }
 
-// MARK: - Identifiable
-extension Pokemon: Identifiable {
-
-    public var id: Int { index }
-
-}
+//// MARK: - Identifiable
+//extension Pokemon: Identifiable {
+//
+//    public var id: Int { index }
+//
+//}
 
 // MARK: - Computed Properties
 public extension Pokemon {

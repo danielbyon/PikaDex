@@ -48,12 +48,12 @@ public extension MachineLearnsetEntry {
 
 }
 
-// MARK: - Identifiable
-extension MachineLearnsetEntry: Identifiable {
-
-    public var id: String { "\(machine.number) \(machine.type.rawValue)" }
-
-}
+//// MARK: - Identifiable
+//extension MachineLearnsetEntry: Identifiable {
+//
+//    public var id: String { "\(machine.number) \(machine.type.rawValue)" }
+//
+//}
 
 // MARK: - Values
 public extension MachineLearnsetEntry {

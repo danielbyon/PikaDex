@@ -14,12 +14,12 @@ public extension BerryItemInfo {
 
 }
 
-// MARK: - Identifiable
-extension BerryItemInfo: Identifiable {
-
-    public var id: String { item.name }
-
-}
+//// MARK: - Identifiable
+//extension BerryItemInfo: Identifiable {
+//
+//    public var id: String { item.name }
+//
+//}
 
 // MARK: - Values
 public extension BerryItemInfo {
