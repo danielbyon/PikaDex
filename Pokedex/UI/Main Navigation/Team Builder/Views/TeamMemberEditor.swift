@@ -46,19 +46,23 @@ struct TeamMemberEditor: View {
                     .monospacedBody()
                     .avoidKeyboard()
                 TeamMemberLevel(level: $viewModel.level)
-
-                NavigationLink(destination: SelectAbility(form: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { ability in
-                    self.viewModel.ability = ability
-                    self.isShowingSelectAbility = false
-                }), isActive: $isShowingSelectAbility) {
-                    HStack {
-                        Text("Ability")
-                            .monospacedBody()
-                        Spacer()
-                        Text(viewModel.ability.name)
+                
+                if appContext.currentGame.hasAbilities {
+                    NavigationLink(destination: SelectAbility(form: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { ability in
+                        self.viewModel.ability = ability
+                        self.isShowingSelectAbility = false
+                    }), isActive: $isShowingSelectAbility) {
+                        HStack {
+                            Text("Ability")
+                                .monospacedBody()
+                            Spacer()
+                            if let ability = viewModel.ability {
+                                Text(ability.name)
+                            }
+                        }
+                        .monospacedBody()
+                        .contentShape(Rectangle())
                     }
-                    .monospacedBody()
-                    .contentShape(Rectangle())
                 }
 
                 NavigationLink(destination: SelectItem(game: appContext.currentGame, onSelect: { item in

@@ -332,8 +332,10 @@ private struct TeamMemberFactoids: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             HStack {
-                Factoid(title: "Ability", value: member.ability.name)
-                Spacer(minLength: 0)
+                if let ability = member.ability {
+                    Factoid(title: "Ability", value: ability.name)
+                    Spacer(minLength: 0)
+                }
                 Factoid(title: "Nature", value: member.nature.name)
                 Spacer(minLength: 0)
                 Factoid(title: "Shiny", value: member.isShiny ? "Yes" : "No")
