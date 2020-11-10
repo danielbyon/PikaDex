@@ -103,35 +103,36 @@ struct PokemonDetail: View {
                 .padding(.vertical, verticalPadding)
 
                 Section(header: SectionHeader("Moves")) {
-                    NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .level).injectDependencies()) {
+                    NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .level)) {
                         Value1Cell(text: "By Level")
                     }
-                    NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .machine).injectDependencies()) {
+                    NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .machine)) {
                         Value1Cell(text: "By Machine")
                     }
                     if game.hasBreeding {
-                        NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .breed).injectDependencies()) {
+                        NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .breed)) {
                             Value1Cell(text: "By Breeding")
                         }
                     }
                     if game.hasTutoring {
-                        NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .tutor).injectDependencies()) {
+                        NavigationLink(destination: PokemonLearnset(form: currentForm, game: game, initialLearnsetType: .tutor)) {
                             Value1Cell(text: "By Tutoring")
                         }
                     }
                 }
                 .padding(.vertical, verticalPadding)
 
-                if currentForm.evolutions?.isEmpty == false {
+                if let evolutions = currentForm.evolutions,
+                   !evolutions.isEmpty {
                     Section(header: SectionHeader("Evolutions")) {
-                        PokemonEvolutions(evolutions: currentForm.evolutions!)
+                        PokemonEvolutions(evolutions: evolutions)
                     }
                     .padding(.vertical, verticalPadding)
                 }
 
                 
                 Section(header: SectionHeader("Locations")) {
-                    NavigationLink(destination: PokemonLocations(pokemon: pokemon, game: game).injectDependencies()) {
+                    NavigationLink(destination: PokemonLocations(pokemon: pokemon, game: game)) {
                         Text("View Locations")
                             .monospacedBody()
                     }
@@ -173,7 +174,7 @@ struct PokemonDetail: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(pokemon.name), displayMode: .inline)
+        .navigationTitle(pokemon.name)
     }
 
     private func makeHeaderView() -> some View {

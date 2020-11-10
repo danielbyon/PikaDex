@@ -27,9 +27,10 @@ struct InAppReviewManager {
 
     private static func requestAppReviewIfNecessary() {
         guard appLaunchCount > 5,
-            Date().timeIntervalSince(lastDateRequested) >= (30 * 86_400) else { return }
+            Date().timeIntervalSince(lastDateRequested) >= (30 * 86_400),
+            let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
         lastDateRequested = Date()
-        SKStoreReviewController.requestReview()
+        SKStoreReviewController.requestReview(in: windowScene)
     }
 
 }

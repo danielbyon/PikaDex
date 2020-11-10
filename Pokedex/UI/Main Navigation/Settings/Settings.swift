@@ -26,8 +26,12 @@ struct Settings: View {
                 }
             }
             .listStyle(PlainListStyle())
-            .navigationBarTitle("Settings")
-            .navigationBarItems(trailing: DoneButton(action: dismiss))
+            .navigationTitle("Settings")
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    DoneButton(action: dismiss)
+                }
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

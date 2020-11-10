@@ -11,7 +11,7 @@ import SwiftUI
 public struct KeyboardAvoiderModifier: ViewModifier {
 
     #if os(iOS)
-    @ObservedObject var keyboardObserver = KeyboardObserver()
+    @StateObject var keyboardObserver = KeyboardObserver()
     #endif
 
     public func body(content: Content) -> some View {

@@ -19,11 +19,11 @@ struct PokemonImage: View {
                 .fill(Color(form.color.uiColor)
                     .opacity(0.85)
             )
-            if UIImage(named: form.imageName) != nil {
-            Image(uiImage: UIImage(named: form.imageName)!)
-                .resizable()
-                .scaledToFit()
-                .padding(padding)
+            if let formImage = UIImage(named: form.imageName) {
+                Image(uiImage: formImage)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(padding)
             }
         }
     }

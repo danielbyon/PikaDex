@@ -24,8 +24,8 @@ struct PokemonAbilityCell: View {
                         .monospacedCaption()
                 }
             }
-            if ability.description(forGame: game) != nil {
-                Text(ability.description(forGame: game)!)
+            if let description = ability.description(forGame: game) {
+                Text(description)
                     .monospacedCaption()
             }
         }

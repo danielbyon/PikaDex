@@ -19,8 +19,8 @@ struct PokemonLearnsetGroupCell: View {
             VStack(alignment: .leading) {
                 Text(move.name)
                     .monospacedBody()
-                if detailText != nil {
-                    Text(detailText!)
+                if let detailText = detailText {
+                    Text(detailText)
                         .monospacedCaption()
                 }
             }

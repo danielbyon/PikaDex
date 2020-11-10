@@ -41,17 +41,17 @@ struct StoreSection: View {
         if !products.isEmpty {
             return AnyView(
                 VStack(alignment: .leading, spacing: 8.0) {
-                    if header != nil {
+                    if let header = header {
                         HStack {
-                            Text(header!)
+                            Text(header)
                                 .font(.title)
                                 .bold()
                             Spacer()
                         }
                     }
                     cells
-                    if footer != nil {
-                        Text(footer!)
+                    if let footer = footer {
+                        Text(footer)
                             .font(.caption)
                             .fixedSize(horizontal: false, vertical: true)
                     }

@@ -16,11 +16,11 @@ struct LocationList: View {
 
     var body: some View {
         SearchableList(viewModel: SearchableListViewModel(objects: locations), searchPlaceholder: "Search for a location") { location in
-            NavigationLink(destination: LocationDetail(location: location, game: self.game).injectDependencies()) {
+            NavigationLink(destination: LocationDetail(location: location, game: self.game)) {
                 LocationCell(location: location)
             }
         }
-        .navigationBarTitle("Locations")
+        .navigationTitle("Locations")
     }
 
     init(game: Game) {

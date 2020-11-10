@@ -18,11 +18,11 @@ struct PokemonList: View {
 
     var body: some View {
         SearchableList(viewModel: SearchableListViewModel(objects: pokemon), searchPlaceholder: "Search for a Pokémon") { pokemon in
-            NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath).injectDependencies()) {
+            NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath)) {
                 PokemonCell(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath)
             }
         }
-        .navigationBarTitle("Pokémon")
+        .navigationTitle("Pokémon")
     }
 
     init(type: PokemonType, game: Game, numberKeyPath: String = #keyPath(Pokemon.z_index)) {

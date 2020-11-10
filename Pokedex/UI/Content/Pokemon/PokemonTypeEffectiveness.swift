@@ -16,9 +16,13 @@ struct PokemonTypeEffectiveness: View {
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 6 : 3 }
 
-    enum Kind: String, CaseIterable {
+    enum Kind: String, CaseIterable, Identifiable {
+
         case offense = "Offense"
         case defense = "Defense"
+
+        var id: String { rawValue }
+
     }
 
     var body: some View {
@@ -39,7 +43,7 @@ struct PokemonTypeEffectiveness: View {
 
     init(primaryType: PokemonType, secondaryType: PokemonType?, kind: Kind, game: Game) {
         types = TypeEffectiveness(primary: primaryType, secondary: secondaryType)
-                .orderedTypeValues(for: kind, generation: game.generation)
+            .orderedTypeValues(for: kind, generation: game.generation)
     }
 
 }

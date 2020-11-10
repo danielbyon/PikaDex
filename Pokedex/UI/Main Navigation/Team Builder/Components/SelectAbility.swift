@@ -22,14 +22,14 @@ struct SelectAbility: View {
                 AbilityCell(model: .init(ability: form.primaryAbility)).onTapGesture {
                     self.onSelect(self.form.primaryAbility)
                 }
-                if form.secondaryAbility != nil {
-                    AbilityCell(model: .init(ability: form.secondaryAbility!)).onTapGesture {
-                        self.onSelect(self.form.secondaryAbility!)
+                if let secondaryAbility = form.secondaryAbility {
+                    AbilityCell(model: .init(ability: secondaryAbility)).onTapGesture {
+                        self.onSelect(secondaryAbility)
                     }
                 }
-                if form.hiddenAbility != nil {
-                    AbilityCell(model: .init(ability: form.hiddenAbility!)).onTapGesture {
-                        self.onSelect(self.form.hiddenAbility!)
+                if let hiddenAbility = form.hiddenAbility {
+                    AbilityCell(model: .init(ability: hiddenAbility)).onTapGesture {
+                        self.onSelect(hiddenAbility)
                     }
                 }
             }
@@ -43,7 +43,7 @@ struct SelectAbility: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle("Select Ability")
+        .navigationTitle("Select Ability")
     }
 
     init(form: PokemonForm, game: Game, onSelect: @escaping (Ability) -> Void) {

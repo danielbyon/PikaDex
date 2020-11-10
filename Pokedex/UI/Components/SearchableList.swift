@@ -10,15 +10,16 @@ import SwiftUI
 import CoreData
 import Combine
 
-struct SearchableList<Element, Content>: View where Element: NSFetchRequestResult & Identifiable & CanonicallyNamed, Content: View {
+struct SearchableList<Element, Content>: View where Element: NSFetchRequestResult & Hashable & Identifiable & CanonicallyNamed, Content: View {
 
     @ObservedObject private var viewModel: SearchableListViewModel<Element>
     var searchPlaceholder = "Search"
     var content: (Element) -> Content
 
+    @ViewBuilder
     var body: some View {
+        SearchBar(text: $viewModel.searchText, placeholder: searchPlaceholder)
         List {
-            SearchBar(text: $viewModel.searchText, placeholder: searchPlaceholder)
             AlternatingBackgroundForEach(viewModel.filteredObjects) { object in
                 self.content(object)
             }
@@ -35,7 +36,7 @@ struct SearchableList<Element, Content>: View where Element: NSFetchRequestResul
 
 }
 
-class SearchableListViewModel<Element>: ObservableObject where Element: NSFetchRequestResult & Identifiable & CanonicallyNamed {
+final class SearchableListViewModel<Element>: ObservableObject where Element: NSFetchRequestResult & Identifiable & CanonicallyNamed {
 
     @Published var searchText = ""
     @Published private(set) var filteredObjects: [Element] = []

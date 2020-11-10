@@ -16,8 +16,8 @@ struct Value1Cell: View {
 
     var body: some View {
         HStack {
-            if image != nil {
-                image!
+            if let image = image {
+                image
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40.0, height: 40.0)
@@ -27,8 +27,8 @@ struct Value1Cell: View {
                     .monospacedBody()
                     .multilineTextAlignment(.leading)
                 Spacer()
-                if detailText != nil {
-                    Text(detailText!)
+                if let detailText = detailText {
+                    Text(detailText)
                         .alignmentGuide(.trailing, computeValue: { d in d[.trailing] })
                         .monospacedBody()
                         .multilineTextAlignment(.trailing)

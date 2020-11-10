@@ -40,18 +40,20 @@ struct PokemonListFilter: View {
                 }
 
                 Section(header: SectionHeader("Sort Order")) {
-                    SegmentedControl(titles: Pokemon.Filter.SortOrder.allCases.map { $0.title }, values: Pokemon.Filter.SortOrder.allCases, selectedSegmentIndex: $sortOrder)
+                    SegmentedControl(selectedSegment: $sortOrder)
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Filter / Sort")
-            .navigationBarItems(
-                leading: Button(action: resetFilter) {
-                    Text("Reset")
-                        .foregroundColor(.red)
-                        .padding([.trailing, .top, .bottom])
-                },
-                trailing: DoneButton(action: dismiss))
+            .navigationTitle("Filter / Sort")
+            .toolbar {
+                ToolbarItem(placement: .destructiveAction) {
+                    Button("Reset", action: resetFilter)
+                }
+
+                ToolbarItem(placement: .confirmationAction) {
+                    DoneButton(action: dismiss)
+                }
+            }
             .onDisappear(perform: commitFilter)
         }
         .navigationViewStyle(StackNavigationViewStyle())

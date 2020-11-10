@@ -55,8 +55,8 @@ public extension Machine {
     }
 
     var type: MachineType {
-        get { MachineType(rawValue: Int(z_type))! }
-        set { z_type = Int64(newValue.rawValue) }
+        get { MachineType(intValue: Int(z_type))! }
+        set { z_type = Int64(newValue.intValue) }
     }
 
 }

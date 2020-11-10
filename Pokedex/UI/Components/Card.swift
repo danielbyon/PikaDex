@@ -10,23 +10,17 @@ import SwiftUI
 
 struct Card<Content>: View where Content: View {
 
-    let backgroundColor: Color
-    let padding: CGFloat
     let content: Content
 
     var body: some View {
-        content
-            .foregroundColor(.primary)
-            .padding(padding)
-            .background(
-                RoundedRectangle(cornerRadius: padding)
-                    .fill(backgroundColor))
-            .contentShape(RoundedRectangle(cornerRadius: padding))
+        GroupBox {
+            content
+                .foregroundColor(.primary)
+        }
+        .contentShape(Rectangle())
     }
 
-    init(backgroundColor: Color = Color("Card/gray"), padding: CGFloat = 16.0, content: () -> Content) {
-        self.backgroundColor = backgroundColor
-        self.padding = padding
+    init(content: () -> Content) {
         self.content = content()
     }
 

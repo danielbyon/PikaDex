@@ -16,13 +16,19 @@ struct NatureList: View {
 
     var body: some View {
         ScrollView {
-            GridView(elements: natures, numberOfItemsPerRow: 2) { nature in
-                NatureCell(viewModel: nature)
+            LazyVGrid(columns: Array(repeating: .init(spacing: 16.0), count: 2), spacing: 16.0) {
+                ForEach(natures) { nature in
+                    NatureCell(viewModel: nature)
+                }
             }
             .padding()
         }
-        .navigationBarTitle("Natures")
-        .navigationBarItems(trailing: DoneButton(action: dismiss))
+        .navigationTitle("Natures")
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                DoneButton(action: dismiss)
+            }
+        }
     }
 
     private func dismiss() {

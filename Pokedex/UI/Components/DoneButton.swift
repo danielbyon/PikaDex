@@ -10,23 +10,15 @@ import SwiftUI
 
 struct DoneButton: View {
 
-    var isTrailing: Bool
     let action: () -> Void
 
-    private var paddingEdges: Edge.Set {
-        [Edge.Set.top, .bottom, isTrailing ? .leading : .trailing]
-    }
-
     var body: some View {
-        Button(action: self.action) {
+        Button(action: action) {
             Text("Done")
-                .bold()
-                .padding(paddingEdges)
         }
     }
 
-    init(isTrailing: Bool = true, action: @escaping () -> Void) {
-        self.isTrailing = isTrailing
+    init(action: @escaping () -> Void) {
         self.action = action
     }
 

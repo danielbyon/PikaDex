@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-public class KeyboardObserver: NSObject, ObservableObject, UIGestureRecognizerDelegate {
+public final class KeyboardObserver: NSObject, ObservableObject, UIGestureRecognizerDelegate {
 
     @Published public private(set) var keyboardHeight: CGFloat = 0.0
 

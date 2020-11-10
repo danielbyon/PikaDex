@@ -61,23 +61,6 @@ extension PokepediaProduct {
         .allGameBoyGames
     ]
 
-    static let allGameProductsInOrder: [PokepediaProduct] = [
-        .swordShield,
-        .letsGoPikachuLetsGoEevee,
-        .ultraSunUltraMoon,
-        .sunMoon,
-        .omegaRubyAlphaSapphire,
-        .xY,
-        .black2White2,
-        .blackWhite,
-        .heartGoldSoulSilver,
-        .diamondPearlPlatinum,
-        .fireRedLeafGreen,
-        .rubySapphireEmerald,
-        .generation2,
-        .generation1
-    ]
-
     static let allTipProductsInOrder: [PokepediaProduct] = [
         .smallTip,
         .mediumTip,

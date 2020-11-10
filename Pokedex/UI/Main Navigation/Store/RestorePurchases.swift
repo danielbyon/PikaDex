@@ -21,7 +21,7 @@ struct RestorePurchases: View {
             Text("Purchased Premium on another device, or reinstalled the app? Use the button below.")
                 .multilineTextAlignment(.leading)
             Button(action: onRestoreTriggered) {
-                Card(backgroundColor: Color(AppColor.red.uiColor)) {
+                GroupBox {
                     Text("Restore Purchases")
                         .foregroundColor(.white)
                 }

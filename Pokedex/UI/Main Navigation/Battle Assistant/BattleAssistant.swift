@@ -27,17 +27,17 @@ struct BattleAssistant: View {
                 NavigationLink(destination: SelectPokemon(game: appContext.currentGame, onSelect: { pokemon in
                     self.viewModel.pokemon = pokemon
                     self.isShowingSelectPokemon = false
-                }).injectDependencies(), isActive: $isShowingSelectPokemon) {
-                    if viewModel.pokemon != nil {
-                        PokemonCell(pokemon: viewModel.pokemon!, game: appContext.currentGame)
+                }), isActive: $isShowingSelectPokemon) {
+                    if let pokemon = viewModel.pokemon {
+                        PokemonCell(pokemon: pokemon, game: appContext.currentGame)
                             .onTapGesture {
-                                self.isShowingSelectPokemon.toggle()
+                                self.isShowingSelectPokemon = false
                         }
                     } else {
                         Text("Select Pokémon")
                             .monospacedBody()
                             .onTapGesture {
-                                self.isShowingSelectPokemon.toggle()
+                                self.isShowingSelectPokemon = false
                         }
                     }
                 }
@@ -52,22 +52,22 @@ struct BattleAssistant: View {
                 }
             }
 
-            if viewModel.pokemon != nil {
+            if let pokemon = viewModel.pokemon {
                 Section {
-                    NavigationLink(destination: PokemonDetail(pokemon: viewModel.pokemon!, game: appContext.currentGame).injectDependencies()) {
+                    NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: appContext.currentGame)) {
                         Text("View Pokémon details")
                             .monospacedBody()
                     }
                 }
 
-                BattleAssistantInfo(pokemon: viewModel.pokemon!, level: viewModel.level)
+                BattleAssistantInfo(pokemon: pokemon, level: viewModel.level)
             } else {
                 Text("Select a Pokémon and level to view helpful info when battling.")
                     .monospacedBody()
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle("Battle Assistant")
+        .navigationTitle("Battle Assistant")
     }
 }
 

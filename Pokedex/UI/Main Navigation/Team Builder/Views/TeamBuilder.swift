@@ -72,24 +72,24 @@ struct TeamBuilder: View {
                 }
             }
         }
-        .navigationBarTitle("Teams", displayMode: .inline)
-        .navigationBarItems(trailing: HStack {
-            Button(action: {
-                let newTeam = self.viewModel.addNewTeam()
-                self.currentEditingTeam = newTeam
-            }) {
-                Image(systemName: "plus")
-                    .padding(8.0)
-            }
-            EditButton()
-                .padding(8.0)
-        })
-            .sheet(item: self.$currentEditingTeam) { viewModel in
-                NavigationView {
-                    TeamEditor(viewModel: viewModel)
+        .navigationTitle("Teams")
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                EditButton()
+
+                Button(action: {
+                    let newTeam = self.viewModel.addNewTeam()
+                    self.currentEditingTeam = newTeam
+                }) {
+                    Image(systemName: "plus")
                 }
-                .navigationViewStyle(StackNavigationViewStyle())
-                .injectDependencies()
+            }
+        }
+        .sheet(item: self.$currentEditingTeam) { viewModel in
+            NavigationView {
+                TeamEditor(viewModel: viewModel)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
         .alert(isPresented: $isPresentingExportConfirmaton) {
             Alert(
@@ -133,24 +133,22 @@ private struct TeamCell: View {
                         .bold()
                     Spacer()
                 }
-                HStack {
-                    Card(backgroundColor: Color(UIColor.systemGray3)) {
-                        HStack(spacing: 0) {
-                            ForEach(team.members) { member in
-                                if !self.team.isFirstMember(member) {
+                Card {
+                    HStack(spacing: 0) {
+                        ForEach(team.members) { member in
+                            if !self.team.isFirstMember(member) {
+                                Spacer(minLength: 0)
+                            }
+                            PokemonFormSprite(form: member.pokemonForm)
+                        }
+                        if team.members.count < 6 {
+                            ForEach(emptySlots) { i in
+                                if (self.team.members.count > 0 || i.index > 0) {
                                     Spacer(minLength: 0)
                                 }
-                                PokemonFormSprite(form: member.pokemonForm)
-                            }
-                            if team.members.count < 6 {
-                                ForEach(emptySlots) { i in
-                                    if (self.team.members.count > 0 || i.index > 0) {
-                                        Spacer(minLength: 0)
-                                    }
-                                    Rectangle()
-                                        .fill(Color.clear)
-                                        .frame(width: 40, height: 40.0)
-                                }
+                                Rectangle()
+                                    .fill(Color.clear)
+                                    .frame(width: 40, height: 40.0)
                             }
                         }
                     }

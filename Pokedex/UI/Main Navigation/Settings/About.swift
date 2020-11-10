@@ -43,17 +43,17 @@ struct About: View {
             }
 
             MailComposeButton(emailAddress: contactEmail, subject: contactSubject) {
-                BigColoredButton(icon: Image(systemName: "envelope"), title: "Contact", textColor: .white, fillColor: AppColor.red.uiColor)
+                BigColoredButton(icon: Image(systemName: "envelope"), title: "Contact", textColor: .white, fillColor: AppColor.red.color)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            OpenURLButton(url: reviewURL) {
-                BigColoredButton(icon: Image(systemName: "square.and.pencil"), title: "Write a review", textColor: .white, fillColor: AppColor.red.uiColor)
+            Link(destination: reviewURL) {
+                BigColoredButton(icon: Image(systemName: "square.and.pencil"), title: "Write a review", textColor: .white, fillColor: AppColor.red.color)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            OpenURLButton(url: seeMoreAppsURL) {
-                BigColoredButton(icon: Image(systemName: "app.badge"), title: "See my other apps", textColor: .white, fillColor: AppColor.red.uiColor)
+            Link(destination: seeMoreAppsURL) {
+                BigColoredButton(icon: Image(systemName: "app.badge"), title: "See my other apps", textColor: .white, fillColor: AppColor.red.color)
                     .fixedSize(horizontal: false, vertical: true)
             }
 

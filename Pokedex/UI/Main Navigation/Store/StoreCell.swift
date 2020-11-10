@@ -20,12 +20,12 @@ struct StoreCell: View {
                     .monospacedHeadline()
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer()
-                if product.price != nil {
-                    Badge(title: product.price!, fillColor: AppColor.red.uiColor)
+                if let price = product.price {
+                    Badge(title: price, fillColor: AppColor.red.uiColor)
                 }
             }
-            if product.description != nil {
-                Text(product.description!)
+            if let description = product.description {
+                Text(description)
                     .monospacedCaption()
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)

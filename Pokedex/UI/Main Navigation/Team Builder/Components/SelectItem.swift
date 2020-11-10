@@ -36,7 +36,7 @@ struct SelectItem: View {
                 }
             }
         }
-        .navigationBarTitle("Items")
+        .navigationTitle("Items")
     }
 
     init(game: Game, onSelect: @escaping (Item?) -> Void) {

@@ -16,8 +16,8 @@ struct PokemonTypes: View {
     var body: some View {
         HStack {
             Badge(pokemonType: primaryType)
-            if secondaryType != nil {
-                Badge(pokemonType: secondaryType!)
+            if let secondaryType = secondaryType {
+                Badge(pokemonType: secondaryType)
             }
         }
     }

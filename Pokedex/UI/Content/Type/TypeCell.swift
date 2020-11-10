@@ -14,8 +14,8 @@ struct TypeCell: View {
     let game: Game
 
     var body: some View {
-        NavigationLink(destination: TypeDetail(type: self.type, game: self.game).injectDependencies()) {
-            BigColoredButton(title: type.rawValue, fillColor: type.color)
+        NavigationLink(destination: TypeDetail(type: self.type, game: self.game)) {
+            BigColoredButton(title: type.rawValue, fillColor: Color(type.color))
         }
     }
 

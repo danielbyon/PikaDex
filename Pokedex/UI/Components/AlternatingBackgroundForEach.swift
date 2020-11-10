@@ -12,19 +12,23 @@ struct AlternatingBackgroundForEach<Data, Content>: View, DynamicViewContent whe
     Data: RandomAccessCollection,
     Data.Element: Identifiable,
     Data.Index: Hashable,
-Content: View {
+    Content: View {
 
     var data: Data
     var content: (Data.Element) -> Content
 
     @Environment(\.colorScheme) var colorScheme
 
+    private var backgroundColor: Color {
+        Color(self.colorScheme == .dark ? UIColor.tertiarySystemBackground : UIColor.systemGray5)
+    }
+
     var body: some View {
         ForEach(data.indices, id: \.self) { i in
             self.content(self.data[i])
-                .conditionalModifier(self.data.distance(from: self.data.startIndex, to: i) % 2 == 1) {
-                    $0.listRowBackground(Color(self.colorScheme == .dark ? UIColor.tertiarySystemBackground : UIColor.systemGray5))
-            }
+                .if(self.data.distance(from: self.data.startIndex, to: i) % 2 == 1) {
+                    $0.listRowBackground(backgroundColor)
+                }
         }
     }
 
@@ -36,16 +40,29 @@ Content: View {
 }
 
 struct AlternatingBackgroundForEach_Previews: PreviewProvider {
+
+    private struct Model: Identifiable {
+
+        let value: String
+
+        var id: String { value }
+
+        init(_ value: String) {
+            self.value = value
+        }
+
+    }
+
     static var previews: some View {
         Group {
             List {
-                AlternatingBackgroundForEach(["1", "2", "3", "4", "5"]) {
-                    Text($0)
+                AlternatingBackgroundForEach([Model("1"), Model("2"), Model("3"), Model("4"), Model("5")]) {
+                    Text($0.value)
                 }
             }
             List {
-                AlternatingBackgroundForEach(["1", "2", "3", "4", "5"]) {
-                    Text($0)
+                AlternatingBackgroundForEach([Model("1"), Model("2"), Model("3"), Model("4"), Model("5")]) {
+                    Text($0.value)
                 }
             }
             .colorScheme(.dark)

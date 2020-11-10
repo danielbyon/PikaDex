@@ -6,7 +6,7 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 
 enum AppColor: String {
 
@@ -22,5 +22,7 @@ enum AppColor: String {
     case red
 
     var uiColor: UIColor { UIColor(named: "App/\(rawValue)", in: Bundle(for: AppDelegate.self), compatibleWith: nil)! }
+
+    var color: Color { Color(uiColor) }
 
 }

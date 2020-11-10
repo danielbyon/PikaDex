@@ -25,8 +25,8 @@ struct BattleAssistantInfo: View {
     @ViewBuilder var body: some View {
         Section(header: SectionHeader("Types")) {
             PokemonTypeLink(title: "Primary Type", type: pokemon.defaultForm.primaryType, game: appContext.currentGame)
-            if pokemon.defaultForm.secondaryType != nil {
-                PokemonTypeLink(title: "Secondary Type", type: pokemon.defaultForm.secondaryType!, game: appContext.currentGame)
+            if let secondaryType = pokemon.defaultForm.secondaryType {
+                PokemonTypeLink(title: "Secondary Type", type: secondaryType, game: appContext.currentGame)
             }
         }
 
@@ -73,7 +73,7 @@ struct PokemonTypeLink: View {
     let game: Game
 
     var body: some View {
-        NavigationLink(destination: TypeDetail(type: type, game: game).injectDependencies()) {
+        NavigationLink(destination: TypeDetail(type: type, game: game)) {
             HStack {
                 Text(title)
                     .monospacedBody()

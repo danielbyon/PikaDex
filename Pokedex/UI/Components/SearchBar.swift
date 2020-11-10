@@ -29,7 +29,6 @@ struct SearchBar: UIViewRepresentable {
         }
 
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//            text = searchText
             pendingUpdate?.cancel()
             if searchText.isEmpty {
                 // Immediately update if the text is empty

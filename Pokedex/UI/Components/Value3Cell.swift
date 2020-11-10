@@ -17,8 +17,8 @@ struct Value3Cell: View {
 
     var body: some View {
         HStack {
-            if image != nil {
-                Image(uiImage: image!)
+            if let image = image {
+                Image(uiImage: image)
                     .resizable()
                     .frame(width: 40.0, height: 40.0)
                     .scaledToFit()
@@ -27,15 +27,15 @@ struct Value3Cell: View {
                 Text(title)
                     .monospacedBody()
                     .multilineTextAlignment(.leading)
-                if subtitle != nil {
-                    Text(subtitle!)
+                if let subtitle = subtitle {
+                    Text(subtitle)
                         .monospacedCaption()
                         .multilineTextAlignment(.leading)
                 }
             }
             Spacer()
-            if detail != nil {
-                Text(detail!)
+            if let detail = detail {
+                Text(detail)
                     .alignmentGuide(.trailing, computeValue: { d in d[.trailing] })
                     .monospacedBody()
                     .multilineTextAlignment(.trailing)

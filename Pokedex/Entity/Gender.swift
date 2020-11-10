@@ -8,8 +8,12 @@
 
 import Foundation
 
-public enum Gender: String, CaseIterable, Codable, Hashable, Equatable {
+public enum Gender: String, CaseIterable, Codable, Hashable, Identifiable, Equatable {
+
     case male
     case female
     case unspecified
+
+    public var id: String { rawValue }
+
 }

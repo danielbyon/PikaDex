@@ -29,17 +29,3 @@ struct MoveRow_Previews: PreviewProvider {
         MoveCell(move: Move.generateThunderShock(), game: .sword)
     }
 }
-
-struct MoveBadges: View {
-
-    let move: Move
-    let game: Game
-
-    var body: some View {
-        VStack(spacing: 2.0) {
-            Badge(pokemonType: move.type, equalWidths: true, isSmall: true)
-            Badge(moveCategory: move.info.category, equalWidths: true, isSmall: true)
-        }
-    }
-
-}

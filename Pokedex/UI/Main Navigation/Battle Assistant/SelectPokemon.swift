@@ -21,7 +21,7 @@ struct SelectPokemon: View {
                 self.onSelect(pokemon)
             }
         }
-        .navigationBarTitle("Select Pokémon")
+        .navigationTitle("Select Pokémon")
     }
 
     init(game: Game, onSelect: @escaping (Pokemon) -> Void) {

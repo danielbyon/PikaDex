@@ -19,8 +19,12 @@ struct LocationMapDetail: View {
 
     var body: some View {
         PannableZoomableImageView(image: image)
-            .navigationBarTitle(Text(title), displayMode: .inline)
-            .navigationBarItems(trailing: DoneButton(action: dismiss))
+            .navigationTitle(title)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    DoneButton(action: dismiss)
+                }
+            }
     }
 
     private func dismiss() {

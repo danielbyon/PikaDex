@@ -32,7 +32,7 @@ struct PokemonLocations: View {
         List {
             if !locationPokemons.isEmpty {
                 ForEach(sections) { section in
-                    Section(header: NavigationLink(destination: LocationDetail(location: section.location, game: self.game).injectDependencies(), label: {
+                    Section(header: NavigationLink(destination: LocationDetail(location: section.location, game: self.game), label: {
                         PokemonLocationSectionHeader(section.location.name)
                     })) {
                         ForEach(section.viewModels) { viewModel in
@@ -46,7 +46,7 @@ struct PokemonLocations: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle("Locations")
+        .navigationTitle("Locations")
     }
 
     init(pokemon: Pokemon, game: Game) {

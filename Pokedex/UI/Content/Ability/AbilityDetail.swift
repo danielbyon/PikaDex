@@ -17,9 +17,9 @@ struct AbilityDetail: View {
 
     var body: some View {
         List {
-            if ability.description(forGame: game) != nil {
+            if let description = ability.description(forGame: game) {
                 Section {
-                    DescriptionCell(text: ability.description(forGame: game)!)
+                    DescriptionCell(text: description)
                 }
             }
 
@@ -33,7 +33,7 @@ struct AbilityDetail: View {
                         .monospacedBody()
                 } else {
                     AlternatingBackgroundForEach(forms) { form in
-                        NavigationLink(destination: PokemonDetail(pokemon: form.pokemon, game: self.game, formIndex: form.formIndex).injectDependencies()) {
+                        NavigationLink(destination: PokemonDetail(pokemon: form.pokemon, game: self.game, formIndex: form.formIndex)) {
                             PokemonFormCell(form: form, game: self.game)
                         }
                     }
@@ -41,7 +41,7 @@ struct AbilityDetail: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(ability.name), displayMode: .large)
+        .navigationTitle(ability.name)
     }
 
     init(ability: Ability, game: Game) {
