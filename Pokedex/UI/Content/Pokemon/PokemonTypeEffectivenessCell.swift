@@ -15,13 +15,16 @@ struct PokemonTypeEffectivenessCell: View {
     var equalWidths = true
     var isSmall = true
 
+    private let quarterFractionCharacter = "\u{00BC}"
+    private let halfFractionCharacter = "\u{00BD}"
+
     private var formattedValue: String {
         if value == 0 {
             return "0x"
         } else if value == 0.25 {
-            return "\u{00BC}" + "x"
+            return quarterFractionCharacter + "x"
         } else if value == 0.5 {
-            return "\u{00BD}" + "x"
+            return halfFractionCharacter + "x"
         } else {
             return value > 0 ? "\(Self.numberFormatter.string(from: NSNumber(value: value))!)x" : "0x"
         }
@@ -39,7 +42,7 @@ struct PokemonTypeEffectivenessCell: View {
         HStack(spacing: 2.0) {
             Text(formattedValue)
                 .font(.system(isSmall ? .caption : .body, design: .monospaced))
-                .bold()
+                .if(value != 1.0) { $0.fontWeight(.bold) } else: { $0.fontWeight(.light) }
             Badge(pokemonType: type, equalWidths: equalWidths, isSmall: isSmall)
         }
         .padding(.leading, 4.0)

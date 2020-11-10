@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PokemonTypeEffectiveness: View {
 
-    private let types: [PokemonTypeEffectivenessViewModel]
+    private let typeViewModels: [PokemonTypeEffectivenessViewModel]
 
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
@@ -26,23 +26,15 @@ struct PokemonTypeEffectiveness: View {
     }
 
     var body: some View {
-        VStack(spacing: 16) {
-            ForEach(0..<(PokemonType.allCases.count / self.numberOfColumns), id: \.self) { row in
-                HStack(spacing: 0) {
-                    ForEach(0..<self.numberOfColumns, id: \.self) { column in
-                        HStack(spacing: 0) {
-                            Spacer(minLength: 0)
-                            PokemonTypeEffectivenessCell(type: self.types[self.numberOfColumns * row + column].type, value: self.types[self.numberOfColumns * row + column].value)
-                            Spacer(minLength: 0)
-                        }
-                    }
-                }
+        LazyVGrid(columns: Array(repeating: .init(), count: numberOfColumns)) {
+            ForEach(typeViewModels) { viewModel in
+                PokemonTypeEffectivenessCell(type: viewModel.type, value: viewModel.value)
             }
         }
     }
 
     init(primaryType: PokemonType, secondaryType: PokemonType?, kind: Kind, game: Game) {
-        types = TypeEffectiveness(primary: primaryType, secondary: secondaryType)
+        typeViewModels = TypeEffectiveness(primary: primaryType, secondary: secondaryType)
             .orderedTypeValues(for: kind, generation: game.generation)
     }
 
@@ -73,9 +65,11 @@ private extension TypeEffectiveness {
 
 }
 
-private struct PokemonTypeEffectivenessViewModel {
+private struct PokemonTypeEffectivenessViewModel: Identifiable {
 
     let type: PokemonType
     let value: Double
+
+    var id: String { type.rawValue }
 
 }
