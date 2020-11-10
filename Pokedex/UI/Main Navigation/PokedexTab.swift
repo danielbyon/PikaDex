@@ -48,6 +48,7 @@ struct PokedexTab: View {
                 NatureList()
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .injectDependencies()
         }
     }
     private var typesButton: some View {
@@ -142,6 +143,7 @@ struct PokedexTab: View {
             }
             .sheet(isPresented: $isShowingGameSelector) {
                 GameSelector()
+                    .injectDependencies()
             }
 
             LazyVGrid(columns: Array(repeating: .init(spacing: spacing), count: 2), spacing: spacing) {
@@ -152,6 +154,7 @@ struct PokedexTab: View {
                 }
                 .sheet(isPresented: $isShowingStore) {
                     Store()
+                        .injectDependencies()
                 }
 
                 Button(action: {
@@ -161,6 +164,7 @@ struct PokedexTab: View {
                 }
                 .sheet(isPresented: $isShowingSettings) {
                     Settings()
+                        .injectDependencies()
                 }
             }
         }

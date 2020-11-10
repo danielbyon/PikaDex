@@ -21,6 +21,7 @@ struct FilterablePokemonList: View {
             numberKeyPath: viewModel.filter.filterBy.keyPath)
             .sheet(isPresented: $isShowingFilter) {
                 PokemonListFilter(game: self.appContext.currentGame, viewModel: self.viewModel)
+                    .injectDependencies()
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

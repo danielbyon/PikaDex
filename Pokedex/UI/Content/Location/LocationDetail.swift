@@ -93,6 +93,7 @@ struct LocationDetail: View {
                 LocationMapDetail(map: map)
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .injectDependencies()
         }
     }
 

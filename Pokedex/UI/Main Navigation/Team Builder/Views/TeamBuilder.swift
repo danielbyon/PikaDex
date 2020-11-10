@@ -90,6 +90,7 @@ struct TeamBuilder: View {
                 TeamEditor(viewModel: viewModel)
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .injectDependencies()
         }
         .alert(isPresented: $isPresentingExportConfirmaton) {
             Alert(

@@ -42,6 +42,7 @@ struct GameSelector: View {
             }
             .sheet(isPresented: $isShowingStore) {
                 Store()
+                    .injectDependencies()
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
