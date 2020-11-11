@@ -43,13 +43,17 @@ private struct BattleAssistantTypeEffectivenessSection: View {
     let title: String
     let types: [CellViewModel]
 
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
+    private var numberOfColumns: Int { horizontalSizeClass == .regular ? 6 : 3 }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 16.0) {
+        VStack(alignment: .leading) {
             Text(title)
                 .monospacedBody()
-            VStack(alignment: .leading, spacing: 8.0) {
+            LazyVGrid(columns: .init(repeating: .init(), count: numberOfColumns), spacing: 8.0) {
                 ForEach(types) { viewModel in
-                    PokemonTypeEffectivenessCell(type: viewModel.type, value: viewModel.value, equalWidths: false, isSmall: false)
+                    PokemonTypeEffectivenessCell(type: viewModel.type, value: viewModel.value, isSmall: false)
                 }
             }
         }
