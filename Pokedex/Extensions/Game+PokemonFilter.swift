@@ -52,6 +52,7 @@ extension Game {
         case .sword, .shield:
             filters.append(Pokemon.Filter.FilterBy(title: "Regional (Galar)", keyPath: #keyPath(Pokemon.z_pokedexNumbers.z_galar)))
             filters.append(Pokemon.Filter.FilterBy(title: "Regional (Isle of Armor)", keyPath: #keyPath(Pokemon.z_pokedexNumbers.z_isleOfArmor)))
+            filters.append(Pokemon.Filter.FilterBy(title: "Regional (The Crown Tundra)", keyPath: #keyPath(Pokemon.z_pokedexNumbers.z_crownTundra)))
         }
         return filters
     }
