@@ -10,8 +10,6 @@ import SwiftUI
 
 struct NatureList: View {
 
-    @Environment(\.presentationMode) var presentationMode
-
     var natures: [NatureCellViewModel] { Nature.all.map { .init(nature: $0) } }
 
     var body: some View {
@@ -24,15 +22,6 @@ struct NatureList: View {
             .padding()
         }
         .navigationTitle("Natures")
-        .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
-                DoneButton(action: dismiss)
-            }
-        }
-    }
-
-    private func dismiss() {
-        presentationMode.wrappedValue.dismiss()
     }
 
 }
