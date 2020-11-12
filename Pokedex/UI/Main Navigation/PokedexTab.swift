@@ -163,8 +163,11 @@ struct PokedexTab: View {
                     BigColoredButton(icon: Image(systemName: "gear"), title: "Settings", textColor: .black, fillColor: normalItemColor)
                 }
                 .sheet(isPresented: $isShowingSettings) {
-                    Settings()
-                        .injectDependencies()
+                    NavigationView {
+                        Settings()
+                    }
+                    .navigationViewStyle(StackNavigationViewStyle())
+                    .injectDependencies()
                 }
             }
         }
