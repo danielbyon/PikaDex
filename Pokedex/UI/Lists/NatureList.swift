@@ -10,11 +10,14 @@ import SwiftUI
 
 struct NatureList: View {
 
-    var natures: [NatureCellViewModel] { Nature.all.map { .init(nature: $0) } }
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
+    private var natures: [NatureCellViewModel] { Nature.all.map { .init(nature: $0) } }
+    private var numberOfColumns: Int { horizontalSizeClass == .compact ? 2 : 4 }
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: Array(repeating: .init(spacing: 16.0), count: 2), spacing: 16.0) {
+            LazyVGrid(columns: Array(repeating: .init(spacing: 16.0), count: numberOfColumns), spacing: 16.0) {
                 ForEach(natures) { nature in
                     NatureCell(viewModel: nature)
                 }
