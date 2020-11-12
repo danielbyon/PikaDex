@@ -13,8 +13,8 @@ import Combine
 struct SearchableList<Element, Content>: View where Element: NSFetchRequestResult & Hashable & Identifiable & CanonicallyNamed, Content: View {
 
     @ObservedObject private var viewModel: SearchableListViewModel<Element>
-    var searchPlaceholder = "Search"
-    var content: (Element) -> Content
+    private let searchPlaceholder: String
+    private let content: (Element) -> Content
 
     @ViewBuilder
     var body: some View {
