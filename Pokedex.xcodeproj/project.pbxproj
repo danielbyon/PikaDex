@@ -303,6 +303,7 @@
 		65EA939024655EA10037348F /* KeyboardAvoiderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EA938F24655EA10037348F /* KeyboardAvoiderModifier.swift */; };
 		65EA93912465907E0037348F /* CanonicallyNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD14224641D1B0014D812 /* CanonicallyNamed.swift */; };
 		65EDEEC3245F0167003E013C /* PokemonTypeEffectiveness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE502023977F4200828A29 /* PokemonTypeEffectiveness.swift */; };
+		65EF1C45255D2A0700DF1968 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FE24B7CF5300640EB3 /* Images.xcassets */; };
 		65F7693D2452B49900AEB57D /* NatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F7693C2452B49900AEB57D /* NatureList.swift */; };
 		65F7693F2452BDB700AEB57D /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F7693E2452BDB700AEB57D /* Flavor.swift */; };
 		65F769412452BDF500AEB57D /* Flavor+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F769402452BDF500AEB57D /* Flavor+UIColor.swift */; };
@@ -1506,6 +1507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EF1C45255D2A0700DF1968 /* Images.xcassets in Resources */,
 				65A5ED6024A1FC2F00742986 /* Assets.xcassets in Resources */,
 				6547F805237968D50091A083 /* LaunchScreen.storyboard in Resources */,
 				659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */,
