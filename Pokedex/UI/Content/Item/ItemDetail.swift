@@ -125,6 +125,7 @@ private struct ItemPriceCell: View {
                 generation.priceSprite
                     .interpolation(.low)
                     .resizable()
+                    .renderingMode(.template)
                     .scaledToFit()
                     .frame(height: UIFont.preferredFont(forTextStyle: .body).pointSize)
                 Text("\(price)")
@@ -133,6 +134,7 @@ private struct ItemPriceCell: View {
         }
         .monospacedBody()
         .contentShape(Rectangle())
+        .foregroundColor(.primary)
     }
 
 }
