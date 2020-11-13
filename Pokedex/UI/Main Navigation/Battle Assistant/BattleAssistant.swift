@@ -31,13 +31,13 @@ struct BattleAssistant: View {
                     if let pokemon = viewModel.pokemon {
                         PokemonCell(pokemon: pokemon, game: appContext.currentGame)
                             .onTapGesture {
-                                self.isShowingSelectPokemon = false
+                                self.isShowingSelectPokemon.toggle()
                         }
                     } else {
                         Text("Select Pokémon")
                             .monospacedBody()
                             .onTapGesture {
-                                self.isShowingSelectPokemon = false
+                                self.isShowingSelectPokemon.toggle()
                         }
                     }
                 }
