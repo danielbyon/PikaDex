@@ -14,23 +14,27 @@ struct PokemonTypesDetail: View {
     let secondaryType: PokemonType?
 
     @EnvironmentObject var appContext: AppContext
-    @State private var currentSegment = 0
+    @State private var selectedSegment: String
 
     var body: some View {
         Group {
-            if secondaryType == nil {
-                primaryTypeView
-            } else {
+            if let secondaryType = secondaryType {
                 VStack {
-                    SegmentedControl(titles: [primaryType.rawValue, secondaryType!.rawValue], values: [0, 1], selectedSegmentIndex: $currentSegment)
-                        .padding(.horizontal)
-                        .padding(.top)
-                    if currentSegment == 0 {
+                    Picker("", selection: $selectedSegment) {
+                        Text(primaryType.rawValue)
+                            .tag(primaryType.rawValue)
+                        Text(secondaryType.rawValue)
+                            .tag(secondaryType.rawValue)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    if selectedSegment == primaryType.rawValue {
                         primaryTypeView
                     } else {
-                        secondaryTypeView
+                        TypeDetail(type: secondaryType, game: appContext.currentGame)
                     }
                 }
+            } else {
+                primaryTypeView
             }
         }
     }
@@ -39,8 +43,10 @@ struct PokemonTypesDetail: View {
         TypeDetail(type: primaryType, game: appContext.currentGame)
     }
 
-    private var secondaryTypeView: some View {
-        TypeDetail(type: secondaryType!, game: appContext.currentGame)
+    init(primaryType: PokemonType, secondaryType: PokemonType?) {
+        self.primaryType = primaryType
+        self.secondaryType = secondaryType
+        self._selectedSegment = .init(initialValue: primaryType.rawValue)
     }
 
 }

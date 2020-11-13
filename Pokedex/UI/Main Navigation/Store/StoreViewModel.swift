@@ -27,7 +27,6 @@ extension AlertInfo: Identifiable {
 final class StoreViewModel: ObservableObject {
 
     @Published var allConsoleProducts: [ProductViewModel] = []
-    @Published var allGameProducts: [ProductViewModel] = []
     @Published var allTipProducts: [ProductViewModel] = []
     @Published var alertInfo: AlertInfo?
     @Published var error: ErrorInfo?
@@ -36,7 +35,6 @@ final class StoreViewModel: ObservableObject {
 
     var hasProducts: Bool {
         !allConsoleProducts.isEmpty
-            || !allGameProducts.isEmpty
             || !allTipProducts.isEmpty
     }
 
@@ -124,9 +122,6 @@ final class StoreViewModel: ObservableObject {
         let allConsoleProducts = PokepediaProduct.allConsoleProductsInOrder
             .compactMap { productsByidentifier[$0.productIdentifier] }
             .compactMap { ProductViewModel(product: $0, discountPercent: PokepediaProduct.allBundleDiscounts[$0.productIdentifier], showDescription: true) }
-//        let allGameProducts = PokepediaProduct.allGameProductsInOrder
-//            .compactMap { productsByidentifier[$0.productIdentifier] }
-//            .compactMap { ProductViewModel(product: $0, discountPercent: nil, showDescription: false) }
         let allTipProducts = PokepediaProduct.allTipProductsInOrder
             .compactMap { productsByidentifier[$0.productIdentifier] }
             .compactMap { ProductViewModel(product: $0, discountPercent: nil, showDescription: false) }
@@ -136,9 +131,6 @@ final class StoreViewModel: ObservableObject {
             if allConsoleProducts != self.allConsoleProducts {
                 self.allConsoleProducts = allConsoleProducts
             }
-//            if allGameProducts != self.allGameProducts {
-//                self.allGameProducts = allGameProducts
-//            }
             if allTipProducts != self.allTipProducts {
                 self.allTipProducts = allTipProducts
             }

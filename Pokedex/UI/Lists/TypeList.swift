@@ -14,14 +14,16 @@ struct TypeList: View {
 
     var body: some View {
         ScrollView {
-            GridView(elements: PokemonType.allTypes(for: game).sorted(), numberOfItemsPerRow: 2) { type in
-                NavigationLink(destination: TypeDetail(type: type, game: self.game).injectDependencies()) {
-                    BigColoredButton(title: type.rawValue, fillColor: type.color)
+            LazyVGrid(columns: Array(repeating: .init(spacing: 16.0), count: 2), spacing: 16.0) {
+                ForEach(PokemonType.allTypes(for: game).sorted()) { type in
+                    NavigationLink(destination: TypeDetail(type: type, game: self.game)) {
+                        BigColoredButton(title: type.rawValue, fillColor: Color(type.color))
+                    }
                 }
             }
             .padding()
         }
-        .navigationBarTitle("Types")
+        .navigationTitle("Types")
     }
 
 }

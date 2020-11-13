@@ -21,7 +21,7 @@ struct SelectPokemonForm: View {
                 self.onSelect(pokemonForm)
             }
         }
-        .navigationBarTitle("Select Pokémon")
+        .navigationTitle("Select Pokémon")
     }
 
     init(game: Game, onSelect: @escaping (PokemonForm) -> Void) {

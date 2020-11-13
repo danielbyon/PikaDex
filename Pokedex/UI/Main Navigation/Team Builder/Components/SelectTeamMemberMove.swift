@@ -20,6 +20,7 @@ struct SelectTeamMemberMove: View {
     @FetchRequest private var tutorLearnset: FetchedResults<TutorLearnsetEntry>
     @FetchRequest private var allMoves: FetchedResults<Move>
     @State private var showMovesByPokemon = true
+    @State private var selectedSegment: String
 
     private var levelEntries: [PokemonLearnsetViewModel] { levelLearnset.map { PokemonLearnsetViewModel(learnsetEntry: $0) } }
     private var machineEntries: [PokemonLearnsetViewModel] { machineLearnset.map { PokemonLearnsetViewModel(learnsetEntry: $0) } }
@@ -29,7 +30,13 @@ struct SelectTeamMemberMove: View {
     var body: some View {
         List {
             Section {
-                SegmentedControl(titles: ["\(pokemonForm.pokemon.name)-specific", "All Moves"], values: [true, false], selectedSegmentIndex: $showMovesByPokemon)
+                Picker("", selection: $selectedSegment) {
+                    Text("\(pokemonForm.pokemon.name)-specific")
+                        .tag("\(pokemonForm.pokemon.name)-specific")
+                    Text("All Moves")
+                        .tag("All Moves")
+                }
+                .pickerStyle(SegmentedPickerStyle())
             }
 
             if showMovesByPokemon {
@@ -81,7 +88,7 @@ struct SelectTeamMemberMove: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle("Select Move", displayMode: .inline)
+        .navigationTitle("Select Move")
     }
 
     init(pokemonForm: PokemonForm, game: Game, onSelect: @escaping (Move) -> Void) {
@@ -93,6 +100,7 @@ struct SelectTeamMemberMove: View {
         self._breedLearnset = .init(fetchRequest: BreedLearnsetEntry.fetchRequest(forPokemonForm: pokemonForm))
         self._tutorLearnset = .init(fetchRequest: TutorLearnsetEntry.fetchRequest(forPokemonForm: pokemonForm))
         self._allMoves = .init(fetchRequest: Move.allFetchRequest(for: game))
+        self._selectedSegment = .init(initialValue: "\(pokemonForm.pokemon.name)-specific")
     }
 
 }

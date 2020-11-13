@@ -29,40 +29,30 @@ struct MachineList: View {
         }
         return values
     }
-    private var segmentedControl: some View {
-        Group {
-            if segmentedControlValues.count > 1 {
-                SegmentedControl(
-                    titles: segmentedControlValues.map { $0.title },
-                    values: segmentedControlValues, selectedSegmentIndex: $selectedMachineType)
-            } else {
-                EmptyView()
-            }
-        }
-    }
     private var tms: [Machine] { machines.filter { $0.type == .tm } }
     private var hms: [Machine] { machines.filter { $0.type == .hm } }
     private var trs: [Machine] { machines.filter { $0.type == .tr } }
 
     var body: some View {
         List {
-            segmentedControl
-            if selectedMachineType == .tm {
+            segmentedControl()
+            switch selectedMachineType {
+            case .tm:
                 AlternatingBackgroundForEach(tms) {
                     self.cell(for: $0)
                 }
-            } else if selectedMachineType == .hm {
+            case .hm:
                 AlternatingBackgroundForEach(hms) {
                     self.cell(for: $0)
                 }
-            } else if selectedMachineType == .tr {
+            case .tr:
                 AlternatingBackgroundForEach(trs) {
                     self.cell(for: $0)
                 }
             }
         }
         .listStyle(PlainListStyle())
-        .navigationBarTitle(title)
+        .navigationTitle(title)
     }
 
     init(title: String, game: Game) {
@@ -72,8 +62,13 @@ struct MachineList: View {
 
     }
 
+    private func segmentedControl() -> SegmentedControl<MachineType>? {
+        guard segmentedControlValues.count > 1 else { return nil }
+        return SegmentedControl(selectedSegment: $selectedMachineType, segments: segmentedControlValues)
+    }
+
     private func cell(for machine: Machine) -> some View {
-        NavigationLink(destination: MoveDetail(move: machine.move, game: game).injectDependencies()) {
+        NavigationLink(destination: MoveDetail(move: machine.move, game: game)) {
             MachineCell(machine: machine, game: game)
         }
     }
@@ -97,7 +92,7 @@ private struct MachineCell: View {
     var body: some View {
         HStack {
             MoveCell(move: machine.move, game: game)
-            Text("\(machine.type.title) \(NumberFormatter.twoDigit.string(from: NSNumber(value: machine.number)) ?? "")")
+            Text("\(machine.type.rawValue) \(NumberFormatter.twoDigit.string(from: NSNumber(value: machine.number)) ?? "")")
         }
         .contentShape(Rectangle())
         .monospacedBody()

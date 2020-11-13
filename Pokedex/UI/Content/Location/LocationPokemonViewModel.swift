@@ -24,9 +24,14 @@ struct LocationPokemonViewModel {
             let count = abs(locationPokemon.levelLow)
             self.subtitle = String(repeating: "⭐︎", count: count)
         } else if locationPokemon.levelLow > 0 {
-            self.subtitle = "Lv. \(locationPokemon.levelLow)"
-                + (locationPokemon.levelHigh != nil ? "-\(locationPokemon.levelHigh!)" : "")
-                + (locationPokemon.detail != nil ? " (\(locationPokemon.detail!))" : "")
+            var subtitle = "Lv. \(locationPokemon.levelLow)"
+            if let levelHigh = locationPokemon.levelHigh {
+                subtitle += "-\(levelHigh)"
+            }
+            if let detail = locationPokemon.detail {
+                subtitle += " (\(detail))"
+            }
+            self.subtitle = subtitle
         } else {
             self.subtitle = locationPokemon.detail
         }

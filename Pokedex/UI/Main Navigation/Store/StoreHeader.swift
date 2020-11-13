@@ -41,8 +41,8 @@ private struct StoreHeaderCell: View {
             VStack(alignment: .leading, spacing: 4.0) {
                 Text(text)
                     .multilineTextAlignment(.leading)
-                if detailText != nil {
-                    Text(detailText!)
+                if let detailText = detailText {
+                    Text(detailText)
                         .font(.caption)
                         .multilineTextAlignment(.leading)
                 }

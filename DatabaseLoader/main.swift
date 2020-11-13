@@ -505,20 +505,23 @@ for dict in Helper.loadTSV(from: "Research/PokemonForms.tsv") {
     storedForm.baseFriendship = Int(dict["baseFriendship"]!)!
 
     let primaryAbility = getAbility(forName: sanitizedName(dict["abilityPrimary"]!))
-    if primaryAbility.generationIntroduced <= game.generation {
+    if game.generation >= primaryAbility.generationIntroduced
+        || !game.hasAbilities {
         storedForm.primaryAbility = primaryAbility
     }
 
     if let ability2Name = dict["abilitySecondary"], !ability2Name.isEmpty {
         let secondaryAbility = getAbility(forName: sanitizedName(ability2Name))
-        if secondaryAbility.generationIntroduced <= game.generation {
+        if secondaryAbility.generationIntroduced <= game.generation
+            || !game.hasAbilities {
             storedForm.secondaryAbility = secondaryAbility
         }
     }
 
     if let abilityHiddenName = dict["abilityHidden"], !abilityHiddenName.isEmpty {
         let hiddenAbility = getAbility(forName: sanitizedName(abilityHiddenName))
-        if hiddenAbility.generationIntroduced <= game.generation {
+        if hiddenAbility.generationIntroduced <= game.generation
+            || !game.hasAbilities {
             storedForm.hiddenAbility = hiddenAbility
         }
     }

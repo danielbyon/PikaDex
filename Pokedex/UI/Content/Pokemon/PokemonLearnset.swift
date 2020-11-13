@@ -17,19 +17,20 @@ struct PokemonLearnset: View {
 
     var body: some View {
         List {
-            SegmentedControl(titles: LearnsetType.allTitles(for: game), values: LearnsetType.allCases(for: game), selectedSegmentIndex: $selectedLearnsetType)
-            if selectedLearnsetType == .level {
+            SegmentedControl(selectedSegment: $selectedLearnsetType, segments: LearnsetType.allCases(for: game))
+            switch selectedLearnsetType {
+            case .level:
                 PokemonLearnsetGroup(title: "Level", game: game, learnsetFetchRequest: LevelLearnsetEntry.fetchRequest(forPokemonForm: form))
-            } else if selectedLearnsetType == .machine {
+            case .machine:
                 PokemonLearnsetGroup(title: "Machine", game: game, learnsetFetchRequest: MachineLearnsetEntry.fetchRequest(forPokemonForm: form))
-            } else if selectedLearnsetType == .breed {
+            case .breed:
                 PokemonLearnsetGroup(title: "Breeding", game: game, learnsetFetchRequest: BreedLearnsetEntry.fetchRequest(forPokemonForm: form))
-            } else if selectedLearnsetType == .tutor {
+            case .tutor:
                 PokemonLearnsetGroup(title: "Tutoring", game: game, learnsetFetchRequest: TutorLearnsetEntry.fetchRequest(forPokemonForm: form))
             }
         }
         .listStyle(PlainListStyle())
-        .navigationBarTitle("Moves", displayMode: .inline)
+        .navigationTitle("Moves")
     }
 
     init(form: PokemonForm, game: Game, initialLearnsetType learnsetType: LearnsetType) {

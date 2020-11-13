@@ -20,12 +20,12 @@ struct GameDetail: View {
 
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(game.title)
-        .navigationBarItems(trailing: Button(action: selectAction) {
-            Text("Select")
-                .font(.body)
-                .padding([.leading, .top, .bottom])
-        })
+        .navigationTitle(game.title)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Select", action: selectAction)
+            }
+        }
     }
 
 }

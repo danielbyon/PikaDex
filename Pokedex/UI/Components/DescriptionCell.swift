@@ -19,7 +19,7 @@ struct DescriptionCell: View {
                 .multilineTextAlignment(.leading)
                 .padding(.vertical, 4.0)
                 .fixedSize(horizontal: false, vertical: true)
-            Spacer()
+            Spacer(minLength: 0.0)
         }
     }
 

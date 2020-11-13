@@ -16,11 +16,11 @@ struct AbilityList: View {
 
     var body: some View {
         SearchableList(viewModel: SearchableListViewModel(objects: abilities), searchPlaceholder: "Search for an ability") { ability in
-            NavigationLink(destination: AbilityDetail(ability: ability, game: self.game).injectDependencies()) {
+            NavigationLink(destination: AbilityDetail(ability: ability, game: self.game)) {
                 AbilityCell(model: AbilityViewModel(ability: ability))
             }
         }
-        .navigationBarTitle("Abilities")
+        .navigationTitle("Abilities")
     }
 
     init(game: Game) {

@@ -26,7 +26,7 @@ struct MoveDetail: View {
             }
 
             Section(header: SectionHeader("Info")) {
-                NavigationLink(destination: TypeDetail(type: move.type, game: game).injectDependencies()) {
+                NavigationLink(destination: TypeDetail(type: move.type, game: game)) {
                     HStack {
                         Text("Type")
                             .monospacedBody()
@@ -80,20 +80,21 @@ struct MoveDetail: View {
             }
 
             Section {
-                SegmentedControl(titles: LearnsetType.allTitles(for: game), values: LearnsetType.allCases(for: game), selectedSegmentIndex: $selectedLearnsetType)
-                if selectedLearnsetType == .level {
+                SegmentedControl(selectedSegment: $selectedLearnsetType, segments: LearnsetType.allCases(for: game))
+                switch selectedLearnsetType {
+                case .level:
                     MoveLearnsetGroup(title: "Level", game: game, learnsetFetchRequest: LevelLearnsetEntry.fetchRequest(for: move, game: game))
-                } else if selectedLearnsetType == .machine {
+                case .machine:
                     MoveLearnsetGroup(title: "Machine", game: game, learnsetFetchRequest: MachineLearnsetEntry.fetchRequest(for: move, game: game))
-                } else if selectedLearnsetType == .breed {
+                case .breed:
                     MoveLearnsetGroup(title: "Breeding", game: game, learnsetFetchRequest: BreedLearnsetEntry.fetchRequest(for: move, game: game))
-                } else if selectedLearnsetType == .tutor {
+                case .tutor:
                     MoveLearnsetGroup(title: "Tutoring", game: game, learnsetFetchRequest: TutorLearnsetEntry.fetchRequest(for: move, game: game))
                 }
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(move.name), displayMode: .large)
+        .navigationTitle(move.name)
     }
 
 }

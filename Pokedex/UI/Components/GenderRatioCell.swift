@@ -30,9 +30,9 @@ struct GenderRatioCell: View {
                 .monospacedBody()
                 .multilineTextAlignment(.leading)
             Spacer(minLength: 16)
-            if maleRatio != nil && maleRatio! >= 0.0 {
+            if let maleRatio = maleRatio, maleRatio >= 0.0 {
                 VStack(spacing: 4.0) {
-                    ProgressBar(progress: maleRatio! / 100.0, color: Color(#colorLiteral(red: 0.2078431373, green: 0.3294117647, blue: 1, alpha: 1)), backgroundColor: Color(#colorLiteral(red: 1, green: 0.462745098, blue: 0.8784313725, alpha: 1)), useGradient: false)
+                    ProgressBar(progress: maleRatio / 100.0, color: Color(#colorLiteral(red: 0.2078431373, green: 0.3294117647, blue: 1, alpha: 1)), backgroundColor: Color(#colorLiteral(red: 1, green: 0.462745098, blue: 0.8784313725, alpha: 1)), useGradient: false)
                         .frame(height: 8.0)
                     Text(genderRatioString ?? "Genderless")
                         .monospacedCaption()

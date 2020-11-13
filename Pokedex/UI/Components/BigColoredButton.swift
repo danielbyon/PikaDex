@@ -12,8 +12,8 @@ struct BigColoredButton: View {
 
     var icon: Image? = nil
     let title: String
-    var textColor: UIColor = .white
-    let fillColor: UIColor
+    var textColor: Color = .white
+    let fillColor: Color
 
     private var cornerRadius: CGFloat { 16.0 }
     private var padding: CGFloat { 16.0 }
@@ -21,19 +21,17 @@ struct BigColoredButton: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             RoundedRectangle(cornerRadius: cornerRadius)
-                .fill(Color(fillColor))
+                .fill(fillColor)
                 .shadow(radius: 3.0)
             HStack(alignment: .firstTextBaseline) {
-                if icon != nil {
-                    icon!
-                }
+                icon
                 Text(title)
                     .multilineTextAlignment(.leading)
                     .shadow(radius: 0.5)
             }
             .font(.headline)
-            .foregroundColor(Color(textColor))
-            .padding(16.0)
+            .foregroundColor(textColor)
+            .padding(padding)
         }
     }
 
@@ -41,6 +39,10 @@ struct BigColoredButton: View {
 
 struct BigColoredButton_Previews: PreviewProvider {
     static var previews: some View {
-        BigColoredButton(title: "Hello World", fillColor: .systemGray)
+        VStack {
+            BigColoredButton(title: "Hello World", fillColor: Color(.systemGray))
+            BigColoredButton(title: "Hello World", fillColor: .red)
+            BigColoredButton(title: "Hello World", fillColor: .blue)
+        }
     }
 }

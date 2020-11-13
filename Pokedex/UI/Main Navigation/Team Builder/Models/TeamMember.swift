@@ -27,7 +27,7 @@ struct TeamMember: Codable {
     var move3: String?
     var move4: String?
     var nature: String?
-    var ability: String
+    var ability: String?
     var heldItem: String?
     var happiness: Int = 255
     var isShiny: Bool = false
@@ -62,7 +62,7 @@ struct TeamMember: Codable {
         move3: String?,
         move4: String?,
         nature: String?,
-        ability: String,
+        ability: String?,
         heldItem: String?,
         happiness: Int,
         isShiny: Bool,
@@ -104,7 +104,7 @@ struct TeamMember: Codable {
         self.specialAttack = .init(baseValue: pokemonForm.baseStats.specialAttack, ev: 0, iv: 0)
         self.specialDefense = .init(baseValue: pokemonForm.baseStats.specialDefense, ev: 0, iv: 0)
         self.speed = .init(baseValue: pokemonForm.baseStats.speed, ev: 0, iv: 0)
-        self.ability = pokemonForm.primaryAbility.name
+        self.ability = game.hasAbilities ? pokemonForm.primaryAbility.name : nil
         self.game = game
         self.internalID = UUID()
     }

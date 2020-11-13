@@ -28,8 +28,8 @@ struct PokemonPokedexNumbers: View {
 struct PokemonPokedexNumbers_Previews: PreviewProvider {
     static var previews: some View {
         List {
-        PokemonPokedexNumbers(pokedexNumbers: Pokemon.generateCharizard().pokedexNumbers)
-            .centered()
+            PokemonPokedexNumbers(pokedexNumbers: Pokemon.generateCharizard().pokedexNumbers)
+                .centered()
         }
     }
 }

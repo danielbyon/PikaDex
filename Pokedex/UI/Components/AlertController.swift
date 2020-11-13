@@ -30,11 +30,6 @@ struct AlertController: UIViewControllerRepresentable {
             return true
         }
 
-//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            value = textField.text
-//            return true
-//        }
-
     }
 
     func makeCoordinator() -> Coordinator {

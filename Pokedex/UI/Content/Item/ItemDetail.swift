@@ -24,15 +24,16 @@ struct ItemDetail: View {
 
     var body: some View {
         List {
-            if description != nil {
+            if let description = description {
                 Section {
-                    DescriptionCell(text: description!)
+                    DescriptionCell(text: description)
                 }
             }
 
-            if item.itemType == .berry {
+            switch item.itemType {
+            case .berry:
                 BerryItemInfoDetail(item: item, game: game)
-            } else if item.itemType == .item {
+            case .item:
                 BagItemInfoDetail(item: item, game: game)
             }
 
@@ -42,7 +43,7 @@ struct ItemDetail: View {
 //            }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(item.name), displayMode: .large)
+        .navigationTitle(item.name)
     }
 
 }
@@ -53,12 +54,11 @@ struct ItemDetail_Previews: PreviewProvider {
             NavigationView {
                 ItemDetail(item: Item.generateAntidote(), game: .sword)
             }
-            .injectDependencies()
             NavigationView {
                 ItemDetail(item: Item.generateRawstBerry(), game: .ruby)
             }
-            .injectDependencies()
         }
+        .injectDependencies()
     }
 }
 
@@ -79,11 +79,11 @@ struct BagItemInfoDetail: View {
 
             if info.cost != nil || info.sell != nil {
                 Section {
-                    if info.cost != nil {
-                        ItemPriceCell(title: "Cost", price: info.cost!.intValue, generation: game.generation)
+                    if let cost = info.cost {
+                        ItemPriceCell(title: "Cost", price: cost.intValue, generation: game.generation)
                     }
-                    if info.sell != nil {
-                        ItemPriceCell(title: "Sell Price", price: info.sell!.intValue, generation: game.generation)
+                    if let sell = info.sell {
+                        ItemPriceCell(title: "Sell Price", price: sell.intValue, generation: game.generation)
                     }
                 }
             }
@@ -125,6 +125,7 @@ private struct ItemPriceCell: View {
                 generation.priceSprite
                     .interpolation(.low)
                     .resizable()
+                    .renderingMode(.template)
                     .scaledToFit()
                     .frame(height: UIFont.preferredFont(forTextStyle: .body).pointSize)
                 Text("\(price)")
@@ -133,6 +134,7 @@ private struct ItemPriceCell: View {
         }
         .monospacedBody()
         .contentShape(Rectangle())
+        .foregroundColor(.primary)
     }
 
 }

@@ -22,11 +22,11 @@ struct Store: View {
                     if storeViewModel.hasProducts {
                         StoreSections(
                             consoleProducts: storeViewModel.allConsoleProducts,
-                            gameProducts: storeViewModel.allGameProducts,
                             tipProducts: storeViewModel.allTipProducts,
                             isPurchasing: storeViewModel.isPurchasing) { product in
                                 self.storeViewModel.purchaseProduct(product)
                         }
+                        .foregroundColor(.primary)
                         RestorePurchases(onRestoreTriggered: self.storeViewModel.restorePurchases)
                     } else if storeViewModel.error != nil {
                         VStack {
@@ -45,8 +45,12 @@ struct Store: View {
                 }
                 .padding()
             }
-            .navigationBarTitle("Store", displayMode: .inline)
-            .navigationBarItems(trailing: DoneButton(action: dismiss))
+            .navigationTitle("Store")
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    DoneButton(action: dismiss)
+                }
+            }
             .onAppear {
                 self.refreshProducts()
             }
@@ -90,9 +94,6 @@ struct Store_Previews: PreviewProvider {
             ProductViewModel(description: "Test product Test product Test product Test product Test product Test product Test product Test product ", pokepediaProduct: .allGames, price: "$4.99", product: SKProduct(), title: "All Games"),
             ProductViewModel(description: "Test product", pokepediaProduct: .all3DSGames, price: "$1.99", product: SKProduct(), title: "All 3DS Games")
         ]
-        viewModel.allGameProducts = [
-            ProductViewModel(description: nil, pokepediaProduct: .rubySapphireEmerald, price: "$0.99", product: SKProduct(), title: "Ruby/Sapphire/Emerald")
-        ]
         viewModel.allTipProducts = [
             ProductViewModel(description: nil, pokepediaProduct: .smallTip, price: "$0.99", product: SKProduct(), title: "Small Tip")
         ]
@@ -103,6 +104,5 @@ struct Store_Previews: PreviewProvider {
                 .environmentObject(viewModel)
                 .colorScheme(.dark)
         }
-//            .environment(\.sizeCategory, .extraExtraExtraLarge)
     }
 }

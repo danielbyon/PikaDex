@@ -26,19 +26,18 @@ struct PokemonEvolutions_Previews: PreviewProvider {
             NavigationView {
                 List {
                     PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!)
-                        .injectDependencies()
                 }
                 .listStyle(GroupedListStyle())
             }
             NavigationView {
                 List {
                     PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!)
-                        .injectDependencies()
                 }
                 .listStyle(GroupedListStyle())
             }
             .colorScheme(.dark)
         }
+        .injectDependencies()
     }
 }
 
@@ -62,8 +61,8 @@ private struct PokemonEvolution: View {
                 }
                 Spacer(minLength: 8.0)
                 VStack {
-                    if evolution.sprite != nil {
-                        evolution.sprite!
+                    if let sprite = evolution.sprite {
+                        sprite
                             .scaledToFit()
                             .frame(width: 24.0, height: 24.0)
                     }
@@ -88,9 +87,9 @@ private struct PokemonEvolution: View {
                     .monospacedBody()
                     .multilineTextAlignment(.trailing)
             }
-            if evolution.conditionInfo != nil {
+            if let conditionInfo = evolution.conditionInfo {
                 Divider()
-                Text(evolution.conditionInfo!)
+                Text(conditionInfo)
                     .monospacedCaption()
                     .multilineTextAlignment(.leading)
             }

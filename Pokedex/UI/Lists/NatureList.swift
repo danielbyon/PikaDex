@@ -10,23 +10,21 @@ import SwiftUI
 
 struct NatureList: View {
 
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
-    var natures: [NatureCellViewModel] { Nature.all.map { .init(nature: $0) } }
+    private var natures: [NatureCellViewModel] { Nature.all.map { .init(nature: $0) } }
+    private var numberOfColumns: Int { horizontalSizeClass == .compact ? 2 : 4 }
 
     var body: some View {
         ScrollView {
-            GridView(elements: natures, numberOfItemsPerRow: 2) { nature in
-                NatureCell(viewModel: nature)
+            LazyVGrid(columns: Array(repeating: .init(spacing: 16.0), count: numberOfColumns), spacing: 16.0) {
+                ForEach(natures) { nature in
+                    NatureCell(viewModel: nature)
+                }
             }
             .padding()
         }
-        .navigationBarTitle("Natures")
-        .navigationBarItems(trailing: DoneButton(action: dismiss))
-    }
-
-    private func dismiss() {
-        presentationMode.wrappedValue.dismiss()
+        .navigationTitle("Natures")
     }
 
 }

@@ -14,7 +14,7 @@ class TeamMemberViewModel: ObservableObject {
     @Published var nickname = ""
     @Published var level = 100.0
     @Published var nature: Nature = .hardy
-    @Published var ability: Ability
+    @Published var ability: Ability?
     @Published var heldItem: Item?
     @Published var happiness = 255
     @Published var isShiny = false
@@ -107,7 +107,11 @@ class TeamMemberViewModel: ObservableObject {
         } else {
             self.nature = .hardy
         }
-        self.ability = Ability.generate(withName: teamMember.ability)
+        if let abilityName = teamMember.ability, teamMember.game.hasAbilities {
+            self.ability = Ability.generate(withName: abilityName)
+        } else {
+            self.ability = nil
+        }
         if let itemName = teamMember.heldItem {
             self.heldItem = Item.fetch(withName: itemName, game: teamMember.game)
         } else {
@@ -173,7 +177,7 @@ class TeamMemberViewModel: ObservableObject {
             move3: move3?.name,
             move4: move4?.name,
             nature: nature.name,
-            ability: ability.name,
+            ability: ability?.name,
             heldItem: heldItem?.name,
             happiness: happiness,
             isShiny: isShiny,

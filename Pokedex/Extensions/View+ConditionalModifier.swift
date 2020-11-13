@@ -10,9 +10,35 @@ import SwiftUI
 
 extension View {
 
-    @ViewBuilder func conditionalModifier<Content>(_ condition: @autoclosure () -> Bool, transform: (Self) -> Content) -> some View where Content: View {
+    @ViewBuilder
+    func `if`<Content: View>(
+        _ condition: @autoclosure () -> Bool,
+        content: (Self) -> Content) -> some View {
         if condition() {
-            transform(self)
+            content(self)
+        } else {
+            self
+        }
+    }
+
+    @ViewBuilder
+    func `if`<TrueContent: View, FalseContent: View>(
+        _ condition: @autoclosure () -> Bool,
+        if ifContent: (Self) -> TrueContent,
+        else elseContent: (Self) -> FalseContent) -> some View {
+        if condition() {
+            ifContent(self)
+        } else {
+            elseContent(self)
+        }
+    }
+
+    @ViewBuilder
+    func ifLet<V, Content: View>(
+        _ value: V?,
+        content: (Self, V) -> Content) -> some View {
+        if let value = value {
+            content(self, value)
         } else {
             self
         }

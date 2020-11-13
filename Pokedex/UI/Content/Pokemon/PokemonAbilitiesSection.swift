@@ -19,17 +19,17 @@ struct PokemonAbilitiesSection: View {
 
     var body: some View {
         Section(header: SectionHeader("Abilities")) {
-            NavigationLink(destination: AbilityDetail(ability: primaryAbility, game: game).injectDependencies()) {
+            NavigationLink(destination: AbilityDetail(ability: primaryAbility, game: game)) {
                 PokemonAbilityCell(ability: primaryAbility, game: game)
             }
-            if secondaryAbility != nil {
-                NavigationLink(destination: AbilityDetail(ability: secondaryAbility!, game: game).injectDependencies()) {
-                    PokemonAbilityCell(ability: secondaryAbility!, game: game)
+            if let secondaryAbility = secondaryAbility {
+                NavigationLink(destination: AbilityDetail(ability: secondaryAbility, game: game)) {
+                    PokemonAbilityCell(ability: secondaryAbility, game: game)
                 }
             }
-            if hiddenAbility != nil {
-                NavigationLink(destination: AbilityDetail(ability: hiddenAbility!, game: game).injectDependencies()) {
-                    PokemonAbilityCell(ability: hiddenAbility!, game: game)
+            if let hiddenAbility = hiddenAbility {
+                NavigationLink(destination: AbilityDetail(ability: hiddenAbility, game: game)) {
+                    PokemonAbilityCell(ability: hiddenAbility, game: game)
                 }
             }
         }

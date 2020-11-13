@@ -34,7 +34,7 @@ struct DualTypeDetail: View {
                 PokemonFormsForEach(firstType: firstType, secondType: secondType, game: game)
             }
         }
-        .navigationBarTitle("Dual Type Checker")
+        .navigationTitle("Dual Type Checker")
     }
 
 }
@@ -63,7 +63,7 @@ private struct PokemonFormsForEach: View {
                     .monospacedBody()
             } else {
                 AlternatingBackgroundForEach(pokemonForms) { form in
-                    NavigationLink(destination: PokemonDetail(pokemon: form.pokemon, game: self.game, formIndex: form.formIndex).injectDependencies()) {
+                    NavigationLink(destination: PokemonDetail(pokemon: form.pokemon, game: self.game, formIndex: form.formIndex)) {
                         PokemonFormCell(form: form, game: self.game)
                     }
                 }

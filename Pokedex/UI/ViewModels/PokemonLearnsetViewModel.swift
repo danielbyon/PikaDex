@@ -47,7 +47,7 @@ extension PokemonLearnsetViewModel {
         let machine = entry.machine
         let machineType = machine.type
         let move = machine.move
-        let detailText = "\(machineType.title) \(NumberFormatter.twoDigit.string(from: NSNumber(value: machine.number))!)"
+        let detailText = "\(machineType.rawValue) \(NumberFormatter.twoDigit.string(from: NSNumber(value: machine.number))!)"
         self.init(
             move: move,
             detailText: detailText)

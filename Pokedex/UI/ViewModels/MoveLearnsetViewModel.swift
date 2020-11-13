@@ -56,7 +56,7 @@ extension MoveLearnsetViewModel {
         let pokemon = form.pokemon
         let machine = machineLearnsetEntry.machine
         let machineType = machine.type
-        let detailText = "\(machineType.title) \(NumberFormatter.twoDigit.string(from: NSNumber(value: machine.number))!)"
+        let detailText = "\(machineType.rawValue) \(NumberFormatter.twoDigit.string(from: NSNumber(value: machine.number))!)"
         self.init(
             text: "\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemon.name)",
             subtext: form.name == pokemon.name ? nil : form.name,

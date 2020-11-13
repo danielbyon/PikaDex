@@ -26,7 +26,7 @@ struct TeamEditor: View {
         NavigationLink(destination: SelectPokemonForm(game: appContext.currentGame, onSelect: { pokemonForm in
             self.viewModel.addMember(pokemonForm, game: self.appContext.currentGame)
             self.isShowingAddMember = false
-        }).injectDependencies(), isActive: $isShowingAddMember) {
+        }), isActive: $isShowingAddMember) {
             AddTeamMemberCell()
         }
     }
@@ -41,7 +41,7 @@ struct TeamEditor: View {
                 }
 
                 ForEach(viewModel.members) { member in
-                    NavigationLink(destination: TeamMemberEditor(viewModel: member).injectDependencies()) {
+                    NavigationLink(destination: TeamMemberEditor(viewModel: member)) {
                         TeamMemberCell(member: member)
                             .contextMenu(ContextMenu {
                                 Button(action: {
@@ -57,7 +57,7 @@ struct TeamEditor: View {
                     NavigationLink(destination: SelectPokemonForm(game: appContext.currentGame, onSelect: { pokemonForm in
                         self.viewModel.addMember(pokemonForm, game: self.appContext.currentGame)
                         self.isShowingAddMember = false
-                    }).injectDependencies(), isActive: $isShowingAddMember) {
+                    }), isActive: $isShowingAddMember) {
                         AddTeamMemberCell()
                     }
                 }
@@ -74,8 +74,12 @@ struct TeamEditor: View {
             }
             .padding()
         }
-        .navigationBarTitle(Text(viewModel.name), displayMode: .inline)
-        .navigationBarItems(leading: DoneButton(isTrailing: false, action: self.dismiss))
+        .navigationTitle(viewModel.name)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                DoneButton(action: dismiss)
+            }
+        }
     }
 
     init(viewModel: TeamViewModel) {
@@ -180,8 +184,8 @@ private struct TeamMemberFormInfo: View {
             Spacer()
             VStack(spacing: 2.0) {
                 Badge(pokemonType: form.primaryType, equalWidths: true, isSmall: true)
-                if form.secondaryType != nil {
-                    Badge(pokemonType: form.secondaryType!, equalWidths: true, isSmall: true)
+                if let secondaryType = form.secondaryType {
+                    Badge(pokemonType: secondaryType, equalWidths: true, isSmall: true)
                 }
             }
         }
@@ -204,23 +208,23 @@ private struct TeamMemberMoves: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4.0) {
-            if member.move1 != nil {
-                MoveCell(move: member.move1!, game: member.game)
+            if let move1 = member.move1 {
+                MoveCell(move: move1, game: member.game)
             } else {
                 noMove
             }
-            if member.move2 != nil {
-                MoveCell(move: member.move2!, game: member.game)
+            if let move2 = member.move2 {
+                MoveCell(move: move2, game: member.game)
             } else {
                 noMove
             }
-            if member.move3 != nil {
-                MoveCell(move: member.move3!, game: member.game)
+            if let move3 = member.move3 {
+                MoveCell(move: move3, game: member.game)
             } else {
                 noMove
             }
-            if member.move4 != nil {
-                MoveCell(move: member.move4!, game: member.game)
+            if let move4 = member.move4 {
+                MoveCell(move: move4, game: member.game)
             } else {
                 noMove
             }
@@ -328,8 +332,10 @@ private struct TeamMemberFactoids: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             HStack {
-                Factoid(title: "Ability", value: member.ability.name)
-                Spacer(minLength: 0)
+                if let ability = member.ability {
+                    Factoid(title: "Ability", value: ability.name)
+                    Spacer(minLength: 0)
+                }
                 Factoid(title: "Nature", value: member.nature.name)
                 Spacer(minLength: 0)
                 Factoid(title: "Shiny", value: member.isShiny ? "Yes" : "No")

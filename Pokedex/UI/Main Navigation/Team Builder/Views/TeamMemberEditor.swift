@@ -36,8 +36,7 @@ struct TeamMemberEditor: View {
     var body: some View {
         Form {
             Section(header: SectionHeader("Pokémon")) {
-                NavigationLink(destination: PokemonDetail(pokemon: viewModel.pokemonForm.pokemon, game: appContext.currentGame, formIndex: viewModel.pokemonForm.formIndex)
-                    .injectDependencies()) {
+                NavigationLink(destination: PokemonDetail(pokemon: viewModel.pokemonForm.pokemon, game: appContext.currentGame, formIndex: viewModel.pokemonForm.formIndex)) {
                     PokemonFormCell(form: viewModel.pokemonForm, game: appContext.currentGame)
                 }
             }
@@ -47,31 +46,35 @@ struct TeamMemberEditor: View {
                     .monospacedBody()
                     .avoidKeyboard()
                 TeamMemberLevel(level: $viewModel.level)
-
-                NavigationLink(destination: SelectAbility(form: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { ability in
-                    self.viewModel.ability = ability
-                    self.isShowingSelectAbility = false
-                }).injectDependencies(), isActive: $isShowingSelectAbility) {
-                    HStack {
-                        Text("Ability")
-                            .monospacedBody()
-                        Spacer()
-                        Text(viewModel.ability.name)
+                
+                if appContext.currentGame.hasAbilities {
+                    NavigationLink(destination: SelectAbility(form: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { ability in
+                        self.viewModel.ability = ability
+                        self.isShowingSelectAbility = false
+                    }), isActive: $isShowingSelectAbility) {
+                        HStack {
+                            Text("Ability")
+                                .monospacedBody()
+                            Spacer()
+                            if let ability = viewModel.ability {
+                                Text(ability.name)
+                            }
+                        }
+                        .monospacedBody()
+                        .contentShape(Rectangle())
                     }
-                    .monospacedBody()
-                    .contentShape(Rectangle())
                 }
 
                 NavigationLink(destination: SelectItem(game: appContext.currentGame, onSelect: { item in
                     self.viewModel.heldItem = item
                     self.isShowingSelectItem = false
-                }).injectDependencies(), isActive: $isShowingSelectItem) {
-                    if viewModel.heldItem != nil {
+                }), isActive: $isShowingSelectItem) {
+                    if let heldItem = viewModel.heldItem {
                         HStack {
                             Text("Held Item")
                                 .monospacedBody()
                             Spacer()
-                            ItemCell(item: viewModel.heldItem!)
+                            ItemCell(item: heldItem)
                         }
                         .contentShape(Rectangle())
                     } else {
@@ -83,7 +86,7 @@ struct TeamMemberEditor: View {
                 NavigationLink(destination: SelectNature(onSelect: { nature in
                     self.viewModel.nature = nature
                     self.isShowingSelectNature = false
-                }).injectDependencies(), isActive: $isShowingSelectNature) {
+                }), isActive: $isShowingSelectNature) {
                     HStack {
                         Text("Nature")
                         Spacer()
@@ -100,17 +103,23 @@ struct TeamMemberEditor: View {
                     }
                 }
 
-                SegmentedControl(titles: ["Male", "Female", "Unspecified"], values: [Gender.male, .female, .unspecified], selectedSegmentIndex: $viewModel.gender)
-                SegmentedControl(titles: ["Shiny", "Not Shiny"], values: [true, false], selectedSegmentIndex: $viewModel.isShiny)
+                SegmentedControl(selectedSegment: $viewModel.gender)
+                Picker("Shiny", selection: $viewModel.isShiny) {
+                    Text("Shiny")
+                        .tag("Shiny")
+                    Text("Not Shiny")
+                        .tag("Not Shiny")
+                }
+                .pickerStyle(SegmentedPickerStyle())
             }
 
             Section(header: SectionHeader("Moves")) {
                 NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
                     self.viewModel.move1 = move
                     self.dismissSelectMove()
-                }).injectDependencies(), isActive: $isShowingSelectMove1) {
-                    if viewModel.move1 != nil {
-                        MoveCell(move: viewModel.move1!, game: appContext.currentGame)
+                }), isActive: $isShowingSelectMove1) {
+                    if let move1 = viewModel.move1 {
+                        MoveCell(move: move1, game: appContext.currentGame)
                     } else {
                         makeSelectMoveCell(number: 1)
                     }
@@ -118,9 +127,9 @@ struct TeamMemberEditor: View {
                 NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
                     self.viewModel.move2 = move
                     self.dismissSelectMove()
-                }).injectDependencies(), isActive: $isShowingSelectMove2) {
-                    if viewModel.move2 != nil {
-                        MoveCell(move: viewModel.move2!, game: appContext.currentGame)
+                }), isActive: $isShowingSelectMove2) {
+                    if let move2 = viewModel.move2 {
+                        MoveCell(move: move2, game: appContext.currentGame)
                     } else {
                         makeSelectMoveCell(number: 2)
                     }
@@ -128,9 +137,9 @@ struct TeamMemberEditor: View {
                 NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
                     self.viewModel.move3 = move
                     self.dismissSelectMove()
-                }).injectDependencies(), isActive: $isShowingSelectMove3) {
-                    if viewModel.move3 != nil {
-                        MoveCell(move: viewModel.move3!, game: appContext.currentGame)
+                }), isActive: $isShowingSelectMove3) {
+                    if let move3 = viewModel.move3 {
+                        MoveCell(move: move3, game: appContext.currentGame)
                     } else {
                         makeSelectMoveCell(number: 3)
                     }
@@ -138,9 +147,9 @@ struct TeamMemberEditor: View {
                 NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
                     self.viewModel.move4 = move
                     self.dismissSelectMove()
-                }).injectDependencies(), isActive: $isShowingSelectMove4) {
-                    if viewModel.move4 != nil {
-                        MoveCell(move: viewModel.move4!, game: appContext.currentGame)
+                }), isActive: $isShowingSelectMove4) {
+                    if let move4 = viewModel.move4 {
+                        MoveCell(move: move4, game: appContext.currentGame)
                     } else {
                         makeSelectMoveCell(number: 4)
                     }
@@ -225,7 +234,7 @@ struct TeamMemberEditor: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle("Team Member")
+        .navigationTitle("Team Member")
     }
 
     private func makeSelectMoveCell(number: Int) -> some View {
@@ -245,14 +254,14 @@ struct TeamMemberEditor: View {
             NavigationLink(destination: SelectValue(range: ivRange, onSelect: { value in
                 iv.wrappedValue = value
                 showIV.wrappedValue = false
-            }).injectDependencies(), isActive: showIV) {
+            }), isActive: showIV) {
                 StatValueCell(title: "IV", value: iv.wrappedValue)
             }
 
             NavigationLink(destination: SelectValue(range: evRange, onSelect: { value in
                 ev.wrappedValue = value
                 showEV.wrappedValue = false
-            }).injectDependencies(), isActive: showEV) {
+            }), isActive: showEV) {
                 StatValueCell(title: "EV", value: ev.wrappedValue)
             }
         }

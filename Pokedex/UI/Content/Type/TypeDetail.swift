@@ -18,7 +18,7 @@ struct TypeDetail: View {
     var body: some View {
         List {
             Section(header: SectionHeader("Type Effectiveness")) {
-                SegmentedControl(titles: PokemonTypeEffectiveness.Kind.allCases.map { $0.rawValue }, values: PokemonTypeEffectiveness.Kind.allCases, selectedSegmentIndex: $selectedTypeEffectiveness)
+                SegmentedControl(selectedSegment: $selectedTypeEffectiveness)
                 PokemonTypeEffectiveness(primaryType: type, secondaryType: nil, kind: selectedTypeEffectiveness, game: game)
                     .padding(.vertical)
             }
@@ -26,7 +26,7 @@ struct TypeDetail: View {
             RelatedPokemonAndMoves(type: type, game: game)
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(type.rawValue), displayMode: .large)
+        .navigationTitle(type.rawValue)
     }
 
 }

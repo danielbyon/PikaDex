@@ -24,8 +24,8 @@ struct PokemonFormCell: View {
             Spacer()
             VStack(spacing: 2.0) {
                 Badge(pokemonType: form.primaryType, equalWidths: true, isSmall: true)
-                if form.secondaryType != nil {
-                    Badge(pokemonType: form.secondaryType!, equalWidths: true, isSmall: true)
+                if let secondaryType = form.secondaryType {
+                    Badge(pokemonType: secondaryType, equalWidths: true, isSmall: true)
                 }
             }
         }

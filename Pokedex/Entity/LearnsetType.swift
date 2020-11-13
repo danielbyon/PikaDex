@@ -7,11 +7,13 @@
 
 import Foundation
 
-public enum LearnsetType: Int, CaseIterable {
+public enum LearnsetType: String, CaseIterable, Identifiable {
 
-    case level
-    case machine
-    case breed
-    case tutor
+    case level = "Level"
+    case machine = "Machine"
+    case breed = "Breeding"
+    case tutor = "Tutoring"
+
+    public var id: String { rawValue }
 
 }

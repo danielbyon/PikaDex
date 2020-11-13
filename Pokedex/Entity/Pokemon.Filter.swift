@@ -50,17 +50,10 @@ extension Pokemon {
             case name
         }
 
-        public enum SortOrder: Int, CaseIterable, Codable {
+        public enum SortOrder: String, CaseIterable, Codable {
 
-            case ascending
-            case descending
-
-            var title: String {
-                switch self {
-                case .ascending: return "Ascending"
-                case .descending: return "Descending"
-                }
-            }
+            case ascending = "Ascending"
+            case descending = "Descending"
 
         }
 
@@ -124,6 +117,6 @@ extension Pokemon.Filter.SortOrder: Equatable { }
 
 extension Pokemon.Filter.SortOrder: Identifiable {
 
-    public var id: Int { rawValue }
+    public var id: String { rawValue }
 
 }

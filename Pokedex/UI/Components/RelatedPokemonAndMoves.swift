@@ -15,33 +15,40 @@ struct RelatedPokemonAndMoves: View {
 
     @FetchRequest private var pokemonForms: FetchedResults<PokemonForm>
     @FetchRequest private var moves: FetchedResults<Move>
-    @State private var selectedRelated = 0
+    @State private var selectedSegment: Segment = .pokemon
 
     var body: some View {
         Section {
-            SegmentedControl(titles: ["Pokémon", "Moves"], values: [0, 1], selectedSegmentIndex: $selectedRelated)
-            if selectedRelated == 0 {
-                if !pokemonForms.isEmpty {
-                    AlternatingBackgroundForEach(pokemonForms) { pokemonForm in
-                        NavigationLink(destination: PokemonDetail(pokemon: pokemonForm.pokemon, game: self.game, formIndex: pokemonForm.formIndex).injectDependencies()) {
-                            PokemonFormCell(form: pokemonForm, game: self.game)
-                        }
+            SegmentedControl(selectedSegment: $selectedSegment)
+
+            switch selectedSegment {
+            case .pokemon where pokemonForms.isEmpty:
+                Text("There are no Pokémon with this type.")
+            case .pokemon:
+                AlternatingBackgroundForEach(pokemonForms) { pokemonForm in
+                    NavigationLink(destination: PokemonDetail(pokemon: pokemonForm.pokemon, game: self.game, formIndex: pokemonForm.formIndex)) {
+                        PokemonFormCell(form: pokemonForm, game: self.game)
                     }
-                } else {
-                    Text("There are no Pokémon with this type.")
                 }
-            } else {
-                if !moves.isEmpty {
-                    AlternatingBackgroundForEach(moves) { move in
-                        NavigationLink(destination: MoveDetail(move: move, game: self.game).injectDependencies()) {
-                            MoveCell(move: move, game: self.game)
-                        }
+            case .moves where moves.isEmpty:
+                Text("There are no Moves with this type.")
+            case .moves:
+                AlternatingBackgroundForEach(moves) { move in
+                    NavigationLink(destination: MoveDetail(move: move, game: self.game)) {
+                        MoveCell(move: move, game: self.game)
                     }
-                } else {
-                    Text("There are no Moves with this type.")
                 }
             }
         }
+    }
+
+    private enum Segment: String, CaseIterable, Identifiable {
+
+        case pokemon = "Pokémon"
+        case moves = "Moves"
+
+        var id: String { rawValue }
+
     }
 
     init(game: Game, pokemonRequest: NSFetchRequest<PokemonForm>, moveRequest: NSFetchRequest<Move>) {

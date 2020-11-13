@@ -84,8 +84,9 @@ extension Team: PokePasteConvertible {
             "IVs: \(member.hp.iv) HP / \(member.attack.iv) Atk / \(member.defense.iv) Def / \(member.specialAttack.iv) SpA / \(member.specialDefense.iv) SpD / \(member.speed.iv) Spe"
         }
 
-        func renderAbility(_ member: TeamMember) -> String {
-            "Ability: \(member.ability)"
+        func renderAbility(_ member: TeamMember) -> String? {
+            guard let ability = member.ability else { return nil }
+            return "Ability: \(ability)"
         }
 
         func renderShiny(_ member: TeamMember) -> String? {

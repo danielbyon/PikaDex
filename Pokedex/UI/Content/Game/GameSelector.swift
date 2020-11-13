@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct GameSelector: View {
-    
+
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var appContext: AppContext
     @EnvironmentObject var purchasedProductState: PurchasedProductState
@@ -22,7 +22,7 @@ struct GameSelector: View {
                     Section(header: SectionHeader(generation.title)) {
                         ForEach(generation.games) { game in
                             GameSelectorCell(game: game, currentGame: self.appContext.currentGame).onTapGesture {
-                                if [Game.sword, .shield].contains(game) || self.purchasedProductState.hasPurchasedGame(game) {
+                                if self.allowsSelection(for: game) {
                                     self.appContext.currentGame = game
                                     self.presentationMode.wrappedValue.dismiss()
                                 } else {
@@ -34,8 +34,12 @@ struct GameSelector: View {
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Choose Game")
-            .navigationBarItems(trailing: DoneButton(action: dismiss))
+            .navigationTitle("Choose Game")
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    DoneButton(action: dismiss)
+                }
+            }
             .sheet(isPresented: $isShowingStore) {
                 Store()
                     .injectDependencies()
@@ -46,6 +50,11 @@ struct GameSelector: View {
 
     private func dismiss() {
         presentationMode.wrappedValue.dismiss()
+    }
+
+    private func allowsSelection(for game: Game) -> Bool {
+        // Sword/Shield are always free
+        [Game.sword, .shield].contains(game) || purchasedProductState.hasPurchasedGame(game)
     }
 
 }

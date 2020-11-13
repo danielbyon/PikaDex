@@ -14,13 +14,10 @@ struct LocationDetail: View {
     let location: Location
     let game: Game
 
-    private let segmentTitles = ["By Area", "By Capture Method"]
-    private let segmentValues = [0, 1]
-
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @FetchRequest private var locationPokemons: FetchedResults<LocationPokemon>
-    @State private var selectedIndex = 0
+    @State private var selectedSegment: Segment = .byArea
     @State private var selectedMap: LocationMap?
 
     private var hasPokemon: Bool { !locationPokemons.isEmpty }
@@ -29,7 +26,7 @@ struct LocationDetail: View {
         LocationDetailViewModel(location: location, locationPokemons: Array(locationPokemons))
     }
 
-    private var currentTitle: String { segmentTitles[selectedIndex] }
+    private var currentTitle: String { selectedSegment.rawValue }
     private var mapPreviewHeight: CGFloat { horizontalSizeClass == .regular ? 200.0 : 120.0 }
     private var mapPreviewPadding: CGFloat { 8.0 }
     private var pokemonViewModel: LocationPokemonsViewModel {
@@ -62,37 +59,35 @@ struct LocationDetail: View {
 
             if hasPokemon {
                 Section(header: SectionHeader("Pokémon")) {
-                    SegmentedControl(titles: segmentTitles, values: segmentValues, selectedSegmentIndex: $selectedIndex)
+                    SegmentedControl(selectedSegment: $selectedSegment)
                 }
 
-                if currentTitle == "By Area" {
+                switch selectedSegment {
+                case .byArea:
                     ForEach(viewModel.sections) { section in
                         Section(header: SectionHeader(section.title)) {
                             AlternatingBackgroundForEach(section.items) { item in
-                                NavigationLink(destination: PokemonDetail(pokemon: item.pokemon, game: self.game).injectDependencies()) {
+                                NavigationLink(destination: PokemonDetail(pokemon: item.pokemon, game: self.game)) {
                                     LocationDetailPokemonCell(item: item, game: self.game)
                                 }
                             }
                         }
                     }
-                } else if currentTitle == "By Capture Method" {
+                case .byCaptureMethod:
                     ForEach(pokemonViewModel.sections) { section in
                         Section(header: LocationSectionHeader(section: section)) {
                             ForEach(section.items) { item in
-                                NavigationLink(destination: item.destination.injectDependencies()) {
+                                NavigationLink(destination: item.destination) {
                                     BadgeCell(viewModel: item)
                                 }
                             }
                         }
                     }
-//                Text("Coming soon...")
-//            } else if currentTitle == "Trainers" {
-//                Text("Coming soon...")
                 }
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(location.name)
+        .navigationTitle(location.name)
         .sheet(item: $selectedMap) { map in
             NavigationView {
                 LocationMapDetail(map: map)
@@ -100,6 +95,15 @@ struct LocationDetail: View {
             .navigationViewStyle(StackNavigationViewStyle())
             .injectDependencies()
         }
+    }
+
+    private enum Segment: String, CaseIterable, Identifiable {
+
+        case byArea = "By Area"
+        case byCaptureMethod = "By Capture Method"
+
+        var id: String { rawValue }
+
     }
 
     init(location: Location, game: Game) {

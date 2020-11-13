@@ -23,7 +23,7 @@ struct MoveLearnsetGroup<T: LearnsetEntry>: View {
         Group {
             if learnset.count > 0 {
                 AlternatingBackgroundForEach(viewModels) { entry in
-                    NavigationLink(destination: PokemonDetail(pokemon: entry.pokemonForm.pokemon, game: self.game, formIndex: entry.pokemonForm.formIndex).injectDependencies()) {
+                    NavigationLink(destination: PokemonDetail(pokemon: entry.pokemonForm.pokemon, game: self.game, formIndex: entry.pokemonForm.formIndex)) {
                         Value3Cell(
                             title: entry.text,
                             subtitle: entry.subtext,

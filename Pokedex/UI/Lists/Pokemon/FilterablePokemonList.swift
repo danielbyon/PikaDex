@@ -11,25 +11,29 @@ import SwiftUI
 struct FilterablePokemonList: View {
 
     @EnvironmentObject var appContext: AppContext
-    @ObservedObject var viewModel: FilterablePokemonListViewModel
     @State private var isShowingFilter = false
+    @StateObject var viewModel = FilterablePokemonListViewModel()
 
     var body: some View {
-        PokemonList(fetchRequest: Pokemon.allFetchRequest(for: appContext.currentGame, filter: viewModel.filter), game: appContext.currentGame, numberKeyPath: viewModel.filter.filterBy.keyPath)
-            .navigationBarItems(trailing: Button(action: {
-                self.isShowingFilter.toggle()
-            }) {
-                Image(systemName: viewModel.filter == .defaultFilter(forGame: appContext.currentGame) ? "line.horizontal.3.decrease.circle" : "line.horizontal.3.decrease.circle.fill")
-                    .padding([.leading, .top, .bottom])
-            })
+        PokemonList(
+            fetchRequest: Pokemon.allFetchRequest(for: appContext.currentGame, filter: viewModel.filter),
+            game: appContext.currentGame,
+            numberKeyPath: viewModel.filter.filterBy.keyPath)
             .sheet(isPresented: $isShowingFilter) {
                 PokemonListFilter(game: self.appContext.currentGame, viewModel: self.viewModel)
                     .injectDependencies()
-        }
-    }
-
-    init() {
-        self.viewModel = .init()
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        self.isShowingFilter.toggle()
+                    }) {
+                        Image(systemName: viewModel.filter == .defaultFilter(forGame: appContext.currentGame)
+                                ? "line.horizontal.3.decrease.circle"
+                                : "line.horizontal.3.decrease.circle.fill")
+                    }
+                }
+            }
     }
 
 }

@@ -14,14 +14,16 @@ struct SelectNature: View {
 
     var body: some View {
         ScrollView {
-            GridView(elements: Nature.all, numberOfItemsPerRow: 2) { nature in
-                NatureCell(viewModel: .init(nature: nature)).onTapGesture {
-                    self.onSelect(nature)
+            LazyVGrid(columns: Array(repeating: .init(spacing: 16.0), count: 2), spacing: 16.0) {
+                ForEach(Nature.all) { nature in
+                    NatureCell(viewModel: .init(nature: nature)).onTapGesture {
+                        self.onSelect(nature)
+                    }
                 }
             }
             .padding()
         }
-        .navigationBarTitle("Natures")
+        .navigationTitle("Natures")
     }
 
     init(onSelect: @escaping (Nature) -> Void) {

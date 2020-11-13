@@ -17,8 +17,8 @@ struct BadgeCell: View {
 
     var body: some View {
         HStack {
-            if image != nil {
-                Image(uiImage: image!)
+            if let image = image {
+                Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40.0, height: 40.0)
@@ -27,8 +27,8 @@ struct BadgeCell: View {
                 Text(title)
                     .monospacedBody()
                     .multilineTextAlignment(.leading)
-                if subtitle != nil {
-                    Text(subtitle!)
+                if let subtitle = subtitle {
+                    Text(subtitle)
                         .monospacedCaption()
                         .multilineTextAlignment(.leading)
                 }
