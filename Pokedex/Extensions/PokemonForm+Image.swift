@@ -10,30 +10,8 @@ import Foundation
 
 extension PokemonForm {
 
-    var spriteName: String { menuSpriteResolvedName() }
+    var spriteName: String { PokemonImageNameFormatter.menuSpriteName(forPokemonName: pokemon.name, formName: name, index: index) }
 
-    var imageName: String { resolvedName(withSuffix: "-image") }
-
-    private var threeDigitPrefix: String { NumberFormatter.threeDigit.string(from: NSNumber(integerLiteral: index))! }
-
-    private func resolvedName(withSuffix suffix: String) -> String {
-        var retVal = threeDigitPrefix
-        if name != pokemon.name {
-            let sanitizedName = name.replacingOccurrences(of: " ", with: "-")
-            retVal += "-\(sanitizedName)"
-        }
-        retVal += suffix
-        return retVal
-    }
-
-    private func menuSpriteResolvedName() -> String {
-        var retVal = threeDigitPrefix
-        if name != pokemon.name {
-            let sanitizedName = name.replacingOccurrences(of: " ", with: "-")
-            retVal += "-\(sanitizedName)"
-        }
-        retVal += "-menusprite"
-        return retVal
-    }
+    var imageName: String { PokemonImageNameFormatter.imageName(forPokemonName: pokemon.name, formName: name, index: index) }
 
 }

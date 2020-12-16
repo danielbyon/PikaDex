@@ -12,7 +12,7 @@ struct DualTypeDetail: View {
 
     let game: Game
 
-    @EnvironmentObject var appContext: AppContext
+    @EnvironmentObject var settings: AppSettings
     @State private var firstType: PokemonType = .fire
     @State private var secondType: PokemonType = .flying
 
@@ -26,7 +26,7 @@ struct DualTypeDetail: View {
             }
 
             Section(header: SectionHeader("Type Effectiveness")) {
-                PokemonTypeEffectiveness(primaryType: firstType, secondaryType: secondType, kind: .defense, game: appContext.currentGame)
+                PokemonTypeEffectiveness(primaryType: firstType, secondaryType: secondType, kind: .defense, game: settings.currentGame)
             }
             .padding(.vertical, 4.0)
 

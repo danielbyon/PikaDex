@@ -15,14 +15,16 @@ struct PokemonList: View {
     var numberKeyPath: String
 
     @FetchRequest private var pokemon: FetchedResults<Pokemon>
+    @State private var selectedPokemon: Pokemon?
 
     var body: some View {
         SearchableList(viewModel: SearchableListViewModel(objects: pokemon), searchPlaceholder: "Search for a Pokémon") { pokemon in
-            NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath)) {
+            NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath), tag: pokemon, selection: $selectedPokemon) {
                 PokemonCell(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath)
             }
         }
         .navigationTitle("Pokémon")
+        .onOpenURL(perform: handleURL)
     }
 
     init(type: PokemonType, game: Game, numberKeyPath: String = #keyPath(Pokemon.z_index)) {
@@ -41,6 +43,14 @@ struct PokemonList: View {
         self.game = game
         self.numberKeyPath = numberKeyPath
         self._pokemon = fetchRequest
+    }
+
+    private func handleURL(_ url: URL) {
+        guard let pokemonName = url.pokemon,
+              let pokemonToSelect = pokemon.first(where: { $0.name == pokemonName }) else { return }
+        DispatchQueue.main.async {
+            selectedPokemon = pokemonToSelect
+        }
     }
 
 }

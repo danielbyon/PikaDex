@@ -16,16 +16,17 @@ struct SearchableList<Element, Content>: View where Element: NSFetchRequestResul
     private let searchPlaceholder: String
     private let content: (Element) -> Content
 
-    @ViewBuilder
     var body: some View {
-        SearchBar(text: $viewModel.searchText, placeholder: searchPlaceholder)
-        List {
-            AlternatingBackgroundForEach(viewModel.filteredObjects) { object in
-                self.content(object)
+        VStack(spacing: 0) {
+            SearchBar(text: $viewModel.searchText, placeholder: searchPlaceholder)
+            List {
+                AlternatingBackgroundForEach(viewModel.filteredObjects) { object in
+                    self.content(object)
+                }
             }
+            .listStyle(PlainListStyle())
+            .avoidKeyboard()
         }
-        .listStyle(PlainListStyle())
-        .avoidKeyboard()
     }
 
     init(viewModel: SearchableListViewModel<Element>, searchPlaceholder: String = "Search", content: @escaping (Element) -> Content) {

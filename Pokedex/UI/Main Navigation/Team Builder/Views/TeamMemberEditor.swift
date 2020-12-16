@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TeamMemberEditor: View {
 
-    @EnvironmentObject var appContext: AppContext
+    @EnvironmentObject var settings: AppSettings
     @ObservedObject var viewModel: TeamMemberViewModel
     @State private var isShowingSelectPokemon = false
     @State private var isShowingSelectMove1 = false
@@ -36,8 +36,8 @@ struct TeamMemberEditor: View {
     var body: some View {
         Form {
             Section(header: SectionHeader("Pokémon")) {
-                NavigationLink(destination: PokemonDetail(pokemon: viewModel.pokemonForm.pokemon, game: appContext.currentGame, formIndex: viewModel.pokemonForm.formIndex)) {
-                    PokemonFormCell(form: viewModel.pokemonForm, game: appContext.currentGame)
+                NavigationLink(destination: PokemonDetail(pokemon: viewModel.pokemonForm.pokemon, game: settings.currentGame, formIndex: viewModel.pokemonForm.formIndex)) {
+                    PokemonFormCell(form: viewModel.pokemonForm, game: settings.currentGame)
                 }
             }
 
@@ -47,8 +47,8 @@ struct TeamMemberEditor: View {
                     .avoidKeyboard()
                 TeamMemberLevel(level: $viewModel.level)
                 
-                if appContext.currentGame.hasAbilities {
-                    NavigationLink(destination: SelectAbility(form: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { ability in
+                if settings.currentGame.hasAbilities {
+                    NavigationLink(destination: SelectAbility(form: viewModel.pokemonForm, game: settings.currentGame, onSelect: { ability in
                         self.viewModel.ability = ability
                         self.isShowingSelectAbility = false
                     }), isActive: $isShowingSelectAbility) {
@@ -65,7 +65,7 @@ struct TeamMemberEditor: View {
                     }
                 }
 
-                NavigationLink(destination: SelectItem(game: appContext.currentGame, onSelect: { item in
+                NavigationLink(destination: SelectItem(game: settings.currentGame, onSelect: { item in
                     self.viewModel.heldItem = item
                     self.isShowingSelectItem = false
                 }), isActive: $isShowingSelectItem) {
@@ -106,50 +106,50 @@ struct TeamMemberEditor: View {
                 SegmentedControl(selectedSegment: $viewModel.gender)
                 Picker("Shiny", selection: $viewModel.isShiny) {
                     Text("Shiny")
-                        .tag("Shiny")
+                        .tag(true)
                     Text("Not Shiny")
-                        .tag("Not Shiny")
+                        .tag(false)
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
 
             Section(header: SectionHeader("Moves")) {
-                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
+                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame, onSelect: { move in
                     self.viewModel.move1 = move
                     self.dismissSelectMove()
                 }), isActive: $isShowingSelectMove1) {
                     if let move1 = viewModel.move1 {
-                        MoveCell(move: move1, game: appContext.currentGame)
+                        MoveCell(move: move1, game: settings.currentGame)
                     } else {
                         makeSelectMoveCell(number: 1)
                     }
                 }
-                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
+                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame, onSelect: { move in
                     self.viewModel.move2 = move
                     self.dismissSelectMove()
                 }), isActive: $isShowingSelectMove2) {
                     if let move2 = viewModel.move2 {
-                        MoveCell(move: move2, game: appContext.currentGame)
+                        MoveCell(move: move2, game: settings.currentGame)
                     } else {
                         makeSelectMoveCell(number: 2)
                     }
                 }
-                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
+                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame, onSelect: { move in
                     self.viewModel.move3 = move
                     self.dismissSelectMove()
                 }), isActive: $isShowingSelectMove3) {
                     if let move3 = viewModel.move3 {
-                        MoveCell(move: move3, game: appContext.currentGame)
+                        MoveCell(move: move3, game: settings.currentGame)
                     } else {
                         makeSelectMoveCell(number: 3)
                     }
                 }
-                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: appContext.currentGame, onSelect: { move in
+                NavigationLink(destination: SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame, onSelect: { move in
                     self.viewModel.move4 = move
                     self.dismissSelectMove()
                 }), isActive: $isShowingSelectMove4) {
                     if let move4 = viewModel.move4 {
-                        MoveCell(move: move4, game: appContext.currentGame)
+                        MoveCell(move: move4, game: settings.currentGame)
                     } else {
                         makeSelectMoveCell(number: 4)
                     }
@@ -187,7 +187,7 @@ struct TeamMemberEditor: View {
                     showIV: $isShowingSelectDefenseIV,
                     showEV: $isShowingSelectDefenseEV)
 
-                if appContext.currentGame.generation > 2 {
+                if settings.currentGame.generation > 2 {
                     makeStatSection(
                         title: "Special Attack",
                         value: viewModel.baseSpecialAttack,
@@ -219,7 +219,7 @@ struct TeamMemberEditor: View {
                     showIV: $isShowingSelectSpeedIV,
                     showEV: $isShowingSelectSpeedEV)
 
-                if appContext.currentGame.generation < 3 {
+                if settings.currentGame.generation < 3 {
                     makeStatSection(
                         title: "Special",
                         value: viewModel.baseSpecialAttack,

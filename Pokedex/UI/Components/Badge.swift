@@ -18,12 +18,10 @@ struct Badge: View {
     var body: some View {
         Group {
             if equalWidths {
-                ZStack {
-                    Text("        ") // 8 spaces
-                        .titleFont(isSmall: isSmall)
-                        .badgeBackground(fillColor: fillColor)
-                    titleText
-                }
+                Text("        ") // 8 spaces
+                    .titleFont(isSmall: isSmall)
+                    .badgeBackground(fillColor: fillColor)
+                    .overlay(titleText)
             } else {
                 titleText
                     .badgeBackground(fillColor: fillColor)

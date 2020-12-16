@@ -11,83 +11,131 @@ import Combine
 
 struct TeamEditor: View {
 
+    let game: Game
+
+    @Environment(\.editMode) var editMode
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var appContext: AppContext
     @ObservedObject var viewModel: TeamViewModel
-    @State private var isShowingAddMember = false
+    @State private var deletingMember: TeamMemberViewModel?
+    @State private var currentNavigation: TeamEditorNavigation?
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 2 : 1 }
-    private var numberOfRows: Int {
-        Int(Double((Double(self.viewModel.members.count) / Double(self.numberOfColumns))).rounded(.up))
-    }
 
-    private var addPokemonCell: some View {
-        NavigationLink(destination: SelectPokemonForm(game: appContext.currentGame, onSelect: { pokemonForm in
-            self.viewModel.addMember(pokemonForm, game: self.appContext.currentGame)
-            self.isShowingAddMember = false
-        }), isActive: $isShowingAddMember) {
-            AddTeamMemberCell()
+    private enum TeamEditorNavigation: Identifiable {
+
+        case addMember
+        case editMember(TeamMemberViewModel)
+
+        var id: String {
+            switch self {
+            case .addMember:
+                return "addMember"
+            case .editMember(let member):
+                return "editMember_\(member.id)"
+            }
         }
+
     }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 24.0) {
-                Card {
-                    TextField("Name", text: $viewModel.name)
-                        .monospacedBody()
-                        .avoidKeyboard()
-                }
-
-                ForEach(viewModel.members) { member in
-                    NavigationLink(destination: TeamMemberEditor(viewModel: member)) {
-                        TeamMemberCell(member: member)
-                            .contextMenu(ContextMenu {
-                                Button(action: {
-                                    self.viewModel.deleteMember(member)
-                                }) {
-                                    Text("Delete")
-                                }
-                            })
+            LazyVGrid(columns: Array(repeating: .init(), count: numberOfColumns), alignment: .leading, spacing: 24.0) {
+                Section {
+                    Card {
+                        TextField("Name", text: $viewModel.name)
+                            .monospacedBody()
+                            .avoidKeyboard()
                     }
                 }
 
-                if viewModel.members.count < 6 {
-                    NavigationLink(destination: SelectPokemonForm(game: appContext.currentGame, onSelect: { pokemonForm in
-                        self.viewModel.addMember(pokemonForm, game: self.appContext.currentGame)
-                        self.isShowingAddMember = false
-                    }), isActive: $isShowingAddMember) {
-                        AddTeamMemberCell()
+                Section(footer: footer()) {
+                    ForEach(viewModel.members) { member in
+                        teamMemberCell(member: member)
+                            .onTapGesture {
+                                currentNavigation = .editMember(member)
+                            }
                     }
-                }
-
-                if !viewModel.members.isEmpty {
-                    #if targetEnvironment(macCatalyst)
-                    Text("Right-click on a Pokémon to remove")
-                        .monospacedCaption()
-                    #else
-                    Text("Tap and hold on a Pokémon to remove")
-                        .monospacedCaption()
-                    #endif
                 }
             }
             .padding()
         }
         .navigationTitle(viewModel.name)
+        .alert(item: $deletingMember) { member in
+            Alert(
+                title: Text("Delete team member?"),
+                message: Text("This action cannot be undone."),
+                primaryButton: .cancel(),
+                secondaryButton: .destructive(Text("Delete")) {
+                    withAnimation {
+                        viewModel.deleteMember(member)
+                    }
+                })
+        }
         .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
-                DoneButton(action: dismiss)
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                EditButton()
+                Button {
+                    currentNavigation = .addMember
+                } label: {
+                    Image(systemName: "plus")
+                }
+                .disabled(viewModel.members.count >= 6)
             }
+        }
+        .navigation(item: $currentNavigation, destination: navigationDestination)
+    }
+
+    init(viewModel: TeamViewModel, game: Game) {
+        self.viewModel = viewModel
+        self.game = game
+    }
+
+    @ViewBuilder
+    private func footer() -> some View {
+        if !viewModel.members.isEmpty {
+            #if targetEnvironment(macCatalyst)
+            Text("Right-click on a Pokémon to remove")
+                .monospacedCaption()
+            #else
+            Text("Tap and hold on a Pokémon to remove")
+                .monospacedCaption()
+            #endif
         }
     }
 
-    init(viewModel: TeamViewModel) {
-        self.viewModel = viewModel
+    private func teamMemberCell(member: TeamMemberViewModel) -> some View {
+        TeamMemberCell(member: member)
+            .contextMenu {
+                Button("Delete") {
+                    deletingMember = member
+                }
+            }
+            .if(editMode?.wrappedValue.isEditing == true) {
+                $0.overlay(DeleteButton {
+                    deletingMember = member
+                }, alignment: .topTrailing)
+            }
     }
 
-    private func dismiss() {
-        presentationMode.wrappedValue.dismiss()
+    private func addMember(_ pokemonForm: PokemonForm) {
+        guard viewModel.members.count < 6 else { assertionFailure("Attempting to add a member to a full team!"); return }
+        viewModel.addMember(pokemonForm, game: game)
+    }
+
+    private func deleteMember(_ member: TeamMemberViewModel) {
+        withAnimation {
+            viewModel.deleteMember(member)
+        }
+    }
+
+    @ViewBuilder
+    private func navigationDestination(_ navigation: TeamEditorNavigation) -> some View {
+        switch navigation {
+        case .addMember:
+            SelectPokemonForm(game: game, onSelect: addMember)
+        case .editMember(let member):
+            TeamMemberEditor(viewModel: member)
+        }
     }
 
 }
@@ -95,7 +143,7 @@ struct TeamEditor: View {
 struct AddTeam_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TeamEditor(viewModel: .init(name: "Test Team", members: [], internalID: UUID()))
+            TeamEditor(viewModel: .init(name: "Test Team", members: [], internalID: UUID()), game: .sword)
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .injectDependencies()
@@ -129,25 +177,6 @@ private struct TeamMemberCell: View {
                 TeamMemberMoves(member: member)
                 TeamMemberStats(member: member)
                 TeamMemberFactoids(member: member)
-            }
-        }
-    }
-
-}
-
-private struct AddTeamMemberCell: View {
-
-    var body: some View {
-        Card {
-            VStack {
-                Spacer(minLength: 0)
-            HStack {
-                Image(systemName: "plus.circle")
-                Text("Add Pokémon")
-                    .monospacedBody()
-                Spacer()
-            }
-                Spacer(minLength: 0)
             }
         }
     }

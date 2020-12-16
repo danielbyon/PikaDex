@@ -11,25 +11,25 @@ import AppSupport
 
 final class FilterablePokemonListViewModel: ObservableObject {
 
-    @UserDefault(key: "pokemonlistfilter.filter", defaultValue: .defaultFilter(forGame: Dependencies.appContext.currentGame))
+    @UserDefault(key: "pokemonlistfilter.filter", defaultValue: .defaultFilter(forGame: Dependencies.settings.currentGame), userDefaults: .appGroup)
     var filter: Pokemon.Filter {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @UserDefault(key: "pokemonlistfilter.game", defaultValue: .sword)
+    @UserDefault(key: "pokemonlistfilter.game", defaultValue: .sword, userDefaults: .appGroup)
     private var game: Game
 
     init() {
         // Make sure the filter we're hydrating is for the current game
         validateFilter()
         // Save the current game for hydrating next time
-        self.game = Dependencies.appContext.currentGame
+        self.game = Dependencies.settings.currentGame
     }
 
     private func validateFilter() {
-        if game != Dependencies.appContext.currentGame {
+        if game != Dependencies.settings.currentGame {
             self.filter = self._filter.defaultValue
         }
     }

@@ -38,6 +38,18 @@ extension Nature: Equatable {
 
 }
 
+extension Nature: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(increasedStat)
+        hasher.combine(decreasedStat)
+        hasher.combine(likedFlavor)
+        hasher.combine(dislikedFlavor)
+    }
+
+}
+
 extension Nature: Identifiable {
 
     var id: String { name }

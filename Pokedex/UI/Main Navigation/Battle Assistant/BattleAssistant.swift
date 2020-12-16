@@ -10,8 +10,8 @@ import SwiftUI
 
 struct BattleAssistant: View {
 
-    @EnvironmentObject var appContext: AppContext
-    @ObservedObject private var viewModel: BattleAssistantViewModel = .init()
+    @EnvironmentObject var settings: AppSettings
+    @StateObject private var viewModel: BattleAssistantViewModel = .init()
     @State private var isShowingSelectPokemon = false
 
     private var movesFooter: String {
@@ -24,12 +24,12 @@ struct BattleAssistant: View {
     var body: some View {
         Form {
             Section(header: SectionHeader("Pokémon")) {
-                NavigationLink(destination: SelectPokemon(game: appContext.currentGame, onSelect: { pokemon in
+                NavigationLink(destination: SelectPokemon(game: settings.currentGame, onSelect: { pokemon in
                     self.viewModel.pokemon = pokemon
                     self.isShowingSelectPokemon = false
                 }), isActive: $isShowingSelectPokemon) {
                     if let pokemon = viewModel.pokemon {
-                        PokemonCell(pokemon: pokemon, game: appContext.currentGame)
+                        PokemonCell(pokemon: pokemon, game: settings.currentGame)
                             .onTapGesture {
                                 self.isShowingSelectPokemon.toggle()
                         }
@@ -54,7 +54,7 @@ struct BattleAssistant: View {
 
             if let pokemon = viewModel.pokemon {
                 Section {
-                    NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: appContext.currentGame)) {
+                    NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: settings.currentGame)) {
                         Text("View Pokémon details")
                             .monospacedBody()
                     }

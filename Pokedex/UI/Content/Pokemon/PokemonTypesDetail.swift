@@ -13,7 +13,7 @@ struct PokemonTypesDetail: View {
     let primaryType: PokemonType
     let secondaryType: PokemonType?
 
-    @EnvironmentObject var appContext: AppContext
+    @EnvironmentObject var settings: AppSettings
     @State private var selectedSegment: String
 
     var body: some View {
@@ -30,7 +30,7 @@ struct PokemonTypesDetail: View {
                     if selectedSegment == primaryType.rawValue {
                         primaryTypeView
                     } else {
-                        TypeDetail(type: secondaryType, game: appContext.currentGame)
+                        TypeDetail(type: secondaryType, game: settings.currentGame)
                     }
                 }
             } else {
@@ -40,7 +40,7 @@ struct PokemonTypesDetail: View {
     }
 
     private var primaryTypeView: some View {
-        TypeDetail(type: primaryType, game: appContext.currentGame)
+        TypeDetail(type: primaryType, game: settings.currentGame)
     }
 
     init(primaryType: PokemonType, secondaryType: PokemonType?) {

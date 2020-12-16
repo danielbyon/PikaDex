@@ -63,6 +63,22 @@ class TeamViewModel: ObservableObject {
 
 }
 
+extension TeamViewModel: Equatable {
+
+    static func == (lhs: TeamViewModel, rhs: TeamViewModel) -> Bool {
+        lhs.internalID == rhs.internalID
+    }
+
+}
+
+extension TeamViewModel: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(internalID)
+    }
+
+}
+
 extension TeamViewModel: Identifiable {
 
     var id: String { internalID.uuidString }

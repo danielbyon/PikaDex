@@ -15,13 +15,9 @@ class TeamBuilderViewModel: ObservableObject {
 
     @Published var teams: [TeamViewModel] = []
 
+    private let storage = TeamStorage()
     private var cancellables: Set<AnyCancellable> = []
     private var saveWorkItem: DispatchWorkItem?
-    private let teamsKey = "teams"
-
-    private enum Constant {
-        static func teamsKey(forGame game: Game) -> String { "teams-\(game.rawValue)" }
-    }
 
     init(game: Game) {
         self.game = game
@@ -31,11 +27,10 @@ class TeamBuilderViewModel: ObservableObject {
         }.store(in: &cancellables)
     }
 
-    func addNewTeam() -> TeamViewModel {
+    func addNewTeam() {
         let viewModel = TeamViewModel(name: "New Team", members: [], internalID: .init())
         teams.append(viewModel)
         setupObservation(for: viewModel)
-        return viewModel
     }
 
     func deleteTeam(_ team: TeamViewModel) {
@@ -45,44 +40,30 @@ class TeamBuilderViewModel: ObservableObject {
     func removeTeams(atOffsets offsets: IndexSet) {
         teams.remove(atOffsets: offsets)
     }
-
     func exportTeam(_ viewModel: TeamViewModel) {
         let team = viewModel.makeTeam()
         UIPasteboard.general.string = team.pokePaste
     }
 
     private func load() {
-        do {
-            guard let data = UserDefaults.standard.data(forKey: Constant.teamsKey(forGame: game)) else { return }
-            let teams = try JSONDecoder().decode([Team].self, from: data)
-            let viewModels = teams.map { TeamViewModel(name: $0.name, members: $0.members.map { .init(teamMember: $0) }, internalID: $0.internalID) }
-            viewModels.forEach { setupObservation(for: $0) }
-            self.teams = viewModels
-        } catch {
-            debugPrint(error)
+        guard let teams = storage.loadTeams(forGame: game) else {
+            self.teams = []
+            return
         }
+        let viewModels = teams.map { TeamViewModel(name: $0.name, members: $0.members.map { .init(teamMember: $0) }, internalID: $0.internalID) }
+        viewModels.forEach { setupObservation(for: $0) }
+        self.teams = viewModels
     }
 
     private func scheduleSave() {
-        saveWorkItem?.cancel()
-        let saveWorkItem = DispatchWorkItem { [weak self] in
-            guard let self = self else { return }
+        DispatchQueue.main.async {
             self.save()
-            self.saveWorkItem = nil
         }
-        self.saveWorkItem = saveWorkItem
-        DispatchQueue
-            .main
-            .asyncAfter(deadline: .now() + 0.2, execute: saveWorkItem)
     }
 
-    private func save() {
-        do {
-            let data = try JSONEncoder().encode(teams.map { $0.makeTeam() })
-            UserDefaults.standard.set(data, forKey: Constant.teamsKey(forGame: game))
-        } catch {
-            debugPrint(error)
-        }
+    func save() {
+        let teamsToSave = teams.map { $0.makeTeam() }
+        storage.saveTeams(teamsToSave, forGame: game)
     }
 
     private func setupObservation(for team: TeamViewModel) {

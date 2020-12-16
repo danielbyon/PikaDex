@@ -93,28 +93,41 @@ struct TeamMember: Codable {
         self.internalID = internalID
     }
 
-    init(pokemonForm: PokemonForm, game: Game) {
-        self.pokemon = pokemonForm.pokemon.name
-        self.formName = pokemonForm.name
-        self.nickname = ""
-        self.level = 100
-        self.hp = .init(baseValue: pokemonForm.baseStats.hp, ev: 0, iv: 0)
-        self.attack = .init(baseValue: pokemonForm.baseStats.attack, ev: 0, iv: 0)
-        self.defense = .init(baseValue: pokemonForm.baseStats.defense, ev: 0, iv: 0)
-        self.specialAttack = .init(baseValue: pokemonForm.baseStats.specialAttack, ev: 0, iv: 0)
-        self.specialDefense = .init(baseValue: pokemonForm.baseStats.specialDefense, ev: 0, iv: 0)
-        self.speed = .init(baseValue: pokemonForm.baseStats.speed, ev: 0, iv: 0)
-        self.ability = game.hasAbilities ? pokemonForm.primaryAbility.name : nil
-        self.game = game
-        self.internalID = UUID()
-    }
-
 }
 
 extension TeamMember: Equatable {
 
     static func == (lhs: TeamMember, rhs: TeamMember) -> Bool {
         lhs.internalID == rhs.internalID
+    }
+
+}
+
+extension TeamMember: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(pokemon)
+        hasher.combine(formName)
+        hasher.combine(nickname)
+        hasher.combine(level)
+        hasher.combine(hp)
+        hasher.combine(attack)
+        hasher.combine(defense)
+        hasher.combine(specialAttack)
+        hasher.combine(specialDefense)
+        hasher.combine(speed)
+        hasher.combine(move1)
+        hasher.combine(move2)
+        hasher.combine(move3)
+        hasher.combine(move4)
+        hasher.combine(nature)
+        hasher.combine(ability)
+        hasher.combine(heldItem)
+        hasher.combine(happiness)
+        hasher.combine(isShiny)
+        hasher.combine(gender)
+        hasher.combine(game)
+        hasher.combine(internalID)
     }
 
 }
@@ -131,6 +144,16 @@ extension TeamMember.Stat: Equatable {
         lhs.baseValue == rhs.baseValue
             && lhs.ev == rhs.ev
             && lhs.iv == rhs.iv
+    }
+
+}
+
+extension TeamMember.Stat: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(baseValue)
+        hasher.combine(ev)
+        hasher.combine(iv)
     }
 
 }

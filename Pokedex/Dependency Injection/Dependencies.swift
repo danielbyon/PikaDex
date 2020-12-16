@@ -12,7 +12,6 @@ import CoreData
 
 struct Dependencies: ViewModifier {
 
-    static let appContext = AppContext()
     static let settings = AppSettings()
     static var container: NSPersistentContainer!
     static let purchasedProductState = PurchasedProductState()
@@ -21,7 +20,6 @@ struct Dependencies: ViewModifier {
     func body(content: Content) -> some View {
         content
             .environment(\.managedObjectContext, Self.container!.viewContext)
-            .environmentObject(Self.appContext)
             .environmentObject(Self.settings)
             .environmentObject(Self.purchasedProductState)
             .environmentObject(Self.storeViewModel)

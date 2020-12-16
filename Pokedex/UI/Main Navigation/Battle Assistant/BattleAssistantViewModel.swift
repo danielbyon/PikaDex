@@ -18,21 +18,21 @@ final class BattleAssistantViewModel: ObservableObject {
         }
     }
 
-    @UserDefault(key: "battleassistant.level", defaultValue: 1)
+    @UserDefault(key: "battleassistant.level", defaultValue: 100, userDefaults: .appGroup)
     var level: Int {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @UserDefault(key: "battleassistant.pokemon", defaultValue: nil)
+    @UserDefault(key: "battleassistant.pokemon", defaultValue: nil, userDefaults: .appGroup)
     private var pokemonName: String? {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @UserDefault(key: "battleassistant.game", defaultValue: nil)
+    @UserDefault(key: "battleassistant.game", defaultValue: nil, userDefaults: .appGroup)
     private var game: Game? {
         willSet {
             objectWillChange.send()
@@ -46,8 +46,8 @@ final class BattleAssistantViewModel: ObservableObject {
     private func fetchPokemon() {
         guard let pokemonName = pokemonName,
             let game = game else { return }
-        guard game == Dependencies.appContext.currentGame else {
-            debugPrint("Game for saved Battle Assistant Pokémon (\(pokemonName) - \(game)) doesn't match current game \(Dependencies.appContext.currentGame), clearing out old values")
+        guard game == Dependencies.settings.currentGame else {
+            debugPrint("Game for saved Battle Assistant Pokémon (\(pokemonName) - \(game)) doesn't match current game \(Dependencies.settings.currentGame), clearing out old values")
             self.pokemonName = nil
             self.game = nil
             return
