@@ -38,7 +38,7 @@ struct TeamWidgetEntryView : View {
             }
             .padding()
             .edgesIgnoringSafeArea(.all)
-            .widgetURL(URL(teamID: entry.teamID))
+            .widgetURL(URL(teamID: entry.teamID, game: entry.game))
         } else {
             Text("No team selected")
                 .padding()
@@ -48,7 +48,7 @@ struct TeamWidgetEntryView : View {
 
 struct TeamWidgetEntryView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamWidgetEntryView(entry: TeamEntry(team: placeholderTeam))
+        TeamWidgetEntryView(entry: TeamEntry(team: placeholderTeam, game: "sword"))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
 //            .environment(\.sizeCategory, .extraExtraExtraLarge)
     }

@@ -72,6 +72,9 @@ struct TeamEditor: View {
                 })
         }
         .toolbar {
+            ToolbarItemGroup(placement: .navigationBarLeading) {
+                Button("", action: {})
+            }
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 EditButton()
                 Button {

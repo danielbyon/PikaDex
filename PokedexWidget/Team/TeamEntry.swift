@@ -16,6 +16,7 @@ struct TeamEntry: TimelineEntry {
     let teamMemberNames: [String]
     let teamMemberSpriteNames: [String]
     let teamID: String
+    let game: String?
 
     struct ViewModel {
 
@@ -29,7 +30,7 @@ struct TeamEntry: TimelineEntry {
 
     }
 
-    init(date: Date = Date(), team: Team?) {
+    init(date: Date = Date(), team: Team?, game: String?) {
         self.date = date
         self.teamName = team?.name
         self.teamMemberNames = team?.members.map { $0.pokemon } ?? []
@@ -37,6 +38,7 @@ struct TeamEntry: TimelineEntry {
             PokemonImageNameFormatter.menuSpriteName(forPokemonName: $0.pokemon, formName: $0.formName)
         } ?? []
         self.teamID = team?.internalID.uuidString ?? ""
+        self.game = game
     }
 
 }

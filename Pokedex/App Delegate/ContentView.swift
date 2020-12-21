@@ -121,7 +121,7 @@ struct ContentView: View {
             BigColoredButton(title: "Battle Assistant", textColor: .black, fillColor: normalItemColor)
         }
 
-        NavigationLink(destination: TeamBuilder(viewModel: .init(game: settings.currentGame)), tag: .teams, selection: $selectedTab) {
+        NavigationLink(destination: TeamBuilder(game: settings.currentGame).id(settings.currentGame), tag: .teams, selection: $selectedTab) {
             BigColoredButton(title: "Teams", textColor: .black, fillColor: normalItemColor)
         }
     }

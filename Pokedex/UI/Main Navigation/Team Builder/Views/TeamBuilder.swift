@@ -10,11 +10,13 @@ import SwiftUI
 
 struct TeamBuilder: View {
 
+    let game: Game
+
     @Environment(\.editMode) var editMode
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    @ObservedObject var viewModel: TeamBuilderViewModel
     @State private var currentEditingTeam: TeamViewModel?
     @State private var currentAlert: AlertState?
+    @StateObject var viewModel: TeamBuilderViewModel
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 2 : 1 }
 
@@ -46,6 +48,11 @@ struct TeamBuilder: View {
             }
         }
 
+    }
+
+    init(game: Game) {
+        self.game = game
+        self._viewModel = .init(wrappedValue: .init(game: game))
     }
 
     private func emptyState() -> some View {
@@ -137,10 +144,10 @@ struct TeamBuilder_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                TeamBuilder(viewModel: .init(game: .sword))
+                TeamBuilder(game: .sword)
             }
             NavigationView {
-                TeamBuilder(viewModel: .init(game: .sword))
+                TeamBuilder(game: .sword)
             }
             .colorScheme(.dark)
         }

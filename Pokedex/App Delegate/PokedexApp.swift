@@ -25,6 +25,8 @@ struct PokedexApp: App {
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let widgetAdapter = WidgetAdapter()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         migrateUserDefaultsIfNeeded()
 

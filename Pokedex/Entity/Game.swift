@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Game: String, CaseIterable, Codable, Hashable {
+public enum Game: String, CaseIterable, Codable, Equatable, Hashable {
 
     case red
     case blue

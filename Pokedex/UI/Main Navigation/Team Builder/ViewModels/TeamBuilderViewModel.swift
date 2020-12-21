@@ -13,18 +13,29 @@ class TeamBuilderViewModel: ObservableObject {
 
     let game: Game
 
-    @Published var teams: [TeamViewModel] = []
+    @Published var teams: [TeamViewModel]
 
-    private let storage = TeamStorage()
+    private let storage: TeamStorage
+    private let notificationCenter: NotificationCenter
     private var cancellables: Set<AnyCancellable> = []
     private var saveWorkItem: DispatchWorkItem?
 
-    init(game: Game) {
+    static let teamsUpdatedNotification = Notification.Name("com.danielbyon.pikadex.teamsUpdated")
+
+    init(game: Game, storage: TeamStorage = .init(), notificationCenter: NotificationCenter = .default) {
         self.game = game
-        load()
+        self.storage = storage
+        self.notificationCenter = notificationCenter
+
+        let viewModels = storage.loadTeams(forGame: game)?
+            .map { TeamViewModel(name: $0.name, members: $0.members.map( { .init(teamMember: $0) }), internalID: $0.internalID) } ?? []
+        self._teams = .init(initialValue: viewModels)
+        viewModels.forEach { setupObservation(for: $0) }
+
         objectWillChange.sink { [unowned self] _ in
             self.scheduleSave()
-        }.store(in: &cancellables)
+        }
+        .store(in: &cancellables)
     }
 
     func addNewTeam() {
@@ -40,37 +51,34 @@ class TeamBuilderViewModel: ObservableObject {
     func removeTeams(atOffsets offsets: IndexSet) {
         teams.remove(atOffsets: offsets)
     }
+
     func exportTeam(_ viewModel: TeamViewModel) {
         let team = viewModel.makeTeam()
         UIPasteboard.general.string = team.pokePaste
     }
 
-    private func load() {
-        guard let teams = storage.loadTeams(forGame: game) else {
-            self.teams = []
-            return
-        }
-        let viewModels = teams.map { TeamViewModel(name: $0.name, members: $0.members.map { .init(teamMember: $0) }, internalID: $0.internalID) }
-        viewModels.forEach { setupObservation(for: $0) }
-        self.teams = viewModels
-    }
-
     private func scheduleSave() {
-        DispatchQueue.main.async {
-            self.save()
+        saveWorkItem?.cancel()
+        let saveWorkItem = DispatchWorkItem { [weak self] in
+            self?.save()
         }
+        DispatchQueue.appUtility.asyncAfter(deadline: .now() + .milliseconds(300), execute: saveWorkItem)
+        self.saveWorkItem = saveWorkItem
     }
 
-    func save() {
+    private func save() {
         let teamsToSave = teams.map { $0.makeTeam() }
         storage.saveTeams(teamsToSave, forGame: game)
+
+        notificationCenter.post(name: Self.teamsUpdatedNotification, object: self)
     }
 
     private func setupObservation(for team: TeamViewModel) {
-        team.objectWillChange.sink { [unowned self] in
-            self.objectWillChange.send()
-            self.scheduleSave()
-        }.store(in: &cancellables)
+        team.objectWillChange
+            .sink { [unowned self] in
+                self.objectWillChange.send()
+            }
+            .store(in: &cancellables)
     }
 
 }

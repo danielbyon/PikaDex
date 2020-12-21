@@ -56,8 +56,8 @@ extension URL {
 
     // MARK: Teams
 
-    init?(teamID: String) {
-        self.init(string: "pikadex://teams/\(teamID)")
+    init?(teamID: String, game: String?) {
+        self.init(string: "pikadex://teams/\(teamID)?game=\(game ?? "")")
     }
 
     var teamID: String? {

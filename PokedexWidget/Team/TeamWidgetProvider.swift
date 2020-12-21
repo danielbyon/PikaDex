@@ -19,9 +19,9 @@ struct TeamProvider: IntentTimelineProvider {
     func placeholder(in context: Context) -> TeamEntry {
         if let allTeams = allTeams,
               let firstTeam = allTeams.first {
-            return TeamEntry(team: firstTeam)
+            return TeamEntry(team: firstTeam, game: nil)
         } else {
-            return TeamEntry(team: nil)
+            return TeamEntry(team: nil, game: nil)
         }
     }
 
@@ -37,18 +37,24 @@ struct TeamProvider: IntentTimelineProvider {
     }
 
     private func getTeamEntry(for configuration: TeamConfigurationIntent) -> TeamEntry {
-        guard let allTeams = allTeams else {
-            return TeamEntry(team: nil)
-        }
         let entry: TeamEntry
-        if let identifier = configuration.team?.identifier,
+
+        if let dynamicTeam = configuration.team,
+           let gameRawValue = dynamicTeam.game,
+           let game = Game(rawValue: gameRawValue),
+           let allTeams = storage.loadTeams(forGame: game),
+           let identifier = configuration.team?.identifier,
            let team = allTeams.first(where: { $0.internalID.uuidString == identifier }) {
-            entry = TeamEntry(team: team)
-        } else if let firstTeam = allTeams.first {
-            entry = TeamEntry(team: firstTeam)
+            entry = TeamEntry(team: team, game: dynamicTeam.game)
         } else {
-            entry = TeamEntry(team: nil)
+            let allTeams = storage.loadTeams(forGame: settings.currentGame)
+            if let firstTeam = allTeams?.first {
+                entry = TeamEntry(team: firstTeam, game: nil)
+            } else {
+                entry = TeamEntry(team: nil, game: nil)
+            }
         }
+
         return entry
     }
 

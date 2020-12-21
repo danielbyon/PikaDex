@@ -15,27 +15,22 @@ class IntentHandler: INExtension, TeamConfigurationIntentHandling {
     private let storage = TeamStorage()
 
     func provideTeamOptionsCollection(for intent: TeamConfigurationIntent, with completion: @escaping (INObjectCollection<DynamicTeam>?, Error?) -> Void) {
-        guard let teams = storage.loadTeams(forGame: settings.currentGame) else {
-            completion(nil, nil)
-            return
+        var sections: [INObjectSection<DynamicTeam>] = []
+        for game in Game.allGamesNewestFirst {
+            guard let teams = getTeams(forGame: game) else { continue }
+            let section = INObjectSection(title: "Pokémon \(game.title)", items: teams)
+            sections.append(section)
         }
 
-        let dynamicTeams = teams.map {
-            DynamicTeam(
-                identifier: $0.internalID.uuidString,
-                display: $0.name,
-                subtitle: $0.members.map({
-                    if $0.formName == $0.pokemon {
-                        return $0.pokemon
-                    } else {
-                        return "\($0.pokemon)-\($0.formName)"
-                    }
-                }).joined(separator: ", "),
-                image: nil)
-        }
-        let section = INObjectSection(title: settings.currentGame.title, items: dynamicTeams)
-        let collection = INObjectCollection(sections: [section])
+        let collection = INObjectCollection(sections: sections)
         completion(collection, nil)
+    }
+
+    private func getTeams(forGame game: Game) -> [DynamicTeam]? {
+        guard let teams = storage.loadTeams(forGame: game) else { return nil }
+        let dynamicTeams = teams.map(DynamicTeam.init)
+        dynamicTeams.forEach { $0.game = game.rawValue }
+        return dynamicTeams
     }
 
     override func handler(for intent: INIntent) -> Any {
@@ -45,4 +40,22 @@ class IntentHandler: INExtension, TeamConfigurationIntentHandling {
         return self
     }
     
+}
+
+private extension DynamicTeam {
+
+    convenience init(team: Team) {
+        self.init(
+            identifier: team.internalID.uuidString,
+            display: team.name,
+            subtitle: team.members.map({
+                if $0.formName == $0.pokemon {
+                    return $0.pokemon
+                } else {
+                    return "\($0.pokemon)-\($0.formName)"
+                }
+            }).joined(separator: ", "),
+            image: nil)
+    }
+
 }
