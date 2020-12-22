@@ -818,3 +818,9 @@ Astral Barrage
 Glacial Lance
 Dragon Energy
 Thunder Cage
+Fiery Wrath
+Surging Strikes
+Freezing Glare
+Eerie Spell
+Thunderous Kick
+Shell Side Arm

@@ -618,6 +618,10 @@
     "Sword": "The user attacks the target while shouting in a startling fashion. This may also make the target flinch.",
     "Shield": "The user attacks the target while shouting in a startling fashion. This may also make the target flinch."
   },
+  "astralbarrage": {
+    "Sword": "The user attacks by sending a frightful amount of small ghosts at opposing Pok\u00e9mon.",
+    "Shield": "The user attacks by sending a frightful amount of small ghosts at opposing Pok\u00e9mon."
+  },
   "attackorder": {
     "Diamond": "The user calls out its underlings to pummel the foe. It has a high critical-hit ratio.",
     "Pearl": "The user calls out its underlings to pummel the foe. It has a high critical-hit ratio.",
@@ -3315,6 +3319,10 @@
     "Sword": "The user attacks twice using Dreepy. If there are two targets, this move hits each target once.",
     "Shield": "The user attacks twice using Dreepy. If there are two targets, this move hits each target once."
   },
+  "dragonenergy": {
+    "Sword": "Converting its life-force into power, the user attacks opposing Pok\u00e9mon. The lower the user\u2019s HP, the lower the move\u2019s power.",
+    "Shield": "Converting its life-force into power, the user attacks opposing Pok\u00e9mon. The lower the user\u2019s HP, the lower the move\u2019s power."
+  },
   "dragonhammer": {
     "Sun": "The user uses its body like a hammer to attack the target and inflict damage.",
     "Moon": "The user uses its body like a hammer to attack the target and inflict damage.",
@@ -3661,6 +3669,10 @@
     "Ultra Moon": "The user\u2019s body generates an eerie impulse. Exposing the target to it harshly lowers the target\u2019s Sp. Atk stat.",
     "Sword": "The user\u2019s body generates an eerie impulse. Exposing the target to it harshly lowers the target\u2019s Sp. Atk stat.",
     "Shield": "The user\u2019s body generates an eerie impulse. Exposing the target to it harshly lowers the target\u2019s Sp. Atk stat."
+  },
+  "eeriespell": {
+    "Sword": "The user attacks with its tremendous psychic power. This also removes 3 PP from the target\u2019s last move.",
+    "Shield": "The user attacks with its tremendous psychic power. This also removes 3 PP from the target\u2019s last move."
   },
   "eggbomb": {
     "Gold": "Eggs are hurled at the foe.",
@@ -4292,6 +4304,10 @@
     "Ultra Moon": "Cloaked in flames, the user dances and flaps its wings. This may also raise the user\u2019s Sp. Atk stat.",
     "Sword": "Cloaked in flames, the user attacks the target by dancing and flapping its wings. This may also raise the user\u2019s Sp. Atk stat.",
     "Shield": "Cloaked in flames, the user attacks the target by dancing and flapping its wings. This may also raise the user\u2019s Sp. Atk stat."
+  },
+  "fierywrath": {
+    "Sword": "The user transforms its wrath into a fire-like aura to attack. This may also make opposing Pok\u00e9mon flinch.",
+    "Shield": "The user transforms its wrath into a fire-like aura to attack. This may also make opposing Pok\u00e9mon flinch."
   },
   "finalgambit": {
     "Black": "The user risks everything to attack its target. The user faints but does damage equal to the user\u2019s HP.",
@@ -5024,6 +5040,10 @@
     "Sword": "The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.",
     "Shield": "The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types."
   },
+  "freezingglare": {
+    "Sword": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen.",
+    "Shield": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
+  },
   "freezyfrost": {
     "L.G. Pikachu": "The user attacks with a crystal made of cold frozen haze. It eliminates every stat change among all the Pok\u00e9mon engaged in battle.",
     "L.G. Eevee": "The user attacks with a crystal made of cold frozen haze. It eliminates every stat change among all the Pok\u00e9mon engaged in battle.",
@@ -5375,6 +5395,10 @@
     "Ultra Moon": "The user hits the target with a powerful electric current collected by its Z-Power. The power varies, depending on the original move.",
     "Sword": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "Shield": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
+  "glaciallance": {
+    "Sword": "The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pok\u00e9mon.",
+    "Shield": "The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pok\u00e9mon."
   },
   "glaciate": {
     "Black": "The user attacks by blowing freezing cold air at opposing Pok\u00e9mon. This attack reduces the targets\u2019 Speed stat.",
@@ -14520,6 +14544,10 @@
     "Sword": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.",
     "Shield": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis."
   },
+  "thundercage": {
+    "Sword": "The user traps the target in a cage of sparking electricity for four to five turns.",
+    "Shield": "The user traps the target in a cage of sparking electricity for four to five turns."
+  },
   "thunderfang": {
     "Diamond": "The user bites with electrified fangs. It may also make the foe flinch or become paralyzed.",
     "Pearl": "The user bites with electrified fangs. It may also make the foe flinch or become paralyzed.",
@@ -14664,6 +14692,10 @@
     "L.G. Eevee": "A strong electric blast crashes down on the target. This may also leave the target with paralysis.",
     "Sword": "A strong electric blast crashes down on the target. This may also leave the target with paralysis.",
     "Shield": "A strong electric blast crashes down on the target. This may also leave the target with paralysis."
+  },
+  "thunderouskick": {
+    "Sword": "The user overwhelms the target with lightning-like movement before delivering a kick. This also lowers the target\u2019s Defense stat.",
+    "Shield": "The user overwhelms the target with lightning-like movement before delivering a kick. This also lowers the target\u2019s Defense stat."
   },
   "tickle": {
     "Ruby": "Makes the foe laugh to lower ATTACK and DEFENSE.",
