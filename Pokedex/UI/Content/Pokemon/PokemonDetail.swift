@@ -22,6 +22,7 @@ struct PokemonDetail: View {
     @EnvironmentObject var appSettings: AppSettings
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var currentFormIndex = 0
+    @State private var selectedPokemonForm: PokemonForm?
     @FetchRequest private var pokemonFetchRequest: FetchedResults<Pokemon>
 
     private var currentForm: PokemonForm { pokemon.forms[currentFormIndex] }
@@ -75,6 +76,9 @@ struct PokemonDetail: View {
         }
         .listStyle(GroupedListStyle())
         .navigationTitle(pokemon.name)
+        .navigation(item: $selectedPokemonForm) {
+            PokemonDetail(pokemon: $0.pokemon, game: game, formIndex: $0.formIndex, numberKeyPath: numberKeyPath)
+        }
     }
 
     init(
@@ -214,7 +218,9 @@ struct PokemonDetail: View {
             if let evolutions = currentForm.evolutions,
                !evolutions.isEmpty {
                 Section(header: SectionHeader("Evolutions")) {
-                    PokemonEvolutions(evolutions: evolutions)
+                    PokemonEvolutions(evolutions: evolutions) {
+                        selectedPokemonForm = $0
+                    }
                 }
                 .padding(.vertical, verticalPadding)
             }
