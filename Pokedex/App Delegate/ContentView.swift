@@ -67,7 +67,7 @@ struct ContentView: View {
     @ViewBuilder
     private func contentButtons() -> some View {
         Group {
-            NavigationLink(destination: FilterablePokemonList(), tag: .pokemon, selection: $selectedTab) {
+            NavigationLink(destination: FilterablePokemonList(game: settings.currentGame), tag: .pokemon, selection: $selectedTab) {
                 BigColoredButton(title: "Pokémon", fillColor: AppColor.red.color)
             }
             .isDetailLink(false)

@@ -49,9 +49,8 @@ final class SearchableListViewModel<Element>: ObservableObject where Element: NS
         self.objects = objects
         self.filteredObjects = Array(objects)
         cancellable = $searchText
-            .throttle(for: .milliseconds(300), scheduler: DispatchQueue.main, latest: true)
+            .throttle(for: .milliseconds(300), scheduler: DispatchQueue.appUserInitiated, latest: true)
             .removeDuplicates()
-            .receive(on: DispatchQueue.appUserInitiated)
             .map { query in
                 guard !query.isEmpty else { return Array(objects) }
                 return objects.filter { object in object.canonicalName.contains(query.lowercased()) }

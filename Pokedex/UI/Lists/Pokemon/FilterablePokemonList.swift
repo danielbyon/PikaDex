@@ -10,17 +10,18 @@ import SwiftUI
 
 struct FilterablePokemonList: View {
 
-    @EnvironmentObject var settings: AppSettings
+    let game: Game
+
     @State private var isShowingFilter = false
     @StateObject var viewModel = FilterablePokemonListViewModel()
 
     var body: some View {
         PokemonList(
-            fetchRequest: Pokemon.allFetchRequest(for: settings.currentGame, filter: viewModel.filter),
-            game: settings.currentGame,
+            fetchRequest: Pokemon.allFetchRequest(for: game, filter: viewModel.filter),
+            game: game,
             numberKeyPath: viewModel.filter.filterBy.keyPath)
             .sheet(isPresented: $isShowingFilter) {
-                PokemonListFilter(game: self.settings.currentGame, viewModel: self.viewModel)
+                PokemonListFilter(game: game, viewModel: viewModel)
                     .injectDependencies()
             }
             .toolbar {
@@ -28,7 +29,7 @@ struct FilterablePokemonList: View {
                     Button(action: {
                         self.isShowingFilter.toggle()
                     }) {
-                        Image(systemName: viewModel.filter == .defaultFilter(forGame: settings.currentGame)
+                        Image(systemName: viewModel.filter == .defaultFilter(forGame: game)
                                 ? "line.horizontal.3.decrease.circle"
                                 : "line.horizontal.3.decrease.circle.fill")
                     }
@@ -40,7 +41,7 @@ struct FilterablePokemonList: View {
 
 struct FilterablePokemonList_Previews: PreviewProvider {
     static var previews: some View {
-        FilterablePokemonList()
+        FilterablePokemonList(game: .sword)
             .injectDependencies()
     }
 }
