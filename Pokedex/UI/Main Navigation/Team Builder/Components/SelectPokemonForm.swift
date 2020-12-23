@@ -17,7 +17,7 @@ struct SelectPokemonForm: View {
     @FetchRequest private var pokemonForms: FetchedResults<PokemonForm>
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: pokemonForms), searchPlaceholder: "Search for a Pokémon") { pokemonForm in
+        SearchableList(objects: pokemonForms, searchPlaceholder: "Search for a Pokémon") { pokemonForm in
             PokemonFormCell(form: pokemonForm, game: self.game).onTapGesture {
                 onSelect(pokemonForm)
                 dismiss()

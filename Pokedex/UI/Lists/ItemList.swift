@@ -15,7 +15,7 @@ struct ItemList: View {
     @FetchRequest var items: FetchedResults<Item>
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: items), searchPlaceholder: "Search for an item") { item in
+        SearchableList(objects: items, searchPlaceholder: "Search for an item") { item in
             NavigationLink(destination: ItemDetail(item: item, game: self.game)) {
                 ItemCell(item: item)
             }

@@ -12,7 +12,7 @@ import Combine
 
 struct SearchableList<Element, Content>: View where Element: NSFetchRequestResult & Hashable & Identifiable & CanonicallyNamed, Content: View {
 
-    @ObservedObject private var viewModel: SearchableListViewModel<Element>
+    @StateObject private var viewModel: SearchableListViewModel<Element>
     private let searchPlaceholder: String
     private let content: (Element) -> Content
 
@@ -29,8 +29,8 @@ struct SearchableList<Element, Content>: View where Element: NSFetchRequestResul
         }
     }
 
-    init(viewModel: SearchableListViewModel<Element>, searchPlaceholder: String = "Search", content: @escaping (Element) -> Content) {
-        self.viewModel = viewModel
+    init(objects: FetchedResults<Element>, searchPlaceholder: String = "Search", content: @escaping (Element) -> Content) {
+        self._viewModel = .init(wrappedValue: SearchableListViewModel(objects: objects))
         self.searchPlaceholder = searchPlaceholder
         self.content = content
     }

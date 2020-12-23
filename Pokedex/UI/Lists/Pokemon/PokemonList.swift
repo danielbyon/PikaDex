@@ -18,7 +18,7 @@ struct PokemonList: View {
     @State private var selectedPokemon: Pokemon?
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: pokemon), searchPlaceholder: "Search for a Pokémon") { pokemon in
+        SearchableList(objects: pokemon, searchPlaceholder: "Search for a Pokémon") { pokemon in
             NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath), tag: pokemon, selection: $selectedPokemon) {
                 PokemonCell(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath)
             }

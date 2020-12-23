@@ -15,7 +15,7 @@ struct AbilityList: View {
     @FetchRequest var abilities: FetchedResults<Ability>
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: abilities), searchPlaceholder: "Search for an ability") { ability in
+        SearchableList(objects: abilities, searchPlaceholder: "Search for an ability") { ability in
             NavigationLink(destination: AbilityDetail(ability: ability, game: self.game)) {
                 AbilityCell(model: AbilityViewModel(ability: ability))
             }

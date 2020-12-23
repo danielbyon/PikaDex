@@ -95,9 +95,19 @@ extension Pokemon.Filter: Equatable {
 
 }
 
+extension Pokemon.Filter: Hashable { }
+
+extension Pokemon.Filter: Identifiable {
+
+    public var id: String { filterBy.id + sortBy.id + sortOrder.id }
+
+}
+
 extension Pokemon.Filter: UserDefaultPersistable { }
 
 extension Pokemon.Filter.FilterBy: Equatable { }
+
+extension Pokemon.Filter.FilterBy: Hashable { }
 
 extension Pokemon.Filter.FilterBy: Identifiable {
 
@@ -107,6 +117,8 @@ extension Pokemon.Filter.FilterBy: Identifiable {
 
 extension Pokemon.Filter.SortBy: Equatable { }
 
+extension Pokemon.Filter.SortBy: Hashable { }
+
 extension Pokemon.Filter.SortBy: Identifiable {
 
     public var id: String { rawValue }
@@ -114,6 +126,8 @@ extension Pokemon.Filter.SortBy: Identifiable {
 }
 
 extension Pokemon.Filter.SortOrder: Equatable { }
+
+extension Pokemon.Filter.SortOrder: Hashable { }
 
 extension Pokemon.Filter.SortOrder: Identifiable {
 
