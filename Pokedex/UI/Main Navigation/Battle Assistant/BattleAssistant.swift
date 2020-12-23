@@ -42,13 +42,7 @@ struct BattleAssistant: View {
                     }
                 }
                 if viewModel.pokemon != nil {
-                    Picker("Level", selection: $viewModel.level) {
-                        ForEach(1...100, id: \.self) { i in
-                            Text("\(i)")
-                        }
-                    }
-                    .monospacedBody()
-                    .foregroundColor(.primary)
+                    BattleAssistantLevelSlider(level: $viewModel.level)
                 }
             }
 
@@ -60,7 +54,7 @@ struct BattleAssistant: View {
                     }
                 }
 
-                BattleAssistantInfo(pokemon: pokemon, level: viewModel.level)
+                BattleAssistantInfo(pokemon: pokemon, level: Int(viewModel.level))
             } else {
                 Text("Select a Pokémon and level to view helpful info when battling.")
                     .monospacedBody()

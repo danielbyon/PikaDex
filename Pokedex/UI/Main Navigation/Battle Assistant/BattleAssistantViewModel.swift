@@ -19,7 +19,7 @@ final class BattleAssistantViewModel: ObservableObject {
     }
 
     @UserDefault(key: "battleassistant.level", defaultValue: 100, userDefaults: .appGroup)
-    var level: Int {
+    var level: Double {
         willSet {
             objectWillChange.send()
         }

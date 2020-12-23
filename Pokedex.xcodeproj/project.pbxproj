@@ -41,6 +41,7 @@
 		65B3936B23894B4F0064EB35 /* BaseStatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B3936A23894B4F0064EB35 /* BaseStatViewModel.swift */; };
 		6524BD4523821A9200709D28 /* BattleAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524BD4423821A9200709D28 /* BattleAssistant.swift */; };
 		65881A5E2479209400526CBD /* BattleAssistantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A5D2479209400526CBD /* BattleAssistantInfo.swift */; };
+		652B50312593036200FC8A48 /* BattleAssistantLevelSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B50302593036200FC8A48 /* BattleAssistantLevelSlider.swift */; };
 		65B1D92E2480FC67003052D2 /* BattleAssistantTypeEffectiveness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1D92D2480FC67003052D2 /* BattleAssistantTypeEffectiveness.swift */; };
 		65881A6A247A8C2700526CBD /* BattleAssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A69247A8C2700526CBD /* BattleAssistantViewModel.swift */; };
 		65BB4CD1257F8FEC00298D10 /* BerryFirmness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F769692458359900AEB57D /* BerryFirmness.swift */; };
@@ -614,6 +615,7 @@
 		65B3936A23894B4F0064EB35 /* BaseStatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStatViewModel.swift; sourceTree = "<group>"; };
 		6524BD4423821A9200709D28 /* BattleAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAssistant.swift; sourceTree = "<group>"; };
 		65881A5D2479209400526CBD /* BattleAssistantInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAssistantInfo.swift; sourceTree = "<group>"; };
+		652B50302593036200FC8A48 /* BattleAssistantLevelSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAssistantLevelSlider.swift; sourceTree = "<group>"; };
 		65B1D92D2480FC67003052D2 /* BattleAssistantTypeEffectiveness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAssistantTypeEffectiveness.swift; sourceTree = "<group>"; };
 		65881A69247A8C2700526CBD /* BattleAssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAssistantViewModel.swift; sourceTree = "<group>"; };
 		65F769692458359900AEB57D /* BerryFirmness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerryFirmness.swift; sourceTree = "<group>"; };
@@ -998,6 +1000,7 @@
 			children = (
 				6524BD4423821A9200709D28 /* BattleAssistant.swift */,
 				65881A5D2479209400526CBD /* BattleAssistantInfo.swift */,
+				652B50302593036200FC8A48 /* BattleAssistantLevelSlider.swift */,
 				65B1D92D2480FC67003052D2 /* BattleAssistantTypeEffectiveness.swift */,
 				65881A69247A8C2700526CBD /* BattleAssistantViewModel.swift */,
 				65881A5B2478F46300526CBD /* SelectPokemon.swift */,
@@ -2072,6 +2075,7 @@
 				65B3936B23894B4F0064EB35 /* BaseStatViewModel.swift in Sources */,
 				6524BD4523821A9200709D28 /* BattleAssistant.swift in Sources */,
 				65881A5E2479209400526CBD /* BattleAssistantInfo.swift in Sources */,
+				652B50312593036200FC8A48 /* BattleAssistantLevelSlider.swift in Sources */,
 				65B1D92E2480FC67003052D2 /* BattleAssistantTypeEffectiveness.swift in Sources */,
 				65881A6A247A8C2700526CBD /* BattleAssistantViewModel.swift in Sources */,
 				65F7696A2458359900AEB57D /* BerryFirmness.swift in Sources */,

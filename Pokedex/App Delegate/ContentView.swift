@@ -117,7 +117,7 @@ struct ContentView: View {
             BigColoredButton(title: "Dual Type Checker", textColor: .black, fillColor: normalItemColor)
         }
 
-        NavigationLink(destination: BattleAssistant(), tag: .battleAssistant, selection: $selectedTab) {
+        NavigationLink(destination: BattleAssistant().id(settings.currentGame), tag: .battleAssistant, selection: $selectedTab) {
             BigColoredButton(title: "Battle Assistant", textColor: .black, fillColor: normalItemColor)
         }
 
