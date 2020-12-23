@@ -748,44 +748,6 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring3.json") 
 }
 
 
-//func sanitizedTutoringForms(_ forms: [PokemonForm], pokemonName: String, formFilter: String?) -> [PokemonForm] {
-//    guard let formFilter = formFilter, !formFilter.hasPrefix("Partner") else { return forms }
-//    if pokemonName == "Meowstic" {
-//        return forms.filter { $0.name.contains(formFilter) }
-//    } else {
-//        return forms.filter { $0.name == formFilter }
-//    }
-//}
-//for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring2.json") as! [String: [String: [String: String]]] {
-//    guard !dict.isEmpty else { continue }
-//    for (_, moveDict) in dict {
-//        guard !moveDict.isEmpty else { continue }
-//        for (gameAndFormKey, moveNames) in moveDict {
-//            let components = gameAndFormKey.components(separatedBy: ".")
-//            let gameKey = components[0]
-//            let formFilter: String? = components.count > 1 ? components[1] : nil
-//
-//            let game = Game(rawValue: gameKey)!
-//            let pokemon = getPokemon(forName: pokemonName, game: game)
-//            var forms = pokemon.forms
-//            guard !forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
-//            forms = sanitizedTutoringForms(forms, pokemonName: pokemonName, formFilter: formFilter)
-//            guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "")"); continue }
-//            let moves = moveNames.components(separatedBy: ",")
-//                .map { allMoves[sanitizedMoveName($0)]! }
-//                .compactMap { $0[game] }
-//            for form in forms {
-//                for move in moves {
-//                    let entry = TutorLearnsetEntry(context: moc)
-//                    entry.form = form
-//                    entry.move = move
-//                }
-//            }
-//        }
-//    }
-//}
-
-
 // MARK: - Locations
 print("--- Locations ---")
 let locationPercentFormatter: NumberFormatter = {
