@@ -26,7 +26,7 @@ struct PokemonTypeEffectiveness: View {
     }
 
     var body: some View {
-        LazyVGrid(columns: Array(repeating: .init(), count: numberOfColumns)) {
+        LazyVGrid(columns: Array(repeating: .init(), count: numberOfColumns), spacing: 8.0) {
             ForEach(typeViewModels) { viewModel in
                 PokemonTypeEffectivenessCell(type: viewModel.type, value: viewModel.value)
             }
