@@ -166,6 +166,7 @@
 		659C7CDB2466C10200E92C1C /* Icon+PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CD72466C10200E92C1C /* Icon+PreviewHelpers.swift */; };
 		659C7CDC2466C10200E92C1C /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CD82466C10200E92C1C /* Icon.swift */; };
 		659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FC24B7BA9800640EB3 /* Icon.xcassets */; };
+		652B50882594F99D00FC8A48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FE24B7CF5300640EB3 /* Images.xcassets */; };
 		659C7CF52469618300E92C1C /* InAppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CF42469618300E92C1C /* InAppReviewManager.swift */; };
 		65B1D94F24867639003052D2 /* Int+EvenOdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1D94E24867639003052D2 /* Int+EvenOdd.swift */; };
 		65B1D95024867639003052D2 /* Int+EvenOdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B1D94E24867639003052D2 /* Int+EvenOdd.swift */; };
@@ -1905,6 +1906,7 @@
 			files = (
 				65A5ED6024A1FC2F00742986 /* Assets.xcassets in Resources */,
 				659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */,
+				652B50882594F99D00FC8A48 /* Images.xcassets in Resources */,
 				6547F805237968D50091A083 /* LaunchScreen.storyboard in Resources */,
 				65BB4C69257F7C3400298D10 /* Menusprites.xcassets in Resources */,
 				6597D5EC23D020F50081482E /* Pokedex.sqlite in Resources */,
