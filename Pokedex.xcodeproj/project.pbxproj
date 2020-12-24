@@ -22,6 +22,9 @@
 		659C7CE82467CF6C00E92C1C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CE72467CF6C00E92C1C /* AppColor.swift */; };
 		659C7CFE24696D3400E92C1C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CFD24696D3400E92C1C /* AppConstants.swift */; };
 		65BB4D4C2580BB5B00298D10 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CFD24696D3400E92C1C /* AppConstants.swift */; };
+		652B50592594648B00FC8A48 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B50582594648B00FC8A48 /* AppGroupStorage.swift */; };
+		652B505A2594648B00FC8A48 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B50582594648B00FC8A48 /* AppGroupStorage.swift */; };
+		652B505B2594648B00FC8A48 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B50582594648B00FC8A48 /* AppGroupStorage.swift */; };
 		659C7D00246970B600E92C1C /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C7CFF246970B600E92C1C /* AppInfo.swift */; };
 		65721D78257F6A7F00DA8F7C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6A68423DE600000542D6C /* AppSettings.swift */; };
 		65721D7D257F6A8000DA8F7C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6A68423DE600000542D6C /* AppSettings.swift */; };
@@ -132,6 +135,9 @@
 		65F769562455A1E700AEB57D /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F7693E2452BDB700AEB57D /* Flavor.swift */; };
 		657262EF24011C3E00A38BCE /* FormInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657262E024011C3E00A38BCE /* FormInfoTests.swift */; };
 		65881A77247D96E700526CBD /* Game+BitwiseValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A76247D96E700526CBD /* Game+BitwiseValue.swift */; };
+		652B507D2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */; };
+		652B507E2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */; };
+		652B507F2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */; };
 		65881A66247A8B6100526CBD /* Game+PokemonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A65247A8B6100526CBD /* Game+PokemonFilter.swift */; };
 		65881A67247A8B6E00526CBD /* Game+PokemonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A65247A8B6100526CBD /* Game+PokemonFilter.swift */; };
 		65BB4C96257F7DB900298D10 /* Game+PokemonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A65247A8B6100526CBD /* Game+PokemonFilter.swift */; };
@@ -604,8 +610,10 @@
 		65B1D9532487559D003052D2 /* AlternatingBackgroundForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternatingBackgroundForEach.swift; sourceTree = "<group>"; };
 		659C7CE72467CF6C00E92C1C /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		659C7CFD24696D3400E92C1C /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		652B50582594648B00FC8A48 /* AppGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupStorage.swift; sourceTree = "<group>"; };
 		659C7CFF246970B600E92C1C /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		65D6A68423DE600000542D6C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		652B504F2593FA4200FC8A48 /* AppSupport */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppSupport; path = ../AppSupport; sourceTree = "<group>"; };
 		6547F7FE237968D50091A083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FC408D2574636800E64BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65E5AA9123894A7B006BA4B4 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
@@ -663,6 +671,7 @@
 		657262E024011C3E00A38BCE /* FormInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormInfoTests.swift; sourceTree = "<group>"; };
 		6547F847237975190091A083 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		65881A76247D96E700526CBD /* Game+BitwiseValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+BitwiseValue.swift"; sourceTree = "<group>"; };
+		652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+DefaultValueProviding.swift"; sourceTree = "<group>"; };
 		65881A65247A8B6100526CBD /* Game+PokemonFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+PokemonFilter.swift"; sourceTree = "<group>"; };
 		65881A63247A839800526CBD /* Game+UserDefaultPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+UserDefaultPersistable.swift"; sourceTree = "<group>"; };
 		6572629624011B1B00A38BCE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -964,6 +973,7 @@
 		6547F7E9237968D20091A083 = {
 			isa = PBXGroup;
 			children = (
+				652B504F2593FA4200FC8A48 /* AppSupport */,
 				65B8312E25822F990035B0B5 /* CombineExtensions */,
 				6518ACB223BED1D7004B7C58 /* DatabaseLoader */,
 				6547F846237975190091A083 /* Frameworks */,
@@ -1175,6 +1185,7 @@
 				6551F798244D0DFB0061D8F4 /* EncounterRate+Strings.swift */,
 				65F769422452BE7F00AEB57D /* Flavor+Strings.swift */,
 				65F769402452BDF500AEB57D /* Flavor+UIColor.swift */,
+				652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */,
 				65881A65247A8B6100526CBD /* Game+PokemonFilter.swift */,
 				65881A63247A839800526CBD /* Game+UserDefaultPersistable.swift */,
 				65B1D94E24867639003052D2 /* Int+EvenOdd.swift */,
@@ -1643,6 +1654,7 @@
 			isa = PBXGroup;
 			children = (
 				659C7CFD24696D3400E92C1C /* AppConstants.swift */,
+				652B50582594648B00FC8A48 /* AppGroupStorage.swift */,
 				6594F7C12588DF3C00150E4A /* Hacks.swift */,
 				659C7CF42469618300E92C1C /* InAppReviewManager.swift */,
 				65EA938F24655EA10037348F /* KeyboardAvoiderModifier.swift */,
@@ -2067,6 +2079,7 @@
 				65B1D9542487559D003052D2 /* AlternatingBackgroundForEach.swift in Sources */,
 				659C7CE82467CF6C00E92C1C /* AppColor.swift in Sources */,
 				659C7CFE24696D3400E92C1C /* AppConstants.swift in Sources */,
+				652B50592594648B00FC8A48 /* AppGroupStorage.swift in Sources */,
 				659C7D00246970B600E92C1C /* AppInfo.swift in Sources */,
 				65D6A68523DE600000542D6C /* AppSettings.swift in Sources */,
 				65E5AA9323894A7C006BA4B4 /* Badge.swift in Sources */,
@@ -2112,6 +2125,7 @@
 				65F769412452BDF500AEB57D /* Flavor+UIColor.swift in Sources */,
 				65F7693F2452BDB700AEB57D /* Flavor.swift in Sources */,
 				65881A77247D96E700526CBD /* Game+BitwiseValue.swift in Sources */,
+				652B507D2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */,
 				65881A66247A8B6100526CBD /* Game+PokemonFilter.swift in Sources */,
 				65881A64247A839800526CBD /* Game+UserDefaultPersistable.swift in Sources */,
 				657262BB24011B1C00A38BCE /* Game.swift in Sources */,
@@ -2342,6 +2356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BB4C24257F799D00298D10 /* Ability+Extension.swift in Sources */,
+				652B505B2594648B00FC8A48 /* AppGroupStorage.swift in Sources */,
 				65721D7D257F6A8000DA8F7C /* AppSettings.swift in Sources */,
 				65BB4C23257F799D00298D10 /* BagItemInfo+Extension.swift in Sources */,
 				65BB4D07257F8FED00298D10 /* BerryFirmness.swift in Sources */,
@@ -2359,6 +2374,7 @@
 				65BB4D08257F8FED00298D10 /* EvolutionCondition.swift in Sources */,
 				65BB4D0F257F8FED00298D10 /* EvolutionMethod.swift in Sources */,
 				65BB4D0C257F8FED00298D10 /* Flavor.swift in Sources */,
+				652B507F2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */,
 				65BB4C97257F7DB900298D10 /* Game+PokemonFilter.swift in Sources */,
 				65721D4A257E329A00DA8F7C /* Game+UserDefaultPersistable.swift in Sources */,
 				65BB4D01257F8FED00298D10 /* Game.swift in Sources */,
@@ -2418,6 +2434,7 @@
 			files = (
 				65BB4C0C257F799C00298D10 /* Ability+Extension.swift in Sources */,
 				65BB4D4C2580BB5B00298D10 /* AppConstants.swift in Sources */,
+				652B505A2594648B00FC8A48 /* AppGroupStorage.swift in Sources */,
 				65721D78257F6A7F00DA8F7C /* AppSettings.swift in Sources */,
 				65BB4C0B257F799C00298D10 /* BagItemInfo+Extension.swift in Sources */,
 				65BB4CD1257F8FEC00298D10 /* BerryFirmness.swift in Sources */,
@@ -2435,6 +2452,7 @@
 				65BB4CD2257F8FEC00298D10 /* EvolutionCondition.swift in Sources */,
 				65BB4CD9257F8FEC00298D10 /* EvolutionMethod.swift in Sources */,
 				65BB4CD6257F8FEC00298D10 /* Flavor.swift in Sources */,
+				652B507E2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */,
 				65BB4C96257F7DB900298D10 /* Game+PokemonFilter.swift in Sources */,
 				65721D4F257E329B00DA8F7C /* Game+UserDefaultPersistable.swift in Sources */,
 				65721D0E257E305400DA8F7C /* Game.swift in Sources */,

@@ -17,7 +17,7 @@ final class PurchasedProductState: ObservableObject {
 
     // MARK: Properties
 
-    @UserDefault(key: purchasedKey, defaultValue: PokepediaProduct.defaultPurchaseValue, userDefaults: .appGroup)
+    @AppGroupStorage(key: purchasedKey, defaultValue: PokepediaProduct.defaultPurchaseValue)
     var purchaseState: Int64 {
         willSet {
             objectWillChange.send()

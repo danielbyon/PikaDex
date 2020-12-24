@@ -18,21 +18,21 @@ final class BattleAssistantViewModel: ObservableObject {
         }
     }
 
-    @UserDefault(key: "battleassistant.level", defaultValue: 100, userDefaults: .appGroup)
+    @AppGroupStorage(key: "battleassistant.level", defaultValue: 100)
     var level: Double {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @UserDefault(key: "battleassistant.pokemon", defaultValue: nil, userDefaults: .appGroup)
+    @AppGroupStorage(key: "battleassistant.pokemon", defaultValue: nil)
     private var pokemonName: String? {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @UserDefault(key: "battleassistant.game", defaultValue: nil, userDefaults: .appGroup)
+    @AppGroupStorage(key: "battleassistant.game", defaultValue: nil)
     private var game: Game? {
         willSet {
             objectWillChange.send()

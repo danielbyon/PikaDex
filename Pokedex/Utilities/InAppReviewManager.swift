@@ -12,10 +12,10 @@ import AppSupport
 
 struct InAppReviewManager {
 
-    @UserDefault(key: "appLaunchCount", defaultValue: 0, userDefaults: .appGroup)
+    @AppGroupStorage(key: "appLaunchCount", defaultValue: 0)
     private static var appLaunchCount: Int
 
-    @UserDefault(key: "lastDateRequested", defaultValue: .distantPast, userDefaults: .appGroup)
+    @AppGroupStorage(key: "lastDateRequested", defaultValue: .distantPast)
     private static var lastDateRequested: Date
 
     private init() { }

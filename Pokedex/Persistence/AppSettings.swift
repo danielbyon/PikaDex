@@ -12,17 +12,25 @@ import AppSupport
 
 final class AppSettings: ObservableObject {
 
-    @UserDefault(key: "com.danielbyon.pokedex.currentGame", defaultValue: .sword, userDefaults: .appGroup) var currentGame: Game {
+    @AppGroupStorage(key: "com.danielbyon.pokedex.currentGame") var currentGame: Game = .sword {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @AppStorage("shouldUseMetersForHeight", store: .appGroup) var shouldUseMetersForHeight = true
+    @AppGroupStorage(key: "shouldUseMetersForHeight") var shouldUseMetersForHeight = true {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 
-    @AppStorage("shouldUseKilogramsForWeight", store: .appGroup) var shouldUseKilogramsForWeight = true
+    @AppGroupStorage(key: "shouldUseKilogramsForWeight") var shouldUseKilogramsForWeight = true {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 
-    private var subscriptions = Set<AnyCancellable>()
+    private var subscription: AnyCancellable?
 
     private static let shouldUseMetersForHeightKey = "shouldUseMetersForHeight"
     private static let shouldUseKilogramsForWeightKey = "shouldUseKilogramsForWeight"
@@ -32,18 +40,16 @@ final class AppSettings: ObservableObject {
     }
 
     private func setupObserver() {
-        subscriptions.insert(NotificationCenter.default
-            .publisher(for: UIApplication.willEnterForegroundNotification)
-            .receive(on: DispatchQueue.main)
-            .sink { [unowned self] _ in
-                self.objectWillChange.send()
-        })
-        subscriptions.insert(NotificationCenter.default
-            .publisher(for: UserDefaults.didChangeNotification)
-            .receive(on: DispatchQueue.main)
-            .sink { [unowned self] _ in
-                self.objectWillChange.send()
-        })
+        subscription = Publishers.Merge(
+            NotificationCenter.default
+                .publisher(for: UIApplication.willEnterForegroundNotification),
+            NotificationCenter.default
+                .publisher(for: UserDefaults.didChangeNotification)
+        )
+        .receive(on: DispatchQueue.main)
+        .sink { [unowned self] _ in
+            self.objectWillChange.send()
+        }
     }
 
 }

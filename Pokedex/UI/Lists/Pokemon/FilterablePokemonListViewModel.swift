@@ -11,14 +11,14 @@ import AppSupport
 
 final class FilterablePokemonListViewModel: ObservableObject {
 
-    @UserDefault(key: "pokemonlistfilter.filter", defaultValue: .defaultFilter(forGame: Dependencies.settings.currentGame), userDefaults: .appGroup)
+    @AppGroupStorage(key: "pokemonlistfilter.filter", defaultValue: .defaultFilter(forGame: Dependencies.settings.currentGame))
     var filter: Pokemon.Filter {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @UserDefault(key: "pokemonlistfilter.game", defaultValue: .sword, userDefaults: .appGroup)
+    @AppGroupStorage(key: "pokemonlistfilter.game", defaultValue: .sword)
     private var game: Game
 
     init() {
