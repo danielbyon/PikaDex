@@ -614,7 +614,6 @@
 		652B50582594648B00FC8A48 /* AppGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupStorage.swift; sourceTree = "<group>"; };
 		659C7CFF246970B600E92C1C /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		65D6A68423DE600000542D6C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		652B504F2593FA4200FC8A48 /* AppSupport */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppSupport; path = ../AppSupport; sourceTree = "<group>"; };
 		6547F7FE237968D50091A083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FC408D2574636800E64BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65E5AA9123894A7B006BA4B4 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
@@ -636,7 +635,6 @@
 		65B1D94B248664F7003052D2 /* CaptureMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureMethod.swift; sourceTree = "<group>"; };
 		65F9F4682470E76400F4EC0D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		659C7CE42467BD0900E92C1C /* CircleArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleArc.swift; sourceTree = "<group>"; };
-		65B8312E25822F990035B0B5 /* CombineExtensions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CombineExtensions; path = ../CombineExtensions; sourceTree = "<group>"; };
 		6597D5E223D01E1B0081482E /* Config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config.txt; sourceTree = "<group>"; };
 		6547F7FC237968D20091A083 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		65BB4C60257F7BBA00298D10 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -871,7 +869,6 @@
 		65881A80247FDC5000526CBD /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		658DD13F2463E4060014D812 /* String+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Search.swift"; sourceTree = "<group>"; };
 		65FC40872574636700E64BD0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		65B8312D25822F990035B0B5 /* SwiftUIExtensions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIExtensions; path = ../SwiftUIExtensions; sourceTree = "<group>"; };
 		65721D44257E320000DA8F7C /* Team+PokePasteConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+PokePasteConvertible.swift"; sourceTree = "<group>"; };
 		65A5ED5724A0BC8A00742986 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		65881A572478F07F00526CBD /* TeamBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBuilder.swift; sourceTree = "<group>"; };
@@ -974,8 +971,6 @@
 		6547F7E9237968D20091A083 = {
 			isa = PBXGroup;
 			children = (
-				652B504F2593FA4200FC8A48 /* AppSupport */,
-				65B8312E25822F990035B0B5 /* CombineExtensions */,
 				6518ACB223BED1D7004B7C58 /* DatabaseLoader */,
 				6547F846237975190091A083 /* Frameworks */,
 				6547F7F4237968D20091A083 /* Pokedex */,
@@ -983,7 +978,6 @@
 				6547F819237968D50091A083 /* PokedexUITests */,
 				65FC40892574636700E64BD0 /* PokedexWidget */,
 				6547F7F3237968D20091A083 /* Products */,
-				65B8312D25822F990035B0B5 /* SwiftUIExtensions */,
 				65721CDD257E2CEB00DA8F7C /* TeamIntentHandler */,
 			);
 			sourceTree = "<group>";
