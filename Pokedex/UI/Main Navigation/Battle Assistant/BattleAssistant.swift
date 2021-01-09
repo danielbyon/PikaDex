@@ -10,8 +10,8 @@ import SwiftUI
 
 struct BattleAssistant: View {
 
-    @EnvironmentObject var appContext: AppContext
-    @ObservedObject private var viewModel: BattleAssistantViewModel = .init()
+    @EnvironmentObject var settings: AppSettings
+    @StateObject private var viewModel: BattleAssistantViewModel = .init()
     @State private var isShowingSelectPokemon = false
 
     private var movesFooter: String {
@@ -24,12 +24,12 @@ struct BattleAssistant: View {
     var body: some View {
         Form {
             Section(header: SectionHeader("Pokémon")) {
-                NavigationLink(destination: SelectPokemon(game: appContext.currentGame, onSelect: { pokemon in
+                NavigationLink(destination: SelectPokemon(game: settings.currentGame, onSelect: { pokemon in
                     self.viewModel.pokemon = pokemon
                     self.isShowingSelectPokemon = false
                 }), isActive: $isShowingSelectPokemon) {
                     if let pokemon = viewModel.pokemon {
-                        PokemonCell(pokemon: pokemon, game: appContext.currentGame)
+                        PokemonCell(pokemon: pokemon, game: settings.currentGame)
                             .onTapGesture {
                                 self.isShowingSelectPokemon.toggle()
                         }
@@ -42,25 +42,19 @@ struct BattleAssistant: View {
                     }
                 }
                 if viewModel.pokemon != nil {
-                    Picker("Level", selection: $viewModel.level) {
-                        ForEach(1...100, id: \.self) { i in
-                            Text("\(i)")
-                        }
-                    }
-                    .monospacedBody()
-                    .foregroundColor(.primary)
+                    BattleAssistantLevelSlider(level: $viewModel.level)
                 }
             }
 
             if let pokemon = viewModel.pokemon {
                 Section {
-                    NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: appContext.currentGame)) {
+                    NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: settings.currentGame)) {
                         Text("View Pokémon details")
                             .monospacedBody()
                     }
                 }
 
-                BattleAssistantInfo(pokemon: pokemon, level: viewModel.level)
+                BattleAssistantInfo(pokemon: pokemon, level: Int(viewModel.level))
             } else {
                 Text("Select a Pokémon and level to view helpful info when battling.")
                     .monospacedBody()

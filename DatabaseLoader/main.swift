@@ -628,17 +628,20 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as!
 
 // MARK: Machine
 print("Machine")
-for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetMachines.json") as! [String: [String: String]] {
-    for (generation, rawMachines) in dict {
-        var games = Game.allGames(forLearnsetValue: generation)!
-        games.removeAll { $0 == .letsGoPikachu || $0 == .letsGoEevee }
-        let machines = rawMachines.split(separator: ";")
-
-        for game in games {
-            if [Game.sword, .shield].contains(game) && machines.contains("TM100") { print("TM100 detected for \(pokemonName) in \(game), skipping generation 7 machines"); continue }
+for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetMachines3.json") as! [String: [String: [String: [String]]]] {
+    guard !dict.isEmpty else { continue }
+    for (_, gameDicts) in dict {
+        guard !gameDicts.isEmpty else { continue }
+        for (gameAndFormKey, machines) in gameDicts {
+            let components = gameAndFormKey.components(separatedBy: ".")
+            let gameKey = components[0]
+            let formFilter: String? = components.count > 1 ? components.dropFirst().joined(separator: ".") : nil
+            let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
-            let forms = pokemon.forms
-            guard !forms.isEmpty else { continue }
+            var forms = pokemon.forms
+            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
+            guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             for form in forms {
                 for machine in machines {
                     let machineNumber = Int(machine.trimmingCharacters(in: .uppercaseLetters))!
@@ -657,24 +660,6 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetMachines.json") a
                     entry.machine = resolvedMachine!
                     entry.form = form
                 }
-            }
-        }
-    }
-}
-
-for (pokemonName, rawMachines) in Helper.loadJSON(from: "Data/LearnsetMachines-TM-LGPLGE.json") as! [String: String] {
-    let games = [Game.letsGoPikachu, .letsGoEevee]
-    let machines = rawMachines.split(separator: ";").map { Int($0)! }
-
-    for game in games {
-        let pokemon = getPokemon(forName: pokemonName, game: game)
-        let forms = pokemon.forms
-        guard !forms.isEmpty else { continue }
-        for form in forms {
-            for machine in machines {
-                let entry = MachineLearnsetEntry(context: moc)
-                entry.machine = allTMs[game]![machine]!
-                entry.form = form
             }
         }
     }
@@ -734,34 +719,25 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") a
 
 // MARK: Tutoring
 print("Tutoring")
-func sanitizedTutoringForms(_ forms: [PokemonForm], pokemonName: String, formFilter: String?) -> [PokemonForm] {
-    guard let formFilter = formFilter, !formFilter.hasPrefix("Partner") else { return forms }
-    if pokemonName == "Meowstic" {
-        return forms.filter { $0.name.contains(formFilter) }
-    } else {
-        return forms.filter { $0.name == formFilter }
-    }
-}
-for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring2.json") as! [String: [String: [String: String]]] {
+for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring3.json") as! [String: [String: [String: [String]]]] {
     guard !dict.isEmpty else { continue }
-    for (_, moveDict) in dict {
-        guard !moveDict.isEmpty else { continue }
-        for (gameAndFormKey, moveNames) in moveDict {
+    for (_, gameDicts) in dict {
+        guard !gameDicts.isEmpty else { continue }
+        for (gameAndFormKey, moveNames) in gameDicts {
             let components = gameAndFormKey.components(separatedBy: ".")
             let gameKey = components[0]
-            let formFilter: String? = components.count > 1 ? components[1] : nil
-
+            let formFilter: String? = components.count > 1 ? components.dropFirst().joined(separator: ".") : nil
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
-            forms = sanitizedTutoringForms(forms, pokemonName: pokemonName, formFilter: formFilter)
-            guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "")"); continue }
-            let moves = moveNames.components(separatedBy: ",")
-                .map { allMoves[sanitizedMoveName($0)]! }
-                .compactMap { $0[game] }
+            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
+            guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             for form in forms {
-                for move in moves {
+                for moveName in moveNames {
+                    guard let move = getMove(forName: moveName, game: game) else {
+                        continue
+                    }
                     let entry = TutorLearnsetEntry(context: moc)
                     entry.form = form
                     entry.move = move

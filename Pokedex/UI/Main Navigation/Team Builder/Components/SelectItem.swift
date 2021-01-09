@@ -30,7 +30,7 @@ struct SelectItem: View {
                 self.onSelect(nil)
             }
 
-            SearchableList(viewModel: SearchableListViewModel(objects: items), searchPlaceholder: "Search for an item") { item in
+            SearchableList(objects: items, searchPlaceholder: "Search for an item") { item in
                 ItemCell(item: item).onTapGesture {
                     self.onSelect(item)
                 }

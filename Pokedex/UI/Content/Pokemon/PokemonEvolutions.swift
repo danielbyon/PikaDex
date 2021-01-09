@@ -11,13 +11,19 @@ import SwiftUI
 struct PokemonEvolutions: View {
 
     let evolutions: [Evolution]
+    let onSelect: (PokemonForm) -> Void
 
     var body: some View {
         AlternatingBackgroundForEach(evolutions) { evolution in
-            PokemonEvolution(evolution: evolution)
+            PokemonEvolution(evolution: evolution, onSelect: onSelect)
         }
     }
-    
+
+    init(evolutions: [Evolution], onSelect: @escaping (PokemonForm) -> Void) {
+        self.evolutions = evolutions
+        self.onSelect = onSelect
+    }
+
 }
 
 struct PokemonEvolutions_Previews: PreviewProvider {
@@ -25,13 +31,13 @@ struct PokemonEvolutions_Previews: PreviewProvider {
         Group {
             NavigationView {
                 List {
-                    PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!)
+                    PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!) { _ in }
                 }
                 .listStyle(GroupedListStyle())
             }
             NavigationView {
                 List {
-                    PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!)
+                    PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!) { _ in }
                 }
                 .listStyle(GroupedListStyle())
             }
@@ -44,6 +50,7 @@ struct PokemonEvolutions_Previews: PreviewProvider {
 private struct PokemonEvolution: View {
 
     let evolution: Evolution
+    let onSelect: (PokemonForm) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
@@ -56,7 +63,9 @@ private struct PokemonEvolution: View {
             HStack(spacing: 0) {
                 VStack(spacing: 0) {
                     Spacer()
-                    EvolutionSprite(form: evolution.from, borderColor: Color(evolution.from.color.uiColor))
+                    EvolutionSprite(form: evolution.from, borderColor: Color(evolution.from.color.uiColor)).onTapGesture {
+                        onSelect(evolution.from)
+                    }
                     Spacer()
                 }
                 Spacer(minLength: 8.0)
@@ -77,7 +86,9 @@ private struct PokemonEvolution: View {
                 Spacer(minLength: 8.0)
                 VStack(spacing: 0) {
                     Spacer()
-                    EvolutionSprite(form: evolution.to, borderColor: Color(evolution.to.color.uiColor))
+                    EvolutionSprite(form: evolution.to, borderColor: Color(evolution.to.color.uiColor)).onTapGesture {
+                        onSelect(evolution.to)
+                    }
                     Spacer()
                 }
             }
@@ -95,6 +106,11 @@ private struct PokemonEvolution: View {
             }
         }
         .contentShape(Rectangle())
+    }
+
+    init(evolution: Evolution, onSelect: @escaping (PokemonForm) -> Void) {
+        self.evolution = evolution
+        self.onSelect = onSelect
     }
 
 }

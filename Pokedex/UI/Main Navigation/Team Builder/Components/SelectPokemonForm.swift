@@ -13,15 +13,22 @@ struct SelectPokemonForm: View {
     let game: Game
     let onSelect: (PokemonForm) -> Void
 
+    @Environment(\.presentationMode) var presentationMode
     @FetchRequest private var pokemonForms: FetchedResults<PokemonForm>
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: pokemonForms), searchPlaceholder: "Search for a Pokémon") { pokemonForm in
+        SearchableList(objects: pokemonForms, searchPlaceholder: "Search for a Pokémon") { pokemonForm in
             PokemonFormCell(form: pokemonForm, game: self.game).onTapGesture {
-                self.onSelect(pokemonForm)
+                onSelect(pokemonForm)
+                dismiss()
             }
         }
         .navigationTitle("Select Pokémon")
+//        .toolbar {
+//            ToolbarItem(placement: .cancellationAction) {
+//                Button("Cancel", action: dismiss)
+//            }
+//        }
     }
 
     init(game: Game, onSelect: @escaping (PokemonForm) -> Void) {
@@ -29,6 +36,11 @@ struct SelectPokemonForm: View {
         self.onSelect = onSelect
         self._pokemonForms = FetchRequest(fetchRequest: PokemonForm.allFetchRequest(for: game))
     }
+
+    private func dismiss() {
+        presentationMode.wrappedValue.dismiss()
+    }
+
 }
 
 struct SelectPokemonForm_Previews: PreviewProvider {

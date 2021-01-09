@@ -12,24 +12,25 @@ import Combine
 
 struct SearchableList<Element, Content>: View where Element: NSFetchRequestResult & Hashable & Identifiable & CanonicallyNamed, Content: View {
 
-    @ObservedObject private var viewModel: SearchableListViewModel<Element>
+    @StateObject private var viewModel: SearchableListViewModel<Element>
     private let searchPlaceholder: String
     private let content: (Element) -> Content
 
-    @ViewBuilder
     var body: some View {
-        SearchBar(text: $viewModel.searchText, placeholder: searchPlaceholder)
-        List {
-            AlternatingBackgroundForEach(viewModel.filteredObjects) { object in
-                self.content(object)
+        VStack(spacing: 0) {
+            SearchBar(text: $viewModel.searchText, placeholder: searchPlaceholder)
+            List {
+                AlternatingBackgroundForEach(viewModel.filteredObjects) { object in
+                    self.content(object)
+                }
             }
+            .listStyle(PlainListStyle())
+            .avoidKeyboard()
         }
-        .listStyle(PlainListStyle())
-        .avoidKeyboard()
     }
 
-    init(viewModel: SearchableListViewModel<Element>, searchPlaceholder: String = "Search", content: @escaping (Element) -> Content) {
-        self.viewModel = viewModel
+    init(objects: FetchedResults<Element>, searchPlaceholder: String = "Search", content: @escaping (Element) -> Content) {
+        self._viewModel = .init(wrappedValue: SearchableListViewModel(objects: objects))
         self.searchPlaceholder = searchPlaceholder
         self.content = content
     }
@@ -48,16 +49,16 @@ final class SearchableListViewModel<Element>: ObservableObject where Element: NS
         self.objects = objects
         self.filteredObjects = Array(objects)
         cancellable = $searchText
-            .throttle(for: .milliseconds(300), scheduler: DispatchQueue.global(qos: .userInitiated), latest: true)
+            .throttle(for: .milliseconds(300), scheduler: DispatchQueue.appUserInitiated, latest: true)
             .removeDuplicates()
             .map { query in
                 guard !query.isEmpty else { return Array(objects) }
                 return objects.filter { object in object.canonicalName.contains(query.lowercased()) }
-        }
-        .receive(on: DispatchQueue.main)
-        .sink(receiveValue: { [weak self] in
-            self?.filteredObjects = $0
-        })
+            }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                self?.filteredObjects = $0
+            }
     }
 
 }

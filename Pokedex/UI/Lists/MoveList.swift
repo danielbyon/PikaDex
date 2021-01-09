@@ -13,9 +13,10 @@ struct MoveList: View {
     let game: Game
 
     @FetchRequest var moves: FetchedResults<Move>
+    @State private var selectedMove: Move?
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: moves), searchPlaceholder: "Search for a move") { move in
+        SearchableList(objects: moves, searchPlaceholder: "Search for a move") { move in
             NavigationLink(destination: MoveDetail(move: move, game: self.game)) {
                 MoveCell(move: move, game: self.game)
             }

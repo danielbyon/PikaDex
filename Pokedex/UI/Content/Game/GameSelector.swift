@@ -11,7 +11,7 @@ import SwiftUI
 struct GameSelector: View {
 
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var appContext: AppContext
+    @EnvironmentObject var settings: AppSettings
     @EnvironmentObject var purchasedProductState: PurchasedProductState
     @State private var isShowingStore = false
 
@@ -21,9 +21,9 @@ struct GameSelector: View {
                 ForEach(Generation.allCases.reversed()) { generation in
                     Section(header: SectionHeader(generation.title)) {
                         ForEach(generation.games) { game in
-                            GameSelectorCell(game: game, currentGame: self.appContext.currentGame).onTapGesture {
+                            GameSelectorCell(game: game, currentGame: self.settings.currentGame).onTapGesture {
                                 if self.allowsSelection(for: game) {
-                                    self.appContext.currentGame = game
+                                    self.settings.currentGame = game
                                     self.presentationMode.wrappedValue.dismiss()
                                 } else {
                                     self.isShowingStore.toggle()

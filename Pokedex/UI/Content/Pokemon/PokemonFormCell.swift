@@ -18,11 +18,11 @@ struct PokemonFormCell: View {
     private var pokemon: Pokemon { form.pokemon }
 
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             PokemonFormCellInfo(form: form, game: game, showsFormName: showsFormName, numberKeyPath: numberKeyPath)
 
-            Spacer()
-            VStack(spacing: 2.0) {
+            Spacer(minLength: 2)
+            VStack(spacing: 2) {
                 Badge(pokemonType: form.primaryType, equalWidths: true, isSmall: true)
                 if let secondaryType = form.secondaryType {
                     Badge(pokemonType: secondaryType, equalWidths: true, isSmall: true)

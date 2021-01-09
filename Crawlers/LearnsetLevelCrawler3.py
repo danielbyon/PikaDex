@@ -13,7 +13,7 @@ import CrawlerUtils as crawler
 import re
 import PokemonDB as pdb
 
-def process_file(contents, generation):
+def process_file(contents, generation, pokemon_name):
 	soup = BeautifulSoup(contents, 'lxml').html.body
 	entries = {}
 	
@@ -30,39 +30,42 @@ def process_file(contents, generation):
 			if div is None or div.name != 'div':
 				continue
 			
-			form_names = None
 			if div['class'] == ['tabset-moves-game-form', 'tabs-wrapper']:
 				form_names = []
 				tab_list = div.div
 				for tab in tab_list.find_all('a'):
 					form_names.append(tab.text.strip())
-				table = tab_list.find_next_sibling().table
+				table_div = tab_list.find_next_sibling().div
 			else:
-				table = div.table
+				form_names = [pokemon_name]
+				table_div = div
+				
+			for form_name in form_names:
+				table = table_div.table
+				
+				if table is None or table.tbody is None:
+					break
+				
+				rows = table.tbody.find_all('tr')
+				moves = []
+				for row in rows:
+					tds = row.find_all('td')
+					level = tds[0].text.strip()
+					name = tds[1].text.strip()
+					move = {
+						'level': level,
+						'name': name
+					}
+					moves.append(move)
 			
-			if table is None or table.tbody is None:
-				continue
-			
-			rows = table.tbody.find_all('tr')
-			moves = []
-			for row in rows:
-				tds = row.find_all('td')
-				level = tds[0].text.strip()
-				name = tds[1].text.strip()
-				move = {
-					'level': level,
-					'name': name
-				}
-				moves.append(move)
-		
-			games = pdb.MOVE_GAMES_FOR_TAB[tab_id]
-			for game in games:
-				if form_names:
-					for form_name in form_names:
-						key = '{}.{}'.format(game, form_name)
-						entries[key] = moves
-				else:
-					entries[game] = moves
+				games = pdb.MOVE_GAMES_FOR_TAB[tab_id]
+				for game in games:
+					key = '{}.{}'.format(game, form_name)
+					entries[key] = moves
+				
+				table_div = table_div.find_next_sibling()
+				if table_div is None:
+					break
 	
 	return entries
 
@@ -100,7 +103,7 @@ def main():
 			
 			contents = crawler.fetch_or_download(filename, url)
 			soup = BeautifulSoup(contents, 'lxml').html.body
-			entries = process_file(contents, gen)
+			entries = process_file(contents, gen, name)
 			if entries is not None:
 				pokemon_entries['gen{}'.format(gen)] = entries
 		
@@ -112,3 +115,4 @@ def main():
 
 if __name__ == '__main__':
 	main()
+	

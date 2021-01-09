@@ -15,7 +15,7 @@ struct LocationList: View {
     @FetchRequest var locations: FetchedResults<Location>
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: locations), searchPlaceholder: "Search for a location") { location in
+        SearchableList(objects: locations, searchPlaceholder: "Search for a location") { location in
             NavigationLink(destination: LocationDetail(location: location, game: self.game)) {
                 LocationCell(location: location)
             }

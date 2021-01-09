@@ -13,7 +13,7 @@ struct BattleAssistantInfo: View {
     let pokemon: Pokemon
     let level: Int
 
-    @EnvironmentObject var appContext: AppContext
+    @EnvironmentObject var settings: AppSettings
 
     private var movesFooter: String {
         """
@@ -24,9 +24,9 @@ struct BattleAssistantInfo: View {
     
     @ViewBuilder var body: some View {
         Section(header: SectionHeader("Types")) {
-            PokemonTypeLink(title: "Primary Type", type: pokemon.defaultForm.primaryType, game: appContext.currentGame)
+            PokemonTypeLink(title: "Primary Type", type: pokemon.defaultForm.primaryType, game: settings.currentGame)
             if let secondaryType = pokemon.defaultForm.secondaryType {
-                PokemonTypeLink(title: "Secondary Type", type: secondaryType, game: appContext.currentGame)
+                PokemonTypeLink(title: "Secondary Type", type: secondaryType, game: settings.currentGame)
             }
         }
 
@@ -34,16 +34,16 @@ struct BattleAssistantInfo: View {
             BattleAssistantTypeEffectiveness(
                 primaryType: pokemon.defaultForm.primaryType,
                 secondaryType: pokemon.defaultForm.secondaryType,
-                game: appContext.currentGame)
+                game: settings.currentGame)
         }
         .padding(.vertical, padding)
 
-        if appContext.currentGame.hasAbilities {
-            PokemonAbilitiesSection(form: pokemon.defaultForm, game: appContext.currentGame)
+        if settings.currentGame.hasAbilities {
+            PokemonAbilitiesSection(form: pokemon.defaultForm, game: settings.currentGame)
         }
 
         Section(header: SectionHeader("Possible Moves (based on level)"), footer: Text(movesFooter).monospacedCaption()) {
-            PokemonLearnsetGroup(title: "Level", game: appContext.currentGame, learnsetFetchRequest: LevelLearnsetEntry.fetchRequest(forPokemonForm: pokemon.defaultForm, maxLevel: level))
+            PokemonLearnsetGroup(title: "Level", game: settings.currentGame, learnsetFetchRequest: LevelLearnsetEntry.fetchRequest(forPokemonForm: pokemon.defaultForm, maxLevel: level))
         }
     }
 

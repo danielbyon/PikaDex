@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum StatType {
+enum StatType: String, Codable, Equatable, Hashable {
 
     case hp
     case attack

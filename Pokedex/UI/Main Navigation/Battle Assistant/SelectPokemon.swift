@@ -16,7 +16,7 @@ struct SelectPokemon: View {
     @FetchRequest private var pokemon: FetchedResults<Pokemon>
 
     var body: some View {
-        SearchableList(viewModel: SearchableListViewModel(objects: pokemon), searchPlaceholder: "Search for a Pokémon") { pokemon in
+        SearchableList(objects: pokemon, searchPlaceholder: "Search for a Pokémon") { pokemon in
             PokemonCell(pokemon: pokemon, game: self.game).onTapGesture {
                 self.onSelect(pokemon)
             }
