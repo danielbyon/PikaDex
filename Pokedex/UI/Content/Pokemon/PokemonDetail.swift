@@ -26,7 +26,7 @@ struct PokemonDetail: View {
     @FetchRequest private var pokemonFetchRequest: FetchedResults<Pokemon>
 
     private var currentForm: PokemonForm { pokemon.forms[currentFormIndex] }
-    private var primaryAbility: Ability { currentForm.primaryAbility }
+    private var primaryAbility: Ability? { currentForm.primaryAbility }
     private var secondaryAbility: Ability? { currentForm.secondaryAbility }
     private var hiddenAbility: Ability? { currentForm.hiddenAbility }
 
@@ -184,7 +184,7 @@ struct PokemonDetail: View {
             }
             .padding(.vertical, verticalPadding)
         case .abilities:
-            if game.hasAbilities {
+            if game.hasAbilities && currentForm.hasAbilities {
                 PokemonAbilitiesSection(form: currentForm, game: game)
                     .padding(.vertical, verticalPadding)
             }
