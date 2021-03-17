@@ -21,7 +21,7 @@ extension TeamMember {
         self.specialAttack = .init(baseValue: pokemonForm.baseStats.specialAttack, ev: 0, iv: 0)
         self.specialDefense = .init(baseValue: pokemonForm.baseStats.specialDefense, ev: 0, iv: 0)
         self.speed = .init(baseValue: pokemonForm.baseStats.speed, ev: 0, iv: 0)
-        self.ability = game.hasAbilities ? pokemonForm.primaryAbility.name : nil
+        self.ability = game.hasAbilities ? pokemonForm.primaryAbility?.name : nil
         self.game = game
         self.internalID = UUID()
     }

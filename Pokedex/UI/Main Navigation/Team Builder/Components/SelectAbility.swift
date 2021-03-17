@@ -19,8 +19,10 @@ struct SelectAbility: View {
     var body: some View {
         List {
             Section(header: SectionHeader(form.pokemon.name)) {
-                AbilityCell(model: .init(ability: form.primaryAbility)).onTapGesture {
-                    self.onSelect(self.form.primaryAbility)
+                if let primaryAbility = form.primaryAbility {
+                    AbilityCell(model: .init(ability: primaryAbility)).onTapGesture {
+                        self.onSelect(primaryAbility)
+                    }
                 }
                 if let secondaryAbility = form.secondaryAbility {
                     AbilityCell(model: .init(ability: secondaryAbility)).onTapGesture {

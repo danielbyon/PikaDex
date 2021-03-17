@@ -91,6 +91,8 @@ public extension PokemonForm {
 
     var isMainForm: Bool { formIndex == 0 }
 
+    var hasAbilities: Bool { primaryAbility != nil || secondaryAbility != nil || hiddenAbility != nil }
+
 }
 
 // MARK: - Values
@@ -201,9 +203,9 @@ public extension PokemonForm {
         get { z_pokemon! }
         set { z_pokemon = newValue }
     }
-    var primaryAbility: Ability {
-        get { z_primaryAbility! }
-        set { z_primaryAbility = newValue; i_primaryAbilityIndex = Int32(newValue.index) }
+    var primaryAbility: Ability? {
+        get { z_primaryAbility }
+        set { z_primaryAbility = newValue; i_primaryAbilityIndex = Int32(newValue?.index ?? -1) }
     }
     var secondaryAbility: Ability? {
         get { z_secondaryAbility }

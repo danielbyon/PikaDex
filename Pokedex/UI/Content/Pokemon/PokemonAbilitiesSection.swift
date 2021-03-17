@@ -13,14 +13,16 @@ struct PokemonAbilitiesSection: View {
     let form: PokemonForm
     let game: Game
 
-    private var primaryAbility: Ability { form.primaryAbility }
+    private var primaryAbility: Ability? { form.primaryAbility }
     private var secondaryAbility: Ability? { form.secondaryAbility }
     private var hiddenAbility: Ability? { form.hiddenAbility }
 
     var body: some View {
         Section(header: SectionHeader("Abilities")) {
-            NavigationLink(destination: AbilityDetail(ability: primaryAbility, game: game)) {
-                PokemonAbilityCell(ability: primaryAbility, game: game)
+            if let primaryAbility = primaryAbility {
+                NavigationLink(destination: AbilityDetail(ability: primaryAbility, game: game)) {
+                    PokemonAbilityCell(ability: primaryAbility, game: game)
+                }
             }
             if let secondaryAbility = secondaryAbility {
                 NavigationLink(destination: AbilityDetail(ability: secondaryAbility, game: game)) {
