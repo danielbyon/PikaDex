@@ -161,7 +161,12 @@ extension PokepediaProduct {
              .yellow,
              .gold,
              .silver,
-             .crystal].forEach { value |= $0.bitwiseValue }
+             .crystal,
+             .ruby,
+             .sapphire,
+             .emerald,
+             .fireRed,
+             .leafGreen].forEach { value |= $0.bitwiseValue }
         case .allSwitchGames:
             [Game.letsGoPikachu,
              .letsGoEevee,
