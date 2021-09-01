@@ -15,6 +15,7 @@ struct MachineList: View {
     
     @FetchRequest private var machines: FetchedResults<Machine>
     @State private var selectedMachineType: MachineType = .tm
+    @State private var searchText = ""
 
     private var segmentedControlValues: [MachineType] {
         var values: [MachineType] = []
@@ -32,23 +33,34 @@ struct MachineList: View {
     private var tms: [Machine] { machines.filter { $0.type == .tm } }
     private var hms: [Machine] { machines.filter { $0.type == .hm } }
     private var trs: [Machine] { machines.filter { $0.type == .tr } }
+    private var currentMachines: [Machine] {
+        switch selectedMachineType {
+        case .tm:
+            return tms
+        case .hm:
+            return hms
+        case .tr:
+            return trs
+        }
+    }
+    private var filteredMachines: [Machine] {
+        if searchText.isEmpty {
+            return currentMachines
+        } else {
+            return currentMachines.filter { $0.move.canonicalName.contains(searchText.lowercased()) }
+        }
+    }
 
     var body: some View {
         List {
-            segmentedControl()
-            switch selectedMachineType {
-            case .tm:
-                AlternatingBackgroundForEach(tms) {
-                    self.cell(for: $0)
-                }
-            case .hm:
-                AlternatingBackgroundForEach(hms) {
-                    self.cell(for: $0)
-                }
-            case .tr:
-                AlternatingBackgroundForEach(trs) {
-                    self.cell(for: $0)
-                }
+            AlternatingBackgroundForEach(filteredMachines) {
+                self.cell(for: $0)
+            }
+        }
+        .searchable(text: $searchText, prompt: "Search for \(title)")
+        .toolbar {
+            ToolbarItemGroup(placement: .principal) {
+                segmentedControl()
             }
         }
         .listStyle(PlainListStyle())
@@ -59,7 +71,6 @@ struct MachineList: View {
         self.title = title
         self.game = game
         _machines = FetchRequest(fetchRequest: Machine.allFetchRequest(for: game))
-
     }
 
     private func segmentedControl() -> SegmentedControl<MachineType>? {
