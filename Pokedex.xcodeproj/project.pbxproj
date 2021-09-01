@@ -2716,6 +2716,7 @@
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pokedex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2741,6 +2742,7 @@
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pokedex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2844,7 +2846,7 @@
 				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2868,7 +2870,7 @@
 				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2894,7 +2896,7 @@
 				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2920,7 +2922,7 @@
 				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
