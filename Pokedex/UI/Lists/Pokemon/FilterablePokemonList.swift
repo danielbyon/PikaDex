@@ -23,7 +23,6 @@ struct FilterablePokemonList: View {
             .id(viewModel.filter)
             .sheet(isPresented: $isShowingFilter) {
                 PokemonListFilter(game: game, viewModel: viewModel)
-                    .injectDependencies()
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
