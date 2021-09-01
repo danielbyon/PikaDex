@@ -14,7 +14,7 @@ struct SearchableList<Element, Content>: View where Element: NSFetchRequestResul
 
     @StateObject private var viewModel: SearchableListViewModel<Element>
     private let searchPlaceholder: String
-    private let content: (Element) -> Content
+    @ViewBuilder private let content: (Element) -> Content
 
     var body: some View {
         List {
@@ -26,7 +26,7 @@ struct SearchableList<Element, Content>: View where Element: NSFetchRequestResul
         .searchable(text: $viewModel.searchText, prompt: searchPlaceholder)
     }
 
-    init(objects: FetchedResults<Element>, searchPlaceholder: String = "Search", content: @escaping (Element) -> Content) {
+    init(objects: FetchedResults<Element>, searchPlaceholder: String = "Search", @ViewBuilder content: @escaping (Element) -> Content) {
         self._viewModel = .init(wrappedValue: SearchableListViewModel(objects: objects))
         self.searchPlaceholder = searchPlaceholder
         self.content = content
