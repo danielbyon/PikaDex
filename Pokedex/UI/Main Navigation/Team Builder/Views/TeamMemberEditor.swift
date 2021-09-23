@@ -44,7 +44,6 @@ struct TeamMemberEditor: View {
             Section {
                 TextField("Nickname", text: $viewModel.nickname)
                     .monospacedBody()
-                    .avoidKeyboard()
                 TeamMemberLevel(level: $viewModel.level)
                 
                 if settings.currentGame.hasAbilities {

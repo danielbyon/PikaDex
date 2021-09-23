@@ -17,25 +17,9 @@ struct TeamEditor: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @ObservedObject var viewModel: TeamViewModel
     @State private var deletingMember: TeamMemberViewModel?
-    @State private var currentNavigation: TeamEditorNavigation?
+    @State private var isShowingDeleteConfirmation = false
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 2 : 1 }
-
-    private enum TeamEditorNavigation: Identifiable {
-
-        case addMember
-        case editMember(TeamMemberViewModel)
-
-        var id: String {
-            switch self {
-            case .addMember:
-                return "addMember"
-            case .editMember(let member):
-                return "editMember_\(member.id)"
-            }
-        }
-
-    }
 
     var body: some View {
         ScrollView {
@@ -44,48 +28,45 @@ struct TeamEditor: View {
                     Card {
                         TextField("Name", text: $viewModel.name)
                             .monospacedBody()
-                            .avoidKeyboard()
                     }
                 }
 
                 Section(footer: footer()) {
                     ForEach(viewModel.members) { member in
-                        teamMemberCell(member: member)
-                            .onTapGesture {
-                                currentNavigation = .editMember(member)
-                            }
+                        NavigationLink {
+                            TeamMemberEditor(viewModel: member)
+                        } label: {
+                            teamMemberCell(member: member)
+                        }
                     }
                 }
             }
             .padding()
         }
         .navigationTitle(viewModel.name)
-        .alert(item: $deletingMember) { member in
-            Alert(
-                title: Text("Delete team member?"),
-                message: Text("This action cannot be undone."),
-                primaryButton: .cancel(),
-                secondaryButton: .destructive(Text("Delete")) {
-                    withAnimation {
-                        viewModel.deleteMember(member)
-                    }
-                })
+        .confirmationDialog(Text("Delete team member?"), isPresented: $isShowingDeleteConfirmation, presenting: deletingMember) { member in
+            Button(role: .destructive) {
+                withAnimation {
+                    viewModel.deleteMember(member)
+                }
+            } label: {
+                Text("Delete")
+            }
+            Button(role: .cancel, action: {}) {
+                Text("Cancel")
+            }
         }
         .toolbar {
-//            ToolbarItemGroup(placement: .navigationBarLeading) {
-//                Button("", action: {})
-//            }
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 EditButton()
-                Button {
-                    currentNavigation = .addMember
+                NavigationLink {
+                    SelectPokemonForm(game: game, onSelect: addMember)
                 } label: {
                     Image(systemName: "plus")
                 }
                 .disabled(viewModel.members.count >= 6)
             }
         }
-        .navigation(item: $currentNavigation, destination: navigationDestination)
     }
 
     init(viewModel: TeamViewModel, game: Game) {
@@ -109,15 +90,18 @@ struct TeamEditor: View {
     private func teamMemberCell(member: TeamMemberViewModel) -> some View {
         TeamMemberCell(member: member)
             .contextMenu {
-                Button("Delete") {
+                Button("Delete", role: .destructive) {
+                    isShowingDeleteConfirmation = true
                     deletingMember = member
                 }
             }
-            .if(editMode?.wrappedValue.isEditing == true) {
-                $0.overlay(DeleteButton {
+            .overlay(
+                DeleteButton {
+                    isShowingDeleteConfirmation = true
                     deletingMember = member
-                }, alignment: .topTrailing)
-            }
+                }.opacity(editMode?.wrappedValue.isEditing == true ? 1.0 : 0.0),
+                alignment: .topTrailing
+            )
     }
 
     private func addMember(_ pokemonForm: PokemonForm) {
@@ -128,16 +112,6 @@ struct TeamEditor: View {
     private func deleteMember(_ member: TeamMemberViewModel) {
         withAnimation {
             viewModel.deleteMember(member)
-        }
-    }
-
-    @ViewBuilder
-    private func navigationDestination(_ navigation: TeamEditorNavigation) -> some View {
-        switch navigation {
-        case .addMember:
-            SelectPokemonForm(game: game, onSelect: addMember)
-        case .editMember(let member):
-            TeamMemberEditor(viewModel: member)
         }
     }
 

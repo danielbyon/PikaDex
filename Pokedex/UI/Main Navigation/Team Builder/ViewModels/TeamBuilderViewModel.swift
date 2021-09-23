@@ -18,7 +18,6 @@ class TeamBuilderViewModel: ObservableObject {
     private let storage: TeamStorage
     private let notificationCenter: NotificationCenter
     private var cancellables: Set<AnyCancellable> = []
-    private var saveWorkItem: DispatchWorkItem?
 
     static let teamsUpdatedNotification = Notification.Name("com.danielbyon.pikadex.teamsUpdated")
 
@@ -58,12 +57,9 @@ class TeamBuilderViewModel: ObservableObject {
     }
 
     private func scheduleSave() {
-        saveWorkItem?.cancel()
-        let saveWorkItem = DispatchWorkItem { [weak self] in
+        DispatchQueue.main.async { [weak self] in
             self?.save()
         }
-        DispatchQueue.appUtility.asyncAfter(deadline: .now() + .milliseconds(300), execute: saveWorkItem)
-        self.saveWorkItem = saveWorkItem
     }
 
     private func save() {
@@ -76,7 +72,7 @@ class TeamBuilderViewModel: ObservableObject {
     private func setupObservation(for team: TeamViewModel) {
         team.objectWillChange
             .sink { [unowned self] in
-                self.objectWillChange.send()
+                self.scheduleSave()
             }
             .store(in: &cancellables)
     }
