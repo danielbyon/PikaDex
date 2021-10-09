@@ -33,7 +33,6 @@
 		652B507D2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */; };
 		652B507E2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */; };
 		652B507F2594F71100FC8A48 /* Game+DefaultValueProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B507C2594F71100FC8A48 /* Game+DefaultValueProviding.swift */; };
-		652B50882594F99D00FC8A48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FE24B7CF5300640EB3 /* Images.xcassets */; };
 		652C78CA2492285600BA2825 /* TeamMemberEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C78C92492285600BA2825 /* TeamMemberEditor.swift */; };
 		652E77F22460055800768566 /* DualTypeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E77F12460055800768566 /* DualTypeDetail.swift */; };
 		652E77F424600A6100768566 /* TypeChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E77F324600A6100768566 /* TypeChart.swift */; };
@@ -1900,7 +1899,6 @@
 			files = (
 				65A5ED6024A1FC2F00742986 /* Assets.xcassets in Resources */,
 				659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */,
-				652B50882594F99D00FC8A48 /* Images.xcassets in Resources */,
 				6547F805237968D50091A083 /* LaunchScreen.storyboard in Resources */,
 				65BB4C69257F7C3400298D10 /* Menusprites.xcassets in Resources */,
 				6597D5EC23D020F50081482E /* Pokedex.sqlite in Resources */,
