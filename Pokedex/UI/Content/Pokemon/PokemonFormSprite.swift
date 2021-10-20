@@ -20,6 +20,6 @@ struct PokemonFormSprite: View {
 
 struct PokemonFormSprite_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonFormSprite(form: Pokemon.generateCharizard().defaultForm)
+        PokemonFormSprite(form: StoredPokemon.generateCharizard().defaultForm)
     }
 }

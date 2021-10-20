@@ -159,7 +159,7 @@ private struct LocationDetailViewModel {
     }
     
     struct Item {
-        let pokemon: Pokemon
+        let pokemon: StoredPokemon
         let viewModels: [ViewModel]
     }
     
@@ -185,7 +185,7 @@ private struct LocationDetailViewModel {
             print("Location \(location.name) has missing maps!: \(missingMaps)")
         }
         
-        var transforms: [String: [Pokemon: [LocationPokemon]]] = [:]
+        var transforms: [String: [StoredPokemon: [LocationPokemon]]] = [:]
         locationPokemons.forEach { locationPokemon in
             let area = locationPokemon.area
             let pokemon = locationPokemon.pokemon

@@ -1,5 +1,5 @@
 //
-//  AbilityStore.swift
+//  AbilityGenerator.swift
 //  Pokedex
 //
 //  Created by Daniel Byon on 1/26/20.

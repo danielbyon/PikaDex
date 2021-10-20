@@ -31,13 +31,13 @@ struct PokemonEvolutions_Previews: PreviewProvider {
         Group {
             NavigationView {
                 List {
-                    PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!) { _ in }
+                    PokemonEvolutions(evolutions: StoredPokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!) { _ in }
                 }
                 .listStyle(GroupedListStyle())
             }
             NavigationView {
                 List {
-                    PokemonEvolutions(evolutions: Pokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!) { _ in }
+                    PokemonEvolutions(evolutions: StoredPokemon.generate(withName: "Eevee", game: .sword).defaultForm.evolutions!) { _ in }
                 }
                 .listStyle(GroupedListStyle())
             }

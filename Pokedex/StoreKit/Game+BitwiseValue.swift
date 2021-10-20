@@ -77,6 +77,8 @@ extension Game {
             value = 1 << 30
         case .shield:
             value = 1 << 31
+        case .national:
+            value = 0
         }
         return value
     }

@@ -58,6 +58,6 @@ struct SelectAbility: View {
 
 struct SelectAbility_Previews: PreviewProvider {
     static var previews: some View {
-        SelectAbility(form: Pokemon.generateCharizard().defaultForm, game: .sword, onSelect: { _ in })
+        SelectAbility(form: StoredPokemon.generateCharizard().defaultForm, game: .sword, onSelect: { _ in })
     }
 }

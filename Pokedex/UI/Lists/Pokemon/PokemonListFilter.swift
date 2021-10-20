@@ -14,9 +14,9 @@ struct PokemonListFilter: View {
     private let viewModel: FilterablePokemonListViewModel
 
     @Environment(\.presentationMode) var presentationMode
-    @State private var filterBy: Pokemon.Filter.FilterBy
-    @State private var sortBy: Pokemon.Filter.SortBy
-    @State private var sortOrder: Pokemon.Filter.SortOrder
+    @State private var filterBy: StoredPokemon.Filter.FilterBy
+    @State private var sortBy: StoredPokemon.Filter.SortBy
+    @State private var sortOrder: StoredPokemon.Filter.SortOrder
 
     var body: some View {
         NavigationView {
@@ -31,7 +31,7 @@ struct PokemonListFilter: View {
                 }
 
                 Section(header: SectionHeader("Sort By")) {
-                    ForEach(Pokemon.Filter.SortBy.allCases) { sortBy in
+                    ForEach(StoredPokemon.Filter.SortBy.allCases) { sortBy in
                         FilterCell(title: sortBy.rawValue.capitalized, isSelected: self.sortBy == sortBy)
                             .onTapGesture {
                                 self.sortBy = sortBy
@@ -73,7 +73,7 @@ struct PokemonListFilter: View {
     }
 
     private func resetFilter() {
-        let filter = Pokemon.Filter.defaultFilter(forGame: game)
+        let filter = StoredPokemon.Filter.defaultFilter(forGame: game)
         filterBy = filter.filterBy
         sortBy = filter.sortBy
         sortOrder = filter.sortOrder
@@ -92,7 +92,7 @@ struct PokemonListFilter: View {
 
 struct PokemonListFilter_Previews: PreviewProvider {
 
-    @State static var filter = Pokemon.Filter.defaultFilter(forGame: .x)
+    @State static var filter = StoredPokemon.Filter.defaultFilter(forGame: .x)
 
     static var previews: some View {
         PokemonListFilter(game: .x, viewModel: .init())

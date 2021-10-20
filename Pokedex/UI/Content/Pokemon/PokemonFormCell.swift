@@ -13,9 +13,9 @@ struct PokemonFormCell: View {
     let form: PokemonForm
     let game: Game
     var showsFormName = true
-    var numberKeyPath = #keyPath(Pokemon.z_index)
+    var numberKeyPath = #keyPath(StoredPokemon.z_index)
 
-    private var pokemon: Pokemon { form.pokemon }
+    private var pokemon: StoredPokemon { form.pokemon }
 
     var body: some View {
         HStack(spacing: 0) {
@@ -36,8 +36,8 @@ struct PokemonFormCell: View {
 struct PokemonFormCell_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PokemonFormCell(form: Pokemon.generateCharizard().defaultForm, game: .letsGoPikachu)
-            PokemonFormCell(form: Pokemon.generateCharizard().forms[1], game: .letsGoPikachu)
+            PokemonFormCell(form: StoredPokemon.generateCharizard().defaultForm, game: .letsGoPikachu)
+            PokemonFormCell(form: StoredPokemon.generateCharizard().forms[1], game: .letsGoPikachu)
         }
     }
 }

@@ -10,9 +10,9 @@ import SwiftUI
 
 struct PokemonCell: View {
 
-    let pokemon: Pokemon
+    let pokemon: StoredPokemon
     let game: Game
-    var numberKeyPath = #keyPath(Pokemon.z_index)
+    var numberKeyPath = #keyPath(StoredPokemon.z_index)
 
     var body: some View {
         PokemonFormCell(form: pokemon.defaultForm, game: game, showsFormName: false, numberKeyPath: numberKeyPath)
@@ -22,6 +22,6 @@ struct PokemonCell: View {
 
 struct PokemonListCell_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonCell(pokemon: Pokemon.generateCharizard(), game: .sword)
+        PokemonCell(pokemon: StoredPokemon.generateCharizard(), game: .sword)
     }
 }

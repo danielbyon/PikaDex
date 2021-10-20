@@ -16,9 +16,11 @@ struct Dependencies: ViewModifier {
     static var container: NSPersistentContainer!
     static let purchasedProductState = PurchasedProductState()
     static let storeViewModel = StoreViewModel()
+    static let pokemonStore = PokemonStore(context: container!.viewContext)
 
     func body(content: Content) -> some View {
         content
+            .environmentObject(Self.pokemonStore)
             .environment(\.managedObjectContext, Self.container!.viewContext)
             .environmentObject(Self.settings)
             .environmentObject(Self.purchasedProductState)

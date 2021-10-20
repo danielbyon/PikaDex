@@ -40,7 +40,7 @@ public enum PokemonType: String, CaseIterable {
             return [.bug, .dragon, .electric, .fighting, .fire, .flying, .ghost, .grass, .ground, .ice, .normal, .poison, .psychic, .rock, .water]
         case .ii, .iii, .iv, .v:
             return [.bug, .dark, .dragon, .electric, .fighting, .fire, .flying, .ghost, .grass, .ground, .ice, .normal, .poison, .psychic, .rock, .steel, .water]
-        case .vi, .vii, .viii: // TODO: confirm gen 8
+        case .vi, .vii, .viii, .all: // TODO: confirm gen 8
             return [.bug, .dark, .dragon, .electric, .fairy, .fighting, .fire, .flying, .ghost, .grass, .ground, .ice, .normal, .poison, .psychic, .rock, .steel, .water]
         }
     }
@@ -97,10 +97,20 @@ extension PokemonType: Identifiable {
 private typealias TypeTable = [PokemonType: [PokemonType: Double]]
 
 private func offenseTable(for generation: Generation) -> TypeTable {
-    offenseTables[generation.rawValue - 1]
+    offenseTables[generation]!
 }
 
-private let offenseTables: [TypeTable] = [_gen1Off, _gen2Off, _gen3Off, _gen4Off, _gen5Off, _gen6Off, _gen7Off, _gen8Off]
+private let offenseTables: [Generation: TypeTable] = [
+    .i: _gen1Off,
+    .ii: _gen2Off,
+    .iii: _gen3Off,
+    .iv: _gen4Off,
+    .v: _gen5Off,
+    .vi: _gen6Off,
+    .vii: _gen7Off,
+    .viii: _gen8Off,
+    .all: _gen8Off
+]
 
 // swiftlint:disable colon
 // MARK: - Offense Tables
@@ -277,10 +287,20 @@ private let _gen8Off: TypeTable = [
 // MARK: - Defense Tables
 
 private func defenseTable(for generation: Generation) -> TypeTable {
-    defenseTables[generation.rawValue - 1]
+    defenseTables[generation]!
 }
 
-private let defenseTables: [TypeTable] = [_gen1Def, _gen2Def, _gen3Def, _gen4Def, _gen5Def, _gen6Def, _gen7Def, _gen8Def]
+private let defenseTables: [Generation: TypeTable] = [
+    .i: _gen1Def,
+    .ii: _gen2Def,
+    .iii: _gen3Def,
+    .iv: _gen4Def,
+    .v: _gen5Def,
+    .vi: _gen6Def,
+    .vii: _gen7Def,
+    .viii: _gen8Def,
+    .all: _gen8Off
+]
 
 // MARK: Gen 1
 private let _gen1Def: TypeTable = [

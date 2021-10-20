@@ -1,5 +1,5 @@
 //
-//  PokemonStore.swift
+//  PokemonGenerator.swift
 //  Pokedex
 //
 //  Created by Daniel Byon on 1/16/20.
@@ -9,19 +9,19 @@
 import SwiftUI
 import CoreData
 
-extension Pokemon {
+extension StoredPokemon {
 
-    static func generateCharizard(game: Game = .letsGoPikachu) -> Pokemon {
+    static func generateCharizard(game: Game = .letsGoPikachu) -> StoredPokemon {
         generate(withName: "Charizard", game: game)
     }
 
-    static func generateAlcremie(game: Game = .sword) -> Pokemon {
+    static func generateAlcremie(game: Game = .sword) -> StoredPokemon {
         generate(withName: "Alcremie", game: game)
     }
 
-    static func generate(withName name: String, game: Game) -> Pokemon {
+    static func generate(withName name: String, game: Game) -> StoredPokemon {
         let moc = Dependencies.container.viewContext
-        let fetchRequest = Pokemon.fetchRequest(forName: name, game: game)
+        let fetchRequest = StoredPokemon.fetchRequest(forName: name, game: game)
         let pokemon = try! moc.fetch(fetchRequest).first!
         return pokemon
     }

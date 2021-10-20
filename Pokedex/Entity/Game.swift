@@ -42,11 +42,48 @@ public enum Game: String, CaseIterable, Codable, Equatable, Hashable {
     case sword
     case shield
 
+    /// Technically not a game
+    case national
+
 }
 
 public extension Game {
 
-    static let allGamesNewestFirst = [Game.sword, .shield, .letsGoPikachu, .letsGoEevee, .ultraSun, .ultraMoon, .sun, .moon, .omegaRuby, .alphaSapphire, .x, .y, .black2, .white2, .black, .white, .heartGold, .soulSilver, .diamond, .pearl, .platinum, .fireRed, .leafGreen, .ruby, .sapphire, .emerald, .gold, .silver, .crystal, .red, .blue, .yellow]
+    static let allGamesNewestFirst: [Game] = [
+        .national,
+        .sword,
+        .shield,
+        .letsGoPikachu,
+        .letsGoEevee,
+        .ultraSun,
+        .ultraMoon,
+        .sun,
+        .moon,
+        .omegaRuby,
+        .alphaSapphire,
+        .x,
+        .y,
+        .black2,
+        .white2,
+        .black,
+        .white,
+        .heartGold,
+        .soulSilver,
+        .diamond,
+        .pearl,
+        .platinum,
+        .fireRed,
+        .leafGreen,
+        .ruby,
+        .sapphire,
+        .emerald,
+        .gold,
+        .silver,
+        .crystal,
+        .red,
+        .blue,
+        .yellow
+    ]
 
     var generation: Generation {
         switch self {
@@ -66,6 +103,8 @@ public extension Game {
             return .vii
         case .sword, .shield:
             return .viii
+        case .national:
+            return .all
         }
     }
 
@@ -105,6 +144,7 @@ public extension Game {
         case .letsGoEevee: return "Let's Go, Eevee!"
         case .sword: return "Sword"
         case .shield: return "Shield"
+        case .national: return "National"
         }
     }
 

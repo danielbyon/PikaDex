@@ -43,7 +43,7 @@ struct PokemonLearnset: View {
 
 struct PokemonLearnset_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonLearnset(form: Pokemon.generateCharizard().defaultForm, game: .sword, initialLearnsetType: .level)
+        PokemonLearnset(form: StoredPokemon.generateCharizard().defaultForm, game: .sword, initialLearnsetType: .level)
             .modifier(Dependencies())
     }
 }

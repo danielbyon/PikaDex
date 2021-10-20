@@ -13,8 +13,8 @@ import CoreData
 // MARK: - Global Variables
 let container = Helper.loadContainer(removeExistingContainer: true)
 let moc = container.viewContext
-var allPokemon: [Int: [Game: Pokemon]] = [:]
-var allPokemonByName: [String: [Game: Pokemon]] = [:]
+var allPokemon: [Int: [Game: StoredPokemon]] = [:]
+var allPokemonByName: [String: [Game: StoredPokemon]] = [:]
 var pokemonNameIndices: [String: Int] = [:]
 var allAbilities: [String: Ability] = [:]
 var allItems: [String: [Game: Item]] = [:]
@@ -47,7 +47,7 @@ func sanitizedMoveName(_ moveName: String) -> String {
     return sanitized
 }
 
-func getPokemon(forName name: String, game: Game) -> Pokemon {
+func getPokemon(forName name: String, game: Game) -> StoredPokemon {
     var name = name
     if name == "Boltound" {
         name = "Boltund"
@@ -384,10 +384,10 @@ print("--- Pokemon ---")
 for dict in Helper.loadTSV(from: "Research/Pokemon.tsv") {
     let name = dict["name"]!
     let index = Int(dict["number"]!)!
-    var pokemons: [Game: Pokemon] = [:]
+    var pokemons: [Game: StoredPokemon] = [:]
 
     for game in Game.allCases {
-        let pokemon = Pokemon(context: moc)
+        let pokemon = StoredPokemon(context: moc)
         pokemon.index = index
         pokemon.name = name
         pokemon.game = game
@@ -692,7 +692,7 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") a
                 guard let move = getMove(forName: moveName, game: game) else {
                     continue
                 }
-                let fathers: [Pokemon] = parentNames
+                let fathers: [StoredPokemon] = parentNames
                     .filter {
                         $0 != "Missingno."
                             && $0 != "866"

@@ -64,7 +64,7 @@ class TeamMemberViewModel: ObservableObject {
     let internalID: UUID
 
     init(teamMember: TeamMember) {
-        let pokemon = Pokemon.generate(withName: teamMember.pokemon, game: teamMember.game)
+        let pokemon = StoredPokemon.generate(withName: teamMember.pokemon, game: teamMember.game)
         if let form = pokemon.forms.first(where: { $0.name == teamMember.formName }) {
             self.pokemonForm = form
         } else {

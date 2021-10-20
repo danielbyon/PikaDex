@@ -1,5 +1,5 @@
 //
-//  ItemStore.swift
+//  ItemGenerator.swift
 //  Pokedex
 //
 //  Created by Daniel Byon on 4/26/20.

@@ -199,6 +199,7 @@ extension Game {
         case .letsGoEevee: return "L.G. Eevee"
         case .sword: return "Sword"
         case .shield: return "Shield"
+        case .national: return "National"
         }
     }
 
@@ -308,6 +309,8 @@ extension Game {
             default:
                 fatalError()
             }
+        case .all:
+            fatalError()
         }
     }
 
@@ -339,6 +342,7 @@ extension Generation {
         case .vi: return "Generation VI"
         case .vii: return "Generation VII"
         case .viii: return "Generation VIII"
+        case .all: fatalError()
         }
     }
 

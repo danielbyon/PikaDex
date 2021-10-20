@@ -12,7 +12,7 @@ import Convert
 
 struct PokemonDetail: View {
 
-    var pokemon: Pokemon {
+    var pokemon: StoredPokemon {
         pokemonFetchRequest.first!
     }
     let game: Game
@@ -23,7 +23,7 @@ struct PokemonDetail: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var currentFormIndex = 0
     @State private var selectedPokemonForm: PokemonForm?
-    @FetchRequest private var pokemonFetchRequest: FetchedResults<Pokemon>
+    @FetchRequest private var pokemonFetchRequest: FetchedResults<StoredPokemon>
 
     private var currentForm: PokemonForm { pokemon.forms[currentFormIndex] }
     private var primaryAbility: Ability? { currentForm.primaryAbility }
@@ -82,22 +82,22 @@ struct PokemonDetail: View {
     }
 
     init(
-        pokemon: Pokemon,
+        pokemon: StoredPokemon,
         game: Game,
-        numberKeyPath: String = #keyPath(Pokemon.z_index)) {
+        numberKeyPath: String = #keyPath(StoredPokemon.z_index)) {
         self.game = game
         self.numberKeyPath = numberKeyPath
-        self._pokemonFetchRequest = FetchRequest(fetchRequest: Pokemon.fetchRequest(for: pokemon, game: game))
+        self._pokemonFetchRequest = FetchRequest(fetchRequest: StoredPokemon.fetchRequest(for: pokemon, game: game))
     }
 
     init(
-        pokemon: Pokemon,
+        pokemon: StoredPokemon,
         game: Game,
         formIndex: Int,
-        numberKeyPath: String = #keyPath(Pokemon.z_index)) {
+        numberKeyPath: String = #keyPath(StoredPokemon.z_index)) {
         self.game = game
         self.numberKeyPath = numberKeyPath
-        self._pokemonFetchRequest = FetchRequest(fetchRequest: Pokemon.fetchRequest(for: pokemon, game: game))
+        self._pokemonFetchRequest = FetchRequest(fetchRequest: StoredPokemon.fetchRequest(for: pokemon, game: game))
         self._currentFormIndex = State(initialValue: formIndex)
     }
 
@@ -273,7 +273,7 @@ struct PokemonDetail: View {
 struct PokemonDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PokemonDetail(pokemon: Pokemon.generateCharizard(game: .sword), game: .sword)
+            PokemonDetail(pokemon: StoredPokemon.generateCharizard(game: .sword), game: .sword)
                 .injectDependencies()
         }
         .navigationViewStyle(StackNavigationViewStyle())

@@ -137,6 +137,8 @@ private extension Ability {
         case .letsGoEevee: return "z_letsGoEevee"
         case .sword: return "z_sword"
         case .shield: return "z_shield"
+        case .national:
+            return descriptionKeyPath(forGame: Generation.latest.defaultGame)
         }
     }
 

@@ -108,7 +108,7 @@ struct SelectTeamMemberMove: View {
 struct SelectTeamMemberMove_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SelectTeamMemberMove(pokemonForm: Pokemon.generateCharizard(game: .sword).defaultForm, game: .sword, onSelect: { _ in })
+            SelectTeamMemberMove(pokemonForm: StoredPokemon.generateCharizard(game: .sword).defaultForm, game: .sword, onSelect: { _ in })
         }
         .injectDependencies()
     }

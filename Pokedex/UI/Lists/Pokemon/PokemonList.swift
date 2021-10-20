@@ -11,13 +11,17 @@ import CoreData
 
 struct PokemonList: View {
 
+    let fetchRequest: NSFetchRequest<StoredPokemon>
     let game: Game
     var numberKeyPath: String
 
-    @FetchRequest private var pokemon: FetchedResults<Pokemon>
-    @State private var selectedPokemon: Pokemon?
+    @EnvironmentObject var pokemonStore: PokemonStore
+    @FetchRequest private var pokemon: FetchedResults<StoredPokemon>
+//    @State private var pokemon: [StoredPokemon] = []
+    @State private var selectedPokemon: StoredPokemon?
 
     var body: some View {
+        let _ = Self._printChanges()
         SearchableList(objects: pokemon, searchPlaceholder: "Search for a Pokémon") { pokemon in
             NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath), tag: pokemon, selection: $selectedPokemon) {
                 PokemonCell(pokemon: pokemon, game: self.game, numberKeyPath: self.numberKeyPath)
@@ -25,24 +29,29 @@ struct PokemonList: View {
         }
         .navigationTitle("Pokémon")
         .onOpenURL(perform: handleURL)
+//        .task {
+//            do {
+//                let pokemon = try await pokemonStore.fetchPokemon(withFetchRequest: fetchRequest)
+//                print(pokemon.count)
+//                self.pokemon = pokemon
+//            } catch {
+//                pokemon = []
+//            }
+//        }
     }
 
-    init(type: PokemonType, game: Game, numberKeyPath: String = #keyPath(Pokemon.z_index)) {
+    init(type: PokemonType, game: Game, numberKeyPath: String = #keyPath(StoredPokemon.z_index)) {
+        self.fetchRequest = StoredPokemon.fetchRequest(forType: type, game: game)
         self.game = game
         self.numberKeyPath = numberKeyPath
-        self._pokemon = FetchRequest(fetchRequest: Pokemon.fetchRequest(forType: type, game: game), animation: .default)
+        self._pokemon = FetchRequest(fetchRequest: StoredPokemon.fetchRequest(forType: type, game: game), animation: .default)
     }
 
-    init(fetchRequest: NSFetchRequest<Pokemon>, game: Game, numberKeyPath: String = #keyPath(Pokemon.z_index)) {
+    init(fetchRequest: NSFetchRequest<StoredPokemon>, game: Game, numberKeyPath: String = #keyPath(StoredPokemon.z_index)) {
+        self.fetchRequest = fetchRequest
         self.game = game
         self.numberKeyPath = numberKeyPath
         self._pokemon = FetchRequest(fetchRequest: fetchRequest, animation: .default)
-    }
-
-    init(fetchRequest: FetchRequest<Pokemon>, game: Game, numberKeyPath: String = #keyPath(Pokemon.z_index)) {
-        self.game = game
-        self.numberKeyPath = numberKeyPath
-        self._pokemon = fetchRequest
     }
 
     private func handleURL(_ url: URL) {

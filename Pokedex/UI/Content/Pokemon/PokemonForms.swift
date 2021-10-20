@@ -42,7 +42,7 @@ struct PokemonForms: View {
 
 struct PokemonForms_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonForms(forms: Pokemon.generateCharizard().forms, backgroundColor: Color(Pokemon.generateCharizard().forms[0].color.uiColor), currentIndex: .constant(0))
+        PokemonForms(forms: StoredPokemon.generateCharizard().forms, backgroundColor: Color(StoredPokemon.generateCharizard().forms[0].color.uiColor), currentIndex: .constant(0))
             .injectDependencies()
     }
 }
