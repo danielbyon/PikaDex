@@ -11,7 +11,7 @@ import CoreData
 
 final class CoreDataManager {
 
-    private(set) var container: NSPersistentContainer?
+    private(set) var container: NSPersistentContainer
 
     init() {
         let model = NSManagedObjectModel(contentsOf: Bundle.main.url(forResource: "Pokedex", withExtension: "momd")!.appendingPathComponent("Pokedex.mom"))!
@@ -21,14 +21,12 @@ final class CoreDataManager {
         storeDescription.isReadOnly = true
         container.persistentStoreDescriptions = [storeDescription]
 
-        var capturedError: Error?
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            capturedError = error
-            if let error = error as NSError? {
+            if let error = error {
                 debugPrint("Unresolved error \(error)")
+                fatalError(error.localizedDescription)
             }
         })
-        guard capturedError == nil else { return }
         self.container = container
     }
 

@@ -164,6 +164,16 @@ for (abilityName, dict) in Helper.loadJSON(from: "Data/Abilities.json") as! [Str
     }
 }
 
+// Copy abilities to national
+for (_, ability) in allAbilities {
+    for game in Game.allGamesNewestFirst {
+        if let latestDescription = ability.description(forGame: game) {
+            ability.setDescription(latestDescription, forGame: .national)
+            break
+        }
+    }
+}
+
 
 // MARK: - Moves
 print("--- Moves ---")
@@ -296,6 +306,33 @@ for (moveName, dict) in Helper.loadJSON(from: "Data/Moves.json") as! [String: [S
 
             moves[game] = move
     }
+
+    // Copy most recent generation default game over to National
+    if let existingMove = moves[generationIntroduced.defaultGame] {
+        let move = Move(context: moc)
+        move.name = existingMove.name
+        move.index = existingMove.index
+        move.type = existingMove.type
+        move.generationIntroduced = existingMove.generationIntroduced
+        move.game = existingMove.game
+
+        let moveInfo = MoveInfo(context: moc)
+        move.info = moveInfo
+        moveInfo.accuracy = existingMove.info.accuracy
+        moveInfo.category = existingMove.info.category
+        moveInfo.maxPP = existingMove.info.maxPP
+        moveInfo.power = existingMove.info.power
+        moveInfo.pp = existingMove.info.pp
+        moveInfo.targetAlly1 = existingMove.info.targetAlly1
+        moveInfo.targetAlly2 = existingMove.info.targetAlly2
+        moveInfo.targetEnemy1 = existingMove.info.targetEnemy1
+        moveInfo.targetEnemy2 = existingMove.info.targetEnemy2
+        moveInfo.targetEnemy3 = existingMove.info.targetEnemy3
+        moveInfo.targetSelf = existingMove.info.targetSelf
+        moveInfo.targetDescription = existingMove.info.targetDescription
+        moveInfo.moveDescription = existingMove.info.moveDescription
+    }
+
     allMoves[key] = moves
 }
 
@@ -350,6 +387,8 @@ allTMs[.letsGoEevee] = processMachineTSV(filename: "Research/TMs/LGPLGE-Table 1.
 allTMs[.sword] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .sword, machineType: .tm)
 allTMs[.shield] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .shield, machineType: .tm)
 
+allTMs[.national] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .national, machineType: .tm)
+
 allHMs[.red] = processMachineTSV(filename: "Research/HMs/Gen 1-Table 1.tsv", game: .red, machineType: .hm)
 allHMs[.blue] = processMachineTSV(filename: "Research/HMs/Gen 1-Table 1.tsv", game: .blue, machineType: .hm)
 allHMs[.yellow] = processMachineTSV(filename: "Research/HMs/Gen 1-Table 1.tsv", game: .yellow, machineType: .hm)
@@ -377,6 +416,8 @@ allHMs[.alphaSapphire] = processMachineTSV(filename: "Research/HMs/ORAS-Table 1.
 
 allTRs[.sword] = processMachineTSV(filename: "Research/TRs.tsv", game: .sword, machineType: .tr)
 allTRs[.shield] = processMachineTSV(filename: "Research/TRs.tsv", game: .shield, machineType: .tr)
+
+allTRs[.national] = processMachineTSV(filename: "Research/TRs.tsv", game: .national, machineType: .tr)
 
 
 // MARK: - Pokemon
@@ -546,6 +587,74 @@ for dict in Helper.loadTSV(from: "Research/PokemonForms.tsv") {
 
     gameForms.append(storedForm)
     pokemon.forms = gameForms
+}
+
+// Copy latest available PokemonForm to national
+func latestPokemon(_ pokemons: [Game: StoredPokemon]) -> StoredPokemon? {
+    var gameCandidates = Game.allGamesNewestFirst
+    gameCandidates.removeAll { $0 == .national }
+    for game in gameCandidates {
+        if let matchingPokemon = pokemons[game],
+           !matchingPokemon.forms.isEmpty {
+            return matchingPokemon
+        }
+    }
+    return nil
+}
+func copyPokemonForms(from source: StoredPokemon, to destination: StoredPokemon) {
+    let sourceForms = source.forms
+    var destinationForms: [PokemonForm] = []
+
+    for sourceForm in sourceForms {
+        let nationalForm = PokemonForm(context: moc)
+        nationalForm.name = sourceForm.name
+        nationalForm.index = sourceForm.index
+        nationalForm.formIndex = sourceForm.formIndex
+        nationalForm.pokemonIndex = sourceForm.pokemonIndex
+        nationalForm.i_pokemonNameIndex = sourceForm.i_pokemonNameIndex
+        nationalForm.game = .national
+        nationalForm.familyName = sourceForm.familyName
+        nationalForm.species = sourceForm.species
+        nationalForm.primaryType = sourceForm.primaryType
+        nationalForm.secondaryType = sourceForm.secondaryType
+        nationalForm.color = sourceForm.color
+        nationalForm.pokedexEntry = sourceForm.pokedexEntry
+        nationalForm.heightInMeters = sourceForm.heightInMeters
+        nationalForm.weightInKilograms = sourceForm.weightInKilograms
+        nationalForm.baseExperienceYield = sourceForm.baseExperienceYield
+        nationalForm.baseFriendship = sourceForm.baseFriendship
+
+        nationalForm.primaryAbility = sourceForm.primaryAbility
+        nationalForm.secondaryAbility = sourceForm.secondaryAbility
+        nationalForm.hiddenAbility = sourceForm.hiddenAbility
+
+        let baseStats = Stats(context: moc)
+        baseStats.hp = sourceForm.baseStats.hp
+        baseStats.attack = sourceForm.baseStats.attack
+        baseStats.defense = sourceForm.baseStats.defense
+        baseStats.specialAttack = sourceForm.baseStats.specialAttack
+        baseStats.specialDefense = sourceForm.baseStats.specialDefense
+        baseStats.speed = sourceForm.baseStats.speed
+        nationalForm.baseStats = baseStats
+
+        let evYield = Stats(context: moc)
+        evYield.hp = sourceForm.evYield.hp
+        evYield.attack = sourceForm.evYield.attack
+        evYield.defense = sourceForm.evYield.defense
+        evYield.specialAttack = sourceForm.evYield.specialAttack
+        evYield.specialDefense = sourceForm.evYield.specialDefense
+        evYield.speed = sourceForm.evYield.speed
+        nationalForm.evYield = evYield
+
+        destinationForms.append(nationalForm)
+    }
+    destination.forms = destinationForms
+}
+
+for (_, pokemons) in allPokemon {
+    guard let latestPokemon = latestPokemon(pokemons) else { continue }
+    let nationalPokemon = pokemons[.national]!
+    copyPokemonForms(from: latestPokemon, to: nationalPokemon)
 }
 
 
@@ -748,6 +857,52 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring3.json") 
 }
 
 
+// Copy moves to national
+for (_, gameToPokemon) in allPokemonByName {
+    guard let latest = latestPokemon(gameToPokemon),
+          let national = gameToPokemon[.national] else { fatalError("wtf") }
+    for (latestForm, nationalForm) in zip(latest.forms, national.forms) {
+        // Level
+        if let latestLearnsetLevel = latestForm.z_learnsetLevel {
+            for source in latestLearnsetLevel.allObjects as! [LevelLearnsetEntry] {
+                let destination = LevelLearnsetEntry(context: moc)
+                destination.form = nationalForm
+                destination.level = source.level
+                destination.move = getMove(forName: source.move.name, game: .national)!
+            }
+        }
+
+        // Machine
+        if let latestLearnsetMachine = latestForm.z_learnsetMachine {
+            for source in latestLearnsetMachine.allObjects as! [MachineLearnsetEntry] {
+                let destination = MachineLearnsetEntry(context: moc)
+                destination.form = nationalForm
+                destination.machine = source.machine
+            }
+        }
+
+        // Breeding
+        if let latestLearnsetBreeding = latestForm.z_learnsetBreeding {
+            for source in latestLearnsetBreeding.allObjects as! [BreedLearnsetEntry] {
+                let destination = BreedLearnsetEntry(context: moc)
+                destination.form = nationalForm
+                destination.move = getMove(forName: source.move.name, game: .national)!
+                destination.fathers = source.fathers
+            }
+        }
+
+        // Tutoring
+        if let latestLearnsetTutoring = latestForm.z_learnsetTutoring {
+            for source in latestLearnsetTutoring.allObjects as! [TutorLearnsetEntry] {
+                let destination = TutorLearnsetEntry(context: moc)
+                destination.form = nationalForm
+                destination.move = getMove(forName: source.move.name, game: .national)!
+            }
+        }
+    }
+}
+
+
 // MARK: - Locations
 print("--- Locations ---")
 let locationPercentFormatter: NumberFormatter = {
@@ -907,6 +1062,29 @@ for (regionName, regionDict) in Helper.loadJSON(from: "Research/ManualPokemonLoc
         processLocationDict(locationName: locationName, regionName: regionName, locationDict: locationDict)
     }
 }
+
+// Copy locations to national
+for (_, gameToPokemon) in allPokemonByName {
+    let latest = latestPokemon(gameToPokemon)!
+    let national = gameToPokemon[.national]!
+    let locationPokemons = latest.z_locationPokemons!.allObjects as! [LocationPokemon]
+
+    for source in locationPokemons {
+        let destination = LocationPokemon(context: moc)
+        destination.pokemon = national
+        destination.detail = source.detail
+        destination.area = source.area
+        destination.captureMethod = source.captureMethod
+        destination.levelLow = source.levelLow
+        destination.levelHigh = source.levelHigh
+        destination.timeOfDay = source.timeOfDay
+        destination.encounterCondition = source.encounterCondition
+        destination.encounterRate = source.encounterRate
+        destination.game = .national
+        destination.location = getOrMakeLocation(withName: source.location.name, regionName: source.location.region.rawValue, game: .national)
+    }
+}
+
 
 // MARK: Galar Wild Dens
 let wildDenStarKeys = ["one", "two", "three", "four", "five"]
@@ -1139,13 +1317,65 @@ for dict in Helper.loadTSV(from: "Research/Berries.tsv") {
     }
 }
 
+func latestItem(_ items: [Game: Item]) -> Item? {
+    var gameCandidates = Game.allGamesNewestFirst
+    gameCandidates.removeAll { $0 == .national }
+    for game in gameCandidates {
+        if let matchingItem = items[game] {
+            return matchingItem
+        }
+    }
+    return nil
+}
+
+for (_, gameToItem) in allItems {
+    guard let source = gameToItem[.sword] else { continue }
+
+    let destination = Item(context: moc)
+    destination.name = source.name
+    destination.game = .national
+    destination.i_gameIndex = Game.national.index.toInt32()
+    destination.generationIntroduced = source.generationIntroduced
+    destination.imageName = source.imageName
+    destination.itemType = source.itemType
+
+    if let info = source.bagInfo {
+        let destinationInfo = BagItemInfo(context: moc)
+        destinationInfo.itemDescription = info.itemDescription
+        destinationInfo.cost = info.cost
+        destinationInfo.sell = info.sell
+        destinationInfo.pocket = info.pocket
+        destination.bagInfo = destinationInfo
+    }
+
+    if let info = source.berryInfo {
+        let destinationInfo = BerryItemInfo(context: moc)
+        destinationInfo.itemDescription = info.itemDescription
+        destinationInfo.firmness = info.firmness
+        destinationInfo.spicy = info.spicy
+        destinationInfo.dry = info.dry
+        destinationInfo.sweet = info.sweet
+        destinationInfo.bitter = info.bitter
+        destinationInfo.sour = info.sour
+        destination.berryInfo = destinationInfo
+    }
+
+    let key = sanitizedItemName(destination.name, game: .national)
+    if var items = allItems[key] {
+        items[.national] = destination
+        allItems[key] = items
+    } else {
+        allItems[key] = [.national: destination]
+    }
+}
+
 allItems.keys
     .sorted()
     .enumerated()
     .forEach { i, key in
         let index = Int32(i)
         allItems[key]!.values.forEach { $0.i_nameIndex = index }
-}
+    }
 
 
 // MARK: - Evolutions
@@ -1224,7 +1454,7 @@ for dict in Helper.loadTSV(from: "Research/Evolutions.tsv") {
     let basePokemons = allPokemonByName[sanitizedName(baseName)]!
     let targetPokemons = allPokemonByName[sanitizedName(targetName)]!
 
-    let games = gameFilter != nil ? [gameFilter!] : Array(basePokemons.keys)
+    let games = gameFilter != nil ? [gameFilter!] : Array(basePokemons.keys).filter { $0 != .national }
 
     for game in games {
         let basePokemon = basePokemons[game]!

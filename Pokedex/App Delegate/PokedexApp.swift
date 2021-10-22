@@ -30,18 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         migrateUserDefaultsIfNeeded()
 
-        if let container = CoreDataManager().container {
-            Dependencies.container = container
-            DispatchQueue.main.async {
-                InAppReviewManager.recordAppLaunch()
-            }
-        } else {
-            let viewController = UIViewController()
-            let alert = makeErrorAlert()
-            application.windows.first?.rootViewController = viewController
-            DispatchQueue.main.async {
-                viewController.present(alert, animated: true, completion: nil)
-            }
+        Dependencies.container = CoreDataManager().container
+
+        DispatchQueue.main.async {
+            InAppReviewManager.recordAppLaunch()
         }
 
         return true
@@ -67,17 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         new.set(true, forKey: hasMigratedKey)
         debugPrint("Migrated defaults keys to app group suite")
-    }
-
-    private func makeErrorAlert() -> UIAlertController {
-        let controller = UIAlertController(
-            title: "Unable to open database",
-            message: "This could be because your device is out of disk space. Please manage your device's storage in the Settings app and re-launch \(AppConstants.appName).",
-            preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: "Exit", style: .default) { _ in
-            exit(0)
-        })
-        return controller
     }
 
     override func buildMenu(with builder: UIMenuBuilder) {

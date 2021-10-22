@@ -299,7 +299,7 @@ private let defenseTables: [Generation: TypeTable] = [
     .vi: _gen6Def,
     .vii: _gen7Def,
     .viii: _gen8Def,
-    .all: _gen8Off
+    .all: _gen8Def
 ]
 
 // MARK: Gen 1

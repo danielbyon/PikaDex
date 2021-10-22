@@ -199,7 +199,7 @@ extension Game {
         case .letsGoEevee: return "L.G. Eevee"
         case .sword: return "Sword"
         case .shield: return "Shield"
-        case .national: return "National"
+        case .national: return "Sword"
         }
     }
 
@@ -310,7 +310,7 @@ extension Game {
                 fatalError()
             }
         case .all:
-            fatalError()
+            self = .national
         }
     }
 
@@ -328,6 +328,7 @@ extension Generation {
         case "Generation VI": self = .vi
         case "Generation VII": self = .vii
         case "Generation VIII": self = .viii
+        case "National": self = .all
         default: return nil
         }
     }
@@ -342,7 +343,7 @@ extension Generation {
         case .vi: return "Generation VI"
         case .vii: return "Generation VII"
         case .viii: return "Generation VIII"
-        case .all: fatalError()
+        case .all: return "National"
         }
     }
 
@@ -392,6 +393,7 @@ extension Game {
         case "Let's Go Eevee": self = .letsGoEevee
         case "Sword": self = .sword
         case "Shield": self = .shield
+        case "National": self = .national
         default: return nil
         }
     }
@@ -430,6 +432,7 @@ extension Game {
         case "let's go eevee": self = .letsGoEevee
         case "sword": self = .sword
         case "shield": self = .shield
+        case "national": self = .national
         default: return nil
         }
     }

@@ -12,6 +12,7 @@ import Combine
 class TeamBuilderViewModel: ObservableObject {
 
     let game: Game
+//    let objectWillChange = PassthroughSubject<Void, Never>()
 
     @Published var teams: [TeamViewModel]
 
@@ -31,10 +32,15 @@ class TeamBuilderViewModel: ObservableObject {
         self._teams = .init(initialValue: viewModels)
         viewModels.forEach { setupObservation(for: $0) }
 
-        objectWillChange.sink { [unowned self] _ in
-            self.scheduleSave()
-        }
-        .store(in: &cancellables)
+//        objectWillChange.sink { [unowned self] _ in
+//            self.scheduleSave()
+//        }
+//        .store(in: &cancellables)
+        $teams
+            .sink { [weak self] _ in
+                self?.save()
+            }
+            .store(in: &cancellables)
     }
 
     func addNewTeam() {
@@ -56,12 +62,6 @@ class TeamBuilderViewModel: ObservableObject {
         UIPasteboard.general.string = team.pokePaste
     }
 
-    private func scheduleSave() {
-        DispatchQueue.main.async { [weak self] in
-            self?.save()
-        }
-    }
-
     private func save() {
         let teamsToSave = teams.map { $0.makeTeam() }
         storage.saveTeams(teamsToSave, forGame: game)
@@ -70,11 +70,23 @@ class TeamBuilderViewModel: ObservableObject {
     }
 
     private func setupObservation(for team: TeamViewModel) {
+//        team.objectWillChange
+//            .map { _ in
+//                return ()
+//            }
+//            .receive(on: DispatchQueue.main)
+//            .subscribe(objectWillChange)
+//            .store(in: &cancellables)
         team.objectWillChange
             .sink { [unowned self] in
-                self.scheduleSave()
+                self.objectWillChange.send()
             }
             .store(in: &cancellables)
+//        team.objectWillChange
+//            .sink { [unowned self] in
+//                self.scheduleSave()
+//            }
+//            .store(in: &cancellables)
     }
 
 }

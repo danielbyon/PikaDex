@@ -14,6 +14,7 @@ class TeamViewModel: ObservableObject {
     @Published var name = ""
     @Published var members: [TeamMemberViewModel] = []
     let internalID: UUID
+//    let objectWillChange = PassthroughSubject<Void, Never>()
 
     private var cancellables: Set<AnyCancellable> = []
 
@@ -56,9 +57,18 @@ class TeamViewModel: ObservableObject {
     }
 
     private func setupObservation(for member: TeamMemberViewModel) {
-        member.objectWillChange.sink { [unowned self] in
-            self.objectWillChange.send()
-        }.store(in: &cancellables)
+//        member.objectWillChange
+//            .map { _ in
+//                return ()
+//            }
+//            .receive(on: DispatchQueue.main)
+//            .subscribe(objectWillChange)
+//            .store(in: &cancellables)
+        member.objectWillChange
+            .sink { [unowned self] in
+                self.objectWillChange.send()
+            }
+            .store(in: &cancellables)
     }
 
 }

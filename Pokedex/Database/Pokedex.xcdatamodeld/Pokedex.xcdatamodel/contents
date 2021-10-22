@@ -16,6 +16,7 @@
         <attribute name="z_letsGoPikachu" optional="YES" attributeType="String"/>
         <attribute name="z_moon" optional="YES" attributeType="String"/>
         <attribute name="z_name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_national" optional="YES" attributeType="String"/>
         <attribute name="z_omegaRuby" optional="YES" attributeType="String"/>
         <attribute name="z_pearl" optional="YES" attributeType="String"/>
         <attribute name="z_platinum" optional="YES" attributeType="String"/>
@@ -344,25 +345,25 @@
         </fetchIndex>
     </entity>
     <elements>
-        <element name="Ability" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="BagItemInfo" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="BerryItemInfo" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="BreedLearnsetEntry" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Evolution" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Item" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="LearnsetEntry" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="LevelLearnsetEntry" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Location" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="LocationMap" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="LocationPokemon" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Machine" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="MachineLearnsetEntry" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Move" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="MoveInfo" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="PokedexNumbers" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="StoredPokemon" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="PokemonForm" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Stats" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="TutorLearnsetEntry" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Ability" positionX="0" positionY="0" width="128" height="554"/>
+        <element name="BagItemInfo" positionX="0" positionY="0" width="128" height="104"/>
+        <element name="BerryItemInfo" positionX="0" positionY="0" width="128" height="164"/>
+        <element name="BreedLearnsetEntry" positionX="0" positionY="0" width="128" height="74"/>
+        <element name="Evolution" positionX="0" positionY="0" width="128" height="239"/>
+        <element name="Item" positionX="0" positionY="0" width="128" height="194"/>
+        <element name="LearnsetEntry" positionX="0" positionY="0" width="128" height="29"/>
+        <element name="LevelLearnsetEntry" positionX="0" positionY="0" width="128" height="74"/>
+        <element name="Location" positionX="0" positionY="0" width="128" height="134"/>
+        <element name="LocationMap" positionX="0" positionY="0" width="128" height="74"/>
+        <element name="LocationPokemon" positionX="0" positionY="0" width="128" height="209"/>
+        <element name="Machine" positionX="0" positionY="0" width="128" height="119"/>
+        <element name="MachineLearnsetEntry" positionX="0" positionY="0" width="128" height="59"/>
+        <element name="Move" positionX="0" positionY="0" width="128" height="224"/>
+        <element name="MoveInfo" positionX="0" positionY="0" width="128" height="254"/>
+        <element name="PokedexNumbers" positionX="0" positionY="0" width="128" height="434"/>
+        <element name="PokemonForm" positionX="0" positionY="0" width="128" height="539"/>
+        <element name="Stats" positionX="0" positionY="0" width="128" height="149"/>
+        <element name="StoredPokemon" positionX="0" positionY="0" width="128" height="269"/>
+        <element name="TutorLearnsetEntry" positionX="0" positionY="0" width="128" height="59"/>
     </elements>
 </model>
