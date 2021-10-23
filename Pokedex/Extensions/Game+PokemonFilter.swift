@@ -54,6 +54,22 @@ extension Game {
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Isle of Armor)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_isleOfArmor)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (The Crown Tundra)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_crownTundra)))
         case .national:
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Kanto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_kanto)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Johto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_johto)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Hoenn)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_hoenn)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Sinnoh)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_sinnoh)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Unova)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_newUnova)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Central Kalos)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_centralKalos)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Coastal Kalos)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_coastalKalos)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Mountain Kalos)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_mountainKalos)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Alola)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_ultraAlola)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Melemele)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_ultraMelemele)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Akala)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_ultraAkala)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Ula'ula)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_ultraUlaula)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Poni)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_ultraPoni)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Galar)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_galar)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Isle of Armor)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_isleOfArmor)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (The Crown Tundra)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_crownTundra)))
             break
         }
         return filters
