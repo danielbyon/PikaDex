@@ -26,10 +26,12 @@ struct PokemonForms: View {
                             .scaledToFit()
                             .frame(width: 40, height: 40)
                             .padding(2)
-                            .background(RoundedRectangle(cornerRadius: 5.0)
-                                .stroke(lineWidth: i == self.currentIndex ? 2 : 0)
-                                .fill(self.backgroundColor)
-                                .animation(.default))
+                            .background(
+                                RoundedRectangle(cornerRadius: 5.0)
+                                    .stroke(lineWidth: i == self.currentIndex ? 2 : 0)
+                                    .fill(self.backgroundColor)
+                                    .animation(.default, value: currentIndex)
+                            )
                             .padding(2)
                     }
                     .buttonStyle(PlainButtonStyle())
