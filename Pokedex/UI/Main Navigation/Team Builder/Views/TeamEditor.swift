@@ -69,11 +69,6 @@ struct TeamEditor: View {
         }
     }
 
-    init(viewModel: TeamViewModel, game: Game) {
-        self.viewModel = viewModel
-        self.game = game
-    }
-
     @ViewBuilder
     private func footer() -> some View {
         if !viewModel.members.isEmpty {
@@ -120,7 +115,7 @@ struct TeamEditor: View {
 struct AddTeam_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TeamEditor(viewModel: .init(name: "Test Team", members: [], internalID: UUID()), game: .sword)
+            TeamEditor(game: .sword, viewModel: .init(name: "Test Team", members: [], internalID: UUID()))
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .injectDependencies()

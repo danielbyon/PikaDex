@@ -11,10 +11,9 @@ import Combine
 
 class TeamViewModel: ObservableObject {
 
-    @Published var name = ""
-    @Published var members: [TeamMemberViewModel] = []
+    @Published var name: String
+    @Published var members: [TeamMemberViewModel]
     let internalID: UUID
-//    let objectWillChange = PassthroughSubject<Void, Never>()
 
     private var cancellables: Set<AnyCancellable> = []
 
@@ -22,9 +21,7 @@ class TeamViewModel: ObservableObject {
         self.name = name
         self.members = members
         self.internalID = internalID
-        members.forEach {
-            self.setupObservation(for: $0)
-        }
+        members.forEach { setupObservation(for: $0) }
     }
 
     func addMember(_ pokemonForm: PokemonForm, game: Game) {
@@ -57,13 +54,6 @@ class TeamViewModel: ObservableObject {
     }
 
     private func setupObservation(for member: TeamMemberViewModel) {
-//        member.objectWillChange
-//            .map { _ in
-//                return ()
-//            }
-//            .receive(on: DispatchQueue.main)
-//            .subscribe(objectWillChange)
-//            .store(in: &cancellables)
         member.objectWillChange
             .sink { [unowned self] in
                 self.objectWillChange.send()

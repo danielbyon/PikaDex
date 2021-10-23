@@ -18,13 +18,13 @@ struct TeamBuilder: View {
     @State private var currentDeletingTeam: TeamViewModel?
     @State private var isShowingDeleteConfirmation = false
     @State private var isShowingPokepasteExport = false
-    @StateObject var viewModel: TeamBuilderViewModel
+    @StateObject var viewModel = TeamBuilderViewModel()
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 2 : 1 }
 
     var body: some View {
         content()
-            .overlay {
+            .background {
                 emptyState()
                     .opacity(viewModel.teams.isEmpty ? 1.0 : 0.0)
             }
@@ -58,11 +58,9 @@ struct TeamBuilder: View {
                 Text("This action cannot be undone.")
             }
             .onOpenURL(perform: handleURL)
-    }
-
-    init(game: Game) {
-        self.game = game
-        self._viewModel = .init(wrappedValue: .init(game: game))
+            .onAppear {
+                viewModel.game = game
+            }
     }
 
     private func emptyState() -> some View {
@@ -72,10 +70,21 @@ struct TeamBuilder: View {
 
     private func content() -> some View {
         ScrollView {
-            LazyVGrid(columns: Array(repeating: .init(), count: numberOfColumns), alignment: .leading, spacing: 24.0) {
+            LazyVGrid(
+                columns: Array(repeating: .init(), count: numberOfColumns),
+                alignment: .leading,
+                spacing: 24.0
+            ) {
                 Section(footer: footer()) {
                     ForEach(viewModel.teams) { team in
-                        NavigationLink(destination: TeamEditor(viewModel: team, game: viewModel.game), tag: team, selection: $currentEditingTeam) {
+                        NavigationLink(
+                            destination: TeamEditor(
+                                game: viewModel.game,
+                                viewModel: team
+                            ),
+                            tag: team,
+                            selection: $currentEditingTeam
+                        ) {
                             teamItemCell(team: team)
                         }
                     }
