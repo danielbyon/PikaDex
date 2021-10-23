@@ -13,9 +13,7 @@ class TeamBuilderViewModel: ObservableObject {
 
     var game: Game = .sword {
         didSet {
-            if game != oldValue {
-                refreshTeams()
-            }
+            refreshTeams()
         }
     }
 
