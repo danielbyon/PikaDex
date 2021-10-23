@@ -218,7 +218,6 @@
 		658DD1412463E4060014D812 /* String+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13F2463E4060014D812 /* String+Search.swift */; };
 		658DD14324641D1B0014D812 /* CanonicallyNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD14224641D1B0014D812 /* CanonicallyNamed.swift */; };
 		658DD14524641F240014D812 /* SearchableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD14424641F240014D812 /* SearchableList.swift */; };
-		658DD14824642DC80014D812 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD14724642DC80014D812 /* KeyboardObserver.swift */; };
 		658FF90C246BB3F500FE2185 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FF90B246BB3F500FE2185 /* Weather.swift */; };
 		658FF90E246BB43D00FE2185 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FF90B246BB3F500FE2185 /* Weather.swift */; };
 		658FF910246BCDA500FE2185 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 658FF90F246BCDA500FE2185 /* AppSupport */; };
@@ -233,7 +232,6 @@
 		659065042446D949008A6469 /* Region+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659065032446D949008A6469 /* Region+Strings.swift */; };
 		6592F487245ED27C0027E883 /* DatabaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6592F486245ED27C0027E883 /* DatabaseConstants.swift */; };
 		6592F488245ED27C0027E883 /* DatabaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6592F486245ED27C0027E883 /* DatabaseConstants.swift */; };
-		6594F7C22588DF3C00150E4A /* Hacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594F7C12588DF3C00150E4A /* Hacks.swift */; };
 		6594F7C82588EF5700150E4A /* URL+DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594F7C72588EF5700150E4A /* URL+DeepLinks.swift */; };
 		6594F7CD2588F0C500150E4A /* URL+DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594F7C72588EF5700150E4A /* URL+DeepLinks.swift */; };
 		6594F7F7258ECD0600150E4A /* DispatchQueue+AppQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594F7F6258ECD0600150E4A /* DispatchQueue+AppQueues.swift */; };
@@ -483,7 +481,6 @@
 		65E88FFF257467B800C0A483 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E88FFE257467B800C0A483 /* UserDefaults+AppGroup.swift */; };
 		65E89000257467B800C0A483 /* UserDefaults+AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E88FFE257467B800C0A483 /* UserDefaults+AppGroup.swift */; };
 		65E890052576255C00C0A483 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 65E890042576255C00C0A483 /* AppSupport */; };
-		65EA939024655EA10037348F /* KeyboardAvoiderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EA938F24655EA10037348F /* KeyboardAvoiderModifier.swift */; };
 		65EA93912465907E0037348F /* CanonicallyNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD14224641D1B0014D812 /* CanonicallyNamed.swift */; };
 		65EDEEC3245F0167003E013C /* PokemonTypeEffectiveness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE502023977F4200828A29 /* PokemonTypeEffectiveness.swift */; };
 		65F7693D2452B49900AEB57D /* NatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F7693C2452B49900AEB57D /* NatureList.swift */; };
@@ -775,7 +772,6 @@
 		658DD13F2463E4060014D812 /* String+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Search.swift"; sourceTree = "<group>"; };
 		658DD14224641D1B0014D812 /* CanonicallyNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanonicallyNamed.swift; sourceTree = "<group>"; };
 		658DD14424641F240014D812 /* SearchableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableList.swift; sourceTree = "<group>"; };
-		658DD14724642DC80014D812 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		658FF90B246BB3F500FE2185 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		65901A572420E4D6005A61F0 /* EncounterRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterRate.swift; sourceTree = "<group>"; };
 		659064FD2445C0D9008A6469 /* BigColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigColoredButton.swift; sourceTree = "<group>"; };
@@ -783,7 +779,6 @@
 		659065012446C5FE008A6469 /* Region+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+UIColor.swift"; sourceTree = "<group>"; };
 		659065032446D949008A6469 /* Region+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+Strings.swift"; sourceTree = "<group>"; };
 		6592F486245ED27C0027E883 /* DatabaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConstants.swift; sourceTree = "<group>"; };
-		6594F7C12588DF3C00150E4A /* Hacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacks.swift; sourceTree = "<group>"; };
 		6594F7C72588EF5700150E4A /* URL+DeepLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "URL+DeepLinks.swift"; path = "Pokedex/Utilities/URL+DeepLinks.swift"; sourceTree = SOURCE_ROOT; };
 		6594F7F6258ECD0600150E4A /* DispatchQueue+AppQueues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+AppQueues.swift"; sourceTree = "<group>"; };
 		6594F800258F0DD300150E4A /* WidgetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetAdapter.swift; sourceTree = "<group>"; };
@@ -892,7 +887,6 @@
 		65E5AA9123894A7B006BA4B4 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		65E5AA9223894A7B006BA4B4 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		65E88FFE257467B800C0A483 /* UserDefaults+AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppGroup.swift"; sourceTree = "<group>"; };
-		65EA938F24655EA10037348F /* KeyboardAvoiderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAvoiderModifier.swift; sourceTree = "<group>"; };
 		65F7693C2452B49900AEB57D /* NatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureList.swift; sourceTree = "<group>"; };
 		65F7693E2452BDB700AEB57D /* Flavor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		65F769402452BDF500AEB57D /* Flavor+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flavor+UIColor.swift"; sourceTree = "<group>"; };
@@ -1509,10 +1503,7 @@
 				6597D5ED23D15B0B0081482E /* Generators */,
 				659C7CFD24696D3400E92C1C /* AppConstants.swift */,
 				652B50582594648B00FC8A48 /* AppGroupStorage.swift */,
-				6594F7C12588DF3C00150E4A /* Hacks.swift */,
 				659C7CF42469618300E92C1C /* InAppReviewManager.swift */,
-				65EA938F24655EA10037348F /* KeyboardAvoiderModifier.swift */,
-				658DD14724642DC80014D812 /* KeyboardObserver.swift */,
 				65BB4CA4257F87C000298D10 /* PokemonImageNameFormatter.swift */,
 				6594F800258F0DD300150E4A /* WidgetAdapter.swift */,
 			);
@@ -2177,7 +2168,6 @@
 				659C7D06246A8F9300E92C1C /* Gender.swift in Sources */,
 				6547E137244274E500ECBC7C /* GenderRatioCell.swift in Sources */,
 				657262C324011B1C00A38BCE /* Generation.swift in Sources */,
-				6594F7C22588DF3C00150E4A /* Hacks.swift in Sources */,
 				659C7CDB2466C10200E92C1C /* Icon+PreviewHelpers.swift in Sources */,
 				659C7CDC2466C10200E92C1C /* Icon.swift in Sources */,
 				659C7CF52469618300E92C1C /* InAppReviewManager.swift in Sources */,
@@ -2192,8 +2182,6 @@
 				65F7695C2455AA2B00AEB57D /* ItemList.swift in Sources */,
 				65F9F48224712A2A00F4EC0D /* ItemSprite.swift in Sources */,
 				65F769672458326400AEB57D /* ItemType.swift in Sources */,
-				65EA939024655EA10037348F /* KeyboardAvoiderModifier.swift in Sources */,
-				658DD14824642DC80014D812 /* KeyboardObserver.swift in Sources */,
 				658745822490EE5B00860CBD /* LaunchIcon.swift in Sources */,
 				657262D224011B1C00A38BCE /* LearnsetEntry+Extensions.swift in Sources */,
 				650E222023FB58CB00FACCE7 /* LearnsetType+Strings.swift in Sources */,
