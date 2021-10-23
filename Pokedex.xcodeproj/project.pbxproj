@@ -213,6 +213,7 @@
 		65881A89247FE88300526CBD /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A88247FE88200526CBD /* StoreCell.swift */; };
 		65881A8B247FE8AE00526CBD /* StoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A8A247FE8AE00526CBD /* StoreSection.swift */; };
 		658A4355240A5B000035C9F0 /* AbilityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A4354240A5B000035C9F0 /* AbilityList.swift */; };
+		658D0A68272402210054A6B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FE24B7CF5300640EB3 /* Images.xcassets */; };
 		658DD13E2463DBE50014D812 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13D2463DBE50014D812 /* SearchBar.swift */; };
 		658DD1402463E4060014D812 /* String+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13F2463E4060014D812 /* String+Search.swift */; };
 		658DD1412463E4060014D812 /* String+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13F2463E4060014D812 /* String+Search.swift */; };
@@ -1936,6 +1937,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658D0A68272402210054A6B1 /* Images.xcassets in Resources */,
 				65A5ED6024A1FC2F00742986 /* Assets.xcassets in Resources */,
 				659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */,
 				6547F805237968D50091A083 /* LaunchScreen.storyboard in Resources */,
