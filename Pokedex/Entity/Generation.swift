@@ -49,11 +49,19 @@ public extension Generation {
     static var latest: Generation { Generation.allCases.filter { $0 != .all }.last! }
 
     var title: String {
-        return "Generation \(rawValue)"
+        if self == .all {
+            return "National"
+        } else {
+            return "Generation \(rawValue)"
+        }
     }
 
     var shortTitle: String {
-        return "Gen. \(rawValue)"
+        if self == .all {
+            return "Ntnl"
+        } else {
+            return "Gen. \(rawValue)"
+        }
     }
 
     var games: [Game] {
