@@ -12,12 +12,36 @@ import UIKit
 @main
 struct PokedexApp: App {
 
+    @State private var isShowingUpdateMessage = false
     @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
+
+    private var hasDisplayedUpdateMessage: Bool {
+        get { UserDefaults.standard.bool(forKey: hasDisplayedUpdateMessageKey) }
+        nonmutating set { UserDefaults.standard.set(newValue, forKey: hasDisplayedUpdateMessageKey) }
+    }
+    private var hasDisplayedUpdateMessageKey: String {
+        if let appVersion = AppConstants.appVersion {
+            return "hasDisplayedUpdateMessageForVersion-\(appVersion)"
+        } else {
+            assertionFailure()
+            return "hasDisplayedUpdateMessageForVersion"
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .injectDependencies()
+                .sheet(isPresented: $isShowingUpdateMessage) {
+                    hasDisplayedUpdateMessage = true
+                } content: {
+                    UpdateMessage()
+                }
+                .onAppear {
+                    if !hasDisplayedUpdateMessage {
+                        isShowingUpdateMessage = true
+                    }
+                }
         }
     }
 

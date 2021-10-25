@@ -214,6 +214,7 @@
 		65881A8B247FE8AE00526CBD /* StoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A8A247FE8AE00526CBD /* StoreSection.swift */; };
 		658A4355240A5B000035C9F0 /* AbilityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A4354240A5B000035C9F0 /* AbilityList.swift */; };
 		658D0A68272402210054A6B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FE24B7CF5300640EB3 /* Images.xcassets */; };
+		658D0A6C2726ADB60054A6B1 /* UpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D0A6B2726ADB60054A6B1 /* UpdateMessage.swift */; };
 		658DD13E2463DBE50014D812 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13D2463DBE50014D812 /* SearchBar.swift */; };
 		658DD1402463E4060014D812 /* String+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13F2463E4060014D812 /* String+Search.swift */; };
 		658DD1412463E4060014D812 /* String+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13F2463E4060014D812 /* String+Search.swift */; };
@@ -769,6 +770,7 @@
 		65881A88247FE88200526CBD /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		65881A8A247FE8AE00526CBD /* StoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSection.swift; sourceTree = "<group>"; };
 		658A4354240A5B000035C9F0 /* AbilityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityList.swift; sourceTree = "<group>"; };
+		658D0A6B2726ADB60054A6B1 /* UpdateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMessage.swift; sourceTree = "<group>"; };
 		658DD13D2463DBE50014D812 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		658DD13F2463E4060014D812 /* String+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Search.swift"; sourceTree = "<group>"; };
 		658DD14224641D1B0014D812 /* CanonicallyNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanonicallyNamed.swift; sourceTree = "<group>"; };
@@ -1107,6 +1109,7 @@
 			children = (
 				6547F7FC237968D20091A083 /* ContentView.swift */,
 				6547F7F5237968D20091A083 /* PokedexApp.swift */,
+				658D0A6B2726ADB60054A6B1 /* UpdateMessage.swift */,
 			);
 			path = "App Delegate";
 			sourceTree = "<group>";
@@ -2122,6 +2125,7 @@
 				6551F797244D054C0061D8F4 /* BadgeCell.swift in Sources */,
 				65F7695224559E3500AEB57D /* BagItemInfo+Extension.swift in Sources */,
 				65B3936B23894B4F0064EB35 /* BaseStatViewModel.swift in Sources */,
+				658D0A6C2726ADB60054A6B1 /* UpdateMessage.swift in Sources */,
 				6524BD4523821A9200709D28 /* BattleAssistant.swift in Sources */,
 				65881A5E2479209400526CBD /* BattleAssistantInfo.swift in Sources */,
 				652B50312593036200FC8A48 /* BattleAssistantLevelSlider.swift in Sources */,
