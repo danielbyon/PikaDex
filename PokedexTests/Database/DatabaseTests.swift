@@ -42,7 +42,7 @@ class DatabaseTests: XCTestCase {
     func testCreation() {
         let moc = container.viewContext
 
-        let pokemon = Pokemon(context: moc)
+        let pokemon = StoredPokemon(context: moc)
         pokemon.name = "Pikachu"
         pokemon.index = 25
         pokemon.forms = [PokemonForm(context: moc)]
