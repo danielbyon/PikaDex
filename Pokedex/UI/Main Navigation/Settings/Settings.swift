@@ -13,6 +13,7 @@ struct Settings: View {
 
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var appSettings: AppSettings
+    @State private var isShowingUpdateMessage = false
 
     private var spacing: CGFloat { 16.0 }
     private var aboutText: String {
@@ -50,6 +51,21 @@ struct Settings: View {
                 Text(aboutText)
                     .monospacedBody()
             }
+
+            Button {
+                isShowingUpdateMessage = true
+            } label: {
+                BigColoredButton(
+                    icon: Image(systemName: "checkmark"),
+                    title: "Updates",
+                    textColor: .white,
+                    fillColor: AppColor.red.color
+                )
+            }
+            .sheet(isPresented: $isShowingUpdateMessage, onDismiss: nil) {
+                UpdateMessage()
+            }
+
 
             MailComposeButton(emailAddress: contactEmail, subject: contactSubject) {
                 BigColoredButton(icon: Image(systemName: "envelope"), title: "Contact", textColor: .white, fillColor: AppColor.red.color)
