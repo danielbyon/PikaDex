@@ -20,7 +20,7 @@ struct UpdateMessage: View {
             return "Pikadex"
         }
     }
-    
+
     private let newFeatures: [String] = [
         "National Pokédex",
         "Added search to abilities, items, locations, machines, and moves"
@@ -34,26 +34,16 @@ struct UpdateMessage: View {
         "Fixed psychic/ghost type effectiveness (was 0x, fixed to 2x)"
     ]
 
+    private let upcoming: [String] = [
+        "Checklist of caught Pokémon is in development!"
+    ]
+
     var body: some View {
         NavigationView {
             List {
-                if !newFeatures.isEmpty {
-                    Section("New Features") {
-                        ForEach(newFeatures, id: \.self) { message in
-                            Text(message)
-                                .lineLimit(nil)
-                        }
-                    }
-                }
-
-                if !bugFixes.isEmpty {
-                    Section("Bug Fixes") {
-                        ForEach(bugFixes, id: \.self) { message in
-                            Text(message)
-                                .lineLimit(nil)
-                        }
-                    }
-                }
+                section(name: "New Features", entries: newFeatures)
+                section(name: "Bug Fixes", entries: bugFixes)
+                section(name: "Upcoming", entries: upcoming)
             }
             .listStyle(.insetGrouped)
             .toolbar {
@@ -67,6 +57,19 @@ struct UpdateMessage: View {
         }
         .navigationViewStyle(.stack)
     }
+
+    @ViewBuilder
+    private func section(name: String, entries: [String]) -> some View {
+        if !upcoming.isEmpty {
+            Section(name) {
+                ForEach(entries, id: \.self) { entry in
+                    Text(entry)
+                        .lineLimit(nil)
+                }
+            }
+        }
+    }
+
 }
 
 struct UpdateMessage_Previews: PreviewProvider {
