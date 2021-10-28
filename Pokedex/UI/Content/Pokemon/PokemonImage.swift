@@ -32,6 +32,6 @@ struct PokemonImage: View {
 
 struct PokemonImage_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonImage(form: Pokemon.generate(withName: "Venusaur", game: .letsGoPikachu).forms[1])
+        PokemonImage(form: StoredPokemon.generate(withName: "Venusaur", game: .letsGoPikachu).forms[1])
     }
 }

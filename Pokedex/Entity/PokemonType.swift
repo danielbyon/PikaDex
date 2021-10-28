@@ -40,7 +40,7 @@ public enum PokemonType: String, CaseIterable {
             return [.bug, .dragon, .electric, .fighting, .fire, .flying, .ghost, .grass, .ground, .ice, .normal, .poison, .psychic, .rock, .water]
         case .ii, .iii, .iv, .v:
             return [.bug, .dark, .dragon, .electric, .fighting, .fire, .flying, .ghost, .grass, .ground, .ice, .normal, .poison, .psychic, .rock, .steel, .water]
-        case .vi, .vii, .viii: // TODO: confirm gen 8
+        case .vi, .vii, .viii, .all: // TODO: confirm gen 8
             return [.bug, .dark, .dragon, .electric, .fairy, .fighting, .fire, .flying, .ghost, .grass, .ground, .ice, .normal, .poison, .psychic, .rock, .steel, .water]
         }
     }
@@ -97,10 +97,20 @@ extension PokemonType: Identifiable {
 private typealias TypeTable = [PokemonType: [PokemonType: Double]]
 
 private func offenseTable(for generation: Generation) -> TypeTable {
-    offenseTables[generation.rawValue - 1]
+    offenseTables[generation]!
 }
 
-private let offenseTables: [TypeTable] = [_gen1Off, _gen2Off, _gen3Off, _gen4Off, _gen5Off, _gen6Off, _gen7Off, _gen8Off]
+private let offenseTables: [Generation: TypeTable] = [
+    .i: _gen1Off,
+    .ii: _gen2Off,
+    .iii: _gen3Off,
+    .iv: _gen4Off,
+    .v: _gen5Off,
+    .vi: _gen6Off,
+    .vii: _gen7Off,
+    .viii: _gen8Off,
+    .all: _gen8Off
+]
 
 // swiftlint:disable colon
 // MARK: - Offense Tables
@@ -277,10 +287,20 @@ private let _gen8Off: TypeTable = [
 // MARK: - Defense Tables
 
 private func defenseTable(for generation: Generation) -> TypeTable {
-    defenseTables[generation.rawValue - 1]
+    defenseTables[generation]!
 }
 
-private let defenseTables: [TypeTable] = [_gen1Def, _gen2Def, _gen3Def, _gen4Def, _gen5Def, _gen6Def, _gen7Def, _gen8Def]
+private let defenseTables: [Generation: TypeTable] = [
+    .i: _gen1Def,
+    .ii: _gen2Def,
+    .iii: _gen3Def,
+    .iv: _gen4Def,
+    .v: _gen5Def,
+    .vi: _gen6Def,
+    .vii: _gen7Def,
+    .viii: _gen8Def,
+    .all: _gen8Def
+]
 
 // MARK: Gen 1
 private let _gen1Def: TypeTable = [
@@ -316,7 +336,7 @@ private let _gen2Def: TypeTable = [
     .ice:       [.fighting: 2.0, .fire: 2.0, .ice: 0.5, .rock: 2.0, .steel: 2.0],
     .normal:       [.fighting: 2.0, .ghost: 0.0],
     .poison:       [.bug: 0.5, .fighting: 0.5, .grass: 0.5, .ground: 2.0, .poison: 0.5, .psychic: 2.0],
-    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 0.0, .psychic: 0.5],
+    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 2.0, .psychic: 0.5],
     .rock:       [.fighting: 2.0, .fire: 0.5, .flying: 0.5, .grass: 2.0, .ground: 2.0, .normal: 0.5, .poison: 0.5, .steel: 2.0, .water: 2.0],
     .steel:       [.bug: 0.5, .dark: 0.5, .dragon: 0.5, .fighting: 2.0, .fire: 2.0, .flying: 0.5, .ghost: 0.5, .grass: 0.5, .ground: 2.0, .ice: 0.5, .normal: 0.5, .poison: 0.0, .psychic: 0.5, .rock: 0.5, .steel: 0.5],
     .water:       [.electric: 2.0, .fire: 0.5, .grass: 2.0, .ice: 0.5, .steel: 0.5, .water: 0.5]
@@ -337,7 +357,7 @@ private let _gen3Def: TypeTable = [
     .ice:       [.fighting: 2.0, .fire: 2.0, .ice: 0.5, .rock: 2.0, .steel: 2.0],
     .normal:       [.fighting: 2.0, .ghost: 0.0],
     .poison:       [.bug: 0.5, .fighting: 0.5, .grass: 0.5, .ground: 2.0, .poison: 0.5, .psychic: 2.0],
-    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 0.0, .psychic: 0.5],
+    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 2.0, .psychic: 0.5],
     .rock:       [.fighting: 2.0, .fire: 0.5, .flying: 0.5, .grass: 2.0, .ground: 2.0, .normal: 0.5, .poison: 0.5, .steel: 2.0, .water: 2.0],
     .steel:       [.bug: 0.5, .dark: 0.5, .dragon: 0.5, .fighting: 2.0, .fire: 2.0, .flying: 0.5, .ghost: 0.5, .grass: 0.5, .ground: 2.0, .ice: 0.5, .normal: 0.5, .poison: 0.0, .psychic: 0.5, .rock: 0.5, .steel: 0.5],
     .water:       [.electric: 2.0, .fire: 0.5, .grass: 2.0, .ice: 0.5, .steel: 0.5, .water: 0.5]
@@ -358,7 +378,7 @@ private let _gen4Def: TypeTable = [
     .ice:       [.fighting: 2.0, .fire: 2.0, .ice: 0.5, .rock: 2.0, .steel: 2.0],
     .normal:       [.fighting: 2.0, .ghost: 0.0],
     .poison:       [.bug: 0.5, .fighting: 0.5, .grass: 0.5, .ground: 2.0, .poison: 0.5, .psychic: 2.0],
-    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 0.0, .psychic: 0.5],
+    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 2.0, .psychic: 0.5],
     .rock:       [.fighting: 2.0, .fire: 0.5, .flying: 0.5, .grass: 2.0, .ground: 2.0, .normal: 0.5, .poison: 0.5, .steel: 2.0, .water: 2.0],
     .steel:       [.bug: 0.5, .dark: 0.5, .dragon: 0.5, .fighting: 2.0, .fire: 2.0, .flying: 0.5, .ghost: 0.5, .grass: 0.5, .ground: 2.0, .ice: 0.5, .normal: 0.5, .poison: 0.0, .psychic: 0.5, .rock: 0.5, .steel: 0.5],
     .water:       [.electric: 2.0, .fire: 0.5, .grass: 2.0, .ice: 0.5, .steel: 0.5, .water: 0.5]
@@ -379,7 +399,7 @@ private let _gen5Def: TypeTable = [
     .ice:       [.fighting: 2.0, .fire: 2.0, .ice: 0.5, .rock: 2.0, .steel: 2.0],
     .normal:       [.fighting: 2.0, .ghost: 0.0],
     .poison:       [.bug: 0.5, .fighting: 0.5, .grass: 0.5, .ground: 2.0, .poison: 0.5, .psychic: 2.0],
-    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 0.0, .psychic: 0.5],
+    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 2.0, .psychic: 0.5],
     .rock:       [.fighting: 2.0, .fire: 0.5, .flying: 0.5, .grass: 2.0, .ground: 2.0, .normal: 0.5, .poison: 0.5, .steel: 2.0, .water: 2.0],
     .steel:       [.bug: 0.5, .dark: 0.5, .dragon: 0.5, .fighting: 2.0, .fire: 2.0, .flying: 0.5, .ghost: 0.5, .grass: 0.5, .ground: 2.0, .ice: 0.5, .normal: 0.5, .poison: 0.0, .psychic: 0.5, .rock: 0.5, .steel: 0.5],
     .water:       [.electric: 2.0, .fire: 0.5, .grass: 2.0, .ice: 0.5, .steel: 0.5, .water: 0.5]
@@ -401,7 +421,7 @@ private let _gen6Def: TypeTable = [
     .ice:       [.fighting: 2.0, .fire: 2.0, .ice: 0.5, .rock: 2.0, .steel: 2.0],
     .normal:       [.fighting: 2.0, .ghost: 0.0],
     .poison:       [.bug: 0.5, .fairy: 0.5, .fighting: 0.5, .grass: 0.5, .ground: 2.0, .poison: 0.5, .psychic: 2.0],
-    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 0.0, .psychic: 0.5],
+    .psychic:       [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 2.0, .psychic: 0.5],
     .rock:       [.fighting: 2.0, .fire: 0.5, .flying: 0.5, .grass: 2.0, .ground: 2.0, .normal: 0.5, .poison: 0.5, .steel: 2.0, .water: 2.0],
     .steel:       [.bug: 0.5, .dragon: 0.5, .fairy: 0.5, .fighting: 2.0, .fire: 2.0, .flying: 0.5, .grass: 0.5, .ground: 2.0, .ice: 0.5, .normal: 0.5, .poison: 0.0, .psychic: 0.5, .rock: 0.5, .steel: 0.5],
     .water:       [.electric: 2.0, .fire: 0.5, .grass: 2.0, .ice: 0.5, .steel: 0.5, .water: 0.5]
@@ -423,7 +443,7 @@ private let _gen7Def: TypeTable = [
     .ice:       [.fighting: 2.0, .fire: 2.0, .ice: 0.5, .rock: 2.0, .steel: 2.0],
     .normal:    [.fighting: 2.0, .ghost: 0.0],
     .poison:    [.bug: 0.5, .fairy: 0.5, .fighting: 0.5, .grass: 0.5, .ground: 2.0, .poison: 0.5, .psychic: 2.0],
-    .psychic:   [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 0.0, .psychic: 0.5],
+    .psychic:   [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 2.0, .psychic: 0.5],
     .rock:      [.fighting: 2.0, .fire: 0.5, .flying: 0.5, .grass: 2.0, .ground: 2.0, .normal: 0.5, .poison: 0.5, .steel: 2.0, .water: 2.0],
     .steel:     [.bug: 0.5, .dragon: 0.5, .fairy: 0.5, .fighting: 2.0, .fire: 2.0, .flying: 0.5, .grass: 0.5, .ground: 2.0, .ice: 0.5, .normal: 0.5, .poison: 0.0, .psychic: 0.5, .rock: 0.5, .steel: 0.5],
     .water:     [.electric: 2.0, .fire: 0.5, .grass: 2.0, .ice: 0.5, .steel: 0.5, .water: 0.5]
@@ -445,7 +465,7 @@ private let _gen8Def: TypeTable = [
     .ice:       [.fighting: 2.0, .fire: 2.0, .ice: 0.5, .rock: 2.0, .steel: 2.0],
     .normal:    [.fighting: 2.0, .ghost: 0.0],
     .poison:    [.bug: 0.5, .fairy: 0.5, .fighting: 0.5, .grass: 0.5, .ground: 2.0, .poison: 0.5, .psychic: 2.0],
-    .psychic:   [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 0.0, .psychic: 0.5],
+    .psychic:   [.bug: 2.0, .dark: 2.0, .fighting: 0.5, .ghost: 2.0, .psychic: 0.5],
     .rock:      [.fighting: 2.0, .fire: 0.5, .flying: 0.5, .grass: 2.0, .ground: 2.0, .normal: 0.5, .poison: 0.5, .steel: 2.0, .water: 2.0],
     .steel:     [.bug: 0.5, .dragon: 0.5, .fairy: 0.5, .fighting: 2.0, .fire: 2.0, .flying: 0.5, .grass: 0.5, .ground: 2.0, .ice: 0.5, .normal: 0.5, .poison: 0.0, .psychic: 0.5, .rock: 0.5, .steel: 0.5],
     .water:     [.electric: 2.0, .fire: 0.5, .grass: 2.0, .ice: 0.5, .steel: 0.5, .water: 0.5]

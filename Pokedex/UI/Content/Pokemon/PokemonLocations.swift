@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PokemonLocations: View {
 
-    let pokemon: Pokemon
+    let pokemon: StoredPokemon
     let game: Game
 
     @FetchRequest var locationPokemons: FetchedResults<LocationPokemon>
@@ -49,7 +49,7 @@ struct PokemonLocations: View {
         .navigationTitle("Locations")
     }
 
-    init(pokemon: Pokemon, game: Game) {
+    init(pokemon: StoredPokemon, game: Game) {
         self.pokemon = pokemon
         self.game = game
         self._locationPokemons = .init(fetchRequest: LocationPokemon.fetchRequest(for: pokemon, game: game))
@@ -59,7 +59,7 @@ struct PokemonLocations: View {
 
 struct PokemonLocations_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonLocations(pokemon: Pokemon.generate(withName: "Caterpie", game: .fireRed), game: .fireRed)
+        PokemonLocations(pokemon: StoredPokemon.generate(withName: "Caterpie", game: .fireRed), game: .fireRed)
     }
 }
 

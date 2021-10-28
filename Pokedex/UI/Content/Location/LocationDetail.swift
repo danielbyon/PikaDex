@@ -10,36 +10,36 @@ import SwiftUI
 import Combine
 
 struct LocationDetail: View {
-
+    
     let location: Location
     let game: Game
-
+    
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @FetchRequest private var locationPokemons: FetchedResults<LocationPokemon>
     @State private var selectedSegment: Segment = .byArea
     @State private var selectedMap: LocationMap?
-
+    
     private var hasPokemon: Bool { !locationPokemons.isEmpty }
-
+    
     private var viewModel: LocationDetailViewModel {
         LocationDetailViewModel(location: location, locationPokemons: Array(locationPokemons))
     }
-
+    
     private var currentTitle: String { selectedSegment.rawValue }
     private var mapPreviewHeight: CGFloat { horizontalSizeClass == .regular ? 200.0 : 120.0 }
     private var mapPreviewPadding: CGFloat { 8.0 }
     private var pokemonViewModel: LocationPokemonsViewModel {
         LocationPokemonsViewModel(locationPokemons: Array(locationPokemons), game: game)
     }
-
+    
     var body: some View {
         List {
             Section {
                 Value1Cell(text: "Name", detailText: location.name)
                 BadgeCell(title: "Region", badge: Badge(region: location.region))
             }
-
+            
             if !viewModel.maps.isEmpty {
                 Section(header: SectionHeader("Maps")) {
                     AlternatingBackgroundForEach(viewModel.maps) { map in
@@ -56,12 +56,12 @@ struct LocationDetail: View {
                     }
                 }
             }
-
+            
             if hasPokemon {
                 Section(header: SectionHeader("Pokémon")) {
                     SegmentedControl(selectedSegment: $selectedSegment)
                 }
-
+                
                 switch selectedSegment {
                 case .byArea:
                     ForEach(viewModel.sections) { section in
@@ -93,25 +93,24 @@ struct LocationDetail: View {
                 LocationMapDetail(map: map)
             }
             .navigationViewStyle(StackNavigationViewStyle())
-            .injectDependencies()
         }
     }
-
+    
     private enum Segment: String, CaseIterable, Identifiable {
-
+        
         case byArea = "By Area"
         case byCaptureMethod = "By Capture Method"
-
+        
         var id: String { rawValue }
-
+        
     }
-
+    
     init(location: Location, game: Game) {
         self.location = location
         self.game = game
         self._locationPokemons = FetchRequest(fetchRequest: LocationPokemon.fetchRequest(for: location, game: game))
     }
-
+    
 }
 
 struct LocationDetail_Previews: PreviewProvider {
@@ -130,7 +129,7 @@ struct LocationDetail_Previews: PreviewProvider {
 }
 
 private extension BadgeCell {
-
+    
     init(viewModel: LocationDetailViewModel.ViewModel) {
         self.init(
             title: viewModel.title,
@@ -138,7 +137,7 @@ private extension BadgeCell {
             image: nil,
             badge: viewModel.badge)
     }
-
+    
     init(viewModel: LocationPokemonViewModel) {
         self.init(
             title: viewModel.title,
@@ -146,47 +145,47 @@ private extension BadgeCell {
             image: viewModel.image,
             badge: viewModel.badge)
     }
-
+    
 }
 
 private struct LocationDetailViewModel {
-
+    
     let maps: [LocationMap]
     let sections: [Section]
-
+    
     struct Section {
         let title: String
         let items: [Item]
     }
-
+    
     struct Item {
-        let pokemon: Pokemon
+        let pokemon: StoredPokemon
         let viewModels: [ViewModel]
     }
-
+    
     struct ViewModel {
-
+        
         let title: String
         let subtitle: String?
         let badge: Badge
-
+        
         init(locationPokemon: LocationPokemon) {
             self.title = locationPokemon.encounterRateString
             self.subtitle = locationPokemon.levelRangeWithDetail
             self.badge = Badge(encounterRate: locationPokemon.encounterRate)
         }
-
+        
     }
-
+    
     init<T>(location: Location, locationPokemons: T) where T: RandomAccessCollection, T.Element == LocationPokemon {
         self.maps = location.maps.filter { $0.image != nil }
-
+        
         let missingMaps = location.maps.filter { $0.image == nil }
         if !missingMaps.isEmpty {
             print("Location \(location.name) has missing maps!: \(missingMaps)")
         }
-
-        var transforms: [String: [Pokemon: [LocationPokemon]]] = [:]
+        
+        var transforms: [String: [StoredPokemon: [LocationPokemon]]] = [:]
         locationPokemons.forEach { locationPokemon in
             let area = locationPokemon.area
             let pokemon = locationPokemon.pokemon
@@ -202,7 +201,7 @@ private struct LocationDetailViewModel {
                 transforms[area] = [locationPokemon.pokemon: [locationPokemon]]
             }
         }
-
+        
         self.sections = transforms
             .map { area, areaPokemon in
                 var items: [Item] = areaPokemon.map { pokemon, locationPokemons in
@@ -214,42 +213,42 @@ private struct LocationDetailViewModel {
                             } else {
                                 return $0.title < $1.title
                             }
-                    }
+                        }
                     return Item(pokemon: pokemon, viewModels: viewModels)
                 }
                 items.sort { $0.pokemon.index < $1.pokemon.index }
-
+                
                 let title = "\(area) Area Pokémon"
                 return Section(title: title, items: items)
-        }
-        .sorted { $0.title < $1.title }
+            }
+            .sorted { $0.title < $1.title }
     }
-
+    
 }
 
 extension LocationDetailViewModel.Section: Identifiable {
-
+    
     var id: String { title + items.map { $0.id }.joined() }
-
+    
 }
 
 extension LocationDetailViewModel.Item: Identifiable {
-
+    
     var id: String { pokemon.name + viewModels.map { $0.id }.joined() }
-
+    
 }
 
 extension LocationDetailViewModel.ViewModel: Identifiable {
-
+    
     var id: String { title + (subtitle ?? "") + badge.title }
-
+    
 }
 
 private struct LocationDetailPokemonCell: View {
-
+    
     let item: LocationDetailViewModel.Item
     let game: Game
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             PokemonFormCellInfo(form: item.pokemon.defaultForm, game: game, showsFormName: false)
@@ -261,5 +260,5 @@ private struct LocationDetailPokemonCell: View {
             .padding(.bottom, 8.0)
         }
     }
-
+    
 }

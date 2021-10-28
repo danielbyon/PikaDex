@@ -59,7 +59,7 @@ struct ContentView: View {
             .navigationBarTitle(AppConstants.appName, displayMode: .inline)
             Text("Choose an item to get started")
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .navigationViewStyle(.columns)
         .sheet(isPresented: $sheetState.isShowing, content: sheetDestination)
         .onOpenURL(perform: handleURL)
     }
@@ -70,25 +70,21 @@ struct ContentView: View {
             NavigationLink(destination: FilterablePokemonList(game: settings.currentGame), tag: .pokemon, selection: $selectedTab) {
                 BigColoredButton(title: "Pokémon", fillColor: AppColor.red.color)
             }
-            .isDetailLink(false)
             .frame(minHeight: mediumButtonHeight)
 
             NavigationLink(destination: MoveList(game: settings.currentGame), tag: .moves, selection: $selectedTab) {
                 BigColoredButton(title: "Moves", fillColor: AppColor.blue.color)
             }
-            .isDetailLink(false)
             .frame(minHeight: mediumButtonHeight)
 
             NavigationLink(destination: LocationList(game: settings.currentGame), tag: .locations, selection: $selectedTab) {
                 BigColoredButton(title: "Locations", fillColor: AppColor.orange.color)
             }
-            .isDetailLink(false)
             .frame(minHeight: mediumButtonHeight)
 
             NavigationLink(destination: ItemList(game: settings.currentGame), tag: .items, selection: $selectedTab) {
                 BigColoredButton(title: "Items", fillColor: AppColor.teal.color)
             }
-            .isDetailLink(false)
             .frame(minHeight: mediumButtonHeight)
         }
 
@@ -96,7 +92,6 @@ struct ContentView: View {
             NavigationLink(destination: AbilityList(game: settings.currentGame), tag: .abilities, selection: $selectedTab) {
                 BigColoredButton(title: "Abilities", textColor: .black, fillColor: normalItemColor)
             }
-            .isDetailLink(false)
         }
 
         NavigationLink(destination: NatureList(), tag: .natures, selection: $selectedTab) {
@@ -106,12 +101,10 @@ struct ContentView: View {
         NavigationLink(destination: TypeList(game: settings.currentGame), tag: .types, selection: $selectedTab) {
             BigColoredButton(title: "Types", textColor: .black, fillColor: normalItemColor)
         }
-        .isDetailLink(false)
 
         NavigationLink(destination: MachineList(title: machineListTitle, game: settings.currentGame), tag: .machines, selection: $selectedTab) {
             BigColoredButton(title: machineListTitle, textColor: .black, fillColor: normalItemColor)
         }
-        .isDetailLink(false)
 
         NavigationLink(destination: DualTypeDetail(game: settings.currentGame), tag: .dualType, selection: $selectedTab) {
             BigColoredButton(title: "Dual Type Checker", textColor: .black, fillColor: normalItemColor)
@@ -162,16 +155,13 @@ struct ContentView: View {
         switch sheetState.state {
         case .selectGame:
             GameSelector()
-                .injectDependencies()
         case .settings:
             NavigationView {
                 Settings()
             }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .injectDependencies()
+            .navigationViewStyle(.stack)
         case .store:
             Store()
-                .injectDependencies()
         case .none:
             EmptyView()
         }
@@ -207,7 +197,6 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .environment(\.colorScheme, .dark)
         }
-        .injectDependencies()
     }
 }
 
@@ -231,140 +220,141 @@ private enum Tab: String, Hashable, Identifiable {
 
 // MARK: Experimental
 // Revisit for SwiftUI 3 to see if TabView is fixed
-//private extension PokedexTab {
-//
-//    var body2: some View {
-//        TabView(selection: $selectedTab2) {
-//            Group {
-//                pokemonTab()
-//
-//                movesTab()
-//
-//                locationsTab()
-//
-//                itemsTab()
-//
-//                if settings.currentGame.hasAbilities {
-//                    abilitiesTab()
-//                }
-//
-//                naturesTab()
-//
-//                typesTab()
-//
-//                machinesTab()
-//
-//                dualTypeCheckerTab()
-//
-//                battleAssistantTab()
-//            }
-//
-//            teamBuilderTab()
-//        }
-//        .onOpenURL(perform: handleURL)
-//    }
-//
-//    func pokemonTab() -> some View {
-//        NavigationView {
-//            FilterablePokemonList()
-//            Text("Choose an item to get started")
-//        }
-//        .if(selectedTab2 == .pokemon) {
-//            $0.tabItem { Label("Pokémon", systemImage: "book.fill") }
-//        } else: {
-//            $0.tabItem { Label("Pokémon", systemImage: "book") }
-//        }
-//        .tag(Tab.pokemon)
-//    }
-//
-//    func movesTab() -> some View {
-//        NavigationView {
-//            MoveList(game: settings.currentGame)
-//            Text("Choose an item to get started")
-//        }
-//        .tabItem { Label("Moves", systemImage: "chevron.right.2") }
-//        .tag(Tab.moves)
-//    }
-//
-//    func locationsTab() -> some View {
-//        NavigationView {
-//            LocationList(game: settings.currentGame)
-//            Text("Choose an item to get started")
-//        }
-//        .tabItem { Label("Locations", systemImage: "location") }
-//        .tag(Tab.locations)
-//    }
-//
-//    func itemsTab() -> some View {
-//        NavigationView {
-//            ItemList(game: settings.currentGame)
-//            Text("Choose an item to get started")
-//        }
-//        .tabItem { Label("Items", systemImage: "pills") }
-//        .tag(Tab.items)
-//    }
-//
-//    func abilitiesTab() -> some View {
-//        NavigationView {
-//            AbilityList(game: settings.currentGame)
-//            Text("Choose an item to get started")
-//        }
-//        .tabItem { Label("Abilities", systemImage: "bolt.horizontal") }
-//        .tag(Tab.abilities)
-//    }
-//
-//    func naturesTab() -> some View {
-//        NavigationView {
-//            NatureList()
-//        }
-//        .navigationViewStyle(StackNavigationViewStyle())
-//        .tabItem { Label("Natures", systemImage: "leaf") }
-//        .tag(Tab.natures)
-//    }
-//
-//    func typesTab() -> some View {
-//        NavigationView {
-//            TypeList(game: settings.currentGame)
-//            Text("Choose an item to get started")
-//        }
-//        .tabItem { Label("Types", systemImage: "doc") }
-//        .tag(Tab.types)
-//    }
-//
-//    func machinesTab() -> some View {
-//        NavigationView {
-//            MachineList(title: machineListTitle, game: settings.currentGame)
-//            Text("Choose an item to get started")
-//        }
-//        .tabItem { Label(machineListTitle, systemImage: "opticaldisc") }
-//        .tag(Tab.machines)
-//    }
-//
-//    func dualTypeCheckerTab() -> some View {
-//        NavigationView {
-//            DualTypeDetail(game: settings.currentGame)
-//        }
-//        .navigationViewStyle(StackNavigationViewStyle())
-//        .tabItem { Label("Dual Type Checker", systemImage: "person.2") }
-//        .tag(Tab.dualType)
-//    }
-//
-//    func battleAssistantTab() -> some View {
-//        NavigationView {
-//            BattleAssistant()
-//        }
-//        .navigationViewStyle(StackNavigationViewStyle())
-//        .tabItem { Label("Battle Assistant", systemImage: "hammer") }
-//        .tag(Tab.battleAssistant)
-//    }
-//
-//    func teamBuilderTab() -> some View {
-//        NavigationView {
-//            TeamBuilder(viewModel: .init(game: settings.currentGame))
-//        }
-//        .navigationViewStyle(StackNavigationViewStyle())
-//        .tabItem { Label("Teams", systemImage: "person.3") }
-//        .tag(Tab.teams)
-//    }
-//
-//}
+private extension ContentView {
+
+    var body2: some View {
+        TabView(selection: $selectedTab) {
+            Group {
+                pokemonTab()
+
+                movesTab()
+
+                locationsTab()
+
+                itemsTab()
+
+                if settings.currentGame.hasAbilities {
+                    abilitiesTab()
+                }
+
+                naturesTab()
+
+                typesTab()
+
+                machinesTab()
+
+                dualTypeCheckerTab()
+
+                battleAssistantTab()
+            }
+
+            teamBuilderTab()
+        }
+        .onOpenURL(perform: handleURL)
+    }
+
+    func pokemonTab() -> some View {
+        NavigationView {
+            FilterablePokemonList(game: settings.currentGame)
+            Text("Choose an item to get started")
+        }
+        //        .if(selectedTab == .pokemon) {
+        //            $0
+        .tabItem { Label("Pokémon", systemImage: "book.fill") }
+        //        } else: {
+        //            $0.tabItem { Label("Pokémon", systemImage: "book") }
+        //        }
+        .tag(Tab.pokemon)
+    }
+
+    func movesTab() -> some View {
+        NavigationView {
+            MoveList(game: settings.currentGame)
+            Text("Choose an item to get started")
+        }
+        .tabItem { Label("Moves", systemImage: "chevron.right.2") }
+        .tag(Tab.moves)
+    }
+
+    func locationsTab() -> some View {
+        NavigationView {
+            LocationList(game: settings.currentGame)
+            Text("Choose an item to get started")
+        }
+        .tabItem { Label("Locations", systemImage: "location") }
+        .tag(Tab.locations)
+    }
+
+    func itemsTab() -> some View {
+        NavigationView {
+            ItemList(game: settings.currentGame)
+            Text("Choose an item to get started")
+        }
+        .tabItem { Label("Items", systemImage: "pills") }
+        .tag(Tab.items)
+    }
+
+    func abilitiesTab() -> some View {
+        NavigationView {
+            AbilityList(game: settings.currentGame)
+            Text("Choose an item to get started")
+        }
+        .tabItem { Label("Abilities", systemImage: "bolt.horizontal") }
+        .tag(Tab.abilities)
+    }
+
+    func naturesTab() -> some View {
+        NavigationView {
+            NatureList()
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .tabItem { Label("Natures", systemImage: "leaf") }
+        .tag(Tab.natures)
+    }
+
+    func typesTab() -> some View {
+        NavigationView {
+            TypeList(game: settings.currentGame)
+            Text("Choose an item to get started")
+        }
+        .tabItem { Label("Types", systemImage: "doc") }
+        .tag(Tab.types)
+    }
+
+    func machinesTab() -> some View {
+        NavigationView {
+            MachineList(title: machineListTitle, game: settings.currentGame)
+            Text("Choose an item to get started")
+        }
+        .tabItem { Label(machineListTitle, systemImage: "opticaldisc") }
+        .tag(Tab.machines)
+    }
+
+    func dualTypeCheckerTab() -> some View {
+        NavigationView {
+            DualTypeDetail(game: settings.currentGame)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .tabItem { Label("Dual Type Checker", systemImage: "person.2") }
+        .tag(Tab.dualType)
+    }
+
+    func battleAssistantTab() -> some View {
+        NavigationView {
+            BattleAssistant()
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .tabItem { Label("Battle Assistant", systemImage: "hammer") }
+        .tag(Tab.battleAssistant)
+    }
+
+    func teamBuilderTab() -> some View {
+        NavigationView {
+            TeamBuilder(game: settings.currentGame)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .tabItem { Label("Teams", systemImage: "person.3") }
+        .tag(Tab.teams)
+    }
+
+}

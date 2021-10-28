@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BattleAssistantInfo: View {
 
-    let pokemon: Pokemon
+    let pokemon: StoredPokemon
     let level: Int
 
     @EnvironmentObject var settings: AppSettings
@@ -47,7 +47,7 @@ struct BattleAssistantInfo: View {
         }
     }
 
-    init(pokemon: Pokemon, level: Int) {
+    init(pokemon: StoredPokemon, level: Int) {
         self.pokemon = pokemon
         self.level = level
     }
@@ -58,7 +58,7 @@ struct BattleAssistantInfo_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             List {
-                BattleAssistantInfo(pokemon: Pokemon.generateCharizard(game: .sword), level: 50)
+                BattleAssistantInfo(pokemon: StoredPokemon.generateCharizard(game: .sword), level: 50)
             }
             .listStyle(GroupedListStyle())
             .injectDependencies()

@@ -46,7 +46,7 @@ struct PokemonLearnsetGroup_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             List {
-                PokemonLearnsetGroup(title: "Level", game: .sword, learnsetFetchRequest: LevelLearnsetEntry.fetchRequest(forPokemonForm: Pokemon.generateCharizard().defaultForm))
+                PokemonLearnsetGroup(title: "Level", game: .sword, learnsetFetchRequest: LevelLearnsetEntry.fetchRequest(forPokemonForm: StoredPokemon.generateCharizard().defaultForm))
             }
         }
         .modifier(Dependencies())

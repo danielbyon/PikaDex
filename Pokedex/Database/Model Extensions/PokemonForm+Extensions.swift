@@ -199,7 +199,7 @@ public extension PokemonForm {
         get { z_hiddenAbility }
         set { z_hiddenAbility = newValue; i_hiddenAbilityIndex = Int32(newValue?.index ?? -1) }
     }
-    var pokemon: Pokemon {
+    var pokemon: StoredPokemon {
         get { z_pokemon! }
         set { z_pokemon = newValue }
     }

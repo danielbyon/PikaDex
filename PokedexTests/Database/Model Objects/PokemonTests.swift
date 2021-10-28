@@ -12,7 +12,7 @@ import CoreData
 
 class PokemonTests: ModelObjectBaseTestCase {
     
-    typealias Subject = Pokemon
+    typealias Subject = StoredPokemon
     
     func testProperties() {
         let sut = Subject(context: context)

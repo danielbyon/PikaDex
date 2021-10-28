@@ -17,13 +17,12 @@ struct FilterablePokemonList: View {
 
     var body: some View {
         PokemonList(
-            fetchRequest: Pokemon.allFetchRequest(for: game, filter: viewModel.filter),
+            fetchRequest: StoredPokemon.allFetchRequest(for: game, filter: viewModel.filter),
             game: game,
             numberKeyPath: viewModel.filter.filterBy.keyPath)
             .id(viewModel.filter)
             .sheet(isPresented: $isShowingFilter) {
                 PokemonListFilter(game: game, viewModel: viewModel)
-                    .injectDependencies()
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

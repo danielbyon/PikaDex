@@ -40,7 +40,7 @@ struct PokemonAbilitiesSection: View {
 
 struct PokemonAbilities_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonAbilitiesSection(form: Pokemon.generateCharizard(game: .sword).defaultForm ,game: .sword)
+        PokemonAbilitiesSection(form: StoredPokemon.generateCharizard(game: .sword).defaultForm ,game: .sword)
             .injectDependencies()
     }
 }

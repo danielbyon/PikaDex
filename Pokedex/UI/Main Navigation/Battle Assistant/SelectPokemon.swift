@@ -11,9 +11,9 @@ import SwiftUI
 struct SelectPokemon: View {
 
     let game: Game
-    let onSelect: (Pokemon) -> Void
+    let onSelect: (StoredPokemon) -> Void
 
-    @FetchRequest private var pokemon: FetchedResults<Pokemon>
+    @FetchRequest private var pokemon: FetchedResults<StoredPokemon>
 
     var body: some View {
         SearchableList(objects: pokemon, searchPlaceholder: "Search for a Pokémon") { pokemon in
@@ -24,10 +24,10 @@ struct SelectPokemon: View {
         .navigationTitle("Select Pokémon")
     }
 
-    init(game: Game, onSelect: @escaping (Pokemon) -> Void) {
+    init(game: Game, onSelect: @escaping (StoredPokemon) -> Void) {
         self.game = game
         self.onSelect = onSelect
-        self._pokemon = FetchRequest(fetchRequest: Pokemon.allFetchRequest(for: game, filter: .defaultFilter(forGame: game)))
+        self._pokemon = FetchRequest(fetchRequest: StoredPokemon.allFetchRequest(for: game, filter: .defaultFilter(forGame: game)))
     }
 
 }
@@ -41,7 +41,7 @@ struct SelectPokemon_Previews: PreviewProvider {
 
 private struct SelectPokemonCell: View {
 
-    let pokemon: Pokemon
+    let pokemon: StoredPokemon
 
     var body: some View {
         HStack {

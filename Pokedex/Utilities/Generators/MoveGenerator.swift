@@ -1,5 +1,5 @@
 //
-//  MoveStore.swift
+//  MoveGenerator.swift
 //  Pokedex
 //
 //  Created by Daniel Byon on 1/27/20.

@@ -1,5 +1,5 @@
 //
-//  Pokemon.Filter.swift
+//  StoredPokemon.Filter.swift
 //  Pokedex
 //
 //  Created by Daniel Byon on 5/19/20.
@@ -9,7 +9,7 @@
 import SwiftUI
 import AppSupport
 
-extension Pokemon {
+extension StoredPokemon {
 
     public struct Filter: Codable {
 //    public class Filter: ObservableObject, Codable {
@@ -87,49 +87,49 @@ extension Pokemon {
 
 }
 
-extension Pokemon.Filter: Equatable {
+extension StoredPokemon.Filter: Equatable {
 
-    public static func == (lhs: Pokemon.Filter, rhs: Pokemon.Filter) -> Bool {
+    public static func == (lhs: StoredPokemon.Filter, rhs: StoredPokemon.Filter) -> Bool {
         lhs.filterBy == rhs.filterBy && lhs.sortBy == rhs.sortBy && lhs.sortOrder == rhs.sortOrder
     }
 
 }
 
-extension Pokemon.Filter: Hashable { }
+extension StoredPokemon.Filter: Hashable { }
 
-extension Pokemon.Filter: Identifiable {
+extension StoredPokemon.Filter: Identifiable {
 
     public var id: String { filterBy.id + sortBy.id + sortOrder.id }
 
 }
 
-extension Pokemon.Filter: UserDefaultPersistable { }
+extension StoredPokemon.Filter: UserDefaultPersistable { }
 
-extension Pokemon.Filter.FilterBy: Equatable { }
+extension StoredPokemon.Filter.FilterBy: Equatable { }
 
-extension Pokemon.Filter.FilterBy: Hashable { }
+extension StoredPokemon.Filter.FilterBy: Hashable { }
 
-extension Pokemon.Filter.FilterBy: Identifiable {
+extension StoredPokemon.Filter.FilterBy: Identifiable {
 
     public var id: String { title }
 
 }
 
-extension Pokemon.Filter.SortBy: Equatable { }
+extension StoredPokemon.Filter.SortBy: Equatable { }
 
-extension Pokemon.Filter.SortBy: Hashable { }
+extension StoredPokemon.Filter.SortBy: Hashable { }
 
-extension Pokemon.Filter.SortBy: Identifiable {
+extension StoredPokemon.Filter.SortBy: Identifiable {
 
     public var id: String { rawValue }
 
 }
 
-extension Pokemon.Filter.SortOrder: Equatable { }
+extension StoredPokemon.Filter.SortOrder: Equatable { }
 
-extension Pokemon.Filter.SortOrder: Hashable { }
+extension StoredPokemon.Filter.SortOrder: Hashable { }
 
-extension Pokemon.Filter.SortOrder: Identifiable {
+extension StoredPokemon.Filter.SortOrder: Identifiable {
 
     public var id: String { rawValue }
 

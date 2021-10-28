@@ -14,6 +14,7 @@ struct SelectAbility: View {
     let game: Game
     let onSelect: (Ability) -> Void
 
+    @Environment(\.dismiss) var dismiss
     @FetchRequest var abilities: FetchedResults<Ability>
 
     var body: some View {
@@ -22,16 +23,19 @@ struct SelectAbility: View {
                 if let primaryAbility = form.primaryAbility {
                     AbilityCell(model: .init(ability: primaryAbility)).onTapGesture {
                         self.onSelect(primaryAbility)
+                        self.dismiss()
                     }
                 }
                 if let secondaryAbility = form.secondaryAbility {
                     AbilityCell(model: .init(ability: secondaryAbility)).onTapGesture {
                         self.onSelect(secondaryAbility)
+                        self.dismiss()
                     }
                 }
                 if let hiddenAbility = form.hiddenAbility {
                     AbilityCell(model: .init(ability: hiddenAbility)).onTapGesture {
                         self.onSelect(hiddenAbility)
+                        self.dismiss()
                     }
                 }
             }
@@ -40,6 +44,7 @@ struct SelectAbility: View {
                 ForEach(abilities) { ability in
                     AbilityCell(model: AbilityViewModel(ability: ability)).onTapGesture {
                         self.onSelect(ability)
+                        self.dismiss()
                     }
                 }
             }
@@ -58,6 +63,6 @@ struct SelectAbility: View {
 
 struct SelectAbility_Previews: PreviewProvider {
     static var previews: some View {
-        SelectAbility(form: Pokemon.generateCharizard().defaultForm, game: .sword, onSelect: { _ in })
+        SelectAbility(form: StoredPokemon.generateCharizard().defaultForm, game: .sword, onSelect: { _ in })
     }
 }

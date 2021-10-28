@@ -15,44 +15,52 @@ struct TeamBuilder: View {
     @Environment(\.editMode) var editMode
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var currentEditingTeam: TeamViewModel?
-    @State private var currentAlert: AlertState?
-    @StateObject var viewModel: TeamBuilderViewModel
+    @State private var currentDeletingTeam: TeamViewModel?
+    @State private var isShowingDeleteConfirmation = false
+    @State private var isShowingPokepasteExport = false
+    @StateObject var viewModel = TeamBuilderViewModel()
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 2 : 1 }
 
     var body: some View {
         content()
-            .if(viewModel.teams.isEmpty) { $0.overlay(emptyState()) }
+            .background {
+                emptyState()
+                    .opacity(viewModel.teams.isEmpty ? 1.0 : 0.0)
+            }
             .navigationTitle("Teams")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     EditButton()
-                    addNewTeamButton()
+                    Button(action: viewModel.addNewTeam) {
+                        Image(systemName: "plus")
+                    }
                 }
             }
-            .alert(item: $currentAlert, content: alertDestination)
-            .onOpenURL(perform: handleURL)
-    }
-
-    private enum AlertState: Identifiable {
-
-        case pokepasteExport
-        case deleteTeam(TeamViewModel)
-
-        var id: String {
-            switch self {
-            case .pokepasteExport:
-                return "pokepasteExport"
-            case .deleteTeam(let team):
-                return "team_\(team.id)"
+            .alert(isPresented: $isShowingPokepasteExport) {
+                Alert(
+                    title: Text("Copied to clipboard!"),
+                    message: Text("Your team has been exported to the PokéPaste format and copied to the clipboard."),
+                    dismissButton: .default(Text("Dismiss")))
             }
-        }
-
-    }
-
-    init(game: Game) {
-        self.game = game
-        self._viewModel = .init(wrappedValue: .init(game: game))
+            .confirmationDialog("Delete Team?", isPresented: $isShowingDeleteConfirmation, presenting: currentDeletingTeam) { team in
+                Button(role: .destructive) {
+                    withAnimation {
+                        viewModel.deleteTeam(team)
+                    }
+                } label: {
+                    Text("Delete")
+                }
+                Button(role: .cancel, action: {}) {
+                    Text("Cancel")
+                }
+            } message: { _ in
+                Text("This action cannot be undone.")
+            }
+            .onOpenURL(perform: handleURL)
+            .onAppear {
+                viewModel.game = game
+            }
     }
 
     private func emptyState() -> some View {
@@ -62,10 +70,21 @@ struct TeamBuilder: View {
 
     private func content() -> some View {
         ScrollView {
-            LazyVGrid(columns: Array(repeating: .init(), count: numberOfColumns), alignment: .leading, spacing: 24.0) {
+            LazyVGrid(
+                columns: Array(repeating: .init(), count: numberOfColumns),
+                alignment: .leading,
+                spacing: 24.0
+            ) {
                 Section(footer: footer()) {
                     ForEach(viewModel.teams) { team in
-                        NavigationLink(destination: TeamEditor(viewModel: team, game: viewModel.game), tag: team, selection: $currentEditingTeam) {
+                        NavigationLink(
+                            destination: TeamEditor(
+                                game: viewModel.game,
+                                viewModel: team
+                            ),
+                            tag: team,
+                            selection: $currentEditingTeam
+                        ) {
                             teamItemCell(team: team)
                         }
                     }
@@ -91,45 +110,26 @@ struct TeamBuilder: View {
     private func teamItemCell(team: TeamViewModel) -> some View {
         TeamCell(team: team)
             .contextMenu {
-                Button("Delete") {
-                    currentAlert = .deleteTeam(team)
+                Button(role: .destructive) {
+                    currentDeletingTeam = team
+                    isShowingDeleteConfirmation = true
+                } label: {
+                    Label("Delete", image: "trash")
                 }
-                Button("Export PokéPaste") {
-                    self.viewModel.exportTeam(team)
-                    currentAlert = .pokepasteExport
+                Button(role: nil) {
+                    viewModel.exportTeam(team)
+                    isShowingPokepasteExport = true
+                } label: {
+                    Label("Export PokéPaste", image: "share")
                 }
             }
-            .if(editMode?.wrappedValue.isEditing == true) {
-                $0.overlay(DeleteButton {
-                    currentAlert = .deleteTeam(team)
-                }, alignment: .topTrailing)
-            }
-    }
-
-    private func addNewTeamButton() -> some View {
-        Button(action: viewModel.addNewTeam) {
-            Image(systemName: "plus")
-        }
-    }
-
-    private func alertDestination(_ state: AlertState) -> Alert {
-        switch state {
-        case .pokepasteExport:
-            return Alert(
-                title: Text("Copied to clipboard!"),
-                message: Text("Your team has been exported to the PokéPaste format and copied to the clipboard."),
-                dismissButton: .default(Text("Dismiss")))
-        case .deleteTeam(let team):
-            return Alert(
-                title: Text("Delete team?"),
-                message: Text("This action cannot be undone."),
-                primaryButton: .cancel(),
-                secondaryButton: .destructive(Text("Delete")) {
-                    withAnimation {
-                        viewModel.deleteTeam(team)
-                    }
-                })
-        }
+            .overlay(
+                DeleteButton {
+                    currentDeletingTeam = team
+                    isShowingDeleteConfirmation = true
+                }.opacity(editMode?.wrappedValue.isEditing == true ? 1.0 : 0.0),
+                alignment: .topTrailing
+            )
     }
 
     private func handleURL(_ url: URL) {

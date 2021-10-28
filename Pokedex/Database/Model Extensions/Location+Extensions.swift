@@ -27,7 +27,7 @@ public extension Location {
         return request
     }
 
-    static func fetchRequest(for pokemon: Pokemon, game: Game) -> NSFetchRequest<Location> {
+    static func fetchRequest(for pokemon: StoredPokemon, game: Game) -> NSFetchRequest<Location> {
         let request: NSFetchRequest<Location> = Location.fetchRequest()
         request.fetchBatchSize = DatabaseConstants.fetchBatchSize
         request.predicate = NSPredicate(format: "z_game == %@ AND locationPokemon.z_pokemon == %@", game.rawValue, pokemon)

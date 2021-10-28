@@ -35,21 +35,4 @@ final class AppSettings: ObservableObject {
     private static let shouldUseMetersForHeightKey = "shouldUseMetersForHeight"
     private static let shouldUseKilogramsForWeightKey = "shouldUseKilogramsForWeight"
 
-    init() {
-        setupObserver()
-    }
-
-    private func setupObserver() {
-        subscription = Publishers.Merge(
-            NotificationCenter.default
-                .publisher(for: UIApplication.willEnterForegroundNotification),
-            NotificationCenter.default
-                .publisher(for: UserDefaults.didChangeNotification)
-        )
-        .receive(on: DispatchQueue.main)
-        .sink { [unowned self] _ in
-            self.objectWillChange.send()
-        }
-    }
-
 }

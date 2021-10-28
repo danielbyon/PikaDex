@@ -38,7 +38,7 @@ struct ProgressBar: View {
                         }
                     }
                 }
-                .animation(.spring())
+                .animation(.spring(), value: progress)
             } else {
                 Spacer()
             }

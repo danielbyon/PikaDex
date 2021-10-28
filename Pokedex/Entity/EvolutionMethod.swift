@@ -16,11 +16,11 @@ public enum EvolutionMethod {
     case levelUpHoldingItem(Item)
     case levelUpInArea(String)
     case levelUpKnowingMove(Move)
-    case levelUpWithPartyMember(Pokemon)
+    case levelUpWithPartyMember(StoredPokemon)
     case levelUpWithStats(String)
     case other(String)
     case trade
-    case tradeForPokemon(Pokemon)
+    case tradeForPokemon(StoredPokemon)
     case tradeHoldingItem(Item)
     case trainerAction(String)
     case useItem(Item)
@@ -104,7 +104,7 @@ public extension EvolutionMethod {
         }
     }
 
-    var pokemon: Pokemon? {
+    var pokemon: StoredPokemon? {
         switch self {
         case .levelUpWithPartyMember(let pokemon),
              .tradeForPokemon(let pokemon):

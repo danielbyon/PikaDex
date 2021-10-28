@@ -1,5 +1,5 @@
 //
-//  LocationStore.swift
+//  LocationGenerator.swift
 //  Pokedex
 //
 //  Created by Daniel Byon on 4/11/20.

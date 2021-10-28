@@ -54,6 +54,8 @@ public extension PokedexNumbers {
             retVal.append(("Galar", galar ?? -1))
             retVal.append(("Isle of Armor", isleOfArmor ?? -1))
             retVal.append(("Crown Tundra", crownTundra ?? -1))
+        case .national:
+            break // national is always added
         }
 
         retVal.removeAll { $0.1 == -1 }
@@ -170,7 +172,7 @@ public extension PokedexNumbers {
         set { z_unova = newValue?.toInt64() ?? 0 }
     }
 
-    var pokemon: Pokemon {
+    var pokemon: StoredPokemon {
         get { z_pokemon! }
         set { z_pokemon = newValue }
     }

@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ItemDetail: View {
-
+    
     let item: Item
     let game: Game
-
+    
     private var description: String? {
         switch item.itemType {
         case .item:
@@ -21,7 +21,7 @@ struct ItemDetail: View {
             return item.berryInfo?.itemDescription
         }
     }
-
+    
     var body: some View {
         List {
             if let description = description {
@@ -29,23 +29,23 @@ struct ItemDetail: View {
                     DescriptionCell(text: description)
                 }
             }
-
+            
             switch item.itemType {
             case .berry:
                 BerryItemInfoDetail(item: item, game: game)
             case .item:
                 BagItemInfoDetail(item: item, game: game)
             }
-
-//            Section(header: SectionHeader("Locations")) {
-//                Text("Coming soon!")
-//                    .monospacedBody()
-//            }
+            
+            //            Section(header: SectionHeader("Locations")) {
+            //                Text("Coming soon!")
+            //                    .monospacedBody()
+            //            }
         }
         .listStyle(GroupedListStyle())
         .navigationTitle(item.name)
     }
-
+    
 }
 
 struct ItemDetail_Previews: PreviewProvider {
@@ -63,20 +63,20 @@ struct ItemDetail_Previews: PreviewProvider {
 }
 
 struct BagItemInfoDetail: View {
-
+    
     let item: Item
     let game: Game
     var info: BagItemInfo { item.bagInfo! }
-
+    
     private let noPrice = "\u{2014}"
-
+    
     var body: some View {
         Group {
             Section {
                 Value1Cell(text: "Pocket", detailText: info.pocket.title(forGame: game), image: nil)
                 Value1Cell(text: "Introduced", detailText: item.generationIntroduced.title)
             }
-
+            
             if info.cost != nil || info.sell != nil {
                 Section {
                     if let cost = info.cost {
@@ -89,15 +89,15 @@ struct BagItemInfoDetail: View {
             }
         }
     }
-
+    
 }
 
 struct BerryItemInfoDetail: View {
-
+    
     let item: Item
     let game: Game
     var info: BerryItemInfo { item.berryInfo! }
-
+    
     var body: some View {
         Group {
             Section {
@@ -106,17 +106,17 @@ struct BerryItemInfoDetail: View {
             }
         }
     }
-
+    
 }
 
 private struct ItemPriceCell: View {
-
+    
     let title: String
     let price: Int
     let generation: Generation
-
+    
     @Environment(\.sizeCategory) var sizeCategory
-
+    
     var body: some View {
         HStack {
             Text(title)
@@ -136,13 +136,13 @@ private struct ItemPriceCell: View {
         .contentShape(Rectangle())
         .foregroundColor(.primary)
     }
-
+    
 }
 
 private extension Generation {
-
+    
     var priceSprite: Image {
         Image("Price/generation\(rawValue)")
     }
-
+    
 }

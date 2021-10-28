@@ -13,26 +13,26 @@ struct SelectItem: View {
     let game: Game
     let onSelect: (Item?) -> Void
 
+    @Environment(\.dismiss) var dismiss
     @FetchRequest var items: FetchedResults<Item>
-
+    
     var body: some View {
-        VStack {
-            Card {
-                HStack {
-                    Text("None")
-                        .monospacedBody()
-                    Spacer()
-                }
+        SearchableList(objects: items, searchPlaceholder: "Search for an item") { item in
+            HStack {
+                ItemCell(item: item)
+                Spacer()
             }
             .contentShape(Rectangle())
-            .padding()
             .onTapGesture {
-                self.onSelect(nil)
+                self.onSelect(item)
+                self.dismiss()
             }
-
-            SearchableList(objects: items, searchPlaceholder: "Search for an item") { item in
-                ItemCell(item: item).onTapGesture {
-                    self.onSelect(item)
+        }
+        .toolbar {
+            ToolbarItem {
+                Button("Remove Item") {
+                    self.onSelect(nil)
+                    self.dismiss()
                 }
             }
         }

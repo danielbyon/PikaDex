@@ -29,7 +29,7 @@ extension LocationPokemon {
         return request
     }
 
-    static func fetchRequest(for pokemon: Pokemon, game: Game) -> NSFetchRequest<LocationPokemon> {
+    static func fetchRequest(for pokemon: StoredPokemon, game: Game) -> NSFetchRequest<LocationPokemon> {
         let request: NSFetchRequest<LocationPokemon> = LocationPokemon.fetchRequest()
         request.predicate = NSPredicate(format: "\(#keyPath(LocationPokemon.z_pokemon)) == %@ && \(#keyPath(LocationPokemon.z_game)) == %@", pokemon, game.rawValue)
         request.relationshipKeyPathsForPrefetching = [
@@ -120,7 +120,7 @@ public extension LocationPokemon {
         get { z_location! }
         set { z_location = newValue }
     }
-    var pokemon: Pokemon {
+    var pokemon: StoredPokemon {
         get { z_pokemon! }
         set { z_pokemon = newValue}
     }

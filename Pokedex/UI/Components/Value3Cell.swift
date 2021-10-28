@@ -48,6 +48,6 @@ struct Value3Cell: View {
 
 struct Value3Cell_Previews: PreviewProvider {
     static var previews: some View {
-        Value3Cell(title: "Charizard", subtitle: "Mega Charizard X", detail: "Level 01", image: UIImage(named: Pokemon.generateCharizard().defaultForm.spriteName))
+        Value3Cell(title: "Charizard", subtitle: "Mega Charizard X", detail: "Level 01", image: UIImage(named: StoredPokemon.generateCharizard().defaultForm.spriteName))
     }
 }

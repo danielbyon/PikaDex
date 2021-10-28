@@ -102,7 +102,8 @@ private extension Game {
              .letsGoEevee:
             return ["LGPLGE"]
         case .sword,
-             .shield:
+             .shield,
+             .national:
             return ["SS"]
         }
     }

@@ -1,5 +1,5 @@
 //
-//  Pokemon+Strings.swift
+//  StoredPokemon+Strings.swift
 //  Pokedex
 //
 //  Created by Daniel Byon on 11/20/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Pokemon {
+extension StoredPokemon {
 
     func pokedexNumberString(forKeyPath keyPath: String) -> String {
         let number = value(forKeyPath: keyPath) as! NSNumber

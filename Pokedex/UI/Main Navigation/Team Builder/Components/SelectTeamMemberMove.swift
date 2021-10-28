@@ -14,6 +14,7 @@ struct SelectTeamMemberMove: View {
     let game: Game
     let onSelect: (Move) -> Void
 
+    @Environment(\.dismiss) var dismiss
     @FetchRequest private var levelLearnset: FetchedResults<LevelLearnsetEntry>
     @FetchRequest private var machineLearnset: FetchedResults<MachineLearnsetEntry>
     @FetchRequest private var breedLearnset: FetchedResults<BreedLearnsetEntry>
@@ -45,6 +46,7 @@ struct SelectTeamMemberMove: View {
                         ForEach(levelEntries) { entry in
                             PokemonLearnsetGroupCell(move: entry.move, detailText: entry.detailText, game: self.game).onTapGesture {
                                 self.onSelect(entry.move)
+                                self.dismiss()
                             }
                         }
                     }
@@ -55,6 +57,7 @@ struct SelectTeamMemberMove: View {
                         ForEach(machineEntries) { entry in
                             PokemonLearnsetGroupCell(move: entry.move, detailText: entry.detailText, game: self.game).onTapGesture {
                                 self.onSelect(entry.move)
+                                self.dismiss()
                             }
                         }
                     }
@@ -65,6 +68,7 @@ struct SelectTeamMemberMove: View {
                         ForEach(breedEntries) { entry in
                             PokemonLearnsetGroupCell(move: entry.move, detailText: entry.detailText, game: self.game).onTapGesture {
                                 self.onSelect(entry.move)
+                                self.dismiss()
                             }
                         }
                     }
@@ -75,6 +79,7 @@ struct SelectTeamMemberMove: View {
                         ForEach(tutorEntries) { entry in
                             PokemonLearnsetGroupCell(move: entry.move, detailText: entry.detailText, game: self.game).onTapGesture {
                                 self.onSelect(entry.move)
+                                self.dismiss()
                             }
                         }
                     }
@@ -83,6 +88,7 @@ struct SelectTeamMemberMove: View {
                 ForEach(allMoves) { move in
                     MoveCell(move: move, game: self.game).onTapGesture {
                         self.onSelect(move)
+                        self.dismiss()
                     }
                 }
             }
@@ -108,7 +114,7 @@ struct SelectTeamMemberMove: View {
 struct SelectTeamMemberMove_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SelectTeamMemberMove(pokemonForm: Pokemon.generateCharizard(game: .sword).defaultForm, game: .sword, onSelect: { _ in })
+            SelectTeamMemberMove(pokemonForm: StoredPokemon.generateCharizard(game: .sword).defaultForm, game: .sword, onSelect: { _ in })
         }
         .injectDependencies()
     }

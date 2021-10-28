@@ -11,7 +11,7 @@ import AppSupport
 
 final class BattleAssistantViewModel: ObservableObject {
 
-    @Published var pokemon: Pokemon? {
+    @Published var pokemon: StoredPokemon? {
         didSet {
             pokemonName = pokemon?.name
             game = pokemon?.game
@@ -53,7 +53,7 @@ final class BattleAssistantViewModel: ObservableObject {
             return
         }
         let moc = Dependencies.container.viewContext
-        let request = Pokemon.fetchRequest(forName: pokemonName, game: game)
+        let request = StoredPokemon.fetchRequest(forName: pokemonName, game: game)
         do {
             let pokemon = try moc.fetch(request).first
             self.pokemon = pokemon

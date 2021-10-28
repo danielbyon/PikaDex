@@ -56,8 +56,8 @@ public extension BreedLearnsetEntry {
 // MARK: - Values
 public extension BreedLearnsetEntry {
 
-    var fathers: [Pokemon] {
-        get { z_fathers!.allObjects as! [Pokemon] }
+    var fathers: [StoredPokemon] {
+        get { z_fathers!.allObjects as! [StoredPokemon] }
         set { z_fathers = NSSet(array: newValue) }
     }
 

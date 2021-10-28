@@ -17,6 +17,7 @@ public enum Generation: Int, CaseIterable {
     case vi
     case vii
     case viii
+    case all = 1000
 
     public init(game: Game) {
         switch game {
@@ -36,6 +37,8 @@ public enum Generation: Int, CaseIterable {
             self = .vii
         case .sword, .shield:
             self = .viii
+        case .national:
+            self = .all
         }
     }
 
@@ -43,14 +46,22 @@ public enum Generation: Int, CaseIterable {
 
 public extension Generation {
 
-    static var latest: Generation { Generation.allCases.last! }
+    static var latest: Generation { Generation.allCases.filter { $0 != .all }.last! }
 
     var title: String {
-        return "Generation \(rawValue)"
+        if self == .all {
+            return "National"
+        } else {
+            return "Generation \(rawValue)"
+        }
     }
 
     var shortTitle: String {
-        return "Gen. \(rawValue)"
+        if self == .all {
+            return "Ntnl"
+        } else {
+            return "Gen. \(rawValue)"
+        }
     }
 
     var games: [Game] {
@@ -71,6 +82,8 @@ public extension Generation {
             return [.sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee]
         case .viii:
             return [.sword, .shield]
+        case .all:
+            return [.national]
         }
     }
 
@@ -92,6 +105,8 @@ public extension Generation {
             return .sun
         case .viii:
             return .sword
+        case .all:
+            return .national
         }
     }
 
@@ -127,6 +142,7 @@ extension Generation: ExpressibleByIntegerLiteral {
         case 6: self = .vi
         case 7: self = .vii
         case 8: self = .viii
+        case 1000: self = .all
         default:
             fatalError()
         }

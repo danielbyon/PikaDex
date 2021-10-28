@@ -13,6 +13,8 @@ struct SelectValue: View {
     let range: Range<Int>
     let onSelect: (Int) -> Void
 
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         List(range, id: \.self) { element in
             HStack {
@@ -23,6 +25,7 @@ struct SelectValue: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 self.onSelect(element)
+                self.dismiss()
             }
         }
     }

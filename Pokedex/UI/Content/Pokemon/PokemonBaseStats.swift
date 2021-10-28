@@ -48,7 +48,7 @@ struct PokemonBaseStats: View {
 struct PokemonBaseStats_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            PokemonBaseStats(baseStats: Pokemon.generateCharizard().defaultForm.baseStats)
+            PokemonBaseStats(baseStats: StoredPokemon.generateCharizard().defaultForm.baseStats)
         }
         .injectDependencies()
     }

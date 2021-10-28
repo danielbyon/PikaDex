@@ -120,7 +120,7 @@ extension Pocket {
             default:
                 return "Items"
             }
-        case .sword, .shield:
+        case .sword, .shield, .national:
             switch self {
             case .battle:
                 return "Battle Items"

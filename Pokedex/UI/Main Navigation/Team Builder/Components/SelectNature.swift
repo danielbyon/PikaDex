@@ -12,12 +12,15 @@ struct SelectNature: View {
 
     let onSelect: (Nature) -> Void
 
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: Array(repeating: .init(spacing: 16.0), count: 2), spacing: 16.0) {
                 ForEach(Nature.all) { nature in
                     NatureCell(viewModel: .init(nature: nature)).onTapGesture {
                         self.onSelect(nature)
+                        self.dismiss()
                     }
                 }
             }
