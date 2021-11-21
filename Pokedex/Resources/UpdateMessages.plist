@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bugFixes</key>
+	<array>
+		<string>Fixed Team Builder bug, where making any edit would kick the user back to the team list screen</string>
+		<string>Fixed Team Builder member editor bug, where selecting a move, item, ability, etc. would not pop the user back to the member editor screen</string>
+		<string>Fixed Lilligant&apos;s evolution info showing up on Basculin&apos;s detail page</string>
+		<string>Fixed Scraggy&apos;s evolution level</string>
+		<string>Fixed psychic/ghost type effectiveness (was 0x, fixed to 2x)</string>
+	</array>
+	<key>newFeatures</key>
+	<array>
+		<string>Brilliant Diamond &amp; Shining Pearl game data</string>
+		<string>National Pokédex</string>
+		<string>Added search to abilities, items, locations, machines, and moves</string>
+	</array>
+	<key>upcoming</key>
+	<array>
+		<string>Checklist of caught Pokémon is in development!</string>
+	</array>
+</dict>
+</plist>
