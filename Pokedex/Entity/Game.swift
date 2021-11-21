@@ -41,6 +41,8 @@ public enum Game: String, CaseIterable, Codable, Equatable, Hashable {
     case letsGoEevee
     case sword
     case shield
+    case brilliantDiamond
+    case shiningPearl
 
     /// Technically not a game
     case national
@@ -51,6 +53,8 @@ public extension Game {
 
     static let allGamesNewestFirst: [Game] = [
         .national,
+        .brilliantDiamond,
+        .shiningPearl,
         .sword,
         .shield,
         .letsGoPikachu,
@@ -101,7 +105,7 @@ public extension Game {
             return .vi
         case .sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee:
             return .vii
-        case .sword, .shield:
+        case .sword, .shield, .brilliantDiamond, .shiningPearl:
             return .viii
         case .national:
             return .all
@@ -144,6 +148,8 @@ public extension Game {
         case .letsGoEevee: return "Let's Go, Eevee!"
         case .sword: return "Sword"
         case .shield: return "Shield"
+        case .brilliantDiamond: return "Brilliant Diamond"
+        case .shiningPearl: return "Shining Pearl"
         case .national: return "National"
         }
     }
@@ -162,7 +168,7 @@ public extension Game {
 
     var hasHMs: Bool { generation < 7 }
 
-    var hasTRs: Bool { generation >= 8 }
+    var hasTRs: Bool { generation >= 8 && ![.brilliantDiamond, .shiningPearl].contains(self) }
 
 }
 

@@ -31,7 +31,7 @@ func sanitizedName(_ name: String) -> String {
     String(name.lowercased().unicodeScalars.filter { validNameCharacters.contains($0) })
 }
 func sanitizedItemName(_ name: String, game: Game) -> String {
-    sanitizedName(name) + "\(game.index)"
+    sanitizedName(name)
 }
 func sanitizedMoveName(_ moveName: String) -> String {
     var sanitized = sanitizedName(moveName)
@@ -171,6 +171,14 @@ for (_, ability) in allAbilities {
             ability.setDescription(latestDescription, forGame: .national)
             break
         }
+    }
+}
+
+// Copy Sword abilities to Brilliant Diamond & Shining Pearl
+for (_, ability) in allAbilities {
+    if let description = ability.description(forGame: .sword) {
+        ability.setDescription(description, forGame: .brilliantDiamond)
+        ability.setDescription(description, forGame: .shiningPearl)
     }
 }
 
@@ -386,6 +394,8 @@ allTMs[.letsGoPikachu] = processMachineTSV(filename: "Research/TMs/LGPLGE-Table 
 allTMs[.letsGoEevee] = processMachineTSV(filename: "Research/TMs/LGPLGE-Table 1.tsv", game: .letsGoEevee, machineType: .tm)
 allTMs[.sword] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .sword, machineType: .tm)
 allTMs[.shield] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .shield, machineType: .tm)
+allTMs[.brilliantDiamond] = processMachineTSV(filename: "Research/TMs/BDSP-Table 1.tsv", game: .brilliantDiamond, machineType: .tm)
+allTMs[.shiningPearl] = processMachineTSV(filename: "Research/TMs/BDSP-Table 1.tsv", game: .shiningPearl, machineType: .tm)
 
 allTMs[.national] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .national, machineType: .tm)
 
@@ -506,8 +516,8 @@ processPokedexNumberTSV(filename: "Research/PokedexNumbers/NewHoenn-Table 1.tsv"
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/NewJohto-Table 1.tsv", dictKey: "newJohto", pokedexNumberKey: #keyPath(PokedexNumbers.z_newJohto))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/NewKanto-Table 1.tsv", dictKey: "kanto", pokedexNumberKey: #keyPath(PokedexNumbers.z_letsGoKanto))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/NewUnova-Table 1.tsv", dictKey: "newUnova", pokedexNumberKey: #keyPath(PokedexNumbers.z_newUnova))
-processPokedexNumberTSV(filename: "Research/PokedexNumbers/PearlSinnoh-Table 1.tsv", dictKey: "sinnoh", pokedexNumberKey: #keyPath(PokedexNumbers.z_sinnoh))
-//processPokedexNumberTSV(filename: "Research/PokedexNumbers/Sinnoh-Table 1.tsv", dictKey: "sinnoh", pokedexNumberKey: #keyPath(PokedexNumbers.z_sinnoh)) // TODO: Fix if I feel like it, split to show Diamond/Pearl and Platinum separate
+processPokedexNumberTSV(filename: "Research/PokedexNumbers/PearlSinnoh-Table 1.tsv", dictKey: "sinnoh", pokedexNumberKey: #keyPath(PokedexNumbers.z_sinnoh)) // "PearlSinnoh" should actually be "PlatinumSinnoh" but w/e
+processPokedexNumberTSV(filename: "Research/PokedexNumbers/Sinnoh-Table 1.tsv", dictKey: "sinnoh", pokedexNumberKey: #keyPath(PokedexNumbers.z_newSinnoh)) // Brilliant Diamond & Shining Pearl
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.tsv", dictKey: "alola", pokedexNumberKey: #keyPath(PokedexNumbers.z_ultraAlola))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.tsv", dictKey: "melemele", pokedexNumberKey: #keyPath(PokedexNumbers.z_ultraMelemele))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.tsv", dictKey: "akala", pokedexNumberKey: #keyPath(PokedexNumbers.z_ultraAkala))
@@ -804,8 +814,10 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") a
                 let fathers: [StoredPokemon] = parentNames
                     .filter {
                         $0 != "Missingno."
-                            && $0 != "866"
-                            && $0 != "Pokémon XD: Gale of Darkness"
+                        && $0 != "866"
+                        && $0 != "Pokémon XD: Gale of Darkness"
+                        && $0 != "File:664MS3.png"
+                        && $0 != "File:666MS3.png"
                     }
                     .compactMap {
                         let fatherName = correctBreedingName($0)
@@ -1063,6 +1075,21 @@ for (regionName, regionDict) in Helper.loadJSON(from: "Research/ManualPokemonLoc
     }
 }
 
+func makeLocationPokemonCopy(source: LocationPokemon, pokemon: StoredPokemon, game: Game) {
+    let destination = LocationPokemon(context: moc)
+    destination.pokemon = pokemon
+    destination.detail = source.detail
+    destination.area = source.area
+    destination.captureMethod = source.captureMethod
+    destination.levelLow = source.levelLow
+    destination.levelHigh = source.levelHigh
+    destination.timeOfDay = source.timeOfDay
+    destination.encounterCondition = source.encounterCondition
+    destination.encounterRate = source.encounterRate
+    destination.game = game
+    destination.location = getOrMakeLocation(withName: source.location.name, regionName: source.location.region.rawValue, game: game)
+}
+
 // Copy locations to national
 for (_, gameToPokemon) in allPokemonByName {
     let latest = latestPokemon(gameToPokemon)!
@@ -1070,18 +1097,7 @@ for (_, gameToPokemon) in allPokemonByName {
     let locationPokemons = latest.z_locationPokemons!.allObjects as! [LocationPokemon]
 
     for source in locationPokemons {
-        let destination = LocationPokemon(context: moc)
-        destination.pokemon = national
-        destination.detail = source.detail
-        destination.area = source.area
-        destination.captureMethod = source.captureMethod
-        destination.levelLow = source.levelLow
-        destination.levelHigh = source.levelHigh
-        destination.timeOfDay = source.timeOfDay
-        destination.encounterCondition = source.encounterCondition
-        destination.encounterRate = source.encounterRate
-        destination.game = .national
-        destination.location = getOrMakeLocation(withName: source.location.name, regionName: source.location.region.rawValue, game: .national)
+        makeLocationPokemonCopy(source: source, pokemon: national, game: .national)
     }
 }
 
@@ -1168,6 +1184,32 @@ allLocations.values.forEach {
 // MARK: - Items
 print("--- Items ---")
 var bulbapediaItems = try! JSONDecoder().decode([BulbapediaItem].self, from: Helper.loadJSONData(from: "Data/BulbapediaItems.json"))
+var pokemonDBItems = try! JSONDecoder().decode([String: [String: String]].self, from: Helper.loadJSONData(from: "Data/PokemonDBItems.json"))
+
+func itemDescriptionFromPokemonDB(name: String, game: Game) -> String? {
+    var candidates = [game]
+    if game == .omegaRuby {
+        candidates.append(.ruby)
+    } else if game == .alphaSapphire {
+        candidates.append(.sapphire)
+    }
+
+    let keys = candidates.map(Game.pokemonDBKey)
+
+    var name = name
+    name = name.replacingOccurrences(of: "Bicycle", with: "Bike")
+
+    guard let item = pokemonDBItems[name] else {
+        print("Could not find PokemonDB item for name \(name)")
+        return nil
+    }
+
+    guard let description = keys.compactMap({ item[$0] }).first else {
+        print("Could not find PokemonDB description for item \(name), game: \(game)")
+        return nil
+    }
+    return description
+}
 
 func convertGen7ItemToGen8(_ name: String) {
     let index = bulbapediaItems.firstIndex(where: { $0.name == name })!
@@ -1201,6 +1243,13 @@ func convertGen7ItemToGen8(_ name: String) {
     ].forEach { convertGen7ItemToGen8($0) }
 
 for bulbapediaItem in bulbapediaItems {
+//    // Exclude certain items
+//    if [
+//        "Brick Piece"
+//    ].contains(bulbapediaItem.name) {
+//        continue
+//    }
+
     for game in Game.allCases {
         var gameForInfo = game
         let generationIntroduced = Generation(rawValue: Int(bulbapediaItem.generationIntroduced)!)!
@@ -1231,7 +1280,7 @@ for bulbapediaItem in bulbapediaItems {
         item.itemType = .item
 
         let info = BagItemInfo(context: moc)
-        info.itemDescription = bulbapediaItemInfo.description.removingQuotes()
+        info.itemDescription = itemDescriptionFromPokemonDB(name: item.name, game: game) ?? bulbapediaItemInfo.description.removingQuotes()
         info.cost = bulbapediaItemInfo.price.cost?.toNSNumber()
         info.sell = bulbapediaItemInfo.price.sell?.toNSNumber()
 
@@ -1298,7 +1347,7 @@ for dict in Helper.loadTSV(from: "Research/Berries.tsv") {
     item.itemType = .berry
 
     let info = BerryItemInfo(context: moc)
-    info.itemDescription = dict["description"]!.removingQuotes()
+    info.itemDescription = itemDescriptionFromPokemonDB(name: item.name, game: game) ?? dict["description"]!.removingQuotes()
     info.firmness = dict["firmness"] != "" ? BerryFirmness(rawValue: dict["firmness"]!)! : nil
     info.spicy = dict["spicy"] != "" ? Int16(dict["spicy"]!)! : -1
     info.dry = dict["dry"] != "" ? Int16(dict["dry"]!)! : -1
@@ -1328,16 +1377,12 @@ func latestItem(_ items: [Game: Item]) -> Item? {
     return nil
 }
 
-for (_, gameToItem) in allItems {
-    guard let source = gameToItem[.sword] else { continue }
-
-    let destination = Item(context: moc)
-    destination.name = source.name
-    destination.game = .national
-    destination.i_gameIndex = Game.national.index.toInt32()
-    destination.generationIntroduced = source.generationIntroduced
-    destination.imageName = source.imageName
-    destination.itemType = source.itemType
+func makeItemCopy(source: Item) -> Item {
+    let copy = Item(context: moc)
+    copy.name = source.name
+    copy.generationIntroduced = source.generationIntroduced
+    copy.imageName = source.imageName
+    copy.itemType = source.itemType
 
     if let info = source.bagInfo {
         let destinationInfo = BagItemInfo(context: moc)
@@ -1345,7 +1390,7 @@ for (_, gameToItem) in allItems {
         destinationInfo.cost = info.cost
         destinationInfo.sell = info.sell
         destinationInfo.pocket = info.pocket
-        destination.bagInfo = destinationInfo
+        copy.bagInfo = destinationInfo
     }
 
     if let info = source.berryInfo {
@@ -1357,17 +1402,62 @@ for (_, gameToItem) in allItems {
         destinationInfo.sweet = info.sweet
         destinationInfo.bitter = info.bitter
         destinationInfo.sour = info.sour
-        destination.berryInfo = destinationInfo
+        copy.berryInfo = destinationInfo
     }
+    return copy
+}
 
-    let key = sanitizedItemName(destination.name, game: .national)
+// Copy items to national, using sword data
+for (_, gameToItem) in allItems {
+    guard let source = gameToItem[.sword] else { continue }
+
+    let copy = makeItemCopy(source: source)
+    copy.game = .national
+    copy.i_gameIndex = Game.national.index.toInt32()
+
+    let key = sanitizedItemName(copy.name, game: .national)
     if var items = allItems[key] {
-        items[.national] = destination
+        items[.national] = copy
         allItems[key] = items
     } else {
-        allItems[key] = [.national: destination]
+        allItems[key] = [.national: copy]
     }
 }
+
+// Copy all Gen 1-4 items to Brilliant Diamond / Shining Pearl
+var bdspItemCount = 0
+for (_, gameToItem) in allItems {
+    guard let generationIntroduced = gameToItem.first?.value.generationIntroduced,
+          generationIntroduced <= .iv,
+          let source = latestItem(gameToItem) else {
+        continue
+    }
+
+    let brilliantDiamondCopy = makeItemCopy(source: source)
+    brilliantDiamondCopy.game = .brilliantDiamond
+    brilliantDiamondCopy.i_gameIndex = Game.brilliantDiamond.index.toInt32()
+    let brilliantDiamondKey = sanitizedItemName(brilliantDiamondCopy.name, game: .brilliantDiamond)
+    if var items = allItems[brilliantDiamondKey] {
+        items[.brilliantDiamond] = brilliantDiamondCopy
+        allItems[brilliantDiamondKey] = items
+    } else {
+        allItems[brilliantDiamondKey] = [.brilliantDiamond: brilliantDiamondCopy]
+    }
+
+    let shiningPearlCopy = makeItemCopy(source: source)
+    shiningPearlCopy.game = .shiningPearl
+    shiningPearlCopy.i_gameIndex = Game.shiningPearl.index.toInt32()
+    let shiningPearlKey = sanitizedItemName(shiningPearlCopy.name, game: .shiningPearl)
+    if var items = allItems[shiningPearlKey] {
+        items[.shiningPearl] = shiningPearlCopy
+        allItems[shiningPearlKey] = items
+    } else {
+        allItems[shiningPearlKey] = [.shiningPearl: shiningPearlCopy]
+    }
+
+    bdspItemCount += 1
+}
+print("Copied over \(bdspItemCount) items to BDSP")
 
 allItems.keys
     .sorted()

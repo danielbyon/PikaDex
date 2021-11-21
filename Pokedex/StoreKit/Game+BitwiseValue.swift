@@ -77,6 +77,10 @@ extension Game {
             value = 1 << 30
         case .shield:
             value = 1 << 31
+        case .brilliantDiamond:
+            value = 1 << 32
+        case .shiningPearl:
+            value = 1 << 33
         case .national:
             value = 0
         }

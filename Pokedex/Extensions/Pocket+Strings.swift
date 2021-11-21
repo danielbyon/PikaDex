@@ -143,6 +143,27 @@ extension Pocket {
             default:
                 return "Items"
             }
+        case .brilliantDiamond, .shiningPearl:
+            switch self {
+            case .battle:
+                return "Battle Items"
+            case .berry:
+                return "Berries"
+            case .key:
+                return "Key Items"
+            case .machines:
+                return "TMs"
+            case .medicine:
+                return "Medicine"
+            case .otherItems:
+                return "Other Items"
+            case .pokeBalls:
+                return "Poké Balls"
+            case .treasures:
+                return "Treasures"
+            default:
+                return "Items"
+            }
         }
     }
 

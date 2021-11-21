@@ -21,7 +21,7 @@ extension Game {
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Johto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_johto)))
         case .ruby, .sapphire, .emerald:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Hoenn)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_hoenn)))
-        case .diamond, .pearl, .platinum:
+        case .diamond, .pearl, .platinum, .brilliantDiamond, .shiningPearl:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Sinnoh)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_sinnoh)))
         case .heartGold, .soulSilver:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Johto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_newJohto)))

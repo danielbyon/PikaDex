@@ -199,6 +199,8 @@ extension Game {
         case .letsGoEevee: return "L.G. Eevee"
         case .sword: return "Sword"
         case .shield: return "Shield"
+        case .brilliantDiamond: return "B.Diamond"
+        case .shiningPearl: return "S.Pearl"
         case .national: return "Sword"
         }
     }
@@ -306,6 +308,10 @@ extension Game {
                 self = .sword
             case "Sh":
                 self = .shield
+            case "BD":
+                self = .brilliantDiamond
+            case "SP":
+                self = .shiningPearl
             default:
                 fatalError()
             }
@@ -432,6 +438,8 @@ extension Game {
         case "let's go eevee": self = .letsGoEevee
         case "sword": self = .sword
         case "shield": self = .shield
+        case "brilliant diamond": self = .brilliantDiamond
+        case "shining pearl": self = .shiningPearl
         case "national": self = .national
         default: return nil
         }

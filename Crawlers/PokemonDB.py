@@ -1,35 +1,36 @@
 #!/usr/bin/env python3 -tt
 
 MOVE_TAB_HEADER_IDS = {
-	1: ['tabs-moves-1', 'tabs-moves-2'],
-	2: ['tabs-moves-3', 'tabs-moves-4'],
-	3: ['tabs-moves-5', 'tabs-moves-6', 'tabs-moves-7'],
-	4: ['tabs-moves-8', 'tabs-moves-9', 'tabs-moves-10'],
-	5: ['tabs-moves-11', 'tabs-moves-12'],
-	6: ['tabs-moves-13', 'tabs-moves-14'],
-	7: ['tabs-moves-15', 'tabs-moves-16', 'tabs-moves-17'],
-	8: ['tabs-moves-18']
+	1: ['tab-moves-1', 'tab-moves-2'],
+	2: ['tab-moves-3', 'tab-moves-4'],
+	3: ['tab-moves-5', 'tab-moves-6', 'tab-moves-7'],
+	4: ['tab-moves-8', 'tab-moves-9', 'tab-moves-10'],
+	5: ['tab-moves-11', 'tab-moves-12'],
+	6: ['tab-moves-13', 'tab-moves-14'],
+	7: ['tab-moves-15', 'tab-moves-16', 'tab-moves-17'],
+	8: ['tab-moves-18', 'tab-moves-19']
 }
 
 MOVE_GAMES_FOR_TAB = {
-	'tabs-moves-1': ['red', 'blue'],
-	'tabs-moves-2': ['yellow'],
-	'tabs-moves-3': ['gold', 'silver'],
-	'tabs-moves-4': ['crystal'],
-	'tabs-moves-5': ['ruby', 'sapphire'],
-	'tabs-moves-6': ['fireRed', 'leafGreen'],
-	'tabs-moves-7': ['emerald'],
-	'tabs-moves-8': ['diamond', 'pearl'],
-	'tabs-moves-9': ['platinum'],
-	'tabs-moves-10': ['heartGold', 'soulSilver'],
-	'tabs-moves-11': ['black', 'white'],
-	'tabs-moves-12': ['black2', 'white2'],
-	'tabs-moves-13': ['x', 'y'],
-	'tabs-moves-14': ['omegaRuby', 'alphaSapphire'],
-	'tabs-moves-15': ['sun', 'moon'],
-	'tabs-moves-16': ['ultraSun', 'ultraMoon'],
-	'tabs-moves-17': ['letsGoPikachu', 'letsGoEevee'],
-	'tabs-moves-18': ['sword', 'shield'],
+	'tab-moves-1': ['red', 'blue'],
+	'tab-moves-2': ['yellow'],
+	'tab-moves-3': ['gold', 'silver'],
+	'tab-moves-4': ['crystal'],
+	'tab-moves-5': ['ruby', 'sapphire'],
+	'tab-moves-6': ['fireRed', 'leafGreen'],
+	'tab-moves-7': ['emerald'],
+	'tab-moves-8': ['diamond', 'pearl'],
+	'tab-moves-9': ['platinum'],
+	'tab-moves-10': ['heartGold', 'soulSilver'],
+	'tab-moves-11': ['black', 'white'],
+	'tab-moves-12': ['black2', 'white2'],
+	'tab-moves-13': ['x', 'y'],
+	'tab-moves-14': ['omegaRuby', 'alphaSapphire'],
+	'tab-moves-15': ['sun', 'moon'],
+	'tab-moves-16': ['ultraSun', 'ultraMoon'],
+	'tab-moves-17': ['letsGoPikachu', 'letsGoEevee'],
+	'tab-moves-18': ['sword', 'shield'],
+	'tab-moves-19': ['brilliantDiamond', 'shiningPearl']
 }
 
 def generations_from_number(number):
@@ -107,6 +108,9 @@ def parse_game_titles(node):
 		elif title == u'Pokémon Sword and Shield':
 			games.append('sword')
 			games.append('shield')
+		elif title == u'Pokémon Brilliant Diamond and Shining Pearl':
+			games.append('brilliantDiamond')
+			games.append('shiningPearl')
 	return games
 
 def parse_game_specific_values(node, all_dict, game_specific_value):

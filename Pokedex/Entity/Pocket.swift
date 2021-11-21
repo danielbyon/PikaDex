@@ -12,6 +12,8 @@ public enum Pocket: String {
 
     case battle = "battle items"
     case berry = "berries"
+    case candyJar = "candy jar"
+    case catchingPocket = "catching pocket"
     case ingredients = "ingredients"
     case items = "items"
     case key = "key items"

@@ -137,41 +137,51 @@ extension PokepediaProduct {
         var value: Int64 = 0
         switch self {
         case .all3DSGames:
-            [Game.x,
-             .y,
-             .omegaRuby,
-             .alphaSapphire,
-             .sun,
-             .moon,
-             .ultraSun,
-             .ultraMoon].forEach { value |= $0.bitwiseValue }
+            [
+                Game.x,
+                .y,
+                .omegaRuby,
+                .alphaSapphire,
+                .sun,
+                .moon,
+                .ultraSun,
+                .ultraMoon
+            ].forEach { value |= $0.bitwiseValue }
         case .allDSGames:
-            [Game.diamond,
-             .pearl,
-             .platinum,
-             .heartGold,
-             .soulSilver,
-             .black,
-             .white,
-             .black2,
-             .white2].forEach { value |= $0.bitwiseValue }
+            [
+                Game.diamond,
+                .pearl,
+                .platinum,
+                .heartGold,
+                .soulSilver,
+                .black,
+                .white,
+                .black2,
+                .white2
+            ].forEach { value |= $0.bitwiseValue }
         case .allGameBoyGames:
-            [Game.red,
-             .blue,
-             .yellow,
-             .gold,
-             .silver,
-             .crystal,
-             .ruby,
-             .sapphire,
-             .emerald,
-             .fireRed,
-             .leafGreen].forEach { value |= $0.bitwiseValue }
+            [
+                Game.red,
+                .blue,
+                .yellow,
+                .gold,
+                .silver,
+                .crystal,
+                .ruby,
+                .sapphire,
+                .emerald,
+                .fireRed,
+                .leafGreen
+            ].forEach { value |= $0.bitwiseValue }
         case .allSwitchGames:
-            [Game.letsGoPikachu,
-             .letsGoEevee,
-             .sword,
-             .shield].forEach { value |= $0.bitwiseValue }
+            [
+                Game.letsGoPikachu,
+                .letsGoEevee,
+                .sword,
+                .shield,
+                .brilliantDiamond,
+                .shiningPearl
+            ].forEach { value |= $0.bitwiseValue }
         case .allGames:
             Game.allCases.forEach { value |= $0.bitwiseValue }
         case .generation1:
