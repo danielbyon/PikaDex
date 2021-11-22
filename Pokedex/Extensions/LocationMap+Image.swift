@@ -71,7 +71,9 @@ private extension Game {
              .leafGreen:
             return ["FRLG"]
         case .diamond,
-             .pearl:
+             .pearl,
+             .brilliantDiamond,
+             .shiningPearl:
             return ["DP"]
         case .platinum:
             return ["Platinum", "DP"]

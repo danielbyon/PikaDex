@@ -1,0 +1,88 @@
+//
+//  UpdateMessageView.swift
+//  Pokedex
+//
+//  Created by Daniel Byon on 10/25/21.
+//  Copyright © 2021 Daniel Byon. All rights reserved.
+//
+
+import SwiftUI
+
+private final class UpdateMessageViewModel: ObservableObject {
+
+    @Published var bugFixes: [String]
+    @Published var newFeatures: [String]
+    @Published var upcoming: [String]
+
+    init() {
+        do {
+            let fileURL = Bundle.main.url(forResource: "UpdateMessages", withExtension: "plist")!
+            let data = try Data(contentsOf: fileURL)
+            let updateMessages = try PropertyListDecoder().decode(UpdateMessages.self, from: data)
+            bugFixes = updateMessages.bugFixes
+            newFeatures = updateMessages.newFeatures
+            upcoming = updateMessages.upcoming
+        } catch {
+            bugFixes = []
+            newFeatures = []
+            upcoming = []
+        }
+    }
+
+}
+
+struct UpdateMessageView: View {
+
+    @Environment(\.dismiss) var dismiss
+    @StateObject private var viewModel = UpdateMessageViewModel()
+
+    private var title: String {
+        if let appVersion = AppConstants.appVersion {
+            return "Pikadex v\(appVersion)"
+        } else {
+            assertionFailure()
+            return "Pikadex"
+        }
+    }
+
+    var body: some View {
+        NavigationView {
+            List {
+                section(name: "New Features", entries: viewModel.newFeatures)
+                section(name: "Bug Fixes", entries: viewModel.bugFixes)
+                section(name: "Upcoming", entries: viewModel.upcoming)
+            }
+            .listStyle(.insetGrouped)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    DoneButton {
+                        dismiss()
+                    }
+                }
+            }
+            .navigationTitle(title)
+        }
+        .navigationViewStyle(.stack)
+    }
+
+    @ViewBuilder
+    private func section(name: String, entries: [String]) -> some View {
+        if !entries.isEmpty {
+            Section(name) {
+                ForEach(entries, id: \.self) { entry in
+                    Text(entry)
+                        .lineLimit(nil)
+                }
+            }
+        }
+    }
+
+}
+
+struct UpdateMessage_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            UpdateMessageView()
+        }
+    }
+}

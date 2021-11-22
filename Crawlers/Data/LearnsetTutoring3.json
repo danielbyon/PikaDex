@@ -328,6 +328,12 @@
       "shield.Venusaur": [
         "Grassy Glide",
         "Terrain Pulse"
+      ],
+      "brilliantDiamond.Venusaur": [
+        "Frenzy Plant"
+      ],
+      "shiningPearl.Venusaur": [
+        "Frenzy Plant"
       ]
     },
     "gen7": {
@@ -878,6 +884,12 @@
         "Dual Wingbeat",
         "Scale Shot",
         "Scorching Sands"
+      ],
+      "brilliantDiamond.Charizard": [
+        "Blast Burn"
+      ],
+      "shiningPearl.Charizard": [
+        "Blast Burn"
       ]
     },
     "gen7": {
@@ -1498,6 +1510,12 @@
       "shield.Blastoise": [
         "Flip Turn",
         "Terrain Pulse"
+      ],
+      "brilliantDiamond.Blastoise": [
+        "Hydro Cannon"
+      ],
+      "shiningPearl.Blastoise": [
+        "Hydro Cannon"
       ]
     },
     "gen7": {
@@ -2595,32 +2613,6 @@
         "Super Fang",
         "Uproar",
         "Zen Headbutt"
-      ],
-      "ultraSun.Alolan Rattata": [
-        "Covet",
-        "Endeavor",
-        "Icy Wind",
-        "Iron Tail",
-        "Last Resort",
-        "Shock Wave",
-        "Snatch",
-        "Snore",
-        "Super Fang",
-        "Uproar",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Alolan Rattata": [
-        "Covet",
-        "Endeavor",
-        "Icy Wind",
-        "Iron Tail",
-        "Last Resort",
-        "Shock Wave",
-        "Snatch",
-        "Snore",
-        "Super Fang",
-        "Uproar",
-        "Zen Headbutt"
       ]
     },
     "gen6": {
@@ -2772,38 +2764,6 @@
         "Iron Tail",
         "Last Resort",
         "Shock Wave",
-        "Snore",
-        "Stomping Tantrum",
-        "Super Fang",
-        "Throat Chop",
-        "Uproar",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Alolan Raticate": [
-        "Covet",
-        "Endeavor",
-        "Icy Wind",
-        "Iron Tail",
-        "Knock Off",
-        "Last Resort",
-        "Shock Wave",
-        "Snatch",
-        "Snore",
-        "Stomping Tantrum",
-        "Super Fang",
-        "Throat Chop",
-        "Uproar",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Alolan Raticate": [
-        "Covet",
-        "Endeavor",
-        "Icy Wind",
-        "Iron Tail",
-        "Knock Off",
-        "Last Resort",
-        "Shock Wave",
-        "Snatch",
         "Snore",
         "Stomping Tantrum",
         "Super Fang",
@@ -3520,12 +3480,12 @@
         "Thunder Punch",
         "Volt Tackle"
       ],
-      "letsGoPikachu.Partner Pikachu": [
+      "letsGoPikachu.Pikachu": [
         "Floaty Fall",
         "Splishy Splash",
         "Zippy Zap"
       ],
-      "letsGoEevee.Partner Pikachu": [
+      "letsGoEevee.Pikachu": [
         "Floaty Fall",
         "Splishy Splash",
         "Zippy Zap"
@@ -3679,14 +3639,6 @@
       ],
       "shield.Raichu": [
         "Rising Voltage"
-      ],
-      "sword.Alolan Raichu": [
-        "Expanding Force",
-        "Rising Voltage"
-      ],
-      "shield.Alolan Raichu": [
-        "Expanding Force",
-        "Rising Voltage"
       ]
     },
     "gen7": {
@@ -3716,44 +3668,6 @@
         "Shock Wave",
         "Signal Beam",
         "Snore",
-        "Thunder Punch"
-      ],
-      "ultraSun.Alolan Raichu": [
-        "Ally Switch",
-        "Covet",
-        "Electroweb",
-        "Focus Punch",
-        "Helping Hand",
-        "Iron Tail",
-        "Knock Off",
-        "Laser Focus",
-        "Magic Coat",
-        "Magic Room",
-        "Magnet Rise",
-        "Recycle",
-        "Shock Wave",
-        "Signal Beam",
-        "Snore",
-        "Telekinesis",
-        "Thunder Punch"
-      ],
-      "ultraMoon.Alolan Raichu": [
-        "Ally Switch",
-        "Covet",
-        "Electroweb",
-        "Focus Punch",
-        "Helping Hand",
-        "Iron Tail",
-        "Knock Off",
-        "Laser Focus",
-        "Magic Coat",
-        "Magic Room",
-        "Magnet Rise",
-        "Recycle",
-        "Shock Wave",
-        "Signal Beam",
-        "Snore",
-        "Telekinesis",
         "Thunder Punch"
       ]
     },
@@ -3907,14 +3821,6 @@
       "shield.Sandshrew": [
         "Scorching Sands",
         "Steel Roller"
-      ],
-      "sword.Alolan Sandshrew": [
-        "Steel Roller",
-        "Triple Axel"
-      ],
-      "shield.Alolan Sandshrew": [
-        "Steel Roller",
-        "Triple Axel"
       ]
     },
     "gen7": {
@@ -3939,36 +3845,6 @@
         "Stealth Rock",
         "Stomping Tantrum",
         "Super Fang"
-      ],
-      "ultraSun.Alolan Sandshrew": [
-        "Aqua Tail",
-        "Covet",
-        "Focus Punch",
-        "Ice Punch",
-        "Icy Wind",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Snore",
-        "Stealth Rock",
-        "Super Fang",
-        "Throat Chop"
-      ],
-      "ultraMoon.Alolan Sandshrew": [
-        "Aqua Tail",
-        "Covet",
-        "Focus Punch",
-        "Ice Punch",
-        "Icy Wind",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Snore",
-        "Stealth Rock",
-        "Super Fang",
-        "Throat Chop"
       ]
     },
     "gen6": {
@@ -4102,14 +3978,6 @@
       "shield.Sandslash": [
         "Scorching Sands",
         "Steel Roller"
-      ],
-      "sword.Alolan Sandslash": [
-        "Steel Roller",
-        "Triple Axel"
-      ],
-      "shield.Alolan Sandslash": [
-        "Steel Roller",
-        "Triple Axel"
       ]
     },
     "gen7": {
@@ -4134,38 +4002,6 @@
         "Stealth Rock",
         "Stomping Tantrum",
         "Super Fang"
-      ],
-      "ultraSun.Alolan Sandslash": [
-        "Aqua Tail",
-        "Covet",
-        "Drill Run",
-        "Focus Punch",
-        "Ice Punch",
-        "Icy Wind",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Snore",
-        "Stealth Rock",
-        "Super Fang",
-        "Throat Chop"
-      ],
-      "ultraMoon.Alolan Sandslash": [
-        "Aqua Tail",
-        "Covet",
-        "Drill Run",
-        "Focus Punch",
-        "Ice Punch",
-        "Icy Wind",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Snore",
-        "Stealth Rock",
-        "Super Fang",
-        "Throat Chop"
       ]
     },
     "gen6": {
@@ -5950,32 +5786,6 @@
         "Snore",
         "Spite",
         "Zen Headbutt"
-      ],
-      "ultraSun.Alolan Vulpix": [
-        "Aqua Tail",
-        "Covet",
-        "Foul Play",
-        "Heal Bell",
-        "Icy Wind",
-        "Iron Tail",
-        "Pain Split",
-        "Role Play",
-        "Snore",
-        "Spite",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Alolan Vulpix": [
-        "Aqua Tail",
-        "Covet",
-        "Foul Play",
-        "Heal Bell",
-        "Icy Wind",
-        "Iron Tail",
-        "Pain Split",
-        "Role Play",
-        "Snore",
-        "Spite",
-        "Zen Headbutt"
       ]
     },
     "gen6": {
@@ -6103,12 +5913,6 @@
       "shield.Ninetales": [
         "Burning Jealousy",
         "Scorching Sands"
-      ],
-      "sword.Alolan Ninetales": [
-        "Triple Axel"
-      ],
-      "shield.Alolan Ninetales": [
-        "Triple Axel"
       ]
     },
     "gen7": {
@@ -6134,36 +5938,6 @@
         "Role Play",
         "Snore",
         "Spite",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Alolan Ninetales": [
-        "Aqua Tail",
-        "Covet",
-        "Foul Play",
-        "Heal Bell",
-        "Icy Wind",
-        "Iron Tail",
-        "Laser Focus",
-        "Pain Split",
-        "Role Play",
-        "Snore",
-        "Spite",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Alolan Ninetales": [
-        "Aqua Tail",
-        "Covet",
-        "Foul Play",
-        "Heal Bell",
-        "Icy Wind",
-        "Iron Tail",
-        "Laser Focus",
-        "Pain Split",
-        "Role Play",
-        "Snore",
-        "Spite",
-        "Wonder Room",
         "Zen Headbutt"
       ]
     },
@@ -8054,22 +7828,6 @@
         "Snore",
         "Stealth Rock",
         "Stomping Tantrum"
-      ],
-      "ultraSun.Alolan Diglett": [
-        "Earth Power",
-        "Iron Defense",
-        "Iron Head",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum"
-      ],
-      "ultraMoon.Alolan Diglett": [
-        "Earth Power",
-        "Iron Defense",
-        "Iron Head",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum"
       ]
     },
     "gen6": {
@@ -8169,22 +7927,6 @@
       ],
       "ultraMoon.Dugtrio": [
         "Earth Power",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum"
-      ],
-      "ultraSun.Alolan Dugtrio": [
-        "Earth Power",
-        "Iron Defense",
-        "Iron Head",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum"
-      ],
-      "ultraMoon.Alolan Dugtrio": [
-        "Earth Power",
-        "Iron Defense",
-        "Iron Head",
         "Snore",
         "Stealth Rock",
         "Stomping Tantrum"
@@ -8474,16 +8216,6 @@
         "Skitter Smack"
       ],
       "shield.Persian": [
-        "Lash Out",
-        "Skitter Smack"
-      ],
-      "sword.Alolan Persian": [
-        "Burning Jealousy",
-        "Lash Out",
-        "Skitter Smack"
-      ],
-      "shield.Alolan Persian": [
-        "Burning Jealousy",
         "Lash Out",
         "Skitter Smack"
       ]
@@ -12125,32 +11857,6 @@
         "Stealth Rock",
         "Superpower",
         "Thunder Punch"
-      ],
-      "ultraSun.Alolan Geodude": [
-        "Block",
-        "Earth Power",
-        "Electroweb",
-        "Fire Punch",
-        "Focus Punch",
-        "Iron Defense",
-        "Magnet Rise",
-        "Snore",
-        "Stealth Rock",
-        "Superpower",
-        "Thunder Punch"
-      ],
-      "ultraMoon.Alolan Geodude": [
-        "Block",
-        "Earth Power",
-        "Electroweb",
-        "Fire Punch",
-        "Focus Punch",
-        "Iron Defense",
-        "Magnet Rise",
-        "Snore",
-        "Stealth Rock",
-        "Superpower",
-        "Thunder Punch"
       ]
     },
     "gen6": {
@@ -12315,38 +12021,6 @@
         "Fire Punch",
         "Focus Punch",
         "Iron Defense",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Superpower",
-        "Thunder Punch"
-      ],
-      "ultraSun.Alolan Graveler": [
-        "Ally Switch",
-        "Block",
-        "Earth Power",
-        "Electroweb",
-        "Fire Punch",
-        "Focus Punch",
-        "Iron Defense",
-        "Magnet Rise",
-        "Shock Wave",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Superpower",
-        "Thunder Punch"
-      ],
-      "ultraMoon.Alolan Graveler": [
-        "Ally Switch",
-        "Block",
-        "Earth Power",
-        "Electroweb",
-        "Fire Punch",
-        "Focus Punch",
-        "Iron Defense",
-        "Magnet Rise",
-        "Shock Wave",
         "Snore",
         "Stealth Rock",
         "Stomping Tantrum",
@@ -12523,40 +12197,6 @@
         "Stomping Tantrum",
         "Superpower",
         "Thunder Punch"
-      ],
-      "ultraSun.Alolan Golem": [
-        "Ally Switch",
-        "Block",
-        "Earth Power",
-        "Electroweb",
-        "Fire Punch",
-        "Focus Punch",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Shock Wave",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Superpower",
-        "Thunder Punch"
-      ],
-      "ultraMoon.Alolan Golem": [
-        "Ally Switch",
-        "Block",
-        "Earth Power",
-        "Electroweb",
-        "Fire Punch",
-        "Focus Punch",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Shock Wave",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Superpower",
-        "Thunder Punch"
       ]
     },
     "gen6": {
@@ -12716,10 +12356,10 @@
   },
   "Ponyta": {
     "gen8": {
-      "sword.Galarian Ponyta": [
+      "sword.Ponyta": [
         "Expanding Force"
       ],
-      "shield.Galarian Ponyta": [
+      "shield.Ponyta": [
         "Expanding Force"
       ]
     },
@@ -12836,12 +12476,6 @@
       ],
       "shield.Rapidash": [
         "Scorching Sands"
-      ],
-      "sword.Galarian Rapidash": [
-        "Expanding Force"
-      ],
-      "shield.Galarian Rapidash": [
-        "Expanding Force"
       ]
     },
     "gen7": {
@@ -13160,12 +12794,6 @@
         "Expanding Force"
       ],
       "shield.Slowbro": [
-        "Expanding Force"
-      ],
-      "sword.Galarian Slowbro": [
-        "Expanding Force"
-      ],
-      "shield.Galarian Slowbro": [
         "Expanding Force"
       ]
     },
@@ -14353,32 +13981,6 @@
         "Shock Wave",
         "Snore",
         "Thunder Punch"
-      ],
-      "ultraSun.Alolan Grimer": [
-        "Fire Punch",
-        "Gastro Acid",
-        "Giga Drain",
-        "Gunk Shot",
-        "Ice Punch",
-        "Knock Off",
-        "Pain Split",
-        "Shock Wave",
-        "Snore",
-        "Spite",
-        "Thunder Punch"
-      ],
-      "ultraMoon.Alolan Grimer": [
-        "Fire Punch",
-        "Gastro Acid",
-        "Giga Drain",
-        "Gunk Shot",
-        "Ice Punch",
-        "Knock Off",
-        "Pain Split",
-        "Shock Wave",
-        "Snore",
-        "Spite",
-        "Thunder Punch"
       ]
     },
     "gen6": {
@@ -14515,38 +14117,6 @@
         "Pain Split",
         "Shock Wave",
         "Snore",
-        "Thunder Punch"
-      ],
-      "ultraSun.Alolan Muk": [
-        "Block",
-        "Fire Punch",
-        "Focus Punch",
-        "Gastro Acid",
-        "Giga Drain",
-        "Gunk Shot",
-        "Ice Punch",
-        "Knock Off",
-        "Pain Split",
-        "Recycle",
-        "Shock Wave",
-        "Snore",
-        "Spite",
-        "Thunder Punch"
-      ],
-      "ultraMoon.Alolan Muk": [
-        "Block",
-        "Fire Punch",
-        "Focus Punch",
-        "Gastro Acid",
-        "Giga Drain",
-        "Gunk Shot",
-        "Ice Punch",
-        "Knock Off",
-        "Pain Split",
-        "Recycle",
-        "Shock Wave",
-        "Snore",
-        "Spite",
         "Thunder Punch"
       ]
     },
@@ -16783,21 +16353,13 @@
         "Expanding Force",
         "Grassy Glide",
         "Terrain Pulse"
-      ],
-      "sword.Alolan Exeggutor": [
-        "Grassy Glide",
-        "Terrain Pulse"
-      ],
-      "shield.Alolan Exeggutor": [
-        "Grassy Glide",
-        "Terrain Pulse"
       ]
     },
     "gen7": {
-      "sun.Alolan Exeggutor": [
+      "sun.Exeggutor": [
         "Draco Meteor"
       ],
-      "moon.Alolan Exeggutor": [
+      "moon.Exeggutor": [
         "Draco Meteor"
       ],
       "ultraSun.Exeggutor": [
@@ -16823,48 +16385,6 @@
         "Skill Swap",
         "Snore",
         "Stomping Tantrum",
-        "Synthesis",
-        "Telekinesis",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Alolan Exeggutor": [
-        "Block",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Giga Drain",
-        "Gravity",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Low Kick",
-        "Outrage",
-        "Seed Bomb",
-        "Skill Swap",
-        "Snore",
-        "Stomping Tantrum",
-        "Superpower",
-        "Synthesis",
-        "Telekinesis",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Alolan Exeggutor": [
-        "Block",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Giga Drain",
-        "Gravity",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Low Kick",
-        "Outrage",
-        "Seed Bomb",
-        "Skill Swap",
-        "Snore",
-        "Stomping Tantrum",
-        "Superpower",
         "Synthesis",
         "Telekinesis",
         "Worry Seed",
@@ -17209,16 +16729,6 @@
       ],
       "shield.Marowak": [
         "Scorching Sands"
-      ],
-      "sword.Alolan Marowak": [
-        "Burning Jealousy",
-        "Poltergeist",
-        "Scorching Sands"
-      ],
-      "shield.Alolan Marowak": [
-        "Burning Jealousy",
-        "Poltergeist",
-        "Scorching Sands"
       ]
     },
     "gen7": {
@@ -17256,54 +16766,6 @@
         "Low Kick",
         "Outrage",
         "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Throat Chop",
-        "Thunder Punch",
-        "Uproar"
-      ],
-      "ultraSun.Alolan Marowak": [
-        "Ally Switch",
-        "Earth Power",
-        "Endeavor",
-        "Fire Punch",
-        "Focus Punch",
-        "Heat Wave",
-        "Icy Wind",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Laser Focus",
-        "Low Kick",
-        "Outrage",
-        "Pain Split",
-        "Snore",
-        "Spite",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Throat Chop",
-        "Thunder Punch",
-        "Uproar"
-      ],
-      "ultraMoon.Alolan Marowak": [
-        "Ally Switch",
-        "Earth Power",
-        "Endeavor",
-        "Fire Punch",
-        "Focus Punch",
-        "Heat Wave",
-        "Icy Wind",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Knock Off",
-        "Laser Focus",
-        "Low Kick",
-        "Outrage",
-        "Pain Split",
-        "Snore",
-        "Spite",
         "Stealth Rock",
         "Stomping Tantrum",
         "Throat Chop",
@@ -18166,14 +17628,6 @@
       ],
       "shield.Weezing": [
         "Corrosive Gas"
-      ],
-      "sword.Galarian Weezing": [
-        "Corrosive Gas",
-        "Misty Explosion"
-      ],
-      "shield.Galarian Weezing": [
-        "Corrosive Gas",
-        "Misty Explosion"
       ]
     },
     "gen7": {
@@ -20276,14 +19730,6 @@
       ],
       "shield.Mr. Mime": [
         "Expanding Force"
-      ],
-      "sword.Galarian Mr. Mime": [
-        "Expanding Force",
-        "Triple Axel"
-      ],
-      "shield.Galarian Mr. Mime": [
-        "Expanding Force",
-        "Triple Axel"
       ]
     },
     "gen7": {
@@ -22005,7 +21451,7 @@
         "Last Resort",
         "Snore"
       ],
-      "letsGoPikachu.Partner Eevee": [
+      "letsGoPikachu.Eevee": [
         "Baddy Bad",
         "Bouncy Bubble",
         "Buzzy Buzz",
@@ -22015,7 +21461,7 @@
         "Sizzly Slide",
         "Sparkly Swirl"
       ],
-      "letsGoEevee.Partner Eevee": [
+      "letsGoEevee.Eevee": [
         "Baddy Bad",
         "Bouncy Bubble",
         "Buzzy Buzz",
@@ -23868,14 +23314,6 @@
       "shield.Articuno": [
         "Dual Wingbeat",
         "Triple Axel"
-      ],
-      "sword.Galarian Articuno": [
-        "Dual Wingbeat",
-        "Expanding Force"
-      ],
-      "shield.Galarian Articuno": [
-        "Dual Wingbeat",
-        "Expanding Force"
       ]
     },
     "gen7": {
@@ -24017,14 +23455,6 @@
       "shield.Zapdos": [
         "Dual Wingbeat",
         "Rising Voltage"
-      ],
-      "sword.Galarian Zapdos": [
-        "Coaching",
-        "Dual Wingbeat"
-      ],
-      "shield.Galarian Zapdos": [
-        "Coaching",
-        "Dual Wingbeat"
       ]
     },
     "gen7": {
@@ -24170,14 +23600,6 @@
         "Burning Jealousy",
         "Dual Wingbeat",
         "Scorching Sands"
-      ],
-      "sword.Galarian Moltres": [
-        "Dual Wingbeat",
-        "Lash Out"
-      ],
-      "shield.Galarian Moltres": [
-        "Dual Wingbeat",
-        "Lash Out"
       ]
     },
     "gen7": {
@@ -24303,6 +23725,12 @@
       ],
       "shield.Dratini": [
         "Scale Shot"
+      ],
+      "brilliantDiamond.Dratini": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Dratini": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -24481,6 +23909,12 @@
       ],
       "shield.Dragonair": [
         "Scale Shot"
+      ],
+      "brilliantDiamond.Dragonair": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Dragonair": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -24661,6 +24095,12 @@
       "shield.Dragonite": [
         "Dual Wingbeat",
         "Scale Shot"
+      ],
+      "brilliantDiamond.Dragonite": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Dragonite": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -26179,7 +25619,14 @@
     "gen2": {}
   },
   "Meganium": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Meganium": [
+        "Frenzy Plant"
+      ],
+      "shiningPearl.Meganium": [
+        "Frenzy Plant"
+      ]
+    },
     "gen7": {
       "sun.Meganium": [
         "Frenzy Plant",
@@ -26621,7 +26068,14 @@
     }
   },
   "Typhlosion": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Typhlosion": [
+        "Blast Burn"
+      ],
+      "shiningPearl.Typhlosion": [
+        "Blast Burn"
+      ]
+    },
     "gen7": {
       "sun.Typhlosion": [
         "Blast Burn",
@@ -27240,7 +26694,14 @@
     }
   },
   "Feraligatr": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Feraligatr": [
+        "Hydro Cannon"
+      ],
+      "shiningPearl.Feraligatr": [
+        "Hydro Cannon"
+      ]
+    },
     "gen7": {
       "sun.Feraligatr": [
         "Hydro Cannon",
@@ -38586,6 +38047,12 @@
       "shield.Kingdra": [
         "Flip Turn",
         "Scale Shot"
+      ],
+      "brilliantDiamond.Kingdra": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Kingdra": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -42863,6 +42330,12 @@
       "shield.Sceptile": [
         "Grassy Glide",
         "Scale Shot"
+      ],
+      "brilliantDiamond.Sceptile": [
+        "Frenzy Plant"
+      ],
+      "shiningPearl.Sceptile": [
+        "Frenzy Plant"
       ]
     },
     "gen7": {
@@ -43476,6 +42949,12 @@
       "shield.Blaziken": [
         "Coaching",
         "Scorching Sands"
+      ],
+      "brilliantDiamond.Blaziken": [
+        "Blast Burn"
+      ],
+      "shiningPearl.Blaziken": [
+        "Blast Burn"
       ]
     },
     "gen7": {
@@ -44110,6 +43589,12 @@
       ],
       "shield.Swampert": [
         "Flip Turn"
+      ],
+      "brilliantDiamond.Swampert": [
+        "Hydro Cannon"
+      ],
+      "shiningPearl.Swampert": [
+        "Hydro Cannon"
       ]
     },
     "gen7": {
@@ -44627,10 +44112,10 @@
   },
   "Zigzagoon": {
     "gen8": {
-      "sword.Galarian Zigzagoon": [
+      "sword.Zigzagoon": [
         "Lash Out"
       ],
-      "shield.Galarian Zigzagoon": [
+      "shield.Zigzagoon": [
         "Lash Out"
       ]
     },
@@ -44809,10 +44294,10 @@
   },
   "Linoone": {
     "gen8": {
-      "sword.Galarian Linoone": [
+      "sword.Linoone": [
         "Lash Out"
       ],
-      "shield.Galarian Linoone": [
+      "shield.Linoone": [
         "Lash Out"
       ]
     },
@@ -55369,6 +54854,12 @@
       "shield.Vibrava": [
         "Dual Wingbeat",
         "Scorching Sands"
+      ],
+      "brilliantDiamond.Vibrava": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Vibrava": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -55579,6 +55070,12 @@
         "Dual Wingbeat",
         "Scale Shot",
         "Scorching Sands"
+      ],
+      "brilliantDiamond.Flygon": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Flygon": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -56338,6 +55835,12 @@
       ],
       "shield.Altaria": [
         "Dual Wingbeat"
+      ],
+      "brilliantDiamond.Altaria": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Altaria": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -61980,7 +61483,14 @@
     }
   },
   "Bagon": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Bagon": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Bagon": [
+        "Draco Meteor"
+      ]
+    },
     "gen7": {
       "sun.Bagon": [
         "Draco Meteor"
@@ -62123,7 +61633,14 @@
     }
   },
   "Shelgon": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Shelgon": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Shelgon": [
+        "Draco Meteor"
+      ]
+    },
     "gen7": {
       "sun.Shelgon": [
         "Draco Meteor"
@@ -62286,6 +61803,12 @@
       ],
       "shield.Salamence": [
         "Dual Wingbeat"
+      ],
+      "brilliantDiamond.Salamence": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Salamence": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -63561,6 +63084,12 @@
       "shield.Latias": [
         "Dual Wingbeat",
         "Scale Shot"
+      ],
+      "brilliantDiamond.Latias": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Latias": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -63810,6 +63339,12 @@
       "shield.Latios": [
         "Dual Wingbeat",
         "Scale Shot"
+      ],
+      "brilliantDiamond.Latios": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Latios": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -64389,6 +63924,12 @@
       "shield.Rayquaza": [
         "Meteor Beam",
         "Scale Shot"
+      ],
+      "brilliantDiamond.Rayquaza": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Rayquaza": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -64888,7 +64429,7 @@
   "Deoxys": {
     "gen8": {},
     "gen7": {
-      "ultraSun.Normal Forme": [
+      "ultraSun.Deoxys": [
         "Ally Switch",
         "Bind",
         "Drain Punch",
@@ -64918,7 +64459,7 @@
         "Wonder Room",
         "Zen Headbutt"
       ],
-      "ultraMoon.Normal Forme": [
+      "ultraMoon.Deoxys": [
         "Ally Switch",
         "Bind",
         "Drain Punch",
@@ -64927,170 +64468,6 @@
         "Gravity",
         "Ice Punch",
         "Icy Wind",
-        "Knock Off",
-        "Laser Focus",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Telekinesis",
-        "Throat Chop",
-        "Thunder Punch",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Attack Forme": [
-        "Ally Switch",
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Laser Focus",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Superpower",
-        "Telekinesis",
-        "Throat Chop",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Attack Forme": [
-        "Ally Switch",
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Laser Focus",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Superpower",
-        "Telekinesis",
-        "Throat Chop",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Defense Forme": [
-        "Ally Switch",
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Iron Defense",
-        "Knock Off",
-        "Laser Focus",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Telekinesis",
-        "Throat Chop",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Defense Forme": [
-        "Ally Switch",
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Iron Defense",
-        "Knock Off",
-        "Laser Focus",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Telekinesis",
-        "Throat Chop",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Speed Forme": [
-        "Ally Switch",
-        "Bind",
-        "Drain Punch",
-        "Fire Punch",
-        "Focus Punch",
-        "Gravity",
-        "Ice Punch",
-        "Knock Off",
-        "Laser Focus",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Telekinesis",
-        "Throat Chop",
-        "Thunder Punch",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Speed Forme": [
-        "Ally Switch",
-        "Bind",
-        "Drain Punch",
-        "Fire Punch",
-        "Focus Punch",
-        "Gravity",
-        "Ice Punch",
         "Knock Off",
         "Laser Focus",
         "Low Kick",
@@ -65114,7 +64491,7 @@
       ]
     },
     "gen6": {
-      "omegaRuby.Normal Forme": [
+      "omegaRuby.Deoxys": [
         "Bind",
         "Drain Punch",
         "Fire Punch",
@@ -65139,7 +64516,7 @@
         "Wonder Room",
         "Zen Headbutt"
       ],
-      "alphaSapphire.Normal Forme": [
+      "alphaSapphire.Deoxys": [
         "Bind",
         "Drain Punch",
         "Fire Punch",
@@ -65147,140 +64524,6 @@
         "Gravity",
         "Ice Punch",
         "Icy Wind",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Thunder Punch",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "omegaRuby.Attack Forme": [
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Superpower",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "alphaSapphire.Attack Forme": [
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Superpower",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "omegaRuby.Defense Forme": [
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Iron Defense",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "alphaSapphire.Defense Forme": [
-        "Bind",
-        "Drain Punch",
-        "Focus Punch",
-        "Gravity",
-        "Iron Defense",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "omegaRuby.Speed Forme": [
-        "Bind",
-        "Drain Punch",
-        "Fire Punch",
-        "Focus Punch",
-        "Gravity",
-        "Ice Punch",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Skill Swap",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Thunder Punch",
-        "Trick",
-        "Water Pulse",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "alphaSapphire.Speed Forme": [
-        "Bind",
-        "Drain Punch",
-        "Fire Punch",
-        "Focus Punch",
-        "Gravity",
-        "Ice Punch",
         "Knock Off",
         "Low Kick",
         "Magic Coat",
@@ -65300,7 +64543,7 @@
       ]
     },
     "gen5": {
-      "black2.Normal Forme": [
+      "black2.Deoxys": [
         "Bind",
         "Drain Punch",
         "Fire Punch",
@@ -65323,135 +64566,13 @@
         "Wonder Room",
         "Zen Headbutt"
       ],
-      "white2.Normal Forme": [
+      "white2.Deoxys": [
         "Bind",
         "Drain Punch",
         "Fire Punch",
         "Gravity",
         "Ice Punch",
         "Icy Wind",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Thunder Punch",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "black2.Attack Forme": [
-        "Bind",
-        "Drain Punch",
-        "Gravity",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Superpower",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "white2.Attack Forme": [
-        "Bind",
-        "Drain Punch",
-        "Gravity",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Superpower",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "black2.Defense Forme": [
-        "Bind",
-        "Drain Punch",
-        "Gravity",
-        "Iron Defense",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "white2.Defense Forme": [
-        "Bind",
-        "Drain Punch",
-        "Gravity",
-        "Iron Defense",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "black2.Speed Forme": [
-        "Bind",
-        "Drain Punch",
-        "Fire Punch",
-        "Gravity",
-        "Ice Punch",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Recycle",
-        "Role Play",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snatch",
-        "Snore",
-        "Stealth Rock",
-        "Thunder Punch",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "white2.Speed Forme": [
-        "Bind",
-        "Drain Punch",
-        "Fire Punch",
-        "Gravity",
-        "Ice Punch",
         "Knock Off",
         "Low Kick",
         "Magic Coat",
@@ -65470,7 +64591,7 @@
       ]
     },
     "gen4": {
-      "platinum.Normal Forme": [
+      "platinum.Deoxys": [
         "Fire Punch",
         "Ice Punch",
         "Icy Wind",
@@ -65483,33 +64604,7 @@
         "Trick",
         "Zen Headbutt"
       ],
-      "platinum.Attack Forme": [
-        "Mud-Slap",
-        "Signal Beam",
-        "Snore",
-        "Superpower",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "platinum.Defense Forme": [
-        "Iron Defense",
-        "Knock Off",
-        "Mud-Slap",
-        "Signal Beam",
-        "Snore",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "platinum.Speed Forme": [
-        "Knock Off",
-        "Mud-Slap",
-        "Signal Beam",
-        "Snore",
-        "Swift",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "heartGold.Normal Forme": [
+      "heartGold.Deoxys": [
         "Fire Punch",
         "Gravity",
         "Headbutt",
@@ -65527,7 +64622,7 @@
         "Trick",
         "Zen Headbutt"
       ],
-      "soulSilver.Normal Forme": [
+      "soulSilver.Deoxys": [
         "Fire Punch",
         "Gravity",
         "Headbutt",
@@ -65542,94 +64637,12 @@
         "Snore",
         "Swift",
         "Thunder Punch",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "heartGold.Attack Forme": [
-        "Gravity",
-        "Headbutt",
-        "Low Kick",
-        "Magic Coat",
-        "Mud-Slap",
-        "Role Play",
-        "Signal Beam",
-        "Snore",
-        "Superpower",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "soulSilver.Attack Forme": [
-        "Gravity",
-        "Headbutt",
-        "Low Kick",
-        "Magic Coat",
-        "Mud-Slap",
-        "Role Play",
-        "Signal Beam",
-        "Snore",
-        "Superpower",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "heartGold.Defense Forme": [
-        "Gravity",
-        "Headbutt",
-        "Iron Defense",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Mud-Slap",
-        "Role Play",
-        "Signal Beam",
-        "Snore",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "soulSilver.Defense Forme": [
-        "Gravity",
-        "Headbutt",
-        "Iron Defense",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Mud-Slap",
-        "Role Play",
-        "Signal Beam",
-        "Snore",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "heartGold.Speed Forme": [
-        "Gravity",
-        "Headbutt",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Mud-Slap",
-        "Role Play",
-        "Signal Beam",
-        "Snore",
-        "Swift",
-        "Trick",
-        "Zen Headbutt"
-      ],
-      "soulSilver.Speed Forme": [
-        "Gravity",
-        "Headbutt",
-        "Knock Off",
-        "Low Kick",
-        "Magic Coat",
-        "Mud-Slap",
-        "Role Play",
-        "Signal Beam",
-        "Snore",
-        "Swift",
         "Trick",
         "Zen Headbutt"
       ]
     },
     "gen3": {
-      "fireRed.Attack Forme": [
+      "fireRed.Deoxys": [
         "Body Slam",
         "Counter",
         "Double-Edge",
@@ -65642,7 +64655,7 @@
         "Substitute",
         "Thunder Wave"
       ],
-      "leafGreen.Attack Forme": [
+      "leafGreen.Deoxys": [
         "Body Slam",
         "Counter",
         "Double-Edge",
@@ -65655,33 +64668,7 @@
         "Substitute",
         "Thunder Wave"
       ],
-      "fireRed.Defense Forme": [
-        "Body Slam",
-        "Counter",
-        "Double-Edge",
-        "Dream Eater",
-        "Mega Kick",
-        "Mega Punch",
-        "Mimic",
-        "Rock Slide",
-        "Seismic Toss",
-        "Substitute",
-        "Thunder Wave"
-      ],
-      "leafGreen.Defense Forme": [
-        "Body Slam",
-        "Counter",
-        "Double-Edge",
-        "Dream Eater",
-        "Mega Kick",
-        "Mega Punch",
-        "Mimic",
-        "Rock Slide",
-        "Seismic Toss",
-        "Substitute",
-        "Thunder Wave"
-      ],
-      "emerald.Speed Forme": [
+      "emerald.Deoxys": [
         "Body Slam",
         "Counter",
         "Double-Edge",
@@ -65971,7 +64958,14 @@
     }
   },
   "Torterra": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Torterra": [
+        "Frenzy Plant"
+      ],
+      "shiningPearl.Torterra": [
+        "Frenzy Plant"
+      ]
+    },
     "gen7": {
       "sun.Torterra": [
         "Frenzy Plant",
@@ -66506,7 +65500,14 @@
     }
   },
   "Infernape": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Infernape": [
+        "Blast Burn"
+      ],
+      "shiningPearl.Infernape": [
+        "Blast Burn"
+      ]
+    },
     "gen7": {
       "sun.Infernape": [
         "Blast Burn",
@@ -66921,7 +65922,14 @@
     }
   },
   "Empoleon": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Empoleon": [
+        "Hydro Cannon"
+      ],
+      "shiningPearl.Empoleon": [
+        "Hydro Cannon"
+      ]
+    },
     "gen7": {
       "sun.Empoleon": [
         "Hydro Cannon",
@@ -68866,7 +67874,7 @@
   "Wormadam": {
     "gen8": {},
     "gen7": {
-      "ultraSun.Plant Cloak": [
+      "ultraSun.Wormadam": [
         "Ally Switch",
         "Bug Bite",
         "Electroweb",
@@ -68881,7 +67889,7 @@
         "Uproar",
         "Worry Seed"
       ],
-      "ultraMoon.Plant Cloak": [
+      "ultraMoon.Wormadam": [
         "Ally Switch",
         "Bug Bite",
         "Electroweb",
@@ -68895,68 +67903,10 @@
         "Telekinesis",
         "Uproar",
         "Worry Seed"
-      ],
-      "ultraSun.Sandy Cloak": [
-        "Ally Switch",
-        "Bug Bite",
-        "Earth Power",
-        "Electroweb",
-        "Endeavor",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Telekinesis",
-        "Uproar"
-      ],
-      "ultraMoon.Sandy Cloak": [
-        "Ally Switch",
-        "Bug Bite",
-        "Earth Power",
-        "Electroweb",
-        "Endeavor",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Telekinesis",
-        "Uproar"
-      ],
-      "ultraSun.Trash Cloak": [
-        "Ally Switch",
-        "Bug Bite",
-        "Electroweb",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Telekinesis",
-        "Uproar"
-      ],
-      "ultraMoon.Trash Cloak": [
-        "Ally Switch",
-        "Bug Bite",
-        "Electroweb",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Telekinesis",
-        "Uproar"
       ]
     },
     "gen6": {
-      "omegaRuby.Plant Cloak": [
+      "omegaRuby.Wormadam": [
         "Bug Bite",
         "Electroweb",
         "Endeavor",
@@ -68969,7 +67919,7 @@
         "Uproar",
         "Worry Seed"
       ],
-      "alphaSapphire.Plant Cloak": [
+      "alphaSapphire.Wormadam": [
         "Bug Bite",
         "Electroweb",
         "Endeavor",
@@ -68981,60 +67931,10 @@
         "Synthesis",
         "Uproar",
         "Worry Seed"
-      ],
-      "omegaRuby.Sandy Cloak": [
-        "Bug Bite",
-        "Earth Power",
-        "Electroweb",
-        "Endeavor",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
-      ],
-      "alphaSapphire.Sandy Cloak": [
-        "Bug Bite",
-        "Earth Power",
-        "Electroweb",
-        "Endeavor",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
-      ],
-      "omegaRuby.Trash Cloak": [
-        "Bug Bite",
-        "Electroweb",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
-      ],
-      "alphaSapphire.Trash Cloak": [
-        "Bug Bite",
-        "Electroweb",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Skill Swap",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
       ]
     },
     "gen5": {
-      "black2.Plant Cloak": [
+      "black2.Wormadam": [
         "Bug Bite",
         "Electroweb",
         "Endeavor",
@@ -69048,7 +67948,7 @@
         "Uproar",
         "Worry Seed"
       ],
-      "white2.Plant Cloak": [
+      "white2.Wormadam": [
         "Bug Bite",
         "Electroweb",
         "Endeavor",
@@ -69061,64 +67961,10 @@
         "Synthesis",
         "Uproar",
         "Worry Seed"
-      ],
-      "black2.Sandy Cloak": [
-        "Bug Bite",
-        "Earth Power",
-        "Electroweb",
-        "Endeavor",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
-      ],
-      "white2.Sandy Cloak": [
-        "Bug Bite",
-        "Earth Power",
-        "Electroweb",
-        "Endeavor",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
-      ],
-      "black2.Trash Cloak": [
-        "Bug Bite",
-        "Electroweb",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
-      ],
-      "white2.Trash Cloak": [
-        "Bug Bite",
-        "Electroweb",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Skill Swap",
-        "Sleep Talk",
-        "Snore",
-        "Stealth Rock",
-        "Uproar"
       ]
     },
     "gen4": {
-      "platinum.Plant Cloak": [
+      "platinum.Wormadam": [
         "Endeavor",
         "Seed Bomb",
         "Signal Beam",
@@ -69127,28 +67973,7 @@
         "Synthesis",
         "Uproar"
       ],
-      "platinum.Sandy Cloak": [
-        "Earth Power",
-        "Endeavor",
-        "Mud-Slap",
-        "Rollout",
-        "Signal Beam",
-        "Snore",
-        "Sucker Punch",
-        "Uproar"
-      ],
-      "platinum.Trash Cloak": [
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Snore",
-        "Sucker Punch",
-        "Uproar"
-      ],
-      "heartGold.Plant Cloak": [
+      "heartGold.Wormadam": [
         "Bug Bite",
         "Endeavor",
         "Seed Bomb",
@@ -69160,7 +67985,7 @@
         "Uproar",
         "Worry Seed"
       ],
-      "soulSilver.Plant Cloak": [
+      "soulSilver.Wormadam": [
         "Bug Bite",
         "Endeavor",
         "Seed Bomb",
@@ -69171,56 +67996,6 @@
         "Synthesis",
         "Uproar",
         "Worry Seed"
-      ],
-      "heartGold.Sandy Cloak": [
-        "Bug Bite",
-        "Earth Power",
-        "Endeavor",
-        "Mud-Slap",
-        "Rollout",
-        "Signal Beam",
-        "Snore",
-        "String Shot",
-        "Sucker Punch",
-        "Uproar"
-      ],
-      "soulSilver.Sandy Cloak": [
-        "Bug Bite",
-        "Earth Power",
-        "Endeavor",
-        "Mud-Slap",
-        "Rollout",
-        "Signal Beam",
-        "Snore",
-        "String Shot",
-        "Sucker Punch",
-        "Uproar"
-      ],
-      "heartGold.Trash Cloak": [
-        "Bug Bite",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Snore",
-        "String Shot",
-        "Sucker Punch",
-        "Uproar"
-      ],
-      "soulSilver.Trash Cloak": [
-        "Bug Bite",
-        "Endeavor",
-        "Gunk Shot",
-        "Iron Defense",
-        "Iron Head",
-        "Magnet Rise",
-        "Signal Beam",
-        "Snore",
-        "String Shot",
-        "Sucker Punch",
-        "Uproar"
       ]
     }
   },
@@ -72924,6 +71699,12 @@
       "shield.Gible": [
         "Scale Shot",
         "Scorching Sands"
+      ],
+      "brilliantDiamond.Gible": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Gible": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -73065,6 +71846,12 @@
       "shield.Gabite": [
         "Scale Shot",
         "Scorching Sands"
+      ],
+      "brilliantDiamond.Gabite": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Gabite": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -73214,6 +72001,12 @@
       "shield.Garchomp": [
         "Scale Shot",
         "Scorching Sands"
+      ],
+      "brilliantDiamond.Garchomp": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Garchomp": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -78761,6 +77554,12 @@
       ],
       "shield.Dialga": [
         "Scale Shot"
+      ],
+      "brilliantDiamond.Dialga": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Dialga": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -78943,6 +77742,12 @@
       "shield.Palkia": [
         "Dual Wingbeat",
         "Scale Shot"
+      ],
+      "brilliantDiamond.Palkia": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Palkia": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -79401,6 +78206,12 @@
       "shield.Giratina": [
         "Dual Wingbeat",
         "Poltergeist"
+      ],
+      "brilliantDiamond.Giratina": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Giratina": [
+        "Draco Meteor"
       ]
     },
     "gen7": {
@@ -79410,7 +78221,7 @@
       "moon.Giratina": [
         "Draco Meteor"
       ],
-      "ultraSun.Altered Forme": [
+      "ultraSun.Giratina": [
         "Aqua Tail",
         "Defog",
         "Draco Meteor",
@@ -79428,7 +78239,7 @@
         "Spite",
         "Telekinesis"
       ],
-      "ultraMoon.Altered Forme": [
+      "ultraMoon.Giratina": [
         "Aqua Tail",
         "Defog",
         "Draco Meteor",
@@ -79444,44 +78255,6 @@
         "Shock Wave",
         "Snore",
         "Spite",
-        "Telekinesis"
-      ],
-      "ultraSun.Origin Forme": [
-        "Aqua Tail",
-        "Defog",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Gravity",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Iron Tail",
-        "Magic Coat",
-        "Outrage",
-        "Shock Wave",
-        "Snore",
-        "Spite",
-        "Tailwind",
-        "Telekinesis"
-      ],
-      "ultraMoon.Origin Forme": [
-        "Aqua Tail",
-        "Defog",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Gravity",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Iron Tail",
-        "Magic Coat",
-        "Outrage",
-        "Shock Wave",
-        "Snore",
-        "Spite",
-        "Tailwind",
         "Telekinesis"
       ]
     },
@@ -79492,7 +78265,7 @@
       "y.Giratina": [
         "Draco Meteor"
       ],
-      "omegaRuby.Altered Forme": [
+      "omegaRuby.Giratina": [
         "Aqua Tail",
         "Draco Meteor",
         "Dragon Pulse",
@@ -79508,7 +78281,7 @@
         "Snore",
         "Spite"
       ],
-      "alphaSapphire.Altered Forme": [
+      "alphaSapphire.Giratina": [
         "Aqua Tail",
         "Draco Meteor",
         "Dragon Pulse",
@@ -79523,40 +78296,6 @@
         "Shock Wave",
         "Snore",
         "Spite"
-      ],
-      "omegaRuby.Origin Forme": [
-        "Aqua Tail",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Gravity",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Iron Tail",
-        "Magic Coat",
-        "Outrage",
-        "Shock Wave",
-        "Snore",
-        "Spite",
-        "Tailwind"
-      ],
-      "alphaSapphire.Origin Forme": [
-        "Aqua Tail",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Gravity",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Iron Tail",
-        "Magic Coat",
-        "Outrage",
-        "Shock Wave",
-        "Snore",
-        "Spite",
-        "Tailwind"
       ]
     },
     "gen5": {
@@ -79566,7 +78305,7 @@
       "white.Giratina": [
         "Draco Meteor"
       ],
-      "black2.Altered Forme": [
+      "black2.Giratina": [
         "Aqua Tail",
         "Dark Pulse",
         "Draco Meteor",
@@ -79583,7 +78322,7 @@
         "Snore",
         "Spite"
       ],
-      "white2.Altered Forme": [
+      "white2.Giratina": [
         "Aqua Tail",
         "Dark Pulse",
         "Draco Meteor",
@@ -79599,42 +78338,6 @@
         "Sleep Talk",
         "Snore",
         "Spite"
-      ],
-      "black2.Origin Forme": [
-        "Aqua Tail",
-        "Dark Pulse",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Gravity",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Iron Tail",
-        "Magic Coat",
-        "Outrage",
-        "Sleep Talk",
-        "Snore",
-        "Spite",
-        "Tailwind"
-      ],
-      "white2.Origin Forme": [
-        "Aqua Tail",
-        "Dark Pulse",
-        "Draco Meteor",
-        "Dragon Pulse",
-        "Earth Power",
-        "Gravity",
-        "Hyper Voice",
-        "Icy Wind",
-        "Iron Head",
-        "Iron Tail",
-        "Magic Coat",
-        "Outrage",
-        "Sleep Talk",
-        "Snore",
-        "Spite",
-        "Tailwind"
       ]
     },
     "gen4": {
@@ -79661,7 +78364,7 @@
         "Swift",
         "Twister"
       ],
-      "heartGold.Altered Forme": [
+      "heartGold.Giratina": [
         "Air Cutter",
         "Ancient Power",
         "Aqua Tail",
@@ -79681,7 +78384,7 @@
         "Swift",
         "Twister"
       ],
-      "soulSilver.Altered Forme": [
+      "soulSilver.Giratina": [
         "Air Cutter",
         "Ancient Power",
         "Aqua Tail",
@@ -79699,48 +78402,6 @@
         "Snore",
         "Spite",
         "Swift",
-        "Twister"
-      ],
-      "heartGold.Origin Forme": [
-        "Air Cutter",
-        "Ancient Power",
-        "Aqua Tail",
-        "Draco Meteor",
-        "Earth Power",
-        "Fury Cutter",
-        "Gravity",
-        "Headbutt",
-        "Icy Wind",
-        "Iron Head",
-        "Magic Coat",
-        "Mud-Slap",
-        "Ominous Wind",
-        "Outrage",
-        "Snore",
-        "Spite",
-        "Swift",
-        "Tailwind",
-        "Twister"
-      ],
-      "soulSilver.Origin Forme": [
-        "Air Cutter",
-        "Ancient Power",
-        "Aqua Tail",
-        "Draco Meteor",
-        "Earth Power",
-        "Fury Cutter",
-        "Gravity",
-        "Headbutt",
-        "Icy Wind",
-        "Iron Head",
-        "Magic Coat",
-        "Mud-Slap",
-        "Ominous Wind",
-        "Outrage",
-        "Snore",
-        "Spite",
-        "Swift",
-        "Tailwind",
         "Twister"
       ]
     }
@@ -80298,7 +78959,7 @@
   "Shaymin": {
     "gen8": {},
     "gen7": {
-      "ultraSun.Land Forme": [
+      "ultraSun.Shaymin": [
         "Covet",
         "Earth Power",
         "Endeavor",
@@ -80311,7 +78972,7 @@
         "Worry Seed",
         "Zen Headbutt"
       ],
-      "ultraMoon.Land Forme": [
+      "ultraMoon.Shaymin": [
         "Covet",
         "Earth Power",
         "Endeavor",
@@ -80321,36 +78982,12 @@
         "Seed Bomb",
         "Snore",
         "Synthesis",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Sky Forme": [
-        "Covet",
-        "Giga Drain",
-        "Laser Focus",
-        "Last Resort",
-        "Seed Bomb",
-        "Snore",
-        "Synthesis",
-        "Tailwind",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Sky Forme": [
-        "Covet",
-        "Giga Drain",
-        "Laser Focus",
-        "Last Resort",
-        "Seed Bomb",
-        "Snore",
-        "Synthesis",
-        "Tailwind",
         "Worry Seed",
         "Zen Headbutt"
       ]
     },
     "gen6": {
-      "omegaRuby.Land Forme": [
+      "omegaRuby.Shaymin": [
         "Covet",
         "Earth Power",
         "Endeavor",
@@ -80362,7 +78999,7 @@
         "Worry Seed",
         "Zen Headbutt"
       ],
-      "alphaSapphire.Land Forme": [
+      "alphaSapphire.Shaymin": [
         "Covet",
         "Earth Power",
         "Endeavor",
@@ -80371,34 +79008,12 @@
         "Seed Bomb",
         "Snore",
         "Synthesis",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "omegaRuby.Sky Forme": [
-        "Covet",
-        "Giga Drain",
-        "Last Resort",
-        "Seed Bomb",
-        "Snore",
-        "Synthesis",
-        "Tailwind",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "alphaSapphire.Sky Forme": [
-        "Covet",
-        "Giga Drain",
-        "Last Resort",
-        "Seed Bomb",
-        "Snore",
-        "Synthesis",
-        "Tailwind",
         "Worry Seed",
         "Zen Headbutt"
       ]
     },
     "gen5": {
-      "black2.Land Forme": [
+      "black2.Shaymin": [
         "Covet",
         "Earth Power",
         "Endeavor",
@@ -80411,7 +79026,7 @@
         "Worry Seed",
         "Zen Headbutt"
       ],
-      "white2.Land Forme": [
+      "white2.Shaymin": [
         "Covet",
         "Earth Power",
         "Endeavor",
@@ -80421,36 +79036,12 @@
         "Sleep Talk",
         "Snore",
         "Synthesis",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "black2.Sky Forme": [
-        "Covet",
-        "Giga Drain",
-        "Last Resort",
-        "Seed Bomb",
-        "Sleep Talk",
-        "Snore",
-        "Synthesis",
-        "Tailwind",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "white2.Sky Forme": [
-        "Covet",
-        "Giga Drain",
-        "Last Resort",
-        "Seed Bomb",
-        "Sleep Talk",
-        "Snore",
-        "Synthesis",
-        "Tailwind",
         "Worry Seed",
         "Zen Headbutt"
       ]
     },
     "gen4": {
-      "platinum.Land Forme": [
+      "platinum.Shaymin": [
         "Earth Power",
         "Endeavor",
         "Last Resort",
@@ -80461,18 +79052,7 @@
         "Synthesis",
         "Zen Headbutt"
       ],
-      "platinum.Sky Forme": [
-        "Air Cutter",
-        "Last Resort",
-        "Mud-Slap",
-        "Ominous Wind",
-        "Seed Bomb",
-        "Snore",
-        "Swift",
-        "Synthesis",
-        "Zen Headbutt"
-      ],
-      "heartGold.Land Forme": [
+      "heartGold.Shaymin": [
         "Earth Power",
         "Endeavor",
         "Headbutt",
@@ -80485,7 +79065,7 @@
         "Worry Seed",
         "Zen Headbutt"
       ],
-      "soulSilver.Land Forme": [
+      "soulSilver.Shaymin": [
         "Earth Power",
         "Endeavor",
         "Headbutt",
@@ -80495,41 +79075,20 @@
         "Snore",
         "Swift",
         "Synthesis",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "heartGold.Sky Forme": [
-        "Air Cutter",
-        "Headbutt",
-        "Last Resort",
-        "Mud-Slap",
-        "Ominous Wind",
-        "Seed Bomb",
-        "Snore",
-        "Swift",
-        "Synthesis",
-        "Tailwind",
-        "Worry Seed",
-        "Zen Headbutt"
-      ],
-      "soulSilver.Sky Forme": [
-        "Air Cutter",
-        "Headbutt",
-        "Last Resort",
-        "Mud-Slap",
-        "Ominous Wind",
-        "Seed Bomb",
-        "Snore",
-        "Swift",
-        "Synthesis",
-        "Tailwind",
         "Worry Seed",
         "Zen Headbutt"
       ]
     }
   },
   "Arceus": {
-    "gen8": {},
+    "gen8": {
+      "brilliantDiamond.Arceus": [
+        "Draco Meteor"
+      ],
+      "shiningPearl.Arceus": [
+        "Draco Meteor"
+      ]
+    },
     "gen7": {
       "sun.Arceus": [
         "Draco Meteor"
@@ -86839,22 +85398,14 @@
   },
   "Darmanitan": {
     "gen8": {
-      "sword.Standard Mode": [
+      "sword.Darmanitan": [
         "Burning Jealousy",
         "Expanding Force",
         "Lash Out"
       ],
-      "shield.Standard Mode": [
+      "shield.Darmanitan": [
         "Burning Jealousy",
         "Expanding Force",
-        "Lash Out"
-      ],
-      "sword.Galarian Standard Mode": [
-        "Burning Jealousy",
-        "Lash Out"
-      ],
-      "shield.Galarian Standard Mode": [
-        "Burning Jealousy",
         "Lash Out"
       ]
     },
@@ -92833,14 +91384,6 @@
       ],
       "shield.Stunfisk": [
         "Lash Out"
-      ],
-      "sword.Galarian Stunfisk": [
-        "Lash Out",
-        "Terrain Pulse"
-      ],
-      "shield.Galarian Stunfisk": [
-        "Lash Out",
-        "Terrain Pulse"
       ]
     },
     "gen7": {
@@ -98188,7 +96731,7 @@
       ]
     },
     "gen6": {
-      "omegaRuby.Male": [
+      "omegaRuby.Meowstic": [
         "Covet",
         "Gravity",
         "Heal Bell",
@@ -98206,45 +96749,11 @@
         "Wonder Room",
         "Zen Headbutt"
       ],
-      "alphaSapphire.Male": [
+      "alphaSapphire.Meowstic": [
         "Covet",
         "Gravity",
         "Heal Bell",
         "Helping Hand",
-        "Iron Tail",
-        "Magic Coat",
-        "Magic Room",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Snatch",
-        "Snore",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "omegaRuby.Female": [
-        "Covet",
-        "Gravity",
-        "Heal Bell",
-        "Iron Tail",
-        "Magic Coat",
-        "Magic Room",
-        "Recycle",
-        "Role Play",
-        "Shock Wave",
-        "Signal Beam",
-        "Snatch",
-        "Snore",
-        "Trick",
-        "Wonder Room",
-        "Zen Headbutt"
-      ],
-      "alphaSapphire.Female": [
-        "Covet",
-        "Gravity",
-        "Heal Bell",
         "Iron Tail",
         "Magic Coat",
         "Magic Room",
@@ -102077,15 +100586,15 @@
   },
   "Lycanroc": {
     "gen8": {
-      "sword.Midnight Form": [
+      "sword.Lycanroc": [
         "Lash Out"
       ],
-      "shield.Midnight Form": [
+      "shield.Lycanroc": [
         "Lash Out"
       ]
     },
     "gen7": {
-      "ultraSun.Midday Form": [
+      "ultraSun.Lycanroc": [
         "Covet",
         "Drill Run",
         "Earth Power",
@@ -102100,7 +100609,7 @@
         "Stomping Tantrum",
         "Zen Headbutt"
       ],
-      "ultraMoon.Midday Form": [
+      "ultraMoon.Lycanroc": [
         "Covet",
         "Drill Run",
         "Earth Power",
@@ -102110,84 +100619,6 @@
         "Iron Head",
         "Iron Tail",
         "Last Resort",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Midnight Form": [
-        "Covet",
-        "Dual Chop",
-        "Earth Power",
-        "Endeavor",
-        "Fire Punch",
-        "Focus Punch",
-        "Foul Play",
-        "Hyper Voice",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Laser Focus",
-        "Last Resort",
-        "Outrage",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Throat Chop",
-        "Thunder Punch",
-        "Uproar",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Midnight Form": [
-        "Covet",
-        "Dual Chop",
-        "Earth Power",
-        "Endeavor",
-        "Fire Punch",
-        "Focus Punch",
-        "Foul Play",
-        "Hyper Voice",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Laser Focus",
-        "Last Resort",
-        "Outrage",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Throat Chop",
-        "Thunder Punch",
-        "Uproar",
-        "Zen Headbutt"
-      ],
-      "ultraSun.Dusk Form": [
-        "Covet",
-        "Drill Run",
-        "Earth Power",
-        "Endeavor",
-        "Hyper Voice",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Last Resort",
-        "Outrage",
-        "Snore",
-        "Stealth Rock",
-        "Stomping Tantrum",
-        "Zen Headbutt"
-      ],
-      "ultraMoon.Dusk Form": [
-        "Covet",
-        "Drill Run",
-        "Earth Power",
-        "Endeavor",
-        "Hyper Voice",
-        "Iron Defense",
-        "Iron Head",
-        "Iron Tail",
-        "Last Resort",
-        "Outrage",
         "Snore",
         "Stealth Rock",
         "Stomping Tantrum",
@@ -105503,19 +103934,13 @@
   },
   "Urshifu": {
     "gen8": {
-      "sword.Single Strike Style": [
+      "sword.Urshifu": [
         "Coaching",
         "Lash Out"
       ],
-      "shield.Single Strike Style": [
+      "shield.Urshifu": [
         "Coaching",
         "Lash Out"
-      ],
-      "sword.Rapid Strike Style": [
-        "Coaching"
-      ],
-      "shield.Rapid Strike Style": [
-        "Coaching"
       ]
     }
   },
@@ -105578,22 +104003,6 @@
       ],
       "shield.Calyrex": [
         "Expanding Force"
-      ],
-      "sword.Ice Rider": [
-        "Expanding Force",
-        "Lash Out"
-      ],
-      "shield.Ice Rider": [
-        "Expanding Force",
-        "Lash Out"
-      ],
-      "sword.Shadow Rider": [
-        "Expanding Force",
-        "Lash Out"
-      ],
-      "shield.Shadow Rider": [
-        "Expanding Force",
-        "Lash Out"
       ]
     }
   }

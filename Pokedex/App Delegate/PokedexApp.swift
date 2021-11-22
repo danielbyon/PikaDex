@@ -35,7 +35,7 @@ struct PokedexApp: App {
                 .sheet(isPresented: $isShowingUpdateMessage) {
                     hasDisplayedUpdateMessage = true
                 } content: {
-                    UpdateMessage()
+                    UpdateMessageView()
                 }
                 .onAppear {
                     if !hasDisplayedUpdateMessage {

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21A5522h" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A5522h" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Ability" representedClassName="Ability" syncable="YES" codeGenerationType="class">
         <attribute name="z_alphaSapphire" optional="YES" attributeType="String"/>
         <attribute name="z_black" optional="YES" attributeType="String"/>
         <attribute name="z_black2" optional="YES" attributeType="String"/>
+        <attribute name="z_brilliantDiamond" optional="YES" attributeType="String"/>
         <attribute name="z_canonicalName" attributeType="String"/>
         <attribute name="z_diamond" optional="YES" attributeType="String"/>
         <attribute name="z_emerald" optional="YES" attributeType="String"/>
@@ -23,6 +24,7 @@
         <attribute name="z_ruby" optional="YES" attributeType="String"/>
         <attribute name="z_sapphire" optional="YES" attributeType="String"/>
         <attribute name="z_shield" optional="YES" attributeType="String"/>
+        <attribute name="z_shiningPearl" optional="YES" attributeType="String"/>
         <attribute name="z_soulSilver" optional="YES" attributeType="String"/>
         <attribute name="z_sun" optional="YES" attributeType="String"/>
         <attribute name="z_sword" optional="YES" attributeType="String"/>
@@ -241,6 +243,7 @@
         <attribute name="z_national" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
         <attribute name="z_newHoenn" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_newJohto" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_newSinnoh" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="z_newUnova" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_poni" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_sinnoh" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
@@ -345,7 +348,7 @@
         </fetchIndex>
     </entity>
     <elements>
-        <element name="Ability" positionX="0" positionY="0" width="128" height="554"/>
+        <element name="Ability" positionX="0" positionY="0" width="128" height="584"/>
         <element name="BagItemInfo" positionX="0" positionY="0" width="128" height="104"/>
         <element name="BerryItemInfo" positionX="0" positionY="0" width="128" height="164"/>
         <element name="BreedLearnsetEntry" positionX="0" positionY="0" width="128" height="74"/>
@@ -360,7 +363,7 @@
         <element name="MachineLearnsetEntry" positionX="0" positionY="0" width="128" height="59"/>
         <element name="Move" positionX="0" positionY="0" width="128" height="224"/>
         <element name="MoveInfo" positionX="0" positionY="0" width="128" height="254"/>
-        <element name="PokedexNumbers" positionX="0" positionY="0" width="128" height="434"/>
+        <element name="PokedexNumbers" positionX="0" positionY="0" width="128" height="449"/>
         <element name="PokemonForm" positionX="0" positionY="0" width="128" height="539"/>
         <element name="Stats" positionX="0" positionY="0" width="128" height="149"/>
         <element name="StoredPokemon" positionX="0" positionY="0" width="128" height="269"/>

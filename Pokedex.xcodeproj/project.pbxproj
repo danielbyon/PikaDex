@@ -76,6 +76,8 @@
 		65560C8E240AF59400B76093 /* Int32+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65560C8D240AF59400B76093 /* Int32+Int.swift */; };
 		65560C93240B008A00B76093 /* Int32+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65560C8D240AF59400B76093 /* Int32+Int.swift */; };
 		6560A75A238949C2009B8B4E /* PokemonEVYield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6560A759238949C2009B8B4E /* PokemonEVYield.swift */; };
+		6562BFEF274A5E5900A9C0F9 /* UpdateMessages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6562BFEE274A5E5900A9C0F9 /* UpdateMessages.plist */; };
+		6562BFF1274A60FA00A9C0F9 /* UpdateMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562BFF0274A60FA00A9C0F9 /* UpdateMessages.swift */; };
 		6564A34424A3303600EA7D41 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A84247FDCAB00526CBD /* ErrorInfo.swift */; };
 		6564A34524A3303600EA7D41 /* StatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5ED4D24A08ABF00742986 /* StatType.swift */; };
 		656F1813247553DD00EA765F /* Weather+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F1812247553DD00EA765F /* Weather+Strings.swift */; };
@@ -214,7 +216,7 @@
 		65881A8B247FE8AE00526CBD /* StoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A8A247FE8AE00526CBD /* StoreSection.swift */; };
 		658A4355240A5B000035C9F0 /* AbilityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A4354240A5B000035C9F0 /* AbilityList.swift */; };
 		658D0A68272402210054A6B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659AA9FE24B7CF5300640EB3 /* Images.xcassets */; };
-		658D0A6C2726ADB60054A6B1 /* UpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D0A6B2726ADB60054A6B1 /* UpdateMessage.swift */; };
+		658D0A6C2726ADB60054A6B1 /* UpdateMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D0A6B2726ADB60054A6B1 /* UpdateMessageView.swift */; };
 		658DD13E2463DBE50014D812 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13D2463DBE50014D812 /* SearchBar.swift */; };
 		658DD1402463E4060014D812 /* String+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13F2463E4060014D812 /* String+Search.swift */; };
 		658DD1412463E4060014D812 /* String+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DD13F2463E4060014D812 /* String+Search.swift */; };
@@ -680,6 +682,8 @@
 		65560C8D240AF59400B76093 /* Int32+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int32+Int.swift"; sourceTree = "<group>"; };
 		65560C94240B014D00B76093 /* Pokedex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pokedex.entitlements; sourceTree = "<group>"; };
 		6560A759238949C2009B8B4E /* PokemonEVYield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonEVYield.swift; sourceTree = "<group>"; };
+		6562BFEE274A5E5900A9C0F9 /* UpdateMessages.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UpdateMessages.plist; sourceTree = "<group>"; };
+		6562BFF0274A60FA00A9C0F9 /* UpdateMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMessages.swift; sourceTree = "<group>"; };
 		656F1812247553DD00EA765F /* Weather+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Strings.swift"; sourceTree = "<group>"; };
 		656F18142475718F00EA765F /* MachineList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineList.swift; sourceTree = "<group>"; };
 		65721CDC257E2CEB00DA8F7C /* TeamIntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TeamIntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -770,7 +774,7 @@
 		65881A88247FE88200526CBD /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		65881A8A247FE8AE00526CBD /* StoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSection.swift; sourceTree = "<group>"; };
 		658A4354240A5B000035C9F0 /* AbilityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityList.swift; sourceTree = "<group>"; };
-		658D0A6B2726ADB60054A6B1 /* UpdateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMessage.swift; sourceTree = "<group>"; };
+		658D0A6B2726ADB60054A6B1 /* UpdateMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMessageView.swift; sourceTree = "<group>"; };
 		658DD13D2463DBE50014D812 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		658DD13F2463E4060014D812 /* String+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Search.swift"; sourceTree = "<group>"; };
 		658DD14224641D1B0014D812 /* CanonicallyNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanonicallyNamed.swift; sourceTree = "<group>"; };
@@ -1109,7 +1113,7 @@
 			children = (
 				6547F7FC237968D20091A083 /* ContentView.swift */,
 				6547F7F5237968D20091A083 /* PokedexApp.swift */,
-				658D0A6B2726ADB60054A6B1 /* UpdateMessage.swift */,
+				658D0A6B2726ADB60054A6B1 /* UpdateMessageView.swift */,
 			);
 			path = "App Delegate";
 			sourceTree = "<group>";
@@ -1136,6 +1140,7 @@
 				6547F803237968D50091A083 /* LaunchScreen.storyboard */,
 				65BB4C68257F7C3400298D10 /* Menusprites.xcassets */,
 				6587456F248CC96C00860CBD /* Settings.bundle */,
+				6562BFEE274A5E5900A9C0F9 /* UpdateMessages.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1421,6 +1426,7 @@
 				6572629024011B1B00A38BCE /* TypeEffectiveness.swift */,
 				6572629D24011B1B00A38BCE /* TypeEffectivenessGroup.swift */,
 				658FF90B246BB3F500FE2185 /* Weather.swift */,
+				6562BFF0274A60FA00A9C0F9 /* UpdateMessages.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1945,6 +1951,7 @@
 				659AA9FD24B7BA9800640EB3 /* Icon.xcassets in Resources */,
 				6547F805237968D50091A083 /* LaunchScreen.storyboard in Resources */,
 				65BB4C69257F7C3400298D10 /* Menusprites.xcassets in Resources */,
+				6562BFEF274A5E5900A9C0F9 /* UpdateMessages.plist in Resources */,
 				6597D5EC23D020F50081482E /* Pokedex.sqlite in Resources */,
 				6597D5EB23D020F50081482E /* Pokedex.sqlite-shm in Resources */,
 				6597D5EA23D020F50081482E /* Pokedex.sqlite-wal in Resources */,
@@ -2125,7 +2132,7 @@
 				6551F797244D054C0061D8F4 /* BadgeCell.swift in Sources */,
 				65F7695224559E3500AEB57D /* BagItemInfo+Extension.swift in Sources */,
 				65B3936B23894B4F0064EB35 /* BaseStatViewModel.swift in Sources */,
-				658D0A6C2726ADB60054A6B1 /* UpdateMessage.swift in Sources */,
+				658D0A6C2726ADB60054A6B1 /* UpdateMessageView.swift in Sources */,
 				6524BD4523821A9200709D28 /* BattleAssistant.swift in Sources */,
 				65881A5E2479209400526CBD /* BattleAssistantInfo.swift in Sources */,
 				652B50312593036200FC8A48 /* BattleAssistantLevelSlider.swift in Sources */,
@@ -2178,6 +2185,7 @@
 				659C7CDC2466C10200E92C1C /* Icon.swift in Sources */,
 				659C7CF52469618300E92C1C /* InAppReviewManager.swift in Sources */,
 				65B1D94F24867639003052D2 /* Int+EvenOdd.swift in Sources */,
+				6562BFF1274A60FA00A9C0F9 /* UpdateMessages.swift in Sources */,
 				65560C8E240AF59400B76093 /* Int32+Int.swift in Sources */,
 				657262C424011B1C00A38BCE /* Int64+Int.swift in Sources */,
 				65F7694F24559E2B00AEB57D /* Item+Extension.swift in Sources */,
@@ -2759,7 +2767,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -2768,7 +2776,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia;
 				PRODUCT_NAME = PikaDex;
 				SUPPORTS_MACCATALYST = YES;
@@ -2784,7 +2792,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -2793,7 +2801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia;
 				PRODUCT_NAME = PikaDex;
 				SUPPORTS_MACCATALYST = YES;
@@ -2889,7 +2897,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2897,7 +2905,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.TeamIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2912,7 +2920,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2920,7 +2928,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.TeamIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2937,7 +2945,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2945,7 +2953,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.PokedexWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2962,7 +2970,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2970,7 +2978,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.PokedexWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

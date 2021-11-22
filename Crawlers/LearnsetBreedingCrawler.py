@@ -100,6 +100,9 @@ def process_file(key, contents):
     except AttributeError as e:
         print("Error parsing attribute:")
         print(e)
+    except IndexError as e:
+        print("Index out of range: {}".format(e))
+        return {}
     
     return entries
 

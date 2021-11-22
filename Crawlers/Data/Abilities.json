@@ -586,7 +586,7 @@
     "Generation V": "Powers up Bug-type moves in a pinch.",
     "Generation VI": "Powers up Bug-type moves when the Pok\u00e9mon is in trouble.",
     "Generation VII": "Powers up Bug-type moves when the Pok\u00e9mon's HP is low.",
-    "Generation VIII": "Powers up Bug-type moves when the Pok\u00e9mon\u2019s HP is low."
+    "Generation VIII": "Powers up Bug-type moves when the Pok\u00e9mon's HP is low."
   },
   "Rock Head": {
     "Generation III": "Prevents recoil damage.",
@@ -654,7 +654,8 @@
     "Generation IV": "Eliminates the effects of weather.",
     "Generation V": "Eliminates the effects of weather.",
     "Generation VI": "Eliminates the effects of weather.",
-    "Generation VII": "Eliminates the effects of weather."
+    "Generation VII": "Eliminates the effects of weather.",
+    "Generation VIII": "Eliminates the effects of weather."
   },
   "Tangled Feet": {
     "Generation IV": "Raises evasion if Pok\u00e9mon is confused.",
@@ -683,7 +684,7 @@
     "Generation V": "Raises Speed each time the Pok\u00e9mon flinches.",
     "Generation VI": "Boosts the Speed stat each time the Pok\u00e9mon flinches.",
     "Generation VII": "The Pok\u00e9mon's determination boosts the Speed stat each time the Pok\u00e9mon flinches.",
-    "Generation VIII": "The Pok\u00e9mon\u2019s determination boosts the Speed stat each time the Pok\u00e9mon flinches."
+    "Generation VIII": "The Pok\u00e9mon's determination boosts the Speed stat each time the Pok\u00e9mon flinches."
   },
   "Snow Cloak": {
     "Generation IV": "Raises evasion in a hailstorm.",
@@ -851,7 +852,7 @@
     "Generation V": "The Pok\u00e9mon can't use any held items.",
     "Generation VI": "The Pok\u00e9mon can't use any held items.",
     "Generation VII": "The Pok\u00e9mon can't use any held items.",
-    "Generation VIII": "The Pok\u00e9mon can\u2019t use any held items."
+    "Generation VIII": "The Pok\u00e9mon can't use any held items."
   },
   "Mold Breaker": {
     "Generation IV": "Moves can be used regardless of abilities.",
@@ -893,7 +894,7 @@
     "Generation V": "Ignores any stat changes in the Pok\u00e9mon.",
     "Generation VI": "Ignores the opposing Pok\u00e9mon's stat changes.",
     "Generation VII": "When attacking, the Pok\u00e9mon ignores the target Pok\u00e9mon's stat changes.",
-    "Generation VIII": "When attacking, the Pok\u00e9mon ignores the target Pok\u00e9mon\u2019s stat changes."
+    "Generation VIII": "When attacking, the Pok\u00e9mon ignores the target Pok\u00e9mon's stat changes."
   },
   "Tinted Lens": {
     "Generation IV": "Doubles the power of this Pok\u00e9mon's \"not very effective\" attacks.",
@@ -1026,7 +1027,7 @@
     "Generation V": "When its stats are lowered its Attack increases.",
     "Generation VI": "Boosts the Pok\u00e9mon's Attack stat when its stats are lowered.",
     "Generation VII": "Boosts the Pok\u00e9mon's Attack stat sharply when its stats are lowered.",
-    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Attack stat sharply when its stats are lowered."
+    "Generation VIII": "Boosts the Pok\u00e9mon's Attack stat sharply when its stats are lowered."
   },
   "Defeatist": {
     "Generation V": "Lowers stats when HP becomes half or less.",
@@ -1134,7 +1135,7 @@
     "Generation V": "Boosts the Pok\u00e9mon's Speed in a sandstorm.",
     "Generation VI": "Boosts the Pok\u00e9mon's Speed stat in a sandstorm.",
     "Generation VII": "Boosts the Pok\u00e9mon's Speed stat in a sandstorm.",
-    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Speed stat in a sandstorm."
+    "Generation VIII": "Boosts the Pok\u00e9mon's Speed stat in a sandstorm."
   },
   "Wonder Skin": {
     "Generation V": "Makes status-changing moves more likely to miss.",
@@ -1158,7 +1159,7 @@
     "Generation V": "It transforms itself into the Pok\u00e9mon it is facing.",
     "Generation VI": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it's facing.",
     "Generation VII": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it's facing.",
-    "Generation VIII": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it\u2019s facing."
+    "Generation VIII": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it's facing."
   },
   "Infiltrator": {
     "Generation V": "Passes through the foe's barrier and strikes.",
@@ -1224,7 +1225,7 @@
     "Generation V": "Changes the Pok\u00e9mon's shape when HP is halved.",
     "Generation VI": "Changes the Pok\u00e9mon's shape when HP is half or less.",
     "Generation VII": "Changes the Pok\u00e9mon's shape when HP is half or less.",
-    "Generation VIII": "Changes the Pok\u00e9mon\u2019s shape when HP is half or less."
+    "Generation VIII": "Changes the Pok\u00e9mon's shape when HP is half or less."
   },
   "Victory Star": {
     "Generation V": "Boosts the accuracy of its allies and itself.",
@@ -1262,7 +1263,7 @@
   "Protean": {
     "Generation VI": "Changes the Pok\u00e9mon's type to the type of the move it's using.",
     "Generation VII": "Changes the Pok\u00e9mon's type to the type of the move it's about to use.",
-    "Generation VIII": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use."
+    "Generation VIII": "Changes the Pok\u00e9mon's type to the type of the move it's about to use."
   },
   "Fur Coat": {
     "Generation VI": "Halves damage from physical moves.",
@@ -1317,7 +1318,7 @@
   "Grass Pelt": {
     "Generation VI": "Boosts the Defense stat in Grassy Terrain.",
     "Generation VII": "Boosts the Pok\u00e9mon's Defense stat in Grassy Terrain.",
-    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Defense stat on Grassy Terrain."
+    "Generation VIII": "Boosts the Pok\u00e9mon's Defense stat on Grassy Terrain."
   },
   "Symbiosis": {
     "Generation VI": "The Pok\u00e9mon can pass an item to an ally.",
@@ -1337,7 +1338,7 @@
   "Gooey": {
     "Generation VI": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat.",
     "Generation VII": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat.",
-    "Generation VIII": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat."
+    "Generation VIII": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat."
   },
   "Aerilate": {
     "Generation VI": "Normal-type moves become Flying-type moves.",
@@ -1357,7 +1358,7 @@
   "Fairy Aura": {
     "Generation VI": "Powers up each Pok\u00e9mon's Fairy-type moves.",
     "Generation VII": "Powers up each Pok\u00e9mon's Fairy-type moves.",
-    "Generation VIII": "Powers up each Pok\u00e9mon\u2019s Fairy-type moves."
+    "Generation VIII": "Powers up each Pok\u00e9mon's Fairy-type moves."
   },
   "Aura Break": {
     "Generation VI": "The effects of \"Aura\" Abilities are reversed.",
@@ -1497,7 +1498,7 @@
   },
   "Tangling Hair": {
     "Generation VII": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat.",
-    "Generation VIII": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat."
+    "Generation VIII": "Contact with the Pok\u00e9mon lowers the attacker's Speed stat."
   },
   "Receiver": {
     "Generation VII": "The Pok\u00e9mon copies the Ability of a defeated ally.",
@@ -1548,7 +1549,7 @@
     "Generation VIII": "Powers up moves that are super effective."
   },
   "Intrepid Sword": {
-    "Generation VIII": "Boosts the Pok\u00e9mon\u2019s Attack stat when the Pok\u00e9mon enters a battle."
+    "Generation VIII": "Boosts the Pok\u00e9mon's Attack stat when the Pok\u00e9mon enters a battle."
   },
   "Dauntless Shield": {
     "Generation VIII": "Boosts the Pok\u00e9mon's Defense stat when the Pok\u00e9mon enters a battle."
@@ -1563,7 +1564,7 @@
     "Generation VIII": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pok\u00e9mon except itself."
   },
   "Propeller Tail": {
-    "Generation VIII": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves."
+    "Generation VIII": "Ignores the effects of opposing Pok\u00e9mon's Abilities and moves that draw in moves."
   },
   "Mirror Armor": {
     "Generation VIII": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives."

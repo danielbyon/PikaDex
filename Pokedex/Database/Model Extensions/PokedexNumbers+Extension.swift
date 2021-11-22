@@ -22,7 +22,7 @@ public extension PokedexNumbers {
             retVal.append(("Johto", johto ?? -1))
         case .ruby, .sapphire, .emerald:
             retVal.append(("Hoenn", hoenn ?? -1))
-        case .diamond, .pearl, .platinum:
+        case .diamond, .pearl, .platinum, .brilliantDiamond, .shiningPearl:
             retVal.append(("Sinnoh", sinnoh ?? -1))
         case .heartGold, .soulSilver:
             retVal.append(("Johto", newJohto ?? -1))

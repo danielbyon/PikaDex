@@ -171,6 +171,10 @@ def main():
     
     for item in items:
         name = item['name']
+        # Special case rename
+        if name == "Adventure Guide":
+            name = "Adventure Rules"
+        
         generationIntroduced = item['generationIntroduced']
         url = item['url']
         

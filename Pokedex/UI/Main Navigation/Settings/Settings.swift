@@ -63,7 +63,7 @@ struct Settings: View {
                 )
             }
             .sheet(isPresented: $isShowingUpdateMessage, onDismiss: nil) {
-                UpdateMessage()
+                UpdateMessageView()
             }
 
 

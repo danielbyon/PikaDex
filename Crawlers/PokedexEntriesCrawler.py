@@ -18,22 +18,28 @@ def process_table(outer_table):
     entries = {}
     
     previous_entry = ""
-    for tr in outer_table("tr", recursive=False):
+    if outer_table.tbody is None:
+        return entries
+    
+    for tr in outer_table.tbody("tr", recursive=False):
         generation_body_td = tr.td
         if generation_body_td is None:
             # Usually this means this pokemon was unavailable in a specific generation, so there are no entries
             continue
 
-        generation_body = generation_body_td.table.find_all("tr", recursive=False)[1].td.table
+        generation_body = generation_body_td.table.tbody.find_all("tr", recursive=False)[1].td.table
 
         if generation_body is None:
             continue
 
-        for row in generation_body.find_all("tr", recursive=False):
-            header = row.th.a.span
+        for row in generation_body.tbody.find_all("tr", recursive=False):
+            header = row.th.a
             if header is None:
                 continue
-            game_name = header.text.strip()
+            header_span = header.span
+            if header_span is None:
+                continue
+            game_name = header_span.text.strip()
 
             # We don't support Pokemon Stadium/Colosseum
             if game_name.startswith("Stadium") or game_name.startswith("Colosseum"):
@@ -122,10 +128,10 @@ def main():
             for entries in allFormEntries:
                 all_entries.append(entries)
 
-    fieldnames = [u'number', u'name', u'formName', u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield']
+    fieldnames = [u'number', u'name', u'formName', u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl']
     crawler.write_entries_to_tsv(all_entries, fieldnames, "Data/PokedexEntries")
     
-    all_games = [u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield']
+    all_games = [u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl']
     all_vertical_entries = []
     for entries in all_entries:
         for game in all_games:
