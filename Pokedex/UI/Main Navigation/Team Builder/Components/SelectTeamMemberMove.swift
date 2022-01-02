@@ -21,7 +21,6 @@ struct SelectTeamMemberMove: View {
     @FetchRequest private var tutorLearnset: FetchedResults<TutorLearnsetEntry>
     @FetchRequest private var allMoves: FetchedResults<Move>
     @State private var showMovesByPokemon = true
-    @State private var selectedSegment: String
 
     private var levelEntries: [PokemonLearnsetViewModel] { levelLearnset.map { PokemonLearnsetViewModel(learnsetEntry: $0) } }
     private var machineEntries: [PokemonLearnsetViewModel] { machineLearnset.map { PokemonLearnsetViewModel(learnsetEntry: $0) } }
@@ -31,11 +30,11 @@ struct SelectTeamMemberMove: View {
     var body: some View {
         List {
             Section {
-                Picker("", selection: $selectedSegment) {
+                Picker("", selection: $showMovesByPokemon) {
                     Text("\(pokemonForm.pokemon.name)-specific")
-                        .tag("\(pokemonForm.pokemon.name)-specific")
+                        .tag(true)
                     Text("All Moves")
-                        .tag("All Moves")
+                        .tag(false)
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
@@ -106,7 +105,6 @@ struct SelectTeamMemberMove: View {
         self._breedLearnset = .init(fetchRequest: BreedLearnsetEntry.fetchRequest(forPokemonForm: pokemonForm))
         self._tutorLearnset = .init(fetchRequest: TutorLearnsetEntry.fetchRequest(forPokemonForm: pokemonForm))
         self._allMoves = .init(fetchRequest: Move.allFetchRequest(for: game))
-        self._selectedSegment = .init(initialValue: "\(pokemonForm.pokemon.name)-specific")
     }
 
 }
