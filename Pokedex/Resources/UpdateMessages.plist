@@ -4,6 +4,7 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
+		<string>Fixed an issue on the Team Member select move screen when toggling between Pokémon-specific and all moves</string>
 		<string>Fixed Team Builder bug, where making any edit would kick the user back to the team list screen</string>
 		<string>Fixed Team Builder member editor bug, where selecting a move, item, ability, etc. would not pop the user back to the member editor screen</string>
 		<string>Fixed Lilligant&apos;s evolution info showing up on Basculin&apos;s detail page</string>
