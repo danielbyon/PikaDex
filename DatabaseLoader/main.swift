@@ -699,7 +699,7 @@ func sanitizedLevelingForms(_ forms: [PokemonForm], pokemonName: String, formFil
     let filteredForms = forms.filter { $0.name.lowercased() == formFilter.lowercased() }
     if !filteredForms.isEmpty {
         return filteredForms
-    } else if let mapping = moveNameMappings.first(where: { $0["name"] == pokemonName }) {
+    } else if let mapping = moveNameMappings.first(where: { $0["name"] == pokemonName && $0["formFilter"]! == formFilter }) {
         let mappedFormNames = mapping["formNames"]!.trimmingCharacters(in: .alphanumerics.inverted).components(separatedBy: ",")
         return forms.filter { mappedFormNames.contains($0.name) }
     } else {
