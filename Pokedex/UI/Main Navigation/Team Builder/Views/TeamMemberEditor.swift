@@ -237,9 +237,6 @@ struct TeamMemberEditor: View {
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Team Member")
-        .navigation(item: $selectedAbility) { ability in
-            AbilityDetail(ability: ability, game: viewModel.game)
-        }
     }
 
     private func makeSelectMoveCell(number: Int) -> some View {
