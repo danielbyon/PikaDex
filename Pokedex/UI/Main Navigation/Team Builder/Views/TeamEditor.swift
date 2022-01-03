@@ -17,6 +17,7 @@ struct TeamEditor: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @ObservedObject var viewModel: TeamViewModel
     @State private var deletingMember: TeamMemberViewModel?
+    @State private var replacingMember: TeamMemberViewModel?
     @State private var isShowingDeleteConfirmation = false
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 2 : 1 }
@@ -67,16 +68,21 @@ struct TeamEditor: View {
                 .disabled(viewModel.members.count >= 6)
             }
         }
+        .navigation(item: $replacingMember) { member in
+            SelectPokemonForm(game: game) { replacement in
+                viewModel.replaceMember(member, with: replacement)
+            }
+        }
     }
 
     @ViewBuilder
     private func footer() -> some View {
         if !viewModel.members.isEmpty {
             #if targetEnvironment(macCatalyst)
-            Text("Right-click on a Pokémon to remove")
+            Text("Right-click on a Pokémon for options")
                 .monospacedCaption()
             #else
-            Text("Tap and hold on a Pokémon to remove")
+            Text("Tap and hold on a Pokémon for options")
                 .monospacedCaption()
             #endif
         }
@@ -85,6 +91,11 @@ struct TeamEditor: View {
     private func teamMemberCell(member: TeamMemberViewModel) -> some View {
         TeamMemberCell(member: member)
             .contextMenu {
+                Button {
+                    replacingMember = member
+                } label: {
+                    Label("Replace", systemImage: "arrow.triangle.2.circlepath")
+                }
                 Button("Delete", role: .destructive) {
                     isShowingDeleteConfirmation = true
                     deletingMember = member
