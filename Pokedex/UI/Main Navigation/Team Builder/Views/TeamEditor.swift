@@ -156,7 +156,7 @@ private struct TeamMemberCell: View {
     var body: some View {
         Card {
             VStack(alignment: .leading, spacing: 16.0) {
-                TeamMemberFormInfo(form: member.pokemonForm, gender: member.gender)
+                TeamMemberFormInfo(form: member.pokemonForm, nickname: member.nickname, gender: member.gender)
                 TeamMemberMoves(member: member)
                 TeamMemberStats(member: member)
                 TeamMemberFactoids(member: member)
@@ -169,16 +169,20 @@ private struct TeamMemberCell: View {
 private struct TeamMemberFormInfo: View {
 
     let form: PokemonForm
+    let nickname: String
     let gender: Gender
 
     private var resolvedName: String {
         var retVal = form.pokemon.name
+        if !nickname.isEmpty {
+            retVal = nickname
+        }
         if let abbreviation = gender.abbreviation {
             retVal += " (\(abbreviation))"
         }
         return retVal
     }
-    private var shouldShowFormName: Bool { form.name != form.pokemon.name }
+    private var shouldShowFormName: Bool { !nickname.isEmpty || form.name != form.pokemon.name }
 
     var body: some View {
         HStack {
