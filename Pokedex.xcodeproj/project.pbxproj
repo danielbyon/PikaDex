@@ -271,6 +271,8 @@
 		659DAE2D239DC82C00B0FA8E /* TypeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DAE2C239DC82C00B0FA8E /* TypeDetail.swift */; };
 		659EDEFB23852F8700F83F1B /* Pokemon+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659EDEFA23852F8700F83F1B /* Pokemon+Strings.swift */; };
 		659F1FB523DEE37800A3379A /* MoveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F1FB423DEE37700A3379A /* MoveGenerator.swift */; };
+		65A123272782D2D900E38BA6 /* TeamMemberDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A123262782D2D900E38BA6 /* TeamMemberDetail.swift */; };
+		65A123292783A27500E38BA6 /* TeamMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A123282783A27500E38BA6 /* TeamMemberCell.swift */; };
 		65A5ED40249F63C500742986 /* SelectTeamMemberMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5ED3F249F63C500742986 /* SelectTeamMemberMove.swift */; };
 		65A5ED42249F6CF100742986 /* SelectPokemonForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5ED41249F6CF100742986 /* SelectPokemonForm.swift */; };
 		65A5ED44249F8B4F00742986 /* SelectAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A5ED43249F8B4F00742986 /* SelectAbility.swift */; };
@@ -822,6 +824,8 @@
 		659DAE2C239DC82C00B0FA8E /* TypeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetail.swift; sourceTree = "<group>"; };
 		659EDEFA23852F8700F83F1B /* Pokemon+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+Strings.swift"; sourceTree = "<group>"; };
 		659F1FB423DEE37700A3379A /* MoveGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveGenerator.swift; sourceTree = "<group>"; };
+		65A123262782D2D900E38BA6 /* TeamMemberDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberDetail.swift; sourceTree = "<group>"; };
+		65A123282783A27500E38BA6 /* TeamMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberCell.swift; sourceTree = "<group>"; };
 		65A5ED3F249F63C500742986 /* SelectTeamMemberMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamMemberMove.swift; sourceTree = "<group>"; };
 		65A5ED41249F6CF100742986 /* SelectPokemonForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPokemonForm.swift; sourceTree = "<group>"; };
 		65A5ED43249F8B4F00742986 /* SelectAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAbility.swift; sourceTree = "<group>"; };
@@ -1623,9 +1627,11 @@
 		65A5ED5E24A129E100742986 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65A123262782D2D900E38BA6 /* TeamMemberDetail.swift */,
 				65881A572478F07F00526CBD /* TeamBuilder.swift */,
 				6587458B249358BF00860CBD /* TeamEditor.swift */,
 				652C78C92492285600BA2825 /* TeamMemberEditor.swift */,
+				65A123282783A27500E38BA6 /* TeamMemberCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2163,6 +2169,7 @@
 				6551F799244D0DFB0061D8F4 /* EncounterRate+Strings.swift in Sources */,
 				65901A582420E4D6005A61F0 /* EncounterRate.swift in Sources */,
 				65881A85247FDCAB00526CBD /* ErrorInfo.swift in Sources */,
+				65A123292783A27500E38BA6 /* TeamMemberCell.swift in Sources */,
 				657262C924011B1C00A38BCE /* Evolution+Extensions.swift in Sources */,
 				659C7D04246A61D100E92C1C /* EvolutionCondition.swift in Sources */,
 				659C7D02246A61A500E92C1C /* EvolutionMethod.swift in Sources */,
@@ -2245,6 +2252,7 @@
 				65F7693D2452B49900AEB57D /* NatureList.swift in Sources */,
 				657262BE24011B1C00A38BCE /* NumberFormatter+Extension.swift in Sources */,
 				65881A87247FE59300526CBD /* NumberFormatter+Price.swift in Sources */,
+				65A123272782D2D900E38BA6 /* TeamMemberDetail.swift in Sources */,
 				65B1D94324860B1F003052D2 /* PannableZoomableImageView.swift in Sources */,
 				65F76970245BDC4400AEB57D /* Pocket+Strings.swift in Sources */,
 				65F769592455A1FB00AEB57D /* Pocket.swift in Sources */,
