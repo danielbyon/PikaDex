@@ -13,8 +13,16 @@ import CoreData
 public extension Move {
 
     static func allFetchRequest(for game: Game) -> NSFetchRequest<Move> {
-        let predicate = NSPredicate(format: "\(#keyPath(Move.z_game)) == %@", game.rawValue)
+        let predicate = allMovesPredicate(for: game)
         return makeFetchRequest(with: predicate, game: game)
+    }
+
+    static func allMovesPredicate(for game: Game) -> NSPredicate {
+        return NSPredicate(format: "\(#keyPath(Move.z_game)) == %@", game.rawValue)
+    }
+
+    static func allMovesSearchPredicate(for game: Game, searchText: String) -> NSPredicate {
+        return NSPredicate(format: "\(#keyPath(Move.z_game)) == %@ AND \(#keyPath(Move.z_canonicalName)) CONTAINS[cd] %@", game.rawValue, searchText)
     }
 
     static func fetchRequest(forType type: PokemonType, game: Game) -> NSFetchRequest<Move> {
