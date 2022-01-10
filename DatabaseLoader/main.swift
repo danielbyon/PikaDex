@@ -691,14 +691,22 @@ func sanitizedLevelForms(_ forms: [PokemonForm], forFormName formName: String, p
 // MARK: Level
 print("Level")
 var levelLearnsetEntries: [String: LevelLearnsetEntry] = [:]
+
+let moveNameMappings = Helper.loadTSV(from: "Research/MoveFormNameMappings.tsv")
 func sanitizedLevelingForms(_ forms: [PokemonForm], pokemonName: String, formFilter: String?) -> [PokemonForm] {
     guard let formFilter = formFilter else { return forms }
-    if pokemonName == "Meowstic" {
-        return forms.filter { $0.name.contains(formFilter) }
+
+    let filteredForms = forms.filter { $0.name.lowercased() == formFilter.lowercased() }
+    if !filteredForms.isEmpty {
+        return filteredForms
+    } else if let mapping = moveNameMappings.first(where: { $0["name"] == pokemonName && $0["formFilter"]! == formFilter }) {
+        let mappedFormNames = mapping["formNames"]!.trimmingCharacters(in: .alphanumerics.inverted).components(separatedBy: ",")
+        return forms.filter { mappedFormNames.contains($0.name) }
     } else {
-        return forms.filter { $0.name == formFilter }
+        return []
     }
 }
+
 for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as! [String: [String: [String: [[String: String]]]]] {
     guard !dict.isEmpty else { continue }
     for (_, gameDicts) in dict {

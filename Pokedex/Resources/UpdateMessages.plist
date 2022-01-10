@@ -4,22 +4,17 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
-		<string>Fixed an issue on the Team Member select move screen when toggling between Pokémon-specific and all moves</string>
-		<string>Fixed Team Builder bug, where making any edit would kick the user back to the team list screen</string>
-		<string>Fixed Team Builder member editor bug, where selecting a move, item, ability, etc. would not pop the user back to the member editor screen</string>
-		<string>Fixed Lilligant&apos;s evolution info showing up on Basculin&apos;s detail page</string>
-		<string>Fixed Scraggy&apos;s evolution level</string>
-		<string>Fixed psychic/ghost type effectiveness (was 0x, fixed to 2x)</string>
+		<string>Fixed missing move data for various Pokémon forms</string>
 	</array>
 	<key>newFeatures</key>
 	<array>
-		<string>Brilliant Diamond &amp; Shining Pearl game data</string>
-		<string>National Pokédex</string>
-		<string>Added search to abilities, items, locations, machines, and moves</string>
+		<string>Added the ability to replace a Pokémon on a team</string>
+		<string>Added the ability to manually enter a team member&apos;s stats</string>
+		<string>Show team member nickname, if there is one</string>
+		<string>Added team member detail page, for easier access to move/ability info</string>
+		<string>Added the ability to search for a team member move</string>
 	</array>
 	<key>upcoming</key>
-	<array>
-		<string>Checklist of caught Pokémon is in development!</string>
-	</array>
+	<array/>
 </dict>
 </plist>

@@ -42,8 +42,39 @@ struct TeamMember: Codable {
         let baseValue: Int
         var ev: Int
         var iv: Int
+        var isCalculated: Bool
+        var value: Int
 
-        var value: Int { baseValue } // TODO: compute
+        private enum CodingKeys: String, CodingKey {
+            case baseValue
+            case ev
+            case iv
+            case isCalculated
+            case value
+        }
+
+        init(
+            baseValue: Int,
+            ev: Int,
+            iv: Int,
+            isCalculated: Bool,
+            value: Int
+        ) {
+            self.baseValue = baseValue
+            self.ev = ev
+            self.iv = iv
+            self.isCalculated = isCalculated
+            self.value = value
+        }
+
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            baseValue = try container.decode(Int.self, forKey: .baseValue)
+            ev = try container.decode(Int.self, forKey: .ev)
+            iv = try container.decode(Int.self, forKey: .iv)
+            isCalculated = try container.decodeIfPresent(Bool.self, forKey: .isCalculated) ?? true
+            value = try container.decodeIfPresent(Int.self, forKey: .value) ?? 0
+        }
     }
 
     init(
@@ -68,7 +99,8 @@ struct TeamMember: Codable {
         isShiny: Bool,
         gender: Gender,
         game: Game,
-        internalID: UUID) {
+        internalID: UUID
+    ) {
         self.pokemon = pokemon
         self.formName = formName
         self.nickname = nickname

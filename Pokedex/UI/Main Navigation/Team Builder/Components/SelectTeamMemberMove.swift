@@ -20,6 +20,7 @@ struct SelectTeamMemberMove: View {
     @FetchRequest private var breedLearnset: FetchedResults<BreedLearnsetEntry>
     @FetchRequest private var tutorLearnset: FetchedResults<TutorLearnsetEntry>
     @FetchRequest private var allMoves: FetchedResults<Move>
+    @State private var searchText = ""
     @State private var showMovesByPokemon = true
 
     private var levelEntries: [PokemonLearnsetViewModel] { levelLearnset.map { PokemonLearnsetViewModel(learnsetEntry: $0) } }
@@ -29,16 +30,6 @@ struct SelectTeamMemberMove: View {
 
     var body: some View {
         List {
-            Section {
-                Picker("", selection: $showMovesByPokemon) {
-                    Text("\(pokemonForm.pokemon.name)-specific")
-                        .tag(true)
-                    Text("All Moves")
-                        .tag(false)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-            }
-
             if showMovesByPokemon {
                 if !levelLearnset.isEmpty {
                     Section(header: SectionHeader("By Level")) {
@@ -90,10 +81,29 @@ struct SelectTeamMemberMove: View {
                         self.dismiss()
                     }
                 }
+                .searchable(text: $searchText)
             }
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Select Move")
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
+                Picker("", selection: $showMovesByPokemon) {
+                    Text("\(pokemonForm.pokemon.name)-specific")
+                        .tag(true)
+                    Text("All Moves")
+                        .tag(false)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+        }
+        .onChange(of: searchText) { newValue in
+            if newValue.isEmpty {
+                allMoves.nsPredicate = Move.allMovesPredicate(for: game)
+            } else {
+                allMoves.nsPredicate = Move.allMovesSearchPredicate(for: game, searchText: newValue.lowercased())
+            }
+        }
     }
 
     init(pokemonForm: PokemonForm, game: Game, onSelect: @escaping (Move) -> Void) {

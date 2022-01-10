@@ -20,30 +20,47 @@ class TeamMemberViewModel: ObservableObject {
     @Published var isShiny = false
     @Published var gender: Gender = .unspecified
 
+    @Published var hpCalculated = true
     @Published var hpIV = 0
     @Published var hpEV = 0
+    @Published var hpValue = 0
+
+    @Published var attackCalculated = true
     @Published var attackIV = 0
     @Published var attackEV = 0
+    @Published var attackValue = 0
+
+    @Published var defenseCalculated = true
     @Published var defenseIV = 0
     @Published var defenseEV = 0
+    @Published var defenseValue = 0
+
+    @Published var specialAttackCalculated = true
     @Published var specialAttackIV = 0
     @Published var specialAttackEV = 0
+    @Published var specialAttackValue = 0
+
+    @Published var specialDefenseCalculated = true
     @Published var specialDefenseIV = 0
     @Published var specialDefenseEV = 0
+    @Published var specialDefenseValue = 0
+
+    @Published var speedCalculated = true
     @Published var speedIV = 0
     @Published var speedEV = 0
+    @Published var speedValue = 0
 
     @Published var move1: Move?
     @Published var move2: Move?
     @Published var move3: Move?
     @Published var move4: Move?
 
-    var calculatedHP: Int { StatCalculator.calculateStat(statType: .hp, baseValue: baseHP, iv: hpIV, ev: hpEV, level: Int(level), nature: nature, game: game) }
-    var calculatedAttack: Int { StatCalculator.calculateStat(statType: .attack, baseValue: baseAttack, iv: attackIV, ev: attackEV, level: Int(level), nature: nature, game: game) }
-    var calculatedDefense: Int { StatCalculator.calculateStat(statType: .defense, baseValue: baseDefense, iv: defenseIV, ev: defenseEV, level: Int(level), nature: nature, game: game) }
-    var calculatedSpecialAttack: Int { StatCalculator.calculateStat(statType: .specialAttack, baseValue: baseSpecialAttack, iv: specialAttackIV, ev: specialAttackEV, level: Int(level), nature: nature, game: game) }
-    var calculatedSpecialDefense: Int { StatCalculator.calculateStat(statType: .specialDefense, baseValue: baseSpecialDefense, iv: specialDefenseIV, ev: specialDefenseEV, level: Int(level), nature: nature, game: game) }
-    var calculatedSpeed: Int { StatCalculator.calculateStat(statType: .speed, baseValue: baseSpeed, iv: speedIV, ev: speedEV, level: Int(level), nature: nature, game: game) }
+    var calculatedHP: Int { hpCalculated ? StatCalculator.calculateStat(statType: .hp, baseValue: baseHP, iv: hpIV, ev: hpEV, level: Int(level), nature: nature, game: game) : hpValue }
+    var calculatedAttack: Int { attackCalculated ? StatCalculator.calculateStat(statType: .attack, baseValue: baseAttack, iv: attackIV, ev: attackEV, level: Int(level), nature: nature, game: game) : attackValue }
+    var calculatedDefense: Int { defenseCalculated ? StatCalculator.calculateStat(statType: .defense, baseValue: baseDefense, iv: defenseIV, ev: defenseEV, level: Int(level), nature: nature, game: game) : defenseValue }
+    var calculatedSpecialAttack: Int { specialAttackCalculated ? StatCalculator.calculateStat(statType: .specialAttack, baseValue: baseSpecialAttack, iv: specialAttackIV, ev: specialAttackEV, level: Int(level), nature: nature, game: game) : specialAttackValue }
+    var calculatedSpecialDefense: Int { specialDefenseCalculated ? StatCalculator.calculateStat(statType: .specialDefense, baseValue: baseSpecialDefense, iv: specialDefenseIV, ev: specialDefenseEV, level: Int(level), nature: nature, game: game) : specialDefenseValue }
+    var calculatedSpeed: Int { speedCalculated ? StatCalculator.calculateStat(statType: .speed, baseValue: baseSpeed, iv: speedIV, ev: speedEV, level: Int(level), nature: nature, game: game) : speedValue }
 
     var ivRange: Range<Int> {
         if game.generation < 3 {
@@ -166,12 +183,48 @@ class TeamMemberViewModel: ObservableObject {
             formName: pokemonForm.name,
             nickname: nickname,
             level: Int(level),
-            hp: .init(baseValue: baseStats.hp, ev: hpEV, iv: hpIV),
-            attack: .init(baseValue: baseStats.attack, ev: attackEV, iv: attackIV),
-            defense: .init(baseValue: baseStats.defense, ev: defenseEV, iv: defenseIV),
-            specialAttack: .init(baseValue: baseStats.specialAttack, ev: specialAttackEV, iv: specialAttackIV),
-            specialDefense: .init(baseValue: baseStats.specialDefense, ev: specialDefenseEV, iv: specialDefenseIV),
-            speed: .init(baseValue: baseStats.speed, ev: speedEV, iv: speedIV),
+            hp: .init(
+                baseValue: baseStats.hp,
+                ev: hpEV,
+                iv: hpIV,
+                isCalculated: hpCalculated,
+                value: hpValue
+            ),
+            attack: .init(
+                baseValue: baseStats.attack,
+                ev: attackEV,
+                iv: attackIV,
+                isCalculated: attackCalculated,
+                value: attackValue
+            ),
+            defense: .init(
+                baseValue: baseStats.defense,
+                ev: defenseEV,
+                iv: defenseIV,
+                isCalculated: defenseCalculated,
+                value: defenseValue
+            ),
+            specialAttack: .init(
+                baseValue: baseStats.specialAttack,
+                ev: specialAttackEV,
+                iv: specialAttackIV,
+                isCalculated: specialAttackCalculated,
+                value: specialAttackValue
+            ),
+            specialDefense: .init(
+                baseValue: baseStats.specialDefense,
+                ev: specialDefenseEV,
+                iv: specialDefenseIV,
+                isCalculated: specialDefenseCalculated,
+                value: specialDefenseValue
+            ),
+            speed: .init(
+                baseValue: baseStats.speed,
+                ev: speedEV,
+                iv: speedIV,
+                isCalculated: speedCalculated,
+                value: speedValue
+            ),
             move1: move1?.name,
             move2: move2?.name,
             move3: move3?.name,

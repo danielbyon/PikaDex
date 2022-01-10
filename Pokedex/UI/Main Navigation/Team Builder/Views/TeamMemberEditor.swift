@@ -19,11 +19,11 @@ struct TeamMemberEditor: View {
                 NavigationLink {
                     PokemonDetail(
                         pokemon: viewModel.pokemonForm.pokemon,
-                        game: settings.currentGame,
+                        game: viewModel.game,
                         formIndex: viewModel.pokemonForm.formIndex
                     )
                 } label: {
-                    PokemonFormCell(form: viewModel.pokemonForm, game: settings.currentGame)
+                    PokemonFormCell(form: viewModel.pokemonForm, game: viewModel.game)
                 }
             }
 
@@ -34,7 +34,7 @@ struct TeamMemberEditor: View {
                 
                 if settings.currentGame.hasAbilities {
                     NavigationLink {
-                        SelectAbility(form: viewModel.pokemonForm, game: settings.currentGame) { ability in
+                        SelectAbility(form: viewModel.pokemonForm, game: viewModel.game) { ability in
                             viewModel.ability = ability
                         }
                     } label: {
@@ -52,7 +52,7 @@ struct TeamMemberEditor: View {
                 }
 
                 NavigationLink {
-                    SelectItem(game: settings.currentGame) { item in
+                    SelectItem(game: viewModel.game) { item in
                         viewModel.heldItem = item
                     }
                 } label: {
@@ -103,48 +103,48 @@ struct TeamMemberEditor: View {
 
             Section(header: SectionHeader("Moves")) {
                 NavigationLink {
-                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame) { move in
+                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: viewModel.game) { move in
                         self.viewModel.move1 = move
                     }
                 } label: {
                     if let move1 = viewModel.move1 {
-                        MoveCell(move: move1, game: settings.currentGame)
+                        MoveCell(move: move1, game: viewModel.game)
                     } else {
                         makeSelectMoveCell(number: 1)
                     }
                 }
 
                 NavigationLink {
-                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame) { move in
+                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: viewModel.game) { move in
                         self.viewModel.move2 = move
                     }
                 } label: {
                     if let move2 = viewModel.move2 {
-                        MoveCell(move: move2, game: settings.currentGame)
+                        MoveCell(move: move2, game: viewModel.game)
                     } else {
                         makeSelectMoveCell(number: 2)
                     }
                 }
 
                 NavigationLink {
-                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame) { move in
+                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: viewModel.game) { move in
                         self.viewModel.move3 = move
                     }
                 } label: {
                     if let move3 = viewModel.move3 {
-                        MoveCell(move: move3, game: settings.currentGame)
+                        MoveCell(move: move3, game: viewModel.game)
                     } else {
                         makeSelectMoveCell(number: 3)
                     }
                 }
 
                 NavigationLink {
-                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: settings.currentGame) { move in
+                    SelectTeamMemberMove(pokemonForm: viewModel.pokemonForm, game: viewModel.game) { move in
                         self.viewModel.move4 = move
                     }
                 } label: {
                     if let move4 = viewModel.move4 {
-                        MoveCell(move: move4, game: settings.currentGame)
+                        MoveCell(move: move4, game: viewModel.game)
                     } else {
                         makeSelectMoveCell(number: 4)
                     }
@@ -158,7 +158,9 @@ struct TeamMemberEditor: View {
                     ivRange: viewModel.ivRange,
                     evRange: viewModel.remainingEVRange(forStatType: .hp),
                     iv: $viewModel.hpIV,
-                    ev: $viewModel.hpEV
+                    ev: $viewModel.hpEV,
+                    isCalculated: $viewModel.hpCalculated,
+                    manualValue: $viewModel.hpValue
                 )
 
                 makeStatSection(
@@ -167,7 +169,9 @@ struct TeamMemberEditor: View {
                     ivRange: viewModel.ivRange,
                     evRange: viewModel.remainingEVRange(forStatType: .attack),
                     iv: $viewModel.attackIV,
-                    ev: $viewModel.attackEV
+                    ev: $viewModel.attackEV,
+                    isCalculated: $viewModel.attackCalculated,
+                    manualValue: $viewModel.attackValue
                 )
 
                 makeStatSection(
@@ -176,7 +180,9 @@ struct TeamMemberEditor: View {
                     ivRange: viewModel.ivRange,
                     evRange: viewModel.remainingEVRange(forStatType: .defense),
                     iv: $viewModel.defenseIV,
-                    ev: $viewModel.defenseEV
+                    ev: $viewModel.defenseEV,
+                    isCalculated: $viewModel.defenseCalculated,
+                    manualValue: $viewModel.defenseValue
                 )
 
                 if settings.currentGame.generation > 2 {
@@ -186,7 +192,9 @@ struct TeamMemberEditor: View {
                         ivRange: viewModel.ivRange,
                         evRange: viewModel.remainingEVRange(forStatType: .specialAttack),
                         iv: $viewModel.specialAttackIV,
-                        ev: $viewModel.specialAttackEV
+                        ev: $viewModel.specialAttackEV,
+                        isCalculated: $viewModel.specialAttackCalculated,
+                        manualValue: $viewModel.specialAttackValue
                     )
 
                     makeStatSection(
@@ -195,7 +203,9 @@ struct TeamMemberEditor: View {
                         ivRange: viewModel.ivRange,
                         evRange: viewModel.remainingEVRange(forStatType: .specialDefense),
                         iv: $viewModel.specialDefenseIV,
-                        ev: $viewModel.specialDefenseEV
+                        ev: $viewModel.specialDefenseEV,
+                        isCalculated: $viewModel.specialDefenseCalculated,
+                        manualValue: $viewModel.specialDefenseValue
                     )
                 }
 
@@ -205,7 +215,9 @@ struct TeamMemberEditor: View {
                     ivRange: viewModel.ivRange,
                     evRange: viewModel.remainingEVRange(forStatType: .speed),
                     iv: $viewModel.speedIV,
-                    ev: $viewModel.speedEV
+                    ev: $viewModel.speedEV,
+                    isCalculated: $viewModel.speedCalculated,
+                    manualValue: $viewModel.speedValue
                 )
 
                 if settings.currentGame.generation < 3 {
@@ -215,7 +227,9 @@ struct TeamMemberEditor: View {
                         ivRange: viewModel.ivRange,
                         evRange: viewModel.remainingEVRange(forStatType: .specialAttack),
                         iv: $viewModel.specialAttackIV,
-                        ev: $viewModel.specialAttackEV
+                        ev: $viewModel.specialAttackEV,
+                        isCalculated: $viewModel.specialAttackCalculated,
+                        manualValue: $viewModel.specialAttackValue
                     )
 
                 }
@@ -230,34 +244,61 @@ struct TeamMemberEditor: View {
             .monospacedBody()
     }
 
-    private func makeStatSection(title: String, value: Int, ivRange: Range<Int>, evRange: Range<Int>, iv: Binding<Int>, ev: Binding<Int>) -> some View {
+    private func makeStatSection(
+        title: String,
+        value: Int,
+        ivRange: Range<Int>,
+        evRange: Range<Int>,
+        iv: Binding<Int>,
+        ev: Binding<Int>,
+        isCalculated: Binding<Bool>,
+        manualValue: Binding<Int>
+    ) -> some View {
         Section(header: SectionHeader(title)) {
-            HStack {
-                Text("Base value:")
-                Spacer()
-                Text("\(value)")
+            Picker("", selection: isCalculated) {
+                Text("Calculated")
+                    .tag(true)
+                Text("Manual")
+                    .tag(false)
             }
-            .monospacedBody()
+            .pickerStyle(SegmentedPickerStyle())
 
-            NavigationLink {
-                SelectValue(range: ivRange) { value in
-                    iv.wrappedValue = value
+            if isCalculated.wrappedValue {
+                HStack {
+                    Text("Base value:")
+                    Spacer()
+                    Text("\(value)")
                 }
-            } label: {
-                StatValueCell(title: "IV", value: iv.wrappedValue)
-            }
+                .monospacedBody()
 
-            NavigationLink {
-                SelectValue(range: evRange) { value in
-                    ev.wrappedValue = value
+                NavigationLink {
+                    SelectValue(range: ivRange) { value in
+                        iv.wrappedValue = value
+                    }
+                } label: {
+                    StatValueCell(title: "IV", value: iv.wrappedValue)
                 }
-            } label: {
-                StatValueCell(title: "EV", value: ev.wrappedValue)
+
+                NavigationLink {
+                    SelectValue(range: evRange) { value in
+                        ev.wrappedValue = value
+                    }
+                } label: {
+                    StatValueCell(title: "EV", value: ev.wrappedValue)
+                }
+            } else {
+                TextField("Value", value: manualValue, formatter: _valueFormatter, prompt: Text("Value"))
             }
         }
     }
 
 }
+
+private let _valueFormatter: Formatter = {
+    let formatter = NumberFormatter()
+    formatter.maximumFractionDigits = 0
+    return formatter
+}()
 
 struct TeamMemberEditor_Previews: PreviewProvider {
     static var previews: some View {
@@ -267,12 +308,12 @@ struct TeamMemberEditor_Previews: PreviewProvider {
                 formName: "Charizard",
                 nickname: "",
                 level: 100,
-                hp: .init(baseValue: 78, ev: 0, iv: 0),
-                attack: .init(baseValue: 84, ev: 0, iv: 0),
-                defense: .init(baseValue: 78, ev: 0, iv: 0),
-                specialAttack: .init(baseValue: 109, ev: 0, iv: 0),
-                specialDefense: .init(baseValue: 85, ev: 0, iv: 0),
-                speed: .init(baseValue: 100, ev: 0, iv: 0),
+                hp: .init(baseValue: 78, ev: 0, iv: 0, isCalculated: true, value: 0),
+                attack: .init(baseValue: 84, ev: 0, iv: 0, isCalculated: true, value: 0),
+                defense: .init(baseValue: 78, ev: 0, iv: 0, isCalculated: true, value: 0),
+                specialAttack: .init(baseValue: 109, ev: 0, iv: 0, isCalculated: true, value: 0),
+                specialDefense: .init(baseValue: 85, ev: 0, iv: 0, isCalculated: true, value: 0),
+                speed: .init(baseValue: 100, ev: 0, iv: 0, isCalculated: true, value: 0),
                 move1: "Fire Blast",
                 move2: "Fly",
                 move3: "Hyper Beam",

@@ -162,6 +162,7 @@ struct ContentView: View {
             .navigationViewStyle(.stack)
         case .store:
             Store()
+                .injectDependencies()
         case .none:
             EmptyView()
         }

@@ -31,6 +31,14 @@ class TeamViewModel: ObservableObject {
         setupObservation(for: viewModel)
     }
 
+    func replaceMember(_ member: TeamMemberViewModel, with replacement: PokemonForm) {
+        guard let index = members.firstIndex(of: member) else { return }
+        let member = TeamMember(pokemonForm: replacement, game: member.game)
+        let viewModel = TeamMemberViewModel(teamMember: member)
+        members[index] = viewModel
+        setupObservation(for: viewModel)
+    }
+
     func deleteMember(_ member: TeamMemberViewModel) {
         members.removeAll { $0.internalID == member.internalID }
     }
