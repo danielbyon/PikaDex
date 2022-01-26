@@ -13,12 +13,14 @@ struct SelectPokemon: View {
     let game: Game
     let onSelect: (StoredPokemon) -> Void
 
+    @Environment(\.dismiss) var dismiss
     @FetchRequest private var pokemon: FetchedResults<StoredPokemon>
 
     var body: some View {
         SearchableList(objects: pokemon, searchPlaceholder: "Search for a Pokémon") { pokemon in
             PokemonCell(pokemon: pokemon, game: self.game).onTapGesture {
                 self.onSelect(pokemon)
+                self.dismiss()
             }
         }
         .navigationTitle("Select Pokémon")
