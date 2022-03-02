@@ -164,6 +164,19 @@ extension Pocket {
             default:
                 return "Items"
             }
+        case .legendsArceus:
+            switch self {
+            case .berry:
+                return "Berries"
+            case .key:
+                return "Key Items"
+            case .medicine:
+                return "Medicine"
+            case .treasures:
+                return "Treasures"
+            default:
+                return "Items"
+            }
         }
     }
 

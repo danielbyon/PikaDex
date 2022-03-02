@@ -54,6 +54,8 @@ public extension PokedexNumbers {
             retVal.append(("Galar", galar ?? -1))
             retVal.append(("Isle of Armor", isleOfArmor ?? -1))
             retVal.append(("Crown Tundra", crownTundra ?? -1))
+        case .legendsArceus:
+            retVal.append(("Hisui", hisui ?? -1))
         case .national:
             break // national is always added
         }
@@ -90,6 +92,10 @@ public extension PokedexNumbers {
     var galar: Int? {
         get { (value(forKeyPath: #keyPath(PokedexNumbers.z_galar)) as? Int64)?.toInt() }
         set { z_galar = newValue?.toInt64() ?? 0 }
+    }
+    var hisui: Int? {
+        get { (value(forKeyPath: #keyPath(PokedexNumbers.z_hisui)) as? Int64)?.toInt() }
+        set { z_hisui = newValue?.toInt64() ?? 0 }
     }
     var hoenn: Int? {
         get { (value(forKeyPath: #keyPath(PokedexNumbers.z_hoenn)) as? Int64)?.toInt() }

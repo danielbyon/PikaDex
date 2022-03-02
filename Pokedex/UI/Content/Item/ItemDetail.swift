@@ -73,7 +73,9 @@ struct BagItemInfoDetail: View {
     var body: some View {
         Group {
             Section {
-                Value1Cell(text: "Pocket", detailText: info.pocket.title(forGame: game), image: nil)
+                if let pocket = info.pocket {
+                    Value1Cell(text: "Pocket", detailText: pocket.title(forGame: game), image: nil)
+                }
                 Value1Cell(text: "Introduced", detailText: item.generationIntroduced.title)
             }
             

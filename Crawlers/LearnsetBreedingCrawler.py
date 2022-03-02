@@ -10,7 +10,7 @@ import json
 import shutil
 import codecs
 import CrawlerUtils as crawler
-
+ 
 moveset_keys = [
     "gen8",
     "gen1",

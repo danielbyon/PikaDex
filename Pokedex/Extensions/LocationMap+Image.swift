@@ -107,6 +107,8 @@ private extension Game {
              .shield,
              .national:
             return ["SS"]
+        case .legendsArceus:
+            return ["LA"]
         }
     }
 

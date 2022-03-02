@@ -36,7 +36,7 @@ def process_file(name, contents):
             entries['category'] = category
 
     ### Max PP
-    ppNode = soup.find('a', title='Power Point').find_parent().find_next_sibling()
+    ppNode = soup.find('a', title='PP').find_parent().find_next_sibling()
     maxPPNode = ppNode.small
     maxPP = ""
     if maxPPNode is not None:

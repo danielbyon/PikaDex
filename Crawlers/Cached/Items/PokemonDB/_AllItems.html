@@ -5,7 +5,7 @@
 <title>List of Pokémon items | Pokémon Database</title>
 <link rel="preconnect" href="https://img.pokemondb.net">
 <style>@font-face{font-family:"Fira Sans";font-style:normal;font-weight:400;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-400.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Fira Sans";font-style:italic;font-weight:400;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-400i.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Fira Sans";font-style:normal;font-weight:700;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-600.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Fira Sans";font-style:italic;font-weight:700;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-600i.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
-<link rel="stylesheet" href="/static/css/pokemondb-6ff0864f95.css">
+<link rel="stylesheet" href="/static/css/pokemondb-e3443e2d88.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:description" name="description" content="Full list of all usable Pokémon items in an easily-searchable table.">
 <link rel="canonical" href="https://pokemondb.net/item/all">
@@ -15,7 +15,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
 <link rel="alternate" type="application/rss+xml" href="https://pokemondb.net/news/feed" title="The Pokémon Database newsfeed">
-<script type="text/javascript">
+<script>
 (function(){
 	var bsa_optimize=document.createElement('script');
 	bsa_optimize.defer=true;
@@ -60,9 +60,8 @@
 <li class="main-menu-hr-title">Quick links</li>
 <li><a href="/pokedex/national">National Pokédex</a></li>
 <li><a href="/pokedex/all">Pokémon list with stats</a></li>
-<li><a href="/pokedex/game/ultra-sun-ultra-moon">Ultra Sun &amp; Ultra Moon Pokédex</a></li>
-<li><a href="/pokedex/game/lets-go-pikachu-eevee">Let's Go Pikachu/Eevee Pokédex</a></li>
-<li><a href="/pokedex/game/sword-shield">Sword &amp; Shield Pokédex</a></li>
+<li><a href="/pokedex/game/brilliant-diamond-shining-pearl">BD &amp; SP Pokédex</a></li>
+<li><a href="/pokedex/game/legends-arceus">Legends: Arceus Pokédex</a></li>
 </ul>
 </li>
 <li class="main-menu-item">
@@ -88,7 +87,7 @@
 <span class="main-menu-title-long">Pokémon games</span>
 </a>
 <ul class="main-menu-sub">
-<li><a href="/legends-arceus">Pokémon Legends: Arceus</a></li>
+<li><a href="/legends-arceus">Legends: Arceus</a></li>
 <li><a href="/brilliant-diamond-shining-pearl">Brilliant Diamond &amp; Shining Pearl</a></li>
 <li><a href="/sword-shield">Sword &amp; Shield</a></li>
 <li><a href="/go">Pokémon GO</a></li>
@@ -117,7 +116,7 @@
 <li><a href="/yellow">Yellow</a></li>
 <li><a href="/red-blue">Red &amp; Blue</a></li>
 <li class="main-menu-hr"></li>
- <li><a href="/spinoff">Spin-off games</a></li>
+<li><a href="/spinoff">Spin-off games</a></li>
 </ul>
 </li>
 <li class="main-menu-item">
@@ -153,8 +152,6 @@
 <p>Click an item name to see even more detailed information.
 You can click a column heading to instantly sort by that column, or type in the box to filter the items.</p>
 </div>
-<div class="grid-row">
-<div class="grid-col span-md-9 span-lg-10">
 <div class="table-filters">
 <label for="filter-item-name">Filter:</label>
 <input type="text" class="input-text" id="filter-item-name" data-filter-col="0,1,2">
@@ -168,7 +165,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 <option value="machines">Machines</option>
 <option value="medicine">Medicine</option>
 <option value="pokeballs">Pokeballs</option>
- <option value="unknown">Unknown</option>
+<option value="unknown">Unknown</option>
 </select>
 </div>
 <div class="resp-scroll">
@@ -219,6 +216,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">A consumable bulb. If the holder is hit by a Water-type move, its Sp. Atk will rise.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Adamant Crystal">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Adamant Crystal icon"></span> <a class="ent-name" href="/item/adamant-crystal">Adamant Crystal</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Adamant Mint">
@@ -288,7 +292,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/altarianite.png" data-alt="Altarianite icon"></span> <a class="ent-name" href="/item/altarianite">Altarianite</a>
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
- <td class="cell-long-text">Enables Altaria to Mega Evolve during battle.</td>
+<td class="cell-long-text">Enables Altaria to Mega Evolve during battle.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Ampharosite">
@@ -317,6 +321,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="berries">Berries</td>
 <td class="cell-long-text">Raises Special Defense when HP is low.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Apricorn">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Apricorn icon"></span> <a class="ent-name" href="/item/apricorn">Apricorn</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text">A fruit whose shell can be used to form the capsules of all manner of Poké Balls when crafting them from scratch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Armor Fossil">
@@ -354,6 +365,34 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Enables Audino to Mega Evolve during battle.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Aux Evasion">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Aux Evasion icon"></span> <a class="ent-name" href="/item/aux-evasion">Aux Evasion</a>
+</td>
+<td class="cell-fixed" data-sort-value="battle">Battle items</td>
+<td class="cell-long-text">Makes moves less likely to strike a Pokémon during a battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Aux Guard">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Aux Guard icon"></span> <a class="ent-name" href="/item/aux-guard">Aux Guard</a>
+</td>
+<td class="cell-fixed" data-sort-value="battle">Battle items</td>
+<td class="cell-long-text">Sharply boosts the defensive stats of a Pokémon during a battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Aux Power">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Aux Power icon"></span> <a class="ent-name" href="/item/aux-power">Aux Power</a>
+</td>
+<td class="cell-fixed" data-sort-value="battle">Battle items</td>
+<td class="cell-long-text">Sharply boosts the offensive stats of a Pokémon during a battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Aux Powerguard">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Aux Powerguard icon"></span> <a class="ent-name" href="/item/aux-powerguard">Aux Powerguard</a>
+</td>
+<td class="cell-fixed" data-sort-value="battle">Battle items</td>
+<td class="cell-long-text">Sharply boosts the offensive and defensive stats of a Pokémon during a battle.</td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Awakening">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/awakening.png" data-alt="Awakening icon"></span> <a class="ent-name" href="/item/awakening">Awakening</a>
 </td>
@@ -373,6 +412,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">One of the many ingredients that can be used for cooking at your camp. The tinned food that Bach sells is curiously popular in Galar.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Ball of Mud">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Ball of Mud icon"></span> <a class="ent-name" href="/item/ball-of-mud">Ball of Mud</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Balm Mushroom">
@@ -396,10 +442,17 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A piece of colored glass. Waves have rounded its edges. It's slightly rough to the touch.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Bean Cake">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Bean Cake icon"></span> <a class="ent-name" href="/item/bean-cake">Bean Cake</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Beast Ball">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/beast-ball.png" data-alt="Beast Ball icon"></span> <a class="ent-name" href="/item/beast-ball">Beast Ball</a>
 </td>
- <td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
 <td class="cell-long-text">A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others.</td>
 </tr>
 <tr>
@@ -480,6 +533,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A black Apricorn It has an indescribable scent.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Black Augurite">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Black Augurite icon"></span> <a class="ent-name" href="/item/black-augurite">Black Augurite</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text">A glassy black stone that produces a sharp cutting edge when split. It’s loved by a certain Pokémon.</td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Black Belt">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/black-belt.png" data-alt="Black Belt icon"></span> <a class="ent-name" href="/item/black-belt">Black Belt</a>
 </td>
@@ -506,6 +566,20 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">A held item that gradually restores the HP of Poison-type Pokémon. It inflicts damage on all other types.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Black Tumblestone">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Black Tumblestone icon"></span> <a class="ent-name" href="/item/black-tumblestone">Black Tumblestone</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Blank Plate">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Blank Plate icon"></span> <a class="ent-name" href="/item/blank-plate">Blank Plate</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Blastoisinite">
@@ -641,6 +715,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Allows the use of Savage Spin-Out, the Bug type Z-Move.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Bugwort">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Bugwort icon"></span> <a class="ent-name" href="/item/bugwort">Bugwort</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Burn Drive">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/burn-drive.png" data-alt="Burn Drive icon"></span> <a class="ent-name" href="/item/burn-drive">Burn Drive</a>
 </td>
@@ -653,6 +734,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="medicine">Medicine</td>
 <td class="cell-long-text">A spray-type medicine. It heals a single Pokémon that is suffering from a burn.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Cake-Lure Base">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Cake-Lure Base icon"></span> <a class="ent-name" href="/item/cake-lure-base">Cake-Lure Base</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Calcium">
@@ -674,6 +762,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Enables Camerupt to Mega Evolve during battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Candy Truffle">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Candy Truffle icon"></span> <a class="ent-name" href="/item/candy-truffle">Candy Truffle</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Carbos">
@@ -702,6 +797,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="medicine">Medicine</td>
 <td class="cell-long-text">Heals all major status conditions.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Caster Fern">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Caster Fern icon"></span> <a class="ent-name" href="/item/caster-fern">Caster Fern</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Cell Battery">
@@ -793,6 +895,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Raises Attack, but only one move can be used.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Choice Dumpling">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Choice Dumpling icon"></span> <a class="ent-name" href="/item/choice-dumpling">Choice Dumpling</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Choice Scarf">
@@ -914,6 +1023,20 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Evolves Sinistea into Polteageist.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Crafting Kit">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Crafting Kit icon"></span> <a class="ent-name" href="/item/crafting-kit">Crafting Kit</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Crunchy Salt">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Crunchy Salt icon"></span> <a class="ent-name" href="/item/crunchy-salt">Crunchy Salt</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Custap Berry">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/custap-berry.png" data-alt="Custap Berry icon"></span> <a class="ent-name" href="/item/custap-berry">Custap Berry</a>
 </td>
@@ -959,8 +1082,15 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-fixed" data-sort-value="Dawn Stone">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/dawn-stone.png" data-alt="Dawn Stone icon"></span> <a class="ent-name" href="/item/dawn-stone">Dawn Stone</a>
 </td>
-<td class="cell-fixed" data-sort-value="general">General items</td>
+ <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">Evolves certain species of Pokémon.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Dazzling Honey">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Dazzling Honey icon"></span> <a class="ent-name" href="/item/dazzling-honey">Dazzling Honey</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Decidium Z">
@@ -1019,6 +1149,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Greatly raises a Pokémon's critical-hit ratio in battle.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Direshroom">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Direshroom icon"></span> <a class="ent-name" href="/item/direshroom">Direshroom</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Discount Coupon">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/discount-coupon.png" data-alt="Discount Coupon icon"></span> <a class="ent-name" href="/item/discount-coupon">Discount Coupon</a>
 </td>
@@ -1045,6 +1182,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a shell.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Doppel Bonnets">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Doppel Bonnets icon"></span> <a class="ent-name" href="/item/doppel-bonnets">Doppel Bonnets</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Douse Drive">
@@ -1260,7 +1404,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-fixed" data-sort-value="Escape Rope">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/escape-rope.png" data-alt="Escape Rope icon"></span> <a class="ent-name" href="/item/escape-rope">Escape Rope</a>
 </td>
- <td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">A long, durable rope. Use it to escape instantly from a cave or a dungeon.</td>
 </tr>
 <tr>
@@ -1369,6 +1513,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A Poké Ball that makes it easier to catch Pokémon which are quick to run away.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Feather Ball">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Feather Ball icon"></span> <a class="ent-name" href="/item/feather-ball">Feather Ball</a>
+</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Festival Ticket">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/festival-ticket.png" data-alt="Festival Ticket icon"></span> <a class="ent-name" href="/item/festival-ticket">Festival Ticket</a>
 </td>
@@ -1402,6 +1553,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="berries">Berries</td>
 <td class="cell-long-text">Restores HP if it's low, but may cause confusion.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Fine Remedy">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Fine Remedy icon"></span> <a class="ent-name" href="/item/fine-remedy">Fine Remedy</a>
+</td>
+<td class="cell-fixed" data-sort-value="medicine">Medicine</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Fire Gem">
@@ -1461,7 +1619,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Flower Sweet">
- <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Flower Sweet icon"></span> <a class="ent-name" href="/item/flower-sweet">Flower Sweet</a>
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Flower Sweet icon"></span> <a class="ent-name" href="/item/flower-sweet">Flower Sweet</a>
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Evolves Milcery into Flower Flavor Alcremie.</td>
@@ -1691,6 +1849,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">One of the many ingredients that can be used for cooking at your camp. A mysterious spice. Even a tiny sprinkle is sure to make a curry gigantic.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Gigaton Ball">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Gigaton Ball icon"></span> <a class="ent-name" href="/item/gigaton-ball">Gigaton Ball</a>
+</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Glalitite">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/glalitite.png" data-alt="Glalitite icon"></span> <a class="ent-name" href="/item/glalitite">Glalitite</a>
 </td>
@@ -1740,6 +1905,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Grain Cake">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Grain Cake icon"></span> <a class="ent-name" href="/item/grain-cake">Grain Cake</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Grass Gem">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/grass-gem.png" data-alt="Grass Gem icon"></span> <a class="ent-name" href="/item/grass-gem">Grass Gem</a>
 </td>
@@ -1749,7 +1921,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 <tr>
 <td class="cell-fixed" data-sort-value="Grass Memory">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/grass-memory.png" data-alt="Grass Memory icon"></span> <a class="ent-name" href="/item/grass-memory">Grass Memory</a>
- </td>
+</td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Changes Silvally and its move Multi-Attack to Grass type.</td>
 </tr>
@@ -1810,11 +1982,46 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A Pokémon held item that extends the duration of multiturn attacks like Bind and Wrap.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Griseous Core">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Griseous Core icon"></span> <a class="ent-name" href="/item/griseous-core">Griseous Core</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Griseous Orb">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/griseous-orb.png" data-alt="Griseous Orb icon"></span> <a class="ent-name" href="/item/griseous-orb">Griseous Orb</a>
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Increases the power of Dragon- and Ghost-type moves when held by Giratina, and changes it to Origin Forme.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Grit Dust">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Grit Dust icon"></span> <a class="ent-name" href="/item/grit-dust">Grit Dust</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Grit Gravel">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Grit Gravel icon"></span> <a class="ent-name" href="/item/grit-gravel">Grit Gravel</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Grit Pebble">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Grit Pebble icon"></span> <a class="ent-name" href="/item/grit-pebble">Grit Pebble</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Grit Rock">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Grit Rock icon"></span> <a class="ent-name" href="/item/grit-rock">Grit Rock</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Ground Gem">
@@ -1936,6 +2143,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A pretty, heart-shaped scale that is extremely rare. It glows faintly in the colors of the rainbow.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Hearty Grains">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Hearty Grains icon"></span> <a class="ent-name" href="/item/hearty-grains">Hearty Grains</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Heat Rock">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/heat-rock.png" data-alt="Heat Rock icon"></span> <a class="ent-name" href="/item/heat-rock">Heat Rock</a>
 </td>
@@ -2034,6 +2248,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Teaches the move Dive/Rock Climb.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Hometown Muffin">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Hometown Muffin icon"></span> <a class="ent-name" href="/item/hometown-muffin">Hometown Muffin</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Hondew Berry">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/hondew-berry.png" data-alt="Hondew Berry icon"></span> <a class="ent-name" href="/item/hondew-berry">Hondew Berry</a>
 </td>
@@ -2048,11 +2269,25 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A sweet honey with a lush aroma that attracts wild Pokémon when it is used in grass, caves, or on special trees.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Honey Cake">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Honey Cake icon"></span> <a class="ent-name" href="/item/honey-cake">Honey Cake</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Honor Of Kalos">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/honor-of-kalos.png" data-alt="Honor Of Kalos icon"></span> <a class="ent-name" href="/item/honor-of-kalos">Honor Of Kalos</a>
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">A precious symbol that is awarded only to an individual who has done great things for the Kalos region.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Hopo Berry">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Hopo Berry icon"></span> <a class="ent-name" href="/item/hopo-berry">Hopo Berry</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text">A Berry that can be fed to a Pokémon to restore its PP. If a wild Pokémon eats one of these Berries, that Pokémon’s reactions will be dulled.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Houndoominite">
@@ -2093,7 +2328,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-fixed" data-sort-value="Ice Heal">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/ice-heal.png" data-alt="Ice Heal icon"></span> <a class="ent-name" href="/item/ice-heal">Ice Heal</a>
 </td>
- <td class="cell-fixed" data-sort-value="medicine">Medicine</td>
+<td class="cell-fixed" data-sort-value="medicine">Medicine</td>
 <td class="cell-long-text">A spray-type medicine. It defrosts a Pokémon that has been frozen solid.</td>
 </tr>
 <tr>
@@ -2188,6 +2423,20 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A Pokémon held item that cuts Speed. It makes Flying-type and levitating holders susceptible to Ground moves.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Iron Barktongue">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Iron Barktongue icon"></span> <a class="ent-name" href="/item/iron-barktongue">Iron Barktongue</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Iron Chunk">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Iron Chunk icon"></span> <a class="ent-name" href="/item/iron-chunk">Iron Chunk</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Iron Plate">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/iron-plate.png" data-alt="Iron Plate icon"></span> <a class="ent-name" href="/item/iron-plate">Iron Plate</a>
 </td>
@@ -2216,11 +2465,25 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">If held by a Pokémon and a physical attack lands, the attacker also takes damage.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Jet Ball">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Jet Ball icon"></span> <a class="ent-name" href="/item/jet-ball">Jet Ball</a>
+</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Jolly Mint">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Jolly Mint icon"></span> <a class="ent-name" href="/item/jolly-mint">Jolly Mint</a>
 </td>
 <td class="cell-fixed" data-sort-value="battle">Battle items</td>
 <td class="cell-long-text">Changes the Pokémon's stats to match the Jolly nature.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Jubilife Muffin">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Jubilife Muffin icon"></span> <a class="ent-name" href="/item/jubilife-muffin">Jubilife Muffin</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Kangaskhanite">
@@ -2256,6 +2519,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="berries">Berries</td>
 <td class="cell-long-text">Increases Friendship but lowers Attack EVs.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="King’s Leaf">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="King’s Leaf icon"></span> <a class="ent-name" href="/item/kings-leaf">King’s Leaf</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="King's Rock">
@@ -2328,6 +2598,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Changes the Pokémon's stats to match the Lax nature.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Leaden Ball">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Leaden Ball icon"></span> <a class="ent-name" href="/item/leaden-ball">Leaden Ball</a>
+</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Leaf Letter">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Leaf Letter icon"></span> <a class="ent-name" href="/item/leaf-letter">Leaf Letter</a>
 </td>
@@ -2354,6 +2631,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">An item to be held by a Pokémon. The holder's HP is gradually restored during battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Legend Plate">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Legend Plate icon"></span> <a class="ent-name" href="/item/legend-plate">Legend Plate</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Lemonade">
@@ -2405,6 +2689,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A Pokémon held item that extends the duration of barrier moves like Light Screen and Reflect used by the holder.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Linking Cord">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Linking Cord icon"></span> <a class="ent-name" href="/item/linking-cord">Linking Cord</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text">A string exuding a mysterious energy that makes you feel a strange sense of connection. It’s loved by certain Pokémon.</td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Lone Earring">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Lone Earring icon"></span> <a class="ent-name" href="/item/lone-earring">Lone Earring</a>
 </td>
@@ -2431,6 +2722,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Enables Lopunny to Mega Evolve during battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Lost Satchel">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Lost Satchel icon"></span> <a class="ent-name" href="/item/lost-satchel">Lost Satchel</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Love Ball">
@@ -2511,10 +2809,17 @@ You can click a column heading to instantly sort by that column, or type in the 
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Lure Ball">
-<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/lure-ball.png" data-alt="Lure Ball icon"></span>  <a class="ent-name" href="/item/lure-ball">Lure Ball</a>
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/lure-ball.png" data-alt="Lure Ball icon"></span> <a class="ent-name" href="/item/lure-ball">Lure Ball</a>
 </td>
 <td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
 <td class="cell-long-text">A Poké Ball for catching Pokémon hooked by a Rod when fishing.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Lustrous Globe">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Lustrous Globe icon"></span> <a class="ent-name" href="/item/lustrous-globe">Lustrous Globe</a>
+</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Lustrous Orb">
@@ -2589,6 +2894,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <tr>
 <td class="cell-fixed" data-sort-value="Marble">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Marble icon"></span> <a class="ent-name" href="/item/marble">Marble</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Marsh Balm">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Marsh Balm icon"></span> <a class="ent-name" href="/item/marsh-balm">Marsh Balm</a>
 </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text"></td>
@@ -2683,6 +2995,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Enables Medicham to Mega Evolve during battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Medicinal Leek">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Medicinal Leek icon"></span> <a class="ent-name" href="/item/medicinal-leek">Medicinal Leek</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Mental Herb">
@@ -2860,6 +3179,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Increases Attack EVs by 1.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Mushroom Cake">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Mushroom Cake icon"></span> <a class="ent-name" href="/item/mushroom-cake">Mushroom Cake</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Mystic Water">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/mystic-water.png" data-alt="Mystic Water icon"></span> <a class="ent-name" href="/item/mystic-water">Mystic Water</a>
 </td>
@@ -2979,6 +3305,20 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">If held by a Pokémon, it heals the user by just 10 HP.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Origin Ball">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Origin Ball icon"></span> <a class="ent-name" href="/item/origin-ball">Origin Ball</a>
+</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Origin Ore">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Origin Ore icon"></span> <a class="ent-name" href="/item/origin-ore">Origin Ore</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Oval Charm">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/oval-charm.png" data-alt="Oval Charm icon"></span> <a class="ent-name" href="/item/oval-charm">Oval Charm</a>
 </td>
@@ -3070,11 +3410,25 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Very large pearls that sparkle in a pretty silver color. A maniac will buy them for a high price.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Peat Block">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Peat Block icon"></span> <a class="ent-name" href="/item/peat-block">Peat Block</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text">A block of muddy material that can be used as fuel for burning when it is dried. It’s loved by a certain Pokémon.</td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Pecha Berry">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/pecha-berry.png" data-alt="Pecha Berry icon"></span> <a class="ent-name" href="/item/pecha-berry">Pecha Berry</a>
 </td>
 <td class="cell-fixed" data-sort-value="berries">Berries</td>
- <td class="cell-long-text">If held by a Pokémon, it recovers from poison.</td>
+<td class="cell-long-text">If held by a Pokémon, it recovers from poison.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Pep-Up Plant">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Pep-Up Plant icon"></span> <a class="ent-name" href="/item/pep-up-plant">Pep-Up Plant</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Permit">
@@ -3182,6 +3536,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A fossil of an ancient Pokémon that flew in the sky in ancient times. It appears to be part of its wing.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Plump Beans">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Plump Beans icon"></span> <a class="ent-name" href="/item/plump-beans">Plump Beans</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Poison Barb">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/poison-barb.png" data-alt="Poison Barb icon"></span> <a class="ent-name" href="/item/poison-barb">Poison Barb</a>
 </td>
@@ -3245,6 +3606,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Increases Friendship but lowers HP EVs.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Pop Pod">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Pop Pod icon"></span> <a class="ent-name" href="/item/pop-pod">Pop Pod</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Potion">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/potion.png" data-alt="Potion icon"></span> <a class="ent-name" href="/item/potion">Potion</a>
 </td>
@@ -3271,7 +3639,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">A Pokémon held item that promotes Defense gain on leveling, but reduces the Speed stat.</td>
-</tr>
+ </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Power Bracer">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/power-bracer.png" data-alt="Power Bracer icon"></span> <a class="ent-name" href="/item/power-bracer">Power Bracer</a>
@@ -3540,7 +3908,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Razor Claw">
-<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/razor-claw.png" data-alt="Razor Claw icon"></span>  <a class="ent-name" href="/item/razor-claw">Razor Claw</a>
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/razor-claw.png" data-alt="Razor Claw icon"></span> <a class="ent-name" href="/item/razor-claw">Razor Claw</a>
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Increases critical-hit ratio. Evolves Sneasel when held at night.</td>
@@ -3663,6 +4031,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">A vase made in a civilization about 3,000 years ago. A maniac will buy it for a high price.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Remedy">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Remedy icon"></span> <a class="ent-name" href="/item/remedy">Remedy</a>
+</td>
+<td class="cell-fixed" data-sort-value="medicine">Medicine</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Repeat Ball">
@@ -3945,10 +4320,24 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Enables Salamence to Mega Evolve during battle.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Salt Cake">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Salt Cake icon"></span> <a class="ent-name" href="/item/salt-cake">Salt Cake</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Sand Radish">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Sand Radish icon"></span> <a class="ent-name" href="/item/sand-radish">Sand Radish</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Sassy Mint">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Sassy Mint icon"></span> <a class="ent-name" href="/item/sassy-mint">Sassy Mint</a>
 </td>
- <td class="cell-fixed" data-sort-value="battle">Battle items</td>
+<td class="cell-fixed" data-sort-value="battle">Battle items</td>
 <td class="cell-long-text">Changes the Pokémon's stats to match the Sassy nature.</td>
 </tr>
 <tr>
@@ -3957,6 +4346,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">One of the many ingredients that can be used for cooking at your camp. These sausages should be boiled before eating.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Scatter Bang">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Scatter Bang icon"></span> <a class="ent-name" href="/item/scatter-bang">Scatter Bang</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Sceptilite">
@@ -3985,6 +4381,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Increases the power of Water-type moves. Breeding Marill or Azumarill produces Azurill when held.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Seed of Mastery">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Seed of Mastery icon"></span> <a class="ent-name" href="/item/seed-of-mastery">Seed of Mastery</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Serious Mint">
@@ -4059,7 +4462,7 @@ You can click a column heading to instantly sort by that column, or type in the 
 <tr>
 <td class="cell-fixed" data-sort-value="Shoal Shell">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/shoal-shell.png" data-alt="Shoal Shell icon"></span> <a class="ent-name" href="/item/shoal-shell">Shoal Shell</a>
-</td>
+ </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">A pretty seashell that can be found deep inside the Shoal Cave. A maniac will buy it for a high price.</td>
 </tr>
@@ -4141,6 +4544,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Increases power of Flying-type moves. Changes Arceus' type to Flying.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Sky Tumblestone">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Sky Tumblestone icon"></span> <a class="ent-name" href="/item/sky-tumblestone">Sky Tumblestone</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Slowbronite">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/slowbronite.png" data-alt="Slowbronite icon"></span> <a class="ent-name" href="/item/slowbronite">Slowbronite</a>
 </td>
@@ -4181,6 +4591,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">An item to be held by a Pokémon. It enables the holder to flee from any wild Pokémon without fail.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Smoke Bomb">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Smoke Bomb icon"></span> <a class="ent-name" href="/item/smoke-bomb">Smoke Bomb</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Smoke-Poke Tail">
@@ -4232,6 +4649,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Allows Solgaleo to upgrade Sunsteel Strike to a Z-Move, Searing Sunraze Smash.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Sootfoot Root">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Sootfoot Root icon"></span> <a class="ent-name" href="/item/sootfoot-root">Sootfoot Root</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Soothe Bell">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/soothe-bell.png" data-alt="Soothe Bell icon"></span> <a class="ent-name" href="/item/soothe-bell">Soothe Bell</a>
 </td>
@@ -4274,6 +4698,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Increases power of Water-type moves. Changes Arceus' type to Water.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Spoiled Apricorn">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Spoiled Apricorn icon"></span> <a class="ent-name" href="/item/spoiled-apricorn">Spoiled Apricorn</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Spooky Plate">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/spooky-plate.png" data-alt="Spooky Plate icon"></span> <a class="ent-name" href="/item/spooky-plate">Spooky Plate</a>
 </td>
@@ -4286,6 +4717,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
 <td class="cell-long-text">A special Poké Ball for the Bug-Catching Contest.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Springy Mushroom">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Springy Mushroom icon"></span> <a class="ent-name" href="/item/springy-mushroom">Springy Mushroom</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Sprinklotad">
@@ -4330,6 +4768,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Sharply raises a random stat when HP is low.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Stealth Spray">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Stealth Spray icon"></span> <a class="ent-name" href="/item/stealth-spray">Stealth Spray</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Steel Gem">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/steel-gem.png" data-alt="Steel Gem icon"></span> <a class="ent-name" href="/item/steel-gem">Steel Gem</a>
 </td>
@@ -4365,11 +4810,25 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">A held item that damages the holder on every turn. It may latch on to foes and allies that touch the holder.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Sticky Glob">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Sticky Glob icon"></span> <a class="ent-name" href="/item/sticky-glob">Sticky Glob</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Stone Plate">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/stone-plate.png" data-alt="Stone Plate icon"></span> <a class="ent-name" href="/item/stone-plate">Stone Plate</a>
 </td>
- <td class="cell-fixed" data-sort-value="hold">Hold items</td>
+<td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Increases power of Rock-type moves. Changes Arceus' type to Rock.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Strange Ball">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Strange Ball icon"></span> <a class="ent-name" href="/item/strange-ball">Strange Ball</a>
+</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Strange Souvenir">
@@ -4428,6 +4887,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Enables Swampert to Mega Evolve during battle.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Swap Snack">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Swap Snack icon"></span> <a class="ent-name" href="/item/swap-snack">Swap Snack</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Sweet Apple">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Sweet Apple icon"></span> <a class="ent-name" href="/item/sweet-apple">Sweet Apple</a>
 </td>
@@ -4447,6 +4913,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="medicine">Medicine</td>
 <td class="cell-long-text">Increases Speed EVs by 1.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Swordcap">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Swordcap icon"></span> <a class="ent-name" href="/item/swordcap">Swordcap</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Tamato Berry">
@@ -4537,161 +5010,161 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TM00 icon"></span> <a class="ent-name" href="/item/tm00">TM00</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches a move.</td>
+<td class="cell-long-text">Teaches the move Mega Punch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM01">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM01 icon"></span> <a class="ent-name" href="/item/tm01">TM01</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Mega Punch/Dynamic Punch/Focus Punch/Hone Claws/Work Up/Headbutt.</td>
+<td class="cell-long-text">Teaches the move Mega Punch/Dynamic Punch/Focus Punch/Hone Claws/Work Up/Headbutt/Mega Kick.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM02">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dragon.png" data-alt="TM02 icon"></span> <a class="ent-name" href="/item/tm02">TM02</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Razor Wind/Headbutt/Dragon Claw/Taunt.</td>
+<td class="cell-long-text">Teaches the move Razor Wind/Headbutt/Dragon Claw/Taunt/Pay Day.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM03">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM03 icon"></span> <a class="ent-name" href="/item/tm03">TM03</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Swords Dance/Curse/Water Pulse/Psyshock/Helping Hand.</td>
+<td class="cell-long-text">Teaches the move Swords Dance/Curse/Water Pulse/Psyshock/Helping Hand/Fire Punch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM04">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM04 icon"></span> <a class="ent-name" href="/item/tm04">TM04</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Whirlwind/Rollout/Calm Mind/Teleport.</td>
+<td class="cell-long-text">Teaches the move Whirlwind/Rollout/Calm Mind/Teleport/Ice Punch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM05">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM05 icon"></span> <a class="ent-name" href="/item/tm05">TM05</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Mega Kick/Roar/Rest.</td>
+<td class="cell-long-text">Teaches the move Mega Kick/Roar/Rest/Thunder Punch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM06">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-poison.png" data-alt="TM06 icon"></span> <a class="ent-name" href="/item/tm06">TM06</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Toxic/Light Screen.</td>
+<td class="cell-long-text">Teaches the move Toxic/Light Screen/Fly.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM07">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ice.png" data-alt="TM07 icon"></span> <a class="ent-name" href="/item/tm07">TM07</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Horn Drill/Zap Cannon/Hail/Protect.</td>
+<td class="cell-long-text">Teaches the move Horn Drill/Zap Cannon/Hail/Protect/Pin Missile.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM08">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fighting.png" data-alt="TM08 icon"></span> <a class="ent-name" href="/item/tm08">TM08</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Body Slam/Rock Smash/Bulk Up/Substitute.</td>
+<td class="cell-long-text">Teaches the move Body Slam/Rock Smash/Bulk Up/Substitute/Hyper Beam.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM09">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-poison.png" data-alt="TM09 icon"></span> <a class="ent-name" href="/item/tm09">TM09</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Take Down/Psych Up/Bullet Seed/Venoshock/Reflect.</td>
+<td class="cell-long-text">Teaches the move Take Down/Psych Up/Bullet Seed/Venoshock/Reflect/Giga Impact.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM10">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM10 icon"></span> <a class="ent-name" href="/item/tm10">TM10</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Double-Edge/Hidden Power/Dig.</td>
+<td class="cell-long-text">Teaches the move Double-Edge/Hidden Power/Dig/Magical Leaf/Work Up.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM100">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM100 icon"></span> <a class="ent-name" href="/item/tm100">TM100</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Confide.</td>
+<td class="cell-long-text">Teaches the move Confide/Rock Climb.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM11">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fire.png" data-alt="TM11 icon"></span> <a class="ent-name" href="/item/tm11">TM11</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move BubbleBeam/Sunny Day/Will-O-Wisp.</td>
+<td class="cell-long-text">Teaches the move BubbleBeam/Sunny Day/Will-O-Wisp/Solar Beam.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM12">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM12 icon"></span> <a class="ent-name" href="/item/tm12">TM12</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Water Gun/Sweet Scent/Taunt/Facade.</td>
+<td class="cell-long-text">Teaches the move Water Gun/Sweet Scent/Taunt/Facade/Solar Blade.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM13">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ice.png" data-alt="TM13 icon"></span> <a class="ent-name" href="/item/tm13">TM13</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Snore/Ice Beam/Brick Break.</td>
+<td class="cell-long-text">Teaches the move Ice Beam/Snore/Brick Break/Fire Spin.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM14">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ice.png" data-alt="TM14 icon"></span> <a class="ent-name" href="/item/tm14">TM14</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Blizzard/Fly.</td>
+<td class="cell-long-text">Teaches the move Blizzard/Fly/Thunder Wave.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM15">
- <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM15 icon"></span> <a class="ent-name" href="/item/tm15">TM15</a>
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM15 icon"></span> <a class="ent-name" href="/item/tm15">TM15</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Hyper Beam/Seismic Toss.</td>
+<td class="cell-long-text">Teaches the move Hyper Beam/Seismic Toss/Dig.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM16">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM16 icon"></span> <a class="ent-name" href="/item/tm16">TM16</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Pay Day/Icy Wind/Light Screen/Thunder Wave.</td>
+<td class="cell-long-text">Teaches the move Pay Day/Icy Wind/Light Screen/Thunder Wave/Screech.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM17">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM17 icon"></span> <a class="ent-name" href="/item/tm17">TM17</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Submission/Protect/Dragon Tail.</td>
+<td class="cell-long-text">Teaches the move Submission/Protect/Dragon Tail/Light Screen.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM18">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-water.png" data-alt="TM18 icon"></span> <a class="ent-name" href="/item/tm18">TM18</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Counter/Rain Dance/U-turn.</td>
+<td class="cell-long-text">Teaches the move Counter/Rain Dance/U-turn/Reflect.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM19">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-flying.png" data-alt="TM19 icon"></span> <a class="ent-name" href="/item/tm19">TM19</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Seismic Toss/Giga Drain/Telekinesis/Roost/Iron Tail.</td>
+<td class="cell-long-text">Teaches the move Seismic Toss/Giga Drain/Telekinesis/Roost/Iron Tail/Safeguard.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM20">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM20 icon"></span> <a class="ent-name" href="/item/tm20">TM20</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Rage/Endure/Safeguard/Dark Pulse.</td>
+<td class="cell-long-text">Teaches the move Rage/Endure/Safeguard/Dark Pulse/Self-Destruct.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM21">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM21 icon"></span> <a class="ent-name" href="/item/tm21">TM21</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Mega Drain/Frustration/Foul Play.</td>
+<td class="cell-long-text">Teaches the move Mega Drain/Frustration/Foul Play/Rest/Dazzling Gleam.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM22">
@@ -4705,224 +5178,224 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-rock.png" data-alt="TM23 icon"></span> <a class="ent-name" href="/item/tm23">TM23</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dragon Rage/Iron Tail/Smack Down/Thunder Punch.</td>
+<td class="cell-long-text">Teaches the move Dragon Rage/Iron Tail/Smack Down/Thunder Punch/Thief.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM24">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-electric.png" data-alt="TM24 icon"></span> <a class="ent-name" href="/item/tm24">TM24</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Thunderbolt/DragonBreath/X-Scissor.</td>
+<td class="cell-long-text">Teaches the move Thunderbolt/DragonBreath/X-Scissor/Snore.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM25">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-electric.png" data-alt="TM25 icon"></span> <a class="ent-name" href="/item/tm25">TM25</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Thunder/Waterfall.</td>
+<td class="cell-long-text">Teaches the move Thunder/Waterfall/Protect.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM26">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ground.png" data-alt="TM26 icon"></span> <a class="ent-name" href="/item/tm26">TM26</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Earthquake/Poison Jab.</td>
+<td class="cell-long-text">Teaches the move Earthquake/Poison Jab/Scary Face.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM27">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM27 icon"></span> <a class="ent-name" href="/item/tm27">TM27</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Fissure/Return/Toxic.</td>
+<td class="cell-long-text">Teaches the move Fissure/Return/Toxic/Icy Wind/Low Sweep.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM28">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-bug.png" data-alt="TM28 icon"></span> <a class="ent-name" href="/item/tm28">TM28</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dig/Leech Life/Tri Attack.</td>
+<td class="cell-long-text">Teaches the move Dig/Leech Life/Tri Attack/Giga Drain.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM29">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM29 icon"></span> <a class="ent-name" href="/item/tm29">TM29</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Psychic/Scald.</td>
+<td class="cell-long-text">Teaches the move Psychic/Scald/Charm.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM30">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ghost.png" data-alt="TM30 icon"></span> <a class="ent-name" href="/item/tm30">TM30</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Teleport/Shadow Ball/Bulk Up.</td>
+<td class="cell-long-text">Teaches the move Teleport/Shadow Ball/Bulk Up/Steel Wing.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM31">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fighting.png" data-alt="TM31 icon"></span> <a class="ent-name" href="/item/tm31">TM31</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Mimic/Mud-Slap/Brick Break/Fire Punch.</td>
+<td class="cell-long-text">Teaches the move Mimic/Mud-Slap/Brick Break/Fire Punch/Attract.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM32">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM32 icon"></span> <a class="ent-name" href="/item/tm32">TM32</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Double Team/Dazzling Gleam.</td>
+<td class="cell-long-text">Teaches the move Double Team/Dazzling Gleam/Sandstorm.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM33">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM33 icon"></span> <a class="ent-name" href="/item/tm33">TM33</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Ice Punch/Reflect/Calm Mind.</td>
+<td class="cell-long-text">Teaches the move Ice Punch/Reflect/Calm Mind/Rain Dance.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM34">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-poison.png" data-alt="TM34 icon"></span> <a class="ent-name" href="/item/tm34">TM34</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Bide/Swagger/Shock Wave/Sludge Wave/Dragon Pulse.</td>
+<td class="cell-long-text">Teaches the move Bide/Swagger/Shock Wave/Sludge Wave/Dragon Pulse/Sunny Day.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM35">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fire.png" data-alt="TM35 icon"></span> <a class="ent-name" href="/item/tm35">TM35</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Metronome/Sleep Talk/Flamethrower/Ice Punch.</td>
+<td class="cell-long-text">Teaches the move Metronome/Sleep Talk/Flamethrower/Ice Punch/Hail.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM36">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-poison.png" data-alt="TM36 icon"></span> <a class="ent-name" href="/item/tm36">TM36</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Selfdestruct/Sludge Bomb/Thunderbolt.</td>
+<td class="cell-long-text">Teaches the move Self-Destruct/Sludge Bomb/Thunderbolt/Whirlpool.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM37">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-rock.png" data-alt="TM37 icon"></span> <a class="ent-name" href="/item/tm37">TM37</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Egg Bomb/Sandstorm/Flamethrower.</td>
+<td class="cell-long-text">Teaches the move Egg Bomb/Sandstorm/Flamethrower/Beat Up.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM38">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fire.png" data-alt="TM38 icon"></span> <a class="ent-name" href="/item/tm38">TM38</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Fire Blast/Thunder.</td>
+<td class="cell-long-text">Teaches the move Fire Blast/Thunder/Will-O-Wisp.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM39">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-rock.png" data-alt="TM39 icon"></span> <a class="ent-name" href="/item/tm39">TM39</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Swift/Rock Tomb/Outrage.</td>
+<td class="cell-long-text">Teaches the move Swift/Rock Tomb/Outrage/Facade.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM40">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-flying.png" data-alt="TM40 icon"></span> <a class="ent-name" href="/item/tm40">TM40</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Skull Bash/Defense Curl/Aerial Ace/Psychic.</td>
+<td class="cell-long-text">Teaches the move Skull Bash/Defense Curl/Aerial Ace/Psychic/Swift.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM41">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM41 icon"></span> <a class="ent-name" href="/item/tm41">TM41</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Softboiled/ThunderPunch/Torment/Earthquake.</td>
+<td class="cell-long-text">Teaches the move Softboiled/Thunder Punch/Torment/Earthquake/Helping Hand.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM42">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM42 icon"></span> <a class="ent-name" href="/item/tm42">TM42</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dream Eater/Facade/Self-Destruct.</td>
- </tr>
+<td class="cell-long-text">Teaches the move Dream Eater/Facade/Self-Destruct/Revenge.</td>
+</tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM43">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fire.png" data-alt="TM43 icon"></span> <a class="ent-name" href="/item/tm43">TM43</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Sky Attack/Detect/Secret Power/Flame Charge/Shadow Ball.</td>
+<td class="cell-long-text">Teaches the move Sky Attack/Detect/Secret Power/Flame Charge/Shadow Ball/Brick Break/Volt Switch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM44">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM44 icon"></span> <a class="ent-name" href="/item/tm44">TM44</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Rest/Play Rough.</td>
+<td class="cell-long-text">Teaches the move Rest/Play Rough/Imprison.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM45">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM45 icon"></span> <a class="ent-name" href="/item/tm45">TM45</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Thunder Wave/Attract/Solar Beam.</td>
+<td class="cell-long-text">Teaches the move Thunder Wave/Attract/Solar Beam/Dive.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM46">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM46 icon"></span> <a class="ent-name" href="/item/tm46">TM46</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Psywave/Thief/Fire Blast.</td>
+<td class="cell-long-text">Teaches the move Psywave/Thief/Fire Blast/Weather Ball.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM47">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fighting.png" data-alt="TM47 icon"></span> <a class="ent-name" href="/item/tm47">TM47</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Explosion/Steel Wing/Low Sweep/Surf.</td>
+<td class="cell-long-text">Teaches the move Explosion/Steel Wing/Low Sweep/Surf/Fake Tears.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM48">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM48 icon"></span> <a class="ent-name" href="/item/tm48">TM48</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Rock Slide/Fire Punch/Skill Swap/Round/Hyper Beam.</td>
+<td class="cell-long-text">Teaches the move Rock Slide/Fire Punch/Skill Swap/Round/Hyper Beam/Rock Tomb.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM49">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM49 icon"></span> <a class="ent-name" href="/item/tm49">TM49</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Tri Attack/Fury Cutter/Snatch/Echoed Voice/Superpower.</td>
+<td class="cell-long-text">Teaches the move Tri Attack/Fury Cutter/Snatch/Echoed Voice/Superpower/Sand Tomb/Scald.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM50">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fire.png" data-alt="TM50 icon"></span> <a class="ent-name" href="/item/tm50">TM50</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Substitute/Nightmare/Overheat/Roost.</td>
+<td class="cell-long-text">Teaches the move Substitute/Nightmare/Overheat/Roost/Bullet Seed.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM51">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-steel.png" data-alt="TM51 icon"></span> <a class="ent-name" href="/item/tm51">TM51</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Roost/Ally Switch/Steel Wing/Blizzard.</td>
+<td class="cell-long-text">Teaches the move Roost/Ally Switch/Steel Wing/Blizzard/Icicle Spear.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM52">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fighting.png" data-alt="TM52 icon"></span> <a class="ent-name" href="/item/tm52">TM52</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Focus Blast/Sludge Bomb.</td>
+<td class="cell-long-text">Teaches the move Focus Blast/Sludge Bomb/Bounce.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM53">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-grass.png" data-alt="TM53 icon"></span> <a class="ent-name" href="/item/tm53">TM53</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Energy Ball/Mega Drain.</td>
+<td class="cell-long-text">Teaches the move Energy Ball/Mega Drain/Mud Shot.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM54">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM54 icon"></span> <a class="ent-name" href="/item/tm54">TM54</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move False Swipe/Flash Cannon.</td>
+<td class="cell-long-text">Teaches the move False Swipe/Flash Cannon/Rock Blast.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM55">
@@ -4936,63 +5409,63 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM56 icon"></span> <a class="ent-name" href="/item/tm56">TM56</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Fling/Stealth Rock.</td>
+<td class="cell-long-text">Teaches the move Fling/Stealth Rock/U-turn.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM57">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-electric.png" data-alt="TM57 icon"></span> <a class="ent-name" href="/item/tm57">TM57</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Charge Beam/Pay Day.</td>
+<td class="cell-long-text">Teaches the move Charge Beam/Pay Day/Payback.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM58">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-flying.png" data-alt="TM58 icon"></span> <a class="ent-name" href="/item/tm58">TM58</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Endure/Sky Drop/Drill Run.</td>
+<td class="cell-long-text">Teaches the move Endure/Sky Drop/Drill Run/Assurance.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM59">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM59 icon"></span> <a class="ent-name" href="/item/tm59">TM59</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dragon Pulse/Incinerate/Brutal Swing/Dream Eater.</td>
+<td class="cell-long-text">Teaches the move Dragon Pulse/Incinerate/Brutal Swing/Dream Eater/Fling.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM60">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM60 icon"></span> <a class="ent-name" href="/item/tm60">TM60</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Drain Punch/Quash/Megahorn.</td>
+<td class="cell-long-text">Teaches the move Drain Punch/Quash/Megahorn/Power Swap.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM61">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fire.png" data-alt="TM61 icon"></span> <a class="ent-name" href="/item/tm61">TM61</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Will-O-Wisp.</td>
+<td class="cell-long-text">Teaches the move Will-O-Wisp/Guard Swap.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM62">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-flying.png" data-alt="TM62 icon"></span> <a class="ent-name" href="/item/tm62">TM62</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Silver Wind/Acrobatics.</td>
+<td class="cell-long-text">Teaches the move Silver Wind/Acrobatics/Speed Swap/Bug Buzz.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM63">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM63 icon"></span> <a class="ent-name" href="/item/tm63">TM63</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Embargo.</td>
+<td class="cell-long-text">Teaches the move Embargo/Drain Punch/Nasty Plot.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM64">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM64 icon"></span> <a class="ent-name" href="/item/tm64">TM64</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Explosion.</td>
+<td class="cell-long-text">Teaches the move Explosion/Avalanche.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM65">
@@ -5006,238 +5479,238 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM66 icon"></span> <a class="ent-name" href="/item/tm66">TM66</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Payback.</td>
+<td class="cell-long-text">Teaches the move Payback/Thunder Fang.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM67">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-steel.png" data-alt="TM67 icon"></span> <a class="ent-name" href="/item/tm67">TM67</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Recycle/Retaliate/Smart Strike.</td>
+<td class="cell-long-text">Teaches the move Recycle/Retaliate/Smart Strike/Ice Fang.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM68">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM68 icon"></span> <a class="ent-name" href="/item/tm68">TM68</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Giga Impact.</td>
+<td class="cell-long-text">Teaches the move Giga Impact/Fire Fang.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM69">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-rock.png" data-alt="TM69 icon"></span> <a class="ent-name" href="/item/tm69">TM69</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Rock Polish.</td>
+<td class="cell-long-text">Teaches the move Rock Polish/Psycho Cut.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM70">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ice.png" data-alt="TM70 icon"></span> <a class="ent-name" href="/item/tm70">TM70</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Flash/Aurora Veil.</td>
+<td class="cell-long-text">Teaches the move Flash/Aurora Veil/Trick Room.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM71">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-rock.png" data-alt="TM71 icon"></span> <a class="ent-name" href="/item/tm71">TM71</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Stone Edge.</td>
+<td class="cell-long-text">Teaches the move Stone Edge/Wonder Room.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM72">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-electric.png" data-alt="TM72 icon"></span> <a class="ent-name" href="/item/tm72">TM72</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Avalanche/Volt Switch.</td>
+<td class="cell-long-text">Teaches the move Avalanche/Volt Switch/Magic Room.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM73">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-electric.png" data-alt="TM73 icon"></span> <a class="ent-name" href="/item/tm73">TM73</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Thunder Wave.</td>
+<td class="cell-long-text">Teaches the move Thunder Wave/Cross Poison.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM74">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-steel.png" data-alt="TM74 icon"></span> <a class="ent-name" href="/item/tm74">TM74</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Gyro Ball.</td>
+<td class="cell-long-text">Teaches the move Gyro Ball/Venoshock.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM75">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM75 icon"></span> <a class="ent-name" href="/item/tm75">TM75</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Swords Dance.</td>
+<td class="cell-long-text">Teaches the move Swords Dance/Low Sweep.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM76">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-flying.png" data-alt="TM76 icon"></span> <a class="ent-name" href="/item/tm76">TM76</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Stealth Rock/Struggle Bug/Fly.</td>
+<td class="cell-long-text">Teaches the move Stealth Rock/Struggle Bug/Fly/Round.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM77">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM77 icon"></span> <a class="ent-name" href="/item/tm77">TM77</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Psych Up.</td>
+<td class="cell-long-text">Teaches the move Psych Up/Hex.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM78">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ground.png" data-alt="TM78 icon"></span> <a class="ent-name" href="/item/tm78">TM78</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Captivate/Bulldoze.</td>
+<td class="cell-long-text">Teaches the move Captivate/Bulldoze/Acrobatics/Snarl.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM79">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-ice.png" data-alt="TM79 icon"></span> <a class="ent-name" href="/item/tm79">TM79</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dark Pulse/Frost Breath.</td>
+<td class="cell-long-text">Teaches the move Dark Pulse/Frost Breath/Retaliate.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM80">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-rock.png" data-alt="TM80 icon"></span> <a class="ent-name" href="/item/tm80">TM80</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Rock Slide.</td>
+<td class="cell-long-text">Teaches the move Rock Slide/Volt Switch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM81">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-bug.png" data-alt="TM81 icon"></span> <a class="ent-name" href="/item/tm81">TM81</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move X-Scissor.</td>
+<td class="cell-long-text">Teaches the move X-Scissor/Bulldoze.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM82">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dragon.png" data-alt="TM82 icon"></span> <a class="ent-name" href="/item/tm82">TM82</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Sleep Talk/Dragon Tail.</td>
+<td class="cell-long-text">Teaches the move Sleep Talk/Dragon Tail/Electroweb.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM83">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-bug.png" data-alt="TM83 icon"></span> <a class="ent-name" href="/item/tm83">TM83</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Natural Gift/Work Up/Infestation.</td>
+<td class="cell-long-text">Teaches the move Natural Gift/Work Up/Infestation/Razor Shell/Bulldoze.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM84">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-poison.png" data-alt="TM84 icon"></span> <a class="ent-name" href="/item/tm84">TM84</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Poison Jab.</td>
+<td class="cell-long-text">Teaches the move Poison Jab/Tail Slap.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM85">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM85 icon"></span> <a class="ent-name" href="/item/tm85">TM85</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dream Eater.</td>
+<td class="cell-long-text">Teaches the move Dream Eater/Snarl.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM86">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-grass.png" data-alt="TM86 icon"></span> <a class="ent-name" href="/item/tm86">TM86</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Grass Knot.</td>
+<td class="cell-long-text">Teaches the move Grass Knot/Phantom Force.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM87">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM87 icon"></span> <a class="ent-name" href="/item/tm87">TM87</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Swagger.</td>
+<td class="cell-long-text">Teaches the move Swagger/Draining Kiss.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM88">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM88 icon"></span> <a class="ent-name" href="/item/tm88">TM88</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Pluck/Sleep Talk.</td>
+<td class="cell-long-text">Teaches the move Pluck/Sleep Talk/Grassy Terrain.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM89">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-bug.png" data-alt="TM89 icon"></span> <a class="ent-name" href="/item/tm89">TM89</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move U-turn.</td>
+<td class="cell-long-text">Teaches the move U-turn/Misty Terrain.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM90">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM90 icon"></span> <a class="ent-name" href="/item/tm90">TM90</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Substitute.</td>
+<td class="cell-long-text">Teaches the move Substitute/Electric Terrain.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM91">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-steel.png" data-alt="TM91 icon"></span> <a class="ent-name" href="/item/tm91">TM91</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Flash Cannon.</td>
+<td class="cell-long-text">Teaches the move Flash Cannon/Psychic Terrain.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM92">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-psychic.png" data-alt="TM92 icon"></span> <a class="ent-name" href="/item/tm92">TM92</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Trick Room.</td>
+<td class="cell-long-text">Teaches the move Trick Room/Mystical Fire.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM93">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-electric.png" data-alt="TM93 icon"></span> <a class="ent-name" href="/item/tm93">TM93</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Wild Charge.</td>
+<td class="cell-long-text">Teaches the move Wild Charge/Eerie Impulse/Cut.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM94">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fighting.png" data-alt="TM94 icon"></span> <a class="ent-name" href="/item/tm94">TM94</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Rock Smash/Surf.</td>
+<td class="cell-long-text">Teaches the move Rock Smash/Surf/False Swipe/Fly.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM95">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM95 icon"></span> <a class="ent-name" href="/item/tm95">TM95</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Snarl.</td>
+<td class="cell-long-text">Teaches the move Snarl/Air Slash/Surf.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM96">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-normal.png" data-alt="TM96 icon"></span> <a class="ent-name" href="/item/tm96">TM96</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Nature Power.</td>
+<td class="cell-long-text">Teaches the move Nature Power/Smart Strike/Strength.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM97">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-dark.png" data-alt="TM97 icon"></span> <a class="ent-name" href="/item/tm97">TM97</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dark Pulse.</td>
+<td class="cell-long-text">Teaches the move Dark Pulse/Brutal Swing/Defog.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM98">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-water.png" data-alt="TM98 icon"></span> <a class="ent-name" href="/item/tm98">TM98</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Power-Up Punch/Waterfall.</td>
+<td class="cell-long-text">Teaches the move Power-Up Punch/Waterfall/Stomping Tantrum/Rock Smash.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TM99">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/tm-fairy.png" data-alt="TM99 icon"></span> <a class="ent-name" href="/item/tm99">TM99</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text">Teaches the move Dazzling Gleam.</td>
+<td class="cell-long-text">Teaches the move Dazzling Gleam/Breaking Swipe/Waterfall.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TMV Pass">
@@ -5293,350 +5766,350 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR01 icon"></span> <a class="ent-name" href="/item/tr01">TR01</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Body Slam.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR02">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR02 icon"></span> <a class="ent-name" href="/item/tr02">TR02</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Flamethrower.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR03">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR03 icon"></span> <a class="ent-name" href="/item/tr03">TR03</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Hydro Pump.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR04">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR04 icon"></span> <a class="ent-name" href="/item/tr04">TR04</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Surf.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR05">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR05 icon"></span> <a class="ent-name" href="/item/tr05">TR05</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Ice Beam.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR06">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR06 icon"></span> <a class="ent-name" href="/item/tr06">TR06</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Blizzard.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR07">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR07 icon"></span> <a class="ent-name" href="/item/tr07">TR07</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Low Kick.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR08">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR08 icon"></span> <a class="ent-name" href="/item/tr08">TR08</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Thunderbolt.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR09">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR09 icon"></span> <a class="ent-name" href="/item/tr09">TR09</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Thunder.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR10">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR10 icon"></span> <a class="ent-name" href="/item/tr10">TR10</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Earthquake.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR11">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR11 icon"></span> <a class="ent-name" href="/item/tr11">TR11</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Psychic.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR12">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR12 icon"></span> <a class="ent-name" href="/item/tr12">TR12</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Agility.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR13">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR13 icon"></span> <a class="ent-name" href="/item/tr13">TR13</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Focus Energy.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR14">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR14 icon"></span> <a class="ent-name" href="/item/tr14">TR14</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Metronome.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR15">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR15 icon"></span> <a class="ent-name" href="/item/tr15">TR15</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Fire Blast.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR16">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR16 icon"></span> <a class="ent-name" href="/item/tr16">TR16</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Waterfall.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR17">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR17 icon"></span> <a class="ent-name" href="/item/tr17">TR17</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Amnesia.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR18">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR18 icon"></span> <a class="ent-name" href="/item/tr18">TR18</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Leech Life.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR19">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR19 icon"></span> <a class="ent-name" href="/item/tr19">TR19</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Tri Attack.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR20">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR20 icon"></span> <a class="ent-name" href="/item/tr20">TR20</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Substitute.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR21">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR21 icon"></span> <a class="ent-name" href="/item/tr21">TR21</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Reversal.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR22">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR22 icon"></span> <a class="ent-name" href="/item/tr22">TR22</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Sludge Bomb.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR23">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR23 icon"></span> <a class="ent-name" href="/item/tr23">TR23</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Spikes.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR24">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR24 icon"></span> <a class="ent-name" href="/item/tr24">TR24</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Outrage.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR25">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR25 icon"></span> <a class="ent-name" href="/item/tr25">TR25</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Psyshock.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR26">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR26 icon"></span> <a class="ent-name" href="/item/tr26">TR26</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Endure.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR27">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR27 icon"></span> <a class="ent-name" href="/item/tr27">TR27</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Sleep Talk.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR28">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR28 icon"></span> <a class="ent-name" href="/item/tr28">TR28</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Megahorn.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR29">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR29 icon"></span> <a class="ent-name" href="/item/tr29">TR29</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Baton Pass.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR30">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR30 icon"></span> <a class="ent-name" href="/item/tr30">TR30</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Encore.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR31">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR31 icon"></span> <a class="ent-name" href="/item/tr31">TR31</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Iron Tail.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR32">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR32 icon"></span> <a class="ent-name" href="/item/tr32">TR32</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Crunch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR33">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR33 icon"></span> <a class="ent-name" href="/item/tr33">TR33</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Shadow Ball.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR34">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR34 icon"></span> <a class="ent-name" href="/item/tr34">TR34</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Future Sight.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR35">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR35 icon"></span> <a class="ent-name" href="/item/tr35">TR35</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Uproar.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR36">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR36 icon"></span> <a class="ent-name" href="/item/tr36">TR36</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Heat Wave.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR37">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR37 icon"></span> <a class="ent-name" href="/item/tr37">TR37</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Taunt.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR38">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR38 icon"></span> <a class="ent-name" href="/item/tr38">TR38</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Trick.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR39">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR39 icon"></span> <a class="ent-name" href="/item/tr39">TR39</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Superpower.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR40">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR40 icon"></span> <a class="ent-name" href="/item/tr40">TR40</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Skill Swap.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR41">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR41 icon"></span> <a class="ent-name" href="/item/tr41">TR41</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Blaze Kick.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR42">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR42 icon"></span> <a class="ent-name" href="/item/tr42">TR42</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Hyper Voice.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR43">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR43 icon"></span> <a class="ent-name" href="/item/tr43">TR43</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Overheat.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR44">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR44 icon"></span> <a class="ent-name" href="/item/tr44">TR44</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Cosmic Power.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR45">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR45 icon"></span> <a class="ent-name" href="/item/tr45">TR45</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Muddy Water.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR46">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR46 icon"></span> <a class="ent-name" href="/item/tr46">TR46</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Iron Defense.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR47">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR47 icon"></span> <a class="ent-name" href="/item/tr47">TR47</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Dragon Claw.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR48">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR48 icon"></span> <a class="ent-name" href="/item/tr48">TR48</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Bulk Up.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR49">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR49 icon"></span> <a class="ent-name" href="/item/tr49">TR49</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Calm Mind.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR50">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR50 icon"></span> <a class="ent-name" href="/item/tr50">TR50</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Leaf Blade.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR51">
@@ -5650,203 +6123,203 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR52 icon"></span> <a class="ent-name" href="/item/tr52">TR52</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Gyro Ball.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR53">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR53 icon"></span> <a class="ent-name" href="/item/tr53">TR53</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Close Combat.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR54">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR54 icon"></span> <a class="ent-name" href="/item/tr54">TR54</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Toxic Spikes.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR55">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR55 icon"></span> <a class="ent-name" href="/item/tr55">TR55</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Flare Blitz.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR56">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR56 icon"></span> <a class="ent-name" href="/item/tr56">TR56</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Aura Sphere.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR57">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR57 icon"></span> <a class="ent-name" href="/item/tr57">TR57</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Poison Jab.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR58">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR58 icon"></span> <a class="ent-name" href="/item/tr58">TR58</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Dark Pulse.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR59">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR59 icon"></span> <a class="ent-name" href="/item/tr59">TR59</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Seed Bomb.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR60">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR60 icon"></span> <a class="ent-name" href="/item/tr60">TR60</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move X-Scissor.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR61">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR61 icon"></span> <a class="ent-name" href="/item/tr61">TR61</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Bug Buzz.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR62">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR62 icon"></span> <a class="ent-name" href="/item/tr62">TR62</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Dragon Pulse.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR63">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR63 icon"></span> <a class="ent-name" href="/item/tr63">TR63</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Power Gem.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR64">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR64 icon"></span> <a class="ent-name" href="/item/tr64">TR64</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Focus Blast.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR65">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR65 icon"></span> <a class="ent-name" href="/item/tr65">TR65</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Energy Ball.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR66">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR66 icon"></span> <a class="ent-name" href="/item/tr66">TR66</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Brave Bird.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR67">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR67 icon"></span> <a class="ent-name" href="/item/tr67">TR67</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Earth Power.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR68">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR68 icon"></span> <a class="ent-name" href="/item/tr68">TR68</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Nasty Plot.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR69">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR69 icon"></span> <a class="ent-name" href="/item/tr69">TR69</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Zen Headbutt.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR70">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR70 icon"></span> <a class="ent-name" href="/item/tr70">TR70</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Flash Cannon.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR71">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR71 icon"></span> <a class="ent-name" href="/item/tr71">TR71</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Leaf Storm.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR72">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR72 icon"></span> <a class="ent-name" href="/item/tr72">TR72</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Power Whip.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR73">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR73 icon"></span> <a class="ent-name" href="/item/tr73">TR73</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Gunk Shot.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR74">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR74 icon"></span> <a class="ent-name" href="/item/tr74">TR74</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Iron Head.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR75">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR75 icon"></span> <a class="ent-name" href="/item/tr75">TR75</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Stone Edge.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR76">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR76 icon"></span> <a class="ent-name" href="/item/tr76">TR76</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Stealth Rock.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR77">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR77 icon"></span> <a class="ent-name" href="/item/tr77">TR77</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Grass Knot.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR78">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR78 icon"></span> <a class="ent-name" href="/item/tr78">TR78</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Sludge Wave.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR79">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR79 icon"></span> <a class="ent-name" href="/item/tr79">TR79</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Heavy Slam.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR80">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR80 icon"></span> <a class="ent-name" href="/item/tr80">TR80</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Electro Ball.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR81">
@@ -5860,14 +6333,14 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR82 icon"></span> <a class="ent-name" href="/item/tr82">TR82</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Stored Power.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR83">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR83 icon"></span> <a class="ent-name" href="/item/tr83">TR83</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Ally Switch.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR84">
@@ -5881,109 +6354,123 @@ You can click a column heading to instantly sort by that column, or type in the 
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR85 icon"></span> <a class="ent-name" href="/item/tr85">TR85</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Work Up.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR86">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR86 icon"></span> <a class="ent-name" href="/item/tr86">TR86</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Wild Charge.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR87">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR87 icon"></span> <a class="ent-name" href="/item/tr87">TR87</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Drill Run.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR88">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR88 icon"></span> <a class="ent-name" href="/item/tr88">TR88</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Heat Crash.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR89">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR89 icon"></span> <a class="ent-name" href="/item/tr89">TR89</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Hurricane.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR90">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR90 icon"></span> <a class="ent-name" href="/item/tr90">TR90</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Play Rough.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR91">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR91 icon"></span> <a class="ent-name" href="/item/tr91">TR91</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Venom Drench.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR92">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR92 icon"></span> <a class="ent-name" href="/item/tr92">TR92</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Dazzling Gleam.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR93">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR93 icon"></span> <a class="ent-name" href="/item/tr93">TR93</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Darkest Lariat.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR94">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR94 icon"></span> <a class="ent-name" href="/item/tr94">TR94</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move High Horsepower.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR95">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR95 icon"></span> <a class="ent-name" href="/item/tr95">TR95</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Throat Chop.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR96">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR96 icon"></span> <a class="ent-name" href="/item/tr96">TR96</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Pollen Puff.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR97">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR97 icon"></span> <a class="ent-name" href="/item/tr97">TR97</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Psychic Fangs.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR98">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR98 icon"></span> <a class="ent-name" href="/item/tr98">TR98</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Liquidation.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="TR99">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="TR99 icon"></span> <a class="ent-name" href="/item/tr99">TR99</a>
 </td>
 <td class="cell-fixed" data-sort-value="machines">Machines</td>
-<td class="cell-long-text"></td>
+<td class="cell-long-text">Teaches the move Body Press.</td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Tropical Shell">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Tropical Shell icon"></span> <a class="ent-name" href="/item/tropical-shell">Tropical Shell</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Tumblestone">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Tumblestone icon"></span> <a class="ent-name" href="/item/tumblestone">Tumblestone</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Twice-Spiced Radish">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Twice-Spiced Radish icon"></span> <a class="ent-name" href="/item/twice-spiced-radish">Twice-Spiced Radish</a>
 </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text"></td>
@@ -6036,6 +6523,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="hold">Hold items</td>
 <td class="cell-long-text">Enables Venusaur to Mega Evolve during battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Vivichoke">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Vivichoke icon"></span> <a class="ent-name" href="/item/vivichoke">Vivichoke</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="Wacan Berry">
@@ -6143,6 +6637,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 <td class="cell-long-text">Restores HP if it's low, but may cause confusion.</td>
 </tr>
 <tr>
+<td class="cell-fixed" data-sort-value="Wing Ball">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Wing Ball icon"></span> <a class="ent-name" href="/item/wing-ball">Wing Ball</a>
+</td>
+<td class="cell-fixed" data-sort-value="pokeballs">Pokeballs</td>
+<td class="cell-long-text"></td>
+ </tr>
+<tr>
 <td class="cell-fixed" data-sort-value="Wise Glasses">
 <span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/sprites/items/wise-glasses.png" data-alt="Wise Glasses icon"></span> <a class="ent-name" href="/item/wise-glasses">Wise Glasses</a>
 </td>
@@ -6155,6 +6656,13 @@ You can click a column heading to instantly sort by that column, or type in the 
 </td>
 <td class="cell-fixed" data-sort-value="general">General items</td>
 <td class="cell-long-text">Activates a Pokémon Den for a Max Raid Battle.</td>
+</tr>
+<tr>
+<td class="cell-fixed" data-sort-value="Wood">
+<span class="img-fixed icon-item-img" data-src="https://img.pokemondb.net/s.png" data-alt="Wood icon"></span> <a class="ent-name" href="/item/wood">Wood</a>
+</td>
+<td class="cell-fixed" data-sort-value="general">General items</td>
+<td class="cell-long-text"></td>
 </tr>
 <tr>
 <td class="cell-fixed" data-sort-value="X Accuracy">
@@ -6390,20 +6898,16 @@ You can click a column heading to instantly sort by that column, or type in the 
 </tbody>
 </table>
 </div>
-</div>
-<div class="grid-col span-md-3 span-lg-2">
-<div class="component text-center" style="min-height:250px"><div id="bsa-zone_1612999171999-2_123456"></div></div> </div>
-</div>
 <div class="component text-center" style="min-height:90px"><div id="bsa-zone_1612827518798-2_123456"></div></div>
 </main>
 <footer class="main-footer">
 <div class="grid-container">
 <a class="wrap-right" href="/about#privacy">Privacy Policy</a>
-All content &amp; design &copy; Pokémon Database, 2008-2021.
-Pokémon images &amp; names &copy; 1995-2021 Nintendo/Game Freak.
+All content &amp; design &copy; Pokémon Database, 2008-2022.
+Pokémon images &amp; names &copy; 1995-2022 Nintendo/Game Freak.
 </div>
 </footer>
-<script>var localDbVersions = 211100;</script>
+<script>var localDbVersions = 220200;</script>
 <script src="/static/js/global-14d65f7e2d.js"></script>
 <script>
 docReady(function () {

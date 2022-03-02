@@ -53,6 +53,8 @@ extension Game {
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Galar)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_galar)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Isle of Armor)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_isleOfArmor)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (The Crown Tundra)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_crownTundra)))
+        case .legendsArceus:
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Hisui)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)))
         case .national:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Kanto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_kanto)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Johto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_johto)))
@@ -70,6 +72,7 @@ extension Game {
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Galar)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_galar)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Isle of Armor)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_isleOfArmor)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (The Crown Tundra)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_crownTundra)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Hisui)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)))
             break
         }
         return filters

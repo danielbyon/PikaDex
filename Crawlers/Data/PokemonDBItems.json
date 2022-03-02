@@ -83,6 +83,9 @@
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It boosts Sp. Atk if the holder is hit with a Water-type attack. It can only be used once.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It boosts Sp. Atk if the holder is hit with a Water-type attack. It can only be used once."
   },
+  "Adamant Crystal": {
+    "Legends: Arceus": "When used on Dialga, this large, glowing gem wells with power and allows the Pok\u00e9mon to change form."
+  },
   "Adamant Mint": {
     "Sword": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
     "Shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
@@ -334,6 +337,9 @@
     "B.Diamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its Sp. Def stat will increase when it\u2019s in a pinch.",
     "S.Pearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, its Sp. Def stat will increase when it\u2019s in a pinch."
   },
+  "Apricorn": {
+    "Legends: Arceus": "A fruit whose shell can be used to form the capsules of all manner of Pok\u00e9 Balls when crafting them from scratch. Its proper name is actually \u201cBrown Apricorn.\u201d"
+  },
   "Armor Fossil": {
     "Diamond": "A fossil from a prehistoric Pok\u00e9mon that lived on the land. It appears to be part of a collar.",
     "Pearl": "A fossil from a prehistoric Pok\u00e9mon that lived on the land. It appears to be part of a collar.",
@@ -413,6 +419,18 @@
     "B.Diamond": "One of a variety of mysterious Mega Stones. Have Audino hold it, and this stone will enable it to Mega Evolve during battle.",
     "S.Pearl": "One of a variety of mysterious Mega Stones. Have Audino hold it, and this stone will enable it to Mega Evolve during battle."
   },
+  "Aux Evasion": {
+    "Legends: Arceus": "An item that makes moves less likely to strike a Pok\u00e9mon during a battle. This effect disappears if the Pok\u00e9mon leaves the battle."
+  },
+  "Aux Guard": {
+    "Legends: Arceus": "An item that sharply boosts the defensive stats of a Pok\u00e9mon during a battle. These effects disappear if the Pok\u00e9mon leaves the battle."
+  },
+  "Aux Power": {
+    "Legends: Arceus": "An item that sharply boosts the offensive stats of a Pok\u00e9mon during a battle. These effects disappear if the Pok\u00e9mon leaves the battle."
+  },
+  "Aux Powerguard": {
+    "Legends: Arceus": "An item that sharply boosts the offensive and defensive stats of a Pok\u00e9mon during a battle. These effects disappear if the Pok\u00e9mon leaves the battle."
+  },
   "Awakening": {
     "Ruby": "Awakens a sleeping POK\u00e9MON.",
     "Sapphire": "Awakens a sleeping POK\u00e9MON.",
@@ -470,6 +488,9 @@
     "B.Diamond": "One of the many ingredients that can be used for cooking at your camp. The tinned food that Bach sells is curiously popular in Galar.",
     "S.Pearl": "One of the many ingredients that can be used for cooking at your camp. The tinned food that Bach sells is curiously popular in Galar."
   },
+  "Ball of Mud": {
+    "Legends: Arceus": "A ball of mud that has become stiff and hard. Hitting a Pok\u00e9mon with one may stun the Pok\u00e9mon, creating an opening for you to act."
+  },
   "Balm Mushroom": {
     "Black": "A rare mushroom which gives off a nice fragrance. A maniac will buy it for a high price.",
     "White": "A rare mushroom which gives off a nice fragrance. A maniac will buy it for a high price.",
@@ -509,6 +530,9 @@
     "Shield": "A piece of colored glass. Waves have rounded its edges. It\u2019s slightly rough to the touch.",
     "B.Diamond": "A piece of colored glass. Waves have rounded its edges. It\u2019s slightly rough to the touch.",
     "S.Pearl": "A piece of colored glass. Waves have rounded its edges. It\u2019s slightly rough to the touch."
+  },
+  "Bean Cake": {
+    "Legends: Arceus": "A cake made by combining beans with a Cake-Lure Base. These cakes are potently effective at attracting fish Pok\u00e9mon, as well as bird Pok\u00e9mon and their flying ilk."
   },
   "Beast Ball": {
     "Sun": "A special Pok\u00e9 Ball designed to catch Ultra Beasts. It has a low success rate for catching others.",
@@ -743,6 +767,9 @@
     "B.Diamond": "A black Apricorn. It has a scent beyond one\u2019s experience.",
     "S.Pearl": "A black Apricorn. It has a scent beyond one\u2019s experience."
   },
+  "Black Augurite": {
+    "Legends: Arceus": "A glassy black stone that produces a sharp cutting edge when split. It\u2019s loved by a certain Pok\u00e9mon."
+  },
   "Black Belt": {
     "Ruby": "A hold item that boosts FIGHTING-type moves.",
     "Sapphire": "A hold item that boosts FIGHTING-type moves.",
@@ -849,6 +876,12 @@
     "Shield": "An item to be held by a Pok\u00e9mon. It gradually restores HP to Poison-type Pok\u00e9mon. It damages any other type.",
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It gradually restores HP to Poison-type Pok\u00e9mon. It damages any other type.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It gradually restores HP to Poison-type Pok\u00e9mon. It damages any other type."
+  },
+  "Black Tumblestone": {
+    "Legends: Arceus": "When combined with an Apricorn, this mysterious black stone can draw out the properties required to forge a Heavy Ball."
+  },
+  "Blank Plate": {
+    "Legends: Arceus": "A stone tablet imbued with the essence of normalcy. When used on a certain Pok\u00e9mon, it allows that Pok\u00e9mon to gain the power of the Normal type."
   },
   "Blastoisinite": {
     "X": "One variety of the mysterious Mega Stones. Have Blastoise hold it, and this stone will enable it to Mega Evolve during battle.",
@@ -1130,6 +1163,9 @@
     "B.Diamond": "This is a crystallized form of Z-Power. It upgrades Bug-type moves to Z-Moves.",
     "S.Pearl": "This is a crystallized form of Z-Power. It upgrades Bug-type moves to Z-Moves."
   },
+  "Bugwort": {
+    "Legends: Arceus": "A wildflower that can be found growing across the Hisui region. It does have medicinal properties, but it is so bitter that no wild Pok\u00e9mon will eat it."
+  },
   "Burn Drive": {
     "Black": "A cassette to be held by Genesect. It changes Techno Blast to a Fire-type move.",
     "White": "A cassette to be held by Genesect. It changes Techno Blast to a Fire-type move.",
@@ -1178,6 +1214,9 @@
     "B.Diamond": "A spray-type medicine for treating burns. It can be used to heal a single Pok\u00e9mon suffering from a burn.",
     "S.Pearl": "A spray-type medicine for treating burns. It can be used to heal a single Pok\u00e9mon suffering from a burn."
   },
+  "Cake-Lure Base": {
+    "Legends: Arceus": "A type of field provision that enhances the flavor of other foods it is mixed with."
+  },
   "Calcium": {
     "Ruby": "Raises the stat SP. ATK of one POK\u00e9MON.",
     "Sapphire": "Raises the stat SP. ATK of one POK\u00e9MON.",
@@ -1221,6 +1260,9 @@
     "Shield": "One of a variety of mysterious Mega Stones. Have Camerupt hold it, and this stone will enable it to Mega Evolve during battle.",
     "B.Diamond": "One of a variety of mysterious Mega Stones. Have Camerupt hold it, and this stone will enable it to Mega Evolve during battle.",
     "S.Pearl": "One of a variety of mysterious Mega Stones. Have Camerupt hold it, and this stone will enable it to Mega Evolve during battle."
+  },
+  "Candy Truffle": {
+    "Legends: Arceus": "A sweet-fleshed truffle that is packed full of mysterious energy. It is one of the materials needed for crafting various items."
   },
   "Carbos": {
     "Ruby": "Raises the stat SPEED of one POK\u00e9MON.",
@@ -1279,6 +1321,9 @@
     "Shield": "Castelia City\u2019s specialty, soft-serve ice cream. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
     "B.Diamond": "Castelia City\u2019s specialty, soft-serve ice cream. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
     "S.Pearl": "Castelia City\u2019s specialty, soft-serve ice cream. It can be used once to heal all the status conditions of a Pok\u00e9mon."
+  },
+  "Caster Fern": {
+    "Legends: Arceus": "A fern used for crafting items made to be thrown. When these curled leaves are unfurled, they can serve as nature\u2019s wrapping paper."
   },
   "Cell Battery": {
     "Black": "A consumable battery. If the holder is hit by an Electric-type move, its Attack will rise.",
@@ -1542,6 +1587,9 @@
     "Shield": "An item to be held by a Pok\u00e9mon. This curious headband boosts Attack but only allows the use of one move.",
     "B.Diamond": "An item to be held by a Pok\u00e9mon. This curious headband boosts Attack but only allows the use of one move.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. This curious headband boosts Attack but only allows the use of one move."
+  },
+  "Choice Dumpling": {
+    "Legends: Arceus": "A dumpling that will make a Pok\u00e9mon become fixated on a move in battle. The Pok\u00e9mon will deal more damage when using that move but will take more damage as well."
   },
   "Choice Scarf": {
     "Diamond": "An item to be held by a Pok\u00e9mon. This scarf boosts Speed, but allows the use of only one kind of move.",
@@ -1828,6 +1876,12 @@
     "B.Diamond": "A peculiar teapot that can make a certain species of Pok\u00e9mon evolve. It may be cracked, but tea poured from it is delicious.",
     "S.Pearl": "A peculiar teapot that can make a certain species of Pok\u00e9mon evolve. It may be cracked, but tea poured from it is delicious."
   },
+  "Crafting Kit": {
+    "Legends: Arceus": "A kit containing everything you might need for crafting, even when there is no workbench around. However, you can only use the materials you have in your satchel."
+  },
+  "Crunchy Salt": {
+    "Legends: Arceus": "Translucent crystals that are beloved by Pok\u00e9mon bearing a resemblance to grass, plants, or minerals. They will gather wherever a lump of this salt is thrown."
+  },
   "Custap Berry": {
     "Diamond": "A Poffin ingredient. If held by a Pok\u00e9mon, it gets to move first just once in a pinch.",
     "Pearl": "A Poffin ingredient. If held by a Pok\u00e9mon, it gets to move first just once in a pinch.",
@@ -1958,6 +2012,9 @@
     "B.Diamond": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It sparkles like a glittering eye.",
     "S.Pearl": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It sparkles like a glittering eye."
   },
+  "Dazzling Honey": {
+    "Legends: Arceus": "Honey that sparkles with an amber hue. It is beloved by bug Pok\u00e9mon and Pok\u00e9mon with fairylike charms, so they will gather wherever a comb of it is thrown."
+  },
   "Decidium Z": {
     "Sun": "It converts Z-Power into crystals that upgrade Decidueye\u2019s Spirit Shackle to an exclusive Z-Move.",
     "Moon": "It converts Z-Power into crystals that upgrade Decidueye\u2019s Spirit Shackle to an exclusive Z-Move.",
@@ -2085,7 +2142,8 @@
     "Sword": "An item that greatly raises the critical-hit ratio of a Pok\u00e9mon during a battle. It can be used only once and wears off if the Pok\u00e9mon is withdrawn.",
     "Shield": "An item that greatly raises the critical-hit ratio of a Pok\u00e9mon during a battle. It can be used only once and wears off if the Pok\u00e9mon is withdrawn.",
     "B.Diamond": "An item that greatly raises the critical-hit ratio of a Pok\u00e9mon during a battle. It can be used only once and wears off if the Pok\u00e9mon is withdrawn.",
-    "S.Pearl": "An item that greatly raises the critical-hit ratio of a Pok\u00e9mon during a battle. It can be used only once and wears off if the Pok\u00e9mon is withdrawn."
+    "S.Pearl": "An item that greatly raises the critical-hit ratio of a Pok\u00e9mon during a battle. It can be used only once and wears off if the Pok\u00e9mon is withdrawn.",
+    "Legends: Arceus": "An item that sharply boosts the critical-hit ratio of a Pok\u00e9mon during a battle. This effect disappears if the Pok\u00e9mon leaves the battle."
   },
   "Dire Hit 2": {
     "Black": "It can be used many times to raise the critical-hit ratio of one Pok\u00e9mon. It wears off if the Pok\u00e9mon is withdrawn.",
@@ -2122,6 +2180,9 @@
     "Shield": "It can be used many times to greatly raise a Pok\u00e9mon\u2019s critical-hit ratio. It wears off if the Pok\u00e9mon is withdrawn.",
     "B.Diamond": "It can be used many times to greatly raise a Pok\u00e9mon\u2019s critical-hit ratio. It wears off if the Pok\u00e9mon is withdrawn.",
     "S.Pearl": "It can be used many times to greatly raise a Pok\u00e9mon\u2019s critical-hit ratio. It wears off if the Pok\u00e9mon is withdrawn."
+  },
+  "Direshroom": {
+    "Legends: Arceus": "Mushrooms that, when consumed, sharpen the eater\u2019s focus. They make it easier to land critical hits and are one of the materials needed for crafting Dire Hits."
   },
   "Discount Coupon": {
     "X": "This special coupon allows you to buy items at a discount when you are shopping at a boutique.",
@@ -2204,6 +2265,9 @@
     "Shield": "A fossil from a prehistoric Pok\u00e9mon that once lived in the sea. It could be a shell or carapace.",
     "B.Diamond": "A fossil from a prehistoric Pok\u00e9mon that once lived in the sea. It could be a shell or carapace.",
     "S.Pearl": "A fossil from a prehistoric Pok\u00e9mon that once lived in the sea. It could be a shell or carapace."
+  },
+  "Doppel Bonnets": {
+    "Legends: Arceus": "Mushrooms that, when consumed, make the eater feel nimble and agile as a fleeting shadow. They are one of the materials needed for crafting Aux Evasions."
   },
   "Douse Drive": {
     "Black": "A cassette to be held by Genesect. It changes Techno Blast to a Water-type move.",
@@ -3007,6 +3071,9 @@
     "B.Diamond": "A Pok\u00e9 Ball that makes it easier to catch Pok\u00e9mon that are usually very quick to run away.",
     "S.Pearl": "A Pok\u00e9 Ball that makes it easier to catch Pok\u00e9mon that are usually very quick to run away."
   },
+  "Feather Ball": {
+    "Legends: Arceus": "A ball that flies fast and true\u2014ideal for catching nimble Pok\u00e9mon or Pok\u00e9mon that fly high in the air."
+  },
   "Festival Ticket": {
     "Sun": "A ticket that allows you to host a mission in Festival Plaza.",
     "Moon": "A ticket that allows you to host a mission in Festival Plaza.",
@@ -3082,6 +3149,9 @@
     "Shield": "If held by a Pok\u00e9mon, it restores the user\u2019s HP in a pinch, but it will cause confusion if the user hates the taste.",
     "B.Diamond": "If held by a Pok\u00e9mon, it restores the user\u2019s HP in a pinch, but it will cause confusion if the user hates the taste.",
     "S.Pearl": "If held by a Pok\u00e9mon, it restores the user\u2019s HP in a pinch, but it will cause confusion if the user hates the taste."
+  },
+  "Fine Remedy": {
+    "Legends: Arceus": "An herbal medicine that can restore 100 HP to a Pok\u00e9mon, just as a Super Potion does. Yet the bitter taste will make the Pok\u00e9mon less friendly toward you."
   },
   "Fire Gem": {
     "Black": "A gem with an essence of fire. When held, it strengthens the power of a Fire-type move only once.",
@@ -3694,6 +3764,9 @@
     "B.Diamond": "One of the many ingredients that can be used for cooking at your camp. A mysterious spice. Even a tiny sprinkle is sure to make a curry gigantic.",
     "S.Pearl": "One of the many ingredients that can be used for cooking at your camp. A mysterious spice. Even a tiny sprinkle is sure to make a curry gigantic."
   },
+  "Gigaton Ball": {
+    "Legends: Arceus": "The ultimate iteration of the Heavy Ball. A ball that is too heavy to fly high or far, but it is highly effective if you manage to hit an unsuspecting Pok\u00e9mon."
+  },
   "Glalitite": {
     "Sun": "One of a variety of mysterious Mega Stones. Have Glalie hold it, and this stone will enable it to Mega Evolve during battle.",
     "Moon": "One of a variety of mysterious Mega Stones. Have Glalie hold it, and this stone will enable it to Mega Evolve during battle.",
@@ -3768,6 +3841,9 @@
     "Shield": "A fertilizer for growing Berries. However, it appears to be unsuitable for the soil in the Hoenn region and has no effect.",
     "B.Diamond": "A fertilizer for growing Berries. However, it appears to be unsuitable for the soil in the Hoenn region and has no effect.",
     "S.Pearl": "A fertilizer for growing Berries. However, it appears to be unsuitable for the soil in the Hoenn region and has no effect."
+  },
+  "Grain Cake": {
+    "Legends: Arceus": "A cake made by combining grains with a Cake-Lure Base. These cakes are potently effective at attracting Pok\u00e9mon that dwell and wander among the fields."
   },
   "Grass Gem": {
     "Black": "A gem with an essence of nature. When held, it strengthens the power of a Grass-type move only once.",
@@ -3845,7 +3921,8 @@
     "Sword": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
     "Shield": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
     "B.Diamond": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
-    "S.Pearl": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball."
+    "S.Pearl": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
+    "Legends: Arceus": "A mysterious ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball."
   },
   "Green Apricorn": {
     "HeartGold": "A green Apricorn. It has a mysterious, aromatic scent.",
@@ -3974,6 +4051,9 @@
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap."
   },
+  "Griseous Core": {
+    "Legends: Arceus": "When used on Giratina, this large, glowing gem wells with power and allows the Pok\u00e9mon to change form."
+  },
   "Griseous Orb": {
     "Platinum": "A glowing orb to be held by GIRATINA. It boosts the power of Dragon- and Ghost-type moves.",
     "HeartGold": "A glowing orb to be held by GIRATINA. It boosts the power of Dragon- and Ghost-type moves.",
@@ -3994,6 +4074,18 @@
     "Shield": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held.",
     "B.Diamond": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held.",
     "S.Pearl": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held."
+  },
+  "Grit Dust": {
+    "Legends: Arceus": "Mysterious dust that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used to raise effort levels only up to level three, however."
+  },
+  "Grit Gravel": {
+    "Legends: Arceus": "Mysterious gravel that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used only if the effort level is at least level three and no greater than level five."
+  },
+  "Grit Pebble": {
+    "Legends: Arceus": "A mysterious pebble that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used only if the effort level is at least level six and no greater than level eight."
+  },
+  "Grit Rock": {
+    "Legends: Arceus": "A mysterious rock that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used only if the effort level has already reached level nine."
   },
   "Ground Gem": {
     "Black": "A gem with an essence of land. When held, it strengthens the power of a Ground-type move only once.",
@@ -4286,6 +4378,9 @@
     "B.Diamond": "A pretty, heart-shaped scale that is extremely rare. Some people are happy to receive one.",
     "S.Pearl": "A pretty, heart-shaped scale that is extremely rare. Some people are happy to receive one."
   },
+  "Hearty Grains": {
+    "Legends: Arceus": "Beautiful stalks of rice bursting with life. Pok\u00e9mon that dwell and wander among the fields love these grains and will gather wherever the stalks are thrown."
+  },
   "Heat Rock": {
     "Diamond": "A Pok\u00e9mon hold item that extends the duration of the move Sunny Day used by the holder.",
     "Pearl": "A Pok\u00e9mon hold item that extends the duration of the move Sunny Day used by the holder.",
@@ -4327,7 +4422,8 @@
     "Sword": "A Pok\u00e9 Ball that is better than usual at catching very heavy Pok\u00e9mon.",
     "Shield": "A Pok\u00e9 Ball that is better than usual at catching very heavy Pok\u00e9mon.",
     "B.Diamond": "A Pok\u00e9 Ball that is better than usual at catching very heavy Pok\u00e9mon.",
-    "S.Pearl": "A Pok\u00e9 Ball that is better than usual at catching very heavy Pok\u00e9mon."
+    "S.Pearl": "A Pok\u00e9 Ball that is better than usual at catching very heavy Pok\u00e9mon.",
+    "Legends: Arceus": "A ball that is too heavy to fly high or far, but it is highly effective if you manage to hit an unsuspecting Pok\u00e9mon."
   },
   "Heavy-Duty Boots": {
     "Sword": "These boots prevent the effects of traps set on the battlefield.",
@@ -4569,6 +4665,9 @@
     "HeartGold": "A charging attack that may also leave the foe confused. It can also be used to scale rocky walls.",
     "SoulSilver": "A charging attack that may also leave the foe confused. It can also be used to scale rocky walls."
   },
+  "Hometown Muffin": {
+    "Legends: Arceus": "A baked treat made from Berries and other ingredients, which is often eaten in regions such as Galar. It is beloved by a surprising number of Pok\u00e9mon."
+  },
   "Hondew Berry": {
     "Ruby": "POK\u00e9BLOCK ingredient. Plant in loamy soil to grow HONDEW.",
     "Sapphire": "POK\u00e9BLOCK ingredient. Plant in loamy soil to grow HONDEW.",
@@ -4620,6 +4719,9 @@
     "B.Diamond": "A sweet honey with a lush aroma that attracts wild Pok\u00e9mon when it is used in tall grass, in caves, or on special trees.",
     "S.Pearl": "A sweet honey with a lush aroma that attracts wild Pok\u00e9mon when it is used in tall grass, in caves, or on special trees."
   },
+  "Honey Cake": {
+    "Legends: Arceus": "A cake made by combining honey with a Cake-Lure Base. These cakes are potently effective at attracting bug Pok\u00e9mon and also those with fairylike charms."
+  },
   "Honor Of Kalos": {
     "X": "A precious symbol that is awarded only to an individual who has done great things for the Kalos region.",
     "Y": "A precious symbol that is awarded only to an individual who has done great things for the Kalos region.",
@@ -4633,6 +4735,9 @@
     "Shield": "A precious symbol that is awarded only to an individual who has done great things for the Kalos region.",
     "B.Diamond": "A precious symbol that is awarded only to an individual who has done great things for the Kalos region.",
     "S.Pearl": "A precious symbol that is awarded only to an individual who has done great things for the Kalos region."
+  },
+  "Hopo Berry": {
+    "Legends: Arceus": "A Berry that can be fed to a Pok\u00e9mon to restore its PP. If a wild Pok\u00e9mon eats one of these Berries, that Pok\u00e9mon\u2019s reactions will be dulled."
   },
   "Houndoominite": {
     "X": "One variety of the mysterious Mega Stones. Have Houndoom hold it, and this stone will enable it to Mega Evolve during battle.",
@@ -4974,6 +5079,12 @@
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It lowers Speed and allows Ground-type moves to hit Flying types and holders that are levitating.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It lowers Speed and allows Ground-type moves to hit Flying types and holders that are levitating."
   },
+  "Iron Barktongue": {
+    "Legends: Arceus": "Mushrooms that, when consumed, make the body of the eater grow tougher. They boost endurance and are one of the materials needed for crafting Aux Guards."
+  },
+  "Iron Chunk": {
+    "Legends: Arceus": "A naturally occurring hunk of iron. Such ore is needed to make the requisite parts of numerous Pok\u00e9 Ball varieties, such as the clasp that holds the ball shut."
+  },
   "Iron Plate": {
     "Diamond": "An item to be held by a Pok\u00e9mon. It is a stone tablet that boosts the power of Steel-type moves.",
     "Pearl": "An item to be held by a Pok\u00e9mon. It is a stone tablet that boosts the power of Steel-type moves.",
@@ -5056,11 +5167,17 @@
     "B.Diamond": "A Berry to be consumed by Pok\u00e9mon. If a physical attack hits the Pok\u00e9mon holding it, the attacker will also be hurt.",
     "S.Pearl": "A Berry to be consumed by Pok\u00e9mon. If a physical attack hits the Pok\u00e9mon holding it, the attacker will also be hurt."
   },
+  "Jet Ball": {
+    "Legends: Arceus": "The ultimate iteration of the Feather Ball. A ball that flies fast and true\u2014ideal for catching nimble Pok\u00e9mon or Pok\u00e9mon that fly high in the air."
+  },
   "Jolly Mint": {
     "Sword": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
     "Shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
     "B.Diamond": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
     "S.Pearl": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly."
+  },
+  "Jubilife Muffin": {
+    "Legends: Arceus": "A hidden gem gaining popularity in Jubilife Village and beloved by Pok\u00e9mon. This sweet treat can be fed to a Pok\u00e9mon to cure any status conditions it may have."
   },
   "Kangaskhanite": {
     "X": "One variety of the mysterious Mega Stones. Have Kangaskhan hold it, and this stone will enable it to Mega Evolve during battle.",
@@ -5165,6 +5282,9 @@
     "Shield": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Attack base points.",
     "B.Diamond": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Attack base points.",
     "S.Pearl": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its Attack base points."
+  },
+  "King\u2019s Leaf": {
+    "Legends: Arceus": "The king of herbs, glittering and brilliant. Combining this herb with other materials needed to make medicines will boost their efficacy."
   },
   "King's Rock": {
     "Ruby": "A hold item that may cause flinching when the foe is hit.",
@@ -5341,6 +5461,9 @@
     "B.Diamond": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly.",
     "S.Pearl": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly."
   },
+  "Leaden Ball": {
+    "Legends: Arceus": "An improvement on the original Heavy Ball design. A ball that is too heavy to fly high or far, but it is highly effective if you manage to hit an unsuspecting Pok\u00e9mon."
+  },
   "Leaf Letter": {
     "L.G. Pikachu": "A letter written on a leaf. Something is written using Pikachu\u2019s/Eevee\u2019s footprints.",
     "L.G. Eevee": "A letter written on a leaf. Something is written using Pikachu\u2019s/Eevee\u2019s footprints.",
@@ -5432,6 +5555,9 @@
     "Shield": "An item to be held by a Pok\u00e9mon. The holder\u2019s HP is slowly but steadily restored throughout every battle.",
     "B.Diamond": "An item to be held by a Pok\u00e9mon. The holder\u2019s HP is slowly but steadily restored throughout every battle.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. The holder\u2019s HP is slowly but steadily restored throughout every battle."
+  },
+  "Legend Plate": {
+    "Legends: Arceus": "A stone tablet imbued with the essence of all creation. When used on a certain Pok\u00e9mon, it allows that Pok\u00e9mon to gain the power of every type there is."
   },
   "Lemonade": {
     "Ruby": "A very sweet drink that restores HP by 80 points.",
@@ -5613,6 +5739,9 @@
     "B.Diamond": "An item to be held by a Pok\u00e9mon. Protective moves like Light Screen and Reflect will be effective longer.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. Protective moves like Light Screen and Reflect will be effective longer."
   },
+  "Linking Cord": {
+    "Legends: Arceus": "A string exuding a mysterious energy that makes you feel a strange sense of connection. It\u2019s loved by certain Pok\u00e9mon."
+  },
   "Lone Earring": {
     "L.G. Pikachu": "A single earring that somebody dropped.",
     "L.G. Eevee": "A single earring that somebody dropped.",
@@ -5650,6 +5779,9 @@
     "Shield": "One of a variety of mysterious Mega Stones. Have Lopunny hold it, and this stone will enable it to Mega Evolve during battle.",
     "B.Diamond": "One of a variety of mysterious Mega Stones. Have Lopunny hold it, and this stone will enable it to Mega Evolve during battle.",
     "S.Pearl": "One of a variety of mysterious Mega Stones. Have Lopunny hold it, and this stone will enable it to Mega Evolve during battle."
+  },
+  "Lost Satchel": {
+    "Legends: Arceus": "A satchel that someone dropped."
   },
   "Love Ball": {
     "HeartGold": "Pok\u00e9 Ball for catching Pok\u00e9mon that are the opposite gender of your Pok\u00e9mon.",
@@ -5861,6 +5993,9 @@
     "Shield": "A Pok\u00e9 Ball that is good for catching Pok\u00e9mon that you reel in with a rod while out fishing.",
     "B.Diamond": "A Pok\u00e9 Ball that is good for catching Pok\u00e9mon that you reel in with a rod while out fishing.",
     "S.Pearl": "A Pok\u00e9 Ball that is good for catching Pok\u00e9mon that you reel in with a rod while out fishing."
+  },
+  "Lustrous Globe": {
+    "Legends: Arceus": "When used on Palkia, this large, glowing orb wells with power and allows the Pok\u00e9mon to change form."
   },
   "Lustrous Orb": {
     "Diamond": "A beautifully glowing orb to be held by PALKIA. It boosts the power of Dragon- and Water-type moves.",
@@ -6091,6 +6226,9 @@
     "Shield": "A round glass marble. You can see colored glass inside the transparent marble.",
     "B.Diamond": "A round glass marble. You can see colored glass inside the transparent marble.",
     "S.Pearl": "A round glass marble. You can see colored glass inside the transparent marble."
+  },
+  "Marsh Balm": {
+    "Legends: Arceus": "A mysterious balm that gives off a soothing scent. It can be used to help calm the frenzy of the Lady of the Ridge, Lilligant."
   },
   "Marshadium Z": {
     "Sun": "It converts Z-Power into crystals that upgrade Marshadow\u2019s Spectral Thief to an exclusive Z-Move.",
@@ -6348,6 +6486,9 @@
     "Shield": "One of a variety of mysterious Mega Stones. Have Medicham hold it, and this stone will enable it to Mega Evolve during battle.",
     "B.Diamond": "One of a variety of mysterious Mega Stones. Have Medicham hold it, and this stone will enable it to Mega Evolve during battle.",
     "S.Pearl": "One of a variety of mysterious Mega Stones. Have Medicham hold it, and this stone will enable it to Mega Evolve during battle."
+  },
+  "Medicinal Leek": {
+    "Legends: Arceus": "Required for crafting medicinal compounds. This vegetable is found growing across the Hisui region and is also known as the wayfarer\u2019s friend."
   },
   "Mental Herb": {
     "Ruby": "A hold item that snaps POK\u00e9MON out of infatuation.",
@@ -6757,6 +6898,9 @@
     "Ultra Sun": "An item for use on a Pok\u00e9mon. It slightly increases the base Attack stat of a single Pok\u00e9mon.",
     "Ultra Moon": "An item for use on a Pok\u00e9mon. It slightly increases the base Attack stat of a single Pok\u00e9mon."
   },
+  "Mushroom Cake": {
+    "Legends: Arceus": "A cake made by combining mushrooms with a Cake-Lure Base. These cakes are potently effective at attracting the more monstrous Pok\u00e9mon, as well as dragon Pok\u00e9mon."
+  },
   "Mystic Water": {
     "Ruby": "A hold item that raises the power of WATER-type moves.",
     "Sapphire": "A hold item that raises the power of WATER-type moves.",
@@ -7141,6 +7285,12 @@
     "B.Diamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
     "S.Pearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle."
   },
+  "Origin Ball": {
+    "Legends: Arceus": "A singular and irreplicable Pok\u00e9 Ball that can be used to catch the frenzied Pok\u00e9mon raging at the Temple of Sinnoh."
+  },
+  "Origin Ore": {
+    "Legends: Arceus": "An ore of mysterious power, spoken of in ancient myths and said to contain the power of almighty Sinnoh itself."
+  },
   "Oval Charm": {
     "Black 2": "An oval charm said to increase the chance of Eggs being found at the Day Care.",
     "White 2": "An oval charm said to increase the chance of Eggs being found at the Day Care.",
@@ -7388,6 +7538,9 @@
     "B.Diamond": "Very large pearls that sparkle in a pretty silver color. They can be sold at a high price to shops.",
     "S.Pearl": "Very large pearls that sparkle in a pretty silver color. They can be sold at a high price to shops."
   },
+  "Peat Block": {
+    "Legends: Arceus": "A block of muddy material that can be used as fuel for burning when it is dried. It\u2019s loved by a certain Pok\u00e9mon."
+  },
   "Pecha Berry": {
     "Ruby": "A hold item that heals poisoning in battle.",
     "Sapphire": "A hold item that heals poisoning in battle.",
@@ -7415,6 +7568,9 @@
     "Shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from poisoning on its own in battle.",
     "B.Diamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from poisoning on its own in battle.",
     "S.Pearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from poisoning on its own in battle."
+  },
+  "Pep-Up Plant": {
+    "Legends: Arceus": "Extremely spicy but also highly nutritious. This herb is used as a material for crafting items that can restore PP to Pok\u00e9mon or boost their stats."
   },
   "Permit": {
     "Black 2": "A permit needed to enter the Nature Preserve. Only a few know about this place.",
@@ -7680,6 +7836,9 @@
     "B.Diamond": "A fossil from a prehistoric Pok\u00e9mon that once lived in the sky. It looks as if it could come from part of its wing.",
     "S.Pearl": "A fossil from a prehistoric Pok\u00e9mon that once lived in the sky. It looks as if it could come from part of its wing."
   },
+  "Plump Beans": {
+    "Legends: Arceus": "Large, juicy beans that grow in pods. These beans are beloved by fish Pok\u00e9mon, as well as bird Pok\u00e9mon and their flying ilk, so throw one and they will gather around."
+  },
   "Poison Barb": {
     "Ruby": "A hold item that raises the power of POISON-type moves.",
     "Sapphire": "A hold item that raises the power of POISON-type moves.",
@@ -7774,7 +7933,8 @@
     "Sword": "A device for catching wild Pok\u00e9mon. It\u2019s thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
     "Shield": "A device for catching wild Pok\u00e9mon. It\u2019s thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
     "B.Diamond": "A device for catching wild Pok\u00e9mon. It\u2019s thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
-    "S.Pearl": "A device for catching wild Pok\u00e9mon. It\u2019s thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target."
+    "S.Pearl": "A device for catching wild Pok\u00e9mon. It\u2019s thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
+    "Legends: Arceus": "A mysterious ball that can be thrown at wild Pok\u00e9mon in order to catch them. These balls can be crafted by hand if you gather the necessary materials."
   },
   "Pok\u00e9 Doll": {
     "Ruby": "Use to flee from any battle with a wild POK\u00e9MON.",
@@ -7857,6 +8017,9 @@
     "Shield": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its HP base points.",
     "B.Diamond": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its HP base points.",
     "S.Pearl": "A Berry to be consumed by Pok\u00e9mon. Using it on a Pok\u00e9mon makes it more friendly but lowers its HP base points."
+  },
+  "Pop Pod": {
+    "Legends: Arceus": "A sea vegetable used for crafting Scatter Bangs. If you wrap it up so that the air has no way to escape, then deal it a sharp blow, it produces a loud popping noise."
   },
   "Potion": {
     "Ruby": "Restores the HP of a POK\u00e9MON by 20 points.",
@@ -8995,6 +9158,9 @@
     "B.Diamond": "A fragile vase made by an ancient civilization about three thousand years ago.",
     "S.Pearl": "A fragile vase made by an ancient civilization about three thousand years ago."
   },
+  "Remedy": {
+    "Legends: Arceus": "An herbal medicine that can restore 60 HP to a Pok\u00e9mon, just as a Potion does. Yet the bitter taste will make the Pok\u00e9mon less friendly toward you."
+  },
   "Repeat Ball": {
     "Ruby": "A BALL that works better on POK\u00e9MON caught before.",
     "Sapphire": "A BALL that works better on POK\u00e9MON caught before.",
@@ -9619,6 +9785,12 @@
     "B.Diamond": "One of a variety of mysterious Mega Stones. Have Salamence hold it, and this stone will enable it to Mega Evolve during battle.",
     "S.Pearl": "One of a variety of mysterious Mega Stones. Have Salamence hold it, and this stone will enable it to Mega Evolve during battle."
   },
+  "Salt Cake": {
+    "Legends: Arceus": "A cake made by combining salt with a Cake-Lure Base. These cakes are potently effective at attracting Pok\u00e9mon that bear a resemblance to grass, plants, or minerals."
+  },
+  "Sand Radish": {
+    "Legends: Arceus": "This bitter root, originally native to sandy beaches, can now be raised even in frozen soil. It is pickled to make a sweet and spicy treat known as Twice-Spiced Radishes."
+  },
   "Sassy Mint": {
     "Sword": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
     "Shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
@@ -9630,6 +9802,9 @@
     "Shield": "One of the many ingredients that can be used for cooking at your camp. These sausages should be boiled before eating.",
     "B.Diamond": "One of the many ingredients that can be used for cooking at your camp. These sausages should be boiled before eating.",
     "S.Pearl": "One of the many ingredients that can be used for cooking at your camp. These sausages should be boiled before eating."
+  },
+  "Scatter Bang": {
+    "Legends: Arceus": "When thrown at the ground, these balls produce a loud noise and scare off weak Pok\u00e9mon in the area, sending them running."
   },
   "Sceptilite": {
     "Sun": "One of a variety of mysterious Mega Stones. Have Sceptile hold it, and this stone will enable it to Mega Evolve during battle.",
@@ -9710,6 +9885,9 @@
     "Shield": "An item to be held by a Pok\u00e9mon. This incense has a curious aroma that boosts the power of Water-type moves.",
     "B.Diamond": "An item to be held by a Pok\u00e9mon. This incense has a curious aroma that boosts the power of Water-type moves.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. This incense has a curious aroma that boosts the power of Water-type moves."
+  },
+  "Seed of Mastery": {
+    "Legends: Arceus": "A rare seed that can be given to the captain of the Security Corps to have a Pok\u00e9mon master a move so it can be used in the agile style or strong style."
   },
   "Serious Mint": {
     "Sword": "When a Pok\u00e9mon smells this mint, all of its stats will grow at an equal rate.",
@@ -10122,6 +10300,9 @@
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It\u2019s a stone tablet that boosts the power of Flying-type moves.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It\u2019s a stone tablet that boosts the power of Flying-type moves."
   },
+  "Sky Tumblestone": {
+    "Legends: Arceus": "When combined with an Apricorn, this mysterious sky-blue stone can draw out the properties required to forge a Feather Ball."
+  },
   "Slowbronite": {
     "Sun": "One of a variety of mysterious Mega Stones. Have Slowbro hold it, and this stone will enable it to Mega Evolve during battle.",
     "Moon": "One of a variety of mysterious Mega Stones. Have Slowbro hold it, and this stone will enable it to Mega Evolve during battle.",
@@ -10188,6 +10369,9 @@
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail."
   },
+  "Smoke Bomb": {
+    "Legends: Arceus": "When thrown at the ground, these balls produce a cloud of fine powder that will reduce visibility in the area and keep wild Pok\u00e9mon from noticing you."
+  },
   "Smoke-Poke Tail": {
     "Sword": "One of the many ingredients that can be used for cooking at your camp. When a Slowpoke\u2019s tail falls off, it grows back quickly.",
     "Shield": "One of the many ingredients that can be used for cooking at your camp. When a Slowpoke\u2019s tail falls off, it grows back quickly.",
@@ -10239,7 +10423,8 @@
     "Sword": "An item to be held by a Pok\u00e9mon. It boosts Attack if the holder is hit with an Ice-type attack. It can only be used once.",
     "Shield": "An item to be held by a Pok\u00e9mon. It boosts Attack if the holder is hit with an Ice-type attack. It can only be used once.",
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It boosts Attack if the holder is hit with an Ice-type attack. It can only be used once.",
-    "S.Pearl": "An item to be held by a Pok\u00e9mon. It boosts Attack if the holder is hit with an Ice-type attack. It can only be used once."
+    "S.Pearl": "An item to be held by a Pok\u00e9mon. It boosts Attack if the holder is hit with an Ice-type attack. It can only be used once.",
+    "Legends: Arceus": "A hard ball made of compressed snow. Hitting a Pok\u00e9mon with one may stun the Pok\u00e9mon, creating an opening for you to act."
   },
   "Soda Pop": {
     "Ruby": "A fizzy soda drink that restores HP by 60 points.",
@@ -10306,6 +10491,9 @@
     "Shield": "It converts Z-Power into crystals that upgrade Solgaleo\u2019s Sunsteel Strike to an exclusive Z-Move.",
     "B.Diamond": "This is a crystallized form of Z-Power. It upgrades Solgaleo\u2019s Sunsteel Strike to a Z-Move.",
     "S.Pearl": "This is a crystallized form of Z-Power. It upgrades Solgaleo\u2019s Sunsteel Strike to a Z-Move."
+  },
+  "Sootfoot Root": {
+    "Legends: Arceus": "A tuber used for crafting Smoke Bombs. It can be mashed for use in cooking, but it can also be dried and ground to produce a fine powder."
   },
   "Soothe Bell": {
     "Ruby": "A hold item that calms spirits and fosters friendship.",
@@ -10448,6 +10636,9 @@
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It\u2019s a stone tablet that boosts the power of Water-type moves.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It\u2019s a stone tablet that boosts the power of Water-type moves."
   },
+  "Spoiled Apricorn": {
+    "Legends: Arceus": "An Apricorn that\u2019s had its insides eaten. Hitting a Pok\u00e9mon with one may stun the Pok\u00e9mon, creating an opening for you to act."
+  },
   "Spooky Plate": {
     "Diamond": "An item to be held by a Pok\u00e9mon. It is a stone tablet that boosts the power of Ghost-type moves.",
     "Pearl": "An item to be held by a Pok\u00e9mon. It is a stone tablet that boosts the power of Ghost-type moves.",
@@ -10490,6 +10681,9 @@
     "Shield": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
     "B.Diamond": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
     "S.Pearl": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest."
+  },
+  "Springy Mushroom": {
+    "Legends: Arceus": "A large and well-ripened mushroom. It is beloved by the more monstrous Pok\u00e9mon, as well as dragon Pok\u00e9mon, so they will gather wherever one is thrown."
   },
   "Sprinklotad": {
     "X": "A watering can shaped like a Lotad. It helps promote the healthy growth of any Berries planted in good, soft soil.",
@@ -10620,6 +10814,9 @@
     "B.Diamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, one of its stats will sharply increase when it\u2019s in a pinch.",
     "S.Pearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, one of its stats will sharply increase when it\u2019s in a pinch."
   },
+  "Stealth Spray": {
+    "Legends: Arceus": "When used in the field, this spray muffles the sound of your footsteps and makes wild Pok\u00e9mon less likely to notice you for a short time."
+  },
   "Steel Gem": {
     "Black": "A gem with an essence of steel. When held, it strengthens the power of a Steel-type move only once.",
     "White": "A gem with an essence of steel. When held, it strengthens the power of a Steel-type move only once.",
@@ -10690,6 +10887,9 @@
     "Shield": "An item to be held by a Pok\u00e9mon. It damages the holder every turn and may latch on to Pok\u00e9mon that touch the holder.",
     "B.Diamond": "An item to be held by a Pok\u00e9mon. It damages the holder every turn and may latch on to Pok\u00e9mon that touch the holder.",
     "S.Pearl": "An item to be held by a Pok\u00e9mon. It damages the holder every turn and may latch on to Pok\u00e9mon that touch the holder."
+  },
+  "Sticky Glob": {
+    "Legends: Arceus": "A ball of some kind of sticky substance. Hitting a Pok\u00e9mon with one may stun the Pok\u00e9mon, creating an opening for you to act."
   },
   "Stone Plate": {
     "Diamond": "An item to be held by a Pok\u00e9mon. It is a stone tablet that boosts the power of Rock-type moves.",
@@ -10846,6 +11046,9 @@
     "B.Diamond": "One of a variety of mysterious Mega Stones. Have Swampert hold it, and this stone will enable it to Mega Evolve during battle.",
     "S.Pearl": "One of a variety of mysterious Mega Stones. Have Swampert hold it, and this stone will enable it to Mega Evolve during battle."
   },
+  "Swap Snack": {
+    "Legends: Arceus": "When eaten, this curious snack temporarily swaps a Pok\u00e9mon\u2019s offensive stats with its defensive stats."
+  },
   "Sweet Apple": {
     "Sword": "A peculiar apple that can make a certain species of Pok\u00e9mon evolve. It\u2019s exceptionally sweet.",
     "Shield": "A peculiar apple that can make a certain species of Pok\u00e9mon evolve. It\u2019s exceptionally sweet.",
@@ -10883,6 +11086,9 @@
     "Moon": "An item for use on a Pok\u00e9mon. It slightly increases the base Speed stat of a single Pok\u00e9mon.",
     "Ultra Sun": "An item for use on a Pok\u00e9mon. It slightly increases the base Speed stat of a single Pok\u00e9mon.",
     "Ultra Moon": "An item for use on a Pok\u00e9mon. It slightly increases the base Speed stat of a single Pok\u00e9mon."
+  },
+  "Swordcap": {
+    "Legends: Arceus": "Mushrooms that, when consumed, cause the muscles to swell. They imbue the eater with strength and are one of the materials needed for crafting Aux Powers."
   },
   "Tamato Berry": {
     "Ruby": "POK\u00e9BLOCK ingredient. Plant in loamy soil to grow TAMATO.",
@@ -14277,6 +14483,12 @@
     "B.Diamond": "A beautiful white shell that may have drifted from a sea in a warm region.",
     "S.Pearl": "A beautiful white shell that may have drifted from a sea in a warm region."
   },
+  "Tumblestone": {
+    "Legends: Arceus": "When combined with an Apricorn, this mysterious, tumbled stone can draw out the properties required to forge a Pok\u00e9 Ball."
+  },
+  "Twice-Spiced Radish": {
+    "Legends: Arceus": "These pickled vegetables prime a Pok\u00e9mon for battle. The Pok\u00e9mon takes a hard-hitting stance, which boosts the power of the Pok\u00e9mon\u2019s moves by 50 percent."
+  },
   "Twisted Spoon": {
     "Ruby": "A hold item that boosts PSYCHIC-type moves.",
     "Sapphire": "A hold item that boosts PSYCHIC-type moves.",
@@ -14347,7 +14559,8 @@
     "Sword": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
     "Shield": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
     "B.Diamond": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
-    "S.Pearl": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball."
+    "S.Pearl": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
+    "Legends: Arceus": "A mysterious ball that provides an even higher success rate for catching Pok\u00e9mon than a Great Ball does."
   },
   "Ultranecrozium Z": {
     "Ultra Sun": "It\u2019s a crystal that turns Necrozma fused with Solgaleo or Lunala into a new form.",
@@ -14406,6 +14619,9 @@
     "Shield": "One of a variety of mysterious Mega Stones. Have Venusaur hold it, and this stone will enable it to Mega Evolve during battle.",
     "B.Diamond": "One of a variety of mysterious Mega Stones. Have Venusaur hold it, and this stone will enable it to Mega Evolve during battle.",
     "S.Pearl": "One of a variety of mysterious Mega Stones. Have Venusaur hold it, and this stone will enable it to Mega Evolve during battle."
+  },
+  "Vivichoke": {
+    "Legends: Arceus": "Also called a morning-dew bud. It is used as a material for crafting items that can restore vitality to a Pok\u00e9mon that has fainted."
   },
   "Wacan Berry": {
     "Diamond": "A Poffin ingredient. If held by a Pok\u00e9mon, it weakens a foe\u2019s supereffective Electric-type attack.",
@@ -14732,6 +14948,9 @@
     "B.Diamond": "If held by a Pok\u00e9mon, it restores the user\u2019s HP in a pinch, but it will cause confusion if the user hates the taste.",
     "S.Pearl": "If held by a Pok\u00e9mon, it restores the user\u2019s HP in a pinch, but it will cause confusion if the user hates the taste."
   },
+  "Wing Ball": {
+    "Legends: Arceus": "An improvement on the original Feather Ball design. A ball that flies fast and true\u2014ideal for catching nimble Pok\u00e9mon or Pok\u00e9mon that fly high in the air."
+  },
   "Wise Glasses": {
     "Diamond": "An item to be held by a Pok\u00e9mon. It is a thick pair of glasses that slightly boosts the power of special moves.",
     "Pearl": "An item to be held by a Pok\u00e9mon. It is a thick pair of glasses that slightly boosts the power of special moves.",
@@ -14760,6 +14979,9 @@
     "Shield": "Throw one into a Pok\u00e9mon Den to attract a wild Dynamax Pok\u00e9mon.",
     "B.Diamond": "Throw one into a Pok\u00e9mon Den to attract a wild Dynamax Pok\u00e9mon.",
     "S.Pearl": "Throw one into a Pok\u00e9mon Den to attract a wild Dynamax Pok\u00e9mon."
+  },
+  "Wood": {
+    "Legends: Arceus": "A handy log of wood that can be used for anything, from crafting common goods needed for daily living to producing works of art."
   },
   "X Accuracy": {
     "Ruby": "Raises accuracy of attack moves during one battle.",
@@ -15758,6 +15980,9 @@
     "Shield": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn\u2019t shake much.",
     "B.Diamond": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn\u2019t shake much.",
     "S.Pearl": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn\u2019t shake much."
+  },
+  "Celestica Flute": {
+    "Legends: Arceus": "A flute that can be used to call special Pok\u00e9mon that are willing to bear you around the region. Its timbre is eerie and mysterious."
   },
   "Clear Bell": {
     "HeartGold": "A very old-fashioned bell that makes a gentle ringing.",
@@ -17532,6 +17757,9 @@
   "Old Sea Map": {
     "Emerald": "A faded sea chart that shows the way to a certain island."
   },
+  "Old Verse": {
+    "Legends: Arceus": "Part of a series of old poems that have been unearthed around the Hisui region. Judging from the handwriting, it appears they were all written by the same person."
+  },
   "Orange Petal": {
     "Ultra Sun": "A pressed flower petal you receive from Ilima during Mina\u2019s trial. The goal is to collect seven different kinds of petals.",
     "Ultra Moon": "A pressed flower petal you receive from Ilima during Mina\u2019s trial. The goal is to collect seven different kinds of petals.",
@@ -17754,6 +17982,9 @@
     "Shield": "A device that allows you to access the Pok\u00e9mon storage system. There are some places where it won\u2019t work.",
     "B.Diamond": "A device that allows you to access the Pok\u00e9mon storage system. There are some places where it won\u2019t work.",
     "S.Pearl": "A device that allows you to access the Pok\u00e9mon storage system. There are some places where it won\u2019t work."
+  },
+  "Pok\u00e9shi Doll": {
+    "Legends: Arceus": "A wooden toy carved in the image of a Pok\u00e9mon. It can be sold to the general store."
   },
   "Powder Jar": {
     "FireRed": "A jar for storing BERRY POWDER made using a BERRY CRUSHER.",
@@ -18366,6 +18597,9 @@
     "B.Diamond": "A fertilizer for growing Berries. However, it appears to be unsuitable for the soil in the Hoenn region and has no effect.",
     "S.Pearl": "A fertilizer for growing Berries. However, it appears to be unsuitable for the soil in the Hoenn region and has no effect."
   },
+  "Survival Charm": {
+    "Legends: Arceus": "A mysterious charm that holds the power to protect a person from fainting while out in the field. This type of charm comes in five different colors."
+  },
   "Tea": {
     "FireRed": "An aromatic tea prepared by an old lady. It will slake even the worst thirst.",
     "LeafGreen": "An aromatic tea prepared by an old lady. It will slake even the worst thirst.",
@@ -18381,6 +18615,9 @@
     "FireRed": "A television set that is tuned to a program with useful tips for novice TRAINERS.",
     "LeafGreen": "A television set that is tuned to a program with useful tips for novice TRAINERS.",
     "Emerald": "A TV set tuned to an advice program for TRAINERS."
+  },
+  "Tempting Charm": {
+    "Legends: Arceus": "A mysterious charm that tends to be lost before any other item when you faint in the field. This type of charm comes in five different colors."
   },
   "Tidal Bell": {
     "HeartGold": "An old-fashioned bell with a gentle, soothing sound.",
@@ -18521,6 +18758,9 @@
     "Shield": "This is a tool for watering Berries you planted to make them grow more quickly.",
     "B.Diamond": "This is a tool for watering Berries you planted to make them grow more quickly.",
     "S.Pearl": "This is a tool for watering Berries you planted to make them grow more quickly."
+  },
+  "Warding Charm": {
+    "Legends: Arceus": "A mysterious charm that holds the power to protect a person from being afflicted with status conditions. This type of charm comes in five different colors."
   },
   "White Mane Hair": {
     "Sword": "Mane hair that belonged to the King of Bountiful Harvests\u2019 beloved steed, Glastrier. The hair is strong and very flexible.",

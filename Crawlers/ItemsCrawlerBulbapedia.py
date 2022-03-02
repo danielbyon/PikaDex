@@ -98,11 +98,17 @@ def process_file(contents, item_name):
     
     if not 'pocket' in entries:
         return None
-    if not 'prices' in entries:
-        return None
+#   if not 'prices' in entries:
+#       return None
     if not 'descriptions' in entries:
         return None
     return entries
+
+def entryExists(name, all_entries):
+    for entry in all_entries:
+        if entry['name'] == name:
+            return True
+    return False
 
 def main():
     print('This is the Pokepedia Items Crawler')
@@ -190,9 +196,30 @@ def main():
             entries['generationIntroduced'] = generationIntroduced
             all_entries.append(entries)
     
+    for name in crawler.fetch_file_lines("LegendsArceusItemList.txt"):
+        name = name.strip()
+        url = 'https://bulbapedia.bulbagarden.net/wiki/' + name.replace(' ', '_')
+        
+        if entryExists(name, all_entries):
+            print('{} already exists, skipping'.format(name))
+            continue
+        
+        filename = file_path + '{}.html'.format(name.replace(' ', '-'))
+        
+        print('Processing {}'.format(name))
+        
+        contents = crawler.fetch_or_download(filename, url)
+        entries = process_file(contents, name)
+        if entries:
+            entries['name'] = name
+            entries['imageName'] = name.replace(' ', '-').lower()
+            entries['generationIntroduced'] = "8"
+            all_entries.append(entries)
+    
     crawler.write_data_to_file(all_entries, "Data/BulbapediaItems")
 #    print(all_entries)
     print("Done!")
 
 if __name__ == '__main__':
     main()
+    

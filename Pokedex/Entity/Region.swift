@@ -18,6 +18,7 @@ public enum Region: String, CaseIterable {
     case kalos
     case alola
     case galar
+    case hisui
 }
 
 extension Region {
@@ -42,6 +43,8 @@ extension Region {
             return 7
         case .galar:
             return 8
+        case .hisui:
+            return 9
         }
     }
 

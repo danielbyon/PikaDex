@@ -43,6 +43,7 @@ public enum Game: String, CaseIterable, Codable, Equatable, Hashable {
     case shield
     case brilliantDiamond
     case shiningPearl
+    case legendsArceus
 
     /// Technically not a game
     case national
@@ -53,6 +54,7 @@ public extension Game {
 
     static let allGamesNewestFirst: [Game] = [
         .national,
+        .legendsArceus,
         .brilliantDiamond,
         .shiningPearl,
         .sword,
@@ -105,7 +107,7 @@ public extension Game {
             return .vi
         case .sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee:
             return .vii
-        case .sword, .shield, .brilliantDiamond, .shiningPearl:
+        case .sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus:
             return .viii
         case .national:
             return .all
@@ -150,6 +152,7 @@ public extension Game {
         case .shield: return "Shield"
         case .brilliantDiamond: return "Brilliant Diamond"
         case .shiningPearl: return "Shining Pearl"
+        case .legendsArceus: return "Legends: Arceus"
         case .national: return "National"
         }
     }
@@ -164,11 +167,13 @@ public extension Game {
 
     var hasAbilities: Bool { generation >= .iii && self != .letsGoPikachu && self != .letsGoEevee }
 
-    var hasTMs: Bool { true }
+    var hasTMs: Bool { self != .legendsArceus }
 
     var hasHMs: Bool { generation < 7 }
 
-    var hasTRs: Bool { generation >= 8 && ![.brilliantDiamond, .shiningPearl].contains(self) }
+    var hasTRs: Bool { self == .sword || self == .shield }
+    
+    var hasMachines: Bool { hasTMs || hasHMs || hasTRs }
 
 }
 

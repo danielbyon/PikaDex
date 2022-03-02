@@ -5,6 +5,7 @@
 	<key>bugFixes</key>
 	<array>
 		<string>Fixed missing move data for various Pokémon forms</string>
+		<string>Fixed issue where selecting a Pokemon on the Battle Assistant would not dismiss the selector</string>
 	</array>
 	<key>newFeatures</key>
 	<array>

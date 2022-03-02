@@ -30,7 +30,7 @@ let validNameCharacters = CharacterSet.alphanumerics.union(CharacterSet(characte
 func sanitizedName(_ name: String) -> String {
     String(name.lowercased().unicodeScalars.filter { validNameCharacters.contains($0) })
 }
-func sanitizedItemName(_ name: String, game: Game) -> String {
+func sanitizedItemName(_ name: String) -> String {
     sanitizedName(name)
 }
 func sanitizedMoveName(_ moveName: String) -> String {
@@ -61,11 +61,15 @@ func getPokemon(forName name: String, game: Game) -> StoredPokemon {
         name = "Pincurchin"
     } else if name == "NidoranM" {
         name = "Nidoran\u{2642}"
+    } else if name == "Mamectric" {
+        name = "Manectric"
+    } else if name == "Doduro" {
+        name = "Doduo"
     }
     return allPokemonByName[sanitizedName(name)]![game]!
 }
 func getItem(forName name: String, game: Game) -> Item? {
-    allItems[sanitizedItemName(name, game: game)]![game]
+    allItems[sanitizedItemName(name)]![game]
 }
 func getMove(forName name: String, game: Game) -> Move? {
     allMoves[sanitizedMoveName(name)]![game]
@@ -524,6 +528,7 @@ processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.ts
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.tsv", dictKey: "ulaula", pokedexNumberKey: #keyPath(PokedexNumbers.z_ultraUlaula))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.tsv", dictKey: "poni", pokedexNumberKey: #keyPath(PokedexNumbers.z_ultraPoni))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/Unova-Table 1.tsv", dictKey: "unova", pokedexNumberKey: #keyPath(PokedexNumbers.z_unova))
+processPokedexNumberTSV(filename: "Research/PokedexNumbers/Hisui-Table 1.tsv", dictKey: "hisui", pokedexNumberKey: #keyPath(PokedexNumbers.z_hisui))
 
 
 // MARK: - Pokemon Forms
@@ -707,6 +712,40 @@ func sanitizedLevelingForms(_ forms: [PokemonForm], pokemonName: String, formFil
     }
 }
 
+/// Returns `true` if the learnset is nil or empty
+func needsLearnsetCopy(_ learnset: NSSet?) -> Bool {
+    if let learnset = learnset {
+        return learnset.count == 0
+    } else {
+        return true
+    }
+}
+
+func addLearnsetLevelEntry(
+    level: Int,
+    game: Game,
+    move: Move,
+    pokemon: StoredPokemon,
+    form: PokemonForm
+) {
+    let debugKey = "\(pokemon.name) \(form.name) \(game.rawValue) \(move.name) \(level)"
+    guard levelLearnsetEntries[debugKey] == nil else {
+        print(debugKey)
+        print(levelLearnsetEntries[debugKey]!)
+        print(pokemon.name)
+        print(form.name)
+        print(game)
+        print(move.name)
+        fatalError()
+    }
+
+    let entry = LevelLearnsetEntry(context: moc)
+    entry.level = level
+    entry.move = move
+    entry.form = form
+    levelLearnsetEntries[debugKey] = entry
+}
+
 for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as! [String: [String: [String: [[String: String]]]]] {
     guard !dict.isEmpty else { continue }
     for (_, gameDicts) in dict {
@@ -719,33 +758,27 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as!
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for \(pokemon.name) in game \(game)"); continue }
             forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
-            guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            if forms.isEmpty {
+                print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game), falling back to all forms")
+                forms = pokemon.forms
+            }
             for form in forms {
                 for moveDict in moveDicts {
                     let name = moveDict["name"]!
-                    let level = Int(moveDict["level"]!.trimmingCharacters(in: asteriskCharacterSet))!
+                    let level = Int(moveDict["level"]!.trimmingCharacters(in: asteriskCharacterSet)) ?? 1
                     guard let move = getMove(forName: name, game: game) else {
                         continue
                     }
 
-                    let debugKey = "\(pokemon.name) \(form.name) \(game.rawValue) \(name) \(level)"
-                    guard levelLearnsetEntries[debugKey] == nil else {
-                        print(debugKey)
-                        print(levelLearnsetEntries[debugKey]!)
-                        print(pokemon.name)
-                        print(form.name)
-                        print(game)
-                        print(moveDict)
-                        fatalError()
-                    }
-
-                    let entry = LevelLearnsetEntry(context: moc)
-                    entry.level = level
-                    entry.move = move
-                    entry.form = form
-                    levelLearnsetEntries[debugKey] = entry
+                    addLearnsetLevelEntry(
+                        level: level,
+                        game: game,
+                        move: move,
+                        pokemon: pokemon,
+                        form: form
+                    )
                 }
             }
         }
@@ -755,6 +788,13 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as!
 
 // MARK: Machine
 print("Machine")
+
+func addLearnsetMachineEntry(form: PokemonForm, machine: Machine) {
+    let entry = MachineLearnsetEntry(context: moc)
+    entry.machine = machine
+    entry.form = form
+}
+
 for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetMachines3.json") as! [String: [String: [String: [String]]]] {
     guard !dict.isEmpty else { continue }
     for (_, gameDicts) in dict {
@@ -783,9 +823,7 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetMachines3.json") 
                         fatalError()
                     }
                     guard resolvedMachine != nil else { print("Could not find machine for \(machine) in game \(game)"); continue }
-                    let entry = MachineLearnsetEntry(context: moc)
-                    entry.machine = resolvedMachine!
-                    entry.form = form
+                    addLearnsetMachineEntry(form: form, machine: resolvedMachine!)
                 }
             }
         }
@@ -802,9 +840,19 @@ func correctBreedingName(_ name: String) -> String {
         return "Nidoran\u{2642}"
     } else if name == "Lycnaroc" {
         return "Lycanroc"
+    } else if name == "Doduro" {
+        return "Doduo"
     } else {
         return name
     }
+}
+
+func addLearnsetBreedingEntry(form: PokemonForm, move: Move, fathers: [StoredPokemon]) {
+    let entry = BreedLearnsetEntry(context: moc)
+    entry.form = form
+    entry.move = move
+    entry.fathers = fathers
+    breedingLearnsetEntries.append(entry)
 }
 
 var breedingLearnsetEntries: [BreedLearnsetEntry] = []
@@ -834,11 +882,7 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") a
                         return candidate
                     }
                 for form in forms {
-                    let entry = BreedLearnsetEntry(context: moc)
-                    entry.form = form
-                    entry.move = move
-                    entry.fathers = fathers
-                    breedingLearnsetEntries.append(entry)
+                    addLearnsetBreedingEntry(form: form, move: move, fathers: fathers)
                 }
             }
         }
@@ -848,6 +892,13 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") a
 
 // MARK: Tutoring
 print("Tutoring")
+
+func addLearnsetTutoringEntry(form: PokemonForm, move: Move) {
+    let entry = TutorLearnsetEntry(context: moc)
+    entry.form = form
+    entry.move = move
+}
+
 for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring3.json") as! [String: [String: [String: [String]]]] {
     guard !dict.isEmpty else { continue }
     for (_, gameDicts) in dict {
@@ -871,6 +922,49 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring3.json") 
                     entry.form = form
                     entry.move = move
                 }
+            }
+        }
+    }
+}
+
+// If any forms have missing level learnset data, copy them over from the main form
+for (game, pokemon) in allPokemon.flatMap({ $0.value }) {
+    // We can have Pokemon with no forms, if they don't exist in the game,
+    // they'll be cleaned up at the end of the script.
+    guard let defaultForm = pokemon.forms.first else { continue }
+    
+    for form in pokemon.forms.dropFirst() {
+        if needsLearnsetCopy(form.z_learnsetLevel){
+            let defaultLearnset = defaultForm.z_learnsetLevel!.allObjects as! [LevelLearnsetEntry]
+            for entry in defaultLearnset {
+                addLearnsetLevelEntry(
+                    level: entry.level,
+                    game: game,
+                    move: entry.move,
+                    pokemon: pokemon,
+                    form: form
+                )
+            }
+        }
+        
+        if needsLearnsetCopy(form.z_learnsetMachine) {
+            let defaultLearnset = defaultForm.z_learnsetMachine!.allObjects as! [MachineLearnsetEntry]
+            for entry in defaultLearnset {
+                addLearnsetMachineEntry(form: form, machine: entry.machine)
+            }
+        }
+        
+        if needsLearnsetCopy(form.z_learnsetBreeding) {
+            let defaultLearnset = defaultForm.z_learnsetBreeding!.allObjects as! [BreedLearnsetEntry]
+            for entry in defaultLearnset {
+                addLearnsetBreedingEntry(form: form, move: entry.move, fathers: entry.fathers)
+            }
+        }
+        
+        if needsLearnsetCopy(form.z_learnsetTutoring) {
+            let defaultLearnset = defaultForm.z_learnsetTutoring!.allObjects as! [TutorLearnsetEntry]
+            for entry in defaultLearnset {
+                addLearnsetTutoringEntry(form: form, move: entry.move)
             }
         }
     }
@@ -1230,7 +1324,7 @@ func convertGen7ItemToGen8(_ name: String) {
     var pocket = existing.pocket
     pocket["Generation VIII"] = pocket["Generation VII"]
 
-    var prices = existing.prices
+    var prices = existing.prices ?? [:]
     prices[Game.sword.rawValue] = prices[Game.ultraSun.rawValue]
     prices[Game.shield.rawValue] = prices[Game.ultraMoon.rawValue]
 
@@ -1251,14 +1345,9 @@ func convertGen7ItemToGen8(_ name: String) {
     ].forEach { convertGen7ItemToGen8($0) }
 
 for bulbapediaItem in bulbapediaItems {
-//    // Exclude certain items
-//    if [
-//        "Brick Piece"
-//    ].contains(bulbapediaItem.name) {
-//        continue
-//    }
+    print("Processing item \(bulbapediaItem.name)")
 
-    for game in Game.allCases {
+    for game in Game.allGamesNewestFirstExcludingNational {
         var gameForInfo = game
         let generationIntroduced = Generation(rawValue: Int(bulbapediaItem.generationIntroduced)!)!
         if generationIntroduced == .i {
@@ -1273,11 +1362,16 @@ for bulbapediaItem in bulbapediaItems {
                 break
             }
         }
-        guard let bulbapediaItemInfo = bulbapediaItem.itemInfo(for: gameForInfo),
-            !bulbapediaItem.name.lowercased().hasSuffix("berry") else { continue }
-
-        let key = sanitizedItemName(bulbapediaItem.name, game: game)
-        guard allItems[key]?[game] == nil else { continue }
+        
+        let bulbapediaItemInfo = bulbapediaItem.itemInfo(for: gameForInfo)
+        let key = sanitizedItemName(bulbapediaItem.name)
+        
+        guard !bulbapediaItem.name.lowercased().hasSuffix("berry"),
+              allItems[key]?[game] == nil,
+              let itemDescription = itemDescriptionFromPokemonDB(name: bulbapediaItem.name, game: game)
+                ?? bulbapediaItemInfo.description?.removingQuotes() else {
+            continue
+        }
 
         let item = Item(context: moc)
         item.name = bulbapediaItem.name
@@ -1288,9 +1382,9 @@ for bulbapediaItem in bulbapediaItems {
         item.itemType = .item
 
         let info = BagItemInfo(context: moc)
-        info.itemDescription = itemDescriptionFromPokemonDB(name: item.name, game: game) ?? bulbapediaItemInfo.description.removingQuotes()
-        info.cost = bulbapediaItemInfo.price.cost?.toNSNumber()
-        info.sell = bulbapediaItemInfo.price.sell?.toNSNumber()
+        info.itemDescription = itemDescription
+        info.cost = bulbapediaItemInfo.price?.cost?.toNSNumber()
+        info.sell = bulbapediaItemInfo.price?.sell?.toNSNumber()
 
         if generationIntroduced == .i {
             info.pocket = .items
@@ -1314,7 +1408,7 @@ for bulbapediaItem in bulbapediaItems {
 // wiki pages haven't been updated with Sword/Shield data yet. This copies over
 // the data from UltraSun.
 func insertSwordShieldItem(forName name: String, game: Game) {
-    let usumItem = allItems[sanitizedItemName(name, game: .ultraSun)]![.ultraSun]!
+    let usumItem = allItems[sanitizedItemName(name)]![.ultraSun]!
 
     let item = Item(context: moc)
     item.name = usumItem.name
@@ -1331,7 +1425,7 @@ func insertSwordShieldItem(forName name: String, game: Game) {
     info.pocket = usumItem.bagInfo!.pocket
     item.bagInfo = info
 
-    let key = sanitizedItemName(item.name, game: game)
+    let key = sanitizedItemName(item.name)
     if var items = allItems[key] {
         items[game] = item
         allItems[key] = items
@@ -1365,7 +1459,7 @@ for dict in Helper.loadTSV(from: "Research/Berries.tsv") {
 
     item.berryInfo = info
 
-    let key = sanitizedItemName(item.name, game: game)
+    let key = sanitizedItemName(item.name)
     if var items = allItems[key] {
         items[game] = item
         allItems[key] = items
@@ -1423,7 +1517,7 @@ for (_, gameToItem) in allItems {
     copy.game = .national
     copy.i_gameIndex = Game.national.index.toInt32()
 
-    let key = sanitizedItemName(copy.name, game: .national)
+    let key = sanitizedItemName(copy.name)
     if var items = allItems[key] {
         items[.national] = copy
         allItems[key] = items
@@ -1444,7 +1538,7 @@ for (_, gameToItem) in allItems {
     let brilliantDiamondCopy = makeItemCopy(source: source)
     brilliantDiamondCopy.game = .brilliantDiamond
     brilliantDiamondCopy.i_gameIndex = Game.brilliantDiamond.index.toInt32()
-    let brilliantDiamondKey = sanitizedItemName(brilliantDiamondCopy.name, game: .brilliantDiamond)
+    let brilliantDiamondKey = sanitizedItemName(brilliantDiamondCopy.name)
     if var items = allItems[brilliantDiamondKey] {
         items[.brilliantDiamond] = brilliantDiamondCopy
         allItems[brilliantDiamondKey] = items
@@ -1455,7 +1549,7 @@ for (_, gameToItem) in allItems {
     let shiningPearlCopy = makeItemCopy(source: source)
     shiningPearlCopy.game = .shiningPearl
     shiningPearlCopy.i_gameIndex = Game.shiningPearl.index.toInt32()
-    let shiningPearlKey = sanitizedItemName(shiningPearlCopy.name, game: .shiningPearl)
+    let shiningPearlKey = sanitizedItemName(shiningPearlCopy.name)
     if var items = allItems[shiningPearlKey] {
         items[.shiningPearl] = shiningPearlCopy
         allItems[shiningPearlKey] = items
@@ -1479,6 +1573,15 @@ allItems.keys
 // MARK: - Evolutions
 print("--- Evolutions ---")
 var allEvolutions: [String: [Game: [Evolution]]] = [:] // family name as key
+func latestEvolutionForNational(familyName: String) -> [Evolution]? {
+    guard let evolutions = allEvolutions[familyName] else { return nil }
+    for game in Game.allGamesNewestFirstExcludingNational {
+        if let evolution = evolutions[game] {
+            return evolution
+        }
+    }
+    return nil
+}
 func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMethod {
     switch name {
     case "completeBattlePerformingAction":
@@ -1505,7 +1608,7 @@ func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMet
         let pokemon = getPokemon(forName: data, game: game)
         return .tradeForPokemon(pokemon)
     case "tradeHoldingItem":
-        let item = allItems[sanitizedItemName(data, game: game)]![game]!
+        let item = allItems[sanitizedItemName(data)]![game]!
         return .tradeHoldingItem(item)
     case "trainerAction":
         return .trainerAction(data)
@@ -1539,7 +1642,8 @@ func evolutionCondition(for name: String, data: String, game: Game) -> Evolution
 }
 for dict in Helper.loadTSV(from: "Research/Evolutions.tsv") {
     let familyName = dict["family"]!
-    let gameFilter = Game(rawValue: dict["gameFilter"]!)
+    let gameFilter = dict["gameFilter"]!.components(separatedBy: ",").compactMap(Game.init(rawValue:))
+    let excludeGames = dict["excludeGames"]!.components(separatedBy: ",").compactMap(Game.init(rawValue:))
     let baseName = dict["baseName"]!
     let baseFormName = dict["baseFormName"]!
     let targetName = dict["targetName"]!
@@ -1552,7 +1656,8 @@ for dict in Helper.loadTSV(from: "Research/Evolutions.tsv") {
     let basePokemons = allPokemonByName[sanitizedName(baseName)]!
     let targetPokemons = allPokemonByName[sanitizedName(targetName)]!
 
-    let games = gameFilter != nil ? [gameFilter!] : Array(basePokemons.keys).filter { $0 != .national }
+    var games = !gameFilter.isEmpty ? gameFilter : Array(basePokemons.keys).filter { $0 != .national }
+    games = games.filter { !excludeGames.contains($0) }
 
     for game in games {
         let basePokemon = basePokemons[game]!
@@ -1589,8 +1694,13 @@ allPokemon.values
     .flatMap { $0.values }
     .flatMap { $0.forms }
     .forEach { form in
-        form.evolutions = allEvolutions[form.familyName]?[form.game]
-}
+        if form.game == .national {
+            form.evolutions = latestEvolutionForNational(familyName: form.familyName)
+        } else {
+            form.evolutions = allEvolutions[form.familyName]?[form.game]
+        }
+    }
+
 
 
 // MARK: - Cleanup

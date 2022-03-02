@@ -65,6 +65,20 @@
   },
   {
     "pocket": {
+      "Generation VIII": "other items"
+    },
+    "descriptions": {
+      "sword": "A patch that allows a Pok\u00e9mon with a regular Ability to have a rare Ability.",
+      "shield": "A patch that allows a Pok\u00e9mon with a regular Ability to have a rare Ability.",
+      "brilliantDiamond": "A patch that allows a Pok\u00e9mon with a regular Ability to have a rare Ability.",
+      "shiningPearl": "A patch that allows a Pok\u00e9mon with a regular Ability to have a rare Ability."
+    },
+    "name": "Ability Patch",
+    "imageName": "ability-patch",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
       "Generation VI": "items",
       "Generation VII": "items"
     },
@@ -339,11 +353,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Atk will grow more slowly."
     },
     "name": "Adamant Mint",
     "imageName": "adamant-mint",
@@ -1584,11 +1608,11 @@
     "prices": {
       "sword": {
         "cost": "N/A",
-        "sell": "20"
+        "sell": "10"
       },
       "shield": {
         "cost": "N/A",
-        "sell": "20"
+        "sell": "10"
       }
     },
     "descriptions": {
@@ -1934,77 +1958,8 @@
       "Generation IV": "key items",
       "Generation V": "key items",
       "Generation VI": "key items",
-      "Generation VII": "key items"
-    },
-    "prices": {
-      "diamond": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "pearl": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "platinum": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "heartGold": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "soulSilver": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "black": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "white": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "black2": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "white2": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "x": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "y": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "omegaRuby": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "alphaSapphire": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "sun": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "moon": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "ultraSun": {
-        "cost": "N/A",
-        "sell": "N/A"
-      },
-      "ultraMoon": {
-        "cost": "N/A",
-        "sell": "N/A"
-      }
+      "Generation VII": "key items",
+      "Generation VIII": "key items"
     },
     "descriptions": {
       "diamond": "A flute that puts out echoing sounds that do not seem to be of this world. It is unknown who made it.",
@@ -2023,7 +1978,8 @@
       "sun": "A flute that puts out echoing sounds that do not seem to be of this world. No one knows who made it.",
       "moon": "A flute that puts out echoing sounds that do not seem to be of this world. No one knows who made it.",
       "ultraSun": "A flute that puts out echoing sounds that do not seem to be of this world. No one knows who made it.",
-      "ultraMoon": "A flute that puts out echoing sounds that do not seem to be of this world. No one knows who made it."
+      "ultraMoon": "A flute that puts out echoing sounds that do not seem to be of this world. No one knows who made it.",
+      "legendsArceus": "A flute that puts out echoing sounds that do not seem to be of this world. No one knows who made it or when."
     },
     "name": "Azure Flute",
     "imageName": "azure-flute",
@@ -2851,6 +2807,19 @@
     "name": "Berry Sweet",
     "imageName": "berry-sweet",
     "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation II": "items"
+    },
+    "descriptions": {
+      "gold": "Boosts Attack but causes confusion.",
+      "silver": "Boosts Attack but causes confusion.",
+      "crystal": "Boosts Attack but causes confusion."
+    },
+    "name": "Berserk Gene",
+    "imageName": "berserk-gene",
+    "generationIntroduced": "2"
   },
   {
     "pocket": {
@@ -4270,7 +4239,9 @@
       "letsGoPikachu": "An item to be held by a Pok\u00e9mon. A pair of shady-looking glasses that boost the power of Dark-type moves.",
       "letsGoEevee": "An item to be held by a Pok\u00e9mon. A pair of shady-looking glasses that boost the power of Dark-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a pair of shady-looking glasses that boost the power of Dark-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a pair of shady-looking glasses that boost the power of Dark-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a pair of shady-looking glasses that boost the power of Dark-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a pair of shady-looking glasses that boost the power of Dark-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a pair of shady-looking glasses that boost the power of Dark-type moves."
     },
     "name": "Black Glasses",
     "imageName": "black-glasses",
@@ -4638,6 +4609,8 @@
       "alphaSapphire": "A blue Apricorn. It smells a bit like grass.",
       "sun": "A blue Apricorn. It smells a bit like grass.",
       "moon": "A blue Apricorn. It smells a bit like grass.",
+      "ultraSun": "A blue Apricorn. It smells a bit like grass.",
+      "ultraMoon": "A blue Apricorn. It smells a bit like grass.",
       "sword": "A blue Apricorn. It smells a bit like grass.",
       "shield": "A blue Apricorn. It smells a bit like grass."
     },
@@ -5276,11 +5249,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly."
     },
     "name": "Bold Mint",
     "imageName": "bold-mint",
@@ -5404,11 +5387,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Speed will grow more slowly."
     },
     "name": "Brave Mint",
     "imageName": "brave-mint",
@@ -6252,11 +6245,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Attack will grow more slowly."
     },
     "name": "Calm Mint",
     "imageName": "calm-mint",
@@ -6658,11 +6661,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Sp. Atk will grow more slowly."
     },
     "name": "Careful Mint",
     "imageName": "careful-mint",
@@ -6778,11 +6791,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "N/A"
       }
     },
     "descriptions": {
       "sword": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn't shake much.",
-      "shield": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn't shake much."
+      "shield": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn't shake much.",
+      "brilliantDiamond": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn't shake much.",
+      "shiningPearl": "Holding it is said to increase the chance of getting a critical catch. Curiously, the charm doesn't shake much."
     },
     "name": "Catching Charm",
     "imageName": "catching-charm",
@@ -7262,6 +7285,14 @@
       "letsGoEevee": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "N/A"
       }
     },
     "descriptions": {
@@ -7283,7 +7314,9 @@
       "ultraSun": "A quite rare Pok\u00e9 Ball that has been crafted in order to commemorate a special occasion of some sort.",
       "ultraMoon": "A quite rare Pok\u00e9 Ball that has been crafted in order to commemorate a special occasion of some sort.",
       "letsGoPikachu": "A quite rare Pok\u00e9 Ball that has been crafted in order to commemorate a special occasion of some sort.",
-      "letsGoEevee": "A quite rare Pok\u00e9 Ball that has been crafted in order to commemorate a special occasion of some sort."
+      "letsGoEevee": "A quite rare Pok\u00e9 Ball that has been crafted in order to commemorate a special occasion of some sort.",
+      "sword": "A quite rare Pok\u00e9 Ball that has been crafted in order to commemorate a special occasion of some sort.",
+      "shield": "A quite rare Pok\u00e9 Ball that has been crafted in order to commemorate a special occasion of some sort."
     },
     "name": "Cherish Ball",
     "imageName": "cherish-ball",
@@ -7740,7 +7773,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move.",
       "sword": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move.",
-      "shield": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move."
+      "shield": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. These curious glasses boost Sp. Atk but only allow the use of one move."
     },
     "name": "Choice Specs",
     "imageName": "choice-specs",
@@ -8011,7 +8046,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
       "sword": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
-      "shield": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party."
+      "shield": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party."
     },
     "name": "Cleanse Tag",
     "imageName": "cleanse-tag",
@@ -9399,7 +9436,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
       "sword": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
-      "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder."
+      "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder."
     },
     "name": "Damp Rock",
     "imageName": "damp-rock",
@@ -11149,7 +11188,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -11391,7 +11431,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. This hard and sharp fang boosts the power of Dragon-type moves."
     },
     "name": "Dragon Fang",
     "imageName": "dragon-fang",
@@ -11777,7 +11819,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -12127,7 +12170,9 @@
       "ultraSun": "A transparent device overflowing with dubious data. Its producer is unknown.",
       "ultraMoon": "A transparent device overflowing with dubious data. Its producer is unknown.",
       "sword": "A transparent device overflowing with dubious data. Its producer is unknown.",
-      "shield": "A transparent device overflowing with dubious data. Its producer is unknown."
+      "shield": "A transparent device overflowing with dubious data. Its producer is unknown.",
+      "brilliantDiamond": "A transparent device overflowing with dubious data. Its producer is unknown.",
+      "shiningPearl": "A transparent device overflowing with dubious data. Its producer is unknown."
     },
     "name": "Dubious Disc",
     "imageName": "dubious-disc",
@@ -12238,7 +12283,9 @@
       "ultraSun": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places like caves.",
       "ultraMoon": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places like caves.",
       "sword": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves.",
-      "shield": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves."
+      "shield": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves.",
+      "brilliantDiamond": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves.",
+      "shiningPearl": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves."
     },
     "name": "Dusk Ball",
     "imageName": "dusk-ball",
@@ -12426,7 +12473,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -13314,7 +13362,9 @@
       "ultraSun": "A very bitter medicinal powder. When consumed, it restores up to 60 HP to an injured Pok\u00e9mon.",
       "ultraMoon": "A very bitter medicinal powder. When consumed, it restores up to 60 HP to an injured Pok\u00e9mon.",
       "sword": "A very bitter medicinal powder. It can be used to restore 60 HP to a single Pok\u00e9mon.",
-      "shield": "A very bitter medicinal powder. It can be used to restore 60 HP to a single Pok\u00e9mon."
+      "shield": "A very bitter medicinal powder. It can be used to restore 60 HP to a single Pok\u00e9mon.",
+      "brilliantDiamond": "A very bitter medicinal powder. It can be used to restore 60 HP to a single Pok\u00e9mon.",
+      "shiningPearl": "A very bitter medicinal powder. It can be used to restore 60 HP to a single Pok\u00e9mon."
     },
     "name": "Energy Powder",
     "imageName": "energy-powder",
@@ -13438,6 +13488,14 @@
       "shield": {
         "cost": "1200",
         "sell": "600"
+      },
+      "brilliantDiamond": {
+        "cost": "800",
+        "sell": "400"
+      },
+      "shiningPearl": {
+        "cost": "800",
+        "sell": "400"
       }
     },
     "descriptions": {
@@ -13867,14 +13925,6 @@
         "cost": "N/A",
         "sell": "600"
       },
-      "black2": {
-        "cost": "N/A",
-        "sell": "600"
-      },
-      "white2": {
-        "cost": "N/A",
-        "sell": "600"
-      },
       "x": {
         "cost": "N/A",
         "sell": "600"
@@ -13913,6 +13963,14 @@
       },
       "shield": {
         "cost": "N/A",
+        "sell": "600"
+      },
+      "black2": {
+        "cost": "1500",
+        "sell": "600"
+      },
+      "white2": {
+        "cost": "1500",
         "sell": "600"
       }
     },
@@ -14817,6 +14875,19 @@
   },
   {
     "pocket": {
+      "Generation III": "key items"
+    },
+    "descriptions": {
+      "fireRed": "A device that enables you to recall what you've heard and seen about famous people.",
+      "leafGreen": "A device that enables you to recall what you've heard and seen about famous people.",
+      "emerald": "Stores information on famous people for instant recall."
+    },
+    "name": "Fame Checker",
+    "imageName": "fame-checker",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
       "Generation VIII": "ingredients"
     },
     "prices": {
@@ -15543,7 +15614,9 @@
       "letsGoPikachu": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
       "letsGoEevee": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
       "sword": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
-      "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart."
+      "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
+      "brilliantDiamond": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
+      "shiningPearl": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart."
     },
     "name": "Fire Stone",
     "imageName": "fire-stone",
@@ -15586,7 +15659,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -15797,7 +15871,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -16540,7 +16615,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
       "sword": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
-      "shield": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears."
+      "shield": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears."
     },
     "name": "Focus Sash",
     "imageName": "focus-sash",
@@ -17192,7 +17269,8 @@
       "letsGoPikachu": "A spray-type medicine that is broadly effective. It can be used once to heal all the status conditions of a single Pok\u00e9mon.",
       "letsGoEevee": "A spray-type medicine that is broadly effective. It can be used once to heal all the status conditions of a single Pok\u00e9mon.",
       "sword": "A spray-type medicine that is broadly effective. It can be used to heal all the status conditions of a single Pok\u00e9mon.",
-      "shield": "A spray-type medicine that is broadly effective. It can be used to heal all the status conditions of a single Pok\u00e9mon."
+      "shield": "A spray-type medicine that is broadly effective. It can be used to heal all the status conditions of a single Pok\u00e9mon.",
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to heal any status condition a Pok\u00e9mon may have."
     },
     "name": "Full Heal",
     "imageName": "full-heal",
@@ -17477,7 +17555,8 @@
       "ultraSun": "A medicine that can be used to fully restore the HP of a single Pok\u00e9mon and heal any status conditions it has.",
       "ultraMoon": "A medicine that can be used to fully restore the HP of a single Pok\u00e9mon and heal any status conditions it has.",
       "sword": "A medicine that can be used to fully restore the HP of a single Pok\u00e9mon and heal any status conditions it has.",
-      "shield": "A medicine that can be used to fully restore the HP of a single Pok\u00e9mon and heal any status conditions it has."
+      "shield": "A medicine that can be used to fully restore the HP of a single Pok\u00e9mon and heal any status conditions it has.",
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to fully restore the max HP of a single Pok\u00e9mon and cure any status conditions it has."
     },
     "name": "Full Restore",
     "imageName": "full-restore",
@@ -17610,11 +17689,11 @@
     "prices": {
       "sword": {
         "cost": "N/A",
-        "sell": "20"
+        "sell": "10"
       },
       "shield": {
         "cost": "N/A",
-        "sell": "20"
+        "sell": "10"
       }
     },
     "descriptions": {
@@ -17798,6 +17877,33 @@
   },
   {
     "pocket": {
+      "Generation IV": "key items",
+      "Generation V": "key items",
+      "Generation VI": "key items",
+      "Generation VII": "key items"
+    },
+    "descriptions": {
+      "heartGold": "A music player that allows you to listen to nostalgic songs. It's operated with a single switch.",
+      "soulSilver": "A music player that allows you to listen to nostalgic songs. It's operated with a single switch.",
+      "black": "A music player that allows you to listen to nostalgic songs. It's operated with a single switch.",
+      "white": "A music player that allows you to listen to nostalgic songs. It's operated with a single switch.",
+      "black2": "A music player that allows you to listen to nostalgic songs. It's operated with a single switch.",
+      "white2": "A music player that allows you to listen to nostalgic songs. It's operated with a single switch.",
+      "x": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch.",
+      "y": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch.",
+      "omegaRuby": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch.",
+      "alphaSapphire": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch.",
+      "sun": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch.",
+      "moon": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch.",
+      "ultraSun": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch.",
+      "ultraMoon": "A music player that allows you to listen to nostalgic songs. It's operated with the flip of a single switch."
+    },
+    "name": "GB Sounds",
+    "imageName": "gb-sounds",
+    "generationIntroduced": "4"
+  },
+  {
+    "pocket": {
       "Generation VI": "items",
       "Generation VII": "items"
     },
@@ -17958,11 +18064,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly."
     },
     "name": "Gentle Mint",
     "imageName": "gentle-mint",
@@ -18640,12 +18756,8 @@
       "y": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
       "omegaRuby": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
       "alphaSapphire": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "sun": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "moon": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "ultraSun": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "ultraMoon": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "letsGoPikachu": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "letsGoEevee": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon."
+      "brilliantDiamond": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon.",
+      "shiningPearl": "A new, good-quality fishing rod. Use it by any body of water to fish for wild aquatic Pok\u00e9mon."
     },
     "name": "Good Rod",
     "imageName": "good-rod",
@@ -18750,6 +18862,19 @@
     "name": "Gooey Mulch",
     "imageName": "gooey-mulch",
     "generationIntroduced": "4"
+  },
+  {
+    "pocket": {
+      "Generation II": "items"
+    },
+    "descriptions": {
+      "gold": "Open it and see what's inside.",
+      "silver": "Open it and see what's inside.",
+      "crystal": "Open it and see what's inside."
+    },
+    "name": "Gorgeous Box",
+    "imageName": "gorgeous-box",
+    "generationIntroduced": "2"
   },
   {
     "pocket": {
@@ -19396,6 +19521,14 @@
         "cost": "600",
         "sell": "300"
       },
+      "brilliantDiamond": {
+        "cost": "600",
+        "sell": "300"
+      },
+      "shiningPearl": {
+        "cost": "600",
+        "sell": "300"
+      },
       "letsGoPikachu": {
         "cost": "300",
         "sell": "150"
@@ -19434,7 +19567,9 @@
       "letsGoPikachu": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
       "letsGoEevee": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
       "sword": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
-      "shield": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball."
+      "shield": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
+      "brilliantDiamond": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
+      "shiningPearl": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball."
     },
     "name": "Great Ball",
     "imageName": "great-ball",
@@ -19828,7 +19963,9 @@
       "sun": "A small green shard. It appears to be a fragment of some sort of implement made long ago.",
       "moon": "A small green shard. It appears to be a fragment of some sort of implement made long ago.",
       "ultraSun": "A small green shard. It appears to be a fragment of some sort of implement made long ago.",
-      "ultraMoon": "A small green shard. It appears to be a fragment of some sort of implement made long ago."
+      "ultraMoon": "A small green shard. It appears to be a fragment of some sort of implement made long ago.",
+      "brilliantDiamond": "A small green shard. It appears to be a fragment of some sort of implement made long ago.",
+      "shiningPearl": "A small green shard. It appears to be a fragment of some sort of implement made long ago."
     },
     "name": "Green Shard",
     "imageName": "green-shard",
@@ -20031,7 +20168,9 @@
       "ultraSun": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held.",
       "ultraMoon": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held.",
       "sword": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held.",
-      "shield": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held."
+      "shield": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held.",
+      "brilliantDiamond": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held.",
+      "shiningPearl": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves when it is held."
     },
     "name": "Griseous Orb",
     "imageName": "griseous-orb",
@@ -20763,7 +20902,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a durable stone that boosts the power of Rock-type moves."
     },
     "name": "Hard Stone",
     "imageName": "hard-stone",
@@ -20781,11 +20922,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly."
     },
     "name": "Hasty Mint",
     "imageName": "hasty-mint",
@@ -20875,6 +21026,14 @@
       "shield": {
         "cost": "300",
         "sell": "150"
+      },
+      "brilliantDiamond": {
+        "cost": "300",
+        "sell": "150"
+      },
+      "shiningPearl": {
+        "cost": "300",
+        "sell": "150"
       }
     },
     "descriptions": {
@@ -20898,7 +21057,9 @@
       "letsGoPikachu": "A remedial Pok\u00e9 Ball that restores the HP of a Pok\u00e9mon caught with it and eliminates any status conditions.",
       "letsGoEevee": "A remedial Pok\u00e9 Ball that restores the HP of a Pok\u00e9mon caught with it and eliminates any status conditions.",
       "sword": "A remedial Pok\u00e9 Ball that restores the HP of a Pok\u00e9mon caught with it and eliminates any status conditions.",
-      "shield": "A remedial Pok\u00e9 Ball that restores the HP of a Pok\u00e9mon caught with it and eliminates any status conditions."
+      "shield": "A remedial Pok\u00e9 Ball that restores the HP of a Pok\u00e9mon caught with it and eliminates any status conditions.",
+      "brilliantDiamond": "A remedial Pok\u00e9 Ball that restores the HP of a Pok\u00e9mon caught with it and eliminates any status conditions.",
+      "shiningPearl": "A remedial Pok\u00e9 Ball that restores the HP of a Pok\u00e9mon caught with it and eliminates any status conditions."
     },
     "name": "Heal Ball",
     "imageName": "heal-ball",
@@ -21022,6 +21183,14 @@
       "shield": {
         "cost": "300",
         "sell": "150"
+      },
+      "brilliantDiamond": {
+        "cost": "450",
+        "sell": "225"
+      },
+      "shiningPearl": {
+        "cost": "450",
+        "sell": "225"
       }
     },
     "descriptions": {
@@ -21051,7 +21220,9 @@
       "ultraSun": "A very bitter medicinal powder. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
       "ultraMoon": "A very bitter medicinal powder. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
       "sword": "A very bitter medicinal powder. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
-      "shield": "A very bitter medicinal powder. It can be used once to heal all the status conditions of a Pok\u00e9mon."
+      "shield": "A very bitter medicinal powder. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
+      "brilliantDiamond": "A very bitter medicinal powder. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
+      "shiningPearl": "A very bitter medicinal powder. It can be used once to heal all the status conditions of a Pok\u00e9mon."
     },
     "name": "Heal Powder",
     "imageName": "heal-powder",
@@ -21449,7 +21620,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
       "sword": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
-      "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder."
+      "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder."
     },
     "name": "Heat Rock",
     "imageName": "heat-rock",
@@ -21896,11 +22069,11 @@
         "sell": "150"
       },
       "black2": {
-        "cost": "300",
+        "cost": "3600*",
         "sell": "150"
       },
       "white2": {
-        "cost": "300",
+        "cost": "3600*",
         "sell": "150"
       },
       "x": {
@@ -22413,7 +22586,8 @@
       "letsGoPikachu": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to an injured Pok\u00e9mon.",
       "letsGoEevee": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to an injured Pok\u00e9mon.",
       "sword": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to a single Pok\u00e9mon.",
-      "shield": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to a single Pok\u00e9mon."
+      "shield": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to a single Pok\u00e9mon.",
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to restore 150 HP to a single Pok\u00e9mon."
     },
     "name": "Hyper Potion",
     "imageName": "hyper-potion",
@@ -22827,7 +23001,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -23099,11 +23274,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Atk will grow more slowly."
     },
     "name": "Impish Mint",
     "imageName": "impish-mint",
@@ -23146,7 +23331,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -23598,7 +23784,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -23695,6 +23882,33 @@
   },
   {
     "pocket": {
+      "Generation IV": "key items",
+      "Generation V": "key items",
+      "Generation VI": "key items",
+      "Generation VII": "key items"
+    },
+    "descriptions": {
+      "heartGold": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "soulSilver": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "black": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "white": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "black2": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "white2": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "x": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "y": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "omegaRuby": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "alphaSapphire": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "sun": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "moon": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "ultraSun": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "ultraMoon": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region."
+    },
+    "name": "Jade Orb",
+    "imageName": "jade-orb",
+    "generationIntroduced": "4"
+  },
+  {
+    "pocket": {
       "Generation VI": "items",
       "Generation VII": "items"
     },
@@ -23758,11 +23972,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly."
     },
     "name": "Jolly Mint",
     "imageName": "jolly-mint",
@@ -23862,7 +24086,9 @@
       "sun": "A notebook that keeps a day-to-day record of your adventure so far.",
       "moon": "A notebook that keeps a day-to-day record of your adventure so far.",
       "ultraSun": "A notebook that keeps a day-to-day record of your adventure so far.",
-      "ultraMoon": "A notebook that keeps a day-to-day record of your adventure so far."
+      "ultraMoon": "A notebook that keeps a day-to-day record of your adventure so far.",
+      "brilliantDiamond": "A book full of useful information for your adventure.",
+      "shiningPearl": "A book full of useful information for your adventure."
     },
     "name": "Journal",
     "imageName": "journal",
@@ -24550,7 +24776,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual.",
       "sword": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual.",
-      "shield": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual."
+      "shield": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It is tremendously heavy and makes the holder move slower than usual."
     },
     "name": "Lagging Tail",
     "imageName": "lagging-tail",
@@ -24742,20 +24970,20 @@
         "cost": "N/A",
         "sell": "100"
       },
-      "black2": {
-        "cost": "N/A",
-        "sell": "100"
-      },
-      "white2": {
-        "cost": "N/A",
-        "sell": "100"
-      },
       "x": {
         "cost": "N/A",
         "sell": "100"
       },
       "y": {
         "cost": "N/A",
+        "sell": "100"
+      },
+      "black2": {
+        "cost": "1000*",
+        "sell": "100"
+      },
+      "white2": {
+        "cost": "1000*",
         "sell": "100"
       },
       "omegaRuby": {
@@ -24952,7 +25180,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder.",
       "sword": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder.",
-      "shield": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder."
+      "shield": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. The beguiling aroma of this incense may cause attacks to miss its holder."
     },
     "name": "Lax Incense",
     "imageName": "lax-incense",
@@ -24970,11 +25200,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Sp. Def will grow more slowly."
     },
     "name": "Lax Mint",
     "imageName": "lax-mint",
@@ -25522,7 +25762,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle.",
       "sword": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle.",
-      "shield": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle."
+      "shield": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. The holder's HP is slowly but steadily restored throughout every battle."
     },
     "name": "Leftovers",
     "imageName": "leftovers",
@@ -26641,11 +26883,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly."
     },
     "name": "Lonely Mint",
     "imageName": "lonely-mint",
@@ -27437,7 +27689,9 @@
       "sun": "An item to be held by Chansey. This pair of lucky boxing gloves will boost Chansey's critical-hit ratio.",
       "moon": "An item to be held by Chansey. This pair of lucky boxing gloves will boost Chansey's critical-hit ratio.",
       "ultraSun": "An item to be held by Chansey. This pair of lucky boxing gloves will boost Chansey's critical-hit ratio.",
-      "ultraMoon": "An item to be held by Chansey. This pair of lucky boxing gloves will boost Chansey's critical-hit ratio."
+      "ultraMoon": "An item to be held by Chansey. This pair of lucky boxing gloves will boost Chansey's critical-hit ratio.",
+      "brilliantDiamond": "An item to be held by Chansey. This pair of lucky boxing gloves will boost Chansey's critical-hit ratio.",
+      "shiningPearl": "An item to be held by Chansey. This pair of lucky boxing gloves will boost Chansey's critical-hit ratio."
     },
     "name": "Lucky Punch",
     "imageName": "lucky-punch",
@@ -27598,7 +27852,8 @@
       "Generation IV": "key items",
       "Generation V": "key items",
       "Generation VI": "key items",
-      "Generation VII": "key items"
+      "Generation VII": "key items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -27689,8 +27944,8 @@
       "ultraSun": "A feather that glows like the moon. It's said to possess the power to dispel nightmares.",
       "ultraMoon": "A feather that glows like the moon. It's said to possess the power to dispel nightmares."
     },
-    "name": "Lunar Wing",
-    "imageName": "lunar-wing",
+    "name": "Lunar Feather",
+    "imageName": "lunar-feather",
     "generationIntroduced": "4"
   },
   {
@@ -29249,7 +29504,9 @@
       "letsGoPikachu": "The best Pok\u00e9 Ball with the ultimate level of performance. With it, you will catch any wild Pok\u00e9mon without fail.",
       "letsGoEevee": "The best Pok\u00e9 Ball with the ultimate level of performance. With it, you will catch any wild Pok\u00e9mon without fail.",
       "sword": "The best Pok\u00e9 Ball with the ultimate level of performance. With it, you will catch any wild Pok\u00e9mon without fail.",
-      "shield": "The best Pok\u00e9 Ball with the ultimate level of performance. With it, you will catch any wild Pok\u00e9mon without fail."
+      "shield": "The best Pok\u00e9 Ball with the ultimate level of performance. With it, you will catch any wild Pok\u00e9mon without fail.",
+      "brilliantDiamond": "The best Pok\u00e9 Ball with the ultimate level of performance. With it, you will catch any wild Pok\u00e9mon without fail.",
+      "shiningPearl": "The best Pok\u00e9 Ball with the ultimate level of performance. With it, you will catch any wild Pok\u00e9mon without fail."
     },
     "name": "Master Ball",
     "imageName": "master-ball",
@@ -29896,7 +30153,8 @@
       "letsGoPikachu": "A spray-type medicine for treating wounds. It can be used to completely restore the max HP of a single Pok\u00e9mon.",
       "letsGoEevee": "A spray-type medicine for treating wounds. It can be used to completely restore the max HP of a single Pok\u00e9mon.",
       "sword": "A spray-type medicine for treating wounds. It can be used to completely restore the max HP of a single Pok\u00e9mon.",
-      "shield": "A spray-type medicine for treating wounds. It can be used to completely restore the max HP of a single Pok\u00e9mon."
+      "shield": "A spray-type medicine for treating wounds. It can be used to completely restore the max HP of a single Pok\u00e9mon.",
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to completely restore the max HP of a single Pok\u00e9mon."
     },
     "name": "Max Potion",
     "imageName": "max-potion",
@@ -30071,6 +30329,8 @@
       "ultraMoon": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Super Repel.",
       "sword": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Super Repel.",
       "shield": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Super Repel.",
+      "brilliantDiamond": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Super Repel.",
+      "shiningPearl": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Super Repel.",
       "letsGoPikachu": "An item that drives away wild Pok\u00e9mon so you won't encounter them. It lasts longer than a Super Repel.",
       "letsGoEevee": "An item that drives away wild Pok\u00e9mon so you won't encounter them. It lasts longer than a Super Repel."
     },
@@ -30259,7 +30519,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -30575,7 +30836,23 @@
       "Generation VII": "key items"
     },
     "prices": {
+      "diamond": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
       "platinum": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "shiningPearl": {
         "cost": "N/A",
         "sell": "N/A"
       }
@@ -30930,7 +31207,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a special metallic film that can boost the power of Steel-type moves."
     },
     "name": "Metal Coat",
     "imageName": "metal-coat",
@@ -31091,6 +31370,29 @@
   },
   {
     "pocket": {
+      "Generation III": "key items",
+      "Generation VI": "key items",
+      "Generation VII": "key items"
+    },
+    "descriptions": {
+      "ruby": "A meteorite found at Meteor Falls.",
+      "sapphire": "A meteorite found at Meteor Falls.",
+      "emerald": "A meteorite found at Meteor Falls.",
+      "fireRed": "A meteorite that fell from space onto Mt. Moon long ago. It is very lumpy and hard.",
+      "leafGreen": "A meteorite that fell from space onto Mt. Moon long ago. It is very lumpy and hard.",
+      "omegaRuby": "A Meteorite originally found at Meteor Falls. You got it at Mt. Chimney.",
+      "alphaSapphire": "A Meteorite originally found at Meteor Falls. You got it at Mt. Chimney.",
+      "sun": "A Meteorite originally found at Meteor Falls. You got it at Mt. Chimney.",
+      "moon": "A Meteorite originally found at Meteor Falls. You got it at Mt. Chimney.",
+      "ultraSun": "A Meteorite originally found at Meteor Falls. You got it at Mt. Chimney.",
+      "ultraMoon": "A Meteorite originally found at Meteor Falls. You got it at Mt. Chimney."
+    },
+    "name": "Meteorite",
+    "imageName": "meteorite",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
       "Generation VI": "key items",
       "Generation VII": "key items"
     },
@@ -31237,7 +31539,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively, but only until a different move is used.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively, but only until a different move is used.",
       "sword": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively but only until a different move is used.",
-      "shield": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively but only until a different move is used."
+      "shield": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively but only until a different move is used.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively but only until a different move is used.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It boosts moves used consecutively but only until a different move is used."
     },
     "name": "Metronome",
     "imageName": "metronome",
@@ -31483,11 +31787,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Defense will grow more slowly."
     },
     "name": "Mild Mint",
     "imageName": "mild-mint",
@@ -31520,7 +31834,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -31899,11 +32214,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Attack will grow more slowly."
     },
     "name": "Modest Mint",
     "imageName": "modest-mint",
@@ -32513,7 +32838,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves.",
       "sword": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves."
+      "shield": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. This headband exudes strength, slightly boosting the power of physical moves."
     },
     "name": "Muscle Band",
     "imageName": "muscle-band",
@@ -32924,11 +33251,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly."
     },
     "name": "Naive Mint",
     "imageName": "naive-mint",
@@ -32946,11 +33283,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Attack will grow more easily, but its Sp. Def will grow more slowly."
     },
     "name": "Naughty Mint",
     "imageName": "naughty-mint",
@@ -33089,7 +33436,9 @@
       "letsGoPikachu": "A somewhat different Pok\u00e9 Ball that becomes more effective the lower the level of the wild Pok\u00e9mon.",
       "letsGoEevee": "A somewhat different Pok\u00e9 Ball that becomes more effective the lower the level of the wild Pok\u00e9mon.",
       "sword": "A somewhat different Pok\u00e9 Ball that becomes more effective the lower the level of the wild Pok\u00e9mon.",
-      "shield": "A somewhat different Pok\u00e9 Ball that becomes more effective the lower the level of the wild Pok\u00e9mon."
+      "shield": "A somewhat different Pok\u00e9 Ball that becomes more effective the lower the level of the wild Pok\u00e9mon.",
+      "brilliantDiamond": "A somewhat different Pok\u00e9 Ball that becomes more effective the lower the level of the wild Pok\u00e9mon.",
+      "shiningPearl": "A somewhat different Pok\u00e9 Ball that becomes more effective the lower the level of the wild Pok\u00e9mon."
     },
     "name": "Nest Ball",
     "imageName": "nest-ball",
@@ -33228,7 +33577,9 @@
       "letsGoPikachu": "A somewhat different Pok\u00e9 Ball that is more effective when attempting to catch Water- or Bug-type Pok\u00e9mon.",
       "letsGoEevee": "A somewhat different Pok\u00e9 Ball that is more effective when attempting to catch Water- or Bug-type Pok\u00e9mon.",
       "sword": "A somewhat different Pok\u00e9 Ball that is more effective when attempting to catch Water- or Bug-type Pok\u00e9mon.",
-      "shield": "A somewhat different Pok\u00e9 Ball that is more effective when attempting to catch Water- or Bug-type Pok\u00e9mon."
+      "shield": "A somewhat different Pok\u00e9 Ball that is more effective when attempting to catch Water- or Bug-type Pok\u00e9mon.",
+      "brilliantDiamond": "A somewhat different Pok\u00e9 Ball that is more effective when attempting to catch Water- or Bug-type Pok\u00e9mon.",
+      "shiningPearl": "A somewhat different Pok\u00e9 Ball that is more effective when attempting to catch Water- or Bug-type Pok\u00e9mon."
     },
     "name": "Net Ball",
     "imageName": "net-ball",
@@ -33418,6 +33769,19 @@
     "name": "N-Lunarizer",
     "imageName": "n-lunarizer",
     "generationIntroduced": "7"
+  },
+  {
+    "pocket": {
+      "Generation II": "items"
+    },
+    "descriptions": {
+      "gold": "Open it and see what's inside.",
+      "silver": "Open it and see what's inside.",
+      "crystal": "Open it and see what's inside."
+    },
+    "name": "Normal Box",
+    "imageName": "normal-box",
+    "generationIntroduced": "2"
   },
   {
     "pocket": {
@@ -33746,7 +34110,9 @@
       "letsGoPikachu": "A nugget of the purest gold that gives off a lustrous gleam in direct light. It can be sold at a high price to shops.",
       "letsGoEevee": "A nugget of the purest gold that gives off a lustrous gleam in direct light. It can be sold at a high price to shops.",
       "sword": "A nugget of the purest gold that gives off a lustrous gleam in direct light. It can be sold at a high price to shops.",
-      "shield": "A nugget of the purest gold that gives off a lustrous gleam in direct light. It can be sold at a high price to shops."
+      "shield": "A nugget of the purest gold that gives off a lustrous gleam in direct light. It can be sold at a high price to shops.",
+      "brilliantDiamond": "A nugget of the purest gold that gives off a lustrous gleam in direct light. It can be sold at a high price to shops.",
+      "shiningPearl": "A nugget of the purest gold that gives off a lustrous gleam in direct light. It can be sold at a high price to shops."
     },
     "name": "Nugget",
     "imageName": "nugget",
@@ -34414,14 +34780,6 @@
         "cost": "N/A",
         "sell": "100"
       },
-      "black2": {
-        "cost": "N/A",
-        "sell": "100"
-      },
-      "white2": {
-        "cost": "N/A",
-        "sell": "100"
-      },
       "x": {
         "cost": "N/A",
         "sell": "100"
@@ -34436,6 +34794,14 @@
       },
       "alphaSapphire": {
         "cost": "N/A",
+        "sell": "100"
+      },
+      "black2": {
+        "cost": "1000*",
+        "sell": "100"
+      },
+      "white2": {
+        "cost": "1000*",
         "sell": "100"
       },
       "sun": {
@@ -34783,7 +35149,9 @@
       "ultraSun": "An oval charm said to increase the chance of Pok\u00e9mon Eggs being found at the Nursery.",
       "ultraMoon": "An oval charm said to increase the chance of Pok\u00e9mon Eggs being found at the Nursery.",
       "sword": "An oval charm said to increase the chance of Pok\u00e9mon Eggs being found at the Nursery.",
-      "shield": "An oval charm said to increase the chance of Pok\u00e9mon Eggs being found at the Nursery."
+      "shield": "An oval charm said to increase the chance of Pok\u00e9mon Eggs being found at the Nursery.",
+      "brilliantDiamond": "An oval charm said to increase the chance of Pok\u00e9mon Eggs being found at the Nursery.",
+      "shiningPearl": "An oval charm said to increase the chance of Pok\u00e9mon Eggs being found at the Nursery."
     },
     "name": "Oval Charm",
     "imageName": "oval-charm",
@@ -36565,7 +36933,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Fairy-type moves."
     },
     "name": "Pixie Plate",
     "imageName": "pixie-plate",
@@ -37362,6 +37732,14 @@
         "cost": "200",
         "sell": "100"
       },
+      "brilliantDiamond": {
+        "cost": "200",
+        "sell": "100"
+      },
+      "shiningPearl": {
+        "cost": "200",
+        "sell": "100"
+      },
       "letsGoPikachu": {
         "cost": "100",
         "sell": "50"
@@ -37400,7 +37778,9 @@
       "letsGoPikachu": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
       "letsGoEevee": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
       "sword": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
-      "shield": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target."
+      "shield": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
+      "brilliantDiamond": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
+      "shiningPearl": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target."
     },
     "name": "Pok\u00e9 Ball",
     "imageName": "pok\u00e9-ball",
@@ -37675,7 +38055,8 @@
   {
     "pocket": {
       "Generation IV": "key items",
-      "Generation VI": "key items"
+      "Generation VI": "key items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -37745,6 +38126,14 @@
       "ultraMoon": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "N/A"
       }
     },
     "descriptions": {
@@ -37764,7 +38153,9 @@
       "sun": "A tool that can search out Pok\u00e9mon that are hiding in the tall grass. Its battery is recharged as you walk.",
       "moon": "A tool that can search out Pok\u00e9mon that are hiding in the tall grass. Its battery is recharged as you walk.",
       "ultraSun": "A tool that can search out Pok\u00e9mon that are hiding in the tall grass. Its battery is recharged as you walk.",
-      "ultraMoon": "A tool that can search out Pok\u00e9mon that are hiding in the tall grass. Its battery is recharged as you walk."
+      "ultraMoon": "A tool that can search out Pok\u00e9mon that are hiding in the tall grass. Its battery is recharged as you walk.",
+      "brilliantDiamond": "A tool that can search out Pok\u00e9mon that are hiding in the tall grass. Its battery is recharged as you walk.",
+      "shiningPearl": "A tool that can search out Pok\u00e9mon that are hiding in the tall grass. Its battery is recharged as you walk."
     },
     "name": "Pok\u00e9 Radar",
     "imageName": "pok\u00e9-radar",
@@ -38144,6 +38535,10 @@
       "shield": {
         "cost": "200",
         "sell": "100"
+      },
+      "legendsArceus": {
+        "cost": "200",
+        "sell": "50"
       }
     },
     "descriptions": {
@@ -38175,7 +38570,8 @@
       "letsGoPikachu": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to an injured Pok\u00e9mon.",
       "letsGoEevee": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to an injured Pok\u00e9mon.",
       "sword": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pok\u00e9mon.",
-      "shield": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pok\u00e9mon."
+      "shield": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pok\u00e9mon.",
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to restore 60 HP to a single Pok\u00e9mon."
     },
     "name": "Potion",
     "imageName": "potion",
@@ -39246,22 +39642,6 @@
         "cost": "N/A",
         "sell": "4900"
       },
-      "black": {
-        "cost": "N/A",
-        "sell": "4900"
-      },
-      "white": {
-        "cost": "N/A",
-        "sell": "4900"
-      },
-      "black2": {
-        "cost": "N/A",
-        "sell": "4900"
-      },
-      "white2": {
-        "cost": "N/A",
-        "sell": "4900"
-      },
       "x": {
         "cost": "N/A",
         "sell": "4900"
@@ -39276,6 +39656,14 @@
       },
       "alphaSapphire": {
         "cost": "N/A",
+        "sell": "4900"
+      },
+      "black2": {
+        "cost": "12500",
+        "sell": "4900"
+      },
+      "white2": {
+        "cost": "12500",
         "sell": "4900"
       },
       "sun": {
@@ -39502,7 +39890,9 @@
       "letsGoPikachu": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
       "letsGoEevee": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
       "sword": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
-      "shield": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort."
+      "shield": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
+      "brilliantDiamond": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
+      "shiningPearl": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort."
     },
     "name": "Premier Ball",
     "imageName": "premier-ball",
@@ -40623,7 +41013,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
       "sword": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
-      "shield": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party."
+      "shield": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It helps keep wild Pok\u00e9mon away if the holder is the head of the party."
     },
     "name": "Pure Incense",
     "imageName": "pure-incense",
@@ -40790,7 +41182,9 @@
       "letsGoPikachu": "A somewhat different Pok\u00e9 Ball that has a more successful catch rate if used at the start of a wild encounter.",
       "letsGoEevee": "A somewhat different Pok\u00e9 Ball that has a more successful catch rate if used at the start of a wild encounter.",
       "sword": "A somewhat different Pok\u00e9 Ball that has a more successful catch rate if used at the start of a wild encounter.",
-      "shield": "A somewhat different Pok\u00e9 Ball that has a more successful catch rate if used at the start of a wild encounter."
+      "shield": "A somewhat different Pok\u00e9 Ball that has a more successful catch rate if used at the start of a wild encounter.",
+      "brilliantDiamond": "A somewhat different Pok\u00e9 Ball that has a more successful catch rate if used at the start of a wild encounter.",
+      "shiningPearl": "A somewhat different Pok\u00e9 Ball that has a more successful catch rate if used at the start of a wild encounter."
     },
     "name": "Quick Ball",
     "imageName": "quick-ball",
@@ -41009,7 +41403,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
       "sword": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
-      "shield": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally."
+      "shield": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally."
     },
     "name": "Quick Claw",
     "imageName": "quick-claw",
@@ -41138,11 +41534,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly."
     },
     "name": "Quiet Mint",
     "imageName": "quiet-mint",
@@ -41208,14 +41614,6 @@
         "cost": "N/A",
         "sell": "150"
       },
-      "black2": {
-        "cost": "N/A",
-        "sell": "150"
-      },
-      "white2": {
-        "cost": "N/A",
-        "sell": "150"
-      },
       "x": {
         "cost": "N/A",
         "sell": "150"
@@ -41230,6 +41628,14 @@
       },
       "alphaSapphire": {
         "cost": "N/A",
+        "sell": "150"
+      },
+      "black2": {
+        "cost": "2000*",
+        "sell": "150"
+      },
+      "white2": {
+        "cost": "2000*",
         "sell": "150"
       },
       "sun": {
@@ -41330,6 +41736,37 @@
     "name": "Rainbow Pass",
     "imageName": "rainbow-pass",
     "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "Generation II": "key items",
+      "Generation IV": "key items",
+      "Generation V": "key items",
+      "Generation VI": "key items",
+      "Generation VII": "key items"
+    },
+    "descriptions": {
+      "gold": "A mystical feather of rainbow colors.",
+      "silver": "A mystical feather of rainbow colors.",
+      "crystal": "A mystical feather of rainbow colors.",
+      "heartGold": "A mystical, rainbow feather that sparkles.",
+      "soulSilver": "A mystical, rainbow feather that sparkles.",
+      "black": "A mystical rainbow feather that sparkles.",
+      "white": "A mystical rainbow feather that sparkles.",
+      "black2": "A mystical rainbow feather that sparkles.",
+      "white2": "A mystical rainbow feather that sparkles.",
+      "x": "A mystical rainbow feather that sparkles.",
+      "y": "A mystical rainbow feather that sparkles.",
+      "omegaRuby": "A mystical rainbow feather that sparkles.",
+      "alphaSapphire": "A mystical rainbow feather that sparkles.",
+      "sun": "A mystical rainbow feather that sparkles.",
+      "moon": "A mystical rainbow feather that sparkles.",
+      "ultraSun": "A mystical rainbow feather that sparkles.",
+      "ultraMoon": "A mystical rainbow feather that sparkles."
+    },
+    "name": "Rainbow Wing",
+    "imageName": "rainbow-wing",
+    "generationIntroduced": "2"
   },
   {
     "pocket": {
@@ -41605,7 +42042,9 @@
       "letsGoPikachu": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
       "letsGoEevee": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
       "sword": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
-      "shield": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one."
+      "shield": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
+      "brilliantDiamond": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
+      "shiningPearl": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one."
     },
     "name": "Rare Candy",
     "imageName": "rare-candy",
@@ -41623,11 +42062,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Sp. Def will grow more slowly."
     },
     "name": "Rash Mint",
     "imageName": "rash-mint",
@@ -42165,7 +42614,8 @@
       "Generation IV": "key items",
       "Generation V": "key items",
       "Generation VI": "key items",
-      "Generation VII": "key items"
+      "Generation VII": "key items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -42849,7 +43299,9 @@
       "sun": "A small red shard. It appears to be a fragment of some sort of implement made long ago.",
       "moon": "A small red shard. It appears to be a fragment of some sort of implement made long ago.",
       "ultraSun": "A small red shard. It appears to be a fragment of some sort of implement made long ago.",
-      "ultraMoon": "A small red shard. It appears to be a fragment of some sort of implement made long ago."
+      "ultraMoon": "A small red shard. It appears to be a fragment of some sort of implement made long ago.",
+      "brilliantDiamond": "A small red shard. It appears to be a fragment of some sort of implement made long ago.",
+      "shiningPearl": "A small red shard. It appears to be a fragment of some sort of implement made long ago."
     },
     "name": "Red Shard",
     "imageName": "red-shard",
@@ -42889,11 +43341,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Defense will grow more easily, but its Speed will grow more slowly."
     },
     "name": "Relaxed Mint",
     "imageName": "relaxed-mint",
@@ -43578,7 +44040,9 @@
       "letsGoPikachu": "A somewhat different Pok\u00e9 Ball that works especially well on a Pok\u00e9mon species that has been caught before.",
       "letsGoEevee": "A somewhat different Pok\u00e9 Ball that works especially well on a Pok\u00e9mon species that has been caught before.",
       "sword": "A somewhat different Pok\u00e9 Ball that works especially well on a Pok\u00e9mon species that has been caught before.",
-      "shield": "A somewhat different Pok\u00e9 Ball that works especially well on a Pok\u00e9mon species that has been caught before."
+      "shield": "A somewhat different Pok\u00e9 Ball that works especially well on a Pok\u00e9mon species that has been caught before.",
+      "brilliantDiamond": "A somewhat different Pok\u00e9 Ball that works especially well on a Pok\u00e9mon species that has been caught before.",
+      "shiningPearl": "A somewhat different Pok\u00e9 Ball that works especially well on a Pok\u00e9mon species that has been caught before."
     },
     "name": "Repeat Ball",
     "imageName": "repeat-ball",
@@ -43692,6 +44156,14 @@
         "cost": "350",
         "sell": "175"
       },
+      "brilliantDiamond": {
+        "cost": "350",
+        "sell": "175"
+      },
+      "shiningPearl": {
+        "cost": "350",
+        "sell": "175"
+      },
       "sun": {
         "cost": "400",
         "sell": "200"
@@ -43753,6 +44225,8 @@
       "ultraMoon": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while.",
       "sword": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while.",
       "shield": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while.",
+      "brilliantDiamond": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while.",
+      "shiningPearl": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while.",
       "letsGoPikachu": "An item that drives away wild Pok\u00e9mon so you won't encounter them for a short time.",
       "letsGoEevee": "An item that drives away wild Pok\u00e9mon so you won't encounter them for a short time."
     },
@@ -43849,7 +44323,8 @@
     "pocket": {
       "Generation V": "key items",
       "Generation VI": "key items",
-      "Generation VII": "key items"
+      "Generation VII": "key items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "black2": {
@@ -44232,7 +44707,10 @@
       "letsGoPikachu": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half of the Pok\u00e9mon's max HP.",
       "letsGoEevee": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half of the Pok\u00e9mon's max HP.",
       "sword": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half of the Pok\u00e9mon's max HP.",
-      "shield": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half of the Pok\u00e9mon's max HP."
+      "shield": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half of the Pok\u00e9mon's max HP.",
+      "brilliantDiamond": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half of the Pok\u00e9mon's max HP.",
+      "shiningPearl": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half of the Pok\u00e9mon's max HP.",
+      "legendsArceus": "A medicine that can be used to revive a single Pok\u00e9mon that has fainted. It also restores half the Pok\u00e9mon\u2019s max HP."
     },
     "name": "Revive",
     "imageName": "revive",
@@ -45093,7 +45571,9 @@
     },
     "descriptions": {
       "sword": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
-      "shield": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within."
+      "shield": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
+      "brilliantDiamond": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
+      "shiningPearl": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within."
     },
     "name": "Rotom Catalog",
     "imageName": "rotom-catalog",
@@ -45982,11 +46462,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Def will grow more easily, but its Speed will grow more slowly."
     },
     "name": "Sassy Mint",
     "imageName": "sassy-mint",
@@ -46781,10 +47271,12 @@
       "sun": "A fantastic medicine dispensed by the pharmacy in Cianwood City. It fully heals a Pok\u00e9mon of any ailment.",
       "moon": "A fantastic medicine dispensed by the pharmacy in Cianwood City. It fully heals a Pok\u00e9mon of any ailment.",
       "ultraSun": "A fantastic medicine dispensed by the pharmacy in Cianwood City. It fully heals a Pok\u00e9mon of any ailment.",
-      "ultraMoon": "A fantastic medicine dispensed by the pharmacy in Cianwood City. It fully heals a Pok\u00e9mon of any ailment."
+      "ultraMoon": "A fantastic medicine dispensed by the pharmacy in Cianwood City. It fully heals a Pok\u00e9mon of any ailment.",
+      "brilliantDiamond": "A fantastic medicine dispensed by the pharmacy in Cianwood City. It fully heals a Pok\u00e9mon of any ailment.",
+      "shiningPearl": "A fantastic medicine dispensed by the pharmacy in Cianwood City. It fully heals a Pok\u00e9mon of any ailment."
     },
-    "name": "Secret Potion",
-    "imageName": "secret-potion",
+    "name": "Secret Medicine",
+    "imageName": "secret-medicine",
     "generationIntroduced": "2"
   },
   {
@@ -46799,11 +47291,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, all of its stats will grow at an equal rate.",
-      "shield": "When a Pok\u00e9mon smells this mint, all of its stats will grow at an equal rate."
+      "shield": "When a Pok\u00e9mon smells this mint, all of its stats will grow at an equal rate.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, all of its stats will grow at an equal rate.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, all of its stats will grow at an equal rate."
     },
     "name": "Serious Mint",
     "imageName": "serious-mint",
@@ -46888,10 +47390,10 @@
       "moon": "Shalour City's famous shortbread. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
       "ultraSun": "Shalour City's famous shortbread. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
       "ultraMoon": "Shalour City's famous shortbread. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
-      "letsGoPikachu": "The Kalos region's famous shortbread. It can be used to heal all the status conditions of a single Pok\u00e9mon.",
-      "letsGoEevee": "The Kalos region's famous shortbread. It can be used to heal all the status conditions of a single Pok\u00e9mon.",
       "sword": "Shalour City's famous shortbread. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
-      "shield": "Shalour City's famous shortbread. It can be used once to heal all the status conditions of a Pok\u00e9mon."
+      "shield": "Shalour City's famous shortbread. It can be used once to heal all the status conditions of a Pok\u00e9mon.",
+      "letsGoPikachu": "The Kalos region's famous shortbread. It can be used to heal all the status conditions of a single Pok\u00e9mon.",
+      "letsGoEevee": "The Kalos region's famous shortbread. It can be used to heal all the status conditions of a single Pok\u00e9mon."
     },
     "name": "Shalour Sable",
     "imageName": "shalour-sable",
@@ -47044,7 +47546,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a long, sharp beak that boosts the power of Flying-type moves."
     },
     "name": "Sharp Beak",
     "imageName": "sharp-beak",
@@ -47198,7 +47702,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail.",
       "sword": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail.",
-      "shield": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail."
+      "shield": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. This discarded carapace enables the holder to switch out of battle without fail."
     },
     "name": "Shed Shell",
     "imageName": "shed-shell",
@@ -47406,6 +47912,18 @@
       "shield": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
       }
     },
     "descriptions": {
@@ -47422,7 +47940,10 @@
       "letsGoPikachu": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
       "letsGoEevee": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
       "sword": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
-      "shield": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild."
+      "shield": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
+      "brilliantDiamond": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
+      "shiningPearl": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
+      "legendsArceus": "A charm that shines with a mysterious light. It is said to increase the chance of finding a Shiny Pok\u00e9mon in the wild."
     },
     "name": "Shiny Charm",
     "imageName": "shiny-charm",
@@ -47998,7 +48519,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a sumptuous scarf that boosts the power of Normal-type moves."
     },
     "name": "Silk Scarf",
     "imageName": "silk-scarf",
@@ -48314,6 +48837,37 @@
   },
   {
     "pocket": {
+      "Generation II": "key items",
+      "Generation IV": "key items",
+      "Generation V": "key items",
+      "Generation VI": "key items",
+      "Generation VII": "key items"
+    },
+    "descriptions": {
+      "gold": "A strange, silver-colored feather.",
+      "silver": "A strange, silver-colored feather.",
+      "crystal": "A strange, silver-colored feather.",
+      "heartGold": "A strange, silvery feather that sparkles.",
+      "soulSilver": "A strange, silvery feather that sparkles.",
+      "black": "A strange, silvery feather that sparkles.",
+      "white": "A strange, silvery feather that sparkles.",
+      "black2": "A strange, silvery feather that sparkles.",
+      "white2": "A strange, silvery feather that sparkles.",
+      "x": "A strange, silvery feather that sparkles.",
+      "y": "A strange, silvery feather that sparkles.",
+      "omegaRuby": "A strange, silvery feather that sparkles.",
+      "alphaSapphire": "A strange, silvery feather that sparkles.",
+      "sun": "A strange, silvery feather that sparkles.",
+      "moon": "A strange, silvery feather that sparkles.",
+      "ultraSun": "A strange, silvery feather that sparkles.",
+      "ultraMoon": "A strange, silvery feather that sparkles."
+    },
+    "name": "Silver Wing",
+    "imageName": "silver-wing",
+    "generationIntroduced": "2"
+  },
+  {
+    "pocket": {
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
@@ -48417,7 +48971,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -48903,7 +49458,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail.",
       "sword": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail.",
-      "shield": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail."
+      "shield": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It enables the holder to flee from any wild Pok\u00e9mon encounter without fail."
     },
     "name": "Smoke Ball",
     "imageName": "smoke-ball",
@@ -49036,7 +49593,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder.",
       "sword": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder.",
-      "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder."
+      "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sandstorm when used by the holder."
     },
     "name": "Smooth Rock",
     "imageName": "smooth-rock",
@@ -49461,7 +50020,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a loose, silky sand that boosts the power of Ground-type moves."
     },
     "name": "Soft Sand",
     "imageName": "soft-sand",
@@ -49723,7 +50284,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "other items"
     },
     "prices": {
       "ruby": {
@@ -49837,7 +50399,11 @@
       "sun": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
       "moon": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
       "ultraSun": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
-      "ultraMoon": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves."
+      "ultraMoon": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
+      "sword": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
+      "shield": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
+      "brilliantDiamond": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves.",
+      "shiningPearl": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves."
     },
     "name": "Soul Dew",
     "imageName": "soul-dew",
@@ -50022,7 +50588,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a sinister, eerie tag that boosts the power of Ghost-type moves."
     },
     "name": "Spell Tag",
     "imageName": "spell-tag",
@@ -50055,7 +50623,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -50155,7 +50724,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -51022,6 +51592,14 @@
         "cost": "N/A",
         "sell": "1500"
       },
+      "letsGoPikachu": {
+        "cost": "N/A",
+        "sell": "1500"
+      },
+      "letsGoEevee": {
+        "cost": "N/A",
+        "sell": "1500"
+      },
       "sword": {
         "cost": "N/A",
         "sell": "1500"
@@ -51058,7 +51636,9 @@
       "ultraSun": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
       "ultraMoon": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
       "sword": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
-      "shield": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops."
+      "shield": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
+      "brilliantDiamond": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
+      "shiningPearl": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops."
     },
     "name": "Stardust",
     "imageName": "stardust",
@@ -51380,7 +51960,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -51737,7 +52318,8 @@
       "Generation IV": "key items",
       "Generation V": "key items",
       "Generation VI": "key items",
-      "Generation VII": "key items"
+      "Generation VII": "key items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -51807,6 +52389,14 @@
       "ultraMoon": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "N/A"
       }
     },
     "descriptions": {
@@ -51826,7 +52416,9 @@
       "sun": "A key to one of the suites at a certain luxury hotel by a lake. For some odd reason, it often disappears.",
       "moon": "A key to one of the suites at a certain luxury hotel by a lake. For some odd reason, it often disappears.",
       "ultraSun": "A key to one of the suites at a certain luxury hotel by a lake. For some odd reason, it often disappears.",
-      "ultraMoon": "A key to one of the suites at a certain luxury hotel by a lake. For some odd reason, it often disappears."
+      "ultraMoon": "A key to one of the suites at a certain luxury hotel by a lake. For some odd reason, it often disappears.",
+      "brilliantDiamond": "A key to one of the suites at a certain luxury hotel by a lake. For some odd reason, it often disappears.",
+      "shiningPearl": "A key to one of the suites at a certain luxury hotel by a lake. For some odd reason, it often disappears."
     },
     "name": "Suite Key",
     "imageName": "suite-key",
@@ -52209,7 +52801,8 @@
       "letsGoPikachu": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to an injured Pok\u00e9mon.",
       "letsGoEevee": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to an injured Pok\u00e9mon.",
       "sword": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pok\u00e9mon.",
-      "shield": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pok\u00e9mon."
+      "shield": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pok\u00e9mon.",
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to restore 100 HP to a single Pok\u00e9mon."
     },
     "name": "Super Potion",
     "imageName": "super-potion",
@@ -52384,6 +52977,8 @@
       "ultraMoon": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Repel.",
       "sword": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Repel.",
       "shield": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Repel.",
+      "brilliantDiamond": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Repel.",
+      "shiningPearl": "An item that prevents any low-level wild Pok\u00e9mon from jumping out at you for a while. It lasts longer than Repel.",
       "letsGoPikachu": "An item that drives away wild Pok\u00e9mon so you won't encounter them. It lasts longer than a Repel.",
       "letsGoEevee": "An item that drives away wild Pok\u00e9mon so you won't encounter them. It lasts longer than a Repel."
     },
@@ -52545,12 +53140,8 @@
       "y": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
       "omegaRuby": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
       "alphaSapphire": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "sun": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "moon": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "ultraSun": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "ultraMoon": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "letsGoPikachu": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
-      "letsGoEevee": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon."
+      "brilliantDiamond": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon.",
+      "shiningPearl": "An awesome, high-tech fishing rod. Use it at any body of water to fish for wild aquatic Pok\u00e9mon."
     },
     "name": "Super Rod",
     "imageName": "super-rod",
@@ -53631,11 +54222,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
       }
     },
     "descriptions": {
       "sword": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly.",
-      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly."
+      "shield": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly.",
+      "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly.",
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Speed will grow more easily, but its Attack will grow more slowly."
     },
     "name": "Timid Mint",
     "imageName": "timid-mint",
@@ -54215,7 +54816,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle.",
       "sword": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle.",
-      "shield": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle."
+      "shield": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a bizarre orb that will badly poison the holder during battle."
     },
     "name": "Toxic Orb",
     "imageName": "toxic-orb",
@@ -54226,7 +54829,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -54315,7 +54919,9 @@
       "sun": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Poison-type moves.",
       "moon": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Poison-type moves.",
       "ultraSun": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Poison-type moves.",
-      "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Poison-type moves."
+      "ultraMoon": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Poison-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Poison-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It's a stone tablet that boosts the power of Poison-type moves."
     },
     "name": "Toxic Plate",
     "imageName": "toxic-plate",
@@ -54517,7 +55123,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.",
       "sword": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.",
-      "shield": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves."
+      "shield": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. This spoon is imbued with telekinetic power and boosts Psychic-type moves."
     },
     "name": "Twisted Spoon",
     "imageName": "twisted-spoon",
@@ -54585,8 +55193,7 @@
       "Generation V": "items",
       "Generation VI": "items",
       "letsGoPikachu": "items",
-      "letsGoEevee": "items",
-      "Generation VIII": "pok\u00e9 balls"
+      "letsGoEevee": "items"
     },
     "prices": {
       "yellow": {
@@ -54747,7 +55354,9 @@
       "letsGoPikachu": "An ultra-high performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
       "letsGoEevee": "An ultra-high performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
       "sword": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
-      "shield": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball."
+      "shield": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
+      "brilliantDiamond": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
+      "shiningPearl": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball."
     },
     "name": "Ultra Ball",
     "imageName": "ultra-ball",
@@ -55497,7 +56106,9 @@
       "letsGoPikachu": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
       "letsGoEevee": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
       "sword": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
-      "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water."
+      "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
+      "brilliantDiamond": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
+      "shiningPearl": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water."
     },
     "name": "Water Stone",
     "imageName": "water-stone",
@@ -56151,7 +56762,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once.",
       "sword": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once.",
-      "shield": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once."
+      "shield": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once.",
+      "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once.",
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It will restore any lowered stat in battle. It can be used only once."
     },
     "name": "White Herb",
     "imageName": "white-herb",
@@ -57386,7 +57999,9 @@
       "letsGoPikachu": "An item that sharply boosts the Sp. Def stat of a Pok\u00e9mon during a battle. It wears off once the Pok\u00e9mon is withdrawn.",
       "letsGoEevee": "An item that sharply boosts the Sp. Def stat of a Pok\u00e9mon during a battle. It wears off once the Pok\u00e9mon is withdrawn.",
       "sword": "An item that sharply boosts the Sp. Def stat of a Pok\u00e9mon during a battle. It wears off once the Pok\u00e9mon is withdrawn.",
-      "shield": "An item that sharply boosts the Sp. Def stat of a Pok\u00e9mon during a battle. It wears off once the Pok\u00e9mon is withdrawn."
+      "shield": "An item that sharply boosts the Sp. Def stat of a Pok\u00e9mon during a battle. It wears off once the Pok\u00e9mon is withdrawn.",
+      "brilliantDiamond": "An item that sharply boosts the Sp. Def stat of a Pok\u00e9mon during a battle. It wears off once the Pok\u00e9mon is withdrawn.",
+      "shiningPearl": "An item that sharply boosts the Sp. Def stat of a Pok\u00e9mon during a battle. It wears off once the Pok\u00e9mon is withdrawn."
     },
     "name": "X Sp. Def",
     "imageName": "x-sp.-def",
@@ -58202,7 +58817,8 @@
       "Generation IV": "items",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "key items"
     },
     "prices": {
       "diamond": {
@@ -58601,6 +59217,22 @@
     },
     "name": "Z-Ring",
     "imageName": "z-ring",
+    "generationIntroduced": "7"
+  },
+  {
+    "pocket": {
+      "Generation VII": "key items"
+    },
+    "descriptions": {
+      "sun": "An item to store Zygarde Cores and Cells. You can also use it to teach Zygarde moves.",
+      "moon": "An item to store Zygarde Cores and Cells. You can also use it to teach Zygarde moves.",
+      "ultraSun": "An item to store Zygarde Cores and Cells. You can also use it to teach Zygarde moves.",
+      "ultraMoon": "An item to store Zygarde Cores and Cells. You can also use it to teach Zygarde moves.",
+      "sword": "An item in which Zygarde Cores and Cells are gathered. You can also use it to change Zygarde's forms.",
+      "shield": "An item in which Zygarde Cores and Cells are gathered. You can also use it to change Zygarde's forms."
+    },
+    "name": "Zygarde Cube",
+    "imageName": "zygarde-cube",
     "generationIntroduced": "7"
   },
   {
@@ -59155,6 +59787,33 @@
   },
   {
     "pocket": {
+      "Generation IV": "key items",
+      "Generation V": "key items",
+      "Generation VI": "key items",
+      "Generation VII": "key items"
+    },
+    "descriptions": {
+      "heartGold": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "soulSilver": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "black": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "white": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "black2": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "white2": "A shiny green orb that is said to have a legend and has a deep connection with the Hoenn region.",
+      "x": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "y": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "omegaRuby": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "alphaSapphire": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "sun": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "moon": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "ultraSun": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region.",
+      "ultraMoon": "A shiny green orb that is said to have a legend tied to it. It's known to have a deep connection with the Hoenn region."
+    },
+    "name": "Jade Orb",
+    "imageName": "jade-orb",
+    "generationIntroduced": "4"
+  },
+  {
+    "pocket": {
       "Generation VIII": "other items"
     },
     "prices": {
@@ -59424,11 +60083,11 @@
     "prices": {
       "sword": {
         "cost": "N/A",
-        "sell": "20"
+        "sell": "10"
       },
       "shield": {
         "cost": "N/A",
-        "sell": "20"
+        "sell": "10"
       }
     },
     "descriptions": {
@@ -59459,6 +60118,1374 @@
     },
     "name": "Galarica Wreath",
     "imageName": "galarica-wreath",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "When used on Dialga, this large, glowing gem wells with power and allows the Pok\u00e9mon to change form."
+    },
+    "name": "Adamant Crystal",
+    "imageName": "adamant-crystal",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "battle items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An item that makes moves less likely to strike a Pok\u00e9mon during a battle. This effect disappears if the Pok\u00e9mon leaves the battle."
+    },
+    "name": "Aux Evasion",
+    "imageName": "aux-evasion",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "battle items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An item that sharply boosts the defensive stats of a Pok\u00e9mon during a battle. These effects disappear if the Pok\u00e9mon leaves the battle."
+    },
+    "name": "Aux Guard",
+    "imageName": "aux-guard",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "battle items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An item that sharply boosts the offensive stats of a Pok\u00e9mon during a battle. These effects disappear if the Pok\u00e9mon leaves the battle."
+    },
+    "name": "Aux Power",
+    "imageName": "aux-power",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "battle items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An item that sharply boosts the offensive and defensive stats of a Pok\u00e9mon during a battle. These effects disappear if the Pok\u00e9mon leaves the battle."
+    },
+    "name": "Aux Powerguard",
+    "imageName": "aux-powerguard",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "Proof that you have completed the trial set by Azelf, the Being of Willpower that lives in Lake Valor. This item is needed to forge the Red Chain."
+    },
+    "name": "Azelf's Fang",
+    "imageName": "azelf's-fang",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A ball of mud that has become stiff and hard. Hitting a Pok\u00e9mon with one may stun the Pok\u00e9mon, creating an opening for you to act."
+    },
+    "name": "Ball of Mud",
+    "imageName": "ball-of-mud",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A favored food of Basculegion, a Pok\u00e9mon that will bear you on its back. This food is crafted in an unusual way, from ingredients gathered via equally unusual methods."
+    },
+    "name": "Basculegion Food",
+    "imageName": "basculegion-food",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A cake made by combining beans with a Cake-Lure Base. These cakes are potently effective at attracting fish Pok\u00e9mon, as well as bird Pok\u00e9mon and their flying ilk."
+    },
+    "name": "Bean Cake",
+    "imageName": "bean-cake",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A glassy black stone that produces a sharp cutting edge when split. It\u2019s loved by a certain Pok\u00e9mon."
+    },
+    "name": "Black Augurite",
+    "imageName": "black-augurite",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "When combined with an Apricorn, this mysterious black stone can draw out the properties required to forge a Heavy Ball."
+    },
+    "name": "Black Tumblestone",
+    "imageName": "black-tumblestone",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A stone tablet imbued with the essence of normalcy. When used on a certain Pok\u00e9mon, it allows that Pok\u00e9mon to gain the power of the Normal type."
+    },
+    "name": "Blank Plate",
+    "imageName": "blank-plate",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A wildflower that can be found growing across the Hisui region. It does have medicinal properties, but it is so bitter that no wild Pok\u00e9mon will eat it."
+    },
+    "name": "Bugwort",
+    "imageName": "bugwort",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A type of field provision that enhances the flavor of other foods it is mixed with."
+    },
+    "name": "Cake-Lure Base",
+    "imageName": "cake-lure-base",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A sweet-fleshed truffle that is packed full of mysterious energy. It is one of the materials needed for crafting various items."
+    },
+    "name": "Candy Truffle",
+    "imageName": "candy-truffle",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A fern used for crafting items made to be thrown. When these curled leaves are unfurled, they can serve as nature\u2019s wrapping paper."
+    },
+    "name": "Caster Fern",
+    "imageName": "caster-fern",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A flute that can be used to call special Pok\u00e9mon that are willing to bear you around the region. Its timbre is eerie and mysterious."
+    },
+    "name": "Celestica Flute",
+    "imageName": "celestica-flute",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A dumpling that will make a Pok\u00e9mon become fixated on a move in battle. The Pok\u00e9mon will deal more damage when using that move but will take more damage as well."
+    },
+    "name": "Choice Dumpling",
+    "imageName": "choice-dumpling",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A kit containing everything you might need for crafting, even when there is no workbench around. However, you can only use the materials you have in your satchel."
+    },
+    "name": "Crafting Kit",
+    "imageName": "crafting-kit",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Translucent crystals that are beloved by Pok\u00e9mon bearing a resemblance to grass, plants, or minerals. They will gather wherever a lump of this salt is thrown."
+    },
+    "name": "Crunchy Salt",
+    "imageName": "crunchy-salt",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Honey that sparkles with an amber hue. It is beloved by bug Pok\u00e9mon and Pok\u00e9mon with fairylike charms, so they will gather wherever a comb of it is thrown."
+    },
+    "name": "Dazzling Honey",
+    "imageName": "dazzling-honey",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Mushrooms that, when consumed, sharpen the eater\u2019s focus. They make it easier to land critical hits and are one of the materials needed for crafting Dire Hits."
+    },
+    "name": "Direshroom",
+    "imageName": "direshroom",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Mushrooms that, when consumed, make the eater feel nimble and agile as a fleeting shadow. They are one of the materials needed for crafting Aux Evasions."
+    },
+    "name": "Doppel Bonnets",
+    "imageName": "doppel-bonnets",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A type of ice beloved by the Lord of the Tundra, Avalugg. This ice is said to be fragments of ancient Avalugg that lived long ago."
+    },
+    "name": "Eternal Ice",
+    "imageName": "eternal-ice",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "pok\u00e9 balls"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "140",
+        "sell": "35"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A ball that flies fast and true\u2014ideal for catching nimble Pok\u00e9mon or Pok\u00e9mon that fly high in the air."
+    },
+    "name": "Feather Ball",
+    "imageName": "feather-ball",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An herbal medicine that can restore 100 HP to a Pok\u00e9mon, just as a Super Potion does. Yet the bitter taste will make the Pok\u00e9mon less friendly toward you."
+    },
+    "name": "Fine Remedy",
+    "imageName": "fine-remedy",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm that gives off a soothing scent. It can be used to help calm the frenzy of the Lord of the Woods, Kleavor."
+    },
+    "name": "Forest Balm",
+    "imageName": "forest-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "pok\u00e9 balls"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "The ultimate iteration of the Heavy Ball. A ball that is too heavy to fly high or far, but it is highly effective if you manage to hit an unsuspecting Pok\u00e9mon."
+    },
+    "name": "Gigaton Ball",
+    "imageName": "gigaton-ball",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A cake made by combining grains with a Cake-Lure Base. These cakes are potently effective at attracting Pok\u00e9mon that dwell and wander among the fields."
+    },
+    "name": "Grain Cake",
+    "imageName": "grain-cake",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "When used on Giratina, this large, glowing gem wells with power and allows the Pok\u00e9mon to change form."
+    },
+    "name": "Griseous Core",
+    "imageName": "griseous-core",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "other items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Mysterious dust that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used to raise effort levels only up to level three, however."
+    },
+    "name": "Grit Dust",
+    "imageName": "grit-dust",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "other items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Mysterious gravel that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used only if the effort level is at least level three and no greater than level five."
+    },
+    "name": "Grit Gravel",
+    "imageName": "grit-gravel",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "other items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious pebble that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used only if the effort level is at least level six and no greater than level eight."
+    },
+    "name": "Grit Pebble",
+    "imageName": "grit-pebble",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "other items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious rock that can raise the effort level for one of a Pok\u00e9mon\u2019s stats. It can be used only if the effort level has already reached level nine."
+    },
+    "name": "Grit Rock",
+    "imageName": "grit-rock",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Beautiful stalks of rice bursting with life. Pok\u00e9mon that dwell and wander among the fields love these grains and will gather wherever the stalks are thrown."
+    },
+    "name": "Hearty Grains",
+    "imageName": "hearty-grains",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A baked treat made from Berries and other ingredients, which is often eaten in regions such as Galar. It is beloved by a surprising number of Pok\u00e9mon."
+    },
+    "name": "Hometown Muffin",
+    "imageName": "hometown-muffin",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A cake made by combining honey with a Cake-Lure Base. These cakes are potently effective at attracting bug Pok\u00e9mon and also those with fairylike charms."
+    },
+    "name": "Honey Cake",
+    "imageName": "honey-cake",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "berries"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "300",
+        "sell": "75"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to restore its PP. If a wild Pok\u00e9mon eats one of these Berries, that Pok\u00e9mon\u2019s reactions will be dulled."
+    },
+    "name": "Hopo Berry",
+    "imageName": "hopo-berry",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Mushrooms that, when consumed, make the body of the eater grow tougher. They boost endurance and are one of the materials needed for crafting Aux Guards."
+    },
+    "name": "Iron Barktongue",
+    "imageName": "iron-barktongue",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "50"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A naturally occurring hunk of iron. Such ore is needed to make the requisite parts of numerous Pok\u00e9 Ball varieties, such as the clasp that holds the ball shut."
+    },
+    "name": "Iron Chunk",
+    "imageName": "iron-chunk",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "pok\u00e9 balls"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "The ultimate iteration of the Feather Ball. A ball that flies fast and true\u2014ideal for catching nimble Pok\u00e9mon or Pok\u00e9mon that fly high in the air."
+    },
+    "name": "Jet Ball",
+    "imageName": "jet-ball",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A hidden gem gaining popularity in Jubilife Village and beloved by Pok\u00e9mon. This sweet treat can be fed to a Pok\u00e9mon to cure any status conditions it may have."
+    },
+    "name": "Jubilife Muffin",
+    "imageName": "jubilife-muffin",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "The king of herbs, glittering and brilliant. Combining this herb with other materials needed to make medicines will boost their efficacy."
+    },
+    "name": "King's Leaf",
+    "imageName": "king's-leaf",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "pok\u00e9 balls"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "320",
+        "sell": "80"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An improvement on the original Heavy Ball design. A ball that is too heavy to fly high or far, but it is highly effective if you manage to hit an unsuspecting Pok\u00e9mon."
+    },
+    "name": "Leaden Ball",
+    "imageName": "leaden-ball",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A stone tablet imbued with the essence of all creation. When used on a certain Pok\u00e9mon, it allows that Pok\u00e9mon to gain the power of every type there is."
+    },
+    "name": "Legend Plate",
+    "imageName": "legend-plate",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A string exuding a mysterious energy that makes you feel a strange sense of connection. It\u2019s loved by certain Pok\u00e9mon."
+    },
+    "name": "Linking Cord",
+    "imageName": "linking-cord",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A satchel that someone dropped."
+    },
+    "name": "Lost Satchel",
+    "imageName": "lost-satchel",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "When used on Palkia, this large, glowing orb wells with power and allows the Pok\u00e9mon to change form."
+    },
+    "name": "Lustrous Globe",
+    "imageName": "lustrous-globe",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm that gives off a soothing scent. It can be used to help calm the frenzy of the Lady of the Ridge, Lilligant."
+    },
+    "name": "Marsh Balm",
+    "imageName": "marsh-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Required for crafting medicinal compounds. This vegetable is found growing across the Hisui region and is also known as the wayfarer\u2019s friend."
+    },
+    "name": "Medicinal Leek",
+    "imageName": "medicinal-leek",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "Proof that you have completed the trial set by Mesprit, the Being of Emotion that lives in Lake Verity. This item is needed to forge the Red Chain."
+    },
+    "name": "Mesprit's Plume",
+    "imageName": "mesprit's-plume",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm that gives off a soothing scent. It can be used to help calm the frenzy of the Lord of the Hollow, Electrode."
+    },
+    "name": "Mountain Balm",
+    "imageName": "mountain-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A cake made by combining mushrooms with a Cake-Lure Base. These cakes are potently effective at attracting the more monstrous Pok\u00e9mon, as well as dragon Pok\u00e9mon."
+    },
+    "name": "Mushroom Cake",
+    "imageName": "mushroom-cake",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm to be used when battling Arceus."
+    },
+    "name": "Mysterious Balm",
+    "imageName": "mysterious-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A stab-bound journal that once had pages torn from it. All the pages have been collected and restored."
+    },
+    "name": "Old Journal",
+    "imageName": "old-journal",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A singular and irreplicable Pok\u00e9 Ball that can be used to catch the frenzied Pok\u00e9mon raging at the Temple of Sinnoh."
+    },
+    "name": "Origin Ball",
+    "imageName": "origin-ball",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "An ore of mysterious power, spoken of in ancient myths and said to contain the power of almighty Sinnoh itself."
+    },
+    "name": "Origin Ore",
+    "imageName": "origin-ore",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A block of muddy material that can be used as fuel for burning when it is dried. It\u2019s loved by a certain Pok\u00e9mon."
+    },
+    "name": "Peat Block",
+    "imageName": "peat-block",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Extremely spicy but also highly nutritious. This herb is used as a material for crafting items that can restore PP to Pok\u00e9mon or boost their stats."
+    },
+    "name": "Pep-Up Plant",
+    "imageName": "pep-up-plant",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Large, juicy beans that grow in pods. These beans are beloved by fish Pok\u00e9mon, as well as bird Pok\u00e9mon and their flying ilk, so throw one and they will gather around."
+    },
+    "name": "Plump Beans",
+    "imageName": "plump-beans",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "1000"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A wooden toy carved in the image of a Pok\u00e9mon. It can be sold to the general store."
+    },
+    "name": "Pok\u00e9shi Doll",
+    "imageName": "pok\u00e9shi-doll",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A sea vegetable used for crafting Scatter Bangs. If you wrap it up so that the air has no way to escape, then deal it a sharp blow, it produces a loud popping noise."
+    },
+    "name": "Pop Pod",
+    "imageName": "pop-pod",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An herbal medicine that can restore 60 HP to a Pok\u00e9mon, just as a Potion does. Yet the bitter taste will make the Pok\u00e9mon less friendly toward you."
+    },
+    "name": "Remedy",
+    "imageName": "remedy",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A cake made by combining salt with a Cake-Lure Base. These cakes are potently effective at attracting Pok\u00e9mon that bear a resemblance to grass, plants, or minerals."
+    },
+    "name": "Salt Cake",
+    "imageName": "salt-cake",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "This bitter root, originally native to sandy beaches, can now be raised even in frozen soil. It is pickled to make a sweet and spicy treat known as Twice-Spiced Radishes."
+    },
+    "name": "Sand Radish",
+    "imageName": "sand-radish",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "When thrown at the ground, these balls produce a loud noise and scare off weak Pok\u00e9mon in the area, sending them running."
+    },
+    "name": "Scatter Bang",
+    "imageName": "scatter-bang",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A rare seed that can be given to the captain of the Security Corps to have a Pok\u00e9mon master a move so it can be used in the agile style or strong style."
+    },
+    "name": "Seed of Mastery",
+    "imageName": "seed-of-mastery",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "25"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "When combined with an Apricorn, this mysterious sky-blue stone can draw out the properties required to forge a Feather Ball."
+    },
+    "name": "Sky Tumblestone",
+    "imageName": "sky-tumblestone",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "When thrown at the ground, these balls produce a cloud of fine powder that will reduce visibility in the area and keep wild Pok\u00e9mon from noticing you."
+    },
+    "name": "Smoke Bomb",
+    "imageName": "smoke-bomb",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm that gives off a soothing scent. It can be used to help calm the frenzy of the Lord of the Tundra, Avalugg."
+    },
+    "name": "Snow Balm",
+    "imageName": "snow-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A tuber used for crafting Smoke Bombs. It can be mashed for use in cooking, but it can also be dried and ground to produce a fine powder."
+    },
+    "name": "Sootfoot Root",
+    "imageName": "sootfoot-root",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm that somehow has the power to calm Palkia in its frenzy."
+    },
+    "name": "Space Balm",
+    "imageName": "space-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "10"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An Apricorn that\u2019s had its insides eaten. Hitting a Pok\u00e9mon with one may stun the Pok\u00e9mon, creating an opening for you to act."
+    },
+    "name": "Spoiled Apricorn",
+    "imageName": "spoiled-apricorn",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A large and well-ripened mushroom. It is beloved by the more monstrous Pok\u00e9mon, as well as dragon Pok\u00e9mon, so they will gather wherever one is thrown."
+    },
+    "name": "Springy Mushroom",
+    "imageName": "springy-mushroom",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "When used in the field, this spray muffles the sound of your footsteps and makes wild Pok\u00e9mon less likely to notice you for a short time."
+    },
+    "name": "Stealth Spray",
+    "imageName": "stealth-spray",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A ball of some kind of sticky substance. Hitting a Pok\u00e9mon with one may stun the Pok\u00e9mon, creating an opening for you to act."
+    },
+    "name": "Sticky Glob",
+    "imageName": "sticky-glob",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "pok\u00e9 balls"
+    },
+    "descriptions": {
+      "legendsArceus": "N/A"
+    },
+    "name": "Strange Ball",
+    "imageName": "strange-ball",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "medicine"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An herbal medicine that can restore 150 HP to a Pok\u00e9mon, just as a Hyper Potion does. Yet the bitter taste will make the Pok\u00e9mon less friendly toward you."
+    },
+    "name": "Superb Remedy",
+    "imageName": "superb-remedy",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "When eaten, this curious snack temporarily swaps a Pok\u00e9mon\u2019s offensive stats with its defensive stats."
+    },
+    "name": "Swap Snack",
+    "imageName": "swap-snack",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Mushrooms that, when consumed, cause the muscles to swell. They imbue the eater with strength and are one of the materials needed for crafting Aux Powers."
+    },
+    "name": "Swordcap",
+    "imageName": "swordcap",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm that somehow has the power to calm Dialga in its frenzy."
+    },
+    "name": "Time Balm",
+    "imageName": "time-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "An old, stab-bound diary in a traditional style. It has been torn and is missing the latter half of its pages."
+    },
+    "name": "Torn Journal",
+    "imageName": "torn-journal",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "15"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "When combined with an Apricorn, this mysterious, tumbled stone can draw out the properties required to forge a Pok\u00e9 Ball."
+    },
+    "name": "Tumblestone",
+    "imageName": "tumblestone",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "These pickled vegetables prime a Pok\u00e9mon for battle. The Pok\u00e9mon takes a hard-hitting stance, which boosts the power of the Pok\u00e9mon\u2019s moves by 50 percent."
+    },
+    "name": "Twice-Spiced Radish",
+    "imageName": "twice-spiced-radish",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "Proof that you have completed the trial set by Uxie, the Being of Knowledge that lives in Lake Acuity. This item is needed to forge the Red Chain."
+    },
+    "name": "Uxie's Claw",
+    "imageName": "uxie's-claw",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "Also called a morning-dew bud. It is used as a material for crafting items that can restore vitality to a Pok\u00e9mon that has fainted."
+    },
+    "name": "Vivichoke",
+    "imageName": "vivichoke",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A mysterious balm that gives off a soothing scent. It can be used to help calm the frenzy of the Lord of the Isles, Arcanine."
+    },
+    "name": "Volcano Balm",
+    "imageName": "volcano-balm",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "key items"
+    },
+    "descriptions": {
+      "legendsArceus": "A fragment that was once part of a stone panel in the Solaceon Ruins. It has markings carved on it that appear to be some kind of writing."
+    },
+    "name": "Wall Fragment",
+    "imageName": "wall-fragment",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "pok\u00e9 balls"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "340",
+        "sell": "85"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "An improvement on the original Feather Ball design. A ball that flies fast and true\u2014ideal for catching nimble Pok\u00e9mon or Pok\u00e9mon that fly high in the air."
+    },
+    "name": "Wing Ball",
+    "imageName": "wing-ball",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A handy log of wood that can be used for anything, from crafting common goods needed for daily living to producing works of art."
+    },
+    "name": "Wood",
+    "imageName": "wood",
     "generationIntroduced": "8"
   }
 ]

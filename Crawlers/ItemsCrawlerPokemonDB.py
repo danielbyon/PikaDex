@@ -17,7 +17,13 @@ def process_file(contents):
     soup = BeautifulSoup(contents, 'lxml').html.body
     entries = {}
     
-    table = soup.main.h1.find_next_sibling('h2').find_next_sibling().table
+    table = soup.main.h1
+    if table is None:
+        return None
+    table = table.find_next_sibling('h2')
+    if table is None:
+        return None 
+    table = table.find_next_sibling().table
     for row in table.find_all('tr'):
         description = row.td.text.strip()
         for game_node in row.find_all('span'):

@@ -139,6 +139,7 @@ private extension Ability {
         case .shield: return "z_shield"
         case .brilliantDiamond: return "z_brilliantDiamond"
         case .shiningPearl: return "z_shiningPearl"
+        case .legendsArceus: return "z_legendsArceus"
         case .national: return "z_national"
         }
     }
