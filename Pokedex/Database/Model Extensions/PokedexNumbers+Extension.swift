@@ -54,8 +54,32 @@ public extension PokedexNumbers {
             retVal.append(("Galar", galar ?? -1))
             retVal.append(("Isle of Armor", isleOfArmor ?? -1))
             retVal.append(("Crown Tundra", crownTundra ?? -1))
+        case .legendsArceus:
+            retVal.append(("Hisui", hisui ?? -1))
         case .national:
-            break // national is always added
+            retVal.append(("Kanto", kanto ?? -1))
+            retVal.append(("Johto", johto ?? -1))
+            retVal.append(("Hoenn", hoenn ?? -1))
+            retVal.append(("Sinnoh", sinnoh ?? -1))
+            retVal.append(("Unova", unova ?? -1))
+            retVal.append(("New Unova", newUnova ?? -1))
+            retVal.append(("Central Kalos", centralKalos ?? -1))
+            retVal.append(("Coastal Kalos", coastalKalos ?? -1))
+            retVal.append(("Mountain Kalos", mountainKalos ?? -1))
+            retVal.append(("Alola", alola ?? -1))
+            retVal.append(("Melemele", melemele ?? -1))
+            retVal.append(("Akala", akala ?? -1))
+            retVal.append(("Ula'ula", ulaula ?? -1))
+            retVal.append(("Poni", poni ?? -1))
+            retVal.append(("Alola (USUM)", ultraAlola ?? -1))
+            retVal.append(("Melemele (USUM)", ultraMelemele ?? -1))
+            retVal.append(("Akala (USUM)", ultraAkala ?? -1))
+            retVal.append(("Ula'ula (USUM)", ultraUlaula ?? -1))
+            retVal.append(("Poni (USUM)", ultraPoni ?? -1))
+            retVal.append(("Galar", galar ?? -1))
+            retVal.append(("Isle of Armor", isleOfArmor ?? -1))
+            retVal.append(("Crown Tundra", crownTundra ?? -1))
+            retVal.append(("Hisui", hisui ?? -1))
         }
 
         retVal.removeAll { $0.1 == -1 }
@@ -90,6 +114,10 @@ public extension PokedexNumbers {
     var galar: Int? {
         get { (value(forKeyPath: #keyPath(PokedexNumbers.z_galar)) as? Int64)?.toInt() }
         set { z_galar = newValue?.toInt64() ?? 0 }
+    }
+    var hisui: Int? {
+        get { (value(forKeyPath: #keyPath(PokedexNumbers.z_hisui)) as? Int64)?.toInt() }
+        set { z_hisui = newValue?.toInt64() ?? 0 }
     }
     var hoenn: Int? {
         get { (value(forKeyPath: #keyPath(PokedexNumbers.z_hoenn)) as? Int64)?.toInt() }

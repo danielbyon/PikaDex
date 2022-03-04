@@ -16,7 +16,7 @@ def main():
     print('This is the Pokepedia Item Sprite Crawler')
 
     file_path = 'Cached/Items/Bulbapedia/'
-    image_path = 'Artwork/RawItems/Sprites'
+    image_path = 'Artwork/RawItems/Sprites/'
     
     filename = file_path + '_AllItems.html'
     url = 'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_name'
@@ -43,8 +43,6 @@ def main():
             filename = image_path + '{}.png'.format(cache_name)
             crawler.download_image(url, filename)
         
-    crawler.write_data_to_file(all_entries, "Data/BulbapediaItems")
-#    print(all_entries)
     print("Done!")
 
 if __name__ == '__main__':

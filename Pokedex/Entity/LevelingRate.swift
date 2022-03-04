@@ -14,4 +14,5 @@ public enum LevelingRate: String {
     case mediumFast
     case mediumSlow
     case slow
+    case unknown
 }

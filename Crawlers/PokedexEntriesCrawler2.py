@@ -97,7 +97,7 @@ def main():
 				
 	crawler.write_data_to_file(all_entries, "Data/PokedexEntries2")
 	
-	all_games = [u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl']
+	all_games = [u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl', u'Legends: Arceus']
 	all_vertical_entries = []
 	for pokemon_name in all_entries:
 		pokemon_entry = all_entries[pokemon_name]

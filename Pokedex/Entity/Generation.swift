@@ -35,7 +35,7 @@ public enum Generation: Int, CaseIterable {
             self = .vi
         case .sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee:
             self = .vii
-        case .sword, .shield, .brilliantDiamond, .shiningPearl:
+        case .sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus:
             self = .viii
         case .national:
             self = .all
@@ -81,7 +81,7 @@ public extension Generation {
         case .vii:
             return [.sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee]
         case .viii:
-            return [.sword, .shield, .brilliantDiamond, .shiningPearl]
+            return [.sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus]
         case .all:
             return [.national]
         }

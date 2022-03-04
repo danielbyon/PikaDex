@@ -81,6 +81,8 @@ extension Game {
             value = 1 << 32
         case .shiningPearl:
             value = 1 << 33
+        case .legendsArceus:
+            value = 1 << 34
         case .national:
             value = 0
         }

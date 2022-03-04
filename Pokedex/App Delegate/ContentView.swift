@@ -102,8 +102,10 @@ struct ContentView: View {
             BigColoredButton(title: "Types", textColor: .black, fillColor: normalItemColor)
         }
 
-        NavigationLink(destination: MachineList(title: machineListTitle, game: settings.currentGame), tag: .machines, selection: $selectedTab) {
-            BigColoredButton(title: machineListTitle, textColor: .black, fillColor: normalItemColor)
+        if settings.currentGame.hasMachines {
+            NavigationLink(destination: MachineList(title: machineListTitle, game: settings.currentGame), tag: .machines, selection: $selectedTab) {
+                BigColoredButton(title: machineListTitle, textColor: .black, fillColor: normalItemColor)
+            }
         }
 
         NavigationLink(destination: DualTypeDetail(game: settings.currentGame), tag: .dualType, selection: $selectedTab) {

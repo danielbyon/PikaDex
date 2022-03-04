@@ -8,7 +8,7 @@ MOVE_TAB_HEADER_IDS = {
 	5: ['tab-moves-11', 'tab-moves-12'],
 	6: ['tab-moves-13', 'tab-moves-14'],
 	7: ['tab-moves-15', 'tab-moves-16', 'tab-moves-17'],
-	8: ['tab-moves-18', 'tab-moves-19']
+	8: ['tab-moves-18', 'tab-moves-19', 'tab-moves-20']
 }
 
 MOVE_GAMES_FOR_TAB = {
@@ -30,7 +30,8 @@ MOVE_GAMES_FOR_TAB = {
 	'tab-moves-16': ['ultraSun', 'ultraMoon'],
 	'tab-moves-17': ['letsGoPikachu', 'letsGoEevee'],
 	'tab-moves-18': ['sword', 'shield'],
-	'tab-moves-19': ['brilliantDiamond', 'shiningPearl']
+	'tab-moves-19': ['brilliantDiamond', 'shiningPearl'],
+	'tab-moves-20': ['legendsArceus']
 }
 
 def generations_from_number(number):
@@ -111,6 +112,8 @@ def parse_game_titles(node):
 		elif title == u'Pokémon Brilliant Diamond and Shining Pearl':
 			games.append('brilliantDiamond')
 			games.append('shiningPearl')
+		elif title == u'Pokémon Legends: Arceus':
+			games.append('legendsArceus')
 	return games
 
 def parse_game_specific_values(node, all_dict, game_specific_value):

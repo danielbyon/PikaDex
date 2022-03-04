@@ -824,3 +824,27 @@ Freezing Glare
 Eerie Spell
 Thunderous Kick
 Shell Side Arm
+Take Heart
+Stone Axe
+Mystical Power
+Bitter Malice
+Esper Wing
+Shelter
+Triple Arrows
+Headlong Rush
+Wildbolt Storm
+Raging Fury
+Wave Crash
+Mountain Gale
+Bleakwind Storm
+Infernal Parade
+Psyshield Bash
+Barb Barrage
+Ceaseless Edge
+Victory Dance
+Lunar Blessing
+Chloroblast
+Sandsear Storm
+Dire Claw
+Power Shift
+Springtide Storm

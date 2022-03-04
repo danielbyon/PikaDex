@@ -18,6 +18,7 @@ extension LevelingRate {
         case .mediumFast: return "Medium Fast"
         case .mediumSlow: return "Medium Slow"
         case .slow: return "Slow"
+        case .unknown: return "Unknown"
         }
     }
 

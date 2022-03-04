@@ -22,45 +22,49 @@ struct BattleAssistant: View {
     private var padding: CGFloat { 4.0 }
 
     var body: some View {
-        Form {
-            Section(header: SectionHeader("Pokémon")) {
-                NavigationLink(destination: SelectPokemon(game: settings.currentGame, onSelect: { pokemon in
-                    self.viewModel.pokemon = pokemon
-                    self.isShowingSelectPokemon = false
-                }), isActive: $isShowingSelectPokemon) {
-                    if let pokemon = viewModel.pokemon {
-                        PokemonCell(pokemon: pokemon, game: settings.currentGame)
-                            .onTapGesture {
-                                self.isShowingSelectPokemon.toggle()
-                        }
-                    } else {
-                        Text("Select Pokémon")
-                            .monospacedBody()
-                            .onTapGesture {
-                                self.isShowingSelectPokemon.toggle()
+        VStack {
+            NavigationLink(destination: SelectPokemon(game: settings.currentGame, onSelect: { pokemon in
+                self.viewModel.pokemon = pokemon
+            }), isActive: $isShowingSelectPokemon) {
+                EmptyView()
+            }
+            .hidden()
+            
+            List {
+                Section(header: SectionHeader("Pokémon")) {
+                    Button {
+                        self.isShowingSelectPokemon.toggle()
+                    } label: {
+                        if let pokemon = viewModel.pokemon {
+                            PokemonCell(pokemon: pokemon, game: settings.currentGame)
+                        } else {
+                            Text("Select Pokémon")
+                                .monospacedBody()
                         }
                     }
-                }
-                if viewModel.pokemon != nil {
-                    BattleAssistantLevelSlider(level: $viewModel.level)
-                }
-            }
+                    .foregroundColor(.primary)
 
-            if let pokemon = viewModel.pokemon {
-                Section {
-                    NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: settings.currentGame)) {
-                        Text("View Pokémon details")
-                            .monospacedBody()
+                    if viewModel.pokemon != nil {
+                        BattleAssistantLevelSlider(level: $viewModel.level)
                     }
                 }
 
-                BattleAssistantInfo(pokemon: pokemon, level: Int(viewModel.level))
-            } else {
-                Text("Select a Pokémon and level to view helpful info when battling.")
-                    .monospacedBody()
+                if let pokemon = viewModel.pokemon {
+                    Section {
+                        NavigationLink(destination: PokemonDetail(pokemon: pokemon, game: settings.currentGame)) {
+                            Text("View Pokémon details")
+                                .monospacedBody()
+                        }
+                    }
+
+                    BattleAssistantInfo(pokemon: pokemon, level: Int(viewModel.level))
+                } else {
+                    Text("Select a Pokémon and level to view helpful info when battling.")
+                        .monospacedBody()
+                }
             }
+            .listStyle(GroupedListStyle())
         }
-        .listStyle(GroupedListStyle())
         .navigationTitle("Battle Assistant")
     }
 }

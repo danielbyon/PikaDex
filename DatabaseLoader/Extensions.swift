@@ -19,6 +19,7 @@ extension LevelingRate {
         case "Medium Fast": self = .mediumFast
         case "Medium Slow": self = .mediumSlow
         case "Slow": self = .slow
+        case "Unknown": self = .unknown
         default:
             return nil
         }
@@ -53,6 +54,8 @@ extension EggGroup {
 }
 
 extension Game {
+    
+    static var allGamesNewestFirstExcludingNational: [Game] { allGamesNewestFirst.filter { $0 != .national } }
 
     static func allGames(forLearnsetValue learnsetValue: String) -> [Game]? {
         switch learnsetValue {
@@ -201,6 +204,8 @@ extension Game {
         case .shield: return "Shield"
         case .brilliantDiamond: return "B.Diamond"
         case .shiningPearl: return "S.Pearl"
+            // TODO: Check in the future to see if they have Arceus-specific descriptions
+        case .legendsArceus: return pokemonDBKey(for: .sword)
         case .national: return "Sword"
         }
     }
@@ -312,6 +317,8 @@ extension Game {
                 self = .brilliantDiamond
             case "SP":
                 self = .shiningPearl
+            case "LA":
+                self = .legendsArceus
             default:
                 fatalError()
             }
@@ -399,6 +406,9 @@ extension Game {
         case "Let's Go Eevee": self = .letsGoEevee
         case "Sword": self = .sword
         case "Shield": self = .shield
+        case "Brilliant Diamond": self = .brilliantDiamond
+        case "Shining Pearl": self = .shiningPearl
+        case "Legends: Arceus": self = .legendsArceus
         case "National": self = .national
         default: return nil
         }
@@ -440,6 +450,7 @@ extension Game {
         case "shield": self = .shield
         case "brilliant diamond": self = .brilliantDiamond
         case "shining pearl": self = .shiningPearl
+        case "legends: arceus": self = .legendsArceus
         case "national": self = .national
         default: return nil
         }

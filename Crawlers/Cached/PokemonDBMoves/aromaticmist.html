@@ -5,7 +5,7 @@
 <title>Aromatic Mist | Pokémon moves | Pokémon Database</title>
 <link rel="preconnect" href="https://img.pokemondb.net">
 <style>@font-face{font-family:"Fira Sans";font-style:normal;font-weight:400;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-400.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Fira Sans";font-style:italic;font-weight:400;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-400i.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Fira Sans";font-style:normal;font-weight:700;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-600.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Fira Sans";font-style:italic;font-weight:700;font-display:swap;src:url("/static/fonts/fira-sans-v10-latin-600i.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
-<link rel="stylesheet" href="/static/css/pokemondb-6ff0864f95.css">
+<link rel="stylesheet" href="/static/css/pokemondb-e3443e2d88.css">
 <link rel="stylesheet" href="/static/css/moves-1c0f118744.css">
 <link rel="stylesheet" href="/static/css/type-chart-76998cbd3d.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
 <link rel="alternate" type="application/rss+xml" href="https://pokemondb.net/news/feed" title="The Pokémon Database newsfeed">
-<script type="text/javascript">
+<script>
 (function(){
 	var bsa_optimize=document.createElement('script');
 	bsa_optimize.defer=true;
@@ -64,9 +64,8 @@
 <li class="main-menu-hr-title">Quick links</li>
 <li><a href="/pokedex/national">National Pokédex</a></li>
 <li><a href="/pokedex/all">Pokémon list with stats</a></li>
-<li><a href="/pokedex/game/ultra-sun-ultra-moon">Ultra Sun &amp; Ultra Moon Pokédex</a></li>
-<li><a href="/pokedex/game/lets-go-pikachu-eevee">Let's Go Pikachu/Eevee Pokédex</a></li>
-<li><a href="/pokedex/game/sword-shield">Sword &amp; Shield Pokédex</a></li>
+<li><a href="/pokedex/game/brilliant-diamond-shining-pearl">BD &amp; SP Pokédex</a></li>
+<li><a href="/pokedex/game/legends-arceus">Legends: Arceus Pokédex</a></li>
 </ul>
 </li>
 <li class="main-menu-item">
@@ -81,18 +80,18 @@
 <li><a href="/ev">Effort Values (EVs)</a></li>
 <li><a href="/mechanics/natures">Natures</a></li>
 <li><a href="/mechanics/hidden">IVs/Personality</a></li>
- <li class="main-menu-hr-title">Useful tools</li>
+<li class="main-menu-hr-title">Useful tools</li>
 <li><a href="/tools/moveset-search">Moveset searcher</a></li>
 <li><a href="/tools/type-coverage">Type coverage checker</a></li>
 </ul>
 </li>
 <li class="main-menu-item">
 <a class="main-menu-heading" href="/sitemap">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="main-menu-icon img-fixed" width="24" height="24" aria-label="Game controller icon" role="img"><path fill="#a3a3a3" fill-rule="evenodd" d="M117.4 121.9c-104.8 14.6-152 142.6-82.2 222.9 48 55 131.9 62.7 187.2 17l4.6-3.8H285l4.6 3.7c55.3 45.8 139.3 38.2 187.2-17 70.2-80.6 22.4-208.6-83.1-222.9-14.8-2-261.9-2-276.2 0m42.8 52.8c2.2 2.2 2.2 2.7 2.5 29.4l.3 27.2h53.5l2.4 2.5c3.8 3.8 3.8 40.8 0 44.6l-2.4 2.4H163l-.3 27.2c-.4 35 2.2 31.7-25 31.7-27.3 0-24.7 3.3-25-31.7l-.4-27.2H59l-2.4-2.4c-3.9-3.8-3.9-40.8 0-44.6l2.4-2.5h53.4l.3-27c.4-35-1.8-32.4 26.3-32 18.3.1 19 .2 21.3 2.4m259.3 16.5a33.7 33.7 0 0 1 19.5 42.5 33.2 33.2 0 0 1-59 5.8c-16.4-26.6 9.7-58.4 39.5-48.3M352 259a33 33 0 0 1 3.7 60 32.7 32.7 0 0 1-48-27.3A32.9 32.9 0 0 1 352 259" /></svg> <span class="main-menu-title">Games</span>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="main-menu-icon img-fixed" width="24" height="24" aria-label="Game controller icon" role="img"><path fill="#a3a3a3" fill-rule="evenodd" d="M117.4 121.9c-104.8 14.6-152 142.6-82.2 222.9 48 55 131.9 62.7 187.2 17l4.6-3.8H285l4.6 3.7c55.3 45.8 139.3 38.2 187.2-17 70.2-80.6 22.4-208.6-83.1-222.9-14.8-2-261.9-2-276.2 0m42.8 52.8c2.2 2.2 2.2 2.7 2.5 29.4l.3 27.2h53.5l2.4 2.5c3.8 3.8 3.8 40.8 0 44.6l-2.4 2.4H163l-.3 27.2c-.4 35 2.2 31.7-25 31.7-27.3 0-24.7 3.3-25-31.7l-.4-27.2H59l-2.4-2.4c-3.9-3.8-3.9-40.8 0-44.6l2.4-2.5h53.4l.3-27c.4-35-1.8-32.4 26.3-32 18.3.1 19 .2 21.3 2.4m259.3 16.5a33.7 33.7 0 0 1 19.5 42.5 33.2 33.2 0 0 1-59 5.8c-16.4-26.6 9.7-58.4 39.5-48.3M352 259a33 33 0 0 1 3.7 60 32.7 32.7 0 0 1-48-27.3A32.9 32.9 0 0 1 352 259" /></svg>  <span class="main-menu-title">Games</span>
 <span class="main-menu-title-long">Pokémon games</span>
 </a>
 <ul class="main-menu-sub">
-<li><a href="/legends-arceus">Pokémon Legends: Arceus</a></li>
+<li><a href="/legends-arceus">Legends: Arceus</a></li>
 <li><a href="/brilliant-diamond-shining-pearl">Brilliant Diamond &amp; Shining Pearl</a></li>
 <li><a href="/sword-shield">Sword &amp; Shield</a></li>
 <li><a href="/go">Pokémon GO</a></li>
@@ -239,11 +238,11 @@ Their breeding groups are also shown for reference.</p>
 <footer class="main-footer">
 <div class="grid-container">
 <a class="wrap-right" href="/about#privacy">Privacy Policy</a>
-All content &amp; design &copy; Pokémon Database, 2008-2021.
-Pokémon images &amp; names &copy; 1995-2021 Nintendo/Game Freak.
+All content &amp; design &copy; Pokémon Database, 2008-2022.
+Pokémon images &amp; names &copy; 1995-2022 Nintendo/Game Freak.
 </div>
 </footer>
-<script>var localDbVersions = 211100;</script>
+<script>var localDbVersions = 220200;</script>
 <script src="/static/js/global-14d65f7e2d.js"></script>
 </body>
 </html>

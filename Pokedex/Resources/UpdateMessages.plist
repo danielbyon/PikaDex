@@ -4,15 +4,13 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
-		<string>Fixed missing move data for various Pokémon forms</string>
+		<string>Fixed evolutions not showing up in National. Pokemon detail pages will now show the most recent game&apos;s evolution data.</string>
+		<string>Fixed regional Pokédex numbers not showing in National</string>
+		<string>Fixed the Select Pokémon screen in the Battle Assistant not dismissing when a Pokémon is selected</string>
 	</array>
 	<key>newFeatures</key>
 	<array>
-		<string>Added the ability to replace a Pokémon on a team</string>
-		<string>Added the ability to manually enter a team member&apos;s stats</string>
-		<string>Show team member nickname, if there is one</string>
-		<string>Added team member detail page, for easier access to move/ability info</string>
-		<string>Added the ability to search for a team member move</string>
+		<string>Added support for Legends: Arceus</string>
 	</array>
 	<key>upcoming</key>
 	<array/>

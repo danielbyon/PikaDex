@@ -48,8 +48,21 @@ def fetch_file(filename):
     if not os.path.isfile(filename):
         return None
     
-    with open(filename, 'rU') as f:
-        return f.read()
+    try:
+        with open(filename, 'rU') as f:
+            return f.read()
+    except:
+        return None
+
+def fetch_file_lines(filename):
+    if not os.path.isfile(filename):
+        return None
+    
+    try:
+        with open(filename, 'rU') as f:
+            return f.readlines()
+    except:
+        return None
 
 def download(url):
     r = requests.get(url)
@@ -169,3 +182,4 @@ def main():
 if __name__ == '__main__':
     main()
 
+    

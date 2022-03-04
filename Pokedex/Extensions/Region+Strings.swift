@@ -19,7 +19,8 @@ extension Region {
              .unova,
              .kalos,
              .alola,
-             .galar:
+             .galar,
+             .hisui:
             return rawValue.capitalized
         case .seviiIslands:
             return "Sevii Islands"

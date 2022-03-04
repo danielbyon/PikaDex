@@ -29,9 +29,9 @@ public extension BagItemInfo {
         set { z_itemDescription = newValue }
     }
 
-    var pocket: Pocket {
-        get { Pocket(rawValue: z_pocket!)! }
-        set { z_pocket = newValue.rawValue}
+    var pocket: Pocket? {
+        get { Pocket(rawValue: z_pocket ?? "") }
+        set { z_pocket = newValue?.rawValue }
     }
 
     var item: Item {

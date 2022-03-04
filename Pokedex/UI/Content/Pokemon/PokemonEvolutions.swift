@@ -55,9 +55,19 @@ private struct PokemonEvolution: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             HStack {
-                Text(evolution.from.name)
-                    .monospacedBody()
-                    .multilineTextAlignment(.leading)
+                Group {
+                    if evolution.from.name == evolution.from.pokemon.name {
+                        Text(evolution.from.pokemon.name)
+                    } else {
+                        VStack(alignment: .leading) {
+                            Text(evolution.from.pokemon.name)
+                            Text(evolution.from.name)
+                                .monospacedCaption()
+                        }
+                    }
+                }
+                .monospacedBody()
+                .multilineTextAlignment(.leading)
                 Spacer()
             }
             HStack(spacing: 0) {
@@ -94,9 +104,19 @@ private struct PokemonEvolution: View {
             }
             HStack {
                 Spacer()
-                Text(evolution.to.name)
-                    .monospacedBody()
-                    .multilineTextAlignment(.trailing)
+                Group {
+                    if evolution.to.name == evolution.to.pokemon.name {
+                        Text(evolution.to.pokemon.name)
+                    } else {
+                        VStack(alignment: .leading) {
+                            Text(evolution.to.pokemon.name)
+                            Text(evolution.to.name)
+                                .monospacedCaption()
+                        }
+                    }
+                }
+                .monospacedBody()
+                .multilineTextAlignment(.leading)
             }
             if let conditionInfo = evolution.conditionInfo {
                 Divider()
