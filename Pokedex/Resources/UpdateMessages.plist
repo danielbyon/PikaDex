@@ -4,6 +4,8 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
+		<string>Fixed crash when selecting a Pokemon evolution on the National section</string>
+		<string>Fixed issue where purchasing All Switch Games did not unlock Legends: Arceus</string>
 		<string>Fixed evolutions not showing up in National. Pokemon detail pages will now show the most recent game&apos;s evolution data.</string>
 		<string>Fixed regional Pokédex numbers not showing in National</string>
 		<string>Fixed the Select Pokémon screen in the Battle Assistant not dismissing when a Pokémon is selected</string>
