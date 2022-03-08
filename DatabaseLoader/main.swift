@@ -1469,7 +1469,7 @@ for dict in Helper.loadTSV(from: "Research/Berries.tsv") {
 }
 
 func latestItem(_ items: [Game: Item]) -> Item? {
-    var gameCandidates = Game.allGamesNewestFirst
+    var gameCandidates = Game.allGamesNewestFirstExcludingNational
     gameCandidates.removeAll { $0 == .national }
     for game in gameCandidates {
         if let matchingItem = items[game] {
@@ -1509,9 +1509,9 @@ func makeItemCopy(source: Item) -> Item {
     return copy
 }
 
-// Copy items to national, using sword data
+// Copy items to national, using latest data
 for (_, gameToItem) in allItems {
-    guard let source = gameToItem[.sword] else { continue }
+    guard let source = latestItem(gameToItem) else { continue }
 
     let copy = makeItemCopy(source: source)
     copy.game = .national
@@ -1659,33 +1659,43 @@ for dict in Helper.loadTSV(from: "Research/Evolutions.tsv") {
     var games = !gameFilter.isEmpty ? gameFilter : Array(basePokemons.keys).filter { $0 != .national }
     games = games.filter { !excludeGames.contains($0) }
 
-    for game in games {
-        let basePokemon = basePokemons[game]!
-        guard let targetPokemon = targetPokemons[game] else {
-            print("No target for \(basePokemon.name) in game \(game)")
-            continue
-        }
-
-        guard let baseForm = baseFormName == "" ? basePokemon.forms.first : basePokemon.forms.first(where: { $0.name == baseFormName }),
-            let targetForm = targetFormName == "" ? targetPokemon.forms.first : targetPokemon.forms.first(where: { $0.name == targetFormName }) else {
-                continue
-        }
-
-        let evolution = Evolution(context: moc)
-        evolution.familyName = familyName
-        evolution.from = baseForm
-        evolution.to = targetForm
-        evolution.method = evolutionMethod(for: methodName, data: methodData, game: game)
-        evolution.condition = evolutionCondition(for: requirementName, data: requirementData, game: game)
-
-        let key = familyName
-        if var existingEvolutions = allEvolutions[key] {
-            var existingPerGame = existingEvolutions[game] ?? []
-            existingPerGame.append(evolution)
-            existingEvolutions[game] = existingPerGame
-            allEvolutions[key] = existingEvolutions
-        } else {
-            allEvolutions[key] = [game: [evolution]]
+    for game in games.sorted(by: >) { // Go in reverse game order, so we copy the latest data over to national
+        [game, .national].forEach {
+            let basePokemon = basePokemons[$0]!
+            guard let targetPokemon = targetPokemons[$0] else {
+                print("No target for \(basePokemon.name) in game \($0)")
+                return
+            }
+            
+            guard let baseForm = baseFormName == "" ? basePokemon.forms.first : basePokemon.forms.first(where: { $0.name == baseFormName }),
+                  let targetForm = targetFormName == "" ? targetPokemon.forms.first : targetPokemon.forms.first(where: { $0.name == targetFormName }) else {
+                      return
+                  }
+            
+            let evolution = Evolution(context: moc)
+            evolution.familyName = familyName
+            evolution.from = baseForm
+            evolution.to = targetForm
+            evolution.method = evolutionMethod(for: methodName, data: methodData, game: $0)
+            evolution.condition = evolutionCondition(for: requirementName, data: requirementData, game: $0)
+            
+            let key = familyName
+            if var existingEvolutions = allEvolutions[key] {
+                var existingPerGame = existingEvolutions[$0] ?? []
+                
+                if $0 == .national {
+                    // Prevent adding duplicate entries for national
+                    guard !existingPerGame.contains(where: { existing in
+                        existing.from.name == evolution.from.name && existing.to.name == evolution.to.name
+                    }) else { return }
+                }
+                
+                existingPerGame.append(evolution)
+                existingEvolutions[$0] = existingPerGame
+                allEvolutions[key] = existingEvolutions
+            } else {
+                allEvolutions[key] = [$0: [evolution]]
+            }
         }
     }
 }
@@ -1694,11 +1704,7 @@ allPokemon.values
     .flatMap { $0.values }
     .flatMap { $0.forms }
     .forEach { form in
-        if form.game == .national {
-            form.evolutions = latestEvolutionForNational(familyName: form.familyName)
-        } else {
-            form.evolutions = allEvolutions[form.familyName]?[form.game]
-        }
+        form.evolutions = allEvolutions[form.familyName]?[form.game]
     }
 
 
