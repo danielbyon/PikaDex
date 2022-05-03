@@ -607,60 +607,85 @@ for dict in Helper.loadTSV(from: "Research/PokemonForms.tsv") {
 // Copy latest available PokemonForm to national
 func latestPokemon(_ pokemons: [Game: StoredPokemon]) -> StoredPokemon? {
     var gameCandidates = Game.allGamesNewestFirst
-    gameCandidates.removeAll { $0 == .national }
+    gameCandidates.removeAll { $0 == .national || $0 == .legendsArceus }
     for game in gameCandidates {
         if let matchingPokemon = pokemons[game],
            !matchingPokemon.forms.isEmpty {
             return matchingPokemon
         }
     }
-    return nil
+    
+    // fallback to arceus
+    return pokemons[.legendsArceus]
+}
+func makeNationalPokemonForm(from sourceForm: PokemonForm) -> PokemonForm {
+    let nationalForm = PokemonForm(context: moc)
+    nationalForm.name = sourceForm.name
+    nationalForm.index = sourceForm.index
+    nationalForm.formIndex = sourceForm.formIndex
+    nationalForm.pokemonIndex = sourceForm.pokemonIndex
+    nationalForm.i_pokemonNameIndex = sourceForm.i_pokemonNameIndex
+    nationalForm.game = .national
+    nationalForm.familyName = sourceForm.familyName
+    nationalForm.species = sourceForm.species
+    nationalForm.primaryType = sourceForm.primaryType
+    nationalForm.secondaryType = sourceForm.secondaryType
+    nationalForm.color = sourceForm.color
+    nationalForm.pokedexEntry = sourceForm.pokedexEntry
+    nationalForm.heightInMeters = sourceForm.heightInMeters
+    nationalForm.weightInKilograms = sourceForm.weightInKilograms
+    nationalForm.baseExperienceYield = sourceForm.baseExperienceYield
+    nationalForm.baseFriendship = sourceForm.baseFriendship
+    
+    nationalForm.primaryAbility = sourceForm.primaryAbility
+    nationalForm.secondaryAbility = sourceForm.secondaryAbility
+    nationalForm.hiddenAbility = sourceForm.hiddenAbility
+    
+    let baseStats = Stats(context: moc)
+    baseStats.hp = sourceForm.baseStats.hp
+    baseStats.attack = sourceForm.baseStats.attack
+    baseStats.defense = sourceForm.baseStats.defense
+    baseStats.specialAttack = sourceForm.baseStats.specialAttack
+    baseStats.specialDefense = sourceForm.baseStats.specialDefense
+    baseStats.speed = sourceForm.baseStats.speed
+    nationalForm.baseStats = baseStats
+    
+    let evYield = Stats(context: moc)
+    evYield.hp = sourceForm.evYield.hp
+    evYield.attack = sourceForm.evYield.attack
+    evYield.defense = sourceForm.evYield.defense
+    evYield.specialAttack = sourceForm.evYield.specialAttack
+    evYield.specialDefense = sourceForm.evYield.specialDefense
+    evYield.speed = sourceForm.evYield.speed
+    nationalForm.evYield = evYield
+
+    return nationalForm
 }
 func copyPokemonForms(from source: StoredPokemon, to destination: StoredPokemon) {
     let sourceForms = source.forms
     var destinationForms: [PokemonForm] = []
 
     for sourceForm in sourceForms {
-        let nationalForm = PokemonForm(context: moc)
-        nationalForm.name = sourceForm.name
-        nationalForm.index = sourceForm.index
-        nationalForm.formIndex = sourceForm.formIndex
-        nationalForm.pokemonIndex = sourceForm.pokemonIndex
-        nationalForm.i_pokemonNameIndex = sourceForm.i_pokemonNameIndex
-        nationalForm.game = .national
-        nationalForm.familyName = sourceForm.familyName
-        nationalForm.species = sourceForm.species
-        nationalForm.primaryType = sourceForm.primaryType
-        nationalForm.secondaryType = sourceForm.secondaryType
-        nationalForm.color = sourceForm.color
-        nationalForm.pokedexEntry = sourceForm.pokedexEntry
-        nationalForm.heightInMeters = sourceForm.heightInMeters
-        nationalForm.weightInKilograms = sourceForm.weightInKilograms
-        nationalForm.baseExperienceYield = sourceForm.baseExperienceYield
-        nationalForm.baseFriendship = sourceForm.baseFriendship
-
-        nationalForm.primaryAbility = sourceForm.primaryAbility
-        nationalForm.secondaryAbility = sourceForm.secondaryAbility
-        nationalForm.hiddenAbility = sourceForm.hiddenAbility
-
-        let baseStats = Stats(context: moc)
-        baseStats.hp = sourceForm.baseStats.hp
-        baseStats.attack = sourceForm.baseStats.attack
-        baseStats.defense = sourceForm.baseStats.defense
-        baseStats.specialAttack = sourceForm.baseStats.specialAttack
-        baseStats.specialDefense = sourceForm.baseStats.specialDefense
-        baseStats.speed = sourceForm.baseStats.speed
-        nationalForm.baseStats = baseStats
-
-        let evYield = Stats(context: moc)
-        evYield.hp = sourceForm.evYield.hp
-        evYield.attack = sourceForm.evYield.attack
-        evYield.defense = sourceForm.evYield.defense
-        evYield.specialAttack = sourceForm.evYield.specialAttack
-        evYield.specialDefense = sourceForm.evYield.specialDefense
-        evYield.speed = sourceForm.evYield.speed
-        nationalForm.evYield = evYield
-
+        let nationalForm = makeNationalPokemonForm(from: sourceForm)
+        destinationForms.append(nationalForm)
+    }
+    destination.forms = destinationForms
+}
+func copyLegendsArceusForms(from source: StoredPokemon, to destination: StoredPokemon) {
+    let sourceForms = source.forms
+    var destinationForms = destination.forms
+    
+    for sourceForm in sourceForms {
+        guard sourceForm.name.lowercased().contains("hisuian")
+                && !destinationForms.contains(where: { $0.name == sourceForm.name }) else { continue }
+        let nationalForm = makeNationalPokemonForm(from: sourceForm)
+        
+        // Modify the form index to be the current count (making it +1). We need to manually
+        // compensate here, because we're adding the Hisuian form on top of what's already been
+        // added from the latest set of forms, so if we didn't change the form index, it would
+        // be off.
+        nationalForm.formIndex = destinationForms.count
+        
         destinationForms.append(nationalForm)
     }
     destination.forms = destinationForms
@@ -670,6 +695,10 @@ for (_, pokemons) in allPokemon {
     guard let latestPokemon = latestPokemon(pokemons) else { continue }
     let nationalPokemon = pokemons[.national]!
     copyPokemonForms(from: latestPokemon, to: nationalPokemon)
+    
+    if let legendsArceusPokemon = pokemons[.legendsArceus] {
+        copyLegendsArceusForms(from: legendsArceusPokemon, to: nationalPokemon)
+    }
 }
 
 
@@ -970,48 +999,58 @@ for (game, pokemon) in allPokemon.flatMap({ $0.value }) {
     }
 }
 
+func copyMoves(from latestForm: PokemonForm, to nationalForm: PokemonForm) {
+    // Level
+    if let latestLearnsetLevel = latestForm.z_learnsetLevel {
+        for source in latestLearnsetLevel.allObjects as! [LevelLearnsetEntry] {
+            let destination = LevelLearnsetEntry(context: moc)
+            destination.form = nationalForm
+            destination.level = source.level
+            destination.move = getMove(forName: source.move.name, game: .national)!
+        }
+    }
+    
+    // Machine
+    if let latestLearnsetMachine = latestForm.z_learnsetMachine {
+        for source in latestLearnsetMachine.allObjects as! [MachineLearnsetEntry] {
+            let destination = MachineLearnsetEntry(context: moc)
+            destination.form = nationalForm
+            destination.machine = source.machine
+        }
+    }
+    
+    // Breeding
+    if let latestLearnsetBreeding = latestForm.z_learnsetBreeding {
+        for source in latestLearnsetBreeding.allObjects as! [BreedLearnsetEntry] {
+            let destination = BreedLearnsetEntry(context: moc)
+            destination.form = nationalForm
+            destination.move = getMove(forName: source.move.name, game: .national)!
+            destination.fathers = source.fathers
+        }
+    }
+    
+    // Tutoring
+    if let latestLearnsetTutoring = latestForm.z_learnsetTutoring {
+        for source in latestLearnsetTutoring.allObjects as! [TutorLearnsetEntry] {
+            let destination = TutorLearnsetEntry(context: moc)
+            destination.form = nationalForm
+            destination.move = getMove(forName: source.move.name, game: .national)!
+        }
+    }
+}
 
 // Copy moves to national
 for (_, gameToPokemon) in allPokemonByName {
     guard let latest = latestPokemon(gameToPokemon),
           let national = gameToPokemon[.national] else { fatalError("wtf") }
     for (latestForm, nationalForm) in zip(latest.forms, national.forms) {
-        // Level
-        if let latestLearnsetLevel = latestForm.z_learnsetLevel {
-            for source in latestLearnsetLevel.allObjects as! [LevelLearnsetEntry] {
-                let destination = LevelLearnsetEntry(context: moc)
-                destination.form = nationalForm
-                destination.level = source.level
-                destination.move = getMove(forName: source.move.name, game: .national)!
-            }
-        }
-
-        // Machine
-        if let latestLearnsetMachine = latestForm.z_learnsetMachine {
-            for source in latestLearnsetMachine.allObjects as! [MachineLearnsetEntry] {
-                let destination = MachineLearnsetEntry(context: moc)
-                destination.form = nationalForm
-                destination.machine = source.machine
-            }
-        }
-
-        // Breeding
-        if let latestLearnsetBreeding = latestForm.z_learnsetBreeding {
-            for source in latestLearnsetBreeding.allObjects as! [BreedLearnsetEntry] {
-                let destination = BreedLearnsetEntry(context: moc)
-                destination.form = nationalForm
-                destination.move = getMove(forName: source.move.name, game: .national)!
-                destination.fathers = source.fathers
-            }
-        }
-
-        // Tutoring
-        if let latestLearnsetTutoring = latestForm.z_learnsetTutoring {
-            for source in latestLearnsetTutoring.allObjects as! [TutorLearnsetEntry] {
-                let destination = TutorLearnsetEntry(context: moc)
-                destination.form = nationalForm
-                destination.move = getMove(forName: source.move.name, game: .national)!
-            }
+        copyMoves(from: latestForm, to: nationalForm)
+    }
+    
+    if let legendsArceusPokemon = gameToPokemon[.legendsArceus], legendsArceusPokemon !== latest {
+        for legendsArceusForm in legendsArceusPokemon.forms where legendsArceusForm.name.lowercased().contains("hisuian") {
+            guard let nationalForm = national.forms.first(where: { $0.name == legendsArceusForm.name }) else { continue }
+            copyMoves(from: legendsArceusForm, to: nationalForm)
         }
     }
 }
