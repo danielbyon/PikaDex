@@ -8,7 +8,7 @@ Fire Punch
 Ice Punch
 Thunder Punch
 Scratch
-Vice Grip
+Vise Grip
 Guillotine
 Razor Wind
 Swords Dance
@@ -794,57 +794,90 @@ False Surrender
 Meteor Assault
 Eternabeam
 Steel Beam
+Expanding Force
+Steel Roller
+Scale Shot
+Meteor Beam
+Shell Side Arm
+Misty Explosion
+Grassy Glide
+Rising Voltage
+Terrain Pulse
+Skitter Smack
+Burning Jealousy
+Lash Out
+Poltergeist
+Corrosive Gas
+Coaching
+Flip Turn
+Triple Axel
+Dual Wingbeat
+Scorching Sands
 Jungle Healing
 Wicked Blow
-Coaching
-Grassy Glide
-Lash Out
-Rising Voltage
-Poltergeist
-Skitter Smack
-Dual Wingbeat
-Meteor Beam
-Burning Jealousy
-Scale Shot
-Triple Axel
-Expanding Force
-Corrosive Gas
-Terrain Pulse
-Steel Roller
-Flip Turn
-Misty Explosion
-Scorching Sands
-Astral Barrage
-Glacial Lance
-Dragon Energy
-Thunder Cage
-Fiery Wrath
 Surging Strikes
+Thunder Cage
+Dragon Energy
 Freezing Glare
-Eerie Spell
+Fiery Wrath
 Thunderous Kick
-Shell Side Arm
-Take Heart
+Glacial Lance
+Astral Barrage
+Eerie Spell
+Dire Claw
+Psyshield Bash
+Power Shift
 Stone Axe
+Springtide Storm
 Mystical Power
-Bitter Malice
-Esper Wing
-Shelter
-Triple Arrows
-Headlong Rush
-Wildbolt Storm
 Raging Fury
 Wave Crash
-Mountain Gale
-Bleakwind Storm
-Infernal Parade
-Psyshield Bash
-Barb Barrage
-Ceaseless Edge
-Victory Dance
-Lunar Blessing
 Chloroblast
+Mountain Gale
+Victory Dance
+Headlong Rush
+Barb Barrage
+Esper Wing
+Bitter Malice
+Shelter
+Triple Arrows
+Infernal Parade
+Ceaseless Edge
+Bleakwind Storm
+Wildbolt Storm
 Sandsear Storm
-Dire Claw
-Power Shift
-Springtide Storm
+Lunar Blessing
+Take Heart
+G-Max Wildfire
+G-Max Befuddle
+G-Max Volt Crash
+G-Max Gold Rush
+G-Max Chi Strike
+G-Max Terror
+G-Max Resonance
+G-Max Cuddle
+G-Max Replenish
+G-Max Malodor
+G-Max Stonesurge
+G-Max Wind Rage
+G-Max Stun Shock
+G-Max Finale
+G-Max Depletion
+G-Max Gravitas
+G-Max Volcalith
+G-Max Sandblast
+G-Max Snooze
+G-Max Tartness
+G-Max Sweetness
+G-Max Smite
+G-Max Steelsurge
+G-Max Meltdown
+G-Max Foam Burst
+G-Max Centiferno
+G-Max Vine Lash
+G-Max Cannonade
+G-Max Drum Solo
+G-Max Fireball
+G-Max Hydrosnipe
+G-Max One Blow
+G-Max Rapid Flow

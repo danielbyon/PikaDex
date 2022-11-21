@@ -82,7 +82,8 @@ def process_file(key, contents):
                 if pokemon == "000":
                     pokemons = []
                     break
-                pokemons.append(pokemon)
+                if pokemon not in pokemons:
+                    pokemons.append(pokemon)
 
             if len(pokemons) == 0:
                 continue
@@ -132,7 +133,7 @@ def main():
 
                 entries = process_file(key, contents)
                 pokemon_entries[key] = entries
-            
+                
             if not pokemon_entries:
                 print(u"Empty entries for {}".format(pokemon))
                 sys.exit(1)

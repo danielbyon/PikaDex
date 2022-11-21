@@ -14,7 +14,9 @@ def main():
             pokemon = line.strip().replace(' ', '_').rstrip('.')
 
             entries = {}
-            entries["Bulbapedia"] = "http://bulbapedia.bulbagarden.net/wiki/" + pokemon + "_(Pokemon)"
+            url = "https://bulbapedia.bulbagarden.net/wiki/" + pokemon + "_(Pokémon)"
+            print(url)
+            entries["Bulbapedia"] = "https://bulbapedia.bulbagarden.net/wiki/" + pokemon + "_(Pokemon)"
             all_entries[line.strip()] = entries
 
     crawler.write_data_to_file(all_entries, "Data/ExternalLinks")

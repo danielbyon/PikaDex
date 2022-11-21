@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PokedexCore
 
 struct BulbapediaItem: Decodable {
 
@@ -102,5 +103,3 @@ struct BulbapediaBerry: Decodable {
     var berrySour: Int16? { sour != nil ? Int16(sour!)! : nil }
 
 }
-
-extension Pocket: Decodable { }

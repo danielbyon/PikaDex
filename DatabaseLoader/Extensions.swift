@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PokedexCore
 
 // MARK: - Extensions
 extension LevelingRate {
@@ -55,8 +56,6 @@ extension EggGroup {
 
 extension Game {
     
-    static var allGamesNewestFirstExcludingNational: [Game] { allGamesNewestFirst.filter { $0 != .national } }
-
     static func allGames(forLearnsetValue learnsetValue: String) -> [Game]? {
         switch learnsetValue {
         case "gen1": return Generation.i.games

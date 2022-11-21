@@ -16,35 +16,36 @@ struct GameSelector: View {
     @State private var isShowingStore = false
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(Generation.allCases.reversed()) { generation in
-                    Section(header: SectionHeader(generation.title)) {
-                        ForEach(generation.games) { game in
-                            GameSelectorCell(game: game, currentGame: self.settings.currentGame).onTapGesture {
-                                if self.allowsSelection(for: game) {
-                                    self.settings.currentGame = game
-                                    self.presentationMode.wrappedValue.dismiss()
-                                } else {
-                                    self.isShowingStore.toggle()
-                                }
+        List {
+            ForEach(Generation.allCases.reversed()) { generation in
+                Section {
+                    ForEach(generation.games) { game in
+                        GameSelectorCell(game: game, currentGame: self.settings.currentGame).onTapGesture {
+                            if self.allowsSelection(for: game) {
+                                self.settings.currentGame = game
+                                self.presentationMode.wrappedValue.dismiss()
+                            } else {
+                                self.isShowingStore.toggle()
                             }
                         }
                     }
+                } header: {
+                    SectionHeader(generation.title)
                 }
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Choose Game")
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    DoneButton(action: dismiss)
-                }
+        }
+        .listStyle(GroupedListStyle())
+        .navigationTitle("Choose Game")
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                DoneButton(action: dismiss)
             }
-            .sheet(isPresented: $isShowingStore) {
+        }
+        .sheet(isPresented: $isShowingStore) {
+            NavigationStack {
                 Store()
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     private func dismiss() {

@@ -46,7 +46,7 @@ struct UpdateMessageView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 section(name: "New Features", entries: viewModel.newFeatures)
                 section(name: "Bug Fixes", entries: viewModel.bugFixes)
@@ -62,7 +62,6 @@ struct UpdateMessageView: View {
             }
             .navigationTitle(title)
         }
-        .navigationViewStyle(.stack)
     }
 
     @ViewBuilder
@@ -81,7 +80,7 @@ struct UpdateMessageView: View {
 
 struct UpdateMessage_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             UpdateMessageView()
         }
     }

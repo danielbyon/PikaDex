@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import PokedexCore
 
 // MARK: - Core Data
 private class PersistentContainer: NSPersistentContainer {
@@ -15,7 +16,7 @@ private class PersistentContainer: NSPersistentContainer {
     override class func defaultDirectoryURL() -> URL {
         let configURL = Bundle.main.url(forResource: "Config", withExtension: "txt")!
         let config = try! String(contentsOf: configURL, encoding: .utf8).replacingOccurrences(of: "\n", with: "")
-        let directoryURL = URL(fileURLWithPath: config, isDirectory: true).appendingPathComponent("Pokedex/Resources/Database", isDirectory: true)
+        let directoryURL = URL(fileURLWithPath: config, isDirectory: true).appendingPathComponent("PokedexPackages/Sources/PokedexCore/Resources/Database", isDirectory: true)
         try! FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true, attributes: nil)
         return directoryURL
     }
@@ -23,9 +24,9 @@ private class PersistentContainer: NSPersistentContainer {
 }
 
 extension Helper {
-    
+
     static func loadContainer(removeExistingContainer: Bool = true) -> NSPersistentContainer {
-        let model = NSManagedObjectModel(contentsOf: Bundle.main.url(forResource: "Pokedex", withExtension: "momd")!)!
+        let model = NSManagedObjectModel(contentsOf: Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "momd")!)!
         var container = PersistentContainer(name: "Pokedex", managedObjectModel: model)
 
         if removeExistingContainer {
@@ -33,7 +34,7 @@ extension Helper {
             try! container.persistentStoreCoordinator.destroyPersistentStore(at: url, ofType: NSSQLiteStoreType, options: nil)
             container = PersistentContainer(name: "Pokedex", managedObjectModel: model)
         }
-        
+
         container.loadPersistentStores { (description, error) in
             print(description.configuration ?? "")
             print(description.options)
@@ -70,14 +71,11 @@ extension Helper {
 //                .replacingOccurrences(of: "\"", with: "")
         }
 
-        guard let fileURL = Bundle.main.url(forResource: filename, withExtension: nil),
-            let file = try? String(contentsOf: fileURL) else {
-                print("Failed to read \(filename) file")
-                return []
-        }
+        let fileURL = Bundle.main.url(forResource: filename, withExtension: nil)!
+        let file = try! String(contentsOf: fileURL)
 
         let lines = file.replacingOccurrences(of: "\r", with: "\n").replacingOccurrences(of: "\n\n", with: "\n").components(separatedBy: .newlines)
-        guard lines.count > 1 else { return [] }
+        assert(lines.count > 1)
 
         var retVal = [[String: String]]()
         retVal.reserveCapacity(lines.count)
@@ -96,6 +94,21 @@ extension Helper {
         }
 
         return retVal
+    }
+
+    static func loadExternalLinksTSV(from filename: String) -> [String: [String: String]] {
+        let file = Helper.loadTSV(from: filename)
+        var retVal: [String: [String: String]] = [:]
+        for dict in file {
+            let name = dict["name"]!
+            retVal[sanitizedMoveName(name)] = dict
+        }
+        return retVal
+    }
+
+    static func sanitizedURL(from string: String) -> URL? {
+        let components = URLComponents(string: string)
+        return components?.url
     }
 
 }

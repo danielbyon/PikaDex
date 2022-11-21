@@ -19,7 +19,7 @@ final class WidgetAdapter {
 
     init(notificationCenter: NotificationCenter = .default) {
         self.notificationCenter = notificationCenter
-        notificationCenter.publisher(for: TeamBuilderViewModel.teamsUpdatedNotification)
+        notificationCenter.publisher(for: .teamsUpdated)
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] _ in
                 self.scheduleWidgetUpdate()

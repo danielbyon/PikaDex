@@ -9,30 +9,26 @@
 import SwiftUI
 import Combine
 import AppSupport
+import PokedexCore
 
-final class AppSettings: ObservableObject {
+public final class AppSettings: ObservableObject {
 
-    @AppGroupStorage(key: "com.danielbyon.pokedex.currentGame") var currentGame: Game = .sword {
+    @AppGroupStorage(key: "com.danielbyon.pokedex.currentGame") public var currentGame: Game = .sword {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @AppGroupStorage(key: "shouldUseMetersForHeight") var shouldUseMetersForHeight = true {
+    @AppGroupStorage(key: "shouldUseMetersForHeight") public var shouldUseMetersForHeight = true {
         willSet {
             objectWillChange.send()
         }
     }
 
-    @AppGroupStorage(key: "shouldUseKilogramsForWeight") var shouldUseKilogramsForWeight = true {
+    @AppGroupStorage(key: "shouldUseKilogramsForWeight") public var shouldUseKilogramsForWeight = true {
         willSet {
             objectWillChange.send()
         }
     }
-
-    private var subscription: AnyCancellable?
-
-    private static let shouldUseMetersForHeightKey = "shouldUseMetersForHeight"
-    private static let shouldUseKilogramsForWeightKey = "shouldUseKilogramsForWeight"
 
 }

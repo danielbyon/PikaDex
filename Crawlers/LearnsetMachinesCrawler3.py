@@ -67,7 +67,7 @@ def process_file(contents, generation, pokemon_name):
 			if div is None or div.name != 'div':
 				continue
 			
-			if div['class'] == ['tabset-moves-game-form', 'tabs-wrapper']:
+			if 'tabset-moves-game-form' in div['class'] or 'tabs-wrapper' in div['class'] or 'sv-tabs-wrapper' in div['class']:
 				form_names = []
 				tab_list = div.div
 				for tab in tab_list.find_all('a'):
@@ -112,7 +112,7 @@ def main():
 			continue
 			
 		print('Processing {}'.format(name))
-			
+
 		pokemon_entries = {}
 		
 		generations = pdb.generations_from_number(int(number))

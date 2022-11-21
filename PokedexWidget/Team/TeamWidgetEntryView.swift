@@ -8,6 +8,7 @@
 
 import WidgetKit
 import SwiftUI
+import PokedexUI
 
 struct TeamWidgetEntryView : View {
     var entry: TeamProvider.Entry

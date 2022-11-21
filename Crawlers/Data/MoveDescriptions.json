@@ -883,6 +883,7 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "barbbarrage": {},
   "barrage": {
     "Gold": "Throws orbs to hit 2-5 times.",
     "Silver": "Throws orbs to hit 2-5 times.",
@@ -1195,6 +1196,7 @@
     "B.Diamond": "The target is bitten with viciously sharp fangs. This may also make the target flinch.",
     "S.Pearl": "The target is bitten with viciously sharp fangs. This may also make the target flinch."
   },
+  "bittermalice": {},
   "blackholeeclipse": {
     "Sun": "The user gathers dark energy using its Z-Power and sucks the target into it. The power varies, depending on the original move.",
     "Moon": "The user gathers dark energy using its Z-Power and sucks the target into it. The power varies, depending on the original move.",
@@ -1261,6 +1263,7 @@
     "B.Diamond": "The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn.",
     "S.Pearl": "The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn."
   },
+  "bleakwindstorm": {},
   "blizzard": {
     "Gold": "An attack that may freeze the foe.",
     "Silver": "An attack that may freeze the foe.",
@@ -1891,6 +1894,10 @@
     "B.Diamond": "To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type.",
     "S.Pearl": "To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type."
   },
+  "burningjealousy": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "buzzybuzz": {
     "L.G. Pikachu": "The user shoots a jolt of electricity to attack the target. This also leaves the target with paralysis.",
     "L.G. Eevee": "The user shoots a jolt of electricity to attack the target. This also leaves the target with paralysis.",
@@ -1990,6 +1997,7 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "ceaselessedge": {},
   "celebrate": {
     "X": "The Pok\u00e9mon congratulates you on your special day!",
     "Y": "The Pok\u00e9mon congratulates you on your special day!",
@@ -2127,6 +2135,7 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "chloroblast": {},
   "circlethrow": {
     "Black": "The user throws the target and drags out another Pok\u00e9mon in its party. In the wild, the battle ends.",
     "White": "The user throws the target and drags out another Pok\u00e9mon in its party. In the wild, the battle ends.",
@@ -2244,6 +2253,10 @@
     "Shield": "The user fights the target up close without guarding itself. This also lowers the user\u2019s Defense and Sp. Def stats.",
     "B.Diamond": "The user fights the target up close without guarding itself. This also lowers the user\u2019s Defense and Sp. Def stats.",
     "S.Pearl": "The user fights the target up close without guarding itself. This also lowers the user\u2019s Defense and Sp. Def stats."
+  },
+  "coaching": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
   "coil": {
     "Black": "The user coils up and concentrates. This raises its Attack and Defense stats as well as its accuracy.",
@@ -2523,6 +2536,10 @@
     "Ultra Moon": "The user spins very fast and rams into the target with the full force of its Z-Power. The power varies, depending on the original move.",
     "Sword": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "Shield": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
+  "corrosivegas": {
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
@@ -3197,6 +3214,7 @@
     "B.Diamond": "The user burrows into the ground, then attacks on the next turn. It can also be used to exit dungeons.",
     "S.Pearl": "The user burrows into the ground, then attacks on the next turn. It can also be used to exit dungeons."
   },
+  "direclaw": {},
   "disable": {
     "Gold": "Disables the foe\u2019s most recent move.",
     "Silver": "Disables the foe\u2019s most recent move.",
@@ -3911,6 +3929,10 @@
     "B.Diamond": "The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row.",
     "S.Pearl": "The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row."
   },
+  "dualwingbeat": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "dynamaxcannon": {
     "Sword": "The user unleashes a strong beam from its core. This move deals twice the damage if the target is Dynamaxed.",
     "Shield": "The user unleashes a strong beam from its core. This move deals twice the damage if the target is Dynamaxed.",
@@ -4356,9 +4378,14 @@
     "B.Diamond": "The user attacks opposing Pok\u00e9mon with explosive fury. The lower the user\u2019s HP, the lower the move\u2019s power.",
     "S.Pearl": "The user attacks opposing Pok\u00e9mon with explosive fury. The lower the user\u2019s HP, the lower the move\u2019s power."
   },
+  "esperwing": {},
   "eternabeam": {
     "Sword": "This is Eternatus\u2019s most powerful attack in its original form. The user can\u2019t move on the next turn.",
     "Shield": "This is Eternatus\u2019s most powerful attack in its original form. The user can\u2019t move on the next turn.",
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
+  "expandingforce": {
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
@@ -5231,6 +5258,10 @@
     "B.Diamond": "The user flings its held item at the target to attack. This move\u2019s power and effects depend on the item.",
     "S.Pearl": "The user flings its held item at the target to attack. This move\u2019s power and effects depend on the item."
   },
+  "flipturn": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "floatyfall": {
     "L.G. Pikachu": "The user floats in the air, and then dives at a steep angle to attack the target. This may also make the target flinch.",
     "L.G. Eevee": "The user floats in the air, and then dives at a steep angle to attack the target. This may also make the target flinch.",
@@ -5797,6 +5828,117 @@
     "B.Diamond": "Two turns after this move is used, a hunk of psychic energy attacks the target.",
     "S.Pearl": "Two turns after this move is used, a hunk of psychic energy attacks the target."
   },
+  "gmaxbefuddle": {
+    "Sword": "A Bug-type attack that Gigantamax Butterfree use. This move inflicts the poisoned, paralyzed, or asleep status condition on opponents.",
+    "Shield": "A Bug-type attack that Gigantamax Butterfree use. This move inflicts the poisoned, paralyzed, or asleep status condition on opponents."
+  },
+  "gmaxcannonade": {},
+  "gmaxcentiferno": {
+    "Sword": "A Fire-type attack that Gigantamax Centiskorch use. This move traps opponents in flames for four to five turns.",
+    "Shield": "A Fire-type attack that Gigantamax Centiskorch use. This move traps opponents in flames for four to five turns."
+  },
+  "gmaxchistrike": {
+    "Sword": "A Fighting-type attack that Gigantamax Machamp use. This move raises the chance of critical hits.",
+    "Shield": "A Fighting-type attack that Gigantamax Machamp use. This move raises the chance of critical hits."
+  },
+  "gmaxcuddle": {
+    "Sword": "A Normal-type attack that Gigantamax Eevee use. This move infatuates opponents.",
+    "Shield": "A Normal-type attack that Gigantamax Eevee use. This move infatuates opponents."
+  },
+  "gmaxdepletion": {
+    "Sword": "A Dragon-type attack that Gigantamax Duraludon use. Reduces the PP of the last move used.",
+    "Shield": "A Dragon-type attack that Gigantamax Duraludon use. Reduces the PP of the last move used."
+  },
+  "gmaxdrumsolo": {},
+  "gmaxfinale": {
+    "Sword": "A Fairy-type attack that Gigantamax Alcremie use. This move heals the HP of allies.",
+    "Shield": "A Fairy-type attack that Gigantamax Alcremie use. This move heals the HP of allies."
+  },
+  "gmaxfireball": {},
+  "gmaxfoamburst": {
+    "Sword": "A Water-type attack that Gigantamax Kingler use. This move harshly lowers the Speed of opponents.",
+    "Shield": "A Water-type attack that Gigantamax Kingler use. This move harshly lowers the Speed of opponents."
+  },
+  "gmaxgoldrush": {
+    "Sword": "A Normal-type attack that Gigantamax Meowth use. This move confuses opponents and also earns extra money.",
+    "Shield": "A Normal-type attack that Gigantamax Meowth use. This move confuses opponents and also earns extra money."
+  },
+  "gmaxgravitas": {
+    "Sword": "A Psychic-type attack that Gigantamax Orbeetle use. This move changes gravity for five turns.",
+    "Shield": "A Psychic-type attack that Gigantamax Orbeetle use. This move changes gravity for five turns."
+  },
+  "gmaxhydrosnipe": {},
+  "gmaxmalodor": {
+    "Sword": "A Poison-type attack that Gigantamax Garbodor use. This move poisons opponents.",
+    "Shield": "A Poison-type attack that Gigantamax Garbodor use. This move poisons opponents."
+  },
+  "gmaxmeltdown": {
+    "Sword": "A Steel-type attack that Gigantamax Melmetal use. This move makes opponents incapable of using the same move twice in a row.",
+    "Shield": "A Steel-type attack that Gigantamax Melmetal use. This move makes opponents incapable of using the same move twice in a row."
+  },
+  "gmaxoneblow": {},
+  "gmaxrapidflow": {},
+  "gmaxreplenish": {
+    "Sword": "A Normal-type attack that Gigantamax Snorlax use. This move restores Berries that have been eaten.",
+    "Shield": "A Normal-type attack that Gigantamax Snorlax use. This move restores Berries that have been eaten."
+  },
+  "gmaxresonance": {
+    "Sword": "An Ice-type attack that Gigantamax Lapras use. This move reduces the damage received for five turns.",
+    "Shield": "An Ice-type attack that Gigantamax Lapras use. This move reduces the damage received for five turns."
+  },
+  "gmaxsandblast": {
+    "Sword": "A Ground-type attack that Gigantamax Sandaconda use. Opponents are trapped in a raging sandstorm for four to five turns.",
+    "Shield": "A Ground-type attack that Gigantamax Sandaconda use. Opponents are trapped in a raging sandstorm for four to five turns."
+  },
+  "gmaxsmite": {
+    "Sword": "A Fairy-type attack that Gigantamax Hatterene use. This move confuses opponents.",
+    "Shield": "A Fairy-type attack that Gigantamax Hatterene use. This move confuses opponents."
+  },
+  "gmaxsnooze": {
+    "Sword": "A Dark-type attack that Gigantamax Grimmsnarl use. The user lets loose a huge yawn that lulls the targets into falling asleep on the next turn.",
+    "Shield": "A Dark-type attack that Gigantamax Grimmsnarl use. The user lets loose a huge yawn that lulls the targets into falling asleep on the next turn."
+  },
+  "gmaxsteelsurge": {
+    "Sword": "A Steel-type attack that Gigantamax Copperajah use. This move scatters sharp spikes around the field.",
+    "Shield": "A Steel-type attack that Gigantamax Copperajah use. This move scatters sharp spikes around the field."
+  },
+  "gmaxstonesurge": {
+    "Sword": "A Water-type attack that Gigantamax Drednaw use. This move scatters sharp rocks around the field.",
+    "Shield": "A Water-type attack that Gigantamax Drednaw use. This move scatters sharp rocks around the field."
+  },
+  "gmaxstunshock": {
+    "Sword": "An Electric-type attack that Gigantamax Toxtricity use. This move poisons or paralyzes opponents.",
+    "Shield": "An Electric-type attack that Gigantamax Toxtricity use. This move poisons or paralyzes opponents."
+  },
+  "gmaxsweetness": {
+    "Sword": "A Grass-type attack that Gigantamax Appletun use. This move heals the status conditions of allies.",
+    "Shield": "A Grass-type attack that Gigantamax Appletun use. This move heals the status conditions of allies."
+  },
+  "gmaxtartness": {
+    "Sword": "A Grass-type attack that Gigantamax Flapple use. This move reduces the opponents\u2019 evasiveness.",
+    "Shield": "A Grass-type attack that Gigantamax Flapple use. This move reduces the opponents\u2019 evasiveness."
+  },
+  "gmaxterror": {
+    "Sword": "A Ghost-type attack that Gigantamax Gengar use. This Pok\u00e9mon steps on the opposing Pok\u00e9mon\u2019s shadow to prevent them from escaping.",
+    "Shield": "A Ghost-type attack that Gigantamax Gengar use. This Pok\u00e9mon steps on the opposing Pok\u00e9mon\u2019s shadow to prevent them from escaping."
+  },
+  "gmaxvinelash": {},
+  "gmaxvolcalith": {
+    "Sword": "A Rock-type attack that Gigantamax Coalossal use. This move continues to deal damage to opponents for four turns.",
+    "Shield": "A Rock-type attack that Gigantamax Coalossal use. This move continues to deal damage to opponents for four turns."
+  },
+  "gmaxvoltcrash": {
+    "Sword": "An Electric-type attack that Gigantamax Pikachu use. This move paralyzes opponents.",
+    "Shield": "An Electric-type attack that Gigantamax Pikachu use. This move paralyzes opponents."
+  },
+  "gmaxwildfire": {
+    "Sword": "A Fire-type attack that Gigantamax Charizard use. This move continues to deal damage to opponents for four turns.",
+    "Shield": "A Fire-type attack that Gigantamax Charizard use. This move continues to deal damage to opponents for four turns."
+  },
+  "gmaxwindrage": {
+    "Sword": "A Flying-type attack that Gigantamax Corviknight use. This move removes the effects of moves like Reflect and Light Screen.",
+    "Shield": "A Flying-type attack that Gigantamax Corviknight use. This move removes the effects of moves like Reflect and Light Screen."
+  },
   "gastroacid": {
     "Diamond": "The user hurls up its stomach acids on the foe. The fluid eliminates the effect of the foe\u2019s ability.",
     "Pearl": "The user hurls up its stomach acids on the foe. The fluid eliminates the effect of the foe\u2019s ability.",
@@ -6067,6 +6209,10 @@
     "Ultra Moon": "The user plays a pleasant melody that lulls the target into a deep sleep.",
     "Sword": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "Shield": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
+  "grassyglide": {
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
@@ -6575,6 +6721,7 @@
     "B.Diamond": "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.",
     "S.Pearl": "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch."
   },
+  "headlongrush": {},
   "healbell": {
     "Gold": "Eliminates all status problems.",
     "Silver": "Eliminates all status problems.",
@@ -7615,6 +7762,7 @@
     "B.Diamond": "The user attacks opposing Pok\u00e9mon with fire. If a Pok\u00e9mon is holding a certain item, such as a Berry, the item becomes burned up and unusable.",
     "S.Pearl": "The user attacks opposing Pok\u00e9mon with fire. If a Pok\u00e9mon is holding a certain item, such as a Berry, the item becomes burned up and unusable."
   },
+  "infernalparade": {},
   "inferno": {
     "Black": "The user attacks by engulfing the target in an intense fire. It leaves the target with a burn.",
     "White": "The user attacks by engulfing the target in an intense fire. It leaves the target with a burn.",
@@ -7855,6 +8003,10 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "junglehealing": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "karatechop": {
     "Gold": "Has a high critical hit ratio.",
     "Silver": "Has a high critical hit ratio.",
@@ -7986,6 +8138,10 @@
     "Shield": "The user concentrates intensely. The attack on the next turn always results in a critical hit.",
     "B.Diamond": "The user concentrates intensely. The attack on the next turn always results in a critical hit.",
     "S.Pearl": "The user concentrates intensely. The attack on the next turn always results in a critical hit."
+  },
+  "lashout": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
   "lastresort": {
     "Diamond": "This move can be used only after the user has used all the other moves it knows in the battle.",
@@ -8461,6 +8617,7 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "lunarblessing": {},
   "lunardance": {
     "Diamond": "The user faints. In return, the Pok\u00e9mon taking its place will have its status and HP fully restored.",
     "Pearl": "The user faints. In return, the Pok\u00e9mon taking its place will have its status and HP fully restored.",
@@ -9228,6 +9385,10 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "meteorbeam": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "meteormash": {
     "Ruby": "Fires a meteor-like punch. May raise ATTACK.",
     "Sapphire": "Fires a meteor-like punch. May raise ATTACK.",
@@ -9598,6 +9759,10 @@
     "B.Diamond": "A mist-like flurry of down envelops and damages the target. This may also lower the target\u2019s Sp. Atk stat.",
     "S.Pearl": "A mist-like flurry of down envelops and damages the target. This may also lower the target\u2019s Sp. Atk stat."
   },
+  "mistyexplosion": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "mistyterrain": {
     "X": "The user covers the ground under everyone\u2019s feet with mist for five turns. This protects Pok\u00e9mon on the ground from status conditions.",
     "Y": "The user covers the ground under everyone\u2019s feet with mist for five turns. This protects Pok\u00e9mon on the ground from status conditions.",
@@ -9700,6 +9865,7 @@
     "B.Diamond": "The user restores its own HP. The amount of HP regained varies with the weather.",
     "S.Pearl": "The user restores its own HP. The amount of HP regained varies with the weather."
   },
+  "mountaingale": {},
   "mudbomb": {
     "Diamond": "The user launches a hard-packed mud ball to attack. It may also lower the target\u2019s accuracy.",
     "Pearl": "The user launches a hard-packed mud ball to attack. It may also lower the target\u2019s accuracy.",
@@ -9862,6 +10028,7 @@
     "B.Diamond": "The user attacks by breathing a special, hot fire. This also lowers the target\u2019s Sp. Atk stat.",
     "S.Pearl": "The user attacks by breathing a special, hot fire. This also lowers the target\u2019s Sp. Atk stat."
   },
+  "mysticalpower": {},
   "nastyplot": {
     "Diamond": "The user stimulates its brain by thinking bad thoughts. It sharply raises the user\u2019s Sp. Atk.",
     "Pearl": "The user stimulates its brain by thinking bad thoughts. It sharply raises the user\u2019s Sp. Atk.",
@@ -10862,6 +11029,10 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "poltergeist": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "pound": {
     "Gold": "Pounds with forelegs or tail.",
     "Silver": "Pounds with forelegs or tail.",
@@ -10963,6 +11134,7 @@
     "B.Diamond": "The user attacks with a ray of light that sparkles as if it were made of gemstones.",
     "S.Pearl": "The user attacks with a ray of light that sparkles as if it were made of gemstones."
   },
+  "powershift": {},
   "powersplit": {
     "Black": "The user employs its psychic power to average its Attack and Sp. Atk stats with those of the target\u2019s.",
     "White": "The user employs its psychic power to average its Attack and Sp. Atk stats with those of the target\u2019s.",
@@ -11353,6 +11525,7 @@
     "B.Diamond": "Using its psychic power of suggestion, the user transfers its status conditions to the target.",
     "S.Pearl": "Using its psychic power of suggestion, the user transfers its status conditions to the target."
   },
+  "psyshieldbash": {},
   "psyshock": {
     "Black": "The user materializes an odd psychic wave to attack the target. This attack does physical damage.",
     "White": "The user materializes an odd psychic wave to attack the target. This attack does physical damage.",
@@ -11642,6 +11815,7 @@
     "B.Diamond": "The user scatters a cloud of irritating powder to draw attention to itself. Opposing Pok\u00e9mon aim only at the user.",
     "S.Pearl": "The user scatters a cloud of irritating powder to draw attention to itself. Opposing Pok\u00e9mon aim only at the user."
   },
+  "ragingfury": {},
   "raindance": {
     "Gold": "Boosts water-type moves for 5 turns.",
     "Silver": "Boosts water-type moves for 5 turns.",
@@ -12096,6 +12270,10 @@
     "Shield": "An all-out attack that becomes more powerful the less HP the user has.",
     "B.Diamond": "An all-out attack that becomes more powerful the less HP the user has.",
     "S.Pearl": "An all-out attack that becomes more powerful the less HP the user has."
+  },
+  "risingvoltage": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
   "roar": {
     "Gold": "Scares wild foes to end battle.",
@@ -12665,6 +12843,7 @@
     "B.Diamond": "The user traps the target inside a harshly raging sandstorm for four to five turns.",
     "S.Pearl": "The user traps the target inside a harshly raging sandstorm for four to five turns."
   },
+  "sandsearstorm": {},
   "sandstorm": {
     "Gold": "Inflicts damage every turn.",
     "Silver": "Inflicts damage every turn.",
@@ -12734,6 +12913,10 @@
     "B.Diamond": "The user shoots boiling hot water at its target. This may also leave the target with a burn.",
     "S.Pearl": "The user shoots boiling hot water at its target. This may also leave the target with a burn."
   },
+  "scaleshot": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "scaryface": {
     "Gold": "Sharply reduces the foe\u2019s SPEED.",
     "Silver": "Sharply reduces the foe\u2019s SPEED.",
@@ -12764,6 +12947,10 @@
     "Shield": "The user frightens the target with a scary face to harshly lower its Speed stat.",
     "B.Diamond": "The user frightens the target with a scary face to harshly lower its Speed stat.",
     "S.Pearl": "The user frightens the target with a scary face to harshly lower its Speed stat."
+  },
+  "scorchingsands": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
   "scratch": {
     "Gold": "Scratches with sharp claws.",
@@ -13226,6 +13413,10 @@
     "B.Diamond": "The target faints instantly. It\u2019s less likely to hit the target if it\u2019s used by Pok\u00e9mon other than Ice types.",
     "S.Pearl": "The target faints instantly. It\u2019s less likely to hit the target if it\u2019s used by Pok\u00e9mon other than Ice types."
   },
+  "shellsidearm": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "shellsmash": {
     "Black": "The user breaks its shell, lowering its Defense and Sp. Def stats but sharply raising Attack, Sp. Atk, and Speed stats.",
     "White": "The user breaks its shell, lowering its Defense and Sp. Def stats but sharply raising Attack, Sp. Atk, and Speed stats.",
@@ -13256,6 +13447,7 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "shelter": {},
   "shiftgear": {
     "Black": "The user rotates its gears, raising its Attack and sharply raising its Speed.",
     "White": "The user rotates its gears, raising its Attack and sharply raising its Speed.",
@@ -13495,6 +13687,10 @@
     "Shield": "The user employs its psychic power to exchange Abilities with the target.",
     "B.Diamond": "The user employs its psychic power to exchange Abilities with the target.",
     "S.Pearl": "The user employs its psychic power to exchange Abilities with the target."
+  },
+  "skittersmack": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
   "skullbash": {
     "Gold": "1st turn: Prepare 2nd turn: Attack",
@@ -14566,6 +14762,7 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "springtidestorm": {},
   "stealthrock": {
     "Diamond": "The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle.",
     "Pearl": "The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle.",
@@ -14626,6 +14823,10 @@
   "steelbeam": {
     "Sword": "The user fires a beam of steel that it collected from its entire body. This also damages the user.",
     "Shield": "The user fires a beam of steel that it collected from its entire body. This also damages the user.",
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
+  "steelroller": {
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
@@ -14755,6 +14956,7 @@
     "B.Diamond": "Driven by frustration, the user attacks the target. If the user\u2019s previous move has failed, the power of this move doubles.",
     "S.Pearl": "Driven by frustration, the user attacks the target. If the user\u2019s previous move has failed, the power of this move doubles."
   },
+  "stoneaxe": {},
   "stoneedge": {
     "Diamond": "The user stabs the foe with a sharpened stone. It has a high critical-hit ratio.",
     "Pearl": "The user stabs the foe with a sharpened stone. It has a high critical-hit ratio.",
@@ -15265,6 +15467,10 @@
     "B.Diamond": "The user attacks everything around it by swamping its surroundings with a giant wave. It\u2019s also one of the Pok\u00e9tch\u2019s hidden moves.",
     "S.Pearl": "The user attacks everything around it by swamping its surroundings with a giant wave. It\u2019s also one of the Pok\u00e9tch\u2019s hidden moves."
   },
+  "surgingstrikes": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "swagger": {
     "Gold": "Causes confusion and raises ATTACK.",
     "Silver": "Causes confusion and raises ATTACK.",
@@ -15692,6 +15898,7 @@
     "B.Diamond": "A reckless, full-body charge attack for slamming into the target. This also damages the user a little.",
     "S.Pearl": "A reckless, full-body charge attack for slamming into the target. This also damages the user a little."
   },
+  "takeheart": {},
   "tarshot": {
     "Sword": "The user pours sticky tar over the target, lowering the target\u2019s Speed stat. The target becomes weaker to Fire-type moves.",
     "Shield": "The user pours sticky tar over the target, lowering the target\u2019s Speed stat. The target becomes weaker to Fire-type moves.",
@@ -15850,6 +16057,10 @@
     "Shield": "The user switches places with a party Pok\u00e9mon in waiting, if any. If a wild Pok\u00e9mon uses this move, it flees.",
     "B.Diamond": "The user switches places with another party Pok\u00e9mon. It may also be used to warp to the last Pok\u00e9mon Center visited. If a wild Pok\u00e9mon uses this move, it flees.",
     "S.Pearl": "The user switches places with another party Pok\u00e9mon. It may also be used to warp to the last Pok\u00e9mon Center visited. If a wild Pok\u00e9mon uses this move, it flees."
+  },
+  "terrainpulse": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
   "thief": {
     "Gold": "An attack that may steal a held item.",
@@ -16420,6 +16631,11 @@
     "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
   },
+  "triplearrows": {},
+  "tripleaxel": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "triplekick": {
     "Gold": "Hits three times with rising power.",
     "Silver": "Hits three times with rising power.",
@@ -16692,6 +16908,7 @@
     "B.Diamond": "The user drenches the target in a special poisonous liquid. This move\u2019s power is doubled if the target is poisoned.",
     "S.Pearl": "The user drenches the target in a special poisonous liquid. This move\u2019s power is doubled if the target is poisoned."
   },
+  "victorydance": {},
   "vinewhip": {
     "Gold": "Whips the foe with slender vines.",
     "Silver": "Whips the foe with slender vines.",
@@ -17040,6 +17257,7 @@
     "B.Diamond": "The user charges at the target and may make it flinch. It\u2019s also one of the Pok\u00e9tch\u2019s hidden moves.",
     "S.Pearl": "The user charges at the target and may make it flinch. It\u2019s also one of the Pok\u00e9tch\u2019s hidden moves."
   },
+  "wavecrash": {},
   "weatherball": {
     "Ruby": "The move\u2019s type and power change with the weather.",
     "Sapphire": "The move\u2019s type and power change with the weather.",
@@ -17132,6 +17350,10 @@
     "B.Diamond": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "S.Pearl": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon."
   },
+  "wickedblow": {
+    "B.Diamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "S.Pearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered."
+  },
   "wideguard": {
     "Black": "The user and its allies are protected from wide-ranging attacks for one turn. If used in succession, its chance of failing rises.",
     "White": "The user and its allies are protected from wide-ranging attacks for one turn. If used in succession, its chance of failing rises.",
@@ -17168,6 +17390,7 @@
     "B.Diamond": "The user shrouds itself in electricity and smashes into its target. This also damages the user a little.",
     "S.Pearl": "The user shrouds itself in electricity and smashes into its target. This also damages the user a little."
   },
+  "wildboltstorm": {},
   "willowisp": {
     "Ruby": "Inflicts a burn on the foe with intense fire.",
     "Sapphire": "Inflicts a burn on the foe with intense fire.",

@@ -58405,6 +58405,7 @@
                     "SS"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "times_of_day": [
                     "Morning",
                     "Day",
@@ -114724,6 +114725,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -115099,6 +115101,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -115559,6 +115562,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -115911,6 +115915,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -116535,6 +116540,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -117277,6 +117283,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -118063,6 +118070,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -118428,6 +118436,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -118911,6 +118920,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -119820,6 +119830,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -120236,6 +120247,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -120818,6 +120830,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -121483,6 +121496,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -121903,6 +121917,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -123058,6 +123073,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -124373,6 +124389,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -125094,6 +125111,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -132773,6 +132791,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -132872,6 +132891,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -134038,6 +134058,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -140379,6 +140400,27 @@
               ]
             },
             "description": "Use the Pok\u00e9Radar key item"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [],
+                  "name": "Burmy",
+                  "formName": "Trash Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [],
+                  "name": "Wormadam",
+                  "formName": "Trash Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       },
@@ -157927,6 +157969,7 @@
                     "Pt"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "5-15"
                 },
@@ -174110,20 +174153,20 @@
                 },
                 {
                   "games": [
-                    "B2"
+                    "W2"
                   ],
                   "name": "Kyurem",
-                  "formName": "Black Kyurem",
+                  "formName": "White Kyurem",
                   "rarity": "Limited",
                   "levels": "55",
                   "description": "Cannot be caught"
                 },
                 {
                   "games": [
-                    "W2"
+                    "B2"
                   ],
                   "name": "Kyurem",
-                  "formName": "White Kyurem",
+                  "formName": "Black Kyurem",
                   "rarity": "Limited",
                   "levels": "55",
                   "description": "Cannot be caught"
@@ -185215,6 +185258,7 @@
                     "Y"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Rare",
                   "levels": "5"
                 }
@@ -186155,6 +186199,7 @@
                     "Y"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "14-15",
                   "description": "Berry Fields - green tree"
@@ -270990,6 +271035,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -271138,6 +271184,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Trash Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Trash Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -271309,6 +271380,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Trash Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -271317,7 +271389,7 @@
                     "LA"
                   ],
                   "name": "Wormadam",
-                  "formName": "Plant Cloak",
+                  "formName": "Trash Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 }
@@ -271564,6 +271636,31 @@
               ]
             },
             "description": "Static Pok\u00e9mon that attacks when interacted with"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Trash Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Plant Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -271710,6 +271807,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -271795,6 +271917,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -272066,6 +272213,22 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -272211,6 +272374,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Trash Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Trash Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -272281,6 +272469,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -272341,6 +272530,22 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Plant Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -272370,6 +272575,22 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Plant Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -272517,6 +272738,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -272961,23 +273183,6 @@
                   "games": [
                     "LA"
                   ],
-                  "name": "Burmy",
-                  "rarity": "Uncommon",
-                  "levels": "\u2014"
-                },
-                {
-                  "games": [
-                    "LA"
-                  ],
-                  "name": "Wormadam",
-                  "formName": "Plant Cloak",
-                  "rarity": "Uncommon",
-                  "levels": "\u2014"
-                },
-                {
-                  "games": [
-                    "LA"
-                  ],
                   "name": "Cherubi",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
@@ -272987,6 +273192,24 @@
                     "LA"
                   ],
                   "name": "Cherrim",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Sandy Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 }
@@ -273087,6 +273310,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Trash Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -273095,7 +273319,7 @@
                     "LA"
                   ],
                   "name": "Wormadam",
-                  "formName": "Plant Cloak",
+                  "formName": "Trash Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 }
@@ -273155,6 +273379,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Trash Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Trash Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -273264,6 +273513,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Plant Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -273338,6 +273612,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Plant Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Plant Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -273469,6 +273768,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -273701,6 +274025,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -273716,6 +274041,43 @@
               ]
             },
             "description": "Shake trees in the Wild Area."
+          }
+        }
+      }
+    },
+    "Ice Column Chamber": {
+      "8": {
+        "Main": {
+          "Walking": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Misdreavus",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Bergmite",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Froslass",
+                  "rarity": "Rare",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Walking in grass or a cave"
           }
         }
       }
@@ -274180,6 +274542,14 @@
                   "games": [
                     "LA"
                   ],
+                  "name": "Heracross",
+                  "rarity": "Rare",
+                  "levels": "40"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
                   "name": "Cherubi",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
@@ -274339,6 +274709,22 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Plant Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -274797,6 +275183,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -274958,6 +275345,22 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Plant Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -275229,6 +275632,22 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -275958,6 +276377,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Sandy Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }
@@ -276165,6 +276609,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -276296,6 +276741,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -276411,6 +276857,7 @@
                     "LA"
                   ],
                   "name": "Burmy",
+                  "formName": "Plant Cloak",
                   "rarity": "Uncommon",
                   "levels": "\u2014"
                 },
@@ -276511,6 +276958,31 @@
               ]
             },
             "description": "Walking in grass or a cave"
+          },
+          "Shaking Trees": {
+            "pokemon": {
+              "none": [
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Burmy",
+                  "formName": "Trash Cloak",
+                  "rarity": "Common",
+                  "levels": "\u2014"
+                },
+                {
+                  "games": [
+                    "LA"
+                  ],
+                  "name": "Wormadam",
+                  "formName": "Trash Cloak",
+                  "rarity": "Uncommon",
+                  "levels": "\u2014"
+                }
+              ]
+            },
+            "description": "Shake trees in the Wild Area."
           }
         }
       }

@@ -6,25 +6,27 @@
 //  Copyright © 2019 Daniel Byon. All rights reserved.
 //
 
-import Foundation
-import SwiftUI
 import CoreData
+import Foundation
+import PokedexCore
+import SwiftUI
 
 struct Dependencies: ViewModifier {
 
     static let settings = AppSettings()
-    static var container: NSPersistentContainer!
     static let purchasedProductState = PurchasedProductState()
     static let storeViewModel = StoreViewModel()
-    static let pokemonStore = PokemonStore(context: container!.viewContext)
+    static let teamStorage = UserDefaults.appGroup
+    static let teamStore = DefaultTeamStore.shared
 
     func body(content: Content) -> some View {
         content
-            .environmentObject(Self.pokemonStore)
-            .environment(\.managedObjectContext, Self.container!.viewContext)
             .environmentObject(Self.settings)
             .environmentObject(Self.purchasedProductState)
             .environmentObject(Self.storeViewModel)
+            .injectPersistentContainer()
+            .teamStorage(Self.teamStorage)
+            .teamStore(Self.teamStore)
     }
 
 }

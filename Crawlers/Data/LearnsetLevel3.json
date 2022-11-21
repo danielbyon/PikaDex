@@ -922662,130 +922662,6 @@
           "name": "Sheer Cold"
         }
       ],
-      "sword.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "1",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "1",
-          "name": "Freeze-Dry"
-        },
-        {
-          "level": "1",
-          "name": "Noble Roar"
-        },
-        {
-          "level": "8",
-          "name": "Slash"
-        },
-        {
-          "level": "16",
-          "name": "Endeavor"
-        },
-        {
-          "level": "24",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "32",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "40",
-          "name": "Hyper Voice"
-        },
-        {
-          "level": "48",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "56",
-          "name": "Blizzard"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "72",
-          "name": "Outrage"
-        },
-        {
-          "level": "80",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "88",
-          "name": "Sheer Cold"
-        }
-      ],
-      "shield.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "1",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "1",
-          "name": "Freeze-Dry"
-        },
-        {
-          "level": "1",
-          "name": "Noble Roar"
-        },
-        {
-          "level": "8",
-          "name": "Slash"
-        },
-        {
-          "level": "16",
-          "name": "Endeavor"
-        },
-        {
-          "level": "24",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "32",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "40",
-          "name": "Hyper Voice"
-        },
-        {
-          "level": "48",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "56",
-          "name": "Blizzard"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "72",
-          "name": "Outrage"
-        },
-        {
-          "level": "80",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "88",
-          "name": "Sheer Cold"
-        }
-      ],
       "sword.White Kyurem": [
         {
           "level": "1",
@@ -922909,6 +922785,130 @@
           "level": "88",
           "name": "Sheer Cold"
         }
+      ],
+      "sword.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "1",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "1",
+          "name": "Freeze-Dry"
+        },
+        {
+          "level": "1",
+          "name": "Noble Roar"
+        },
+        {
+          "level": "8",
+          "name": "Slash"
+        },
+        {
+          "level": "16",
+          "name": "Endeavor"
+        },
+        {
+          "level": "24",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "32",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "40",
+          "name": "Hyper Voice"
+        },
+        {
+          "level": "48",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "56",
+          "name": "Blizzard"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "72",
+          "name": "Outrage"
+        },
+        {
+          "level": "80",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "88",
+          "name": "Sheer Cold"
+        }
+      ],
+      "shield.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "1",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "1",
+          "name": "Freeze-Dry"
+        },
+        {
+          "level": "1",
+          "name": "Noble Roar"
+        },
+        {
+          "level": "8",
+          "name": "Slash"
+        },
+        {
+          "level": "16",
+          "name": "Endeavor"
+        },
+        {
+          "level": "24",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "32",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "40",
+          "name": "Hyper Voice"
+        },
+        {
+          "level": "48",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "56",
+          "name": "Blizzard"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "72",
+          "name": "Outrage"
+        },
+        {
+          "level": "80",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "88",
+          "name": "Sheer Cold"
+        }
       ]
     },
     "gen7": {
@@ -923010,130 +923010,6 @@
         {
           "level": "50",
           "name": "Glaciate"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
-      "sun.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
-      "moon.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
         },
         {
           "level": "57",
@@ -923284,6 +923160,130 @@
           "name": "Hyper Voice"
         }
       ],
+      "sun.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "moon.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
       "ultraSun.Kyurem": [
         {
           "level": "1",
@@ -923408,130 +923408,6 @@
           "name": "Hyper Voice"
         }
       ],
-      "ultraSun.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Noble Roar"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
-      "ultraMoon.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Noble Roar"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
       "ultraSun.White Kyurem": [
         {
           "level": "1",
@@ -923630,6 +923506,130 @@
         {
           "level": "50",
           "name": "Ice Burn"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Noble Roar"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "ultraSun.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Noble Roar"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "ultraMoon.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
         },
         {
           "level": "57",
@@ -923782,130 +923782,6 @@
           "name": "Hyper Voice"
         }
       ],
-      "x.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
-      "y.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
       "x.White Kyurem": [
         {
           "level": "1",
@@ -924004,6 +923880,130 @@
         {
           "level": "50",
           "name": "Ice Burn"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "x.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "y.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
         },
         {
           "level": "57",
@@ -924154,130 +924154,6 @@
           "name": "Hyper Voice"
         }
       ],
-      "omegaRuby.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
-      "alphaSapphire.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "Ancient Power"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "Dragon Breath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
       "omegaRuby.White Kyurem": [
         {
           "level": "1",
@@ -924376,6 +924252,130 @@
         {
           "level": "50",
           "name": "Ice Burn"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "omegaRuby.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "alphaSapphire.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "Ancient Power"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "Dragon Breath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
         },
         {
           "level": "57",
@@ -924652,130 +924652,6 @@
           "name": "Hyper Voice"
         }
       ],
-      "black2.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "AncientPower"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "DragonBreath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
-      "white2.Black Kyurem": [
-        {
-          "level": "1",
-          "name": "Dragon Rage"
-        },
-        {
-          "level": "1",
-          "name": "Icy Wind"
-        },
-        {
-          "level": "8",
-          "name": "Imprison"
-        },
-        {
-          "level": "15",
-          "name": "AncientPower"
-        },
-        {
-          "level": "22",
-          "name": "Ice Beam"
-        },
-        {
-          "level": "29",
-          "name": "DragonBreath"
-        },
-        {
-          "level": "36",
-          "name": "Slash"
-        },
-        {
-          "level": "43",
-          "name": "Fusion Bolt"
-        },
-        {
-          "level": "50",
-          "name": "Freeze Shock"
-        },
-        {
-          "level": "57",
-          "name": "Dragon Pulse"
-        },
-        {
-          "level": "64",
-          "name": "Imprison"
-        },
-        {
-          "level": "71",
-          "name": "Endeavor"
-        },
-        {
-          "level": "78",
-          "name": "Blizzard"
-        },
-        {
-          "level": "85",
-          "name": "Outrage"
-        },
-        {
-          "level": "92",
-          "name": "Hyper Voice"
-        }
-      ],
       "black2.White Kyurem": [
         {
           "level": "1",
@@ -924874,6 +924750,130 @@
         {
           "level": "50",
           "name": "Ice Burn"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "black2.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "AncientPower"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "DragonBreath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
+        },
+        {
+          "level": "57",
+          "name": "Dragon Pulse"
+        },
+        {
+          "level": "64",
+          "name": "Imprison"
+        },
+        {
+          "level": "71",
+          "name": "Endeavor"
+        },
+        {
+          "level": "78",
+          "name": "Blizzard"
+        },
+        {
+          "level": "85",
+          "name": "Outrage"
+        },
+        {
+          "level": "92",
+          "name": "Hyper Voice"
+        }
+      ],
+      "white2.Black Kyurem": [
+        {
+          "level": "1",
+          "name": "Dragon Rage"
+        },
+        {
+          "level": "1",
+          "name": "Icy Wind"
+        },
+        {
+          "level": "8",
+          "name": "Imprison"
+        },
+        {
+          "level": "15",
+          "name": "AncientPower"
+        },
+        {
+          "level": "22",
+          "name": "Ice Beam"
+        },
+        {
+          "level": "29",
+          "name": "DragonBreath"
+        },
+        {
+          "level": "36",
+          "name": "Slash"
+        },
+        {
+          "level": "43",
+          "name": "Fusion Bolt"
+        },
+        {
+          "level": "50",
+          "name": "Freeze Shock"
         },
         {
           "level": "57",
@@ -1011827,210 +1011827,6 @@
   },
   "Toxtricity": {
     "gen8": {
-      "sword.Low Key Form": [
-        {
-          "level": "1",
-          "name": "Acid"
-        },
-        {
-          "level": "1",
-          "name": "Acid Spray"
-        },
-        {
-          "level": "1",
-          "name": "Belch"
-        },
-        {
-          "level": "1",
-          "name": "Eerie Impulse"
-        },
-        {
-          "level": "1",
-          "name": "Flail"
-        },
-        {
-          "level": "1",
-          "name": "Growl"
-        },
-        {
-          "level": "1",
-          "name": "Leer"
-        },
-        {
-          "level": "1",
-          "name": "Noble Roar"
-        },
-        {
-          "level": "1",
-          "name": "Nuzzle"
-        },
-        {
-          "level": "1",
-          "name": "Spark"
-        },
-        {
-          "level": "1",
-          "name": "Tearful Look"
-        },
-        {
-          "level": "1",
-          "name": "Thunder Shock"
-        },
-        {
-          "level": "4",
-          "name": "Charge"
-        },
-        {
-          "level": "8",
-          "name": "Shock Wave"
-        },
-        {
-          "level": "12",
-          "name": "Scary Face"
-        },
-        {
-          "level": "16",
-          "name": "Taunt"
-        },
-        {
-          "level": "20",
-          "name": "Venom Drench"
-        },
-        {
-          "level": "24",
-          "name": "Screech"
-        },
-        {
-          "level": "28",
-          "name": "Swagger"
-        },
-        {
-          "level": "32",
-          "name": "Toxic"
-        },
-        {
-          "level": "36",
-          "name": "Discharge"
-        },
-        {
-          "level": "40",
-          "name": "Poison Jab"
-        },
-        {
-          "level": "44",
-          "name": "Overdrive"
-        },
-        {
-          "level": "48",
-          "name": "Boomburst"
-        },
-        {
-          "level": "52",
-          "name": "Magnetic Flux"
-        }
-      ],
-      "shield.Low Key Form": [
-        {
-          "level": "1",
-          "name": "Acid"
-        },
-        {
-          "level": "1",
-          "name": "Acid Spray"
-        },
-        {
-          "level": "1",
-          "name": "Belch"
-        },
-        {
-          "level": "1",
-          "name": "Eerie Impulse"
-        },
-        {
-          "level": "1",
-          "name": "Flail"
-        },
-        {
-          "level": "1",
-          "name": "Growl"
-        },
-        {
-          "level": "1",
-          "name": "Leer"
-        },
-        {
-          "level": "1",
-          "name": "Noble Roar"
-        },
-        {
-          "level": "1",
-          "name": "Nuzzle"
-        },
-        {
-          "level": "1",
-          "name": "Spark"
-        },
-        {
-          "level": "1",
-          "name": "Tearful Look"
-        },
-        {
-          "level": "1",
-          "name": "Thunder Shock"
-        },
-        {
-          "level": "4",
-          "name": "Charge"
-        },
-        {
-          "level": "8",
-          "name": "Shock Wave"
-        },
-        {
-          "level": "12",
-          "name": "Scary Face"
-        },
-        {
-          "level": "16",
-          "name": "Taunt"
-        },
-        {
-          "level": "20",
-          "name": "Venom Drench"
-        },
-        {
-          "level": "24",
-          "name": "Screech"
-        },
-        {
-          "level": "28",
-          "name": "Swagger"
-        },
-        {
-          "level": "32",
-          "name": "Toxic"
-        },
-        {
-          "level": "36",
-          "name": "Discharge"
-        },
-        {
-          "level": "40",
-          "name": "Poison Jab"
-        },
-        {
-          "level": "44",
-          "name": "Overdrive"
-        },
-        {
-          "level": "48",
-          "name": "Boomburst"
-        },
-        {
-          "level": "52",
-          "name": "Magnetic Flux"
-        }
-      ],
       "sword.Amped Form": [
         {
           "level": "1",
@@ -1012233,6 +1012029,210 @@
         {
           "level": "52",
           "name": "Shift Gear"
+        }
+      ],
+      "sword.Low Key Form": [
+        {
+          "level": "1",
+          "name": "Acid"
+        },
+        {
+          "level": "1",
+          "name": "Acid Spray"
+        },
+        {
+          "level": "1",
+          "name": "Belch"
+        },
+        {
+          "level": "1",
+          "name": "Eerie Impulse"
+        },
+        {
+          "level": "1",
+          "name": "Flail"
+        },
+        {
+          "level": "1",
+          "name": "Growl"
+        },
+        {
+          "level": "1",
+          "name": "Leer"
+        },
+        {
+          "level": "1",
+          "name": "Noble Roar"
+        },
+        {
+          "level": "1",
+          "name": "Nuzzle"
+        },
+        {
+          "level": "1",
+          "name": "Spark"
+        },
+        {
+          "level": "1",
+          "name": "Tearful Look"
+        },
+        {
+          "level": "1",
+          "name": "Thunder Shock"
+        },
+        {
+          "level": "4",
+          "name": "Charge"
+        },
+        {
+          "level": "8",
+          "name": "Shock Wave"
+        },
+        {
+          "level": "12",
+          "name": "Scary Face"
+        },
+        {
+          "level": "16",
+          "name": "Taunt"
+        },
+        {
+          "level": "20",
+          "name": "Venom Drench"
+        },
+        {
+          "level": "24",
+          "name": "Screech"
+        },
+        {
+          "level": "28",
+          "name": "Swagger"
+        },
+        {
+          "level": "32",
+          "name": "Toxic"
+        },
+        {
+          "level": "36",
+          "name": "Discharge"
+        },
+        {
+          "level": "40",
+          "name": "Poison Jab"
+        },
+        {
+          "level": "44",
+          "name": "Overdrive"
+        },
+        {
+          "level": "48",
+          "name": "Boomburst"
+        },
+        {
+          "level": "52",
+          "name": "Magnetic Flux"
+        }
+      ],
+      "shield.Low Key Form": [
+        {
+          "level": "1",
+          "name": "Acid"
+        },
+        {
+          "level": "1",
+          "name": "Acid Spray"
+        },
+        {
+          "level": "1",
+          "name": "Belch"
+        },
+        {
+          "level": "1",
+          "name": "Eerie Impulse"
+        },
+        {
+          "level": "1",
+          "name": "Flail"
+        },
+        {
+          "level": "1",
+          "name": "Growl"
+        },
+        {
+          "level": "1",
+          "name": "Leer"
+        },
+        {
+          "level": "1",
+          "name": "Noble Roar"
+        },
+        {
+          "level": "1",
+          "name": "Nuzzle"
+        },
+        {
+          "level": "1",
+          "name": "Spark"
+        },
+        {
+          "level": "1",
+          "name": "Tearful Look"
+        },
+        {
+          "level": "1",
+          "name": "Thunder Shock"
+        },
+        {
+          "level": "4",
+          "name": "Charge"
+        },
+        {
+          "level": "8",
+          "name": "Shock Wave"
+        },
+        {
+          "level": "12",
+          "name": "Scary Face"
+        },
+        {
+          "level": "16",
+          "name": "Taunt"
+        },
+        {
+          "level": "20",
+          "name": "Venom Drench"
+        },
+        {
+          "level": "24",
+          "name": "Screech"
+        },
+        {
+          "level": "28",
+          "name": "Swagger"
+        },
+        {
+          "level": "32",
+          "name": "Toxic"
+        },
+        {
+          "level": "36",
+          "name": "Discharge"
+        },
+        {
+          "level": "40",
+          "name": "Poison Jab"
+        },
+        {
+          "level": "44",
+          "name": "Overdrive"
+        },
+        {
+          "level": "48",
+          "name": "Boomburst"
+        },
+        {
+          "level": "52",
+          "name": "Magnetic Flux"
         }
       ]
     }

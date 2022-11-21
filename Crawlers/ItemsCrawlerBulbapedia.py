@@ -12,7 +12,23 @@ import codecs
 import CrawlerUtils as crawler
 import re
 import PokemonDB as pdb
-from BulbapediaManualItems import MANUAL_ITEMS
+
+ITEMS_TO_SKIP = [
+    u'ぅ',
+    '4',
+    '$ ぅ',
+    'Cancel',
+    'Nothing',
+    'unknown',
+    'None',
+    'Medicine Pocket',
+    'Candy Jar',
+    'Power-Up Pocket',
+    'Clothing Trunk',
+    'Catching Pocket',
+    'Battle Pocket',
+    '[[]]',
+]
 
 def process_file(contents, item_name):
     soup = BeautifulSoup(contents, 'lxml').html.body
@@ -45,7 +61,7 @@ def process_file(contents, item_name):
                 name = row.td.text.strip().lower()
                 pocket[gen] = name
         if not pocket:
-            print("Invalid pocket entries")
+#           print("Invalid pocket entries")
             return None
         entries['pocket'] = pocket
         break
@@ -70,7 +86,7 @@ def process_file(contents, item_name):
                 pdb.parse_game_specific_values(tds[0], price, game_price)
             
             if not price:
-                print("Invalid price entries")
+#               print("Invalid price entries")
                 return None
             entries['prices'] = price
             break
@@ -91,15 +107,13 @@ def process_file(contents, item_name):
                 pdb.parse_game_specific_values(tds[0], descriptions, description)
             
             if not descriptions:
-                print("Invalid descriptions entries")
+#               print("Invalid descriptions entries")
                 return None
             entries['descriptions'] = descriptions
             break
     
     if not 'pocket' in entries:
         return None
-#   if not 'prices' in entries:
-#       return None
     if not 'descriptions' in entries:
         return None
     return entries
@@ -110,6 +124,40 @@ def entryExists(name, all_entries):
             return True
     return False
 
+def addItems(gen, filename, url, link_column, items, items_set, skip_asterisk):
+    contents = crawler.fetch_or_download(filename, url)
+    soup = BeautifulSoup(contents, 'lxml').html.body
+    
+    outer_table = soup.h1.find_next_sibling().table
+    if 'This article is incomplete' in outer_table.text:
+        outer_table = outer_table.find_next_sibling().find_next_sibling().find_next_sibling()
+    
+    for row in outer_table.table.tbody.find_all("tr")[1:]:
+        td = row.find_all("td")[link_column]
+        name = td.text.strip()
+        if name in items_set:
+            continue
+        if '?' in name or '★' in name or name in ITEMS_TO_SKIP:
+            print('skipping item: {}'.format(name))
+            continue
+        if '*' in name:
+            if skip_asterisk:
+                print('skipping item: {}'.format(name))
+                continue
+            else:
+                name = name.replace('*', '')
+        
+        link = td.a['href']
+        item_url = 'https://bulbapedia.bulbagarden.net' + link
+        
+        item = {
+            'name': name,
+            'generationIntroduced': gen,
+            'url': item_url,
+        }
+        items.append(item)
+        items_set.add(name)
+
 def main():
     print('This is the Pokepedia Items Crawler')
 
@@ -117,63 +165,118 @@ def main():
     
     file_path = 'Cached/Items/Bulbapedia/'
     
-    filename = file_path + '_AllItems.html'
-    url = 'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_name'
-    contents = crawler.fetch_or_download(filename, url)
-    soup = BeautifulSoup(contents, 'lxml').html.body
-    
     items = []
+    items_set = set()
     
-    for h3 in soup.h2.find_next_siblings('h3'):
-        table = h3.find_next_sibling('table')
-        
-        for row in table.find_all('tr'):
-            if row.td is None:
-                continue
-            
-            tds = row.find_all('td')
-            if len(tds) != 4:
-                print('invalid row')
-                continue
-            
-            link = tds[1].a['href']
-            name = tds[1].text.strip()
-            
-            if 'mail' in name.lower():
-                continue
-            
-            raw_gen = tds[2].text.strip().split('-')[0]
-            if raw_gen == "I":
-                gen = "1"
-            elif raw_gen == "II":
-                gen = "2"
-            elif raw_gen == "III":
-                gen = "3"
-            elif raw_gen == "IV":
-                gen = "4"
-            elif raw_gen == "V":
-                gen = "5"
-            elif raw_gen == "VI":
-                gen = "6"
-            elif raw_gen == "VII":
-                gen = "7"
-            elif raw_gen == "VIII":
-                gen = "8"
-            else:
-                print('Invalid gen: {}'.format(raw_gen))
-                sys.exit(1)
-            
-            url = 'https://bulbapedia.bulbagarden.net' + link
-            
-            item = {
-                'name': name,
-                'generationIntroduced': gen,
-                'url': url,
-            }
-            items.append(item)
+    addItems(
+        '1',
+        file_path + '_AllItemsGen1.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_I)',
+        2,
+        items,
+        items_set,
+        True
+    )
     
-    for item in MANUAL_ITEMS:
-        items.append(item)
+    addItems(
+        '2',
+        file_path + '_AllItemsGen2.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_II)',
+        2,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '3',
+        file_path + '_AllItemsGen3.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_III)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '4',
+        file_path + '_AllItemsGen4.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_IV)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '5',
+        file_path + '_AllItemsGen5.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_V)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '6',
+        file_path + '_AllItemsGen6.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_VI)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '7',
+        file_path + '_AllItemsGen7_SM_USUM.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Sun,_Moon,_Ultra_Sun,_and_Ultra_Moon)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '7',
+        file_path + '_AllItemsGen7_LGP_LGE.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '8',
+        file_path + '_AllItemsGen8.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_VIII)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '8',
+        file_path + '_AllItemsBDSP.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Brilliant_Diamond_and_Shining_Pearl)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '8',
+        file_path + '_AllItemsLegendsArceus.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Legends:_Arceus)',
+        3,
+        items,
+        items_set,
+        False
+    )
     
     for item in items:
         name = item['name']
@@ -195,27 +298,7 @@ def main():
             entries['imageName'] = name.replace(' ', '-').lower()
             entries['generationIntroduced'] = generationIntroduced
             all_entries.append(entries)
-    
-    for name in crawler.fetch_file_lines("LegendsArceusItemList.txt"):
-        name = name.strip()
-        url = 'https://bulbapedia.bulbagarden.net/wiki/' + name.replace(' ', '_')
-        
-        if entryExists(name, all_entries):
-            print('{} already exists, skipping'.format(name))
-            continue
-        
-        filename = file_path + '{}.html'.format(name.replace(' ', '-'))
-        
-        print('Processing {}'.format(name))
-        
-        contents = crawler.fetch_or_download(filename, url)
-        entries = process_file(contents, name)
-        if entries:
-            entries['name'] = name
-            entries['imageName'] = name.replace(' ', '-').lower()
-            entries['generationIntroduced'] = "8"
-            all_entries.append(entries)
-    
+            
     crawler.write_data_to_file(all_entries, "Data/BulbapediaItems")
 #    print(all_entries)
     print("Done!")

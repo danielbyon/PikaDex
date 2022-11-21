@@ -30,7 +30,7 @@ def process_file(contents, generation, pokemon_name):
 			if div is None or div.name != 'div':
 				continue
 			
-			if 'tabset-moves-game-form' in div['class'] or 'tabs-wrapper' in div['class']:
+			if 'tabset-moves-game-form' in div['class'] or 'tabs-wrapper' in div['class'] or 'sv-tabs-wrapper' in div['class']:
 				form_names = []
 				tab_list = div.div
 				for tab in tab_list.find_all('a'):
