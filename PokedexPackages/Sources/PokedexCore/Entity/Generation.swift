@@ -17,6 +17,7 @@ public enum Generation: Int, CaseIterable {
     case vi
     case vii
     case viii
+    case ix
     case all = 1000
 
     public init(game: Game) {
@@ -37,6 +38,8 @@ public enum Generation: Int, CaseIterable {
             self = .vii
         case .sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus:
             self = .viii
+        case .scarlet, .violet:
+            self = .ix
         case .national:
             self = .all
         }
@@ -82,6 +85,8 @@ extension Generation {
             return [.sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee]
         case .viii:
             return [.sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus]
+        case .ix:
+            return [.scarlet, .violet]
         case .all:
             return [.national]
         }
@@ -105,6 +110,8 @@ extension Generation {
             return .sun
         case .viii:
             return .sword
+        case .ix:
+            return .scarlet
         case .all:
             return .national
         }
@@ -146,6 +153,7 @@ extension Generation: ExpressibleByIntegerLiteral {
         case 6: self = .vi
         case 7: self = .vii
         case 8: self = .viii
+        case 9: self = .ix
         case 1000: self = .all
         default:
             fatalError()

@@ -55,6 +55,8 @@ extension Game {
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (The Crown Tundra)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_crownTundra)))
         case .legendsArceus:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Hisui)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)))
+        case .scarlet, .violet:
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Paldea)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_paldea)))
         case .national:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Kanto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_kanto)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Johto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_johto)))

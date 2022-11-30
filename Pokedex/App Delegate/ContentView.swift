@@ -102,8 +102,13 @@ struct ContentView: View {
                         LocationView(location: location)
                     case .move(let move):
                         MoveView(move: move, viewFactory: ConcreteMoveViewFactory())
-                    case .pokemon(let pokemon, let pokedex):
-                        PokemonView(pokemon: pokemon, pokedex: pokedex)
+                    case let .pokemon(pokemon, pokedex, previousPokemonProvider, nextPokemonProvider):
+                        PokemonView(
+                            pokemon: pokemon,
+                            pokedex: pokedex,
+                            previousPokemonProvider: previousPokemonProvider,
+                            nextPokemonProvider: nextPokemonProvider
+                        )
                     case .pokemonDetailForm(let pokemonDetailForm, let pokedex):
                         PokemonView(pokemonDetailForm: pokemonDetailForm, pokedex: pokedex)
                     case .pokemonLocations(let pokemonDetailForm):

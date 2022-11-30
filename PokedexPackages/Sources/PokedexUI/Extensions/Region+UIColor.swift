@@ -34,6 +34,8 @@ extension Region {
             return #colorLiteral(red: 0.733, green: 0.146, blue: 0.638, alpha: 1.0)
         case .hisui:
             return #colorLiteral(red: 0.368627451, green: 0.2901960784, blue: 0.4156862745, alpha: 1)
+        case .paldea:
+            return #colorLiteral(red: 0.831372549, green: 0.3294117647, blue: 0.3333333333, alpha: 1)
         }
     }
 
@@ -59,6 +61,8 @@ extension Region {
             return #colorLiteral(red: 0.838, green: 0.468, blue: 0.768, alpha: 1.0)
         case .hisui:
             return #colorLiteral(red: 0.769356668, green: 0.7044885159, blue: 0.8079374433, alpha: 1)
+        case .paldea:
+            return #colorLiteral(red: 0.8901960784, green: 0.5647058824, blue: 0.568627451, alpha: 1)
         }
     }
 

@@ -30,6 +30,12 @@ ITEMS_TO_SKIP = [
     '[[]]',
 ]
 
+def sanitize_pocket_name(name):
+    if '24px' in name:
+        return "other items"
+    else:
+        return name
+
 def process_file(contents, item_name):
     soup = BeautifulSoup(contents, 'lxml').html.body
     entries = {}
@@ -50,6 +56,7 @@ def process_file(contents, item_name):
                 else:
                     to_remove = row.td.sup.text.strip()
                 name = row.td.text.strip().replace(to_remove, '').strip().lower()
+                name = sanitize_pocket_name(name)
                 
                 games = pdb.parse_game_titles(row.td)
                 if games:
@@ -59,6 +66,7 @@ def process_file(contents, item_name):
                     pocket[gen] = name
             else:
                 name = row.td.text.strip().lower()
+                name = sanitize_pocket_name(name)
                 pocket[gen] = name
         if not pocket:
 #           print("Invalid pocket entries")
@@ -138,11 +146,11 @@ def addItems(gen, filename, url, link_column, items, items_set, skip_asterisk):
         if name in items_set:
             continue
         if '?' in name or '★' in name or name in ITEMS_TO_SKIP:
-            print('skipping item: {}'.format(name))
+#           print('skipping item: {}'.format(name))
             continue
         if '*' in name:
             if skip_asterisk:
-                print('skipping item: {}'.format(name))
+#               print('skipping item: {}'.format(name))
                 continue
             else:
                 name = name.replace('*', '')
@@ -278,6 +286,16 @@ def main():
         False
     )
     
+    addItems(
+        '9',
+        file_path + '_AllItemsScarletViolet.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Scarlet_and_Violet)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
     for item in items:
         name = item['name']
         # Special case rename
@@ -290,6 +308,7 @@ def main():
         filename = file_path + '{}.html'.format(name.replace(' ', '-'))
         
         print('Processing {}'.format(name))
+#       print('{}\t{}'.format(name, url)) # Used for external links
         
         contents = crawler.fetch_or_download(filename, url)
         entries = process_file(contents, name)

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>492</string>
+	<string>520</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -74,6 +74,19 @@
 					<true/>
 					<key>promptMessage</key>
 					<string>Choose a Finder Item:</string>
+				</dict>
+				<key>ActionRuntimeParameters</key>
+				<dict>
+					<key>defaultLocation</key>
+					<string>/Users/daniel/Documents/dev/Pokedex/Crawlers/Artwork</string>
+					<key>granularity</key>
+					<integer>0</integer>
+					<key>multipleSelection</key>
+					<true/>
+					<key>promptMessage</key>
+					<string>Choose a Finder Item:</string>
+					<key>temporary items path</key>
+					<string>/var/folders/pb/pjjfhgm575z9mcf9bwzf1srm0000gn/T/B4CDEA89-FB67-4516-9DA1-0BB22C9660D4/1/com.apple.Automator.AskForFinderItems</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.AskForFinderItems</string>
@@ -167,7 +180,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:157.000000</string>
+				<string>309.000000:153.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -224,7 +237,7 @@
 					<key>replaceExisting</key>
 					<false/>
 					<key>toDirectory</key>
-					<string>~/Downloads/Test</string>
+					<string>~/Documents/dev/Pokedex/Crawlers/Artwork/FinalScarletVioletImages</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.CopyFiles</string>
@@ -287,7 +300,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:259.000000</string>
+				<string>309.000000:253.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Copy Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -422,7 +435,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:434.000000</string>
+				<string>309.000000:428.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Pad Images.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -432,14 +445,14 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>8C696214-1834-4D80-B0C0-73244E1E5020</key>
+		<key>212E5BC5-73A3-480E-BCD9-7588EF908D28</key>
 		<dict>
 			<key>from</key>
 			<string>29501DC6-4A3B-4A99-AB9F-20E16528A72C - 29501DC6-4A3B-4A99-AB9F-20E16528A72C</string>
 			<key>to</key>
 			<string>3FEFA27E-9451-4190-B6D2-655B84E58789 - 3FEFA27E-9451-4190-B6D2-655B84E58789</string>
 		</dict>
-		<key>B1D094AE-7262-41EE-BA3A-BF0477B99E9B</key>
+		<key>4C767BAF-0D0A-487A-B643-1D8931CB33DE</key>
 		<dict>
 			<key>from</key>
 			<string>3FEFA27E-9451-4190-B6D2-655B84E58789 - 3FEFA27E-9451-4190-B6D2-655B84E58789</string>

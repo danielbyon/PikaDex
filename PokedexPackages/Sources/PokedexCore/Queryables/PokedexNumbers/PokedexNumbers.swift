@@ -36,6 +36,7 @@ public struct PokedexNumbers {
     public let isleOfArmor: Int?
     public let crownTundra: Int?
     public let hisui: Int?
+    public let paldea: Int?
 
     public init(
         national: Int,
@@ -64,7 +65,8 @@ public struct PokedexNumbers {
         galar: Int? = nil,
         isleOfArmor: Int? = nil,
         crownTundra: Int? = nil,
-        hisui: Int? = nil
+        hisui: Int? = nil,
+        paldea: Int? = nil
     ) {
         self.national = national
         self.kanto = kanto
@@ -93,6 +95,7 @@ public struct PokedexNumbers {
         self.isleOfArmor = isleOfArmor
         self.crownTundra = crownTundra
         self.hisui = hisui
+        self.paldea = paldea
     }
 
     public init(pokedexNumbers: StoredPokedexNumbers) {
@@ -123,6 +126,7 @@ public struct PokedexNumbers {
         self.isleOfArmor = pokedexNumbers.isleOfArmor
         self.crownTundra = pokedexNumbers.crownTundra
         self.hisui = pokedexNumbers.hisui
+        self.paldea = pokedexNumbers.paldea
     }
 
 }
@@ -166,12 +170,13 @@ extension PokedexNumbers {
         case .isleOfArmor: return isleOfArmor ?? 0
         case .crownTundra: return crownTundra ?? 0
         case .hisui: return hisui ?? 0
+        case .paldea: return paldea ?? 0
         }
     }
 
     public func formattedNumber(for pokedex: Pokedex) -> String {
         let number = NSNumber(value: number(for: pokedex))
-        return NumberFormatter.threeDigit.string(from: number)!
+        return NumberFormatter.pokemonIndex.string(from: number)!
     }
 
 }

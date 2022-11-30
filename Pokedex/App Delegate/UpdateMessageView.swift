@@ -67,11 +67,15 @@ struct UpdateMessageView: View {
     @ViewBuilder
     private func section(name: String, entries: [String]) -> some View {
         if !entries.isEmpty {
-            Section(name) {
+            Section {
                 ForEach(entries, id: \.self) { entry in
-                    Text(entry)
-                        .lineLimit(nil)
+//                    Card {
+                        Text(entry)
+                            .lineLimit(nil)
+//                    }
                 }
+            } header: {
+                Text(name)
             }
         }
     }

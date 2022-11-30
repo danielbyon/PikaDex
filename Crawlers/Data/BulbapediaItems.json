@@ -187,7 +187,9 @@
       "Generation V": "items",
       "Generation VI": "items",
       "letsGoPikachu": "items",
-      "letsGoEevee": "items"
+      "letsGoEevee": "items",
+      "Generation VIII": "pok\u00e9 balls",
+      "Generation IX": "pok\u00e9 balls"
     },
     "prices": {
       "yellow": {
@@ -317,6 +319,14 @@
       "shield": {
         "cost": "800",
         "sell": "400"
+      },
+      "scarlet": {
+        "cost": "800",
+        "sell": "200"
+      },
+      "violet": {
+        "cost": "800",
+        "sell": "200"
       }
     },
     "descriptions": {
@@ -350,7 +360,9 @@
       "sword": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
       "shield": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
       "brilliantDiamond": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
-      "shiningPearl": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball."
+      "shiningPearl": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
+      "scarlet": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball.",
+      "violet": "An ultra-high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a Great Ball."
     },
     "name": "Ultra Ball",
     "imageName": "ultra-ball",
@@ -366,7 +378,8 @@
       "Generation VI": "items",
       "letsGoPikachu": "items",
       "letsGoEevee": "items",
-      "Generation VIII": "pok\u00e9 balls"
+      "Generation VIII": "pok\u00e9 balls",
+      "Generation IX": "pok\u00e9 balls"
     },
     "prices": {
       "yellow": {
@@ -503,6 +516,14 @@
       },
       "letsGoEevee": {
         "cost": "300",
+        "sell": "150"
+      },
+      "scarlet": {
+        "cost": "600",
+        "sell": "150"
+      },
+      "violet": {
+        "cost": "600",
         "sell": "150"
       }
     },
@@ -537,7 +558,9 @@
       "sword": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
       "shield": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
       "brilliantDiamond": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
-      "shiningPearl": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball."
+      "shiningPearl": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
+      "scarlet": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball.",
+      "violet": "A good, high-performance Pok\u00e9 Ball that provides a higher success rate for catching Pok\u00e9mon than a standard Pok\u00e9 Ball."
     },
     "name": "Great Ball",
     "imageName": "great-ball",
@@ -553,7 +576,8 @@
       "Generation VI": "items",
       "letsGoPikachu": "items",
       "letsGoEevee": "items",
-      "Generation VIII": "pok\u00e9 balls"
+      "Generation VIII": "pok\u00e9 balls",
+      "Generation IX": "pok\u00e9 balls"
     },
     "prices": {
       "yellow": {
@@ -691,6 +715,14 @@
       "letsGoEevee": {
         "cost": "100",
         "sell": "50"
+      },
+      "scarlet": {
+        "cost": "200",
+        "sell": "50"
+      },
+      "violet": {
+        "cost": "200",
+        "sell": "50"
       }
     },
     "descriptions": {
@@ -724,7 +756,9 @@
       "sword": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
       "shield": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
       "brilliantDiamond": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
-      "shiningPearl": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target."
+      "shiningPearl": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
+      "scarlet": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target.",
+      "violet": "A device for catching wild Pok\u00e9mon. It's thrown like a ball at a Pok\u00e9mon, comfortably encapsulating its target."
     },
     "name": "Pok\u00e9 Ball",
     "imageName": "pok\u00e9-ball",
@@ -3090,7 +3124,9 @@
       "shield": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pok\u00e9mon.",
       "brilliantDiamond": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pok\u00e9mon.",
       "shiningPearl": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pok\u00e9mon.",
-      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to restore 100 HP to a single Pok\u00e9mon."
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to restore 100 HP to a single Pok\u00e9mon.",
+      "scarlet": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a Pok\u00e9mon.",
+      "violet": "A spray-type medicine for treating wounds. It can be used to restore 60 HP to a Pok\u00e9mon."
     },
     "name": "Super Potion",
     "imageName": "super-potion",
@@ -3105,7 +3141,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "medicine"
+      "Generation VIII": "medicine",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -3247,6 +3284,14 @@
       "legendsArceus": {
         "cost": "200",
         "sell": "50"
+      },
+      "scarlet": {
+        "cost": "200",
+        "sell": "50"
+      },
+      "violet": {
+        "cost": "200",
+        "sell": "50"
       }
     },
     "descriptions": {
@@ -3281,7 +3326,9 @@
       "shield": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pok\u00e9mon.",
       "brilliantDiamond": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pok\u00e9mon.",
       "shiningPearl": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pok\u00e9mon.",
-      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to restore 60 HP to a single Pok\u00e9mon."
+      "legendsArceus": "A topical medicine meant to be applied to Pok\u00e9mon. It can be used to restore 60 HP to a single Pok\u00e9mon.",
+      "scarlet": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a Pok\u00e9mon.",
+      "violet": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a Pok\u00e9mon."
     },
     "name": "Potion",
     "imageName": "potion",
@@ -3998,7 +4045,9 @@
       "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
       "brilliantDiamond": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
       "shiningPearl": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
-      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart."
+      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. The stone has a fiery orange heart.",
+      "scarlet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a fiery orange heart.",
+      "violet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a fiery orange heart."
     },
     "name": "Fire Stone",
     "imageName": "fire-stone",
@@ -4189,7 +4238,9 @@
       "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
       "brilliantDiamond": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
       "shiningPearl": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
-      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern."
+      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
+      "scarlet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
+      "violet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern."
     },
     "name": "Thunderstone",
     "imageName": "thunderstone",
@@ -4380,7 +4431,9 @@
       "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
       "brilliantDiamond": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
       "shiningPearl": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the blue of a pool of clear water.",
-      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the clear blue of a deep pool."
+      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the clear blue of a deep pool.",
+      "scarlet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the clear blue of a deep pool.",
+      "violet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It is the clear blue of a deep pool."
     },
     "name": "Water Stone",
     "imageName": "water-stone",
@@ -4395,7 +4448,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -4525,6 +4579,14 @@
       "shiningPearl": {
         "cost": "9800",
         "sell": "4900"
+      },
+      "scarlet": {
+        "cost": "10000",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "10000",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -4556,7 +4618,9 @@
       "sword": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the HP base points of a single Pok\u00e9mon.",
       "shield": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the HP base points of a single Pok\u00e9mon.",
       "brilliantDiamond": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the HP base points of a single Pok\u00e9mon.",
-      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the HP base points of a single Pok\u00e9mon."
+      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the HP base points of a single Pok\u00e9mon.",
+      "scarlet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's HP stat.",
+      "violet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's HP stat."
     },
     "name": "HP Up",
     "imageName": "hp-up",
@@ -4571,7 +4635,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -4701,6 +4766,14 @@
       "shiningPearl": {
         "cost": "9800",
         "sell": "4900"
+      },
+      "scarlet": {
+        "cost": "10000",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "10000",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -4732,7 +4805,9 @@
       "sword": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Attack base points of a single Pok\u00e9mon.",
       "shield": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Attack base points of a single Pok\u00e9mon.",
       "brilliantDiamond": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Attack base points of a single Pok\u00e9mon.",
-      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Attack base points of a single Pok\u00e9mon."
+      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Attack base points of a single Pok\u00e9mon.",
+      "scarlet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Attack stat.",
+      "violet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Attack stat."
     },
     "name": "Protein",
     "imageName": "protein",
@@ -4747,7 +4822,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -4877,6 +4953,14 @@
       "shiningPearl": {
         "cost": "9800",
         "sell": "4900"
+      },
+      "scarlet": {
+        "cost": "10000",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "10000",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -4908,7 +4992,9 @@
       "sword": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Defense base points of a single Pok\u00e9mon.",
       "shield": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Defense base points of a single Pok\u00e9mon.",
       "brilliantDiamond": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Defense base points of a single Pok\u00e9mon.",
-      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Defense base points of a single Pok\u00e9mon."
+      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Defense base points of a single Pok\u00e9mon.",
+      "scarlet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Defense stat.",
+      "violet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Defense stat."
     },
     "name": "Iron",
     "imageName": "iron",
@@ -4923,7 +5009,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -5039,12 +5126,20 @@
         "sell": "5000"
       },
       "sword": {
-        "cost": "10000",
-        "sell": "5000"
+        "cost": "9800",
+        "sell": "4900"
       },
       "shield": {
+        "cost": "9800",
+        "sell": "4900"
+      },
+      "scarlet": {
         "cost": "10000",
-        "sell": "5000"
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "10000",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -5076,7 +5171,9 @@
       "sword": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Speed base points of a single Pok\u00e9mon.",
       "shield": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Speed base points of a single Pok\u00e9mon.",
       "brilliantDiamond": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Speed base points of a single Pok\u00e9mon.",
-      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Speed base points of a single Pok\u00e9mon."
+      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Speed base points of a single Pok\u00e9mon.",
+      "scarlet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Speed stat.",
+      "violet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Speed stat."
     },
     "name": "Carbos",
     "imageName": "carbos",
@@ -5091,7 +5188,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -5221,6 +5319,14 @@
       "shiningPearl": {
         "cost": "9800",
         "sell": "4900"
+      },
+      "scarlet": {
+        "cost": "10000",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "10000",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -5252,7 +5358,9 @@
       "sword": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Atk base points of a single Pok\u00e9mon.",
       "shield": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Atk base points of a single Pok\u00e9mon.",
       "brilliantDiamond": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Atk base points of a single Pok\u00e9mon.",
-      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Atk base points of a single Pok\u00e9mon."
+      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Atk base points of a single Pok\u00e9mon.",
+      "scarlet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Sp. Atk stat.",
+      "violet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Sp. Atk stat."
     },
     "name": "Calcium",
     "imageName": "calcium",
@@ -5268,7 +5376,8 @@
       "Generation VI": "medicine",
       "letsGoPikachu": "medicine",
       "letsGoEevee": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -5402,6 +5511,14 @@
       "legendsArceus": {
         "cost": "N/A",
         "sell": "2500"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -5436,7 +5553,9 @@
       "shield": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
       "brilliantDiamond": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
       "shiningPearl": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
-      "legendsArceus": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one."
+      "legendsArceus": "A candy that is packed with energy. When consumed, it will instantly raise the level of a single Pok\u00e9mon by one.",
+      "scarlet": "A candy that is packed with energy. If consumed, it raises a Pok\u00e9mon's level by one.",
+      "violet": "A candy that is packed with energy. If consumed, it raises a Pok\u00e9mon's level by one."
     },
     "name": "Rare Candy",
     "imageName": "rare-candy",
@@ -10820,7 +10939,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "yellow": {
@@ -10942,6 +11062,14 @@
       "shiningPearl": {
         "cost": "N/A",
         "sell": "4900"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -10975,7 +11103,9 @@
       "sword": "A medicine that slightly raises the max PP of a single selected move that has been learned by a Pok\u00e9mon.",
       "shield": "A medicine that slightly raises the max PP of a single selected move that has been learned by a Pok\u00e9mon.",
       "brilliantDiamond": "A medicine that slightly raises the max PP of a single selected move that has been learned by a Pok\u00e9mon.",
-      "shiningPearl": "A medicine that slightly raises the max PP of a single selected move that has been learned by a Pok\u00e9mon."
+      "shiningPearl": "A medicine that slightly raises the max PP of a single selected move that has been learned by a Pok\u00e9mon.",
+      "scarlet": "A medicine that can be used to slightly raise the max PP of a single move that a Pok\u00e9mon knows.",
+      "violet": "A medicine that can be used to slightly raise the max PP of a single move that a Pok\u00e9mon knows."
     },
     "name": "PP Up",
     "imageName": "pp-up",
@@ -13180,7 +13310,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
       "shield": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the bearer move first occasionally.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the holder move first occasionally.",
+      "violet": "An item to be held by a Pok\u00e9mon. This light, sharp claw lets the holder move first occasionally."
     },
     "name": "Quick Claw",
     "imageName": "quick-claw",
@@ -13960,7 +14092,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. When the holder successfully inflicts damage, the target may also flinch.",
       "shield": "An item to be held by a Pok\u00e9mon. When the holder successfully inflicts damage, the target may also flinch.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. When the holder successfully inflicts damage, the target may also flinch.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. When the holder successfully inflicts damage, the target may also flinch."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. When the holder successfully inflicts damage, the target may also flinch.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
+      "violet": "An item to be held by a Pok\u00e9mon. It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack."
     },
     "name": "King's Rock",
     "imageName": "king's-rock",
@@ -14149,7 +14283,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "gold": {
@@ -14275,6 +14410,14 @@
       "shiningPearl": {
         "cost": "N/A",
         "sell": "250"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "250"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "250"
       }
     },
     "descriptions": {
@@ -14308,7 +14451,9 @@
       "sword": "A very small and rare mushroom. It's popular with a certain class of collectors.",
       "shield": "A very small and rare mushroom. It's popular with a certain class of collectors.",
       "brilliantDiamond": "A very small and rare mushroom. It's popular with a certain class of collectors.",
-      "shiningPearl": "A very small and rare mushroom. It's popular with a certain class of collectors."
+      "shiningPearl": "A very small and rare mushroom. It's popular with a certain class of collectors.",
+      "scarlet": "A small and rare mushroom. It's quite popular with a certain class of collectors.",
+      "violet": "A small and rare mushroom. It's quite popular with a certain class of collectors."
     },
     "name": "TinyMushroom",
     "imageName": "tinymushroom",
@@ -19690,7 +19835,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "gold": {
@@ -19806,6 +19952,14 @@
         "sell": "1500"
       },
       "shield": {
+        "cost": "N/A",
+        "sell": "1500"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "1500"
+      },
+      "violet": {
         "cost": "N/A",
         "sell": "1500"
       },
@@ -19852,6 +20006,8 @@
       "shield": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
       "brilliantDiamond": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
       "shiningPearl": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
+      "scarlet": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
+      "violet": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to shops.",
       "legendsArceus": "Lovely red sand that flows between the fingers with a loose, silky feel. It can be sold at a low price to the general store."
     },
     "name": "Stardust",
@@ -19866,7 +20022,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "gold": {
@@ -19982,6 +20139,14 @@
         "sell": "6000"
       },
       "shield": {
+        "cost": "N/A",
+        "sell": "6000"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "6000"
+      },
+      "violet": {
         "cost": "N/A",
         "sell": "6000"
       },
@@ -20030,6 +20195,8 @@
       "shield": "A small shard of a beautiful gem that gives off a distinctly red sparkle. It can be sold at a high price to shops.",
       "brilliantDiamond": "A small shard of a beautiful gem that gives off a distinctly red sparkle. It can be sold at a high price to shops.",
       "shiningPearl": "A small shard of a beautiful gem that gives off a distinctly red sparkle. It can be sold at a high price to shops.",
+      "scarlet": "A small shard of a beautiful gem that gives off a distinctly red sparkle. It can be sold at a high price to shops.",
+      "violet": "A small shard of a beautiful gem that gives off a distinctly red sparkle. It can be sold at a high price to shops.",
       "legendsArceus": "A small shard of a beautiful gem that gives off a distinctly red sparkle. It can be sold at a high price to the general store."
     },
     "name": "Star Piece",
@@ -23127,95 +23294,122 @@
   },
   {
     "pocket": {
+      "Generation II": "pok\u00e9 balls",
       "heartGold": "pok\u00e9 balls",
       "soulSilver": "pok\u00e9 balls",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "pok\u00e9 balls"
     },
     "prices": {
-      "heartGold": {
+      "gold": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "silver": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "crystal": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "150"
       },
       "soulSilver": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "black": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "white": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "black2": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "white2": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "x": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "y": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "omegaRuby": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "alphaSapphire": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "sun": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "moon": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "ultraSun": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "ultraMoon": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "letsGoPikachu": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "letsGoEevee": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "150"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "150"
       }
     },
     "descriptions": {
-      "heartGold": "A special Pok\u00e9 Ball for the Pal Park.",
-      "soulSilver": "A special Pok\u00e9 Ball for the Pal Park.",
-      "black": "A special Pok\u00e9 Ball for the Pal Park.",
-      "white": "A special Pok\u00e9 Ball for the Pal Park.",
-      "black2": "A special Pok\u00e9 Ball for the Pal Park.",
-      "white2": "A special Pok\u00e9 Ball for the Pal Park.",
-      "x": "A special Pok\u00e9 Ball for the Pal Park.",
-      "y": "A special Pok\u00e9 Ball for the Pal Park.",
-      "omegaRuby": "A special Pok\u00e9 Ball for the Pal Park.",
-      "alphaSapphire": "A special Pok\u00e9 Ball for the Pal Park.",
-      "sun": "A special Pok\u00e9 Ball for the Pal Park.",
-      "moon": "A special Pok\u00e9 Ball for the Pal Park.",
-      "ultraSun": "A special Pok\u00e9 Ball for the Pal Park.",
-      "ultraMoon": "A special Pok\u00e9 Ball for the Pal Park.",
-      "letsGoPikachu": "A special Pok\u00e9 Ball for the Pal Park.",
-      "letsGoEevee": "A special Pok\u00e9 Ball for the Pal Park."
+      "gold": "The Bug-Catching Contest Ball.",
+      "silver": "The Bug-Catching Contest Ball.",
+      "crystal": "The Bug-Catching Contest Ball.",
+      "heartGold": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "soulSilver": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "black": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "white": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "black2": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "white2": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "x": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "y": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "omegaRuby": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "alphaSapphire": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "sun": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "moon": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "ultraSun": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "ultraMoon": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "letsGoPikachu": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "letsGoEevee": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "sword": "A special Pok\u00e9 Ball that was used during the Bug-Catching Contest in the Johto region.",
+      "shield": "A special Pok\u00e9 Ball that was used during the Bug-Catching Contest in the Johto region."
     },
     "name": "Park Ball",
     "imageName": "park-ball",
@@ -23849,7 +24043,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "pok\u00e9 balls"
+      "Generation VIII": "pok\u00e9 balls",
+      "Generation IX": "pok\u00e9 balls"
     },
     "prices": {
       "ruby": {
@@ -23947,6 +24142,14 @@
       "shield": {
         "cost": "1000",
         "sell": "500"
+      },
+      "scarlet": {
+        "cost": "??",
+        "sell": "250"
+      },
+      "violet": {
+        "cost": "??",
+        "sell": "250"
       }
     },
     "descriptions": {
@@ -23975,7 +24178,9 @@
       "letsGoPikachu": "A somewhat different Pok\u00e9 Ball that becomes progressively more effective the more turns that are taken in battle.",
       "letsGoEevee": "A somewhat different Pok\u00e9 Ball that becomes progressively more effective the more turns that are taken in battle.",
       "sword": "A somewhat different Pok\u00e9 Ball that becomes progressively more effective at catching Pok\u00e9mon the more turns that are taken in battle.",
-      "shield": "A somewhat different Pok\u00e9 Ball that becomes progressively more effective at catching Pok\u00e9mon the more turns that are taken in battle."
+      "shield": "A somewhat different Pok\u00e9 Ball that becomes progressively more effective at catching Pok\u00e9mon the more turns that are taken in battle.",
+      "scarlet": "A somewhat different Pok\u00e9 Ball that becomes more effective at catching Pok\u00e9mon the more turns that are taken in battle.",
+      "violet": "A somewhat different Pok\u00e9 Ball that becomes more effective at catching Pok\u00e9mon the more turns that are taken in battle."
     },
     "name": "Timer Ball",
     "imageName": "timer-ball",
@@ -24128,7 +24333,8 @@
       "Generation VI": "items",
       "letsGoPikachu": "items",
       "letsGoEevee": "items",
-      "Generation VIII": "pok\u00e9 balls"
+      "Generation VIII": "pok\u00e9 balls",
+      "Generation IX": "pok\u00e9 balls"
     },
     "prices": {
       "ruby": {
@@ -24234,6 +24440,14 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "5"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "5"
       }
     },
     "descriptions": {
@@ -24264,7 +24478,9 @@
       "sword": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
       "shield": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
       "brilliantDiamond": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
-      "shiningPearl": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort."
+      "shiningPearl": "A somewhat rare Pok\u00e9 Ball that was made as a commemorative item used to celebrate an event of some sort.",
+      "scarlet": "A somewhat rare Pok\u00e9 Ball made to commemorate a special occasion of some sort.",
+      "violet": "A somewhat rare Pok\u00e9 Ball made to commemorate a special occasion of some sort."
     },
     "name": "Premier Ball",
     "imageName": "premier-ball",
@@ -26247,7 +26463,8 @@
       "Generation V": "medicine",
       "Generation VI": "medicine",
       "Generation VII": "medicine",
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "ruby": {
@@ -26353,6 +26570,14 @@
       "shiningPearl": {
         "cost": "9800",
         "sell": "4900"
+      },
+      "scarlet": {
+        "cost": "10000",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "10000",
+        "sell": "2500"
       }
     },
     "descriptions": {
@@ -26381,7 +26606,9 @@
       "sword": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Def base points of a single Pok\u00e9mon.",
       "shield": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Def base points of a single Pok\u00e9mon.",
       "brilliantDiamond": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Def base points of a single Pok\u00e9mon.",
-      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Def base points of a single Pok\u00e9mon."
+      "shiningPearl": "A nutritious drink for Pok\u00e9mon. When consumed, it raises the Sp. Def base points of a single Pok\u00e9mon.",
+      "scarlet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Sp. Def stat.",
+      "violet": "A nutritious drink for Pok\u00e9mon. This drink increases base points for a Pok\u00e9mon's Sp. Def stat."
     },
     "name": "Zinc",
     "imageName": "zinc",
@@ -26915,11 +27142,163 @@
         "cost": "N/A",
         "sell": "10"
       },
+      "sword": {
+        "cost": "80",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "80",
+        "sell": "40"
+      },
       "brilliantDiamond": {
-        "cost": "N/A",
+        "cost": "80",
         "sell": "10"
       },
       "shiningPearl": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "legendsArceus": {
+        "cost": "120",
+        "sell": "30"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that heals paralysis in battle.",
+      "sapphire": "A hold item that heals paralysis in battle.",
+      "emerald": "A hold item that heals paralysis in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to heal paralysis.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to heal paralysis.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from paralysis.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from paralysis.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from paralysis.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to recover from paralysis.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to recover from paralysis.",
+      "black": "If held by a Pok\u00e9mon, it recovers from paralysis.",
+      "white": "If held by a Pok\u00e9mon, it recovers from paralysis.",
+      "black2": "If held by a Pok\u00e9mon, it recovers from paralysis.",
+      "white2": "If held by a Pok\u00e9mon, it recovers from paralysis.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from paralysis on its own in battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to cure its paralysis. You can also throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Cheri Berry",
+    "imageName": "cheri-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
         "cost": "N/A",
         "sell": "10"
       },
@@ -26930,6 +27309,174 @@
       "shield": {
         "cost": "80",
         "sell": "40"
+      },
+      "brilliantDiamond": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "legendsArceus": {
+        "cost": "120",
+        "sell": "30"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that awakens Pok\u00e9mon in battle.",
+      "sapphire": "A hold item that awakens Pok\u00e9mon in battle.",
+      "emerald": "A hold item that awakens Pok\u00e9mon in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to wake up.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to wake up.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from sleep.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from sleep.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from sleep.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to recover from sleep.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to recover from sleep.",
+      "black": "If held by a Pok\u00e9mon, it recovers from sleep.",
+      "white": "If held by a Pok\u00e9mon, it recovers from sleep.",
+      "black2": "If held by a Pok\u00e9mon, it recovers from sleep.",
+      "white2": "If held by a Pok\u00e9mon, it recovers from sleep.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from sleep on its own in battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to cure its drowsiness. You can also throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Chesto Berry",
+    "imageName": "chesto-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "80",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "80",
+        "sell": "40"
+      },
+      "brilliantDiamond": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "80",
+        "sell": "10"
       },
       "legendsArceus": {
         "cost": "120",
@@ -26967,6 +27514,2086 @@
     },
     "name": "Pecha Berry",
     "imageName": "pecha-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "brilliantDiamond": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "legendsArceus": {
+        "cost": "120",
+        "sell": "30"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that heals a burn in battle.",
+      "sapphire": "A hold item that heals a burn in battle.",
+      "emerald": "A hold item that heals a burn in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to heal a burn.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to heal a burn.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from a burn.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from a burn.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from a burn.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to recover from a burn.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to recover from a burn.",
+      "black": "If held by a Pok\u00e9mon, it recovers from a burn.",
+      "white": "If held by a Pok\u00e9mon, it recovers from a burn.",
+      "black2": "If held by a Pok\u00e9mon, it recovers from a burn.",
+      "white2": "If held by a Pok\u00e9mon, it recovers from a burn.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from a burn on its own in battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to cure its burn. You can also throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Rawst Berry",
+    "imageName": "rawst-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "brilliantDiamond": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "80",
+        "sell": "10"
+      },
+      "legendsArceus": {
+        "cost": "120",
+        "sell": "40"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that defrosts Pok\u00e9mon in battle.",
+      "sapphire": "A hold item that defrosts Pok\u00e9mon in battle.",
+      "emerald": "A hold item that defrosts Pok\u00e9mon in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle for defrosting.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle for defrosting.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to defrost it.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to defrost it.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to defrost it.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to defrost it.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to defrost it.",
+      "black": "If held by a Pok\u00e9mon, it defrosts it.",
+      "white": "If held by a Pok\u00e9mon, it defrosts it.",
+      "black2": "If held by a Pok\u00e9mon, it defrosts it.",
+      "white2": "If held by a Pok\u00e9mon, it defrosts it.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from being frozen on its own in battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to cure its frostbite. You can also throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Aspear Berry",
+    "imageName": "aspear-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "800",
+        "sell": "200"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores 10 PP in battle.",
+      "sapphire": "A hold item that restores 10 PP in battle.",
+      "emerald": "A hold item that restores 10 PP in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to restore 10 PP.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to restore 10 PP.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to restore a move's PP by 10.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to restore a move's PP by 10.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to restore a move's PP by 10.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to restore a move's PP by 10.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to restore a move's PP by 10.",
+      "black": "If held by a Pok\u00e9mon, it restores a move's PP by 10.",
+      "white": "If held by a Pok\u00e9mon, it restores a move's PP by 10.",
+      "black2": "If held by a Pok\u00e9mon, it restores a move's PP by 10.",
+      "white2": "If held by a Pok\u00e9mon, it restores a move's PP by 10.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore 10 PP to a depleted move during battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to restore 10 PP to one of its moves. You can also throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Leppa Berry",
+    "imageName": "leppa-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "80",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "80",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "80",
+        "sell": "20"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores 10 HP in battle.",
+      "sapphire": "A hold item that restores 10 HP in battle.",
+      "emerald": "A hold item that restores 10 HP in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to restore 10 HP.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to restore 10 HP.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to heal the user by just 10 HP.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to heal the user by just 10 HP.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to heal the user by just 10 HP.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to heal the user by just 10 HP.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to heal the user by just 10 HP.",
+      "black": "If held by a Pok\u00e9mon, it heals the user by just 10 HP.",
+      "white": "If held by a Pok\u00e9mon, it heals the user by just 10 HP.",
+      "black2": "If held by a Pok\u00e9mon, it heals the user by just 10 HP.",
+      "white2": "If held by a Pok\u00e9mon, it heals the user by just 10 HP.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by 10 points during battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to restore its HP by 20 points. You can throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Oran Berry",
+    "imageName": "oran-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that heals confusion in battle.",
+      "sapphire": "A hold item that heals confusion in battle.",
+      "emerald": "A hold item that heals confusion in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to lift confusion.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to lift confusion.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from confusion.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from confusion.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from confusion.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to recover from confusion.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to recover from confusion.",
+      "black": "If held by a Pok\u00e9mon, it recovers from confusion.",
+      "white": "If held by a Pok\u00e9mon, it recovers from confusion.",
+      "black2": "If held by a Pok\u00e9mon, it recovers from confusion.",
+      "white2": "If held by a Pok\u00e9mon, it recovers from confusion.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from confusion on its own in battle."
+    },
+    "name": "Persim Berry",
+    "imageName": "persim-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "150"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that heals status in battle.",
+      "sapphire": "A hold item that heals status in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to heal any problem.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to heal any problem.",
+      "emerald": "A hold item that heals any status problem in battle.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from any status problem.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from any status problem.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to recover from any status problem.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to recover from any status problem.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to recover from any status problem.",
+      "black": "If held by a Pok\u00e9mon, it recovers from any status problem.",
+      "white": "If held by a Pok\u00e9mon, it recovers from any status problem.",
+      "black2": "If held by a Pok\u00e9mon, it recovers from any status problem.",
+      "white2": "If held by a Pok\u00e9mon, it recovers from any status problem.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can recover from any status condition during battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to cure any status conditions it may have. You can also throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Lum Berry",
+    "imageName": "lum-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "800",
+        "sell": "200"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores 30 HP in battle.",
+      "sapphire": "A hold item that restores 30 HP in battle.",
+      "emerald": "A hold item that restores 30 HP in battle.",
+      "fireRed": "When held by a Pok\u00e9mon, it will be used in battle to restore 30 HP.",
+      "leafGreen": "When held by a Pok\u00e9mon, it will be used in battle to restore 30 HP.",
+      "diamond": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to heal the user's HP a little.",
+      "pearl": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to heal the user's HP a little.",
+      "platinum": "A Poffin ingredient. It may be used or held by a Pok\u00e9mon to heal the user's HP a little.",
+      "heartGold": "It may be used or held by a Pok\u00e9mon to heal the user's HP a little.",
+      "soulSilver": "It may be used or held by a Pok\u00e9mon to heal the user's HP a little.",
+      "black": "If held by a Pok\u00e9mon, it heals the user's HP a little.",
+      "white": "If held by a Pok\u00e9mon, it heals the user's HP a little.",
+      "black2": "If held by a Pok\u00e9mon, it heals the user's HP a little.",
+      "white2": "If held by a Pok\u00e9mon, it heals the user's HP a little.",
+      "x": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "y": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "omegaRuby": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "alphaSapphire": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "sun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "moon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "ultraSun": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "ultraMoon": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "sword": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "shield": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "brilliantDiamond": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "shiningPearl": "A Berry to be consumed by Pok\u00e9mon. If a Pok\u00e9mon holds one, it can restore its own HP by a small amount during battle.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to restore its HP by up to half its max. You can also throw this Berry near wild Pok\u00e9mon to draw their attention."
+    },
+    "name": "Sitrus Berry",
+    "imageName": "sitrus-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "150"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores HP but may confuse.",
+      "sapphire": "A hold item that restores HP but may confuse.",
+      "emerald": "A hold item that restores HP but may confuse.",
+      "fireRed": "A hold item that restores HP but may cause confusion when used.",
+      "leafGreen": "A hold item that restores HP but may cause confusion when used.",
+      "diamond": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "pearl": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "platinum": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "heartGold": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates spicy food.",
+      "soulSilver": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates spicy food.",
+      "black": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "black2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "x": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "y": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "omegaRuby": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "alphaSapphire": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "moon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraSun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraMoon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sword": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shield": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "brilliantDiamond": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shiningPearl": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to restore its HP by up to half its max. If a wild Pok\u00e9mon that hates spicy flavors eats one of these Berries, it will briefly pause."
+    },
+    "name": "Figy Berry",
+    "imageName": "figy-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "150"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores HP but may confuse.",
+      "sapphire": "A hold item that restores HP but may confuse.",
+      "emerald": "A hold item that restores HP but may confuse.",
+      "fireRed": "A hold item that restores HP but may cause confusion when used.",
+      "leafGreen": "A hold item that restores HP but may cause confusion when used.",
+      "diamond": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "pearl": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "platinum": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "heartGold": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates dry food.",
+      "soulSilver": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates dry food.",
+      "black": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "black2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "x": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "y": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "omegaRuby": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "alphaSapphire": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "moon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraSun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraMoon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sword": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shield": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "brilliantDiamond": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shiningPearl": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "legendsArceus": "A Berry that can be fed to a Pokemon to restore its HP by up to half its max. If a wild Pokemon that hates dry flavors eats one of these Berries, it will briefly pause."
+    },
+    "name": "Wiki Berry",
+    "imageName": "wiki-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "150"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores HP but may confuse.",
+      "sapphire": "A hold item that restores HP but may confuse.",
+      "emerald": "A hold item that restores HP but may confuse.",
+      "fireRed": "A hold item that restores HP but may cause confusion when used.",
+      "leafGreen": "A hold item that restores HP but may cause confusion when used.",
+      "diamond": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "pearl": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "platinum": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "heartGold": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates sweet food.",
+      "soulSilver": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates sweet food.",
+      "black": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "black2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "x": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "y": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "omegaRuby": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "alphaSapphire": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "moon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraSun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraMoon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sword": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shield": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "brilliantDiamond": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shiningPearl": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "legendsArceus": "A Berry that can be fed to a Pokemon to restore its HP by up to half its max. If a wild Pokemon that hates sweet flavors eats one of these Berries, it will briefly pause."
+    },
+    "name": "Mago Berry",
+    "imageName": "mago-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "150"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores HP but may confuse.",
+      "sapphire": "A hold item that restores HP but may confuse.",
+      "emerald": "A hold item that restores HP but may confuse.",
+      "fireRed": "A hold item that restores HP but may cause confusion when used.",
+      "leafGreen": "A hold item that restores HP but may cause confusion when used.",
+      "diamond": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "pearl": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "platinum": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "heartGold": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates bitter food.",
+      "soulSilver": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates bitter food.",
+      "black": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "black2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "x": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "y": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "omegaRuby": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "alphaSapphire": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "moon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraSun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraMoon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sword": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shield": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "brilliantDiamond": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shiningPearl": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "legendsArceus": "A Berry that can be fed to a Pokemon to restore its HP by up to half its max. If a wild Pokemon that hates bitter flavors eats one of these Berries, it will briefly pause."
+    },
+    "name": "Aguav Berry",
+    "imageName": "aguav-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "legendsArceus": {
+        "cost": "N/A",
+        "sell": "150"
+      }
+    },
+    "descriptions": {
+      "ruby": "A hold item that restores HP but may confuse.",
+      "sapphire": "A hold item that restores HP but may confuse.",
+      "emerald": "A hold item that restores HP but may confuse.",
+      "fireRed": "A hold item that restores HP but may cause confusion when used.",
+      "leafGreen": "A hold item that restores HP but may cause confusion when used.",
+      "diamond": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "pearl": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "platinum": "A Poffin ingredient. If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but may also cause confusion.",
+      "heartGold": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates sour food.",
+      "soulSilver": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates sour food.",
+      "black": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "black2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "white2": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+      "x": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "y": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "omegaRuby": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "alphaSapphire": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "moon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraSun": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "ultraMoon": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "sword": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shield": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "brilliantDiamond": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "shiningPearl": "If held by a Pok\u00e9mon, it restores the user's HP in a pinch, but it will cause confusion if the user hates the taste.",
+      "legendsArceus": "A Berry that can be fed to a Pokemon to restore its HP by up to half its max. If a wild Pokemon that hates sour flavors eats one of these Berries, it will briefly pause."
+    },
+    "name": "Iapapa Berry",
+    "imageName": "iapapa-berry",
+    "generationIntroduced": "3"
+  },
+  {
+    "pocket": {
+      "ruby": "berries",
+      "sapphire": "berries",
+      "emerald": "berries",
+      "fireRed": "berry pouch",
+      "leafGreen": "berry pouch",
+      "Generation IV": "berries",
+      "Generation V": "berries",
+      "Generation VI": "berries",
+      "Generation VII": "berries",
+      "sword": "berries",
+      "shield": "berries",
+      "brilliantDiamond": "berries",
+      "shiningPearl": "berries",
+      "legendsArceus": "items"
+    },
+    "prices": {
+      "ruby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "emerald": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "fireRed": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "leafGreen": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "diamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "pearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "platinum": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "soulSilver": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "black2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "white2": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "x": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "brilliantDiamond": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "shiningPearl": {
+        "cost": "N/A",
+        "sell": "10"
+      },
+      "letsGoPikachu": {
+        "cost": "N/A",
+        "sell": "100"
+      },
+      "letsGoEevee": {
+        "cost": "N/A",
+        "sell": "100"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "40"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "40"
+      }
+    },
+    "descriptions": {
+      "ruby": "POK\u00e9block ingredient. Plant in loamy soil to grow Razz.",
+      "sapphire": "POK\u00e9block ingredient. Plant in loamy soil to grow Razz.",
+      "emerald": "POK\u00e9block ingredient. Plant in loamy soil to grow Razz.",
+      "fireRed": "Can be ground up into powder as an ingredient for medicine.",
+      "leafGreen": "Can be ground up into powder as an ingredient for medicine.",
+      "diamond": "A Poffin ingredient. Bury it in soft soil to grow a Razz Plant.",
+      "pearl": "A Poffin ingredient. Bury it in soft soil to grow a Razz Plant.",
+      "platinum": "A Poffin ingredient. Bury it in soft soil to grow a Razz Plant.",
+      "heartGold": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry and feed them to their Pok\u00e9mon.",
+      "soulSilver": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry and feed them to their Pok\u00e9mon.",
+      "black": "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
+      "white": "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
+      "black2": "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
+      "white2": "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
+      "x": "A Berry to be used in cooking. This Berry is very rare and hard to obtain in the Unova region.",
+      "y": "A Berry to be used in cooking. This Berry is very rare and hard to obtain in the Unova region.",
+      "omegaRuby": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "alphaSapphire": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "sun": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "moon": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "ultraSun": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "ultraMoon": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "sword": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "shield": "Used to make Pok\u00e9blocks that will enhance your Coolness. Its red flesh is spicy when eaten.",
+      "letsGoPikachu": "A Berry that makes it slightly easier to catch Pok\u00e9mon when given to them.",
+      "letsGoEevee": "A Berry that makes it slightly easier to catch Pok\u00e9mon when given to them.",
+      "brilliantDiamond": "A Poffin ingredient. Bury it in soft soil to grow a Razz Berry plant.",
+      "shiningPearl": "A Poffin ingredient. Bury it in soft soil to grow a Razz Berry plant.",
+      "legendsArceus": "A Berry that can be fed to a Pok\u00e9mon to restore its HP by up to a third of its max. A wild Pok\u00e9mon will become easier to catch if it eats one of these Berries."
+    },
+    "name": "Razz Berry",
+    "imageName": "razz-berry",
     "generationIntroduced": "3"
   },
   {
@@ -32974,7 +35601,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "pok\u00e9 balls"
+      "Generation VIII": "pok\u00e9 balls",
+      "Generation IX": "pok\u00e9 balls"
     },
     "prices": {
       "diamond": {
@@ -33052,6 +35680,14 @@
       "shield": {
         "cost": "1000",
         "sell": "500"
+      },
+      "scarlet": {
+        "cost": "??",
+        "sell": "250"
+      },
+      "violet": {
+        "cost": "??",
+        "sell": "250"
       }
     },
     "descriptions": {
@@ -33075,7 +35711,9 @@
       "sword": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves.",
       "shield": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves.",
       "brilliantDiamond": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves.",
-      "shiningPearl": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves."
+      "shiningPearl": "A somewhat different Pok\u00e9 Ball that makes it easier to catch wild Pok\u00e9mon at night or in dark places such as caves.",
+      "scarlet": "A somewhat different Pok\u00e9 Ball that is more effective when catching Pok\u00e9mon at night or in dark places, such as caves.",
+      "violet": "A somewhat different Pok\u00e9 Ball that is more effective when catching Pok\u00e9mon at night or in dark places, such as caves."
     },
     "name": "Dusk Ball",
     "imageName": "dusk-ball",
@@ -34627,7 +37265,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "diamond": {
@@ -34706,6 +37345,14 @@
         "cost": "N/A",
         "sell": "2500"
       },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "2500"
+      },
       "brilliantDiamond": {
         "cost": "N/A",
         "sell": "5000"
@@ -34736,7 +37383,9 @@
       "sword": "A rare bone that is extremely valuable for the study of Pok\u00e9mon archeology. It can be sold for a high price to shops.",
       "shield": "A rare bone that is extremely valuable for the study of Pok\u00e9mon archeology. It can be sold for a high price to shops.",
       "brilliantDiamond": "A rare bone that is extremely valuable for the study of Pok\u00e9mon archeology. It can be sold for a high price to shops.",
-      "shiningPearl": "A rare bone that is extremely valuable for the study of Pok\u00e9mon archeology. It can be sold for a high price to shops."
+      "shiningPearl": "A rare bone that is extremely valuable for the study of Pok\u00e9mon archeology. It can be sold for a high price to shops.",
+      "scarlet": "A rare bone that is extremely valuable for the study of Pok\u00e9mon archeology. It can be sold at a high price to shops.",
+      "violet": "A rare bone that is extremely valuable for the study of Pok\u00e9mon archeology. It can be sold at a high price to shops."
     },
     "name": "Rare Bone",
     "imageName": "rare-bone",
@@ -37020,7 +39669,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
       "shield": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. If the holder has full HP and is hit with a move that should knock it out, it will endure with 1 HP\u2014but only once.",
+      "violet": "An item to be held by a Pok\u00e9mon. If the holder has full HP and is hit with a move that should knock it out, it will endure with 1 HP\u2014but only once."
     },
     "name": "Focus Sash",
     "imageName": "focus-sash",
@@ -37625,7 +40276,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. If the holder becomes infatuated, the opposing Pok\u00e9mon will be, too.",
       "shield": "An item to be held by a Pok\u00e9mon. If the holder becomes infatuated, the opposing Pok\u00e9mon will be, too.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. If the holder becomes infatuated, the opposing Pok\u00e9mon will be, too.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. If the holder becomes infatuated, the opposing Pok\u00e9mon will be, too."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. If the holder becomes infatuated, the opposing Pok\u00e9mon will be, too.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. Should the holder of this bright-red thread become infatuated, the Pok\u00e9mon it is infatuated with will be similarly afflicted.",
+      "violet": "An item to be held by a Pok\u00e9mon. Should the holder of this bright-red thread become infatuated, the Pok\u00e9mon it is infatuated with will be similarly afflicted."
     },
     "name": "Destiny Knot",
     "imageName": "destiny-knot",
@@ -38109,7 +40762,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
       "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Sunny Day when used by the holder.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. When the holder changes the weather to harsh sunlight, the sunlight will persist for longer than usual.",
+      "violet": "An item to be held by a Pok\u00e9mon. When the holder changes the weather to harsh sunlight, the sunlight will persist for longer than usual."
     },
     "name": "Heat Rock",
     "imageName": "heat-rock",
@@ -38230,7 +40885,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
       "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of the move Rain Dance when used by the holder.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. When the holder changes the weather to rain, the rain will persist for longer than usual.",
+      "violet": "An item to be held by a Pok\u00e9mon. When the holder changes the weather to rain, the rain will persist for longer than usual."
     },
     "name": "Damp Rock",
     "imageName": "damp-rock",
@@ -38351,7 +41008,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap.",
       "shield": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It extends the duration of multi-turn attacks, such as Bind and Wrap.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. When the holder uses moves that deal damage over several turns, such as Bind or Wrap, their effects will last longer than usual.",
+      "violet": "An item to be held by a Pok\u00e9mon. When the holder uses moves that deal damage over several turns, such as Bind or Wrap, their effects will last longer than usual."
     },
     "name": "Grip Claw",
     "imageName": "grip-claw",
@@ -38472,7 +41131,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. This curious scarf boosts Speed but only allows the use of one move.",
       "shield": "An item to be held by a Pok\u00e9mon. This curious scarf boosts Speed but only allows the use of one move.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This curious scarf boosts Speed but only allows the use of one move.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. This curious scarf boosts Speed but only allows the use of one move."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. This curious scarf boosts Speed but only allows the use of one move.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. This curious scarf boosts the holder's Speed stat but only allows the use of a single move.",
+      "violet": "An item to be held by a Pok\u00e9mon. This curious scarf boosts the holder's Speed stat but only allows the use of a single move."
     },
     "name": "Choice Scarf",
     "imageName": "choice-scarf",
@@ -39565,7 +42226,9 @@
       "sword": "An item to be held by a Pok\u00e9mon. It boosts the amount of HP the holder restores from HP-stealing moves.",
       "shield": "An item to be held by a Pok\u00e9mon. It boosts the amount of HP the holder restores from HP-stealing moves.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. It boosts the amount of HP the holder restores from HP-stealing moves.",
-      "shiningPearl": "An item to be held by a Pok\u00e9mon. It boosts the amount of HP the holder restores from HP-stealing moves."
+      "shiningPearl": "An item to be held by a Pok\u00e9mon. It boosts the amount of HP the holder restores from HP-stealing moves.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. This root boosts the amount of HP the holder restores to itself when it uses HP-stealing moves.",
+      "violet": "An item to be held by a Pok\u00e9mon. This root boosts the amount of HP the holder restores to itself when it uses HP-stealing moves."
     },
     "name": "Big Root",
     "imageName": "big-root",
@@ -43111,7 +45774,9 @@
       "shield": "An item to be held by a Pok\u00e9mon. This sharply hooked claw increases the holder's critical-hit ratio.",
       "brilliantDiamond": "An item to be held by a Pok\u00e9mon. This sharply hooked claw increases the holder's critical-hit ratio.",
       "shiningPearl": "An item to be held by a Pok\u00e9mon. This sharply hooked claw increases the holder's critical-hit ratio.",
-      "legendsArceus": "A sharp and pointed claw that seems as though it might be able to cut through anything at all. It's loved by a certain Pok\u00e9mon."
+      "legendsArceus": "A sharp and pointed claw that seems as though it might be able to cut through anything at all. It's loved by a certain Pok\u00e9mon.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. This sharply hooked claw boosts the critical-hit ratio of the holder's moves.",
+      "violet": "An item to be held by a Pok\u00e9mon. This sharply hooked claw boosts the critical-hit ratio of the holder's moves."
     },
     "name": "Razor Claw",
     "imageName": "razor-claw",
@@ -49128,95 +51793,122 @@
   },
   {
     "pocket": {
+      "Generation II": "pok\u00e9 balls",
       "heartGold": "pok\u00e9 balls",
       "soulSilver": "pok\u00e9 balls",
       "Generation V": "items",
       "Generation VI": "items",
-      "Generation VII": "items"
+      "Generation VII": "items",
+      "Generation VIII": "pok\u00e9 balls"
     },
     "prices": {
-      "heartGold": {
+      "gold": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "silver": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "crystal": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "heartGold": {
+        "cost": "N/A",
+        "sell": "150"
       },
       "soulSilver": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "black": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "white": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "black2": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "white2": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "x": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "y": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "omegaRuby": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "alphaSapphire": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "sun": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "moon": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "ultraSun": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "ultraMoon": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "letsGoPikachu": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
       },
       "letsGoEevee": {
         "cost": "N/A",
-        "sell": "N/A"
+        "sell": "150"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "150"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "150"
       }
     },
     "descriptions": {
-      "heartGold": "A special Pok\u00e9 Ball for the Pal Park.",
-      "soulSilver": "A special Pok\u00e9 Ball for the Pal Park.",
-      "black": "A special Pok\u00e9 Ball for the Pal Park.",
-      "white": "A special Pok\u00e9 Ball for the Pal Park.",
-      "black2": "A special Pok\u00e9 Ball for the Pal Park.",
-      "white2": "A special Pok\u00e9 Ball for the Pal Park.",
-      "x": "A special Pok\u00e9 Ball for the Pal Park.",
-      "y": "A special Pok\u00e9 Ball for the Pal Park.",
-      "omegaRuby": "A special Pok\u00e9 Ball for the Pal Park.",
-      "alphaSapphire": "A special Pok\u00e9 Ball for the Pal Park.",
-      "sun": "A special Pok\u00e9 Ball for the Pal Park.",
-      "moon": "A special Pok\u00e9 Ball for the Pal Park.",
-      "ultraSun": "A special Pok\u00e9 Ball for the Pal Park.",
-      "ultraMoon": "A special Pok\u00e9 Ball for the Pal Park.",
-      "letsGoPikachu": "A special Pok\u00e9 Ball for the Pal Park.",
-      "letsGoEevee": "A special Pok\u00e9 Ball for the Pal Park."
+      "gold": "The Bug-Catching Contest Ball.",
+      "silver": "The Bug-Catching Contest Ball.",
+      "crystal": "The Bug-Catching Contest Ball.",
+      "heartGold": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "soulSilver": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "black": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "white": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "black2": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "white2": "A special Pok\u00e9 Ball for the Bug-Catching Contest.",
+      "x": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "y": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "omegaRuby": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "alphaSapphire": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "sun": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "moon": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "ultraSun": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "ultraMoon": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "letsGoPikachu": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "letsGoEevee": "A special Pok\u00e9 Ball that is used during the Bug-Catching Contest.",
+      "sword": "A special Pok\u00e9 Ball that was used during the Bug-Catching Contest in the Johto region.",
+      "shield": "A special Pok\u00e9 Ball that was used during the Bug-Catching Contest in the Johto region."
     },
     "name": "Park Ball",
     "imageName": "park-ball",
@@ -50323,7 +53015,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of a Pok\u00e9mon when held.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of a Pok\u00e9mon when held.",
       "sword": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of a Pok\u00e9mon when held.",
-      "shield": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of a Pok\u00e9mon when held."
+      "shield": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of a Pok\u00e9mon when held.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of the holder.",
+      "violet": "An item to be held by a Pok\u00e9mon. This very light stone reduces the weight of the holder."
     },
     "name": "Float Stone",
     "imageName": "float-stone",
@@ -50408,7 +53102,9 @@
       "ultraSun": "An item to be held by a Pok\u00e9mon. If the holder is hit, the attacker will also be damaged upon contact.",
       "ultraMoon": "An item to be held by a Pok\u00e9mon. If the holder is hit, the attacker will also be damaged upon contact.",
       "sword": "An item to be held by a Pok\u00e9mon. If the holder is hit, the attacker will also be damaged upon contact.",
-      "shield": "An item to be held by a Pok\u00e9mon. If the holder is hit, the attacker will also be damaged upon contact."
+      "shield": "An item to be held by a Pok\u00e9mon. If the holder is hit, the attacker will also be damaged upon contact.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. If another Pok\u00e9mon makes direct contact with the holder, that Pok\u00e9mon will be damaged.",
+      "violet": "An item to be held by a Pok\u00e9mon. If another Pok\u00e9mon makes direct contact with the holder, that Pok\u00e9mon will be damaged."
     },
     "name": "Rocky Helmet",
     "imageName": "rocky-helmet",
@@ -52931,7 +55627,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "black": {
@@ -52997,6 +55694,14 @@
       "shield": {
         "cost": "N/A",
         "sell": "500"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "500"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "500"
       }
     },
     "descriptions": {
@@ -53015,7 +55720,9 @@
       "letsGoPikachu": "Though this feather is beautiful, it's just a regular feather and has no effect.",
       "letsGoEevee": "Though this feather is beautiful, it's just a regular feather and has no effect.",
       "sword": "Though this feather is beautiful, it's just a regular feather and has no effect.",
-      "shield": "Though this feather is beautiful, it's just a regular feather and has no effect."
+      "shield": "Though this feather is beautiful, it's just a regular feather and has no effect.",
+      "scarlet": "Though this feather is beautiful, it's just a regular feather and has no effect.",
+      "violet": "Though this feather is beautiful, it's just a regular feather and has no effect."
     },
     "name": "Pretty Wing",
     "imageName": "pretty-wing",
@@ -53684,7 +56391,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "black": {
@@ -53742,6 +56450,14 @@
       "shield": {
         "cost": "N/A",
         "sell": "20000"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "20000"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "20000"
       }
     },
     "descriptions": {
@@ -53758,7 +56474,9 @@
       "ultraSun": "A big nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
       "ultraMoon": "A big nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
       "sword": "A big nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
-      "shield": "A big nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops."
+      "shield": "A big nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
+      "scarlet": "A big nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
+      "violet": "A big nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops."
     },
     "name": "Big Nugget",
     "imageName": "big-nugget",
@@ -55631,7 +58349,9 @@
       "shield": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
       "brilliantDiamond": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
       "shiningPearl": "A shiny charm said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
-      "legendsArceus": "A charm that shines with a mysterious light. It is said to increase the chance of finding a Shiny Pok\u00e9mon in the wild."
+      "legendsArceus": "A charm that shines with a mysterious light. It is said to increase the chance of finding a Shiny Pok\u00e9mon in the wild.",
+      "scarlet": "Having one of these mysterious shining charms makes it more likely you'll encounter Shiny Pok\u00e9mon in the wild.",
+      "violet": "Having one of these mysterious shining charms makes it more likely you'll encounter Shiny Pok\u00e9mon in the wild."
     },
     "name": "Shiny Charm",
     "imageName": "shiny-charm",
@@ -56742,7 +59462,9 @@
       "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
       "brilliantDiamond": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
       "shiningPearl": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
-      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern."
+      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
+      "scarlet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern.",
+      "violet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a distinct thunderbolt pattern."
     },
     "name": "Thunder Stone",
     "imageName": "thunder-stone",
@@ -56756,7 +59478,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "gold": {
@@ -56882,6 +59605,14 @@
       "shiningPearl": {
         "cost": "N/A",
         "sell": "250"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "250"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "250"
       }
     },
     "descriptions": {
@@ -56915,7 +59646,9 @@
       "sword": "A very small and rare mushroom. It's popular with a certain class of collectors.",
       "shield": "A very small and rare mushroom. It's popular with a certain class of collectors.",
       "brilliantDiamond": "A very small and rare mushroom. It's popular with a certain class of collectors.",
-      "shiningPearl": "A very small and rare mushroom. It's popular with a certain class of collectors."
+      "shiningPearl": "A very small and rare mushroom. It's popular with a certain class of collectors.",
+      "scarlet": "A small and rare mushroom. It's quite popular with a certain class of collectors.",
+      "violet": "A small and rare mushroom. It's quite popular with a certain class of collectors."
     },
     "name": "Tiny Mushroom",
     "imageName": "tiny-mushroom",
@@ -63198,6 +65931,59 @@
       }
     },
     "descriptions": {
+      "x": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo.",
+      "y": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo.",
+      "omegaRuby": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo.",
+      "alphaSapphire": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo.",
+      "sun": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo.",
+      "moon": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo.",
+      "ultraSun": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo.",
+      "ultraMoon": "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare's logo."
+    },
+    "name": "Elevator Key",
+    "imageName": "elevator-key",
+    "generationIntroduced": "6"
+  },
+  {
+    "pocket": {
+      "Generation VI": "key items",
+      "Generation VII": "key items"
+    },
+    "prices": {
+      "x": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "y": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "omegaRuby": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "alphaSapphire": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "sun": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
       "x": "A commuter pass that allows the holder to ride the TMV between Lumiose City and Kiloude City at any time.",
       "y": "A commuter pass that allows the holder to ride the TMV between Lumiose City and Kiloude City at any time.",
       "omegaRuby": "A commuter pass that allows the holder to ride the TMV between Lumiose City and Kiloude City at any time.",
@@ -63268,7 +66054,8 @@
     "pocket": {
       "Generation VI": "key items",
       "Generation VII": "key items",
-      "Generation VIII": "key items"
+      "Generation VIII": "key items",
+      "Generation IX": "key items"
     },
     "prices": {
       "x": {
@@ -63310,6 +66097,14 @@
       "shield": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "N/A"
       }
     },
     "descriptions": {
@@ -63322,7 +66117,9 @@
       "ultraSun": "This book contains all the points a new Trainer needs to know on a journey. It was handmade by a kind friend.",
       "ultraMoon": "This book contains all the points a new Trainer needs to know on a journey. It was handmade by a kind friend.",
       "sword": "A compact device that automatically collects and records advice when a Trainer is out on an adventure.",
-      "shield": "A compact device that automatically collects and records advice when a Trainer is out on an adventure."
+      "shield": "A compact device that automatically collects and records advice when a Trainer is out on an adventure.",
+      "scarlet": "A mysterious and convenient notebook that contains all the advice a Trainer receives out on an adventure.",
+      "violet": "A mysterious and convenient notebook that contains all the advice a Trainer receives out on an adventure."
     },
     "name": "Adventure Rules",
     "imageName": "adventure-rules",
@@ -68605,6 +71402,49 @@
   },
   {
     "pocket": {
+      "Generation VII": "key items",
+      "Generation VIII": "key items"
+    },
+    "prices": {
+      "sun": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "moon": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "ultraSun": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "ultraMoon": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "sword": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "shield": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "sun": "A Fishing Rod made by Captain Lana. Cast a line over piles of underwater rocks to fish for wild aquatic Pok\u00e9mon.",
+      "moon": "A Fishing Rod made by Captain Lana. Cast a line over piles of underwater rocks to fish for wild aquatic Pok\u00e9mon.",
+      "ultraSun": "A fishing rod made by Captain Lana. Cast a line over piles of underwater rocks to fish for wild aquatic Pok\u00e9mon.",
+      "ultraMoon": "A fishing rod made by Captain Lana. Cast a line over piles of underwater rocks to fish for wild aquatic Pok\u00e9mon.",
+      "sword": "Use it by the water to fish up various kinds of Pok\u00e9mon.*A fishing rod made by Captain Lana. Cast a line over piles of underwater rocks to fish for wild aquatic Pok\u00e9mon.*",
+      "shield": "Use it by the water to fish up various kinds of Pok\u00e9mon.*A fishing rod made by Captain Lana. Cast a line over piles of underwater rocks to fish for wild aquatic Pok\u00e9mon.*"
+    },
+    "name": "Fishing Rod",
+    "imageName": "fishing-rod",
+    "generationIntroduced": "7"
+  },
+  {
+    "pocket": {
       "Generation VII": "key items"
     },
     "prices": {
@@ -68841,7 +71681,9 @@
       "letsGoEevee": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has an unmistakable snowflake pattern.",
       "sword": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has an unmistakable snowflake pattern.",
       "shield": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has an unmistakable snowflake pattern.",
-      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a snowflake pattern in it."
+      "legendsArceus": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a snowflake pattern in it.",
+      "scarlet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a snowflake pattern in it.",
+      "violet": "A peculiar stone that can make certain species of Pok\u00e9mon evolve. It has a snowflake pattern in it."
     },
     "name": "Ice Stone",
     "imageName": "ice-stone",
@@ -72887,7 +75729,8 @@
       "Generation V": "items",
       "Generation VI": "items",
       "Generation VII": "items",
-      "Generation VIII": "treasures"
+      "Generation VIII": "treasures",
+      "Generation IX": "treasures"
     },
     "prices": {
       "black": {
@@ -72953,6 +75796,14 @@
       "shield": {
         "cost": "N/A",
         "sell": "500"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "500"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "500"
       }
     },
     "descriptions": {
@@ -72971,7 +75822,9 @@
       "letsGoPikachu": "Though this feather is beautiful, it's just a regular feather and has no effect.",
       "letsGoEevee": "Though this feather is beautiful, it's just a regular feather and has no effect.",
       "sword": "Though this feather is beautiful, it's just a regular feather and has no effect.",
-      "shield": "Though this feather is beautiful, it's just a regular feather and has no effect."
+      "shield": "Though this feather is beautiful, it's just a regular feather and has no effect.",
+      "scarlet": "Though this feather is beautiful, it's just a regular feather and has no effect.",
+      "violet": "Though this feather is beautiful, it's just a regular feather and has no effect."
     },
     "name": "Pretty Feather",
     "imageName": "pretty-feather",
@@ -72981,7 +75834,8 @@
     "pocket": {
       "Generation VI": "key items",
       "Generation VII": "key items",
-      "Generation VIII": "key items"
+      "Generation VIII": "key items",
+      "Generation IX": "key items"
     },
     "prices": {
       "x": {
@@ -73023,6 +75877,14 @@
       "shield": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "N/A"
       }
     },
     "descriptions": {
@@ -73035,7 +75897,9 @@
       "ultraSun": "This book contains all the points a new Trainer needs to know on a journey. It was handmade by a kind friend.",
       "ultraMoon": "This book contains all the points a new Trainer needs to know on a journey. It was handmade by a kind friend.",
       "sword": "A compact device that automatically collects and records advice when a Trainer is out on an adventure.",
-      "shield": "A compact device that automatically collects and records advice when a Trainer is out on an adventure."
+      "shield": "A compact device that automatically collects and records advice when a Trainer is out on an adventure.",
+      "scarlet": "A mysterious and convenient notebook that contains all the advice a Trainer receives out on an adventure.",
+      "violet": "A mysterious and convenient notebook that contains all the advice a Trainer receives out on an adventure."
     },
     "name": "Adventure Rules",
     "imageName": "adventure-rules",
@@ -73881,7 +76745,9 @@
     },
     "descriptions": {
       "sword": "Raises Sp. Atk when a Pok\u00e9mon uses a sound-based move.",
-      "shield": "Raises Sp. Atk when a Pok\u00e9mon uses a sound-based move."
+      "shield": "Raises Sp. Atk when a Pok\u00e9mon uses a sound-based move.",
+      "scarlet": "An item to be held by a Pok\u00e9mon. If the holder uses a sound-based move, this throat spray will boost its Sp. Atk stat.",
+      "violet": "An item to be held by a Pok\u00e9mon. If the holder uses a sound-based move, this throat spray will boost its Sp. Atk stat."
     },
     "name": "Throat Spray",
     "imageName": "throat-spray",
@@ -73999,7 +76865,8 @@
   },
   {
     "pocket": {
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "sword": {
@@ -74009,11 +76876,21 @@
       "shield": {
         "cost": "N/A",
         "sell": "10"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "5"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "5"
       }
     },
     "descriptions": {
       "sword": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a very small amount of Exp. Points.",
-      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a very small amount of Exp. Points."
+      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a very small amount of Exp. Points.",
+      "scarlet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a very small number of Exp. Points.",
+      "violet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a very small number of Exp. Points."
     },
     "name": "Exp. Candy XS",
     "imageName": "exp.-candy-xs",
@@ -74021,7 +76898,8 @@
   },
   {
     "pocket": {
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "sword": {
@@ -74035,11 +76913,21 @@
       "legendsArceus": {
         "cost": "1600",
         "sell": "400"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "60"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "60"
       }
     },
     "descriptions": {
       "sword": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a small amount of Exp. Points.",
-      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a small amount of Exp. Points."
+      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a small amount of Exp. Points.",
+      "scarlet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a small number of Exp. Points.",
+      "violet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a small number of Exp. Points."
     },
     "name": "Exp. Candy S",
     "imageName": "exp.-candy-s",
@@ -74047,7 +76935,8 @@
   },
   {
     "pocket": {
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "sword": {
@@ -74061,11 +76950,21 @@
       "legendsArceus": {
         "cost": "6000",
         "sell": "1500"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "250"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "250"
       }
     },
     "descriptions": {
       "sword": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a moderate amount of Exp. Points.",
-      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a moderate amount of Exp. Points."
+      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a moderate amount of Exp. Points.",
+      "scarlet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a moderate number of Exp. Points.",
+      "violet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a moderate number of Exp. Points."
     },
     "name": "Exp. Candy M",
     "imageName": "exp.-candy-m",
@@ -74073,7 +76972,8 @@
   },
   {
     "pocket": {
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "sword": {
@@ -74087,11 +76987,21 @@
       "legendsArceus": {
         "cost": "18000",
         "sell": "4500"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "750"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "750"
       }
     },
     "descriptions": {
       "sword": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a large amount of Exp. Points.",
-      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a large amount of Exp. Points."
+      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a large amount of Exp. Points.",
+      "scarlet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a large number of Exp. Points.",
+      "violet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a large number of Exp. Points."
     },
     "name": "Exp. Candy L",
     "imageName": "exp.-candy-l",
@@ -74099,7 +77009,8 @@
   },
   {
     "pocket": {
-      "Generation VIII": "other items"
+      "Generation VIII": "other items",
+      "Generation IX": "other items"
     },
     "prices": {
       "sword": {
@@ -74113,11 +77024,21 @@
       "legendsArceus": {
         "cost": "50000",
         "sell": "12500"
+      },
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "2500"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "2500"
       }
     },
     "descriptions": {
       "sword": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a very large amount of Exp. Points.",
-      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a very large amount of Exp. Points."
+      "shield": "A candy that is packed with energy. When consumed, it will grant a single Pok\u00e9mon a very large amount of Exp. Points.",
+      "scarlet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a very large number of Exp. Points.",
+      "violet": "A candy that is packed with energy. If consumed, it grants a Pok\u00e9mon a very large number of Exp. Points."
     },
     "name": "Exp. Candy XL",
     "imageName": "exp.-candy-xl",
@@ -74535,7 +77456,9 @@
       "sword": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
       "shield": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
       "brilliantDiamond": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
-      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly."
+      "shiningPearl": "When a Pok\u00e9mon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly.",
+      "scarlet": "Having a Pok\u00e9mon smell this mint can make its Sp. Atk stat grow stronger. However, its Speed stat may suffer.",
+      "violet": "Having a Pok\u00e9mon smell this mint can make its Sp. Atk stat grow stronger. However, its Speed stat may suffer."
     },
     "name": "Quiet Mint",
     "imageName": "quiet-mint",
@@ -75215,7 +78138,8 @@
   },
   {
     "pocket": {
-      "Generation VIII": "key items"
+      "Generation VIII": "key items",
+      "Generation IX": "key items"
     },
     "prices": {
       "sword": {
@@ -75233,13 +78157,23 @@
       "shiningPearl": {
         "cost": "N/A",
         "sell": "N/A"
+      },
+      "scarlet": {
+        "cost": "Varies",
+        "sell": "N/A"
+      },
+      "violet": {
+        "cost": "Varies",
+        "sell": "N/A"
       }
     },
     "descriptions": {
       "sword": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
       "shield": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
       "brilliantDiamond": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
-      "shiningPearl": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within."
+      "shiningPearl": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
+      "scarlet": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within.",
+      "violet": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the various devices listed within."
     },
     "name": "Rotom Catalog",
     "imageName": "rotom-catalog",
@@ -75918,6 +78852,23 @@
     },
     "name": "Hometown Muffin",
     "imageName": "hometown-muffin",
+    "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation VIII": "items"
+    },
+    "prices": {
+      "legendsArceus": {
+        "cost": "40",
+        "sell": "10"
+      }
+    },
+    "descriptions": {
+      "legendsArceus": "A fruit whose shell can be used to form the capsules of all manner of Pok\u00e9 Balls when crafting them from scratch. Its proper name is actually \u201cBrown Apricorn.\u201d"
+    },
+    "name": "Apricorn",
+    "imageName": "apricorn",
     "generationIntroduced": "8"
   },
   {
@@ -77366,7 +80317,8 @@
   },
   {
     "pocket": {
-      "Generation VIII": "pok\u00e9 balls"
+      "Generation VIII": "pok\u00e9 balls",
+      "Generation IX": "pok\u00e9 balls"
     },
     "descriptions": {
       "legendsArceus": "\u2014\u2014\u2014"
@@ -77919,5 +80871,127 @@
     "name": "Legend Plate",
     "imageName": "legend-plate",
     "generationIntroduced": "8"
+  },
+  {
+    "pocket": {
+      "Generation IX": "key items"
+    },
+    "prices": {
+      "scarlet": {
+        "cost": "N/A",
+        "sell": "N/A"
+      },
+      "violet": {
+        "cost": "N/A",
+        "sell": "N/A"
+      }
+    },
+    "descriptions": {
+      "scarlet": "An orb that holds within it the power to crystallize. When it is charged with energy, it can be used to cause Pok\u00e9mon to Terastallize.",
+      "violet": "An orb that holds within it the power to crystallize. When it is charged with energy, it can be used to cause Pok\u00e9mon to Terastallize."
+    },
+    "name": "Tera Orb",
+    "imageName": "tera-orb",
+    "generationIntroduced": "9"
+  },
+  {
+    "pocket": {
+      "Generation IX": "other items"
+    },
+    "prices": {
+      "scarlet": {
+        "cost": "30000",
+        "sell": "7500"
+      },
+      "violet": {
+        "cost": "30000",
+        "sell": "7500"
+      }
+    },
+    "descriptions": {
+      "scarlet": "An item to be held by a Pok\u00e9mon. This clear, sparkling amulet protects the holder from having its stats lowered by moves used against it or by other Pok\u00e9mon's Abilities.",
+      "violet": "An item to be held by a Pok\u00e9mon. This clear, sparkling amulet protects the holder from having its stats lowered by moves used against it or by other Pok\u00e9mon's Abilities."
+    },
+    "name": "Clear Amulet",
+    "imageName": "clear-amulet",
+    "generationIntroduced": "9"
+  },
+  {
+    "pocket": {
+      "Generation IX": "other items"
+    },
+    "prices": {
+      "scarlet": {
+        "cost": "15000",
+        "sell": "3750"
+      },
+      "violet": {
+        "cost": "15000",
+        "sell": "3750"
+      }
+    },
+    "descriptions": {
+      "scarlet": "An item to be held by a Pok\u00e9mon. This protective glove boosts the power of the holder's punching moves and prevents direct contact with targets.",
+      "violet": "An item to be held by a Pok\u00e9mon. This protective glove boosts the power of the holder's punching moves and prevents direct contact with targets."
+    },
+    "name": "Punching Glove",
+    "imageName": "punching-glove",
+    "generationIntroduced": "9"
+  },
+  {
+    "pocket": {
+      "Generation IX": "other items"
+    },
+    "prices": {
+      "scarlet": {
+        "cost": "20000",
+        "sell": "5000"
+      },
+      "violet": {
+        "cost": "20000",
+        "sell": "5000"
+      }
+    },
+    "descriptions": {
+      "scarlet": "An item to be held by a Pok\u00e9mon. This hooded cloak conceals the holder, tricking the eyes of its enemies and protecting it from the additional effects of moves.",
+      "violet": "An item to be held by a Pok\u00e9mon. This hooded cloak conceals the holder, tricking the eyes of its enemies and protecting it from the additional effects of moves."
+    },
+    "name": "Covert Cloak",
+    "imageName": "covert-cloak",
+    "generationIntroduced": "9"
+  },
+  {
+    "pocket": {
+      "Generation IX": "other items"
+    },
+    "prices": {
+      "scarlet": {
+        "cost": "20000",
+        "sell": "5000"
+      },
+      "violet": {
+        "cost": "20000",
+        "sell": "5000"
+      }
+    },
+    "descriptions": {
+      "scarlet": "An item to be held by a Pok\u00e9mon. This loaded dice always rolls a good number, and holding one can ensure that the holder's multistrike moves hit more times.",
+      "violet": "An item to be held by a Pok\u00e9mon. This loaded dice always rolls a good number, and holding one can ensure that the holder's multistrike moves hit more times."
+    },
+    "name": "Loaded Dice",
+    "imageName": "loaded-dice",
+    "generationIntroduced": "9"
+  },
+  {
+    "pocket": {
+      "Generation IX": "items"
+    },
+    "descriptions": {
+      "scarlet": "Material accidentally dropped by a Pok\u00e9mon. It seems that Gimmighoul treasure and hoard these.",
+      "violet": "Material accidentally dropped by a Pok\u00e9mon. It seems that Gimmighoul treasure and hoard these."
+    },
+    "name": "Gimmighoul Coin",
+    "imageName": "gimmighoul-coin",
+    "generationIntroduced": "9"
   }
 ]

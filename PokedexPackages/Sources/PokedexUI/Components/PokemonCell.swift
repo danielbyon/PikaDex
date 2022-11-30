@@ -101,7 +101,7 @@ private extension Pokemon {
 
     func formattedPokedexNumber(for pokedex: Pokedex) -> String {
         let number = NSNumber(value: number(for: pokedex))
-        return NumberFormatter.threeDigit.string(from: number)!
+        return NumberFormatter.pokemonIndex.string(from: number)!
     }
 
 }

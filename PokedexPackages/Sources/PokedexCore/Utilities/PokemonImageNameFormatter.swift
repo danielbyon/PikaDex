@@ -19,7 +19,7 @@ public enum PokemonImageNameFormatter {
     }
 
     private static func resolvedName(forPokemonName pokemonName: String, formName: String, index: Int, suffix: String) -> String {
-        var retVal = NumberFormatter.threeDigit.string(from: NSNumber(integerLiteral: index))!
+        var retVal = NumberFormatter.pokemonIndex.string(from: NSNumber(integerLiteral: index))!
         if formName != pokemonName {
             let sanitizedName = formName.replacingOccurrences(of: " ", with: "-")
             retVal += "-\(sanitizedName)"

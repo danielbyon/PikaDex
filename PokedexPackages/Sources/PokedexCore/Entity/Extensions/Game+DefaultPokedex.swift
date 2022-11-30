@@ -38,8 +38,12 @@ extension Game {
             return .letsGoKanto
         case .sword, .shield:
             return .galar
-        case .legendsArceus: return .hisui
-        case .national: return .national
+        case .legendsArceus:
+            return .hisui
+        case .scarlet, .violet:
+            return .paldea
+        case .national:
+            return .national
         }
     }
 

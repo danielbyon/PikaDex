@@ -904,3 +904,106 @@ number	name	introduced	catchRate	levelingRate	maleRatio	eggGroup1	eggGroup2	bulb
 903	Sneasler	8	0	Unknown	50	Field		https://bulbapedia.bulbagarden.net/wiki/Sneasler_(Pokémon)	https://pokemondb.net/pokedex/sneasler
 904	Overqwil	8	0	Unknown	50	Water 2		https://bulbapedia.bulbagarden.net/wiki/Overqwil_(Pokémon)	https://pokemondb.net/pokedex/overqwil
 905	Enamorus	8	0	Unknown	0	Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Enamorus_(Pokémon)	https://pokemondb.net/pokedex/enamorus
+906	Sprigatito	9	45	Medium Slow	87.5	Field	Grass	https://bulbapedia.bulbagarden.net/wiki/Sprigatito_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/sprigatito
+907	Floragato	9	45	Medium Slow	87.5	Field	Grass	https://bulbapedia.bulbagarden.net/wiki/Floragato_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/floragato
+908	Meowscarada	9	45	Medium Slow	87.5	Field	Grass	https://bulbapedia.bulbagarden.net/wiki/Meowscarada_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/meowscarada
+909	Fuecoco	9	45	Medium Slow	87.5	Field		https://bulbapedia.bulbagarden.net/wiki/Fuecoco_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/fuecoco
+910	Crocalor	9	45	Medium Slow	87.5	Field		https://bulbapedia.bulbagarden.net/wiki/Crocalor_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/crocalor
+911	Skeledirge	9	45	Medium Slow	87.5	Field		https://bulbapedia.bulbagarden.net/wiki/Skeledirge_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/skeledirge
+912	Quaxly	9	45	Medium Slow	87.5	Flying	Water 1	https://bulbapedia.bulbagarden.net/wiki/Quaxly_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/quaxly
+913	Quaxwell	9	45	Medium Slow	87.5	Flying	Water 1	https://bulbapedia.bulbagarden.net/wiki/Quaxwell_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/quaxwell
+914	Quaquaval	9	45	Medium Slow	87.5	Flying	Water 1	https://bulbapedia.bulbagarden.net/wiki/Quaquaval_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/quaquaval
+915	Lechonk	9	255	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Lechonk_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/lechonk
+916	Oinkologne	9	100	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Oinkologne_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/oinkologne
+917	Dudunsparce	9	45	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Dudunsparce_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/dudunsparce
+918	Tarountula	9	255	Erratic	50	Bug		https://bulbapedia.bulbagarden.net/wiki/Tarountula_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/tarountula
+919	Spidops	9	120	Erratic	50	Bug		https://bulbapedia.bulbagarden.net/wiki/Spidops_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/spidops
+920	Nymble	9	190	Medium Fast	50	Bug		https://bulbapedia.bulbagarden.net/wiki/Nymble_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/nymble
+921	Lokix	9	30	Medium Fast	50	Bug		https://bulbapedia.bulbagarden.net/wiki/Lokix_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/lokix
+922	Rellor	9	190	Fast	50	Bug		https://bulbapedia.bulbagarden.net/wiki/Rellor_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/rellor
+923	Rabsca	9	45	Fast	50	Bug		https://bulbapedia.bulbagarden.net/wiki/Rabsca_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/rabsca
+924	Greavard	9	120	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Greavard_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/greavard
+925	Houndstone	9	60	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Houndstone_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/houndstone
+926	Flittle	9	120	Medium Slow	50	Flying		https://bulbapedia.bulbagarden.net/wiki/Flittle_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/flittle
+927	Espathra	9	60	Medium Slow	50	Flying		https://bulbapedia.bulbagarden.net/wiki/Espathra_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/espathra
+928	Farigiraf	9	45	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Farigiraf_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/farigiraf
+929	Wiglett	9	255	Medium Fast	50	Water 3		https://bulbapedia.bulbagarden.net/wiki/Wiglett_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/wiglett
+930	Wugtrio	9	50	Medium Fast	50	Water 3		https://bulbapedia.bulbagarden.net/wiki/Wugtrio_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/wugtrio
+931	Dondozo	9	25	Slow	50	Water 2		https://bulbapedia.bulbagarden.net/wiki/Dondozo_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/dondozo
+932	Veluza	9	100	Fast	50	Water 2		https://bulbapedia.bulbagarden.net/wiki/Veluza_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/veluza
+933	Finizen	9	200	Slow	50	Field	Water 2	https://bulbapedia.bulbagarden.net/wiki/Finizen_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/finizen
+934	Palafin	9	45	Slow	50	Field	Water 2	https://bulbapedia.bulbagarden.net/wiki/Palafin_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/palafin
+935	Smoliv	9	255	Medium Slow	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Smoliv_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/smoliv
+936	Dolliv	9	120	Medium Slow	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Dolliv_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/dolliv
+937	Arboliva	9	45	Medium Slow	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Arboliva_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/arboliva
+938	Capsakid	9	190	Medium Fast	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Capsakid_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/capsakid
+939	Scovillain	9	75	Medium Fast	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Scovillain_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/scovillain
+940	Tadbulb	9	190	Medium Fast	50	Water 1		https://bulbapedia.bulbagarden.net/wiki/Tadbulb_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/tadbulb
+941	Bellibolt	9	50	Medium Slow	50	Water 1		https://bulbapedia.bulbagarden.net/wiki/Bellibolt_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/bellibolt
+942	Varoom	9	190	Medium Fast	50	Mineral		https://bulbapedia.bulbagarden.net/wiki/Varoom_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/varoom
+943	Revavroom	9	75	Medium Fast	50	Mineral		https://bulbapedia.bulbagarden.net/wiki/Revavroom_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/revavroom
+944	Orthworm	9	25	Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Orthworm_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/orthworm
+945	Tandemaus	9	150	Fast		Field	Fairy	https://bulbapedia.bulbagarden.net/wiki/Tandemaus_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/tandemaus
+946	Maushold	9	75	Fast		Field	Fairy	https://bulbapedia.bulbagarden.net/wiki/Maushold_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/maushold
+947	Cetoddle	9	150	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Cetoddle_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/cetoddle
+948	Cetitan	9	50	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Cetitan_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/cetitan
+949	Frigibax	9	45	Slow	50	Dragon	Mineral	https://bulbapedia.bulbagarden.net/wiki/Frigibax_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/frigibax
+950	Arctibax	9	25	Slow	50	Dragon	Mineral	https://bulbapedia.bulbagarden.net/wiki/Arctibax_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/arctibax
+951	Baxcalibur	9	10	Slow	50	Dragon	Mineral	https://bulbapedia.bulbagarden.net/wiki/Baxcalibur_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/baxcalibur
+952	Tatsugiri	9	100	Medium Slow	50	Water 2		https://bulbapedia.bulbagarden.net/wiki/Tatsugiri_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/tatsugiri
+953	Cyclizar	9	190	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Cyclizar_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/cyclizar
+954	Pawmi	9	190	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Pawmi_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/pawmi
+955	Pawmo	9	80	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Pawmo_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/pawmo
+956	Pawmot	9	45	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Pawmot_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/pawmot
+957	Wattrel	9	180	Medium Slow	50	Water 1	Flying	https://bulbapedia.bulbagarden.net/wiki/Wattrel_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/wattrel
+958	Kilowattrel	9	90	Medium Slow	50	Water 1	Flying	https://bulbapedia.bulbagarden.net/wiki/Kilowattrel_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/kilowattrel
+959	Bombirdier	9	25	Slow	50	Flying		https://bulbapedia.bulbagarden.net/wiki/Bombirdier_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/bombirdier
+960	Squawkabilly	9	190	Erratic	50	Flying		https://bulbapedia.bulbagarden.net/wiki/Squawkabilly_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/squawkabilly
+961	Flamigo	9	100	Medium Slow	50	Flying		https://bulbapedia.bulbagarden.net/wiki/Flamigo_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/flamigo
+962	Klawf	9	120	Medium Fast	50	Water 3		https://bulbapedia.bulbagarden.net/wiki/Klawf_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/klawf
+963	Nacli	9	255	Medium Slow	50	Mineral		https://bulbapedia.bulbagarden.net/wiki/Nacli_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/nacli
+964	Naclstack	9	120	Medium Slow	50	Mineral		https://bulbapedia.bulbagarden.net/wiki/Naclstack_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/naclstack
+965	Garganacl	9	45	Medium Slow	50	Mineral		https://bulbapedia.bulbagarden.net/wiki/Garganacl_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/garganacl
+966	Glimmet	9	70	Medium Slow	50	Mineral		https://bulbapedia.bulbagarden.net/wiki/Glimmet_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/glimmet
+967	Glimmora	9	25	Medium Slow	50	Mineral		https://bulbapedia.bulbagarden.net/wiki/Glimmora_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/glimmora
+968	Shroodle	9	190	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Shroodle_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/shroodle
+969	Grafaiai	9	45	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Grafaiai_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/grafaiai
+970	Fidough	9	190	Medium Slow	50	Field	Mineral	https://bulbapedia.bulbagarden.net/wiki/Fidough_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/fidough
+971	Dachsbun	9	45	Medium Slow	50	Field	Mineral	https://bulbapedia.bulbagarden.net/wiki/Dachsbun_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/dachsbun
+972	Maschiff	9	150	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Maschiff_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/maschiff
+973	Mabosstiff	9	75	Medium Slow	50	Field		https://bulbapedia.bulbagarden.net/wiki/Mabosstiff_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/mabosstiff
+974	Bramblin	9	190	Medium Fast	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Bramblin_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/bramblin
+975	Brambleghast	9	45	Medium Fast	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Brambleghast_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/brambleghast
+976	Gimmighoul	9	45	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Gimmighoul_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/gimmighoul
+977	Gholdengo	9	45	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Gholdengo_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/gholdengo
+978	Great Tusk	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Great_Tusk_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/great-tusk
+979	Brute Bonnet	9	50	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Brute_Bonnet_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/brute-bonnet
+981	Sandy Shocks	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Sandy_Shocks_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/sandy-shocks
+982	Scream Tail	9	50	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Scream_Tail_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/scream-tail
+983	Flutter Mane	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Flutter_Mane_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/flutter-mane
+984	Slither Wing	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Slither_Wing_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/slither-wing
+985	Roaring Moon	9	10	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Roaring_Moon_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/roaring-moon
+986	Iron Treads	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Iron_Treads_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/iron-treads
+988	Iron Moth	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Iron_Moth_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/iron-moth
+989	Iron Hands	9	50	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Iron_Hands_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/iron-hands
+990	Iron Jugulis	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Iron_Jugulis_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/iron-jugulis
+991	Iron Thorns	9	30	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Iron_Thorns_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/iron-thorns
+992	Iron Bundle	9	50	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Iron_Bundle_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/iron-bundle
+993	Iron Valiant	9	10	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Iron_Valiant_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/iron-valiant
+994	Ting-Lu	9	6	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Ting-Lu_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/ting-lu
+995	Chien-Pao	9	6	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Chien-Pao_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/chien-pao
+996	Wo-Chien	9	6	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Wo-Chien_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/wo-chien
+997	Chi-Yu	9	6	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Chi-Yu_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/chi-yu
+998	Koraidon	9	3	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Koraidon_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/koraidon
+999	Miraidon	9	3	Slow		Undiscovered		https://bulbapedia.bulbagarden.net/wiki/Miraidon_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/miraidon
+1000	Tinkatink	9	190	Medium Slow	0	Fairy		https://bulbapedia.bulbagarden.net/wiki/Tinkatink_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/tinkatink
+1001	Tinkatuff	9	90	Medium Slow	0	Fairy		https://bulbapedia.bulbagarden.net/wiki/Tinkatuff_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/tinkatuff
+1002	Tinkaton	9	45	Medium Slow	0	Fairy		https://bulbapedia.bulbagarden.net/wiki/Tinkaton_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/tinkaton
+1003	Charcadet	9	90	Slow	50	Human-Like		https://bulbapedia.bulbagarden.net/wiki/Charcadet_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/charcadet
+1004	Armarouge	9	25	Slow	50	Human-Like		https://bulbapedia.bulbagarden.net/wiki/Armarouge_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/armarouge
+1005	Ceruledge	9	25	Slow	50	Human-Like		https://bulbapedia.bulbagarden.net/wiki/Ceruledge_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/ceruledge
+1006	Toedscool	9	190	Medium Slow	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Toedscool_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/toedscool
+1007	Toedscruel	9	90	Medium Slow	50	Grass		https://bulbapedia.bulbagarden.net/wiki/Toedscruel_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/toedscruel
+1008	Kingambit	9	25	Medium Fast	50	Human-Like		https://bulbapedia.bulbagarden.net/wiki/Kingambit_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/kingambit
+1009	Clodsire	9	90	Medium Fast	50	Water 1	Field	https://bulbapedia.bulbagarden.net/wiki/Clodsire_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/clodsire
+1010	Annihilape	9	45	Medium Fast	50	Field		https://bulbapedia.bulbagarden.net/wiki/Annihilape_(Pok%C3%A9mon)	https://pokemondb.net/pokedex/annihilape

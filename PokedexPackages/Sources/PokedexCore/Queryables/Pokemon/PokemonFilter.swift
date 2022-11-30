@@ -170,6 +170,8 @@ private extension Pokedex {
             return #keyPath(StoredPokemon.z_pokedexNumbers.z_crownTundra)
         case .hisui:
             return #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)
+        case .paldea:
+            return #keyPath(StoredPokemon.z_pokedexNumbers.z_paldea)
         }
     }
 

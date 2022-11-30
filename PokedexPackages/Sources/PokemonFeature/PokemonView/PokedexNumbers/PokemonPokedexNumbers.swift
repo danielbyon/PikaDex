@@ -68,7 +68,7 @@ private struct PokedexNumberViewModel {
     let number: String
 
     init?(name: String, number: Int) {
-        guard let numberString = NumberFormatter.threeDigit.string(from: NSNumber(value: number)) else { return nil }
+        guard let numberString = NumberFormatter.pokemonIndex.string(from: NSNumber(value: number)) else { return nil }
         self.name = name
         self.number = numberString
     }
@@ -126,6 +126,8 @@ private extension PokedexNumbers {
             retVal.append(("Crown Tundra", crownTundra ?? -1))
         case .legendsArceus:
             retVal.append(("Hisui", hisui ?? -1))
+        case .scarlet, .violet:
+            retVal.append(("Paldea", paldea ?? -1))
         case .national:
             retVal.append(("Kanto", kanto ?? -1))
             retVal.append(("Johto", johto ?? -1))
@@ -150,6 +152,7 @@ private extension PokedexNumbers {
             retVal.append(("Isle of Armor", isleOfArmor ?? -1))
             retVal.append(("Crown Tundra", crownTundra ?? -1))
             retVal.append(("Hisui", hisui ?? -1))
+            retVal.append(("Paldea", paldea ?? -1))
         }
 
         retVal.removeAll { $0.1 == -1 }

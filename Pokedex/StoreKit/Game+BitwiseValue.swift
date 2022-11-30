@@ -83,6 +83,10 @@ extension Game {
             value = 1 << 33
         case .legendsArceus:
             value = 1 << 34
+        case .scarlet:
+            value = 1 << 35
+        case .violet:
+            value = 1 << 36
         case .national:
             value = 0
         }

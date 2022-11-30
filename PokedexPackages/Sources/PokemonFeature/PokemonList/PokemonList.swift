@@ -13,7 +13,7 @@ public struct PokemonList: View {
 
     @Environment(\.userDataDataStore) private var dataStore
     @Query(dataStore: .userData) private var caughtPokemons: QueryResults<CaughtPokemon>
-    @Query private var pokemon: QueryResults<Pokemon>
+    @Query private var pokemons: QueryResults<Pokemon>
     @State private var currentTab: Tab = .all
     @State private var isShowingFilter = false
     @StateObject private var viewModel = PokemonListViewModel()
@@ -29,8 +29,8 @@ public struct PokemonList: View {
     public var body: some View {
         Group {
             SearchableList(
-                items: pokemon,
-                query: $pokemon.query,
+                items: pokemons,
+                query: $pokemons.query,
                 searchPrompt: "Search for a Pokémon",
                 id: \.index
             ) { pokemon in
@@ -41,7 +41,7 @@ public struct PokemonList: View {
         }
         .navigationTitle("Pokémon")
         .sheet(isPresented: $isShowingFilter) {
-            PokemonFilterView(game: game, filter: $pokemon)
+            PokemonFilterView(game: game, filter: $pokemons)
         }
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {
@@ -76,9 +76,9 @@ public struct PokemonList: View {
             viewModel.dataStore = dataStore
             viewModel.game = game
             $caughtPokemons.wrappedValue = .init(game: game)
-            $pokemon.wrappedValue = viewModel.filter
+            $pokemons.wrappedValue = viewModel.filter
         }
-        .onChange(of: $pokemon.wrappedValue) { newValue in
+        .onChange(of: $pokemons.wrappedValue) { newValue in
             viewModel.filter = newValue
         }
     }
@@ -107,15 +107,30 @@ public struct PokemonList: View {
     }
 
     private func makePokemonCell(pokemon: Pokemon, pokedex: Pokedex) -> some View {
-        NavigationLink(value: Route.content(.pokemon(pokemon, pokedex: viewModel.pokedex))) {
+        NavigationLink(value: Route.content(.pokemon(
+            pokemon,
+            pokedex: viewModel.pokedex,
+            previousPokemonProvider: previousPokemonProvider(),
+            nextPokemonProvider: nextPokemonProvider()
+        ))) {
             PokemonCell(pokemon: pokemon, pokedex: viewModel.pokedex)
                 .contextMenu {
-                    NavigationLink(value: Route.content(.pokemon(pokemon, pokedex: pokedex))) {
+                    NavigationLink(value: Route.content(.pokemon(
+                        pokemon,
+                        pokedex: pokedex,
+                        previousPokemonProvider: previousPokemonProvider(),
+                        nextPokemonProvider: nextPokemonProvider()
+                    ))) {
                         Label("View Details", systemImage: "info.circle")
                     }
                     makeTogglePokemonCaughtButton(pokemon)
                 } preview: {
-                    PokemonView(pokemon: pokemon, pokedex: pokedex)
+                    PokemonView(
+                        pokemon: pokemon,
+                        pokedex: pokedex,
+                        previousPokemonProvider: previousPokemonProvider(),
+                        nextPokemonProvider: nextPokemonProvider()
+                    )
                 }
                 .swipeActions {
                     makeTogglePokemonCaughtButton(pokemon)
@@ -143,16 +158,25 @@ public struct PokemonList: View {
         .tint(isCaught ? .red : .blue)
     }
 
-    private func makeList<Data>(pokemonToDisplay: Data) -> some View where Data: RandomAccessCollection<Pokemon>, Data.Index: Hashable {
-        SearchableList(
-            items: pokemonToDisplay,
-            query: $pokemon.query,
-            searchPrompt: "Search for a Pokémon",
-            id: \.index
-        ) { pokemon in
-            NavigationLink(value: Route.content(.pokemon(pokemon, pokedex: viewModel.pokedex))) {
-                makePokemonCell(pokemon: pokemon, pokedex: viewModel.pokedex)
+    private func previousPokemonProvider() -> PokemonView.PokemonProvider {
+        return { nationalIndex in
+            guard let index = pokemons.firstIndex(where: { $0.index == nationalIndex }),
+                  index >= pokemons.startIndex + 1 else {
+                return nil
             }
+            let previousIndex = pokemons.index(before: index)
+            return pokemons[previousIndex]
+        }
+    }
+
+    private func nextPokemonProvider() -> PokemonView.PokemonProvider {
+        return { nationalIndex in
+            guard let index = pokemons.firstIndex(where: { $0.index == nationalIndex }),
+                  index < pokemons.endIndex - 1 else {
+                return nil
+            }
+            let nextIndex = pokemons.index(after: index)
+            return pokemons[nextIndex]
         }
     }
 

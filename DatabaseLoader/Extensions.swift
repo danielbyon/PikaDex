@@ -66,6 +66,7 @@ extension Game {
         case "gen6": return Generation.vi.games
         case "gen7": return Generation.vii.games
         case "gen8": return Generation.viii.games
+        case "gen9": return Generation.ix.games
         case "red": return [.red]
         case "blue": return [.blue]
         case "yellow": return [.yellow]
@@ -88,8 +89,10 @@ extension Game {
         case "white2": return [.white2]
         case "x": return [.x]
         case "y": return [.y]
+        case "xy": return [.x, .y]
         case "omegaRuby": return [.omegaRuby]
         case "alphaSapphire": return [.alphaSapphire]
+        case "oras": return [.omegaRuby, .alphaSapphire]
         case "sun": return [.sun]
         case "moon": return [.moon]
         case "ultraSun": return [.ultraSun]
@@ -98,8 +101,8 @@ extension Game {
         case "letsGoEevee": return [.letsGoEevee]
         case "sword": return [.sword]
         case "shield": return [.shield]
-        case "xy": return [.x, .y]
-        case "oras": return [.omegaRuby, .alphaSapphire]
+        case "scarlet": return [.scarlet]
+        case "violet": return [.violet]
         default: return nil
         }
     }
@@ -162,6 +165,12 @@ extension Game {
                 case "S", "M", "US", "UM", "LGP", "LGE": return nil
                 default: fatalError(gameKey)
                 }
+            case "gen9":
+                switch gameKey {
+                case "S": return .scarlet
+                case "V": return .violet
+                default: fatalError(gameKey)
+                }
             default: fatalError(generationKey)
             }
         }
@@ -205,6 +214,8 @@ extension Game {
         case .shiningPearl: return "S.Pearl"
             // TODO: Check in the future to see if they have Arceus-specific descriptions
         case .legendsArceus: return pokemonDBKey(for: .sword)
+        case .scarlet: return "Scarlet"
+        case .violet: return "Violet"
         case .national: return "Sword"
         }
     }
@@ -321,6 +332,15 @@ extension Game {
             default:
                 fatalError()
             }
+        case .ix:
+            switch abbreviation {
+            case "S":
+                self = .scarlet
+            case "V":
+                self = .violet
+            default:
+                fatalError()
+            }
         case .all:
             self = .national
         }
@@ -340,6 +360,7 @@ extension Generation {
         case "Generation VI": self = .vi
         case "Generation VII": self = .vii
         case "Generation VIII": self = .viii
+        case "Generation IX": self = .ix
         case "National": self = .all
         default: return nil
         }
@@ -355,6 +376,7 @@ extension Generation {
         case .vi: return "Generation VI"
         case .vii: return "Generation VII"
         case .viii: return "Generation VIII"
+        case .ix: return "Generation IX"
         case .all: return "National"
         }
     }
@@ -408,6 +430,8 @@ extension Game {
         case "Brilliant Diamond": self = .brilliantDiamond
         case "Shining Pearl": self = .shiningPearl
         case "Legends: Arceus": self = .legendsArceus
+        case "Scarlet": self = .scarlet
+        case "Violet": self = .violet
         case "National": self = .national
         default: return nil
         }
@@ -450,8 +474,59 @@ extension Game {
         case "brilliant diamond": self = .brilliantDiamond
         case "shining pearl": self = .shiningPearl
         case "legends: arceus": self = .legendsArceus
+        case "scarlet": self = .scarlet
+        case "violet": self = .violet
         case "national": self = .national
         default: return nil
+        }
+    }
+
+    init(pokemonDBKey: String) {
+        switch pokemonDBKey {
+        case "Red": self = .red
+        case "Blue": self = .blue
+        case "Yellow": self = .yellow
+        case "Gold": self = .gold
+        case "Silver": self = .silver
+        case "Crystal": self = .crystal
+        case "Ruby": self = .ruby
+        case "Sapphire": self = .sapphire
+        case "Emerald": self = .emerald
+        case "FireRed": self = .fireRed
+        case "LeafGreen": self = .leafGreen
+        case "Diamond": self = .diamond
+        case "Pearl": self = .pearl
+        case "Platinum": self = .platinum
+        case "HeartGold": self = .heartGold
+        case "SoulSilver": self = .soulSilver
+        case "Black": self = .black
+        case "White": self = .white
+        case "Black 2": self = .black2
+        case "White 2": self = .white2
+        case "X": self = .x
+        case "Y": self = .y
+        case "Omega Ruby": self = .omegaRuby
+        case "O.Ruby": self = .omegaRuby
+        case "Alpha Sapphire": self = .alphaSapphire
+        case "A.Sapphire": self = .alphaSapphire
+        case "Sun": self = .sun
+        case "Moon": self = .moon
+        case "Ultra Sun": self = .ultraSun
+        case "Ultra Moon": self = .ultraMoon
+        case "Let's Go, Pikachu!": self = .letsGoPikachu
+        case "Let's Go, Eevee!": self = .letsGoEevee
+        case "Sword": self = .sword
+        case "Shield": self = .shield
+        case "Brilliant Diamond": self = .brilliantDiamond
+        case "B.Diamond": self = .brilliantDiamond
+        case "Shining Pearl": self = .shiningPearl
+        case "S.Pearl": self = .shiningPearl
+        case "Legends: Arceus": self = .legendsArceus
+        case "Scarlet": self = .scarlet
+        case "Violet": self = .violet
+        case "National": self = .national
+        default:
+            fatalError()
         }
     }
 

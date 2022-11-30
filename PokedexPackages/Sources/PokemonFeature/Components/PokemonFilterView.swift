@@ -119,7 +119,8 @@ private extension Pokedex {
                 .galar,
                 .isleOfArmor,
                 .crownTundra,
-                .hisui:
+                .hisui,
+                .paldea:
             return "Regional (\(title))"
         }
     }

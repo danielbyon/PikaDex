@@ -44,6 +44,8 @@ public enum Game: String, CaseIterable {
     case brilliantDiamond
     case shiningPearl
     case legendsArceus
+    case scarlet
+    case violet
 
     /// Technically not a game
     case national
@@ -56,6 +58,8 @@ extension Game {
 
     public static let allGamesNewestFirst: [Game] = [
         .national,
+        .scarlet,
+        .violet,
         .legendsArceus,
         .brilliantDiamond,
         .shiningPearl,
@@ -111,6 +115,8 @@ extension Game {
             return .vii
         case .sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus:
             return .viii
+        case .scarlet, .violet:
+            return .ix
         case .national:
             return .all
         }
@@ -155,6 +161,8 @@ extension Game {
         case .brilliantDiamond: return "Brilliant Diamond"
         case .shiningPearl: return "Shining Pearl"
         case .legendsArceus: return "Legends: Arceus"
+        case .scarlet: return "Scarlet"
+        case .violet: return "Violet"
         case .national: return "National"
         }
     }

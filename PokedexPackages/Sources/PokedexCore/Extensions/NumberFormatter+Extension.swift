@@ -17,10 +17,9 @@ extension NumberFormatter {
         return formatter
     }()
 
-    public static let threeDigit: NumberFormatter = {
+    public static let pokemonIndex: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.minimumIntegerDigits = 3
-        formatter.maximumIntegerDigits = 3
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 0
         return formatter

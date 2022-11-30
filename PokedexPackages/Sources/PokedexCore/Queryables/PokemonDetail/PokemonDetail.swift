@@ -80,7 +80,7 @@ public struct PokemonDetail: Queryable {
 
     public func pokedexNumberString(for pokedex: Pokedex) -> String {
         let number = NSNumber(value: number(for: pokedex))
-        return NumberFormatter.threeDigit.string(from: number)!
+        return NumberFormatter.pokemonIndex.string(from: number)!
     }
 
 }

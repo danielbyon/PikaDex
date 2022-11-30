@@ -84,6 +84,9 @@ private extension Game {
             return ["SS"]
         case .legendsArceus:
             return ["LA"]
+        case .scarlet,
+                .violet:
+            return ["SV"]
         }
     }
 

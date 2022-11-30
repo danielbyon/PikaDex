@@ -181,7 +181,9 @@ extension PokepediaProduct {
                 .shield,
                 .brilliantDiamond,
                 .shiningPearl,
-                .legendsArceus
+                .legendsArceus,
+                .scarlet,
+                .violet
             ].forEach { value |= $0.bitwiseValue }
         case .allGames:
             Game.allCases.forEach { value |= $0.bitwiseValue }

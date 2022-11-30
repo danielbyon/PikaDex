@@ -881,3 +881,51 @@ G-Max Fireball
 G-Max Hydrosnipe
 G-Max One Blow
 G-Max Rapid Flow
+Aqua Cutter
+Aqua Step
+Armor Cannon
+Axe Kick
+Bitter Blade
+Blazing Torque
+Chilling Water
+Chilly Reception
+Collision Course
+Combat Torque
+Comeuppance
+Doodle
+Double Shock
+Electro Drift
+Fillet Away
+Flower Trick
+Gigaton Hammer
+Glaive Rush
+Hyper Drill
+Ice Spinner
+Jet Punch
+Kowtow Cleave
+Last Respects
+Lumina Crash
+Magical Torque
+Make It Rain
+Mortal Spin
+Noxious Torque
+Order Up
+Population Bomb
+Pounce
+Rage Fist
+Raging Bull
+Revival Blessing
+Ruination
+Salt Cure
+Shed Tail
+Silk Trap
+Snowscape
+Spicy Extract
+Spin Out
+Tera Blast
+Tidy Up
+Torch Song
+Trailblaze
+Triple Dive
+Twin Beam
+Wicked Torque

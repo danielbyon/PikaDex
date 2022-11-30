@@ -36,6 +36,7 @@ public enum Pokedex: String, Codable, Equatable {
     case isleOfArmor
     case crownTundra
     case hisui
+    case paldea
 
     public var title: String {
         switch self {
@@ -75,6 +76,8 @@ public enum Pokedex: String, Codable, Equatable {
             return "The Crown Tundra"
         case .hisui:
             return "Hisui"
+        case .paldea:
+            return "Paldea"
         }
     }
 }

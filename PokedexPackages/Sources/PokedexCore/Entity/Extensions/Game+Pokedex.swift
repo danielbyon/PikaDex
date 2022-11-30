@@ -53,6 +53,8 @@ extension Game {
             retVal.append(.crownTundra)
         case .legendsArceus:
             retVal.append(.hisui)
+        case .scarlet, .violet:
+            retVal.append(.paldea)
         case .national:
             retVal.append(.kanto)
             retVal.append(.johto)
@@ -71,6 +73,7 @@ extension Game {
             retVal.append(.isleOfArmor)
             retVal.append(.crownTundra)
             retVal.append(.hisui)
+            retVal.append(.paldea)
         }
         return retVal
     }

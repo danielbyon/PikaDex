@@ -26,6 +26,7 @@
         <attribute name="z_pokemonDBURL" optional="YES" attributeType="String"/>
         <attribute name="z_ruby" optional="YES" attributeType="String"/>
         <attribute name="z_sapphire" optional="YES" attributeType="String"/>
+        <attribute name="z_scarlet" optional="YES" attributeType="String"/>
         <attribute name="z_shield" optional="YES" attributeType="String"/>
         <attribute name="z_shiningPearl" optional="YES" attributeType="String"/>
         <attribute name="z_soulSilver" optional="YES" attributeType="String"/>
@@ -33,6 +34,7 @@
         <attribute name="z_sword" optional="YES" attributeType="String"/>
         <attribute name="z_ultraMoon" optional="YES" attributeType="String"/>
         <attribute name="z_ultraSun" optional="YES" attributeType="String"/>
+        <attribute name="z_violet" optional="YES" attributeType="String"/>
         <attribute name="z_white" optional="YES" attributeType="String"/>
         <attribute name="z_white2" optional="YES" attributeType="String"/>
         <attribute name="z_x" optional="YES" attributeType="String"/>
@@ -255,6 +257,7 @@
         <attribute name="z_newJohto" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_newSinnoh" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="z_newUnova" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="z_paldea" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_poni" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_sinnoh" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_ulaula" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>

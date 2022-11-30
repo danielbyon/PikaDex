@@ -181,6 +181,25 @@ extension Pocket {
             default:
                 return "Items"
             }
+        case .scarlet, .violet:
+            switch self {
+            case .battle:
+                return "Battle Items"
+            case .key:
+                return "Key Items"
+            case .items:
+                return "Items"
+            case .medicine:
+                return "Medicine"
+            case .otherItems:
+                return "Other Items"
+            case .pokeBalls:
+                return "Poké Balls"
+            case .treasures:
+                return "Treasures"
+            default:
+                return "Items"
+            }
         }
     }
 

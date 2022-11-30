@@ -220,10 +220,9 @@ def main():
 
     all_entries = {}
     
+    i = 0
     with codecs.open("MovesList.txt", 'r', encoding='utf8') as f:
-        i = 1
         for line in f:
-            
             move = line.strip().replace(' ', '_').rstrip('.')
 
             print("Processing " + move)
@@ -239,9 +238,8 @@ def main():
             if entries is not None:
                 entries["number"] = "{}".format(i)
             all_entries[line.strip()] = entries
-
+            
             i += 1
-            # return
 
     crawler.write_data_to_file(all_entries, "Data/Moves")
     pass

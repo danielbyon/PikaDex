@@ -148,6 +148,8 @@ private extension StoredAbility {
         case .brilliantDiamond: return "z_brilliantDiamond"
         case .shiningPearl: return "z_shiningPearl"
         case .legendsArceus: return "z_legendsArceus"
+        case .scarlet: return "z_scarlet"
+        case .violet: return "z_violet"
         case .national: return "z_national"
         }
     }

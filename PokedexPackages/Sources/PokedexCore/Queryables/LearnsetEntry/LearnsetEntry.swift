@@ -28,7 +28,7 @@ public struct LearnsetEntry: Queryable {
             let detailText = level >= 0 ? "Lv.\(NumberFormatter.twoDigit.string(from: NSNumber(value: level))!)" : "Evo."
 
             self.init(
-                text: "\(NumberFormatter.threeDigit.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: detailText,
                 imageName: form.spriteName,
@@ -45,7 +45,7 @@ public struct LearnsetEntry: Queryable {
             let detailText = "\(type.rawValue) \(NumberFormatter.twoDigit.string(from: NSNumber(value: number))!)"
 
             self.init(
-                text: "\(NumberFormatter.threeDigit.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: detailText,
                 imageName: form.spriteName,
@@ -59,7 +59,7 @@ public struct LearnsetEntry: Queryable {
 //            let fathers = result.fathers.map(LearnsetBreedingFather.init)
 
             self.init(
-                text: "\(NumberFormatter.threeDigit.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: result.fathers
                     .compactMap { $0.name }
@@ -75,7 +75,7 @@ public struct LearnsetEntry: Queryable {
 //            let move = Move(result: result.move)
 
             self.init(
-                text: "\(NumberFormatter.threeDigit.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: nil,
                 imageName: form.spriteName,

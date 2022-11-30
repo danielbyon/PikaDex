@@ -56,6 +56,8 @@ public extension StoredPokedexNumbers {
             retVal.append(("Crown Tundra", crownTundra ?? -1))
         case .legendsArceus:
             retVal.append(("Hisui", hisui ?? -1))
+        case .scarlet, .violet:
+            retVal.append(("Paldea", paldea ?? -1))
         case .national:
             retVal.append(("Kanto", kanto ?? -1))
             retVal.append(("Johto", johto ?? -1))
@@ -166,6 +168,10 @@ public extension StoredPokedexNumbers {
     var ultraAkala: Int? {
         get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_ultraAkala)) as? Int64)?.toInt() }
         set { z_ultraAkala = newValue?.toInt64() ?? 0 }
+    }
+    var paldea: Int? {
+        get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_paldea)) as? Int64)?.toInt() }
+        set { z_paldea = newValue?.toInt64() ?? 0 }
     }
     var poni: Int? {
         get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_poni)) as? Int64)?.toInt() }

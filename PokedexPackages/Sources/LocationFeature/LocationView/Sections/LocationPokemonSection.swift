@@ -27,7 +27,12 @@ struct LocationPokemonSection: View {
             ForEach(areaViewModel.sections) { section in
                 Section {
                     ForEach(section.rows) { row in
-                        NavigationLink(value: Route.content(.pokemon(row.pokemon, pokedex: .national))) {
+                        NavigationLink(value: Route.content(.pokemon(
+                            row.pokemon,
+                            pokedex: .national,
+                            previousPokemonProvider: nil,
+                            nextPokemonProvider: nil
+                        ))) {
                             LocationDetailPokemonCell(row: row)
                         }
                     }
@@ -39,7 +44,12 @@ struct LocationPokemonSection: View {
             ForEach(captureMethodViewModel.sections) { section in
                 Section {
                     ForEach(section.rows) { row in
-                        NavigationLink(value: Route.content(.pokemon(row.pokemon, pokedex: .national))) {
+                        NavigationLink(value: Route.content(.pokemon(
+                            row.pokemon,
+                            pokedex: .national,
+                            previousPokemonProvider: nil,
+                            nextPokemonProvider: nil
+                        ))) {
                             BadgeCell(row: row)
                         }
                     }

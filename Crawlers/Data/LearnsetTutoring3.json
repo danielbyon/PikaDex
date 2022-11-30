@@ -1,5 +1,315 @@
 {
+  "Sprigatito": {
+    "gen9": {}
+  },
+  "Floragato": {
+    "gen9": {}
+  },
+  "Meowscarada": {
+    "gen9": {}
+  },
+  "Fuecoco": {
+    "gen9": {}
+  },
+  "Crocalor": {
+    "gen9": {}
+  },
+  "Skeledirge": {
+    "gen9": {}
+  },
+  "Quaxly": {
+    "gen9": {}
+  },
+  "Quaxwell": {
+    "gen9": {}
+  },
+  "Quaquaval": {
+    "gen9": {}
+  },
+  "Lechonk": {
+    "gen9": {}
+  },
+  "Oinkologne": {
+    "gen9": {}
+  },
+  "Dudunsparce": {
+    "gen9": {}
+  },
+  "Tarountula": {
+    "gen9": {}
+  },
+  "Spidops": {
+    "gen9": {}
+  },
+  "Nymble": {
+    "gen9": {}
+  },
+  "Lokix": {
+    "gen9": {}
+  },
+  "Rellor": {
+    "gen9": {}
+  },
+  "Rabsca": {
+    "gen9": {}
+  },
+  "Greavard": {
+    "gen9": {}
+  },
+  "Houndstone": {
+    "gen9": {}
+  },
+  "Flittle": {
+    "gen9": {}
+  },
+  "Espathra": {
+    "gen9": {}
+  },
+  "Farigiraf": {
+    "gen9": {}
+  },
+  "Wiglett": {
+    "gen9": {}
+  },
+  "Wugtrio": {
+    "gen9": {}
+  },
+  "Dondozo": {
+    "gen9": {}
+  },
+  "Veluza": {
+    "gen9": {}
+  },
+  "Finizen": {
+    "gen9": {}
+  },
+  "Palafin": {
+    "gen9": {}
+  },
+  "Smoliv": {
+    "gen9": {}
+  },
+  "Dolliv": {
+    "gen9": {}
+  },
+  "Arboliva": {
+    "gen9": {}
+  },
+  "Capsakid": {
+    "gen9": {}
+  },
+  "Scovillain": {
+    "gen9": {}
+  },
+  "Tadbulb": {
+    "gen9": {}
+  },
+  "Bellibolt": {
+    "gen9": {}
+  },
+  "Varoom": {
+    "gen9": {}
+  },
+  "Revavroom": {
+    "gen9": {}
+  },
+  "Orthworm": {
+    "gen9": {}
+  },
+  "Tandemaus": {
+    "gen9": {}
+  },
+  "Maushold": {
+    "gen9": {}
+  },
+  "Cetoddle": {
+    "gen9": {}
+  },
+  "Cetitan": {
+    "gen9": {}
+  },
+  "Frigibax": {
+    "gen9": {}
+  },
+  "Arctibax": {
+    "gen9": {}
+  },
+  "Baxcalibur": {
+    "gen9": {}
+  },
+  "Tatsugiri": {
+    "gen9": {}
+  },
+  "Cyclizar": {
+    "gen9": {}
+  },
+  "Pawmi": {
+    "gen9": {}
+  },
+  "Pawmo": {
+    "gen9": {}
+  },
+  "Pawmot": {
+    "gen9": {}
+  },
+  "Wattrel": {
+    "gen9": {}
+  },
+  "Kilowattrel": {
+    "gen9": {}
+  },
+  "Bombirdier": {
+    "gen9": {}
+  },
+  "Squawkabilly": {
+    "gen9": {}
+  },
+  "Flamigo": {
+    "gen9": {}
+  },
+  "Klawf": {
+    "gen9": {}
+  },
+  "Nacli": {
+    "gen9": {}
+  },
+  "Naclstack": {
+    "gen9": {}
+  },
+  "Garganacl": {
+    "gen9": {}
+  },
+  "Glimmet": {
+    "gen9": {}
+  },
+  "Glimmora": {
+    "gen9": {}
+  },
+  "Shroodle": {
+    "gen9": {}
+  },
+  "Grafaiai": {
+    "gen9": {}
+  },
+  "Fidough": {
+    "gen9": {}
+  },
+  "Dachsbun": {
+    "gen9": {}
+  },
+  "Maschiff": {
+    "gen9": {}
+  },
+  "Mabosstiff": {
+    "gen9": {}
+  },
+  "Bramblin": {
+    "gen9": {}
+  },
+  "Brambleghast": {
+    "gen9": {}
+  },
+  "Gimmighoul": {
+    "gen9": {}
+  },
+  "Gholdengo": {
+    "gen9": {}
+  },
+  "Great Tusk": {
+    "gen9": {}
+  },
+  "Brute Bonnet": {
+    "gen9": {}
+  },
+  "Sandy Shocks": {
+    "gen9": {}
+  },
+  "Scream Tail": {
+    "gen9": {}
+  },
+  "Flutter Mane": {
+    "gen9": {}
+  },
+  "Slither Wing": {
+    "gen9": {}
+  },
+  "Roaring Moon": {
+    "gen9": {}
+  },
+  "Iron Treads": {
+    "gen9": {}
+  },
+  "Iron Moth": {
+    "gen9": {}
+  },
+  "Iron Hands": {
+    "gen9": {}
+  },
+  "Iron Jugulis": {
+    "gen9": {}
+  },
+  "Iron Thorns": {
+    "gen9": {}
+  },
+  "Iron Bundle": {
+    "gen9": {}
+  },
+  "Iron Valiant": {
+    "gen9": {}
+  },
+  "Ting-Lu": {
+    "gen9": {}
+  },
+  "Chien-Pao": {
+    "gen9": {}
+  },
+  "Wo-Chien": {
+    "gen9": {}
+  },
+  "Chi-Yu": {
+    "gen9": {}
+  },
+  "Koraidon": {
+    "gen9": {}
+  },
+  "Miraidon": {
+    "gen9": {}
+  },
+  "Tinkatink": {
+    "gen9": {}
+  },
+  "Tinkatuff": {
+    "gen9": {}
+  },
+  "Tinkaton": {
+    "gen9": {}
+  },
+  "Charcadet": {
+    "gen9": {}
+  },
+  "Armarouge": {
+    "gen9": {}
+  },
+  "Ceruledge": {
+    "gen9": {}
+  },
+  "Toedscool": {
+    "gen9": {}
+  },
+  "Toedscruel": {
+    "gen9": {}
+  },
+  "Kingambit": {
+    "gen9": {}
+  },
+  "Clodsire": {
+    "gen9": {}
+  },
+  "Annihilape": {
+    "gen9": {}
+  },
   "Bulbasaur": {
+    "gen9": {},
     "gen8": {
       "sword.Bulbasaur": [
         "Grassy Glide"
@@ -160,6 +470,7 @@
     "gen1": {}
   },
   "Ivysaur": {
+    "gen9": {},
     "gen8": {
       "sword.Ivysaur": [
         "Grassy Glide"
@@ -320,6 +631,7 @@
     "gen1": {}
   },
   "Venusaur": {
+    "gen9": {},
     "gen8": {
       "sword.Venusaur": [
         "Grassy Glide",
@@ -530,6 +842,7 @@
     "gen1": {}
   },
   "Charmander": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Charmander": [
@@ -702,6 +1015,7 @@
     "gen1": {}
   },
   "Charmeleon": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Charmeleon": [
@@ -874,6 +1188,7 @@
     "gen1": {}
   },
   "Charizard": {
+    "gen9": {},
     "gen8": {
       "sword.Charizard": [
         "Dual Wingbeat",
@@ -1116,6 +1431,7 @@
     "gen1": {}
   },
   "Squirtle": {
+    "gen9": {},
     "gen8": {
       "sword.Squirtle": [
         "Flip Turn"
@@ -1309,6 +1625,7 @@
     "gen1": {}
   },
   "Wartortle": {
+    "gen9": {},
     "gen8": {
       "sword.Wartortle": [
         "Flip Turn"
@@ -1502,6 +1819,7 @@
     "gen1": {}
   },
   "Blastoise": {
+    "gen9": {},
     "gen8": {
       "sword.Blastoise": [
         "Flip Turn",
@@ -1746,6 +2064,7 @@
     "gen1": {}
   },
   "Caterpie": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Caterpie": [
@@ -1803,6 +2122,7 @@
     "gen1": {}
   },
   "Metapod": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Metapod": [
@@ -1860,6 +2180,7 @@
     "gen1": {}
   },
   "Butterfree": {
+    "gen9": {},
     "gen8": {
       "sword.Butterfree": [
         "Dual Wingbeat"
@@ -1995,6 +2316,7 @@
     "gen1": {}
   },
   "Weedle": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Weedle": [
@@ -2041,6 +2363,7 @@
     "gen1": {}
   },
   "Kakuna": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Kakuna": [
@@ -2098,6 +2421,7 @@
     "gen1": {}
   },
   "Beedrill": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Beedrill": [
@@ -2240,6 +2564,7 @@
     "gen1": {}
   },
   "Pidgey": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pidgey": [
@@ -2354,6 +2679,7 @@
     "gen1": {}
   },
   "Pidgeotto": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pidgeotto": [
@@ -2468,6 +2794,7 @@
     "gen1": {}
   },
   "Pidgeot": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pidgeot": [
@@ -2588,6 +2915,7 @@
     "gen1": {}
   },
   "Rattata": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Rattata": [
@@ -2767,6 +3095,7 @@
     "gen1": {}
   },
   "Raticate": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Raticate": [
@@ -2961,6 +3290,7 @@
     "gen1": {}
   },
   "Spearow": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Spearow": [
@@ -3080,6 +3410,7 @@
     "gen1": {}
   },
   "Fearow": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Fearow": [
@@ -3205,6 +3536,7 @@
     "gen1": {}
   },
   "Ekans": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Ekans": [
@@ -3347,6 +3679,7 @@
     "gen1": {}
   },
   "Arbok": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Arbok": [
@@ -3493,6 +3826,7 @@
     "gen1": {}
   },
   "Pikachu": {
+    "gen9": {},
     "gen8": {
       "sword.Pikachu": [
         "Rising Voltage"
@@ -3705,6 +4039,7 @@
     "gen1": {}
   },
   "Raichu": {
+    "gen9": {},
     "gen8": {
       "sword.Raichu": [
         "Rising Voltage"
@@ -3947,6 +4282,7 @@
     "gen1": {}
   },
   "Sandshrew": {
+    "gen9": {},
     "gen8": {
       "sword.Sandshrew": [
         "Scorching Sands",
@@ -4142,6 +4478,7 @@
     "gen1": {}
   },
   "Sandslash": {
+    "gen9": {},
     "gen8": {
       "sword.Sandslash": [
         "Scorching Sands",
@@ -4339,6 +4676,7 @@
     "gen1": {}
   },
   "Nidoran\u2640": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Nidoran\u2640": [
@@ -4450,6 +4788,7 @@
     "gen1": {}
   },
   "Nidorina": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Nidorina": [
@@ -4564,6 +4903,7 @@
     "gen1": {}
   },
   "Nidoqueen": {
+    "gen9": {},
     "gen8": {
       "sword.Nidoqueen": [
         "Scorching Sands"
@@ -4810,6 +5150,7 @@
     "gen1": {}
   },
   "Nidoran\u2642": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Nidoran\u2642": [
@@ -4930,6 +5271,7 @@
     "gen1": {}
   },
   "Nidorino": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Nidorino": [
@@ -5053,6 +5395,7 @@
     "gen1": {}
   },
   "Nidoking": {
+    "gen9": {},
     "gen8": {
       "sword.Nidoking": [
         "Scorching Sands"
@@ -5304,6 +5647,7 @@
     "gen1": {}
   },
   "Clefairy": {
+    "gen9": {},
     "gen8": {
       "sword.Clefairy": [
         "Dual Wingbeat",
@@ -5662,6 +6006,7 @@
     "gen1": {}
   },
   "Clefable": {
+    "gen9": {},
     "gen8": {
       "sword.Clefable": [
         "Dual Wingbeat",
@@ -6024,6 +6369,7 @@
     "gen1": {}
   },
   "Vulpix": {
+    "gen9": {},
     "gen8": {
       "sword.Vulpix": [
         "Burning Jealousy"
@@ -6224,6 +6570,7 @@
     "gen1": {}
   },
   "Ninetales": {
+    "gen9": {},
     "gen8": {
       "sword.Ninetales": [
         "Burning Jealousy",
@@ -6445,6 +6792,7 @@
     "gen1": {}
   },
   "Jigglypuff": {
+    "gen9": {},
     "gen8": {
       "sword.Jigglypuff": [
         "Misty Explosion",
@@ -6733,6 +7081,7 @@
     "gen1": {}
   },
   "Wigglytuff": {
+    "gen9": {},
     "gen8": {
       "sword.Wigglytuff": [
         "Expanding Force",
@@ -7031,6 +7380,7 @@
     "gen1": {}
   },
   "Zubat": {
+    "gen9": {},
     "gen8": {
       "sword.Zubat": [
         "Dual Wingbeat"
@@ -7183,6 +7533,7 @@
     "gen1": {}
   },
   "Golbat": {
+    "gen9": {},
     "gen8": {
       "sword.Golbat": [
         "Dual Wingbeat"
@@ -7337,6 +7688,7 @@
     "gen1": {}
   },
   "Oddish": {
+    "gen9": {},
     "gen8": {
       "sword.Oddish": [
         "Grassy Glide"
@@ -7457,6 +7809,7 @@
     "gen1": {}
   },
   "Gloom": {
+    "gen9": {},
     "gen8": {
       "sword.Gloom": [
         "Grassy Glide"
@@ -7583,6 +7936,7 @@
     "gen1": {}
   },
   "Vileplume": {
+    "gen9": {},
     "gen8": {
       "sword.Vileplume": [
         "Corrosive Gas",
@@ -7714,6 +8068,7 @@
     "gen1": {}
   },
   "Paras": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Paras": [
         "Aerial Ace",
@@ -7858,6 +8213,7 @@
     "gen1": {}
   },
   "Parasect": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Parasect": [
         "Aerial Ace",
@@ -8006,6 +8362,7 @@
     "gen1": {}
   },
   "Venonat": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Venonat": [
@@ -8113,6 +8470,7 @@
     "gen1": {}
   },
   "Venomoth": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Venomoth": [
@@ -8241,6 +8599,7 @@
     "gen1": {}
   },
   "Diglett": {
+    "gen9": {},
     "gen8": {
       "sword.Diglett": [
         "Scorching Sands"
@@ -8359,6 +8718,7 @@
     "gen1": {}
   },
   "Dugtrio": {
+    "gen9": {},
     "gen8": {
       "sword.Dugtrio": [
         "Scorching Sands"
@@ -8477,6 +8837,7 @@
     "gen1": {}
   },
   "Meowth": {
+    "gen9": {},
     "gen8": {
       "sword.Meowth": [
         "Lash Out"
@@ -8675,6 +9036,7 @@
     "gen1": {}
   },
   "Persian": {
+    "gen9": {},
     "gen8": {
       "sword.Persian": [
         "Lash Out",
@@ -8885,6 +9247,7 @@
     "gen1": {}
   },
   "Psyduck": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Psyduck": [
         "Aerial Ace",
@@ -9085,6 +9448,7 @@
     "gen1": {}
   },
   "Golduck": {
+    "gen9": {},
     "gen8": {
       "sword.Golduck": [
         "Flip Turn"
@@ -9309,6 +9673,7 @@
     "gen1": {}
   },
   "Mankey": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Mankey": [
@@ -9541,6 +9906,7 @@
     "gen1": {}
   },
   "Primeape": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Primeape": [
@@ -9775,6 +10141,7 @@
     "gen1": {}
   },
   "Growlithe": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Hisuian Growlithe": [
         "Aerial Ace",
@@ -9905,6 +10272,7 @@
     "gen1": {}
   },
   "Arcanine": {
+    "gen9": {},
     "gen8": {
       "sword.Arcanine": [
         "Scorching Sands"
@@ -10064,6 +10432,7 @@
     "gen1": {}
   },
   "Poliwag": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Poliwag": [
@@ -10169,6 +10538,7 @@
     "gen1": {}
   },
   "Poliwhirl": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Poliwhirl": [
@@ -10307,6 +10677,7 @@
     "gen1": {}
   },
   "Poliwrath": {
+    "gen9": {},
     "gen8": {
       "sword.Poliwrath": [
         "Coaching"
@@ -10460,6 +10831,7 @@
     "gen1": {}
   },
   "Abra": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Abra": [
         "Calm Mind",
@@ -10719,6 +11091,7 @@
     "gen1": {}
   },
   "Kadabra": {
+    "gen9": {},
     "gen8": {
       "sword.Kadabra": [
         "Expanding Force"
@@ -10985,6 +11358,7 @@
     "gen1": {}
   },
   "Alakazam": {
+    "gen9": {},
     "gen8": {
       "sword.Alakazam": [
         "Expanding Force"
@@ -11255,6 +11629,7 @@
     "gen1": {}
   },
   "Machop": {
+    "gen9": {},
     "gen8": {
       "sword.Machop": [
         "Coaching"
@@ -11453,6 +11828,7 @@
     "gen1": {}
   },
   "Machoke": {
+    "gen9": {},
     "gen8": {
       "sword.Machoke": [
         "Coaching"
@@ -11653,6 +12029,7 @@
     "gen1": {}
   },
   "Machamp": {
+    "gen9": {},
     "gen8": {
       "sword.Machamp": [
         "Coaching"
@@ -11860,6 +12237,7 @@
     "gen1": {}
   },
   "Bellsprout": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Bellsprout": [
@@ -11985,6 +12363,7 @@
     "gen1": {}
   },
   "Weepinbell": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Weepinbell": [
@@ -12112,6 +12491,7 @@
     "gen1": {}
   },
   "Victreebel": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Victreebel": [
@@ -12242,6 +12622,7 @@
     "gen1": {}
   },
   "Tentacool": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Tentacool": [
         "Dazzling Gleam",
@@ -12368,6 +12749,7 @@
     "gen1": {}
   },
   "Tentacruel": {
+    "gen9": {},
     "gen8": {
       "sword.Tentacruel": [
         "Corrosive Gas"
@@ -12502,6 +12884,7 @@
     "gen1": {}
   },
   "Geodude": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Geodude": [
         "Bulldoze",
@@ -12708,6 +13091,7 @@
     "gen1": {}
   },
   "Graveler": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Graveler": [
         "Bulldoze",
@@ -12922,6 +13306,7 @@
     "gen1": {}
   },
   "Golem": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Golem": [
         "Bulldoze",
@@ -13157,6 +13542,7 @@
     "gen1": {}
   },
   "Ponyta": {
+    "gen9": {},
     "gen8": {
       "sword.Galarian Ponyta": [
         "Expanding Force"
@@ -13281,6 +13667,7 @@
     "gen1": {}
   },
   "Rapidash": {
+    "gen9": {},
     "gen8": {
       "sword.Rapidash": [
         "Scorching Sands"
@@ -13423,6 +13810,7 @@
     "gen1": {}
   },
   "Slowpoke": {
+    "gen9": {},
     "gen8": {
       "sword.Slowpoke": [
         "Expanding Force"
@@ -13619,6 +14007,7 @@
     "gen1": {}
   },
   "Slowbro": {
+    "gen9": {},
     "gen8": {
       "sword.Slowbro": [
         "Expanding Force"
@@ -13873,6 +14262,7 @@
     "gen1": {}
   },
   "Magnemite": {
+    "gen9": {},
     "gen8": {
       "sword.Magnemite": [
         "Rising Voltage"
@@ -14026,6 +14416,7 @@
     "gen1": {}
   },
   "Magneton": {
+    "gen9": {},
     "gen8": {
       "sword.Magneton": [
         "Rising Voltage"
@@ -14182,6 +14573,7 @@
     "gen1": {}
   },
   "Farfetch'd": {
+    "gen9": {},
     "gen8": {
       "sword.Farfetch'd": [
         "Dual Wingbeat"
@@ -14355,6 +14747,7 @@
     "gen1": {}
   },
   "Doduo": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Doduo": [
@@ -14461,6 +14854,7 @@
     "gen1": {}
   },
   "Dodrio": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Dodrio": [
@@ -14577,6 +14971,7 @@
     "gen1": {}
   },
   "Seel": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Seel": [
@@ -14696,6 +15091,7 @@
     "gen1": {}
   },
   "Dewgong": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Dewgong": [
@@ -14817,6 +15213,7 @@
     "gen1": {}
   },
   "Grimer": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Grimer": [
@@ -14976,6 +15373,7 @@
     "gen1": {}
   },
   "Muk": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Muk": [
@@ -15155,6 +15553,7 @@
     "gen1": {}
   },
   "Shellder": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Shellder": [
@@ -15257,6 +15656,7 @@
     "gen1": {}
   },
   "Cloyster": {
+    "gen9": {},
     "gen8": {
       "sword.Cloyster": [
         "Steel Roller"
@@ -15375,6 +15775,7 @@
     "gen1": {}
   },
   "Gastly": {
+    "gen9": {},
     "gen8": {
       "sword.Gastly": [
         "Corrosive Gas",
@@ -15595,6 +15996,7 @@
     "gen1": {}
   },
   "Haunter": {
+    "gen9": {},
     "gen8": {
       "sword.Haunter": [
         "Corrosive Gas",
@@ -15816,6 +16218,7 @@
     "gen1": {}
   },
   "Gengar": {
+    "gen9": {},
     "gen8": {
       "sword.Gengar": [
         "Corrosive Gas",
@@ -16089,6 +16492,7 @@
     "gen1": {}
   },
   "Onix": {
+    "gen9": {},
     "gen8": {
       "sword.Onix": [
         "Meteor Beam",
@@ -16252,6 +16656,7 @@
     "gen1": {}
   },
   "Drowzee": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Drowzee": [
@@ -16463,6 +16868,7 @@
     "gen1": {}
   },
   "Hypno": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Hypno": [
@@ -16674,6 +17080,7 @@
     "gen1": {}
   },
   "Krabby": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Krabby": [
@@ -16806,6 +17213,7 @@
     "gen1": {}
   },
   "Kingler": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Kingler": [
@@ -16940,6 +17348,7 @@
     "gen1": {}
   },
   "Voltorb": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Hisuian Voltorb": [
         "Charge Beam",
@@ -17070,6 +17479,7 @@
     "gen1": {}
   },
   "Electrode": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Hisuian Electrode": [
         "Charge Beam",
@@ -17204,6 +17614,7 @@
     "gen1": {}
   },
   "Exeggcute": {
+    "gen9": {},
     "gen8": {
       "sword.Exeggcute": [
         "Grassy Glide"
@@ -17351,6 +17762,7 @@
     "gen1": {}
   },
   "Exeggutor": {
+    "gen9": {},
     "gen8": {
       "sword.Exeggutor": [
         "Expanding Force",
@@ -17570,6 +17982,7 @@
     "gen1": {}
   },
   "Cubone": {
+    "gen9": {},
     "gen8": {
       "sword.Cubone": [
         "Scorching Sands"
@@ -17781,6 +18194,7 @@
     "gen1": {}
   },
   "Marowak": {
+    "gen9": {},
     "gen8": {
       "sword.Marowak": [
         "Scorching Sands"
@@ -18065,6 +18479,7 @@
     "gen1": {}
   },
   "Hitmonlee": {
+    "gen9": {},
     "gen8": {
       "sword.Hitmonlee": [
         "Coaching"
@@ -18239,6 +18654,7 @@
     "gen1": {}
   },
   "Hitmonchan": {
+    "gen9": {},
     "gen8": {
       "sword.Hitmonchan": [
         "Coaching"
@@ -18419,6 +18835,7 @@
     "gen1": {}
   },
   "Lickitung": {
+    "gen9": {},
     "gen8": {
       "sword.Lickitung": [
         "Steel Roller",
@@ -18646,6 +19063,7 @@
     "gen1": {}
   },
   "Koffing": {
+    "gen9": {},
     "gen8": {
       "sword.Koffing": [
         "Corrosive Gas"
@@ -18757,6 +19175,7 @@
     "gen1": {}
   },
   "Weezing": {
+    "gen9": {},
     "gen8": {
       "sword.Weezing": [
         "Corrosive Gas"
@@ -18876,6 +19295,7 @@
     "gen1": {}
   },
   "Rhyhorn": {
+    "gen9": {},
     "gen8": {
       "sword.Rhyhorn": [
         "Scorching Sands"
@@ -19092,6 +19512,7 @@
     "gen1": {}
   },
   "Rhydon": {
+    "gen9": {},
     "gen8": {
       "sword.Rhydon": [
         "Meteor Beam",
@@ -19380,6 +19801,7 @@
     "gen1": {}
   },
   "Chansey": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Chansey": [
         "Baby-Doll Eyes",
@@ -19675,6 +20097,7 @@
     "gen1": {}
   },
   "Tangela": {
+    "gen9": {},
     "gen8": {
       "sword.Tangela": [
         "Grassy Glide"
@@ -19830,6 +20253,7 @@
     "gen1": {}
   },
   "Kangaskhan": {
+    "gen9": {},
     "gen8": {
       "sword.Kangaskhan": [
         "Terrain Pulse"
@@ -20070,6 +20494,7 @@
     "gen1": {}
   },
   "Horsea": {
+    "gen9": {},
     "gen8": {
       "sword.Horsea": [
         "Flip Turn",
@@ -20205,6 +20630,7 @@
     "gen1": {}
   },
   "Seadra": {
+    "gen9": {},
     "gen8": {
       "sword.Seadra": [
         "Flip Turn",
@@ -20342,6 +20768,7 @@
     "gen1": {}
   },
   "Goldeen": {
+    "gen9": {},
     "gen8": {
       "sword.Goldeen": [
         "Flip Turn",
@@ -20486,6 +20913,7 @@
     "gen1": {}
   },
   "Seaking": {
+    "gen9": {},
     "gen8": {
       "sword.Seaking": [
         "Flip Turn",
@@ -20630,6 +21058,7 @@
     "gen1": {}
   },
   "Staryu": {
+    "gen9": {},
     "gen8": {
       "sword.Staryu": [
         "Flip Turn"
@@ -20775,6 +21204,7 @@
     "gen1": {}
   },
   "Starmie": {
+    "gen9": {},
     "gen8": {
       "sword.Starmie": [
         "Expanding Force",
@@ -20952,6 +21382,7 @@
     "gen1": {}
   },
   "Mr. Mime": {
+    "gen9": {},
     "gen8": {
       "sword.Mr. Mime": [
         "Expanding Force"
@@ -21244,6 +21675,7 @@
     "gen1": {}
   },
   "Scyther": {
+    "gen9": {},
     "gen8": {
       "sword.Scyther": [
         "Dual Wingbeat"
@@ -21378,6 +21810,7 @@
     "gen1": {}
   },
   "Jynx": {
+    "gen9": {},
     "gen8": {
       "sword.Jynx": [
         "Expanding Force",
@@ -21613,6 +22046,7 @@
     "gen1": {}
   },
   "Electabuzz": {
+    "gen9": {},
     "gen8": {
       "sword.Electabuzz": [
         "Rising Voltage"
@@ -21828,6 +22262,7 @@
     "gen1": {}
   },
   "Magmar": {
+    "gen9": {},
     "gen8": {
       "sword.Magmar": [
         "Burning Jealousy",
@@ -22006,6 +22441,7 @@
     "gen1": {}
   },
   "Pinsir": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pinsir": [
@@ -22140,6 +22576,7 @@
     "gen1": {}
   },
   "Tauros": {
+    "gen9": {},
     "gen8": {
       "sword.Tauros": [
         "Lash Out"
@@ -22318,6 +22755,7 @@
     "gen1": {}
   },
   "Magikarp": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Magikarp": [
@@ -22359,6 +22797,7 @@
     "gen1": {}
   },
   "Gyarados": {
+    "gen9": {},
     "gen8": {
       "sword.Gyarados": [
         "Lash Out",
@@ -22553,6 +22992,7 @@
     "gen1": {}
   },
   "Lapras": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Lapras": [
@@ -22738,6 +23178,7 @@
     "gen1": {}
   },
   "Ditto": {
+    "gen9": {},
     "gen8": {},
     "gen7": {},
     "gen6": {},
@@ -22748,6 +23189,7 @@
     "gen1": {}
   },
   "Eevee": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Eevee": [
         "Baby-Doll Eyes",
@@ -22900,6 +23342,7 @@
     "gen1": {}
   },
   "Vaporeon": {
+    "gen9": {},
     "gen8": {
       "sword.Vaporeon": [
         "Flip Turn"
@@ -23084,6 +23527,7 @@
     "gen1": {}
   },
   "Jolteon": {
+    "gen9": {},
     "gen8": {
       "sword.Jolteon": [
         "Rising Voltage"
@@ -23258,6 +23702,7 @@
     "gen1": {}
   },
   "Flareon": {
+    "gen9": {},
     "gen8": {
       "sword.Flareon": [
         "Burning Jealousy",
@@ -23427,6 +23872,7 @@
     "gen1": {}
   },
   "Porygon": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Porygon": [
         "Aerial Ace",
@@ -23636,6 +24082,7 @@
     "gen1": {}
   },
   "Omanyte": {
+    "gen9": {},
     "gen8": {
       "sword.Omanyte": [
         "Meteor Beam"
@@ -23781,6 +24228,7 @@
     "gen1": {}
   },
   "Omastar": {
+    "gen9": {},
     "gen8": {
       "sword.Omastar": [
         "Meteor Beam"
@@ -23929,6 +24377,7 @@
     "gen1": {}
   },
   "Kabuto": {
+    "gen9": {},
     "gen8": {
       "sword.Kabuto": [
         "Meteor Beam"
@@ -24072,6 +24521,7 @@
     "gen1": {}
   },
   "Kabutops": {
+    "gen9": {},
     "gen8": {
       "sword.Kabutops": [
         "Flip Turn",
@@ -24263,6 +24713,7 @@
     "gen1": {}
   },
   "Aerodactyl": {
+    "gen9": {},
     "gen8": {
       "sword.Aerodactyl": [
         "Dual Wingbeat",
@@ -24436,6 +24887,7 @@
     "gen1": {}
   },
   "Snorlax": {
+    "gen9": {},
     "gen8": {
       "sword.Snorlax": [
         "Steel Roller",
@@ -24723,6 +25175,7 @@
     "gen1": {}
   },
   "Articuno": {
+    "gen9": {},
     "gen8": {
       "sword.Articuno": [
         "Dual Wingbeat",
@@ -24872,6 +25325,7 @@
     "gen1": {}
   },
   "Zapdos": {
+    "gen9": {},
     "gen8": {
       "sword.Zapdos": [
         "Dual Wingbeat",
@@ -25023,6 +25477,7 @@
     "gen1": {}
   },
   "Moltres": {
+    "gen9": {},
     "gen8": {
       "sword.Moltres": [
         "Burning Jealousy",
@@ -25160,6 +25615,7 @@
     "gen1": {}
   },
   "Dratini": {
+    "gen9": {},
     "gen8": {
       "sword.Dratini": [
         "Scale Shot"
@@ -25344,6 +25800,7 @@
     "gen1": {}
   },
   "Dragonair": {
+    "gen9": {},
     "gen8": {
       "sword.Dragonair": [
         "Scale Shot"
@@ -25528,6 +25985,7 @@
     "gen1": {}
   },
   "Dragonite": {
+    "gen9": {},
     "gen8": {
       "sword.Dragonite": [
         "Dual Wingbeat",
@@ -25805,6 +26263,7 @@
     "gen1": {}
   },
   "Mewtwo": {
+    "gen9": {},
     "gen8": {
       "sword.Mewtwo": [
         "Expanding Force"
@@ -26089,6 +26548,7 @@
     "gen1": {}
   },
   "Mew": {
+    "gen9": {},
     "gen8": {
       "sword.Mew": [
         "Burning Jealousy",
@@ -26751,6 +27211,7 @@
     "gen1": {}
   },
   "Chikorita": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Chikorita": [
@@ -26904,6 +27365,7 @@
     "gen2": {}
   },
   "Bayleef": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Bayleef": [
@@ -27060,6 +27522,7 @@
     "gen2": {}
   },
   "Meganium": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Meganium": [
         "Frenzy Plant"
@@ -27255,6 +27718,7 @@
     "gen2": {}
   },
   "Cyndaquil": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Cyndaquil": [
         "Aerial Ace",
@@ -27387,6 +27851,7 @@
     }
   },
   "Quilava": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Quilava": [
         "Aerial Ace",
@@ -27528,6 +27993,7 @@
     }
   },
   "Typhlosion": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Typhlosion": [
         "Blast Burn"
@@ -27758,6 +28224,7 @@
     }
   },
   "Totodile": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Totodile": [
@@ -27966,6 +28433,7 @@
     }
   },
   "Croconaw": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Croconaw": [
@@ -28175,6 +28643,7 @@
     }
   },
   "Feraligatr": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Feraligatr": [
         "Hydro Cannon"
@@ -28432,6 +28901,7 @@
     }
   },
   "Sentret": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Sentret": [
@@ -28639,6 +29109,7 @@
     "gen2": {}
   },
   "Furret": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Furret": [
@@ -28846,6 +29317,7 @@
     "gen2": {}
   },
   "Hoothoot": {
+    "gen9": {},
     "gen8": {
       "sword.Hoothoot": [
         "Dual Wingbeat"
@@ -28995,6 +29467,7 @@
     "gen2": {}
   },
   "Noctowl": {
+    "gen9": {},
     "gen8": {
       "sword.Noctowl": [
         "Dual Wingbeat"
@@ -29148,6 +29621,7 @@
     "gen2": {}
   },
   "Ledyba": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Ledyba": [
@@ -29307,6 +29781,7 @@
     "gen2": {}
   },
   "Ledian": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Ledian": [
@@ -29468,6 +29943,7 @@
     "gen2": {}
   },
   "Spinarak": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Spinarak": [
@@ -29577,6 +30053,7 @@
     "gen2": {}
   },
   "Ariados": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Ariados": [
@@ -29690,6 +30167,7 @@
     "gen2": {}
   },
   "Crobat": {
+    "gen9": {},
     "gen8": {
       "sword.Crobat": [
         "Dual Wingbeat"
@@ -29855,6 +30333,7 @@
     "gen2": {}
   },
   "Chinchou": {
+    "gen9": {},
     "gen8": {
       "sword.Chinchou": [
         "Rising Voltage"
@@ -29981,6 +30460,7 @@
     }
   },
   "Lanturn": {
+    "gen9": {},
     "gen8": {
       "sword.Lanturn": [
         "Rising Voltage"
@@ -30116,6 +30596,7 @@
     }
   },
   "Pichu": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Pichu": [
         "Baby-Doll Eyes",
@@ -30288,6 +30769,7 @@
     }
   },
   "Cleffa": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Cleffa": [
         "Baby-Doll Eyes",
@@ -30552,6 +31034,7 @@
     }
   },
   "Igglybuff": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Igglybuff": [
@@ -30772,6 +31255,7 @@
     }
   },
   "Togepi": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Togepi": [
         "Baby-Doll Eyes",
@@ -30999,6 +31483,7 @@
     }
   },
   "Togetic": {
+    "gen9": {},
     "gen8": {
       "sword.Togetic": [
         "Dual Wingbeat"
@@ -31269,6 +31754,7 @@
     }
   },
   "Natu": {
+    "gen9": {},
     "gen8": {
       "sword.Natu": [
         "Dual Wingbeat",
@@ -31451,6 +31937,7 @@
     "gen2": {}
   },
   "Xatu": {
+    "gen9": {},
     "gen8": {
       "sword.Xatu": [
         "Dual Wingbeat",
@@ -31647,6 +32134,7 @@
     "gen2": {}
   },
   "Mareep": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Mareep": [
@@ -31772,6 +32260,7 @@
     }
   },
   "Flaaffy": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Flaaffy": [
@@ -31934,6 +32423,7 @@
     }
   },
   "Ampharos": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Ampharos": [
@@ -32111,6 +32601,7 @@
     }
   },
   "Bellossom": {
+    "gen9": {},
     "gen8": {
       "sword.Bellossom": [
         "Grassy Glide"
@@ -32247,6 +32738,7 @@
     "gen2": {}
   },
   "Marill": {
+    "gen9": {},
     "gen8": {
       "sword.Marill": [
         "Misty Explosion",
@@ -32441,6 +32933,7 @@
     }
   },
   "Azumarill": {
+    "gen9": {},
     "gen8": {
       "sword.Azumarill": [
         "Misty Explosion",
@@ -32637,6 +33130,7 @@
     }
   },
   "Sudowoodo": {
+    "gen9": {},
     "gen8": {
       "sword.Sudowoodo": [
         "Meteor Beam"
@@ -32858,6 +33352,7 @@
     "gen2": {}
   },
   "Politoed": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Politoed": [
@@ -33007,6 +33502,7 @@
     }
   },
   "Hoppip": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Hoppip": [
@@ -33125,6 +33621,7 @@
     "gen2": {}
   },
   "Skiploom": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Skiploom": [
@@ -33243,6 +33740,7 @@
     "gen2": {}
   },
   "Jumpluff": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Jumpluff": [
@@ -33361,6 +33859,7 @@
     "gen2": {}
   },
   "Aipom": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Aipom": [
         "Aerial Ace",
@@ -33627,6 +34126,7 @@
     }
   },
   "Sunkern": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Sunkern": [
@@ -33765,6 +34265,7 @@
     "gen2": {}
   },
   "Sunflora": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Sunflora": [
@@ -33903,6 +34404,7 @@
     "gen2": {}
   },
   "Yanma": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Yanma": [
         "Leech Life",
@@ -34038,6 +34540,7 @@
     "gen2": {}
   },
   "Wooper": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Wooper": [
@@ -34180,6 +34683,7 @@
     }
   },
   "Quagsire": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Quagsire": [
@@ -34338,6 +34842,7 @@
     }
   },
   "Espeon": {
+    "gen9": {},
     "gen8": {
       "sword.Espeon": [
         "Expanding Force"
@@ -34536,6 +35041,7 @@
     "gen2": {}
   },
   "Umbreon": {
+    "gen9": {},
     "gen8": {
       "sword.Umbreon": [
         "Lash Out"
@@ -34718,6 +35224,7 @@
     "gen2": {}
   },
   "Murkrow": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Murkrow": [
         "Aerial Ace",
@@ -34884,6 +35391,7 @@
     "gen2": {}
   },
   "Slowking": {
+    "gen9": {},
     "gen8": {
       "sword.Slowking": [
         "Expanding Force"
@@ -35135,6 +35643,7 @@
     }
   },
   "Misdreavus": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Misdreavus": [
         "Aerial Ace",
@@ -35342,6 +35851,7 @@
     }
   },
   "Unown": {
+    "gen9": {},
     "gen8": {},
     "gen7": {},
     "gen6": {},
@@ -35351,6 +35861,7 @@
     "gen2": {}
   },
   "Wobbuffet": {
+    "gen9": {},
     "gen8": {},
     "gen7": {},
     "gen6": {},
@@ -35360,6 +35871,7 @@
     "gen2": {}
   },
   "Girafarig": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Girafarig": [
@@ -35541,6 +36053,7 @@
     }
   },
   "Pineco": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pineco": [
@@ -35675,6 +36188,7 @@
     "gen2": {}
   },
   "Forretress": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Forretress": [
@@ -35841,6 +36355,7 @@
     "gen2": {}
   },
   "Dunsparce": {
+    "gen9": {},
     "gen8": {
       "sword.Dunsparce": [
         "Dual Wingbeat",
@@ -36048,6 +36563,7 @@
     }
   },
   "Gligar": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Gligar": [
         "Aerial Ace",
@@ -36212,6 +36728,7 @@
     "gen2": {}
   },
   "Steelix": {
+    "gen9": {},
     "gen8": {
       "sword.Steelix": [
         "Meteor Beam",
@@ -36406,6 +36923,7 @@
     "gen2": {}
   },
   "Snubbull": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Snubbull": [
@@ -36597,6 +37115,7 @@
     }
   },
   "Granbull": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Granbull": [
@@ -36805,6 +37324,7 @@
     }
   },
   "Qwilfish": {
+    "gen9": {},
     "gen8": {
       "sword.Qwilfish": [
         "Scale Shot",
@@ -36971,6 +37491,7 @@
     }
   },
   "Scizor": {
+    "gen9": {},
     "gen8": {
       "sword.Scizor": [
         "Dual Wingbeat"
@@ -37134,6 +37655,7 @@
     "gen2": {}
   },
   "Shuckle": {
+    "gen9": {},
     "gen8": {
       "sword.Shuckle": [
         "Meteor Beam",
@@ -37288,6 +37810,7 @@
     "gen2": {}
   },
   "Heracross": {
+    "gen9": {},
     "gen8": {
       "sword.Heracross": [
         "Coaching"
@@ -37448,6 +37971,7 @@
     "gen2": {}
   },
   "Sneasel": {
+    "gen9": {},
     "gen8": {
       "sword.Sneasel": [
         "Lash Out",
@@ -37659,6 +38183,7 @@
     }
   },
   "Teddiursa": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Teddiursa": [
         "Aerial Ace",
@@ -37862,6 +38387,7 @@
     "gen2": {}
   },
   "Ursaring": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Ursaring": [
         "Aerial Ace",
@@ -38094,6 +38620,7 @@
     "gen2": {}
   },
   "Slugma": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Slugma": [
@@ -38219,6 +38746,7 @@
     }
   },
   "Magcargo": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Magcargo": [
@@ -38352,6 +38880,7 @@
     }
   },
   "Swinub": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Swinub": [
         "Baby-Doll Eyes",
@@ -38490,6 +39019,7 @@
     }
   },
   "Piloswine": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Piloswine": [
         "Baby-Doll Eyes",
@@ -38634,6 +39164,7 @@
     }
   },
   "Corsola": {
+    "gen9": {},
     "gen8": {
       "sword.Corsola": [
         "Meteor Beam"
@@ -38790,6 +39321,7 @@
     }
   },
   "Remoraid": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Remoraid": [
         "Charge Beam",
@@ -38935,6 +39467,7 @@
     }
   },
   "Octillery": {
+    "gen9": {},
     "gen8": {
       "sword.Octillery": [
         "Skitter Smack"
@@ -39100,6 +39633,7 @@
     }
   },
   "Delibird": {
+    "gen9": {},
     "gen8": {
       "sword.Delibird": [
         "Dual Wingbeat",
@@ -39274,6 +39808,7 @@
     }
   },
   "Mantine": {
+    "gen9": {},
     "gen8": {
       "sword.Mantine": [
         "Dual Wingbeat"
@@ -39472,6 +40007,7 @@
     }
   },
   "Skarmory": {
+    "gen9": {},
     "gen8": {
       "sword.Skarmory": [
         "Dual Wingbeat"
@@ -39619,6 +40155,7 @@
     "gen2": {}
   },
   "Houndour": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Houndour": [
@@ -39776,6 +40313,7 @@
     }
   },
   "Houndoom": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Houndoom": [
@@ -39937,6 +40475,7 @@
     }
   },
   "Kingdra": {
+    "gen9": {},
     "gen8": {
       "sword.Kingdra": [
         "Flip Turn",
@@ -40124,6 +40663,7 @@
     }
   },
   "Phanpy": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Phanpy": [
@@ -40284,6 +40824,7 @@
     "gen2": {}
   },
   "Donphan": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Donphan": [
@@ -40475,6 +41016,7 @@
     "gen2": {}
   },
   "Porygon2": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Porygon2": [
         "Aerial Ace",
@@ -40685,6 +41227,7 @@
     }
   },
   "Stantler": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Stantler": [
         "Bulldoze",
@@ -40881,6 +41424,7 @@
     "gen2": {}
   },
   "Smeargle": {
+    "gen9": {},
     "gen8": {},
     "gen7": {},
     "gen6": {},
@@ -40890,6 +41434,7 @@
     "gen2": {}
   },
   "Tyrogue": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tyrogue": [
@@ -41022,6 +41567,7 @@
     "gen2": {}
   },
   "Hitmontop": {
+    "gen9": {},
     "gen8": {
       "sword.Hitmontop": [
         "Coaching",
@@ -41174,6 +41720,7 @@
     "gen2": {}
   },
   "Smoochum": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Smoochum": [
@@ -41386,6 +41933,7 @@
     }
   },
   "Elekid": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Elekid": [
         "Charge Beam",
@@ -41594,6 +42142,7 @@
     }
   },
   "Magby": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Magby": [
         "Fire Punch",
@@ -41762,6 +42311,7 @@
     }
   },
   "Miltank": {
+    "gen9": {},
     "gen8": {
       "sword.Miltank": [
         "Steel Roller"
@@ -41988,6 +42538,7 @@
     }
   },
   "Blissey": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Blissey": [
         "Baby-Doll Eyes",
@@ -42290,6 +42841,7 @@
     }
   },
   "Raikou": {
+    "gen9": {},
     "gen8": {
       "sword.Raikou": [
         "Rising Voltage"
@@ -42421,6 +42973,7 @@
     }
   },
   "Entei": {
+    "gen9": {},
     "gen8": {
       "sword.Entei": [
         "Scorching Sands"
@@ -42536,6 +43089,7 @@
     }
   },
   "Suicune": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Suicune": [
@@ -42670,6 +43224,7 @@
     }
   },
   "Larvitar": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Larvitar": [
@@ -42818,6 +43373,7 @@
     "gen2": {}
   },
   "Pupitar": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pupitar": [
@@ -42969,6 +43525,7 @@
     "gen2": {}
   },
   "Tyranitar": {
+    "gen9": {},
     "gen8": {
       "sword.Tyranitar": [
         "Lash Out"
@@ -43232,6 +43789,7 @@
     }
   },
   "Lugia": {
+    "gen9": {},
     "gen8": {
       "sword.Lugia": [
         "Dual Wingbeat",
@@ -43475,6 +44033,7 @@
     }
   },
   "Ho-oh": {
+    "gen9": {},
     "gen8": {
       "sword.Ho-oh": [
         "Dual Wingbeat",
@@ -43661,6 +44220,7 @@
     }
   },
   "Celebi": {
+    "gen9": {},
     "gen8": {
       "sword.Celebi": [
         "Dual Wingbeat",
@@ -43908,6 +44468,7 @@
     "gen2": {}
   },
   "Treecko": {
+    "gen9": {},
     "gen8": {
       "sword.Treecko": [
         "Grassy Glide"
@@ -44108,6 +44669,7 @@
     }
   },
   "Grovyle": {
+    "gen9": {},
     "gen8": {
       "sword.Grovyle": [
         "Grassy Glide"
@@ -44308,6 +44870,7 @@
     }
   },
   "Sceptile": {
+    "gen9": {},
     "gen8": {
       "sword.Sceptile": [
         "Grassy Glide",
@@ -44560,6 +45123,7 @@
     }
   },
   "Torchic": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Torchic": [
@@ -44720,6 +45284,7 @@
     }
   },
   "Combusken": {
+    "gen9": {},
     "gen8": {
       "sword.Combusken": [
         "Coaching"
@@ -44927,6 +45492,7 @@
     }
   },
   "Blaziken": {
+    "gen9": {},
     "gen8": {
       "sword.Blaziken": [
         "Coaching",
@@ -45191,6 +45757,7 @@
     }
   },
   "Mudkip": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Mudkip": [
@@ -45364,6 +45931,7 @@
     }
   },
   "Marshtomp": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Marshtomp": [
@@ -45569,6 +46137,7 @@
     }
   },
   "Swampert": {
+    "gen9": {},
     "gen8": {
       "sword.Swampert": [
         "Flip Turn"
@@ -45823,6 +46392,7 @@
     }
   },
   "Poochyena": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Poochyena": [
@@ -45958,6 +46528,7 @@
     }
   },
   "Mightyena": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Mightyena": [
@@ -46097,6 +46668,7 @@
     }
   },
   "Zigzagoon": {
+    "gen9": {},
     "gen8": {
       "sword.Galarian Zigzagoon": [
         "Lash Out"
@@ -46279,6 +46851,7 @@
     }
   },
   "Linoone": {
+    "gen9": {},
     "gen8": {
       "sword.Galarian Linoone": [
         "Lash Out"
@@ -46465,6 +47038,7 @@
     }
   },
   "Wurmple": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Wurmple": [
@@ -46520,6 +47094,7 @@
     "gen3": {}
   },
   "Silcoon": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Silcoon": [
@@ -46575,6 +47150,7 @@
     "gen3": {}
   },
   "Beautifly": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Beautifly": [
         "Aerial Ace",
@@ -46707,6 +47283,7 @@
     }
   },
   "Cascoon": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Cascoon": [
@@ -46762,6 +47339,7 @@
     "gen3": {}
   },
   "Dustox": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Dustox": [
         "Aerial Ace",
@@ -46894,6 +47472,7 @@
     }
   },
   "Lotad": {
+    "gen9": {},
     "gen8": {
       "sword.Lotad": [
         "Grassy Glide"
@@ -47026,6 +47605,7 @@
     }
   },
   "Lombre": {
+    "gen9": {},
     "gen8": {
       "sword.Lombre": [
         "Grassy Glide"
@@ -47212,6 +47792,7 @@
     }
   },
   "Ludicolo": {
+    "gen9": {},
     "gen8": {
       "sword.Ludicolo": [
         "Grassy Glide"
@@ -47417,6 +47998,7 @@
     }
   },
   "Seedot": {
+    "gen9": {},
     "gen8": {
       "sword.Seedot": [
         "Grassy Glide"
@@ -47550,6 +48132,7 @@
     }
   },
   "Nuzleaf": {
+    "gen9": {},
     "gen8": {
       "sword.Nuzleaf": [
         "Grassy Glide",
@@ -47711,6 +48294,7 @@
     }
   },
   "Shiftry": {
+    "gen9": {},
     "gen8": {
       "sword.Shiftry": [
         "Grassy Glide",
@@ -47921,6 +48505,7 @@
     }
   },
   "Taillow": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Taillow": [
@@ -48036,6 +48621,7 @@
     }
   },
   "Swellow": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Swellow": [
@@ -48157,6 +48743,7 @@
     }
   },
   "Wingull": {
+    "gen9": {},
     "gen8": {
       "sword.Wingull": [
         "Dual Wingbeat"
@@ -48296,6 +48883,7 @@
     }
   },
   "Pelipper": {
+    "gen9": {},
     "gen8": {
       "sword.Pelipper": [
         "Dual Wingbeat"
@@ -48457,6 +49045,7 @@
     }
   },
   "Ralts": {
+    "gen9": {},
     "gen8": {
       "sword.Ralts": [
         "Expanding Force"
@@ -48698,6 +49287,7 @@
     }
   },
   "Kirlia": {
+    "gen9": {},
     "gen8": {
       "sword.Kirlia": [
         "Expanding Force",
@@ -48941,6 +49531,7 @@
     }
   },
   "Gardevoir": {
+    "gen9": {},
     "gen8": {
       "sword.Gardevoir": [
         "Expanding Force",
@@ -49200,6 +49791,7 @@
     }
   },
   "Surskit": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Surskit": [
@@ -49310,6 +49902,7 @@
     }
   },
   "Masquerain": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Masquerain": [
@@ -49441,6 +50034,7 @@
     }
   },
   "Shroomish": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Shroomish": [
@@ -49567,6 +50161,7 @@
     }
   },
   "Breloom": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Breloom": [
@@ -49744,6 +50339,7 @@
     }
   },
   "Slakoth": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Slakoth": [
@@ -49910,6 +50506,7 @@
     }
   },
   "Vigoroth": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Vigoroth": [
@@ -50088,6 +50685,7 @@
     }
   },
   "Slaking": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Slaking": [
@@ -50272,6 +50870,7 @@
     }
   },
   "Nincada": {
+    "gen9": {},
     "gen8": {
       "sword.Nincada": [
         "Skitter Smack"
@@ -50373,6 +50972,7 @@
     }
   },
   "Ninjask": {
+    "gen9": {},
     "gen8": {
       "sword.Ninjask": [
         "Dual Wingbeat",
@@ -50504,6 +51104,7 @@
     }
   },
   "Shedinja": {
+    "gen9": {},
     "gen8": {
       "sword.Shedinja": [
         "Poltergeist",
@@ -50626,6 +51227,7 @@
     }
   },
   "Whismur": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Whismur": [
@@ -50793,6 +51395,7 @@
     }
   },
   "Loudred": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Loudred": [
@@ -50973,6 +51576,7 @@
     }
   },
   "Exploud": {
+    "gen9": {},
     "gen8": {
       "sword.Exploud": [
         "Terrain Pulse"
@@ -51169,6 +51773,7 @@
     }
   },
   "Makuhita": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Makuhita": [
@@ -51338,6 +51943,7 @@
     }
   },
   "Hariyama": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Hariyama": [
@@ -51520,6 +52126,7 @@
     }
   },
   "Azurill": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Azurill": [
@@ -51664,6 +52271,7 @@
     }
   },
   "Nosepass": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Nosepass": [
         "Bulldoze",
@@ -51869,6 +52477,7 @@
     }
   },
   "Skitty": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Skitty": [
@@ -52035,6 +52644,7 @@
     }
   },
   "Delcatty": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Delcatty": [
@@ -52205,6 +52815,7 @@
     }
   },
   "Sableye": {
+    "gen9": {},
     "gen8": {
       "sword.Sableye": [
         "Lash Out",
@@ -52472,6 +53083,7 @@
     }
   },
   "Mawile": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Mawile": [
@@ -52682,6 +53294,7 @@
     }
   },
   "Aron": {
+    "gen9": {},
     "gen8": {
       "sword.Aron": [
         "Steel Roller"
@@ -52866,6 +53479,7 @@
     }
   },
   "Lairon": {
+    "gen9": {},
     "gen8": {
       "sword.Lairon": [
         "Steel Roller"
@@ -53052,6 +53666,7 @@
     }
   },
   "Aggron": {
+    "gen9": {},
     "gen8": {
       "sword.Aggron": [
         "Meteor Beam",
@@ -53342,6 +53957,7 @@
     }
   },
   "Meditite": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Meditite": [
@@ -53563,6 +54179,7 @@
     }
   },
   "Medicham": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Medicham": [
@@ -53789,6 +54406,7 @@
     }
   },
   "Electrike": {
+    "gen9": {},
     "gen8": {
       "sword.Electrike": [
         "Rising Voltage"
@@ -53907,6 +54525,7 @@
     }
   },
   "Manectric": {
+    "gen9": {},
     "gen8": {
       "sword.Manectric": [
         "Rising Voltage"
@@ -54027,6 +54646,7 @@
     }
   },
   "Plusle": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Plusle": [
@@ -54196,6 +54816,7 @@
     }
   },
   "Minun": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Minun": [
@@ -54365,6 +54986,7 @@
     }
   },
   "Volbeat": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Volbeat": [
@@ -54556,6 +55178,7 @@
     }
   },
   "Illumise": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Illumise": [
@@ -54738,6 +55361,7 @@
     }
   },
   "Roselia": {
+    "gen9": {},
     "gen8": {
       "sword.Roselia": [
         "Grassy Glide"
@@ -54874,6 +55498,7 @@
     }
   },
   "Gulpin": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Gulpin": [
@@ -55044,6 +55669,7 @@
     }
   },
   "Swalot": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Swalot": [
@@ -55222,6 +55848,7 @@
     }
   },
   "Carvanha": {
+    "gen9": {},
     "gen8": {
       "sword.Carvanha": [
         "Flip Turn",
@@ -55370,6 +55997,7 @@
     }
   },
   "Sharpedo": {
+    "gen9": {},
     "gen8": {
       "sword.Sharpedo": [
         "Flip Turn",
@@ -55520,6 +56148,7 @@
     }
   },
   "Wailmer": {
+    "gen9": {},
     "gen8": {
       "sword.Wailmer": [
         "Steel Roller"
@@ -55636,6 +56265,7 @@
     }
   },
   "Wailord": {
+    "gen9": {},
     "gen8": {
       "sword.Wailord": [
         "Steel Roller"
@@ -55771,6 +56401,7 @@
     }
   },
   "Numel": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Numel": [
@@ -55885,6 +56516,7 @@
     }
   },
   "Camerupt": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Camerupt": [
@@ -56007,6 +56639,7 @@
     }
   },
   "Torkoal": {
+    "gen9": {},
     "gen8": {
       "sword.Torkoal": [
         "Burning Jealousy",
@@ -56146,6 +56779,7 @@
     }
   },
   "Spoink": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Spoink": [
@@ -56328,6 +56962,7 @@
     }
   },
   "Grumpig": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Grumpig": [
@@ -56569,6 +57204,7 @@
     }
   },
   "Spinda": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Spinda": [
@@ -56822,6 +57458,7 @@
     }
   },
   "Trapinch": {
+    "gen9": {},
     "gen8": {
       "sword.Trapinch": [
         "Scorching Sands"
@@ -56940,6 +57577,7 @@
     }
   },
   "Vibrava": {
+    "gen9": {},
     "gen8": {
       "sword.Vibrava": [
         "Dual Wingbeat",
@@ -57154,6 +57792,7 @@
     }
   },
   "Flygon": {
+    "gen9": {},
     "gen8": {
       "sword.Flygon": [
         "Dual Wingbeat",
@@ -57398,6 +58037,7 @@
     }
   },
   "Cacnea": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Cacnea": [
@@ -57573,6 +58213,7 @@
     }
   },
   "Cacturne": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Cacturne": [
@@ -57768,6 +58409,7 @@
     }
   },
   "Swablu": {
+    "gen9": {},
     "gen8": {
       "sword.Swablu": [
         "Dual Wingbeat"
@@ -57923,6 +58565,7 @@
     }
   },
   "Altaria": {
+    "gen9": {},
     "gen8": {
       "sword.Altaria": [
         "Dual Wingbeat"
@@ -58133,6 +58776,7 @@
     }
   },
   "Zangoose": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Zangoose": [
@@ -58339,6 +58983,7 @@
     }
   },
   "Seviper": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Seviper": [
@@ -58472,6 +59117,7 @@
     }
   },
   "Lunatone": {
+    "gen9": {},
     "gen8": {
       "sword.Lunatone": [
         "Meteor Beam"
@@ -58672,6 +59318,7 @@
     }
   },
   "Solrock": {
+    "gen9": {},
     "gen8": {
       "sword.Solrock": [
         "Meteor Beam"
@@ -58881,6 +59528,7 @@
     }
   },
   "Barboach": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Barboach": [
         "Aqua Tail",
@@ -59003,6 +59651,7 @@
     }
   },
   "Whiscash": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Whiscash": [
         "Aerial Ace",
@@ -59145,6 +59794,7 @@
     }
   },
   "Corphish": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Corphish": [
@@ -59285,6 +59935,7 @@
     }
   },
   "Crawdaunt": {
+    "gen9": {},
     "gen8": {
       "sword.Crawdaunt": [
         "Lash Out"
@@ -59443,6 +60094,7 @@
     }
   },
   "Baltoy": {
+    "gen9": {},
     "gen8": {
       "sword.Baltoy": [
         "Expanding Force",
@@ -59618,6 +60270,7 @@
     }
   },
   "Claydol": {
+    "gen9": {},
     "gen8": {
       "sword.Claydol": [
         "Expanding Force",
@@ -59793,6 +60446,7 @@
     }
   },
   "Lileep": {
+    "gen9": {},
     "gen8": {
       "sword.Lileep": [
         "Meteor Beam"
@@ -59947,6 +60601,7 @@
     }
   },
   "Cradily": {
+    "gen9": {},
     "gen8": {
       "sword.Cradily": [
         "Meteor Beam"
@@ -60111,6 +60766,7 @@
     }
   },
   "Anorith": {
+    "gen9": {},
     "gen8": {
       "sword.Anorith": [
         "Meteor Beam"
@@ -60246,6 +60902,7 @@
     }
   },
   "Armaldo": {
+    "gen9": {},
     "gen8": {
       "sword.Armaldo": [
         "Meteor Beam"
@@ -60428,6 +61085,7 @@
     }
   },
   "Feebas": {
+    "gen9": {},
     "gen8": {
       "sword.Feebas": [
         "Scale Shot"
@@ -60529,6 +61187,7 @@
     }
   },
   "Milotic": {
+    "gen9": {},
     "gen8": {
       "sword.Milotic": [
         "Flip Turn",
@@ -60681,6 +61340,7 @@
     }
   },
   "Castform": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Castform": [
@@ -60794,6 +61454,7 @@
     }
   },
   "Kecleon": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Kecleon": [
@@ -61078,6 +61739,7 @@
     }
   },
   "Shuppet": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Shuppet": [
@@ -61249,6 +61911,7 @@
     }
   },
   "Banette": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Banette": [
@@ -61429,6 +62092,7 @@
     }
   },
   "Duskull": {
+    "gen9": {},
     "gen8": {
       "sword.Duskull": [
         "Poltergeist",
@@ -61594,6 +62258,7 @@
     }
   },
   "Dusclops": {
+    "gen9": {},
     "gen8": {
       "sword.Dusclops": [
         "Poltergeist",
@@ -61831,6 +62496,7 @@
     }
   },
   "Tropius": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tropius": [
@@ -61975,6 +62641,7 @@
     }
   },
   "Chimecho": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Chimecho": [
         "Calm Mind",
@@ -62198,6 +62865,7 @@
     }
   },
   "Absol": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Absol": [
@@ -62398,6 +63066,7 @@
     }
   },
   "Wynaut": {
+    "gen9": {},
     "gen8": {},
     "gen7": {},
     "gen6": {},
@@ -62406,6 +63075,7 @@
     "gen3": {}
   },
   "Snorunt": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Snorunt": [
         "Ice Beam",
@@ -62516,6 +63186,7 @@
     }
   },
   "Glalie": {
+    "gen9": {},
     "gen8": {
       "sword.Glalie": [
         "Steel Roller"
@@ -62673,6 +63344,7 @@
     }
   },
   "Spheal": {
+    "gen9": {},
     "gen8": {
       "sword.Spheal": [
         "Steel Roller"
@@ -62820,6 +63492,7 @@
     }
   },
   "Sealeo": {
+    "gen9": {},
     "gen8": {
       "sword.Sealeo": [
         "Steel Roller"
@@ -62967,6 +63640,7 @@
     }
   },
   "Walrein": {
+    "gen9": {},
     "gen8": {
       "sword.Walrein": [
         "Steel Roller"
@@ -63140,6 +63814,7 @@
     }
   },
   "Clamperl": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Clamperl": [
@@ -63230,6 +63905,7 @@
     }
   },
   "Huntail": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Huntail": [
@@ -63360,6 +64036,7 @@
     }
   },
   "Gorebyss": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Gorebyss": [
@@ -63482,6 +64159,7 @@
     }
   },
   "Relicanth": {
+    "gen9": {},
     "gen8": {
       "sword.Relicanth": [
         "Meteor Beam",
@@ -63626,6 +64304,7 @@
     }
   },
   "Luvdisc": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Luvdisc": [
@@ -63720,6 +64399,7 @@
     }
   },
   "Bagon": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Bagon": [
         "Draco Meteor"
@@ -63870,6 +64550,7 @@
     }
   },
   "Shelgon": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Shelgon": [
         "Draco Meteor"
@@ -64034,6 +64715,7 @@
     }
   },
   "Salamence": {
+    "gen9": {},
     "gen8": {
       "sword.Salamence": [
         "Dual Wingbeat"
@@ -64243,6 +64925,7 @@
     }
   },
   "Beldum": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Beldum": [
@@ -64302,6 +64985,7 @@
     "gen3": {}
   },
   "Metang": {
+    "gen9": {},
     "gen8": {
       "sword.Metang": [
         "Expanding Force",
@@ -64506,6 +65190,7 @@
     }
   },
   "Metagross": {
+    "gen9": {},
     "gen8": {
       "sword.Metagross": [
         "Expanding Force",
@@ -64722,6 +65407,7 @@
     }
   },
   "Regirock": {
+    "gen9": {},
     "gen8": {
       "sword.Regirock": [
         "Meteor Beam"
@@ -64931,6 +65617,7 @@
     }
   },
   "Regice": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Regice": [
@@ -65115,6 +65802,7 @@
     }
   },
   "Registeel": {
+    "gen9": {},
     "gen8": {
       "sword.Registeel": [
         "Meteor Beam",
@@ -65313,6 +66001,7 @@
     }
   },
   "Latias": {
+    "gen9": {},
     "gen8": {
       "sword.Latias": [
         "Dual Wingbeat",
@@ -65568,6 +66257,7 @@
     }
   },
   "Latios": {
+    "gen9": {},
     "gen8": {
       "sword.Latios": [
         "Dual Wingbeat",
@@ -65806,6 +66496,7 @@
     }
   },
   "Kyogre": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Kyogre": [
@@ -65958,6 +66649,7 @@
     }
   },
   "Groudon": {
+    "gen9": {},
     "gen8": {
       "sword.Groudon": [
         "Scorching Sands"
@@ -66153,6 +66845,7 @@
     }
   },
   "Rayquaza": {
+    "gen9": {},
     "gen8": {
       "sword.Rayquaza": [
         "Meteor Beam",
@@ -66398,6 +67091,7 @@
     }
   },
   "Jirachi": {
+    "gen9": {},
     "gen8": {
       "sword.Jirachi": [
         "Expanding Force",
@@ -66664,6 +67358,7 @@
     }
   },
   "Deoxys": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Normal Forme": [
@@ -67487,6 +68182,7 @@
     }
   },
   "Turtwig": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Turtwig": [
         "Bulldoze",
@@ -67628,6 +68324,7 @@
     }
   },
   "Grotle": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Grotle": [
         "Bulldoze",
@@ -67769,6 +68466,7 @@
     }
   },
   "Torterra": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Torterra": [
         "Frenzy Plant"
@@ -67971,6 +68669,7 @@
     }
   },
   "Chimchar": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Chimchar": [
         "Aerial Ace",
@@ -68165,6 +68864,7 @@
     }
   },
   "Monferno": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Monferno": [
         "Aerial Ace",
@@ -68358,6 +69058,7 @@
     }
   },
   "Infernape": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Infernape": [
         "Blast Burn"
@@ -68586,6 +69287,7 @@
     }
   },
   "Piplup": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Piplup": [
         "Aerial Ace",
@@ -68705,6 +69407,7 @@
     }
   },
   "Prinplup": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Prinplup": [
         "Aerial Ace",
@@ -68825,6 +69528,7 @@
     }
   },
   "Empoleon": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Empoleon": [
         "Hydro Cannon"
@@ -69005,6 +69709,7 @@
     }
   },
   "Starly": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Starly": [
         "Aerial Ace",
@@ -69102,6 +69807,7 @@
     }
   },
   "Staravia": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Staravia": [
         "Aerial Ace",
@@ -69199,6 +69905,7 @@
     }
   },
   "Staraptor": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Staraptor": [
         "Aerial Ace",
@@ -69308,6 +70015,7 @@
     }
   },
   "Bidoof": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Bidoof": [
         "Aqua Tail",
@@ -69442,6 +70150,7 @@
     }
   },
   "Bibarel": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Bibarel": [
         "Aqua Tail",
@@ -69595,6 +70304,7 @@
     }
   },
   "Kricketot": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Kricketot": [
@@ -69664,6 +70374,7 @@
     }
   },
   "Kricketune": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Kricketune": [
         "Aerial Ace",
@@ -69775,6 +70486,7 @@
     }
   },
   "Shinx": {
+    "gen9": {},
     "gen8": {
       "sword.Shinx": [
         "Rising Voltage"
@@ -69879,6 +70591,7 @@
     }
   },
   "Luxio": {
+    "gen9": {},
     "gen8": {
       "sword.Luxio": [
         "Rising Voltage"
@@ -69983,6 +70696,7 @@
     }
   },
   "Luxray": {
+    "gen9": {},
     "gen8": {
       "sword.Luxray": [
         "Rising Voltage"
@@ -70102,6 +70816,7 @@
     }
   },
   "Budew": {
+    "gen9": {},
     "gen8": {
       "sword.Budew": [
         "Grassy Glide"
@@ -70212,6 +70927,7 @@
     }
   },
   "Roserade": {
+    "gen9": {},
     "gen8": {
       "sword.Roserade": [
         "Grassy Glide"
@@ -70321,6 +71037,7 @@
     }
   },
   "Cranidos": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Cranidos": [
         "Bulldoze",
@@ -70491,6 +71208,7 @@
     }
   },
   "Rampardos": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Rampardos": [
         "Bulldoze",
@@ -70690,6 +71408,7 @@
     }
   },
   "Shieldon": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Shieldon": [
         "Bulldoze",
@@ -70808,6 +71527,7 @@
     }
   },
   "Bastiodon": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Bastiodon": [
         "Bulldoze",
@@ -70957,6 +71677,7 @@
     }
   },
   "Burmy": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Burmy": [
@@ -71011,6 +71732,7 @@
     }
   },
   "Wormadam": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Plant Cloak": [
         "Energy Ball",
@@ -71403,6 +72125,7 @@
     }
   },
   "Mothim": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Mothim": [
         "Aerial Ace",
@@ -71519,6 +72242,7 @@
     }
   },
   "Combee": {
+    "gen9": {},
     "gen8": {
       "sword.Combee": [
         "Dual Wingbeat"
@@ -71607,6 +72331,7 @@
     }
   },
   "Vespiquen": {
+    "gen9": {},
     "gen8": {
       "sword.Vespiquen": [
         "Dual Wingbeat"
@@ -71722,6 +72447,7 @@
     }
   },
   "Pachirisu": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Pachirisu": [
         "Baby-Doll Eyes",
@@ -71877,6 +72603,7 @@
     }
   },
   "Buizel": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Buizel": [
         "Aqua Tail",
@@ -71981,6 +72708,7 @@
     }
   },
   "Floatzel": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Floatzel": [
         "Aqua Tail",
@@ -72101,6 +72829,7 @@
     }
   },
   "Cherubi": {
+    "gen9": {},
     "gen8": {
       "sword.Cherubi": [
         "Grassy Glide"
@@ -72198,6 +72927,7 @@
     }
   },
   "Cherrim": {
+    "gen9": {},
     "gen8": {
       "sword.Cherrim": [
         "Grassy Glide"
@@ -72300,6 +73030,7 @@
     }
   },
   "Shellos": {
+    "gen9": {},
     "gen8": {
       "sword.Shellos": [
         "Skitter Smack"
@@ -72397,6 +73128,7 @@
     }
   },
   "Gastrodon": {
+    "gen9": {},
     "gen8": {
       "sword.Gastrodon": [
         "Skitter Smack"
@@ -72511,6 +73243,7 @@
     }
   },
   "Ambipom": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Ambipom": [
         "Aerial Ace",
@@ -72723,6 +73456,7 @@
     }
   },
   "Drifloon": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Drifloon": [
         "Calm Mind",
@@ -72883,6 +73617,7 @@
     }
   },
   "Drifblim": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Drifblim": [
         "Calm Mind",
@@ -73046,6 +73781,7 @@
     }
   },
   "Buneary": {
+    "gen9": {},
     "gen8": {
       "sword.Buneary": [
         "Triple Axel"
@@ -73247,6 +73983,7 @@
     }
   },
   "Lopunny": {
+    "gen9": {},
     "gen8": {
       "sword.Lopunny": [
         "Triple Axel"
@@ -73464,6 +74201,7 @@
     }
   },
   "Mismagius": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Mismagius": [
         "Aerial Ace",
@@ -73643,6 +74381,7 @@
     }
   },
   "Honchkrow": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Honchkrow": [
         "Aerial Ace",
@@ -73787,6 +74526,7 @@
     }
   },
   "Glameow": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Glameow": [
         "Aerial Ace",
@@ -73917,6 +74657,7 @@
     }
   },
   "Purugly": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Purugly": [
         "Aerial Ace",
@@ -74057,6 +74798,7 @@
     }
   },
   "Chingling": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Chingling": [
         "Calm Mind",
@@ -74251,6 +74993,7 @@
     }
   },
   "Stunky": {
+    "gen9": {},
     "gen8": {
       "sword.Stunky": [
         "Corrosive Gas",
@@ -74353,6 +75096,7 @@
     }
   },
   "Skuntank": {
+    "gen9": {},
     "gen8": {
       "sword.Skuntank": [
         "Burning Jealousy",
@@ -74459,6 +75203,7 @@
     }
   },
   "Bronzor": {
+    "gen9": {},
     "gen8": {
       "sword.Bronzor": [
         "Expanding Force",
@@ -74585,6 +75330,7 @@
     }
   },
   "Bronzong": {
+    "gen9": {},
     "gen8": {
       "sword.Bronzong": [
         "Expanding Force",
@@ -74744,6 +75490,7 @@
     }
   },
   "Bonsly": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Bonsly": [
         "Calm Mind",
@@ -74877,6 +75624,7 @@
     }
   },
   "Mime Jr.": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Mime Jr.": [
         "Calm Mind",
@@ -75047,6 +75795,7 @@
     }
   },
   "Happiny": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Happiny": [
         "Baby-Doll Eyes",
@@ -75210,6 +75959,7 @@
     }
   },
   "Chatot": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Chatot": [
         "Aerial Ace",
@@ -75327,6 +76077,7 @@
     }
   },
   "Spiritomb": {
+    "gen9": {},
     "gen8": {
       "sword.Spiritomb": [
         "Burning Jealousy",
@@ -75473,6 +76224,7 @@
     }
   },
   "Gible": {
+    "gen9": {},
     "gen8": {
       "sword.Gible": [
         "Scale Shot",
@@ -75636,6 +76388,7 @@
     }
   },
   "Gabite": {
+    "gen9": {},
     "gen8": {
       "sword.Gabite": [
         "Scale Shot",
@@ -75808,6 +76561,7 @@
     }
   },
   "Garchomp": {
+    "gen9": {},
     "gen8": {
       "sword.Garchomp": [
         "Scale Shot",
@@ -75997,6 +76751,7 @@
     }
   },
   "Munchlax": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Munchlax": [
         "Bulldoze",
@@ -76199,6 +76954,7 @@
     }
   },
   "Riolu": {
+    "gen9": {},
     "gen8": {
       "sword.Riolu": [
         "Coaching"
@@ -76370,6 +77126,7 @@
     }
   },
   "Lucario": {
+    "gen9": {},
     "gen8": {
       "sword.Lucario": [
         "Coaching",
@@ -76565,6 +77322,7 @@
     }
   },
   "Hippopotas": {
+    "gen9": {},
     "gen8": {
       "sword.Hippopotas": [
         "Scorching Sands"
@@ -76664,6 +77422,7 @@
     }
   },
   "Hippowdon": {
+    "gen9": {},
     "gen8": {
       "sword.Hippowdon": [
         "Scorching Sands"
@@ -76779,6 +77538,7 @@
     }
   },
   "Skorupi": {
+    "gen9": {},
     "gen8": {
       "sword.Skorupi": [
         "Skitter Smack"
@@ -76881,6 +77641,7 @@
     }
   },
   "Drapion": {
+    "gen9": {},
     "gen8": {
       "sword.Drapion": [
         "Lash Out",
@@ -76998,6 +77759,7 @@
     }
   },
   "Croagunk": {
+    "gen9": {},
     "gen8": {
       "sword.Croagunk": [
         "Coaching",
@@ -77204,6 +77966,7 @@
     }
   },
   "Toxicroak": {
+    "gen9": {},
     "gen8": {
       "sword.Toxicroak": [
         "Coaching",
@@ -77417,6 +78180,7 @@
     }
   },
   "Carnivine": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Carnivine": [
         "Energy Ball",
@@ -77541,6 +78305,7 @@
     }
   },
   "Finneon": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Finneon": [
         "Aqua Tail",
@@ -77654,6 +78419,7 @@
     }
   },
   "Lumineon": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Lumineon": [
         "Aerial Ace",
@@ -77770,6 +78536,7 @@
     }
   },
   "Mantyke": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Mantyke": [
         "Aerial Ace",
@@ -77874,6 +78641,7 @@
     }
   },
   "Snover": {
+    "gen9": {},
     "gen8": {
       "sword.Snover": [
         "Grassy Glide"
@@ -78005,6 +78773,7 @@
     }
   },
   "Abomasnow": {
+    "gen9": {},
     "gen8": {
       "sword.Abomasnow": [
         "Grassy Glide"
@@ -78166,6 +78935,7 @@
     }
   },
   "Weavile": {
+    "gen9": {},
     "gen8": {
       "sword.Weavile": [
         "Lash Out",
@@ -78319,6 +79089,7 @@
     }
   },
   "Magnezone": {
+    "gen9": {},
     "gen8": {
       "sword.Magnezone": [
         "Rising Voltage",
@@ -78457,6 +79228,7 @@
     }
   },
   "Lickilicky": {
+    "gen9": {},
     "gen8": {
       "sword.Lickilicky": [
         "Steel Roller",
@@ -78632,6 +79404,7 @@
     }
   },
   "Rhyperior": {
+    "gen9": {},
     "gen8": {
       "sword.Rhyperior": [
         "Meteor Beam",
@@ -78875,6 +79648,7 @@
     }
   },
   "Tangrowth": {
+    "gen9": {},
     "gen8": {
       "sword.Tangrowth": [
         "Grassy Glide"
@@ -79017,6 +79791,7 @@
     }
   },
   "Electivire": {
+    "gen9": {},
     "gen8": {
       "sword.Electivire": [
         "Rising Voltage"
@@ -79186,6 +79961,7 @@
     }
   },
   "Magmortar": {
+    "gen9": {},
     "gen8": {
       "sword.Magmortar": [
         "Burning Jealousy",
@@ -79324,6 +80100,7 @@
     }
   },
   "Togekiss": {
+    "gen9": {},
     "gen8": {
       "sword.Togekiss": [
         "Dual Wingbeat"
@@ -79544,6 +80321,7 @@
     }
   },
   "Yanmega": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Yanmega": [
         "Aerial Ace",
@@ -79661,6 +80439,7 @@
     }
   },
   "Leafeon": {
+    "gen9": {},
     "gen8": {
       "sword.Leafeon": [
         "Grassy Glide"
@@ -79822,6 +80601,7 @@
     }
   },
   "Glaceon": {
+    "gen9": {},
     "gen8": {
       "sword.Glaceon": [
         "Triple Axel"
@@ -79971,6 +80751,7 @@
     }
   },
   "Gliscor": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Gliscor": [
         "Aerial Ace",
@@ -80117,6 +80898,7 @@
     }
   },
   "Mamoswine": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Mamoswine": [
         "Baby-Doll Eyes",
@@ -80256,6 +81038,7 @@
     }
   },
   "Porygon-Z": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Porygon-Z": [
         "Aerial Ace",
@@ -80440,6 +81223,7 @@
     }
   },
   "Gallade": {
+    "gen9": {},
     "gen8": {
       "sword.Gallade": [
         "Coaching",
@@ -80697,6 +81481,7 @@
     }
   },
   "Probopass": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Probopass": [
         "Bulldoze",
@@ -80880,6 +81665,7 @@
     }
   },
   "Dusknoir": {
+    "gen9": {},
     "gen8": {
       "sword.Dusknoir": [
         "Poltergeist",
@@ -81065,6 +81851,7 @@
     }
   },
   "Froslass": {
+    "gen9": {},
     "gen8": {
       "sword.Froslass": [
         "Poltergeist",
@@ -81224,6 +82011,7 @@
     }
   },
   "Rotom": {
+    "gen9": {},
     "gen8": {
       "sword.Rotom": [
         "Poltergeist",
@@ -81366,6 +82154,7 @@
     }
   },
   "Uxie": {
+    "gen9": {},
     "gen8": {
       "sword.Uxie": [
         "Expanding Force"
@@ -81604,6 +82393,7 @@
     }
   },
   "Mesprit": {
+    "gen9": {},
     "gen8": {
       "sword.Mesprit": [
         "Expanding Force"
@@ -81822,6 +82612,7 @@
     }
   },
   "Azelf": {
+    "gen9": {},
     "gen8": {
       "sword.Azelf": [
         "Expanding Force"
@@ -82059,6 +82850,7 @@
     }
   },
   "Dialga": {
+    "gen9": {},
     "gen8": {
       "sword.Dialga": [
         "Scale Shot"
@@ -82269,6 +83061,7 @@
     }
   },
   "Palkia": {
+    "gen9": {},
     "gen8": {
       "sword.Palkia": [
         "Dual Wingbeat",
@@ -82461,6 +83254,7 @@
     }
   },
   "Heatran": {
+    "gen9": {},
     "gen8": {
       "sword.Heatran": [
         "Burning Jealousy",
@@ -82606,6 +83400,7 @@
     }
   },
   "Regigigas": {
+    "gen9": {},
     "gen8": {
       "sword.Regigigas": [
         "Terrain Pulse"
@@ -82792,6 +83587,7 @@
     }
   },
   "Giratina": {
+    "gen9": {},
     "gen8": {
       "sword.Giratina": [
         "Dual Wingbeat",
@@ -83177,6 +83973,7 @@
     }
   },
   "Cresselia": {
+    "gen9": {},
     "gen8": {
       "sword.Cresselia": [
         "Expanding Force"
@@ -83332,6 +84129,7 @@
     }
   },
   "Phione": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Phione": [
         "Calm Mind",
@@ -83478,6 +84276,7 @@
     }
   },
   "Manaphy": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Manaphy": [
         "Calm Mind",
@@ -83635,6 +84434,7 @@
     }
   },
   "Darkrai": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Darkrai": [
         "Aerial Ace",
@@ -83795,6 +84595,7 @@
     }
   },
   "Shaymin": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Shaymin": [
         "Aerial Ace",
@@ -84045,6 +84846,7 @@
     }
   },
   "Arceus": {
+    "gen9": {},
     "gen8": {
       "brilliantDiamond.Arceus": [
         "Draco Meteor"
@@ -84365,6 +85167,7 @@
     }
   },
   "Victini": {
+    "gen9": {},
     "gen8": {
       "sword.Victini": [
         "Expanding Force",
@@ -84489,6 +85292,7 @@
     }
   },
   "Snivy": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Snivy": [
@@ -84604,6 +85408,7 @@
     }
   },
   "Servine": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Servine": [
@@ -84719,6 +85524,7 @@
     }
   },
   "Serperior": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Serperior": [
@@ -84858,6 +85664,7 @@
     }
   },
   "Tepig": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Tepig": [
@@ -84953,6 +85760,7 @@
     }
   },
   "Pignite": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Pignite": [
@@ -85070,6 +85878,7 @@
     }
   },
   "Emboar": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Emboar": [
@@ -85211,6 +86020,7 @@
     }
   },
   "Oshawott": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Oshawott": [
         "Aerial Ace",
@@ -85312,6 +86122,7 @@
     }
   },
   "Dewott": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Dewott": [
         "Aerial Ace",
@@ -85413,6 +86224,7 @@
     }
   },
   "Samurott": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Hisuian Samurott": [
         "Aerial Ace",
@@ -85552,6 +86364,7 @@
     }
   },
   "Patrat": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Patrat": [
@@ -85659,6 +86472,7 @@
     }
   },
   "Watchog": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Watchog": [
@@ -85802,6 +86616,7 @@
     }
   },
   "Lillipup": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Lillipup": [
@@ -85869,6 +86684,7 @@
     }
   },
   "Herdier": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Herdier": [
@@ -85936,6 +86752,7 @@
     }
   },
   "Stoutland": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Stoutland": [
@@ -86017,6 +86834,7 @@
     }
   },
   "Purrloin": {
+    "gen9": {},
     "gen8": {
       "sword.Purrloin": [
         "Lash Out"
@@ -86121,6 +86939,7 @@
     }
   },
   "Liepard": {
+    "gen9": {},
     "gen8": {
       "sword.Liepard": [
         "Burning Jealousy",
@@ -86233,6 +87052,7 @@
     }
   },
   "Pansage": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Pansage": [
@@ -86362,6 +87182,7 @@
     }
   },
   "Simisage": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Simisage": [
@@ -86499,6 +87320,7 @@
     }
   },
   "Pansear": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Pansear": [
@@ -86616,6 +87438,7 @@
     }
   },
   "Simisear": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Simisear": [
@@ -86741,6 +87564,7 @@
     }
   },
   "Panpour": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Panpour": [
@@ -86868,6 +87692,7 @@
     }
   },
   "Simipour": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Simipour": [
@@ -87003,6 +87828,7 @@
     }
   },
   "Munna": {
+    "gen9": {},
     "gen8": {
       "sword.Munna": [
         "Expanding Force"
@@ -87119,6 +87945,7 @@
     }
   },
   "Musharna": {
+    "gen9": {},
     "gen8": {
       "sword.Musharna": [
         "Expanding Force",
@@ -87237,6 +88064,7 @@
     }
   },
   "Pidove": {
+    "gen9": {},
     "gen8": {
       "sword.Pidove": [
         "Dual Wingbeat"
@@ -87301,6 +88129,7 @@
     }
   },
   "Tranquill": {
+    "gen9": {},
     "gen8": {
       "sword.Tranquill": [
         "Dual Wingbeat"
@@ -87365,6 +88194,7 @@
     }
   },
   "Unfezant": {
+    "gen9": {},
     "gen8": {
       "sword.Unfezant": [
         "Dual Wingbeat"
@@ -87429,6 +88259,7 @@
     }
   },
   "Blitzle": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Blitzle": [
@@ -87486,6 +88317,7 @@
     }
   },
   "Zebstrika": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Zebstrika": [
@@ -87547,6 +88379,7 @@
     }
   },
   "Roggenrola": {
+    "gen9": {},
     "gen8": {
       "sword.Roggenrola": [
         "Meteor Beam"
@@ -87613,6 +88446,7 @@
     }
   },
   "Boldore": {
+    "gen9": {},
     "gen8": {
       "sword.Boldore": [
         "Meteor Beam"
@@ -87681,6 +88515,7 @@
     }
   },
   "Gigalith": {
+    "gen9": {},
     "gen8": {
       "sword.Gigalith": [
         "Meteor Beam"
@@ -87765,6 +88600,7 @@
     }
   },
   "Woobat": {
+    "gen9": {},
     "gen8": {
       "sword.Woobat": [
         "Dual Wingbeat",
@@ -87899,6 +88735,7 @@
     }
   },
   "Swoobat": {
+    "gen9": {},
     "gen8": {
       "sword.Swoobat": [
         "Dual Wingbeat",
@@ -88041,6 +88878,7 @@
     }
   },
   "Drilbur": {
+    "gen9": {},
     "gen8": {
       "sword.Drilbur": [
         "Scorching Sands"
@@ -88101,6 +88939,7 @@
     }
   },
   "Excadrill": {
+    "gen9": {},
     "gen8": {
       "sword.Excadrill": [
         "Scorching Sands"
@@ -88175,6 +89014,7 @@
     }
   },
   "Audino": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Audino": [
@@ -88356,6 +89196,7 @@
     }
   },
   "Timburr": {
+    "gen9": {},
     "gen8": {
       "sword.Timburr": [
         "Coaching"
@@ -88450,6 +89291,7 @@
     }
   },
   "Gurdurr": {
+    "gen9": {},
     "gen8": {
       "sword.Gurdurr": [
         "Coaching"
@@ -88544,6 +89386,7 @@
     }
   },
   "Conkeldurr": {
+    "gen9": {},
     "gen8": {
       "sword.Conkeldurr": [
         "Coaching"
@@ -88640,6 +89483,7 @@
     }
   },
   "Tympole": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tympole": [
@@ -88713,6 +89557,7 @@
     }
   },
   "Palpitoad": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Palpitoad": [
@@ -88802,6 +89647,7 @@
     }
   },
   "Seismitoad": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Seismitoad": [
@@ -88917,6 +89763,7 @@
     }
   },
   "Throh": {
+    "gen9": {},
     "gen8": {
       "sword.Throh": [
         "Coaching"
@@ -89025,6 +89872,7 @@
     }
   },
   "Sawk": {
+    "gen9": {},
     "gen8": {
       "sword.Sawk": [
         "Coaching"
@@ -89133,6 +89981,7 @@
     }
   },
   "Sewaddle": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Sewaddle": [
@@ -89216,6 +90065,7 @@
     }
   },
   "Swadloon": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Swadloon": [
@@ -89299,6 +90149,7 @@
     }
   },
   "Leavanny": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Leavanny": [
@@ -89404,6 +90255,7 @@
     }
   },
   "Venipede": {
+    "gen9": {},
     "gen8": {
       "sword.Venipede": [
         "Skitter Smack",
@@ -89464,6 +90316,7 @@
     }
   },
   "Whirlipede": {
+    "gen9": {},
     "gen8": {
       "sword.Whirlipede": [
         "Skitter Smack",
@@ -89524,6 +90377,7 @@
     }
   },
   "Scolipede": {
+    "gen9": {},
     "gen8": {
       "sword.Scolipede": [
         "Skitter Smack",
@@ -89612,6 +90466,7 @@
     }
   },
   "Cottonee": {
+    "gen9": {},
     "gen8": {
       "sword.Cottonee": [
         "Grassy Glide"
@@ -89698,6 +90553,7 @@
     }
   },
   "Whimsicott": {
+    "gen9": {},
     "gen8": {
       "sword.Whimsicott": [
         "Grassy Glide"
@@ -89784,6 +90640,7 @@
     }
   },
   "Petilil": {
+    "gen9": {},
     "gen8": {
       "sword.Petilil": [
         "Grassy Glide"
@@ -89876,6 +90733,7 @@
     }
   },
   "Lilligant": {
+    "gen9": {},
     "gen8": {
       "sword.Lilligant": [
         "Grassy Glide"
@@ -89981,6 +90839,7 @@
     }
   },
   "Basculin": {
+    "gen9": {},
     "gen8": {
       "sword.Basculin": [
         "Flip Turn",
@@ -90072,6 +90931,7 @@
     }
   },
   "Sandile": {
+    "gen9": {},
     "gen8": {
       "sword.Sandile": [
         "Lash Out",
@@ -90162,6 +91022,7 @@
     }
   },
   "Krokorok": {
+    "gen9": {},
     "gen8": {
       "sword.Krokorok": [
         "Lash Out",
@@ -90268,6 +91129,7 @@
     }
   },
   "Krookodile": {
+    "gen9": {},
     "gen8": {
       "sword.Krookodile": [
         "Lash Out",
@@ -90404,6 +91266,7 @@
     }
   },
   "Darumaka": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Darumaka": [
@@ -90477,6 +91340,7 @@
     }
   },
   "Darmanitan": {
+    "gen9": {},
     "gen8": {
       "sword.Standard Mode": [
         "Burning Jealousy",
@@ -90571,6 +91435,7 @@
     }
   },
   "Maractus": {
+    "gen9": {},
     "gen8": {
       "sword.Maractus": [
         "Grassy Glide"
@@ -90681,6 +91546,7 @@
     }
   },
   "Dwebble": {
+    "gen9": {},
     "gen8": {
       "sword.Dwebble": [
         "Skitter Smack"
@@ -90747,6 +91613,7 @@
     }
   },
   "Crustle": {
+    "gen9": {},
     "gen8": {
       "sword.Crustle": [
         "Meteor Beam",
@@ -90817,6 +91684,7 @@
     }
   },
   "Scraggy": {
+    "gen9": {},
     "gen8": {
       "sword.Scraggy": [
         "Coaching",
@@ -90957,6 +91825,7 @@
     }
   },
   "Scrafty": {
+    "gen9": {},
     "gen8": {
       "sword.Scrafty": [
         "Coaching",
@@ -91105,6 +91974,7 @@
     }
   },
   "Sigilyph": {
+    "gen9": {},
     "gen8": {
       "sword.Sigilyph": [
         "Dual Wingbeat",
@@ -91221,6 +92091,7 @@
     }
   },
   "Yamask": {
+    "gen9": {},
     "gen8": {
       "sword.Yamask": [
         "Poltergeist"
@@ -91343,6 +92214,7 @@
     }
   },
   "Cofagrigus": {
+    "gen9": {},
     "gen8": {
       "sword.Cofagrigus": [
         "Poltergeist"
@@ -91465,6 +92337,7 @@
     }
   },
   "Tirtouga": {
+    "gen9": {},
     "gen8": {
       "sword.Tirtouga": [
         "Meteor Beam"
@@ -91557,6 +92430,7 @@
     }
   },
   "Carracosta": {
+    "gen9": {},
     "gen8": {
       "sword.Carracosta": [
         "Meteor Beam"
@@ -91667,6 +92541,7 @@
     }
   },
   "Archen": {
+    "gen9": {},
     "gen8": {
       "sword.Archen": [
         "Dual Wingbeat",
@@ -91787,6 +92662,7 @@
     }
   },
   "Archeops": {
+    "gen9": {},
     "gen8": {
       "sword.Archeops": [
         "Dual Wingbeat",
@@ -91919,6 +92795,7 @@
     }
   },
   "Trubbish": {
+    "gen9": {},
     "gen8": {
       "sword.Trubbish": [
         "Corrosive Gas"
@@ -91999,6 +92876,7 @@
     }
   },
   "Garbodor": {
+    "gen9": {},
     "gen8": {
       "sword.Garbodor": [
         "Corrosive Gas"
@@ -92081,6 +92959,7 @@
     }
   },
   "Zorua": {
+    "gen9": {},
     "gen8": {
       "sword.Zorua": [
         "Burning Jealousy",
@@ -92188,6 +93067,7 @@
     }
   },
   "Zoroark": {
+    "gen9": {},
     "gen8": {
       "sword.Zoroark": [
         "Burning Jealousy",
@@ -92310,6 +93190,7 @@
     }
   },
   "Minccino": {
+    "gen9": {},
     "gen8": {
       "sword.Minccino": [
         "Triple Axel"
@@ -92416,6 +93297,7 @@
     }
   },
   "Cinccino": {
+    "gen9": {},
     "gen8": {
       "sword.Cinccino": [
         "Triple Axel"
@@ -92524,6 +93406,7 @@
     }
   },
   "Gothita": {
+    "gen9": {},
     "gen8": {
       "sword.Gothita": [
         "Expanding Force"
@@ -92658,6 +93541,7 @@
     }
   },
   "Gothorita": {
+    "gen9": {},
     "gen8": {
       "sword.Gothorita": [
         "Expanding Force"
@@ -92792,6 +93676,7 @@
     }
   },
   "Gothitelle": {
+    "gen9": {},
     "gen8": {
       "sword.Gothitelle": [
         "Expanding Force"
@@ -92928,6 +93813,7 @@
     }
   },
   "Solosis": {
+    "gen9": {},
     "gen8": {
       "sword.Solosis": [
         "Expanding Force",
@@ -93054,6 +93940,7 @@
     }
   },
   "Duosion": {
+    "gen9": {},
     "gen8": {
       "sword.Duosion": [
         "Expanding Force",
@@ -93180,6 +94067,7 @@
     }
   },
   "Reuniclus": {
+    "gen9": {},
     "gen8": {
       "sword.Reuniclus": [
         "Expanding Force",
@@ -93350,6 +94238,7 @@
     }
   },
   "Ducklett": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Ducklett": [
@@ -93413,6 +94302,7 @@
     }
   },
   "Swanna": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Swanna": [
@@ -93482,6 +94372,7 @@
     }
   },
   "Vanillite": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Vanillite": [
@@ -93553,6 +94444,7 @@
     }
   },
   "Vanillish": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Vanillish": [
@@ -93624,6 +94516,7 @@
     }
   },
   "Vanilluxe": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Vanilluxe": [
@@ -93695,6 +94588,7 @@
     }
   },
   "Deerling": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Deerling": [
@@ -93760,6 +94654,7 @@
     }
   },
   "Sawsbuck": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Sawsbuck": [
@@ -93827,6 +94722,7 @@
     }
   },
   "Emolga": {
+    "gen9": {},
     "gen8": {
       "sword.Emolga": [
         "Dual Wingbeat",
@@ -93919,6 +94815,7 @@
     }
   },
   "Karrablast": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Karrablast": [
@@ -93980,6 +94877,7 @@
     }
   },
   "Escavalier": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Escavalier": [
@@ -94049,6 +94947,7 @@
     }
   },
   "Foongus": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Foongus": [
@@ -94120,6 +95019,7 @@
     }
   },
   "Amoonguss": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Amoonguss": [
@@ -94193,6 +95093,7 @@
     }
   },
   "Frillish": {
+    "gen9": {},
     "gen8": {
       "sword.Frillish": [
         "Poltergeist"
@@ -94281,6 +95182,7 @@
     }
   },
   "Jellicent": {
+    "gen9": {},
     "gen8": {
       "sword.Jellicent": [
         "Poltergeist"
@@ -94369,6 +95271,7 @@
     }
   },
   "Alomomola": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Alomomola": [
@@ -94440,6 +95343,7 @@
     }
   },
   "Joltik": {
+    "gen9": {},
     "gen8": {
       "sword.Joltik": [
         "Rising Voltage",
@@ -94524,6 +95428,7 @@
     }
   },
   "Galvantula": {
+    "gen9": {},
     "gen8": {
       "sword.Galvantula": [
         "Rising Voltage",
@@ -94610,6 +95515,7 @@
     }
   },
   "Ferroseed": {
+    "gen9": {},
     "gen8": {
       "sword.Ferroseed": [
         "Steel Roller"
@@ -94704,6 +95610,7 @@
     }
   },
   "Ferrothorn": {
+    "gen9": {},
     "gen8": {
       "sword.Ferrothorn": [
         "Steel Roller"
@@ -94804,6 +95711,7 @@
     }
   },
   "Klink": {
+    "gen9": {},
     "gen8": {
       "sword.Klink": [
         "Rising Voltage",
@@ -94896,6 +95804,7 @@
     }
   },
   "Klang": {
+    "gen9": {},
     "gen8": {
       "sword.Klang": [
         "Rising Voltage",
@@ -94990,6 +95899,7 @@
     }
   },
   "Klinklang": {
+    "gen9": {},
     "gen8": {
       "sword.Klinklang": [
         "Rising Voltage",
@@ -95084,6 +95994,7 @@
     }
   },
   "Tynamo": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tynamo": [
@@ -95111,6 +96022,7 @@
     }
   },
   "Eelektrik": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Eelektrik": [
@@ -95206,6 +96118,7 @@
     }
   },
   "Eelektross": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Eelektross": [
@@ -95337,6 +96250,7 @@
     }
   },
   "Elgyem": {
+    "gen9": {},
     "gen8": {
       "sword.Elgyem": [
         "Expanding Force",
@@ -95463,6 +96377,7 @@
     }
   },
   "Beheeyem": {
+    "gen9": {},
     "gen8": {
       "sword.Beheeyem": [
         "Expanding Force",
@@ -95589,6 +96504,7 @@
     }
   },
   "Litwick": {
+    "gen9": {},
     "gen8": {
       "sword.Litwick": [
         "Burning Jealousy",
@@ -95663,6 +96579,7 @@
     }
   },
   "Lampent": {
+    "gen9": {},
     "gen8": {
       "sword.Lampent": [
         "Burning Jealousy",
@@ -95737,6 +96654,7 @@
     }
   },
   "Chandelure": {
+    "gen9": {},
     "gen8": {
       "sword.Chandelure": [
         "Burning Jealousy",
@@ -95813,6 +96731,7 @@
     }
   },
   "Axew": {
+    "gen9": {},
     "gen8": {
       "sword.Axew": [
         "Scale Shot"
@@ -95919,6 +96838,7 @@
     }
   },
   "Fraxure": {
+    "gen9": {},
     "gen8": {
       "sword.Fraxure": [
         "Scale Shot"
@@ -96033,6 +96953,7 @@
     }
   },
   "Haxorus": {
+    "gen9": {},
     "gen8": {
       "sword.Haxorus": [
         "Scale Shot"
@@ -96149,6 +97070,7 @@
     }
   },
   "Cubchoo": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Cubchoo": [
@@ -96216,6 +97138,7 @@
     }
   },
   "Beartic": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Beartic": [
@@ -96285,6 +97208,7 @@
     }
   },
   "Cryogonal": {
+    "gen9": {},
     "gen8": {
       "sword.Cryogonal": [
         "Triple Axel"
@@ -96365,6 +97289,7 @@
     }
   },
   "Shelmet": {
+    "gen9": {},
     "gen8": {
       "sword.Shelmet": [
         "Skitter Smack"
@@ -96425,6 +97350,7 @@
     }
   },
   "Accelgor": {
+    "gen9": {},
     "gen8": {
       "sword.Accelgor": [
         "Skitter Smack"
@@ -96493,6 +97419,7 @@
     }
   },
   "Stunfisk": {
+    "gen9": {},
     "gen8": {
       "sword.Stunfisk": [
         "Lash Out"
@@ -96613,6 +97540,7 @@
     }
   },
   "Mienfoo": {
+    "gen9": {},
     "gen8": {
       "sword.Mienfoo": [
         "Coaching"
@@ -96697,6 +97625,7 @@
     }
   },
   "Mienshao": {
+    "gen9": {},
     "gen8": {
       "sword.Mienshao": [
         "Coaching"
@@ -96783,6 +97712,7 @@
     }
   },
   "Druddigon": {
+    "gen9": {},
     "gen8": {
       "sword.Druddigon": [
         "Dual Wingbeat",
@@ -96927,6 +97857,7 @@
     }
   },
   "Golett": {
+    "gen9": {},
     "gen8": {
       "sword.Golett": [
         "Poltergeist",
@@ -97061,6 +97992,7 @@
     }
   },
   "Golurk": {
+    "gen9": {},
     "gen8": {
       "sword.Golurk": [
         "Poltergeist",
@@ -97203,6 +98135,7 @@
     }
   },
   "Pawniard": {
+    "gen9": {},
     "gen8": {
       "sword.Pawniard": [
         "Lash Out"
@@ -97307,6 +98240,7 @@
     }
   },
   "Bisharp": {
+    "gen9": {},
     "gen8": {
       "sword.Bisharp": [
         "Lash Out"
@@ -97415,6 +98349,7 @@
     }
   },
   "Bouffalant": {
+    "gen9": {},
     "gen8": {
       "sword.Bouffalant": [
         "Lash Out"
@@ -97489,6 +98424,7 @@
     }
   },
   "Rufflet": {
+    "gen9": {},
     "gen8": {
       "sword.Rufflet": [
         "Dual Wingbeat"
@@ -97558,6 +98494,7 @@
     }
   },
   "Braviary": {
+    "gen9": {},
     "gen8": {
       "sword.Braviary": [
         "Dual Wingbeat"
@@ -97645,6 +98582,7 @@
     }
   },
   "Vullaby": {
+    "gen9": {},
     "gen8": {
       "sword.Vullaby": [
         "Dual Wingbeat",
@@ -97727,6 +98665,7 @@
     }
   },
   "Mandibuzz": {
+    "gen9": {},
     "gen8": {
       "sword.Mandibuzz": [
         "Dual Wingbeat",
@@ -97817,6 +98756,7 @@
     }
   },
   "Heatmor": {
+    "gen9": {},
     "gen8": {
       "sword.Heatmor": [
         "Burning Jealousy",
@@ -97935,6 +98875,7 @@
     }
   },
   "Durant": {
+    "gen9": {},
     "gen8": {
       "sword.Durant": [
         "Skitter Smack"
@@ -98001,6 +98942,7 @@
     }
   },
   "Deino": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Deino": [
@@ -98114,6 +99056,7 @@
     }
   },
   "Zweilous": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Zweilous": [
@@ -98227,6 +99170,7 @@
     }
   },
   "Hydreigon": {
+    "gen9": {},
     "gen8": {
       "sword.Hydreigon": [
         "Dual Wingbeat",
@@ -98379,6 +99323,7 @@
     }
   },
   "Larvesta": {
+    "gen9": {},
     "gen8": {
       "sword.Larvesta": [
         "Skitter Smack"
@@ -98451,6 +99396,7 @@
     }
   },
   "Volcarona": {
+    "gen9": {},
     "gen8": {
       "sword.Volcarona": [
         "Dual Wingbeat",
@@ -98535,6 +99481,7 @@
     }
   },
   "Cobalion": {
+    "gen9": {},
     "gen8": {
       "sword.Cobalion": [
         "Coaching"
@@ -98627,6 +99574,7 @@
     }
   },
   "Terrakion": {
+    "gen9": {},
     "gen8": {
       "sword.Terrakion": [
         "Coaching"
@@ -98709,6 +99657,7 @@
     }
   },
   "Virizion": {
+    "gen9": {},
     "gen8": {
       "sword.Virizion": [
         "Coaching",
@@ -98803,6 +99752,7 @@
     }
   },
   "Tornadus": {
+    "gen9": {},
     "gen8": {
       "sword.Tornadus": [
         "Lash Out"
@@ -98910,6 +99860,7 @@
     }
   },
   "Thundurus": {
+    "gen9": {},
     "gen8": {
       "sword.Thundurus": [
         "Lash Out",
@@ -99019,6 +99970,7 @@
     }
   },
   "Reshiram": {
+    "gen9": {},
     "gen8": {
       "sword.Reshiram": [
         "Dual Wingbeat",
@@ -99131,6 +100083,7 @@
     }
   },
   "Zekrom": {
+    "gen9": {},
     "gen8": {
       "sword.Zekrom": [
         "Dual Wingbeat",
@@ -99259,6 +100212,7 @@
     }
   },
   "Landorus": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Landorus": [
         "Bulk Up",
@@ -99362,6 +100316,7 @@
     }
   },
   "Kyurem": {
+    "gen9": {},
     "gen8": {
       "sword.Kyurem": [
         "Dual Wingbeat",
@@ -99482,6 +100437,7 @@
     }
   },
   "Keldeo": {
+    "gen9": {},
     "gen8": {
       "sword.Keldeo": [
         "Coaching",
@@ -99600,6 +100556,7 @@
     }
   },
   "Meloetta": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Meloetta": [
@@ -99811,6 +100768,7 @@
     }
   },
   "Genesect": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Genesect": [
@@ -99928,6 +100886,7 @@
     }
   },
   "Chespin": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Chespin": [
@@ -100037,6 +100996,7 @@
     }
   },
   "Quilladin": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Quilladin": [
@@ -100146,6 +101106,7 @@
     }
   },
   "Chesnaught": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Chesnaught": [
@@ -100267,6 +101228,7 @@
     }
   },
   "Fennekin": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Fennekin": [
@@ -100326,6 +101288,7 @@
     }
   },
   "Braixen": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Braixen": [
@@ -100431,6 +101394,7 @@
     }
   },
   "Delphox": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Delphox": [
@@ -100552,6 +101516,7 @@
     }
   },
   "Froakie": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Froakie": [
@@ -100611,6 +101576,7 @@
     }
   },
   "Frogadier": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Frogadier": [
@@ -100682,6 +101648,7 @@
     }
   },
   "Greninja": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Greninja": [
@@ -100761,6 +101728,7 @@
     }
   },
   "Bunnelby": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Bunnelby": [
@@ -100808,6 +101776,7 @@
     }
   },
   "Diggersby": {
+    "gen9": {},
     "gen8": {
       "sword.Diggersby": [
         "Scorching Sands"
@@ -100916,6 +101885,7 @@
     }
   },
   "Fletchling": {
+    "gen9": {},
     "gen8": {
       "sword.Fletchling": [
         "Dual Wingbeat"
@@ -100956,6 +101926,7 @@
     }
   },
   "Fletchinder": {
+    "gen9": {},
     "gen8": {
       "sword.Fletchinder": [
         "Dual Wingbeat"
@@ -100996,6 +101967,7 @@
     }
   },
   "Talonflame": {
+    "gen9": {},
     "gen8": {
       "sword.Talonflame": [
         "Dual Wingbeat"
@@ -101036,6 +102008,7 @@
     }
   },
   "Scatterbug": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Scatterbug": [
@@ -101055,6 +102028,7 @@
     }
   },
   "Spewpa": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Spewpa": [
@@ -101082,6 +102056,7 @@
     }
   },
   "Vivillon": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Vivillon": [
@@ -101129,6 +102104,7 @@
     }
   },
   "Litleo": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Litleo": [
@@ -101172,6 +102148,7 @@
     }
   },
   "Pyroar": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pyroar": [
@@ -101219,6 +102196,7 @@
     }
   },
   "Flab\u00e9b\u00e9": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Flab\u00e9b\u00e9": [
@@ -101280,6 +102258,7 @@
     }
   },
   "Floette": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Floette": [
@@ -101341,6 +102320,7 @@
     }
   },
   "Florges": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Florges": [
@@ -101404,6 +102384,7 @@
     }
   },
   "Skiddo": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Skiddo": [
@@ -101447,6 +102428,7 @@
     }
   },
   "Gogoat": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Gogoat": [
@@ -101500,6 +102482,7 @@
     }
   },
   "Pancham": {
+    "gen9": {},
     "gen8": {
       "sword.Pancham": [
         "Coaching",
@@ -101612,6 +102595,7 @@
     }
   },
   "Pangoro": {
+    "gen9": {},
     "gen8": {
       "sword.Pangoro": [
         "Coaching",
@@ -101734,6 +102718,7 @@
     }
   },
   "Furfrou": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Furfrou": [
@@ -101785,6 +102770,7 @@
     }
   },
   "Espurr": {
+    "gen9": {},
     "gen8": {
       "sword.Espurr": [
         "Expanding Force"
@@ -101877,6 +102863,7 @@
     }
   },
   "Meowstic": {
+    "gen9": {},
     "gen8": {
       "sword.Meowstic": [
         "Expanding Force"
@@ -102003,6 +102990,7 @@
     }
   },
   "Honedge": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Honedge": [
@@ -102048,6 +103036,7 @@
     }
   },
   "Doublade": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Doublade": [
@@ -102093,6 +103082,7 @@
     }
   },
   "Aegislash": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Aegislash": [
@@ -102142,6 +103132,7 @@
     }
   },
   "Spritzee": {
+    "gen9": {},
     "gen8": {
       "sword.Spritzee": [
         "Misty Explosion"
@@ -102200,6 +103191,7 @@
     }
   },
   "Aromatisse": {
+    "gen9": {},
     "gen8": {
       "sword.Aromatisse": [
         "Misty Explosion"
@@ -102262,6 +103254,7 @@
     }
   },
   "Swirlix": {
+    "gen9": {},
     "gen8": {
       "sword.Swirlix": [
         "Misty Explosion"
@@ -102316,6 +103309,7 @@
     }
   },
   "Slurpuff": {
+    "gen9": {},
     "gen8": {
       "sword.Slurpuff": [
         "Misty Explosion"
@@ -102374,6 +103368,7 @@
     }
   },
   "Inkay": {
+    "gen9": {},
     "gen8": {
       "sword.Inkay": [
         "Expanding Force",
@@ -102434,6 +103429,7 @@
     }
   },
   "Malamar": {
+    "gen9": {},
     "gen8": {
       "sword.Malamar": [
         "Expanding Force",
@@ -102504,6 +103500,7 @@
     }
   },
   "Binacle": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Binacle": [
@@ -102553,6 +103550,7 @@
     }
   },
   "Barbaracle": {
+    "gen9": {},
     "gen8": {
       "sword.Barbaracle": [
         "Meteor Beam"
@@ -102623,6 +103621,7 @@
     }
   },
   "Skrelp": {
+    "gen9": {},
     "gen8": {
       "sword.Skrelp": [
         "Flip Turn",
@@ -102687,6 +103686,7 @@
     }
   },
   "Dragalge": {
+    "gen9": {},
     "gen8": {
       "sword.Dragalge": [
         "Flip Turn",
@@ -102767,6 +103767,7 @@
     }
   },
   "Clauncher": {
+    "gen9": {},
     "gen8": {
       "sword.Clauncher": [
         "Flip Turn",
@@ -102823,6 +103824,7 @@
     }
   },
   "Clawitzer": {
+    "gen9": {},
     "gen8": {
       "sword.Clawitzer": [
         "Flip Turn",
@@ -102883,6 +103885,7 @@
     }
   },
   "Helioptile": {
+    "gen9": {},
     "gen8": {
       "sword.Helioptile": [
         "Rising Voltage",
@@ -102933,6 +103936,7 @@
     }
   },
   "Heliolisk": {
+    "gen9": {},
     "gen8": {
       "sword.Heliolisk": [
         "Rising Voltage",
@@ -103003,6 +104007,7 @@
     }
   },
   "Tyrunt": {
+    "gen9": {},
     "gen8": {
       "sword.Tyrunt": [
         "Lash Out",
@@ -103095,6 +104100,7 @@
     }
   },
   "Tyrantrum": {
+    "gen9": {},
     "gen8": {
       "sword.Tyrantrum": [
         "Lash Out",
@@ -103187,6 +104193,7 @@
     }
   },
   "Amaura": {
+    "gen9": {},
     "gen8": {
       "sword.Amaura": [
         "Meteor Beam"
@@ -103261,6 +104268,7 @@
     }
   },
   "Aurorus": {
+    "gen9": {},
     "gen8": {
       "sword.Aurorus": [
         "Meteor Beam"
@@ -103335,6 +104343,7 @@
     }
   },
   "Sylveon": {
+    "gen9": {},
     "gen8": {
       "sword.Sylveon": [
         "Misty Explosion"
@@ -103413,6 +104422,7 @@
     }
   },
   "Hawlucha": {
+    "gen9": {},
     "gen8": {
       "sword.Hawlucha": [
         "Coaching",
@@ -103509,6 +104519,7 @@
     }
   },
   "Dedenne": {
+    "gen9": {},
     "gen8": {
       "sword.Dedenne": [
         "Rising Voltage"
@@ -103581,6 +104592,7 @@
     }
   },
   "Carbink": {
+    "gen9": {},
     "gen8": {
       "sword.Carbink": [
         "Meteor Beam",
@@ -103657,6 +104669,7 @@
     }
   },
   "Goomy": {
+    "gen9": {},
     "gen8": {
       "sword.Goomy": [
         "Skitter Smack"
@@ -103729,6 +104742,7 @@
     }
   },
   "Sliggoo": {
+    "gen9": {},
     "gen8": {
       "sword.Sliggoo": [
         "Skitter Smack"
@@ -103804,6 +104818,7 @@
     }
   },
   "Goodra": {
+    "gen9": {},
     "gen8": {
       "sword.Goodra": [
         "Skitter Smack"
@@ -103910,6 +104925,7 @@
     }
   },
   "Klefki": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Klefki": [
@@ -103963,6 +104979,7 @@
     }
   },
   "Phantump": {
+    "gen9": {},
     "gen8": {
       "sword.Phantump": [
         "Grassy Glide",
@@ -104037,6 +105054,7 @@
     }
   },
   "Trevenant": {
+    "gen9": {},
     "gen8": {
       "sword.Trevenant": [
         "Grassy Glide",
@@ -104119,6 +105137,7 @@
     }
   },
   "Pumpkaboo": {
+    "gen9": {},
     "gen8": {
       "sword.Pumpkaboo": [
         "Grassy Glide",
@@ -104193,6 +105212,7 @@
     }
   },
   "Gourgeist": {
+    "gen9": {},
     "gen8": {
       "sword.Gourgeist": [
         "Grassy Glide",
@@ -104267,6 +105287,7 @@
     }
   },
   "Bergmite": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Bergmite": [
         "Flash Cannon",
@@ -104315,6 +105336,7 @@
     }
   },
   "Avalugg": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Hisuian Avalugg": [
         "Bulldoze",
@@ -104385,6 +105407,7 @@
     }
   },
   "Noibat": {
+    "gen9": {},
     "gen8": {
       "sword.Noibat": [
         "Dual Wingbeat"
@@ -104473,6 +105496,7 @@
     }
   },
   "Noivern": {
+    "gen9": {},
     "gen8": {
       "sword.Noivern": [
         "Dual Wingbeat"
@@ -104563,6 +105587,7 @@
     }
   },
   "Xerneas": {
+    "gen9": {},
     "gen8": {
       "sword.Xerneas": [
         "Misty Explosion",
@@ -104623,6 +105648,7 @@
     }
   },
   "Yveltal": {
+    "gen9": {},
     "gen8": {
       "sword.Yveltal": [
         "Dual Wingbeat",
@@ -104687,6 +105713,7 @@
     }
   },
   "Zygarde": {
+    "gen9": {},
     "gen8": {
       "sword.Zygarde": [
         "Scale Shot",
@@ -104783,6 +105810,7 @@
     }
   },
   "Diancie": {
+    "gen9": {},
     "gen8": {
       "sword.Diancie": [
         "Meteor Beam",
@@ -104867,6 +105895,7 @@
     }
   },
   "Hoopa": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Hoopa": [
@@ -104994,6 +106023,7 @@
     }
   },
   "Volcanion": {
+    "gen9": {},
     "gen8": {
       "sword.Volcanion": [
         "Scorching Sands"
@@ -105042,6 +106072,7 @@
     }
   },
   "Rowlet": {
+    "gen9": {},
     "gen8": {
       "sword.Rowlet": [
         "Dual Wingbeat",
@@ -105093,6 +106124,7 @@
     }
   },
   "Dartrix": {
+    "gen9": {},
     "gen8": {
       "sword.Dartrix": [
         "Dual Wingbeat",
@@ -105145,6 +106177,7 @@
     }
   },
   "Decidueye": {
+    "gen9": {},
     "gen8": {
       "sword.Decidueye": [
         "Dual Wingbeat",
@@ -105217,6 +106250,7 @@
     }
   },
   "Litten": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Litten": [
@@ -105244,6 +106278,7 @@
     }
   },
   "Torracat": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "sun.Torracat": [
@@ -105273,6 +106308,7 @@
     }
   },
   "Incineroar": {
+    "gen9": {},
     "gen8": {
       "sword.Incineroar": [
         "Burning Jealousy",
@@ -105341,6 +106377,7 @@
     }
   },
   "Popplio": {
+    "gen9": {},
     "gen8": {
       "sword.Popplio": [
         "Flip Turn",
@@ -105387,6 +106424,7 @@
     }
   },
   "Brionne": {
+    "gen9": {},
     "gen8": {
       "sword.Brionne": [
         "Flip Turn",
@@ -105433,6 +106471,7 @@
     }
   },
   "Primarina": {
+    "gen9": {},
     "gen8": {
       "sword.Primarina": [
         "Flip Turn",
@@ -105489,6 +106528,7 @@
     }
   },
   "Pikipek": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pikipek": [
@@ -105516,6 +106556,7 @@
     }
   },
   "Trumbeak": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Trumbeak": [
@@ -105543,6 +106584,7 @@
     }
   },
   "Toucannon": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Toucannon": [
@@ -105572,6 +106614,7 @@
     }
   },
   "Yungoos": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Yungoos": [
@@ -105597,6 +106640,7 @@
     }
   },
   "Gumshoos": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Gumshoos": [
@@ -105636,6 +106680,7 @@
     }
   },
   "Grubbin": {
+    "gen9": {},
     "gen8": {
       "sword.Grubbin": [
         "Rising Voltage",
@@ -105664,6 +106709,7 @@
     }
   },
   "Charjabug": {
+    "gen9": {},
     "gen8": {
       "sword.Charjabug": [
         "Rising Voltage",
@@ -105694,6 +106740,7 @@
     }
   },
   "Vikavolt": {
+    "gen9": {},
     "gen8": {
       "sword.Vikavolt": [
         "Dual Wingbeat",
@@ -105730,6 +106777,7 @@
     }
   },
   "Crabrawler": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Crabrawler": [
@@ -105761,6 +106809,7 @@
     }
   },
   "Crabominable": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Crabominable": [
@@ -105796,6 +106845,7 @@
     }
   },
   "Oricorio": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Oricorio": [
@@ -105821,6 +106871,7 @@
     }
   },
   "Cutiefly": {
+    "gen9": {},
     "gen8": {
       "sword.Cutiefly": [
         "Dual Wingbeat"
@@ -105867,6 +106918,7 @@
     }
   },
   "Ribombee": {
+    "gen9": {},
     "gen8": {
       "sword.Ribombee": [
         "Dual Wingbeat"
@@ -105913,6 +106965,7 @@
     }
   },
   "Rockruff": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Rockruff": [
@@ -105946,6 +106999,7 @@
     }
   },
   "Lycanroc": {
+    "gen9": {},
     "gen8": {
       "sword.Midnight Form": [
         "Lash Out"
@@ -106066,6 +107120,7 @@
     }
   },
   "Wishiwashi": {
+    "gen9": {},
     "gen8": {
       "sword.Wishiwashi": [
         "Flip Turn",
@@ -106098,6 +107153,7 @@
     }
   },
   "Mareanie": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Mareanie": [
@@ -106135,6 +107191,7 @@
     }
   },
   "Toxapex": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Toxapex": [
@@ -106174,6 +107231,7 @@
     }
   },
   "Mudbray": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Mudbray": [
@@ -106201,6 +107259,7 @@
     }
   },
   "Mudsdale": {
+    "gen9": {},
     "gen8": {
       "sword.Mudsdale": [
         "Lash Out"
@@ -106235,6 +107294,7 @@
     }
   },
   "Dewpider": {
+    "gen9": {},
     "gen8": {
       "sword.Dewpider": [
         "Skitter Smack"
@@ -106273,6 +107333,7 @@
     }
   },
   "Araquanid": {
+    "gen9": {},
     "gen8": {
       "sword.Araquanid": [
         "Skitter Smack"
@@ -106313,6 +107374,7 @@
     }
   },
   "Fomantis": {
+    "gen9": {},
     "gen8": {
       "sword.Fomantis": [
         "Grassy Glide"
@@ -106347,6 +107409,7 @@
     }
   },
   "Lurantis": {
+    "gen9": {},
     "gen8": {
       "sword.Lurantis": [
         "Grassy Glide"
@@ -106387,6 +107450,7 @@
     }
   },
   "Morelull": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Morelull": [
@@ -106418,6 +107482,7 @@
     }
   },
   "Shiinotic": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Shiinotic": [
@@ -106449,6 +107514,7 @@
     }
   },
   "Salandit": {
+    "gen9": {},
     "gen8": {
       "sword.Salandit": [
         "Scale Shot",
@@ -106487,6 +107553,7 @@
     }
   },
   "Salazzle": {
+    "gen9": {},
     "gen8": {
       "sword.Salazzle": [
         "Corrosive Gas",
@@ -106529,6 +107596,7 @@
     }
   },
   "Stufful": {
+    "gen9": {},
     "gen8": {
       "sword.Stufful": [
         "Coaching"
@@ -106569,6 +107637,7 @@
     }
   },
   "Bewear": {
+    "gen9": {},
     "gen8": {
       "sword.Bewear": [
         "Coaching"
@@ -106613,6 +107682,7 @@
     }
   },
   "Bounsweet": {
+    "gen9": {},
     "gen8": {
       "sword.Bounsweet": [
         "Grassy Glide"
@@ -106649,6 +107719,7 @@
     }
   },
   "Steenee": {
+    "gen9": {},
     "gen8": {
       "sword.Steenee": [
         "Grassy Glide",
@@ -106689,6 +107760,7 @@
     }
   },
   "Tsareena": {
+    "gen9": {},
     "gen8": {
       "sword.Tsareena": [
         "Grassy Glide",
@@ -106733,6 +107805,7 @@
     }
   },
   "Comfey": {
+    "gen9": {},
     "gen8": {
       "sword.Comfey": [
         "Grassy Glide"
@@ -106785,6 +107858,7 @@
     }
   },
   "Oranguru": {
+    "gen9": {},
     "gen8": {
       "sword.Oranguru": [
         "Expanding Force",
@@ -106837,6 +107911,7 @@
     }
   },
   "Passimian": {
+    "gen9": {},
     "gen8": {
       "sword.Passimian": [
         "Coaching"
@@ -106885,6 +107960,7 @@
     }
   },
   "Wimpod": {
+    "gen9": {},
     "gen8": {
       "sword.Wimpod": [
         "Skitter Smack"
@@ -106903,6 +107979,7 @@
     }
   },
   "Golisopod": {
+    "gen9": {},
     "gen8": {
       "sword.Golisopod": [
         "Skitter Smack"
@@ -106949,6 +108026,7 @@
     }
   },
   "Sandygast": {
+    "gen9": {},
     "gen8": {
       "sword.Sandygast": [
         "Poltergeist",
@@ -106995,6 +108073,7 @@
     }
   },
   "Palossand": {
+    "gen9": {},
     "gen8": {
       "sword.Palossand": [
         "Poltergeist",
@@ -107043,6 +108122,7 @@
     }
   },
   "Pyukumuku": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Pyukumuku": [
@@ -107064,6 +108144,7 @@
     }
   },
   "Type: Null": {
+    "gen9": {},
     "gen8": {
       "sword.Type: Null": [
         "Terrain Pulse"
@@ -107094,6 +108175,7 @@
     }
   },
   "Silvally": {
+    "gen9": {},
     "gen8": {
       "sword.Silvally": [
         "Terrain Pulse"
@@ -107152,6 +108234,7 @@
     }
   },
   "Minior": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Minior": [
@@ -107179,6 +108262,7 @@
     }
   },
   "Komala": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Komala": [
@@ -107204,6 +108288,7 @@
     }
   },
   "Turtonator": {
+    "gen9": {},
     "gen8": {
       "sword.Turtonator": [
         "Burning Jealousy",
@@ -107260,6 +108345,7 @@
     }
   },
   "Togedemaru": {
+    "gen9": {},
     "gen8": {
       "sword.Togedemaru": [
         "Rising Voltage",
@@ -107310,6 +108396,7 @@
     }
   },
   "Mimikyu": {
+    "gen9": {},
     "gen8": {
       "sword.Mimikyu": [
         "Burning Jealousy"
@@ -107350,6 +108437,7 @@
     }
   },
   "Bruxish": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Bruxish": [
@@ -107389,6 +108477,7 @@
     }
   },
   "Drampa": {
+    "gen9": {},
     "gen8": {
       "sword.Drampa": [
         "Lash Out",
@@ -107449,6 +108538,7 @@
     }
   },
   "Dhelmise": {
+    "gen9": {},
     "gen8": {
       "sword.Dhelmise": [
         "Grassy Glide",
@@ -107495,6 +108585,7 @@
     }
   },
   "Jangmo-o": {
+    "gen9": {},
     "gen8": {
       "sword.Jangmo-o": [
         "Scale Shot"
@@ -107539,6 +108630,7 @@
     }
   },
   "Hakamo-o": {
+    "gen9": {},
     "gen8": {
       "sword.Hakamo-o": [
         "Coaching",
@@ -107587,6 +108679,7 @@
     }
   },
   "Kommo-o": {
+    "gen9": {},
     "gen8": {
       "sword.Kommo-o": [
         "Coaching",
@@ -107659,6 +108752,7 @@
     }
   },
   "Tapu Koko": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tapu Koko": [
@@ -107688,6 +108782,7 @@
     }
   },
   "Tapu Lele": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tapu Lele": [
@@ -107715,6 +108810,7 @@
     }
   },
   "Tapu Bulu": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tapu Bulu": [
@@ -107746,6 +108842,7 @@
     }
   },
   "Tapu Fini": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Tapu Fini": [
@@ -107781,14 +108878,17 @@
     }
   },
   "Cosmog": {
+    "gen9": {},
     "gen8": {},
     "gen7": {}
   },
   "Cosmoem": {
+    "gen9": {},
     "gen8": {},
     "gen7": {}
   },
   "Solgaleo": {
+    "gen9": {},
     "gen8": {
       "sword.Solgaleo": [
         "Expanding Force",
@@ -107833,6 +108933,7 @@
     }
   },
   "Lunala": {
+    "gen9": {},
     "gen8": {
       "sword.Lunala": [
         "Dual Wingbeat",
@@ -107883,6 +108984,7 @@
     }
   },
   "Nihilego": {
+    "gen9": {},
     "gen8": {
       "sword.Nihilego": [
         "Corrosive Gas",
@@ -107933,6 +109035,7 @@
     }
   },
   "Buzzwole": {
+    "gen9": {},
     "gen8": {
       "sword.Buzzwole": [
         "Coaching",
@@ -107977,6 +109080,7 @@
     }
   },
   "Pheromosa": {
+    "gen9": {},
     "gen8": {
       "sword.Pheromosa": [
         "Coaching",
@@ -108027,6 +109131,7 @@
     }
   },
   "Xurkitree": {
+    "gen9": {},
     "gen8": {
       "sword.Xurkitree": [
         "Rising Voltage"
@@ -108061,6 +109166,7 @@
     }
   },
   "Celesteela": {
+    "gen9": {},
     "gen8": {
       "sword.Celesteela": [
         "Meteor Beam",
@@ -108103,6 +109209,7 @@
     }
   },
   "Kartana": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Kartana": [
@@ -108130,6 +109237,7 @@
     }
   },
   "Guzzlord": {
+    "gen9": {},
     "gen8": {
       "sword.Guzzlord": [
         "Corrosive Gas",
@@ -108188,6 +109296,7 @@
     }
   },
   "Necrozma": {
+    "gen9": {},
     "gen8": {
       "sword.Necrozma": [
         "Expanding Force",
@@ -108240,6 +109349,7 @@
     }
   },
   "Magearna": {
+    "gen9": {},
     "gen8": {
       "sword.Magearna": [
         "Misty Explosion",
@@ -108282,6 +109392,7 @@
     }
   },
   "Marshadow": {
+    "gen9": {},
     "gen8": {
       "sword.Marshadow": [
         "Coaching",
@@ -108342,6 +109453,7 @@
     }
   },
   "Poipole": {
+    "gen9": {},
     "gen8": {},
     "gen7": {
       "ultraSun.Poipole": [
@@ -108371,6 +109483,7 @@
     }
   },
   "Naganadel": {
+    "gen9": {},
     "gen8": {
       "sword.Naganadel": [
         "Dual Wingbeat",
@@ -108425,6 +109538,7 @@
     }
   },
   "Stakataka": {
+    "gen9": {},
     "gen8": {
       "sword.Stakataka": [
         "Meteor Beam",
@@ -108481,6 +109595,7 @@
     }
   },
   "Blacephalon": {
+    "gen9": {},
     "gen8": {
       "sword.Blacephalon": [
         "Expanding Force"
@@ -108519,6 +109634,7 @@
     }
   },
   "Zeraora": {
+    "gen9": {},
     "gen8": {
       "sword.Zeraora": [
         "Coaching",
@@ -108573,10 +109689,12 @@
     }
   },
   "Meltan": {
+    "gen9": {},
     "gen8": {},
     "gen7": {}
   },
   "Melmetal": {
+    "gen9": {},
     "gen8": {
       "sword.Melmetal": [
         "Steel Roller"
@@ -108588,6 +109706,7 @@
     "gen7": {}
   },
   "Grookey": {
+    "gen9": {},
     "gen8": {
       "sword.Grookey": [
         "Grassy Glide"
@@ -108598,6 +109717,7 @@
     }
   },
   "Thwackey": {
+    "gen9": {},
     "gen8": {
       "sword.Thwackey": [
         "Grassy Glide"
@@ -108608,6 +109728,7 @@
     }
   },
   "Rillaboom": {
+    "gen9": {},
     "gen8": {
       "sword.Rillaboom": [
         "Grassy Glide"
@@ -108618,12 +109739,15 @@
     }
   },
   "Scorbunny": {
+    "gen9": {},
     "gen8": {}
   },
   "Raboot": {
+    "gen9": {},
     "gen8": {}
   },
   "Cinderace": {
+    "gen9": {},
     "gen8": {
       "sword.Cinderace": [
         "Coaching",
@@ -108636,12 +109760,15 @@
     }
   },
   "Sobble": {
+    "gen9": {},
     "gen8": {}
   },
   "Drizzile": {
+    "gen9": {},
     "gen8": {}
   },
   "Inteleon": {
+    "gen9": {},
     "gen8": {
       "sword.Inteleon": [
         "Scale Shot"
@@ -108652,12 +109779,15 @@
     }
   },
   "Skwovet": {
+    "gen9": {},
     "gen8": {}
   },
   "Greedent": {
+    "gen9": {},
     "gen8": {}
   },
   "Rookidee": {
+    "gen9": {},
     "gen8": {
       "sword.Rookidee": [
         "Dual Wingbeat"
@@ -108668,6 +109798,7 @@
     }
   },
   "Corvisquire": {
+    "gen9": {},
     "gen8": {
       "sword.Corvisquire": [
         "Dual Wingbeat"
@@ -108678,6 +109809,7 @@
     }
   },
   "Corviknight": {
+    "gen9": {},
     "gen8": {
       "sword.Corviknight": [
         "Dual Wingbeat"
@@ -108688,9 +109820,11 @@
     }
   },
   "Blipbug": {
+    "gen9": {},
     "gen8": {}
   },
   "Dottler": {
+    "gen9": {},
     "gen8": {
       "sword.Dottler": [
         "Expanding Force"
@@ -108701,6 +109835,7 @@
     }
   },
   "Orbeetle": {
+    "gen9": {},
     "gen8": {
       "sword.Orbeetle": [
         "Expanding Force"
@@ -108711,6 +109846,7 @@
     }
   },
   "Nickit": {
+    "gen9": {},
     "gen8": {
       "sword.Nickit": [
         "Lash Out"
@@ -108721,6 +109857,7 @@
     }
   },
   "Thievul": {
+    "gen9": {},
     "gen8": {
       "sword.Thievul": [
         "Burning Jealousy",
@@ -108733,6 +109870,7 @@
     }
   },
   "Gossifleur": {
+    "gen9": {},
     "gen8": {
       "sword.Gossifleur": [
         "Grassy Glide"
@@ -108743,6 +109881,7 @@
     }
   },
   "Eldegoss": {
+    "gen9": {},
     "gen8": {
       "sword.Eldegoss": [
         "Grassy Glide"
@@ -108753,6 +109892,7 @@
     }
   },
   "Wooloo": {
+    "gen9": {},
     "gen8": {
       "sword.Wooloo": [
         "Grassy Glide"
@@ -108763,6 +109903,7 @@
     }
   },
   "Dubwool": {
+    "gen9": {},
     "gen8": {
       "sword.Dubwool": [
         "Grassy Glide"
@@ -108773,6 +109914,7 @@
     }
   },
   "Chewtle": {
+    "gen9": {},
     "gen8": {
       "sword.Chewtle": [
         "Scale Shot",
@@ -108785,6 +109927,7 @@
     }
   },
   "Drednaw": {
+    "gen9": {},
     "gen8": {
       "sword.Drednaw": [
         "Meteor Beam",
@@ -108799,6 +109942,7 @@
     }
   },
   "Yamper": {
+    "gen9": {},
     "gen8": {
       "sword.Yamper": [
         "Rising Voltage"
@@ -108809,6 +109953,7 @@
     }
   },
   "Boltund": {
+    "gen9": {},
     "gen8": {
       "sword.Boltund": [
         "Rising Voltage"
@@ -108819,6 +109964,7 @@
     }
   },
   "Rolycoly": {
+    "gen9": {},
     "gen8": {
       "sword.Rolycoly": [
         "Meteor Beam"
@@ -108829,6 +109975,7 @@
     }
   },
   "Carkol": {
+    "gen9": {},
     "gen8": {
       "sword.Carkol": [
         "Meteor Beam",
@@ -108841,6 +109988,7 @@
     }
   },
   "Coalossal": {
+    "gen9": {},
     "gen8": {
       "sword.Coalossal": [
         "Meteor Beam",
@@ -108853,6 +110001,7 @@
     }
   },
   "Applin": {
+    "gen9": {},
     "gen8": {
       "sword.Applin": [
         "Grassy Glide"
@@ -108863,6 +110012,7 @@
     }
   },
   "Flapple": {
+    "gen9": {},
     "gen8": {
       "sword.Flapple": [
         "Dual Wingbeat",
@@ -108875,6 +110025,7 @@
     }
   },
   "Appletun": {
+    "gen9": {},
     "gen8": {
       "sword.Appletun": [
         "Grassy Glide"
@@ -108885,6 +110036,7 @@
     }
   },
   "Silicobra": {
+    "gen9": {},
     "gen8": {
       "sword.Silicobra": [
         "Scale Shot",
@@ -108899,6 +110051,7 @@
     }
   },
   "Sandaconda": {
+    "gen9": {},
     "gen8": {
       "sword.Sandaconda": [
         "Scale Shot",
@@ -108913,6 +110066,7 @@
     }
   },
   "Cramorant": {
+    "gen9": {},
     "gen8": {
       "sword.Cramorant": [
         "Dual Wingbeat"
@@ -108923,6 +110077,7 @@
     }
   },
   "Arrokuda": {
+    "gen9": {},
     "gen8": {
       "sword.Arrokuda": [
         "Scale Shot"
@@ -108933,6 +110088,7 @@
     }
   },
   "Barraskewda": {
+    "gen9": {},
     "gen8": {
       "sword.Barraskewda": [
         "Flip Turn",
@@ -108945,9 +110101,11 @@
     }
   },
   "Toxel": {
+    "gen9": {},
     "gen8": {}
   },
   "Toxtricity": {
+    "gen9": {},
     "gen8": {
       "sword.Toxtricity": [
         "Rising Voltage"
@@ -108958,6 +110116,7 @@
     }
   },
   "Sizzlipede": {
+    "gen9": {},
     "gen8": {
       "sword.Sizzlipede": [
         "Scorching Sands",
@@ -108970,6 +110129,7 @@
     }
   },
   "Centiskorch": {
+    "gen9": {},
     "gen8": {
       "sword.Centiskorch": [
         "Scorching Sands",
@@ -108982,6 +110142,7 @@
     }
   },
   "Clobbopus": {
+    "gen9": {},
     "gen8": {
       "sword.Clobbopus": [
         "Coaching"
@@ -108992,6 +110153,7 @@
     }
   },
   "Grapploct": {
+    "gen9": {},
     "gen8": {
       "sword.Grapploct": [
         "Coaching",
@@ -109004,6 +110166,7 @@
     }
   },
   "Sinistea": {
+    "gen9": {},
     "gen8": {
       "sword.Sinistea": [
         "Poltergeist"
@@ -109014,6 +110177,7 @@
     }
   },
   "Polteageist": {
+    "gen9": {},
     "gen8": {
       "sword.Polteageist": [
         "Poltergeist"
@@ -109024,6 +110188,7 @@
     }
   },
   "Hatenna": {
+    "gen9": {},
     "gen8": {
       "sword.Hatenna": [
         "Expanding Force"
@@ -109034,6 +110199,7 @@
     }
   },
   "Hattrem": {
+    "gen9": {},
     "gen8": {
       "sword.Hattrem": [
         "Expanding Force"
@@ -109044,6 +110210,7 @@
     }
   },
   "Hatterene": {
+    "gen9": {},
     "gen8": {
       "sword.Hatterene": [
         "Expanding Force",
@@ -109056,6 +110223,7 @@
     }
   },
   "Impidimp": {
+    "gen9": {},
     "gen8": {
       "sword.Impidimp": [
         "Burning Jealousy",
@@ -109068,6 +110236,7 @@
     }
   },
   "Morgrem": {
+    "gen9": {},
     "gen8": {
       "sword.Morgrem": [
         "Burning Jealousy",
@@ -109080,6 +110249,7 @@
     }
   },
   "Grimmsnarl": {
+    "gen9": {},
     "gen8": {
       "sword.Grimmsnarl": [
         "Burning Jealousy",
@@ -109092,6 +110262,7 @@
     }
   },
   "Obstagoon": {
+    "gen9": {},
     "gen8": {
       "sword.Obstagoon": [
         "Lash Out"
@@ -109102,6 +110273,7 @@
     }
   },
   "Perrserker": {
+    "gen9": {},
     "gen8": {
       "sword.Perrserker": [
         "Lash Out"
@@ -109112,6 +110284,7 @@
     }
   },
   "Cursola": {
+    "gen9": {},
     "gen8": {
       "sword.Cursola": [
         "Burning Jealousy",
@@ -109126,6 +110299,7 @@
     }
   },
   "Sirfetch'd": {
+    "gen9": {},
     "gen8": {
       "sword.Sirfetch'd": [
         "Coaching",
@@ -109140,6 +110314,7 @@
     }
   },
   "Mr. Rime": {
+    "gen9": {},
     "gen8": {
       "sword.Mr. Rime": [
         "Expanding Force",
@@ -109152,6 +110327,7 @@
     }
   },
   "Runerigus": {
+    "gen9": {},
     "gen8": {
       "sword.Runerigus": [
         "Poltergeist"
@@ -109162,9 +110338,11 @@
     }
   },
   "Milcery": {
+    "gen9": {},
     "gen8": {}
   },
   "Alcremie": {
+    "gen9": {},
     "gen8": {
       "sword.Alcremie": [
         "Misty Explosion"
@@ -109175,6 +110353,7 @@
     }
   },
   "Falinks": {
+    "gen9": {},
     "gen8": {
       "sword.Falinks": [
         "Coaching"
@@ -109185,6 +110364,7 @@
     }
   },
   "Pincurchin": {
+    "gen9": {},
     "gen8": {
       "sword.Pincurchin": [
         "Rising Voltage"
@@ -109195,6 +110375,7 @@
     }
   },
   "Snom": {
+    "gen9": {},
     "gen8": {
       "sword.Snom": [
         "Skitter Smack"
@@ -109205,6 +110386,7 @@
     }
   },
   "Frosmoth": {
+    "gen9": {},
     "gen8": {
       "sword.Frosmoth": [
         "Dual Wingbeat",
@@ -109219,6 +110401,7 @@
     }
   },
   "Stonjourner": {
+    "gen9": {},
     "gen8": {
       "sword.Stonjourner": [
         "Meteor Beam"
@@ -109229,9 +110412,11 @@
     }
   },
   "Eiscue": {
+    "gen9": {},
     "gen8": {}
   },
   "Indeedee": {
+    "gen9": {},
     "gen8": {
       "sword.Indeedee": [
         "Expanding Force",
@@ -109244,6 +110429,7 @@
     }
   },
   "Morpeko": {
+    "gen9": {},
     "gen8": {
       "sword.Morpeko": [
         "Lash Out",
@@ -109256,6 +110442,7 @@
     }
   },
   "Cufant": {
+    "gen9": {},
     "gen8": {
       "sword.Cufant": [
         "Steel Roller"
@@ -109266,6 +110453,7 @@
     }
   },
   "Copperajah": {
+    "gen9": {},
     "gen8": {
       "sword.Copperajah": [
         "Steel Roller"
@@ -109276,6 +110464,7 @@
     }
   },
   "Dracozolt": {
+    "gen9": {},
     "gen8": {
       "sword.Dracozolt": [
         "Meteor Beam",
@@ -109288,6 +110477,7 @@
     }
   },
   "Arctozolt": {
+    "gen9": {},
     "gen8": {
       "sword.Arctozolt": [
         "Meteor Beam",
@@ -109300,6 +110490,7 @@
     }
   },
   "Dracovish": {
+    "gen9": {},
     "gen8": {
       "sword.Dracovish": [
         "Meteor Beam"
@@ -109310,6 +110501,7 @@
     }
   },
   "Arctovish": {
+    "gen9": {},
     "gen8": {
       "sword.Arctovish": [
         "Meteor Beam"
@@ -109320,6 +110512,7 @@
     }
   },
   "Duraludon": {
+    "gen9": {},
     "gen8": {
       "sword.Duraludon": [
         "Steel Roller"
@@ -109330,18 +110523,23 @@
     }
   },
   "Dreepy": {
+    "gen9": {},
     "gen8": {}
   },
   "Drakloak": {
+    "gen9": {},
     "gen8": {}
   },
   "Dragapult": {
+    "gen9": {},
     "gen8": {}
   },
   "Zacian": {
+    "gen9": {},
     "gen8": {}
   },
   "Zamazenta": {
+    "gen9": {},
     "gen8": {
       "sword.Zamazenta": [
         "Coaching"
@@ -109352,6 +110550,7 @@
     }
   },
   "Eternatus": {
+    "gen9": {},
     "gen8": {
       "sword.Eternatus": [
         "Meteor Beam"
@@ -109362,6 +110561,7 @@
     }
   },
   "Kubfu": {
+    "gen9": {},
     "gen8": {
       "sword.Kubfu": [
         "Coaching"
@@ -109372,6 +110572,7 @@
     }
   },
   "Urshifu": {
+    "gen9": {},
     "gen8": {
       "sword.Single Strike Style": [
         "Coaching",
@@ -109390,6 +110591,7 @@
     }
   },
   "Zarude": {
+    "gen9": {},
     "gen8": {
       "sword.Zarude": [
         "Grassy Glide",
@@ -109402,6 +110604,7 @@
     }
   },
   "Regieleki": {
+    "gen9": {},
     "gen8": {
       "sword.Regieleki": [
         "Rising Voltage"
@@ -109412,6 +110615,7 @@
     }
   },
   "Regidrago": {
+    "gen9": {},
     "gen8": {
       "sword.Regidrago": [
         "Scale Shot"
@@ -109422,6 +110626,7 @@
     }
   },
   "Glastrier": {
+    "gen9": {},
     "gen8": {
       "sword.Glastrier": [
         "Lash Out"
@@ -109432,6 +110637,7 @@
     }
   },
   "Spectrier": {
+    "gen9": {},
     "gen8": {
       "sword.Spectrier": [
         "Lash Out"
@@ -109442,6 +110648,7 @@
     }
   },
   "Calyrex": {
+    "gen9": {},
     "gen8": {
       "sword.Calyrex": [
         "Expanding Force"
@@ -109468,6 +110675,7 @@
     }
   },
   "Wyrdeer": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Wyrdeer": [
         "Bulldoze",
@@ -109490,6 +110698,7 @@
     }
   },
   "Kleavor": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Kleavor": [
         "Aerial Ace",
@@ -109511,6 +110720,7 @@
     }
   },
   "Ursaluna": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Ursaluna": [
         "Aerial Ace",
@@ -109536,6 +110746,7 @@
     }
   },
   "Basculegion": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Basculegion": [
         "Aqua Tail",
@@ -109556,6 +110767,7 @@
     }
   },
   "Sneasler": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Sneasler": [
         "Aerial Ace",
@@ -109580,6 +110792,7 @@
     }
   },
   "Overqwil": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Overqwil": [
         "Aqua Tail",
@@ -109600,6 +110813,7 @@
     }
   },
   "Enamorus": {
+    "gen9": {},
     "gen8": {
       "legendsArceus.Enamorus": [
         "Calm Mind",

@@ -104,51 +104,20 @@ let start = Date()
 
 // MARK: - Abilities
 print("--- Abilities ---")
-func gamesForAbilityKey(_ key: String) -> [Game]? {
-    switch key {
-    case "Pokémon Ruby and Sapphire Versions":
-        return [.ruby, .sapphire]
-    case "Pokémon Emerald Version":
-        return [.emerald]
-    case "Pokémon FireRed and LeafGreen Versions":
-        return [.fireRed, .leafGreen]
-    case "Pokémon Diamond and Pearl Versions":
-        return [.diamond, .pearl]
-    case "Pokémon Platinum Version":
-        return [.platinum]
-    case "Pokémon HeartGold and SoulSilver Versions":
-        return [.heartGold, .soulSilver]
-    case "Pokémon Black and White Versions":
-        return [.black, .white]
-    case "Pokémon Black and White Versions 2":
-        return [.black2, .white2]
-    case "Pokémon X and Y":
-        return [.x, .y]
-    case "Pokémon Omega Ruby and Alpha Sapphire":
-        return [.omegaRuby, .alphaSapphire]
-    case "Pokémon Sun and Moon":
-        return [.sun, .moon]
-    case "Pokémon Ultra Sun and Ultra Moon":
-        return [.ultraSun, .ultraMoon]
-    case "Pokémon Sword and Shield":
-        return [.sword, .shield]
-    case "Generation III":
-        return Generation.iii.games
-    case "Generation IV":
-        return Generation.iv.games
-    case "Generation V":
-        return Generation.v.games
-    case "Generation VI":
-        return Generation.vi.games
-    case "Generation VII":
-        return [.sun, .moon, .ultraSun, .ultraMoon]
-    case "Generation VIII":
-        return Generation.viii.games
-    default:
-        return nil
-    }
-}
 let abilitiesExternalLinksDict = Helper.loadExternalLinksTSV(from: "Research/AbilityExternalLinks.tsv")
+
+func abilityDescriptionKeyCandidates(for game: Game) -> [String] {
+    var candidates = [game]
+    if game == .omegaRuby {
+        candidates.append(.ruby)
+    } else if game == .alphaSapphire {
+        candidates.append(.sapphire)
+    }
+
+    let keys = candidates.map(Game.pokemonDBKey)
+    return keys
+}
+
 var abilityIndex = 0
 for (abilityName, dict) in Helper.loadJSON(from: "Data/Abilities.json") as! [String: [String: String]] {
     let ability = StoredAbility(context: moc)
@@ -160,12 +129,9 @@ for (abilityName, dict) in Helper.loadJSON(from: "Data/Abilities.json") as! [Str
     ability.bulbapediaURL = Helper.sanitizedURL(from: externalLinks["bulbapediaURL"]!)!
     ability.pokemonDBURL = Helper.sanitizedURL(from: externalLinks["pokemonDBURL"]!)!
 
-    for key in dict.keys {
-        let games = gamesForAbilityKey(key)
-        let description = dict[key]?.removingQuotes().replacingOccurrences(of: "*", with: " ")
-        games?.forEach { game in
-            ability.setDescription(description, forGame: game)
-        }
+    for (gameKey, description) in dict {
+        let game = Game(pokemonDBKey: gameKey)
+        ability.setDescription(description, forGame: game)
     }
 
     if ability.description(forGame: .ruby) != nil {
@@ -180,6 +146,8 @@ for (abilityName, dict) in Helper.loadJSON(from: "Data/Abilities.json") as! [Str
         ability.generationIntroduced = 7
     } else if ability.description(forGame: .sword) != nil {
         ability.generationIntroduced = 8
+    } else if ability.description(forGame: .scarlet) != nil {
+        ability.generationIntroduced = 9
     }
 }
 
@@ -196,8 +164,16 @@ for (_, ability) in allAbilities {
 // Copy Sword abilities to Brilliant Diamond & Shining Pearl
 for (_, ability) in allAbilities {
     if let description = ability.description(forGame: .sword) {
-        ability.setDescription(description, forGame: .brilliantDiamond)
-        ability.setDescription(description, forGame: .shiningPearl)
+        if ability.description(forGame: .brilliantDiamond) == nil {
+            ability.setDescription(description, forGame: .brilliantDiamond)
+        } else {
+            debugPrint("\(ability.name) already has a description for Brilliant Diamond")
+        }
+        if ability.description(forGame: .shiningPearl) == nil {
+            ability.setDescription(description, forGame: .shiningPearl)
+        } else {
+            debugPrint("\(ability.name) already has a description for Shining Pearl")
+        }
     }
 }
 
@@ -224,14 +200,29 @@ for (moveName, dict) in Helper.loadJSON(from: "Data/Moves.json") as! [String: [S
     let key = sanitizedMoveName(moveName)
     var moves: [Game: StoredMove] = [:]
     Generation.allCases
+        .reversed()
         .filter { $0 >= generationIntroduced && $0 != .all }
         .map { $0.games }
         .flatMap { $0 }
         .forEach { game in
-            guard let moveDescription = dict[game.rawValue] ?? moveDescriptionsDict[key]?[Game.pokemonDBKey(for: game)] else {
-                debugPrint("No description found for move \(moveName) in game \(game), skipping")
-                return
+
+            // TODO: Revisit whether to use this after Scarlet/Violet data is more available
+            let moveDescription: String
+            if let description = dict[game.rawValue] ?? moveDescriptionsDict[key]?[Game.pokemonDBKey(for: game)] {
+                moveDescription = description
+            } else {
+                if let description = moves.keys.sorted().reversed().lazy.compactMap({ moves[$0]?.moveDescription }).first {
+                    debugPrint("No description found for move \(moveName) in game \(game), using latest description")
+                    moveDescription = description
+                } else {
+                    debugPrint("No description found for move \(moveName) in game \(game), using default description")
+                    moveDescription = "This move has no description."
+                }
             }
+//            guard let moveDescription = dict[game.rawValue] ?? moveDescriptionsDict[key]?[Game.pokemonDBKey(for: game)] else {
+//                debugPrint("No description found for move \(moveName) in game \(game), skipping")
+//                return
+//            }
 
             let move = StoredMove(context: moc)
             move.name = moveName
@@ -297,7 +288,7 @@ print("--- Machines ---")
 func processMachineTSV(filename: String, game: Game, machineType: MachineType) -> [Int: StoredMachine] {
     var machines: [Int: StoredMachine] = [:]
     for dict in Helper.loadTSV(from: filename) {
-        guard let move = getMove(forName: dict["name"]!, game: game) else { continue }
+        let move = getMove(forName: dict["name"]!, game: game)!
         let number = Int(dict["number"]!)!
         let machine = StoredMachine(context: moc)
         machine.game = game
@@ -343,6 +334,8 @@ allTMs[.sword] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", g
 allTMs[.shield] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .shield, machineType: .tm)
 allTMs[.brilliantDiamond] = processMachineTSV(filename: "Research/TMs/BDSP-Table 1.tsv", game: .brilliantDiamond, machineType: .tm)
 allTMs[.shiningPearl] = processMachineTSV(filename: "Research/TMs/BDSP-Table 1.tsv", game: .shiningPearl, machineType: .tm)
+allTMs[.scarlet] = processMachineTSV(filename: "Research/TMs/SV-Table 1.tsv", game: .scarlet, machineType: .tm)
+allTMs[.violet] = processMachineTSV(filename: "Research/TMs/SV-Table 1.tsv", game: .violet, machineType: .tm)
 
 allTMs[.national] = processMachineTSV(filename: "Research/TMs/Gen 8-Table 1.tsv", game: .national, machineType: .tm)
 
@@ -421,30 +414,37 @@ allPokemonByName.keys
 
 // MARK: - Pokedex Numbers
 print("--- Pokedex Numbers ---")
-let allPokedexNumbers: [[Game: StoredPokedexNumbers]] = (0..<allPokemon.count)
-    .map { _ in
+let allPokedexNumbers: [Int: [Game: StoredPokedexNumbers]] = allPokemon.keys
+    .reduce(into: [:]) { dict, index in
         var numbers: [Game: StoredPokedexNumbers] = [:]
         for game in Game.allCases {
             numbers[game] = StoredPokedexNumbers(context: moc)
         }
-        return numbers
-}
-zip(allPokemon.keys.sorted().map { allPokemon[$0]! }, allPokedexNumbers).forEach {
+        dict[index] = numbers
+    }
+for index in allPokemon.keys {
+    let pokemon = allPokemon[index]!
+    let pokedexNumbers = allPokedexNumbers[index]!
     for game in Game.allCases {
-        $0[game]!.pokedexNumbers = $1[game]!
+        pokemon[game]!.pokedexNumbers = pokedexNumbers[game]!
     }
 }
+//zip(allPokemon.keys.sorted().map { allPokemon[$0]! }, allPokedexNumbers.keys.sorted().map { allPokedexNumbers[$0]! }).forEach {
+//    for game in Game.allCases {
+//        $0[game]!.pokedexNumbers = $1[game]!
+//    }
+//}
 
 func processPokedexNumberTSV(filename: String, dictKey: String, pokedexNumberKey: String) {
 
     func convertNumberString(_ numberString: String) -> Int { Int(numberString.replacingOccurrences(of: "#", with: ""))! }
 
     for dict in Helper.loadTSV(from: filename) {
-        let national = convertNumberString(dict["national"]!) - 1 // OBO
+        let national = convertNumberString(dict["national"]!)
         let numberString = dict[dictKey]!
         guard !numberString.isEmpty else { continue }
         let regionalNumber = convertNumberString(numberString)
-        let pokedexNumbers = allPokedexNumbers[national]
+        let pokedexNumbers = allPokedexNumbers[national]!
         pokedexNumbers.values.forEach { $0.setValue(regionalNumber, forKey: pokedexNumberKey) }
     }
 }
@@ -477,6 +477,7 @@ processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.ts
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/UltraAlola-Table 1.tsv", dictKey: "poni", pokedexNumberKey: #keyPath(StoredPokedexNumbers.z_ultraPoni))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/Unova-Table 1.tsv", dictKey: "unova", pokedexNumberKey: #keyPath(StoredPokedexNumbers.z_unova))
 processPokedexNumberTSV(filename: "Research/PokedexNumbers/Hisui-Table 1.tsv", dictKey: "hisui", pokedexNumberKey: #keyPath(StoredPokedexNumbers.z_hisui))
+processPokedexNumberTSV(filename: "Research/PokedexNumbers/Paldea-Table 1.tsv", dictKey: "paldea", pokedexNumberKey: #keyPath(StoredPokedexNumbers.z_paldea))
 
 
 // MARK: - Pokemon Forms
@@ -734,11 +735,13 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as!
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for \(pokemon.name) in game \(game)"); continue }
+            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for \(pokemon.name) in game \(game)"); continue }
             forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
             if forms.isEmpty {
-                print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game), falling back to all forms")
-                forms = pokemon.forms
+                print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game), skipping")
+                continue
+//                print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game), falling back to all forms")
+//                forms = pokemon.forms
             }
             for form in forms {
                 for moveDict in moveDicts {
@@ -785,7 +788,7 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetMachines3.json") 
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
             guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             for form in forms {
@@ -893,7 +896,7 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring3.json") 
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.threeDigit.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
             guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             for form in forms {
@@ -1475,7 +1478,7 @@ for dict in Helper.loadTSV(from: "Research/Berries.tsv") {
     item.game = game
     item.i_gameIndex = Int32(item.game.index)
     item.generationIntroduced = Generation(rawValue: Int(dict["generation"]!)!)!
-    item.imageName = item.name.lowercased().replacingOccurrences(of: " ", with: "-")
+    item.imageName = item.name.lowercased().replacingOccurrences(of: " ", with: "-").removingDiacritics()
     item.itemType = .berry
     item.itemDescription = itemDescriptionFromPokemonDB(name: item.name, game: game) ?? dict["description"]!.removingQuotes()
     item.bulbapediaURL = URL(string: itemExternalLinksBulbapedia[sanitizedItemName(item.name)]!["bulbapediaURL"]!)!
@@ -1564,6 +1567,31 @@ for (_, gameToItem) in allItems {
     }
 }
 
+// Copy items to scarlet/violet, using national
+for (_, gameToItem) in allItems where gameToItem[.scarlet] == nil {
+    guard let source = gameToItem[.national] else { continue }
+
+    let scarletCopy = makeItemCopy(source: source)
+    scarletCopy.game = .scarlet
+    scarletCopy.i_gameIndex = Game.scarlet.index.toInt32()
+
+    let violetCopy = makeItemCopy(source: source)
+    violetCopy.game = .violet
+    violetCopy.i_gameIndex = Game.violet.index.toInt32()
+
+    let key = sanitizedItemName(source.name)
+    if var items = allItems[key] {
+        items[.scarlet] = scarletCopy
+        items[.violet] = violetCopy
+        allItems[key] = items
+    } else {
+        allItems[key] = [
+            .scarlet: scarletCopy,
+            .violet: violetCopy
+        ]
+    }
+}
+
 //// Copy all Gen 1-4 items to Brilliant Diamond / Shining Pearl
 //var bdspItemCount = 0
 //for (_, gameToItem) in allItems {
@@ -1620,7 +1648,7 @@ func latestEvolutionForNational(familyName: String) -> [StoredEvolution]? {
     }
     return nil
 }
-func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMethod {
+func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMethod? {
     switch name {
     case "completeBattlePerformingAction":
         return .completeBattlePerformingAction(data)
@@ -1629,11 +1657,19 @@ func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMet
     case "levelUp":
         return .levelUp(Int(data)!)
     case "levelUpHoldingItem":
-        return .levelUpHoldingItem(getItem(forName: data, game: game)!)
+        guard let item = getItem(forName: data, game: game) else {
+            debugPrint("Could not find item named \(data) in \(game)")
+            return nil
+        }
+        return .levelUpHoldingItem(item)
     case "levelUpInArea":
         return .levelUpInArea(data)
     case "levelUpKnowingMove":
-        return .levelUpKnowingMove(getMove(forName: data, game: game)!)
+        guard let move = getMove(forName: data, game: game) else {
+            debugPrint("Could not find move named \(data) in \(game)")
+            return nil
+        }
+        return .levelUpKnowingMove(move)
     case "levelUpWithPartyMember":
         return .levelUpWithPartyMember(getPokemon(forName: data, game: game))
     case "levelUpWithStats":
@@ -1646,12 +1682,19 @@ func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMet
         let pokemon = getPokemon(forName: data, game: game)
         return .tradeForPokemon(pokemon)
     case "tradeHoldingItem":
-        let item = allItems[sanitizedItemName(data)]![game]!
+        guard let item = getItem(forName: data, game: game) else {
+            debugPrint("Could not find item named \(data) in \(game)")
+            return nil
+        }
         return .tradeHoldingItem(item)
     case "trainerAction":
         return .trainerAction(data)
     case "useItem":
-        return .useItem(getItem(forName: data, game: game)!)
+        guard let item = getItem(forName: data, game: game) else {
+            debugPrint("Could not find item named \(data) in \(game)")
+            return nil
+        }
+        return .useItem(item)
     default:
         fatalError()
     }
@@ -1719,7 +1762,11 @@ for dict in Helper.loadTSV(from: "Research/Evolutions.tsv") {
         evolution.game = game
         evolution.from = baseForm
         evolution.to = targetForm
-        evolution.method = evolutionMethod(for: methodName, data: methodData, game: game)
+        guard let method = evolutionMethod(for: methodName, data: methodData, game: game) else {
+            debugPrint("Could not resolve evolution method for \(baseName).\(baseFormName)-\(targetName).\(targetFormName), method \(methodName).\(methodData) in game \(game), skipping")
+            continue
+        }
+        evolution.method = method
         evolution.condition = evolutionCondition(for: requirementName, data: requirementData, game: game)
         evolution.condition2 = evolutionCondition(for: requirementName2, data: requirementData2, game: game)
 

@@ -217,6 +217,7 @@ Aipom			Aipom	Aipom	Ambipom	Ambipom	levelUpKnowingMove	Double Hit
 Sunkern			Sunkern	Sunkern	Sunflora	Sunflora	useItem	Sun Stone				
 Yanma			Yanma	Yanma	Yanmega	Yanmega	levelUpKnowingMove	Ancient Power				
 Wooper			Wooper	Wooper	Quagsire	Quagsire	levelUp	20				
+Wooper			Wooper	Paldean Wooper	Clodsire	Clodsire	levelUp	20				
 Murkrow			Murkrow	Murkrow	Honchkrow	Honchkrow	useItem	Dusk Stone				
 Misdreavus			Misdreavus	Misdreavus	Mismagius	Mismagius	useItem	Dusk Stone				
 Wobbuffet			Wynaut	Wynaut	Wobbuffet	Wobbuffet	levelUp	15				
@@ -579,3 +580,44 @@ Dreepy			Dreepy	Dreepy	Drakloak	Drakloak	levelUp	50
 Dreepy			Drakloak	Drakloak	Dragapult	Dragapult	levelUp	60				
 Kubfu			Kubfu	Kubfu	Urshifu	Single Strike Style	other	Train in The Tower of Darkness				
 Kubfu			Kubfu	Kubfu	Urshifu	Rapid Strike Style	other	Train in The Tower of Waters				
+Sprigatito			Sprigatito	Sprigatito	Floragato	Floragato	levelUp	16				
+Sprigatito			Floragato	Floragato	Meowscarada	Meowscarada	levelUp	36				
+Fuecoco			Fuecoco	Fuecoco	Crocalor	Crocalor	levelUp	16				
+Fuecoco			Crocalor	Crocalor	Skeledirge	Skeledirge	levelUp	36				
+Quaxly			Quaxly	Quaxly	Quaxwell	Quaxwell	levelUp	16				
+Quaxly			Quaxwell	Quaxwell	Quaquaval	Quaquaval	levelUp	36				
+Lechonk			Lechonk	Lechonk	Oinkologne	Male	levelUp	18				
+Lechonk			Lechonk	Lechonk	Oinkologne	Female	levelUp	18				
+Tarountula			Tarountula	Tarountula	Spidops	Spidops	levelUp	15				
+Nymble			Nymble	Nymble	Lokix	Lokix	levelUp	24				
+Rellor			Rellor	Rellor	Rabsca	Rabsca	other	"Walk 1,000 steps in Let's Go mode"				
+Greavard			Greavard	Greavard	Houndstone	Houndstone	levelUp	30	timeOfDay	night		
+Flittle			Flittle	Flittle	Espathra	Espathra	levelUp	35				
+Wiglett			Wiglett	Wiglett	Wugtrio	Wugtrio	levelUp	26				
+Finizen			Finizen	Finizen	Palafin	Palafin	levelUp	38	other	In Multiplayer		
+Smoliv			Smoliv	Smoliv	Dolliv	Dollar	levelUp	25				
+Smoliv			Dolliv	Dolliv	Arboliva	Arboliva	levelUp	35				
+Capsakid			Capsakid	Capsakid	Scovillain	Scovillain	useItem	Fire Stone				
+Tadbulb			Tadbulb	Tadbulb	Bellibolt	Bellibolt	useItem	Thunder Stone				
+Varoom			Varoom	Varoom	Revavroom	Revavroom	levelUp	40				
+Tandemaus			Tandemaus	Tandemaus	Maushold	Family of Three	levelUp	25	other	Rare		
+Tandemaus			Tandemaus	Tandemaus	Maushold	Family of Four	levelUp	25				
+Cetoddle			Cetoddle	Cetoddle	Cetitan	Cetitan	useItem	Ice Stone				
+Frigibax			Frigibax	Frigibax	Arctibax	Arctibax	levelUp	35				
+Frigibax			Arctibax	Arctibax	Baxcalibur	Baxcalibur	levelUp	54				
+Pawmi			Pawmi	Pawmi	Pawmo	Pawmo	levelUp	18				
+Pawmi			Pawmo	Pawmo	Pawmot	Pawmot	other	"Walk 1,000 steps in Let's Go mode"				
+Wattrel			Wattrel	Wattrel	Kilowattrel	Kilowattrel	levelUp	25				
+Nacli			Nacli	Nacli	Naclstack	Naclstack	levelUp	24				
+Nacli			Naclstack	Naclstack	Garganacl	Garganacl	levelUp	38				
+Glimmet			Glimmet	Glimmet	Glimmora	Glimmora	levelUp	35				
+Shroodle			Shroodle	Shroodle	Grafaiai	Grafaiai	levelUp	28				
+Fidough			Fidough	Fidough	Dachsbun	Dachsbun	levelUp	26				
+Maschiff			Maschiff	Maschiff	Mabosstiff	Mabosstiff	levelUp	30				
+Bramblin			Bramblin	Bramblin	Brambleghast	Brambleghast	other	"Walk 1,000 steps in Let's Go mode"				
+Gimmighoul			Gimmighoul	Chest Form	Gholdengo	Gholdengo	other	Collect 999 coins in Roaming Form				
+Tinkatink			Tinkatink	Tinkatink	Tinkatuff	Tinkatuff	levelUp	24				
+Tinkatink			Tinkatuff	Tinkatuff	Tinkaton	Tinkaton	levelUp	38				
+Charcadet			Charcadet	Charcadet	Armarouge	Armarouge	other	Use Auspicious Armor				
+Charcadet			Charcadet	Charcadet	Ceruledge	Ceruledge	other	Use Malicious Armor				
+Toedscool			Toedscool	Toedscool	Toedscruel	Toedscruel	levelUp	30				

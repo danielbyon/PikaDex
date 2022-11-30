@@ -52,6 +52,9 @@ def main():
         print('Processing {}'.format(name))
         
         url = 'https://pokemondb.net' + link['href']
+        
+#       print('{}\t{}'.format(name, url)) # Used for external links
+        
         filename = file_path + '{}.html'.format(name.replace(' ', '-'))
         contents = crawler.fetch_or_download(filename, url)
         entries = process_file(contents)
@@ -72,6 +75,9 @@ def main():
         print('Processing {}'.format(name))
         
         url = 'https://pokemondb.net' + link['href']
+        
+#       print('{}\t{}'.format(name, url)) # Used for external links
+        
         filename = file_path + '{}.html'.format(name.replace(' ', '-'))
         contents = crawler.fetch_or_download(filename, url)
         entries = process_file(contents)
@@ -84,3 +90,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
