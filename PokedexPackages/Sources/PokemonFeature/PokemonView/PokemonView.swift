@@ -49,7 +49,7 @@ public struct PokemonView: View {
             ToolbarItemGroup(placement: .navigationBarLeading) {
                 HomeButton()
             }
-            ToolbarItemGroup() {
+            ToolbarItemGroup {
                 if let pokemonDetail {
                     if let previousPokemonProvider {
                         Button {
