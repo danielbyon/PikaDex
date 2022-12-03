@@ -24,7 +24,6 @@ struct ContentView: View {
     @EnvironmentObject var settings: AppSettings
     @SceneStorage("navigationPath") private var navigationData: Data?
     @State private var columnVisibility: NavigationSplitViewVisibility = .doubleColumn
-    @State private var selectedTab: Tab? = nil
     @StateObject private var navigationStore = NavigationStore()
     @StateObject private var sheetState = SheetState<ContentViewSheet>()
 
@@ -465,9 +464,9 @@ struct ContentView: View {
 
         switch url.supportedHost {
         case .pokemon:
-            selectedTab = .pokemon
+            navigationStore.path = .init([Route.tab(.pokemon)])
         case .teams:
-            selectedTab = .teams
+            navigationStore.path = .init([Route.tab(.teams)])
         default:
             debugPrint("Unsupported host: \(url)")
             break

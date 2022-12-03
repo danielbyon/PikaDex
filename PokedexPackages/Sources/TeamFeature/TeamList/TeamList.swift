@@ -80,6 +80,7 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
             .confirmationDialog("Add Team", isPresented: $isShowingSelectGame) {
                 selectGame()
             }
+            .onOpenURL(perform: handleURL)
     }
 
     public init(
@@ -159,6 +160,10 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
             }
         }
         Button("Cancel", role: .cancel) { }
+    }
+
+    private func handleURL(url: URL) {
+        debugPrint("TeamList URL received: \(url)")
     }
 
 }
