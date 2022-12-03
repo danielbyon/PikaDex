@@ -77,7 +77,7 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
             } message: {
                 Text("Your team has been exported to the PokéPaste format and copied to the clipboard.")
             }
-            .alert("Select Game", isPresented: $isShowingSelectGame) {
+            .confirmationDialog("Add Team", isPresented: $isShowingSelectGame) {
                 selectGame()
             }
     }
@@ -138,11 +138,6 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                 } label: {
                     Label("Delete", image: "trash")
                 }
-            } preview: {
-                TeamView(
-                    viewModel: teamViewModel,
-                    viewFactory: viewFactory
-                )
             }
             .overlay(alignment: .topTrailing) {
                 DeleteButton {
@@ -156,7 +151,7 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
 
     @ViewBuilder
     private func selectGame() -> some View {
-        ForEach(Game.allGamesNewestFirstExceptNational) { game in
+        ForEach(Game.allGamesNewestFirst) { game in
             Button(game.title) {
                 withAnimation {
                     viewModel.addNewTeam(for: game)
