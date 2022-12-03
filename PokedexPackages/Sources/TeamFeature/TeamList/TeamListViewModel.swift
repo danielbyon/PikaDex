@@ -23,6 +23,7 @@ final class TeamListViewModel: ObservableObject {
 
     @Published var sections: [Section] = []
     var hasMultipleSections: Bool { sections.count > 1 }
+    var shouldShowSectionHeaders: Bool { hasMultipleSections || game == .national }
 
     private let teamStore: TeamStore
     private var cancellables: Set<AnyCancellable> = []
@@ -60,12 +61,12 @@ final class TeamListViewModel: ObservableObject {
     private func reloadSections() {
         let gamesToLoad: [Game]
         if game == .national {
-            gamesToLoad = Game.allGamesNewestFirstExceptNational
+            gamesToLoad = Game.allGamesNewestFirst
         } else {
             gamesToLoad = [game]
         }
 
-        self.sections = gamesToLoad
+        let sections = gamesToLoad
             .map { game in
                 Section(
                     game: game,
@@ -75,6 +76,7 @@ final class TeamListViewModel: ObservableObject {
                 )
             }
             .filter { !$0.teams.isEmpty }
+        self.sections = sections
     }
 
 }

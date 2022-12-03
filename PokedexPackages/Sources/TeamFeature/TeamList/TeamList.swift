@@ -108,7 +108,7 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                         }
                     } header: {
                         // Only show game titles if we're showing more than one game
-                        if viewModel.sections.count > 1 {
+                        if viewModel.shouldShowSectionHeaders {
                             SectionHeader(section.game.title)
                         }
                     }
