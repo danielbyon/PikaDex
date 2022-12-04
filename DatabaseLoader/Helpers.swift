@@ -10,6 +10,28 @@ import Foundation
 import CoreData
 import PokedexCore
 
+// MARK: Global Helpers
+let validNameCharacters = CharacterSet.alphanumerics.union(CharacterSet(charactersIn: "♂♀"))
+func sanitizedName(_ name: String) -> String {
+    String(name.lowercased().unicodeScalars.filter { validNameCharacters.contains($0) })
+}
+func sanitizedItemName(_ name: String) -> String {
+    sanitizedName(name)
+}
+func sanitizedMoveName(_ moveName: String) -> String {
+    var sanitized = sanitizedName(moveName)
+    if sanitized == "faintattack" {
+        sanitized = "feintattack"
+    } else if sanitized == "hijumpkick" {
+        sanitized = "highjumpkick"
+    } else if sanitized == "smellingsalt" {
+        sanitized = "smellingsalts"
+    } else if sanitized == "vicegrip" {
+        sanitized = "visegrip"
+    }
+    return sanitized
+}
+
 // MARK: - Core Data
 private class PersistentContainer: NSPersistentContainer {
 
