@@ -8,11 +8,12 @@
 
 import WidgetKit
 import Intents
+import PokedexCore
 
 struct TeamProvider: IntentTimelineProvider {
 
     private let settings = AppSettings()
-    private let storage = TeamStorage()
+    private let storage: TeamStorage = UserDefaults.appGroup
 
     private var allTeams: [Team]? { storage.loadTeams(forGame: settings.currentGame) }
 

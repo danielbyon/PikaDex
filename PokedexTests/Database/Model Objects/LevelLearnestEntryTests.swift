@@ -12,7 +12,7 @@ import CoreData
 
 class LevelLearnestEntryTests: ModelObjectBaseTestCase {
     
-    typealias Subject = LevelLearnsetEntry
+    typealias Subject = StoredLevelLearnsetEntry
     
     func testProperties() {
 //        let sut = Subject(context: context)

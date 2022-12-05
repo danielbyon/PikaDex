@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PokedexCore
 
 extension Game: DefaultValueProviding {
 

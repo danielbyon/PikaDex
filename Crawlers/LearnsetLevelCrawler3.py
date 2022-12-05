@@ -30,7 +30,7 @@ def process_file(contents, generation, pokemon_name):
 			if div is None or div.name != 'div':
 				continue
 			
-			if 'tabset-moves-game-form' in div['class'] or 'tabs-wrapper' in div['class']:
+			if 'tabset-moves-game-form' in div['class'] or 'tabs-wrapper' in div['class'] or 'sv-tabs-wrapper' in div['class']:
 				form_names = []
 				tab_list = div.div
 				for tab in tab_list.find_all('a'):
@@ -80,12 +80,37 @@ def main():
 	soup = BeautifulSoup(contents, 'lxml').html.body
 	table = soup.find('table', id='pokedex')
 	
+	pokemons = []
+	
+	# TODO: Add gen 9 pokemon as a manual list
+	with codecs.open("Gen9Pokemon.txt", 'r', encoding='utf8') as f:
+		for line in f:
+			components = line.split('\t')
+			number = components[0].strip()
+			name = components[1].strip()
+			pokemons.append({
+				'name': name,
+				'number': number,
+				'urlPath': '/pokedex/{}'.format(name.lower().replace(' ', '-'))
+			})
+	
 	for row in table.tbody.find_all('tr'):
 		cells = row.find_all('td')
 		number = cells[0].text.strip()
 		moveNode = cells[1].a
 		name = cells[1].a.text.strip()
 		urlPath = moveNode['href']
+		
+		pokemons.append({
+			'name': name,
+			'number': number,
+			'urlPath': urlPath
+		})
+		
+	for pokemon in pokemons:
+		name = pokemon['name']
+		number = pokemon['number']
+		urlPath = pokemon['urlPath']
 		
 		if name in all_entries:
 			# Don't process the same pokemon multiple times

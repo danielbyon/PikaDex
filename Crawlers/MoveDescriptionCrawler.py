@@ -12,36 +12,16 @@ import codecs
 import CrawlerUtils as crawler
 import re
 
-MOVES_TO_SKIP = [
-    "terrainpulse",
-    "burningjealousy",
-    "flipturn",
-    "grassyglide",
-    "risingvoltage",
-    "coaching",
-    "scorchingsands",
-    "dualwingbeat",
-    "meteorbeam",
-    "skittersmack",
-    "tripleaxel",
-    "corrosivegas",
-    "expandingforce",
-    "poltergeist",
-    "scaleshot",
-    "lashout",
-    "steelroller",
-    "mistyexplosion",
-    "junglehealing", # Zarude level (not move tutor)
-    "shellsidearm", # Galarian Slowbro level
-    "surgingstrikes", # Urshifu
-    "wickedblow" # Urshifu
-]
-
 def process_move(contents):
     entries = {}
     soup = BeautifulSoup(contents, 'lxml').html.body
     header = soup.find('h2', id='move-descr')
-    table = header.find_next_sibling().table
+    if not header:
+        return entries
+    table_parent = header.find_next_sibling()
+    if not table_parent:
+        return entries
+    table = table_parent.table
     rows = table.find_all('tr')
     for row in rows:
         game_nodes = row.th.find_all('span')
@@ -57,30 +37,27 @@ def main():
 
     all_entries = {}
     
-    filename = "Cached/PokemonDBMoves/_AllMoves.html"
-    url = "https://pokemondb.net/move/all"
-    contents = crawler.fetch_or_download(filename, url)
-    soup = BeautifulSoup(contents, 'lxml').html.body
-    table = soup.find('table', id='moves')
+    file_path = 'Cached/PokemonDBMoves/'
     
-    for row in table.tbody.find_all('tr'):
-        moveNode = row.td.a
-        urlPath = moveNode['href']
-        url = 'https://pokemondb.net' + urlPath
-        slug = urlPath.split('/')[-1].replace('-', '')
-        
-        # Temp until PokemonDB updates their wiki pages for the new moves
-        if slug in MOVES_TO_SKIP or 'gmax' in slug:
-            continue
-        
-        filename = 'Cached/PokemonDBMoves/{}.html'.format(slug)
-        print('Processing {}'.format(slug))
-        
-        contents = crawler.fetch_or_download(filename, url)
-        entries = process_move(contents)
-        all_entries[slug] = entries
+    with codecs.open("MovesList.txt", 'r', encoding='utf8') as f:
+        for line in f:
+            raw_name = line.strip()
+            name = raw_name.replace(' ', '-').replace('\'', '')
+            print('Processing {}'.format(name))
+            
+            filename = file_path + '{}.html'.format(name)
+            url = 'https://pokemondb.net/move/' + name
+            
+            contents = crawler.fetch_or_download(filename, url)
+            entries = process_move(contents)
+            
+            dict_name = re.sub(r'[^a-zA-Z0-9]', '', raw_name).lower()
+            all_entries[dict_name] = entries
 
     crawler.write_data_to_file(all_entries, "Data/MoveDescriptions")
+#   print(all_entries)
+    print("Done!")
 
 if __name__ == '__main__':
     main()
+    

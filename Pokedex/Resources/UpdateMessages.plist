@@ -4,12 +4,23 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
-		<string>Added missing Mega evolutions to Gen 6/7 games</string>
-		<string>Added Hisuian forms to National Pokedex</string>
+		<string>Fixed missing Mega/Alolan/Galarian/etc forms on the National Pokédex. National Pokédex now shows all possible forms for each Pokémon.</string>
+		<string>Fixed move learnsets for alternate forms and the National Pokédex</string>
+		<string>Fixed Hisuian Zoroark&apos;s type</string>
 	</array>
 	<key>newFeatures</key>
-	<array/>
+	<array>
+		<string>PikaDex has been rewritten from the ground up, leading to better performance and stability!</string>
+		<string>Initial Scarlet/Violet support. Note: these games are very new and information is still being discovered and documented. Some info might be missing or incorrect. Please use the contact form if you find any errors.</string>
+		<string>Implemented Caught Pokemon tracking (Beta): Swipe on a Pokémon or long press to mark it as caught.</string>
+		<string>Added Home button to conveniently jump back to the home screen.</string>
+		<string>Added Links to Bulbapedia and PokemonDB for Pokémon, Moves, Items, Locations, Abilities and Types.</string>
+	</array>
 	<key>upcoming</key>
-	<array/>
+	<array>
+		<string>Universal Search: Search for Pokémon, Moves, Items, Locations, Abilities, etc all from one search bar on the home screen!</string>
+		<string>Search by national number on the Pokémon list</string>
+		<string>Gym leader info</string>
+	</array>
 </dict>
 </plist>

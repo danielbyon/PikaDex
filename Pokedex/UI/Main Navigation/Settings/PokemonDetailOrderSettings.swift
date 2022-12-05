@@ -8,6 +8,7 @@
 
 import SwiftUI
 import AppSupport
+import PokemonFeature
 
 struct PokemonDetailOrderSettings: View {
 
@@ -24,15 +25,19 @@ struct PokemonDetailOrderSettings: View {
 
     var body: some View {
         List {
-            Section(footer: Text(footerText).monospacedCaption()) {
+            Section {
                 Text("Header")
                 ForEach(ordering.sections, id: \.self) { section in
                     Text(section.rawValue)
                 }
                 .onMove(perform: ordering.update)
+            } footer: {
+                Text(footerText)
+                    .monospacedCaption()
             }
         }
         .navigationTitle("Pokémon Detail Ordering")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button("Reset", action: reset)
@@ -51,7 +56,7 @@ struct PokemonDetailOrderSettings: View {
 
 struct PokemonDetailOrderSettings_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             PokemonDetailOrderSettings()
         }
         .injectDependencies()

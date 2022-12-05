@@ -158,7 +158,7 @@ def process_file(name, contents):
         for tr in trs[1:]:
             description = tr.find_all('td')[1].text.strip()
             for a in tr.td.find_all('a'):
-                title = a['title'].encode
+                title = a['title']
                 if title == u'Pokémon Gold and Silver Versions':
                     entries['gold'] = description
                     entries['silver'] = description
@@ -198,11 +198,21 @@ def process_file(name, contents):
                 elif title == u'Pokémon Ultra Sun and Ultra Moon':
                     entries['ultraSun'] = description
                     entries['ultraMoon'] = description
+                elif title == u'Pokémon: Let\'s Go, Pikachu! and Let\'s Go, Eevee!':
+                    entries['letsGoPikachu'] = description
+                    entries['letsGoEevee'] = description
                 elif title == u'Pokémon Sword and Shield':
                     entries['sword'] = description
                     entries['shield'] = description
+                elif title == u'Pokémon Brilliant Diamond and Shining Pearl':
+                    entries['brilliantDiamond'] = description
+                    entries['shiningPearl'] = description
+                elif title == u'Pokémon Legends: Arceus':
+                    entries['legendsArceus'] = description
+                else:
+#                   print('Unsupported game: {}'.format(title))
+                    pass
     
-    # pprint.pprint(entries)
     return entries
 
 def main():
@@ -210,10 +220,9 @@ def main():
 
     all_entries = {}
     
+    i = 0
     with codecs.open("MovesList.txt", 'r', encoding='utf8') as f:
-        i = 1
         for line in f:
-            
             move = line.strip().replace(' ', '_').rstrip('.')
 
             print("Processing " + move)
@@ -229,9 +238,8 @@ def main():
             if entries is not None:
                 entries["number"] = "{}".format(i)
             all_entries[line.strip()] = entries
-
+            
             i += 1
-            # return
 
     crawler.write_data_to_file(all_entries, "Data/Moves")
     pass

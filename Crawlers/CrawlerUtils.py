@@ -1,6 +1,7 @@
 #!/usr/bin/env python3 -tt
 
 import requests
+from requests_html import HTMLSession
 import os
 import pprint
 import sys
@@ -65,7 +66,8 @@ def fetch_file_lines(filename):
         return None
 
 def download(url):
-    r = requests.get(url)
+    session = HTMLSession()
+    r = session.get(url)
     return r.text.encode('utf-8')
     
 def cache_file(contents, filename):

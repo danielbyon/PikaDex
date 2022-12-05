@@ -6,12 +6,25 @@
 //  Copyright © 2019 Daniel Byon. All rights reserved.
 //
 
+import AbilityFeature
+import BattleAssistantFeature
+import DualTypeFeature
+import ItemFeature
+import LocationFeature
+import MachineFeature
+import MoveFeature
+import NatureFeature
+import PokemonFeature
 import SwiftUI
+import TeamFeature
+import TypeFeature
 
 struct ContentView: View {
 
     @EnvironmentObject var settings: AppSettings
-    @State private var selectedTab: Tab? = nil
+    @SceneStorage("navigationPath") private var navigationData: Data?
+    @State private var columnVisibility: NavigationSplitViewVisibility = .doubleColumn
+    @StateObject private var navigationStore = NavigationStore()
     @StateObject private var sheetState = SheetState<ContentViewSheet>()
 
     private var spacing: CGFloat { 16.0 }
@@ -42,83 +55,347 @@ struct ContentView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $navigationStore.path) {
             ScrollView {
                 LazyVGrid(columns: Array(repeating: .init(spacing: spacing), count: numberOfColumns), spacing: spacing) {
-                    Section(header: header(), footer: Divider()) {
+                    Section {
                         contentButtons()
+                    } header: {
+                        header()
+                    } footer: {
+                        Divider()
                     }
 
-                    Section(header: gameSelectorButton()) {
+                    Section {
                         settingsButtons()
+                    } header: {
+                        gameSelectorButton()
                     }
                 }
                 .padding()
             }
             .navigationTitle(AppConstants.appName)
-            .navigationBarTitle(AppConstants.appName, displayMode: .inline)
-            Text("Choose an item to get started")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Route.self) { route in
+                switch route {
+                case .battleAssistant(let battleAssistant):
+                    switch battleAssistant {
+                    case .selectPokemon(let game):
+                        SelectPokemonForm(game: game)
+                    }
+                case .content(let content):
+                    switch content {
+                    case .ability(let ability, let game, let pokedex):
+                        AbilityView(ability: ability, game: game, pokedex: pokedex)
+                    case .abilityPokemonForm(let pokemonForm, let pokedex):
+                        PokemonView(abilityPokemonForm: pokemonForm, pokedex: pokedex)
+                    case .evolutionPokemonForm(let pokemonForm, pokedex: let pokedex):
+                        PokemonView(evolutionPokemonForm: pokemonForm, pokedex: pokedex)
+                    case .item(let item):
+                        ItemView(item: item)
+                    case .learnset(let pokemonForm, let game, let learnsetType):
+                        PokemonLearnsetView(form: pokemonForm, game: game, learnsetType: learnsetType)
+                    case .learnsetPokemonForm(let pokemonForm):
+                        PokemonView(learnsetPokemonForm: pokemonForm)
+                    case .location(let location):
+                        LocationView(location: location)
+                    case .move(let move):
+                        MoveView(move: move, viewFactory: ConcreteMoveViewFactory())
+                    case let .pokemon(pokemon, pokedex, previousPokemonProvider, nextPokemonProvider):
+                        PokemonView(
+                            pokemon: pokemon,
+                            pokedex: pokedex,
+                            previousPokemonProvider: previousPokemonProvider,
+                            nextPokemonProvider: nextPokemonProvider
+                        )
+                    case .pokemonDetailForm(let pokemonDetailForm, let pokedex):
+                        PokemonView(pokemonDetailForm: pokemonDetailForm, pokedex: pokedex)
+                    case .pokemonLocations(let pokemonDetailForm):
+                        PokemonLocations(pokemonForm: pokemonDetailForm)
+                    case .type(let type, let game):
+                        TypeView(type: type, game: game, viewFactory: ConcreteTypeViewFactory())
+                    }
+                case .tab(let tab):
+                    switch tab {
+                    case .abilities:
+                        AbilityList(game: settings.currentGame)
+                    case .battleAssistant:
+                        BattleAssistant(
+                            game: settings.currentGame,
+                            viewFactory: ConcreteBattleAssistantViewFactory()
+                        )
+                    case .dualType:
+                        DualTypeChecker(
+                            game: settings.currentGame,
+                            viewFactory: ConcreteDualTypeCheckerViewFactory()
+                        )
+                    case .moves:
+                        MoveList(game: settings.currentGame)
+                    case .items:
+                        ItemList(game: settings.currentGame)
+                    case .locations:
+                        LocationList(game: settings.currentGame)
+                    case .machines:
+                        MachineList(title: machineListTitle, game: settings.currentGame)
+                    case .natures:
+                        NatureList()
+                    case .pokemon:
+                        PokemonList(game: settings.currentGame)
+                    case .teams:
+                        TeamList(
+                            game: settings.currentGame,
+                            viewFactory: ConcreteTeamViewFactory()
+                        )
+                    case .types:
+                        TypeList(game: settings.currentGame)
+                    }
+                case .url(let url):
+                    SafariView(url: url)
+                }
+            }
+            .sheet(isPresented: $sheetState.isShowing, content: sheetDestination)
+            .onOpenURL(perform: handleURL)
         }
-        .navigationViewStyle(.columns)
-        .sheet(isPresented: $sheetState.isShowing, content: sheetDestination)
-        .onOpenURL(perform: handleURL)
+        .navigationStore(navigationStore)
+        .task {
+            if let navigationData {
+                navigationStore.restore(from: navigationData)
+            }
+
+            for await _ in navigationStore.$path.values {
+                navigationData = navigationStore.encoded()
+            }
+        }
     }
+
+//    var body: some View {
+//        NavigationSplitView(columnVisibility: $columnVisibility) {
+//            NavigationStack(path: $navigationStore.path) {
+//                ScrollView {
+//                    LazyVGrid(columns: Array(repeating: .init(spacing: spacing), count: numberOfColumns), spacing: spacing) {
+//                        Section(header: header(), footer: Divider()) {
+//                            contentButtons()
+//                        }
+//
+//                        Section(header: gameSelectorButton()) {
+//                            settingsButtons()
+//                        }
+//                    }
+//                    .padding()
+//                }
+//                .navigationTitle(AppConstants.appName)
+//                .navigationBarTitleDisplayMode(.inline)
+//                .navigationDestination(for: Route.self) { route in
+//                    switch route {
+//                    case .battleAssistant(let battleAssistant):
+//                        switch battleAssistant {
+//                        case .selectPokemon(let game):
+//                            SelectPokemonForm(game: game)
+//                        }
+//                    case .content(let content):
+//                        switch content {
+//                        case .ability(let ability, let game, let pokedex):
+//                            AbilityView(ability: ability, game: game, pokedex: pokedex)
+//                        case .abilityPokemonForm(let pokemonForm, let pokedex):
+//                            PokemonView(abilityPokemonForm: pokemonForm, pokedex: pokedex)
+//                        case .evolutionPokemonForm(let pokemonForm, pokedex: let pokedex):
+//                            PokemonView(evolutionPokemonForm: pokemonForm, pokedex: pokedex)
+//                        case .item(let item):
+//                            ItemView(item: item)
+//                        case .learnset(let pokemonForm, let game, let learnsetType):
+//                            PokemonLearnsetView(form: pokemonForm, game: game, learnsetType: learnsetType)
+//                        case .learnsetPokemonForm(let pokemonForm):
+//                            PokemonView(learnsetPokemonForm: pokemonForm)
+//                        case .location(let location):
+//                            LocationView(location: location)
+//                        case .move(let move):
+//                            MoveView(move: move, viewFactory: ConcreteMoveViewFactory())
+//                        case .pokemon(let pokemon, let pokedex):
+//                            PokemonView(pokemon: pokemon, pokedex: pokedex)
+//                        case .pokemonDetailForm(let pokemonDetailForm, let pokedex):
+//                            PokemonView(pokemonDetailForm: pokemonDetailForm, pokedex: pokedex)
+//                        case .pokemonLocations(let pokemonDetailForm):
+//                            Text(pokemonDetailForm.name)
+//                        case .type(let type, let game):
+//                            TypeView(type: type, game: game, viewFactory: ConcreteTypeViewFactory())
+//                        }
+//                    case .tab(let tab):
+//                        switch tab {
+//                        case .abilities:
+//                            AbilityList(game: settings.currentGame)
+//                        case .battleAssistant:
+//                            BattleAssistant(
+//                                game: settings.currentGame,
+//                                viewFactory: ConcreteBattleAssistantViewFactory()
+//                            )
+//                        case .dualType:
+//                            DualTypeChecker(
+//                                game: settings.currentGame,
+//                                viewFactory: ConcreteDualTypeCheckerViewFactory()
+//                            )
+//                        case .moves:
+//                            MoveList(game: settings.currentGame)
+//                        case .items:
+//                            ItemList(game: settings.currentGame)
+//                        case .locations:
+//                            LocationList(game: settings.currentGame)
+//                        case .machines:
+//                            MachineList(title: machineListTitle, game: settings.currentGame)
+//                        case .natures:
+//                            NatureList()
+//                        case .pokemon:
+//                            PokemonList(game: settings.currentGame)
+//                        case .teams:
+//                            TeamList(
+//                                game: settings.currentGame,
+//                                viewFactory: ConcreteTeamViewFactory()
+//                            )
+//                        case .types:
+//                            TypeList(game: settings.currentGame)
+//                        }
+//                    case .url(let url):
+//                        SafariView(url: url)
+//                    }
+//                }
+//                .sheet(isPresented: $sheetState.isShowing, content: sheetDestination)
+//                .onOpenURL(perform: handleURL)
+//            }
+//        } detail: {
+//            NavigationStack {
+//                Text("Choose an item to get started")
+//            }
+//        }
+//        .environmentObject(navigationStore)
+//        .task {
+//            if let navigationData {
+//                navigationStore.restore(from: navigationData)
+//            }
+//
+//            for await _ in navigationStore.$path.values {
+//                navigationData = navigationStore.encoded()
+//            }
+//        }
+//    }
 
     @ViewBuilder
     private func contentButtons() -> some View {
         Group {
-            NavigationLink(destination: FilterablePokemonList(game: settings.currentGame), tag: .pokemon, selection: $selectedTab) {
+            NavigationLink(value: Route.tab(.pokemon)) {
                 BigColoredButton(title: "Pokémon", fillColor: AppColor.red.color)
             }
+//            NavigationLink {
+//                PokemonList(game: settings.currentGame)
+//            } label: {
+//                BigColoredButton(title: "Pokémon", fillColor: AppColor.red.color)
+//            }
             .frame(minHeight: mediumButtonHeight)
 
-            NavigationLink(destination: MoveList(game: settings.currentGame), tag: .moves, selection: $selectedTab) {
+            NavigationLink(value: Route.tab(.moves)) {
                 BigColoredButton(title: "Moves", fillColor: AppColor.blue.color)
             }
+//            NavigationLink {
+//                MoveList(game: settings.currentGame)
+//            } label: {
+//                BigColoredButton(title: "Moves", fillColor: AppColor.blue.color)
+//            }
             .frame(minHeight: mediumButtonHeight)
 
-            NavigationLink(destination: LocationList(game: settings.currentGame), tag: .locations, selection: $selectedTab) {
+            NavigationLink(value: Route.tab(.locations)) {
                 BigColoredButton(title: "Locations", fillColor: AppColor.orange.color)
             }
+//            NavigationLink {
+//                LocationList(game: settings.currentGame)
+//            } label: {
+//                BigColoredButton(title: "Locations", fillColor: AppColor.orange.color)
+//            }
             .frame(minHeight: mediumButtonHeight)
 
-            NavigationLink(destination: ItemList(game: settings.currentGame), tag: .items, selection: $selectedTab) {
+            NavigationLink(value: Route.tab(.items)) {
                 BigColoredButton(title: "Items", fillColor: AppColor.teal.color)
             }
+//            NavigationLink {
+//                ItemList(game: settings.currentGame)
+//            } label: {
+//                BigColoredButton(title: "Items", fillColor: AppColor.teal.color)
+//            }
             .frame(minHeight: mediumButtonHeight)
         }
 
         if settings.currentGame.hasAbilities {
-            NavigationLink(destination: AbilityList(game: settings.currentGame), tag: .abilities, selection: $selectedTab) {
+            NavigationLink(value: Route.tab(.abilities)) {
                 BigColoredButton(title: "Abilities", textColor: .black, fillColor: normalItemColor)
             }
+//            NavigationLink {
+//                AbilityList(game: settings.currentGame)
+//            } label: {
+//                BigColoredButton(title: "Abilities", textColor: .black, fillColor: normalItemColor)
+//            }
         }
 
-        NavigationLink(destination: NatureList(), tag: .natures, selection: $selectedTab) {
+        NavigationLink(value: Route.tab(.natures)) {
             BigColoredButton(title: "Natures", textColor: .black, fillColor: normalItemColor)
         }
+//        NavigationLink {
+//            NatureList()
+//        } label: {
+//            BigColoredButton(title: "Natures", textColor: .black, fillColor: normalItemColor)
+//        }
 
-        NavigationLink(destination: TypeList(game: settings.currentGame), tag: .types, selection: $selectedTab) {
+        NavigationLink(value: Route.tab(.types)) {
             BigColoredButton(title: "Types", textColor: .black, fillColor: normalItemColor)
         }
+//        NavigationLink {
+//            TypeList(game: settings.currentGame)
+//        } label: {
+//            BigColoredButton(title: "Types", textColor: .black, fillColor: normalItemColor)
+//        }
 
         if settings.currentGame.hasMachines {
-            NavigationLink(destination: MachineList(title: machineListTitle, game: settings.currentGame), tag: .machines, selection: $selectedTab) {
+            NavigationLink(value: Route.tab(.machines)) {
                 BigColoredButton(title: machineListTitle, textColor: .black, fillColor: normalItemColor)
             }
+//            NavigationLink {
+//                MachineList(title: machineListTitle, game: settings.currentGame)
+//            } label: {
+//                BigColoredButton(title: machineListTitle, textColor: .black, fillColor: normalItemColor)
+//            }
         }
 
-        NavigationLink(destination: DualTypeDetail(game: settings.currentGame), tag: .dualType, selection: $selectedTab) {
+        NavigationLink(value: Route.tab(.dualType)) {
             BigColoredButton(title: "Dual Type Checker", textColor: .black, fillColor: normalItemColor)
         }
+//        NavigationLink {
+//            DualTypeChecker(
+//                game: settings.currentGame,
+//                viewFactory: ConcreteDualTypeCheckerViewFactory()
+//            )
+//        } label: {
+//            BigColoredButton(title: "Dual Type Checker", textColor: .black, fillColor: normalItemColor)
+//        }
 
-        NavigationLink(destination: BattleAssistant().id(settings.currentGame), tag: .battleAssistant, selection: $selectedTab) {
+        NavigationLink(value: Route.tab(.battleAssistant)) {
             BigColoredButton(title: "Battle Assistant", textColor: .black, fillColor: normalItemColor)
         }
+//        NavigationLink {
+//            BattleAssistant(
+//                game: settings.currentGame,
+//                viewFactory: ConcreteBattleAssistantViewFactory()
+//            )
+//        } label: {
+//            BigColoredButton(title: "Battle Assistant", textColor: .black, fillColor: normalItemColor)
+//        }
 
-        NavigationLink(destination: TeamBuilder(game: settings.currentGame).id(settings.currentGame), tag: .teams, selection: $selectedTab) {
+        NavigationLink(value: Route.tab(.teams)) {
             BigColoredButton(title: "Teams", textColor: .black, fillColor: normalItemColor)
         }
+//        NavigationLink {
+//            TeamList(
+//                game: settings.currentGame,
+//                viewFactory: ConcreteTeamViewFactory()
+//            )
+//        } label: {
+//            BigColoredButton(title: "Teams", textColor: .black, fillColor: normalItemColor)
+//        }
     }
 
     @ViewBuilder
@@ -156,15 +433,20 @@ struct ContentView: View {
     private func sheetDestination() -> some View {
         switch sheetState.state {
         case .selectGame:
-            GameSelector()
-        case .settings:
-            NavigationView {
-                Settings()
+            NavigationStack {
+                GameSelector()
+                    .injectDependencies()
             }
-            .navigationViewStyle(.stack)
+        case .settings:
+            NavigationStack {
+                Settings()
+                    .injectDependencies()
+            }
         case .store:
-            Store()
-                .injectDependencies()
+            NavigationStack {
+                Store()
+                    .injectDependencies()
+            }
         case .none:
             EmptyView()
         }
@@ -182,9 +464,9 @@ struct ContentView: View {
 
         switch url.supportedHost {
         case .pokemon:
-            selectedTab = .pokemon
+            navigationStore.path = .init([Route.tab(.pokemon)])
         case .teams:
-            selectedTab = .teams
+            navigationStore.path = .init([Route.tab(.teams)])
         default:
             debugPrint("Unsupported host: \(url)")
             break
@@ -200,164 +482,6 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .environment(\.colorScheme, .dark)
         }
+        .injectDependencies()
     }
-}
-
-private enum Tab: String, Hashable, Identifiable {
-
-    case abilities
-    case battleAssistant
-    case dualType
-    case moves
-    case items
-    case locations
-    case machines
-    case natures
-    case pokemon
-    case teams
-    case types
-
-    var id: String { rawValue }
-
-}
-
-// MARK: Experimental
-// Revisit for SwiftUI 3 to see if TabView is fixed
-private extension ContentView {
-
-    var body2: some View {
-        TabView(selection: $selectedTab) {
-            Group {
-                pokemonTab()
-
-                movesTab()
-
-                locationsTab()
-
-                itemsTab()
-
-                if settings.currentGame.hasAbilities {
-                    abilitiesTab()
-                }
-
-                naturesTab()
-
-                typesTab()
-
-                machinesTab()
-
-                dualTypeCheckerTab()
-
-                battleAssistantTab()
-            }
-
-            teamBuilderTab()
-        }
-        .onOpenURL(perform: handleURL)
-    }
-
-    func pokemonTab() -> some View {
-        NavigationView {
-            FilterablePokemonList(game: settings.currentGame)
-            Text("Choose an item to get started")
-        }
-        //        .if(selectedTab == .pokemon) {
-        //            $0
-        .tabItem { Label("Pokémon", systemImage: "book.fill") }
-        //        } else: {
-        //            $0.tabItem { Label("Pokémon", systemImage: "book") }
-        //        }
-        .tag(Tab.pokemon)
-    }
-
-    func movesTab() -> some View {
-        NavigationView {
-            MoveList(game: settings.currentGame)
-            Text("Choose an item to get started")
-        }
-        .tabItem { Label("Moves", systemImage: "chevron.right.2") }
-        .tag(Tab.moves)
-    }
-
-    func locationsTab() -> some View {
-        NavigationView {
-            LocationList(game: settings.currentGame)
-            Text("Choose an item to get started")
-        }
-        .tabItem { Label("Locations", systemImage: "location") }
-        .tag(Tab.locations)
-    }
-
-    func itemsTab() -> some View {
-        NavigationView {
-            ItemList(game: settings.currentGame)
-            Text("Choose an item to get started")
-        }
-        .tabItem { Label("Items", systemImage: "pills") }
-        .tag(Tab.items)
-    }
-
-    func abilitiesTab() -> some View {
-        NavigationView {
-            AbilityList(game: settings.currentGame)
-            Text("Choose an item to get started")
-        }
-        .tabItem { Label("Abilities", systemImage: "bolt.horizontal") }
-        .tag(Tab.abilities)
-    }
-
-    func naturesTab() -> some View {
-        NavigationView {
-            NatureList()
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .tabItem { Label("Natures", systemImage: "leaf") }
-        .tag(Tab.natures)
-    }
-
-    func typesTab() -> some View {
-        NavigationView {
-            TypeList(game: settings.currentGame)
-            Text("Choose an item to get started")
-        }
-        .tabItem { Label("Types", systemImage: "doc") }
-        .tag(Tab.types)
-    }
-
-    func machinesTab() -> some View {
-        NavigationView {
-            MachineList(title: machineListTitle, game: settings.currentGame)
-            Text("Choose an item to get started")
-        }
-        .tabItem { Label(machineListTitle, systemImage: "opticaldisc") }
-        .tag(Tab.machines)
-    }
-
-    func dualTypeCheckerTab() -> some View {
-        NavigationView {
-            DualTypeDetail(game: settings.currentGame)
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .tabItem { Label("Dual Type Checker", systemImage: "person.2") }
-        .tag(Tab.dualType)
-    }
-
-    func battleAssistantTab() -> some View {
-        NavigationView {
-            BattleAssistant()
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .tabItem { Label("Battle Assistant", systemImage: "hammer") }
-        .tag(Tab.battleAssistant)
-    }
-
-    func teamBuilderTab() -> some View {
-        NavigationView {
-            TeamBuilder(game: settings.currentGame)
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .tabItem { Label("Teams", systemImage: "person.3") }
-        .tag(Tab.teams)
-    }
-
 }

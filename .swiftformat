@@ -1,0 +1,11 @@
+# format options
+
+
+# file options
+-- exclude AppStore
+-- exclude Crawlers
+-- exclude Research
+-- exclude Scripts
+
+# rules
+

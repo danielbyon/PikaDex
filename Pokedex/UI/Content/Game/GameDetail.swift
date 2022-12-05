@@ -32,7 +32,7 @@ struct GameDetail: View {
 
 struct GameDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             GameDetail(game: .sword, selectAction: {})
         }
     }

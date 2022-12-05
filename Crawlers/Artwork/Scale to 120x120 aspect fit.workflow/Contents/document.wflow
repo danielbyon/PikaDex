@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>492</string>
+	<string>520</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -164,12 +164,10 @@
 						<string>3</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:157.000000</string>
+				<string>309.000000:153.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -205,7 +203,9 @@
 						<key>isPathPopUp</key>
 						<true/>
 						<key>variableUUIDsInMenu</key>
-						<array/>
+						<array>
+							<string>9472D4AD-17FE-498F-A6DE-A784061C96C9</string>
+						</array>
 					</dict>
 				</dict>
 				<key>AMProvides</key>
@@ -226,7 +226,7 @@
 					<key>replaceExisting</key>
 					<false/>
 					<key>toDirectory</key>
-					<string>~/Downloads/Test</string>
+					<string>~/Documents/dev/Pokedex/Crawlers/Artwork/FinalScarletVioletSprites</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.CopyFiles</string>
@@ -286,12 +286,10 @@
 						<string>1</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:259.000000</string>
+				<string>309.000000:253.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Copy Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -423,12 +421,10 @@
 						<string>2</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:434.000000</string>
+				<string>309.000000:428.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Pad Images.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -438,14 +434,14 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>84A16F5E-E079-43E8-B5D8-AE517DC4105A</key>
+		<key>016BCEC6-0BA6-420C-B1EF-5629697367ED</key>
 		<dict>
 			<key>from</key>
 			<string>3FEFA27E-9451-4190-B6D2-655B84E58789 - 3FEFA27E-9451-4190-B6D2-655B84E58789</string>
 			<key>to</key>
 			<string>8B98AF5D-B49D-4C4F-920B-5B32E4BBDEDD - 8B98AF5D-B49D-4C4F-920B-5B32E4BBDEDD</string>
 		</dict>
-		<key>B1E54A18-9A2F-4731-8190-CBE016692133</key>
+		<key>BFA20D22-3091-4E53-B844-B6D4D312D09F</key>
 		<dict>
 			<key>from</key>
 			<string>29501DC6-4A3B-4A99-AB9F-20E16528A72C - 29501DC6-4A3B-4A99-AB9F-20E16528A72C</string>
@@ -453,6 +449,19 @@
 			<string>3FEFA27E-9451-4190-B6D2-655B84E58789 - 3FEFA27E-9451-4190-B6D2-655B84E58789</string>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>9472D4AD-17FE-498F-A6DE-A784061C96C9</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Path</string>
+			<key>name</key>
+			<string>Path</string>
+			<key>value</key>
+			<string>~/Desktop</string>
+		</dict>
+	</array>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>workflowTypeIdentifier</key>

@@ -12,14 +12,15 @@ import codecs
 import CrawlerUtils as crawler
  
 moveset_keys = [
-    "gen8",
+    "gen9",
     "gen1",
     "gen2",
     "gen3",
     "gen4", 
     "gen5",
     "gen6",
-    "gen7"
+    "gen7",
+    'gen8'
 ]
 moveset_file_suffixes = [
     "", 
@@ -29,7 +30,8 @@ moveset_file_suffixes = [
     "-Generation_IV_learnset", 
     "-Generation_V_learnset",
     "-Generation_VI_learnset",
-    "-Generation_VII_learnset"
+    "-Generation_VII_learnset",
+    '-Generation_VIII_learnset'
 ]
 moveset_page_suffixes = [
     "", 
@@ -39,7 +41,8 @@ moveset_page_suffixes = [
     "/Generation_IV_learnset", 
     "/Generation_V_learnset",
     "/Generation_VI_learnset",
-    "/Generation_VII_learnset"
+    "/Generation_VII_learnset",
+    '/Generation_VIII_learnset'
 ]
 
 def base_page_name(name):
@@ -82,7 +85,8 @@ def process_file(key, contents):
                 if pokemon == "000":
                     pokemons = []
                     break
-                pokemons.append(pokemon)
+                if pokemon not in pokemons:
+                    pokemons.append(pokemon)
 
             if len(pokemons) == 0:
                 continue
@@ -132,7 +136,7 @@ def main():
 
                 entries = process_file(key, contents)
                 pokemon_entries[key] = entries
-            
+                
             if not pokemon_entries:
                 print(u"Empty entries for {}".format(pokemon))
                 sys.exit(1)

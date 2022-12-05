@@ -46,7 +46,7 @@ struct UpdateMessageView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 section(name: "New Features", entries: viewModel.newFeatures)
                 section(name: "Bug Fixes", entries: viewModel.bugFixes)
@@ -62,17 +62,20 @@ struct UpdateMessageView: View {
             }
             .navigationTitle(title)
         }
-        .navigationViewStyle(.stack)
     }
 
     @ViewBuilder
     private func section(name: String, entries: [String]) -> some View {
         if !entries.isEmpty {
-            Section(name) {
+            Section {
                 ForEach(entries, id: \.self) { entry in
-                    Text(entry)
-                        .lineLimit(nil)
+//                    Card {
+                        Text(entry)
+                            .lineLimit(nil)
+//                    }
                 }
+            } header: {
+                Text(name)
             }
         }
     }
@@ -81,7 +84,7 @@ struct UpdateMessageView: View {
 
 struct UpdateMessage_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             UpdateMessageView()
         }
     }

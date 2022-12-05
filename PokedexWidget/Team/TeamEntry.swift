@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PokedexUI
 import WidgetKit
 
 struct TeamEntry: TimelineEntry {

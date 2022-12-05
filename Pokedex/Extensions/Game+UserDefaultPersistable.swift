@@ -8,5 +8,6 @@
 
 import Foundation
 import AppSupport
+import PokedexCore
 
 extension Game: UserDefaultPersistable { }

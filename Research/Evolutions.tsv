@@ -1,565 +1,623 @@
-family	gameFilter	excludeGames	baseName	baseFormName	targetName	targetFormName	methodName	methodData	requirementName	requirementData
-Bulbasaur			Bulbasaur		Ivysaur		levelUp	16		
-Bulbasaur			Ivysaur		Venusaur	Venusaur	levelUp	32		
-Charmander			Charmander		Charmeleon		levelUp	16		
-Charmander			Charmeleon		Charizard	Charizard	levelUp	36		
-Squirtle			Squirtle		Wartortle		levelUp	16		
-Squirtle			Wartortle		Blastoise		levelUp	36		
-Caterpie			Caterpie		Metapod		levelUp	7		
-Caterpie			Metapod		Butterfree		levelUp	10		
-Weedle			Weedle		Kakuna		levelUp	7		
-Weedle			Kakuna		Beedrill	Beedrill	levelUp	10		
-Pidgey			Pidgey		Pidgeotto		levelUp	18		
-Pidgey			Pidgeotto		Pidgeot	Pidgeot	levelUp	36		
-Rattata			Rattata		Raticate	Raticate	levelUp	20		
-Rattata			Rattata	Alolan Rattata	Raticate	Alolan Raticate	levelUp	20	timeOfDay	night
-Spearow			Spearow		Fearow		levelUp	20		
-Ekans			Ekans		Arbok		levelUp	22		
-Pikachu			Pichu		Pikachu		friendship			
-Pikachu			Pikachu		Raichu	Raichu	useItem	Thunder Stone		
-Pikachu			Pikachu		Raichu	Alolan Raichu	useItem	Thunder Stone		
-Sandshrew			Sandshrew		Sandslash		levelUp	22		
-Sandshrew			Sandshrew	Alolan Sandshrew	Sandslash	Alolan Sandslash	useItem	Ice Stone	region	Alola
-Nidoran			Nidoran♀		Nidorina		levelUp	16		
-Nidoran			Nidorina		Nidoqueen		useItem	Moon Stone		
-Nidoran			Nidoran♂		Nidorino		levelUp	16		
-Nidoran			Nidorino		Nidoking		useItem	Moon Stone		
-Clefairy			Cleffa		Clefairy		friendship			
-Clefairy			Clefairy		Clefable		useItem	Moon Stone		
-Vulpix			Vulpix		Ninetales		useItem	Fire Stone		
-Vulpix			Vulpix	Alolan Vulpix	Ninetales	Alolan Ninetales	useItem	Ice Stone	region	Alola
-Jigglypuff			Igglybuff		Jigglypuff		friendship			
-Jigglypuff			Jigglypuff		Wigglytuff		useItem	Moon Stone		
-Zubat			Zubat		Golbat		levelUp	22		
-Zubat			Golbat		Crobat		friendship			
-Oddish			Oddish		Gloom		levelUp	21		
-Oddish			Gloom		Vileplume		useItem	Leaf Stone		
-Oddish			Gloom		Bellossom		useItem	Sun Stone		
-Paras			Paras		Parasect		levelUp	24		
-Venonat			Venonat		Venomoth		levelUp	31		
-Diglett			Diglett		Dugtrio		levelUp	26		
-Diglett			Diglett	Alolan Diglett	Dugtrio	Alolan Dugtrio	levelUp	26	region	Alola
-Meowth			Meowth		Persian		levelUp	28		
-Meowth			Meowth	Alolan Meowth	Persian	Alolan Persian	friendship		region	Alola
-Meowth			Meowth	Galarian Meowth	Perrserker		levelUp	28		
-Psyduck			Psyduck		Golduck		levelUp	33		
-Mankey			Mankey		Primeape		levelUp	28		
-Growlithe		legendsArceus	Growlithe		Arcanine		useItem	Fire Stone		
-Growlithe			Growlithe	Hisuian Growlithe	Arcanine	Hisuian Arcanine	useItem	Fire Stone		
-Poliwag			Poliwag		Poliwhirl		levelUp	25		
-Poliwag			Poliwhirl		Poliwrath		useItem	Water Stone		
-Poliwag			Poliwhirl		Politoed		tradeHoldingItem	King's Rock		
-Abra			Abra		Kadabra		levelUp	16		
-Abra			Kadabra		Alakazam		trade			
-Machop			Machop		Machoke		levelUp	28		
-Machop			Machoke		Machamp		trade			
-Bellsprout			Bellsprout		Weepinbell		levelUp	21		
-Bellsprout			Weepinbell		Victreebel		useItem	Leaf Stone		
-Tentacool			Tentacool		Tentacruel		levelUp	30		
-Geodude			Geodude		Graveler		levelUp	25		
-Geodude			Graveler		Golem		trade			
-Geodude			Geodude	Alolan Geodude	Graveler	Alolan Graveler	levelUp	25	region	Alola
-Geodude			Graveler	Alolan Graveler	Golem	Alolan Golem	trade		region	Alola
-Ponyta			Ponyta		Rapidash		levelUp	40		
-Ponyta			Ponyta	Galarian Ponyta	Rapidash	Galarian Rapidash	levelUp	40		
-Slowpoke			Slowpoke		Slowbro		levelUp	37		
-Slowpoke			Slowpoke	Galarian Slowpoke	Slowbro	Galarian Slowbro	useItem	Galarica Cuff		
-Slowpoke			Slowpoke		Slowking		tradeHoldingItem	King's Rock		
-Slowpoke	sword		Slowpoke		Slowking	Galarian Slowking	useItem	Galarica Wreath		
-Slowpoke	shield		Slowpoke		Slowking	Galarian Slowking	useItem	Galarica Wreath		
-Magnemite			Magnemite		Magneton		levelUp	30		
-Magnemite			Magneton		Magnezone		levelUpInArea	Special magnetic field		
-Farfetch'd			Farfetch'd	Galarian Farfetch'd	Sirfetch'd		completeBattlePerformingAction	3 critical hits in a single battle		
-Doduo			Doduo		Dodrio		levelUp	31		
-Seel			Seel		Dewgong		levelUp	34		
-Grimer		legendsArceus	Grimer		Muk		levelUp	38		
-Grimer			Grimer	Alolan Grimer	Muk	Alolan Muk	levelUp	38	region	Alola
-Shellder			Shellder		Cloyster		useItem	Water Stone		
-Gastly			Gastly		Haunter		levelUp	25		
-Gastly			Haunter		Gengar		trade			
-Onix			Onix		Steelix		tradeHoldingItem	Metal Coat		
-Drowzee			Drowzee		Hypno		levelUp	26		
-Krabby			Krabby		Kingler		levelUp	28		
-Voltorb		legendsArceus	Voltorb		Electrode		levelUp	30		
-Voltorb			Voltorb	Hisuian Voltorb	Electrode	Hisuian Electrode	useItem	Leaf Stone		
-Exeggcute			Exeggcute		Exeggutor		useItem	Leaf Stone		
-Exeggcute			Exeggcute		Exeggutor	Alolan Exeggutor	useItem	Leaf Stone	region	Alola
-Cubone			Cubone		Marowak		levelUp	28		
-Cubone			Cubone		Marowak	Alolan Marowak	levelUp	28	timeOfDay	night
-Hitmon			Tyrogue		Hitmonlee		levelUp	20	other	Attack > Defense
-Hitmon			Tyrogue		Hitmonchan		levelUp	20	other	Attack < Defense
-Hitmon			Tyrogue		Hitmontop		levelUp	20	other	Attack = Defense
-Lickitung			Lickitung		Lickilicky		levelUpKnowingMove	Rollout		
-Koffing			Koffing		Weezing		levelUp	35		
-Koffing			Koffing		Weezing	Galarian Weezing	levelUp	35	region	galar
-Rhyhorn			Rhyhorn		Rhydon		levelUp	42		
-Rhyhorn			Rhydon		Rhyperior		tradeHoldingItem	Protector		
-Chansey			Happiny		Chansey		levelUpHoldingItem	Oval Stone	timeOfDay	day
-Chansey			Chansey		Blissey		friendship			
-Tangela			Tangela		Tangrowth		levelUpKnowingMove	Ancient Power		
-Horsea			Horsea		Seadra		levelUp	32		
-Horsea			Seadra		Kingdra		tradeHoldingItem	Dragon Scale		
-Goldeen			Goldeen		Seaking		levelUp	33		
-Staryu			Staryu		Starmie		useItem	Water Stone		
-Mr. Mime			Mime Jr.		Mr. Mime		levelUpKnowingMove	Mimic		
-Mr. Mime			Mime Jr.		Mr. Mime		levelUpKnowingMove	Mimic	region	galar
-Mr. Mime			Mr. Mime		Mr. Rime		levelUp	42		
-Scyther			Scyther		Scizor		tradeHoldingItem	Metal Coat		
-Jynx			Smoochum		Jynx		levelUp	30		
-Electabuzz			Elekid		Electabuzz		levelUp	30		
-Electabuzz			Electabuzz		Electivire		tradeHoldingItem	Electirizer		
-Magmar			Magby		Magmar		levelUp	30		
-Magmar			Magmar		Magmortar		tradeHoldingItem	Magmarizer		
-Magikarp			Magikarp		Gyarados		levelUp	20		
-Eevee			Eevee		Vaporeon		useItem	Water Stone		
-Eevee			Eevee		Jolteon		useItem	Thunder Stone		
-Eevee			Eevee		Flareon		useItem	Fire Stone		
-Eevee			Eevee		Espeon		friendship		timeOfDay	day
-Eevee			Eevee		Umbreon		friendship		timeOfDay	night
-Eevee	diamond		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	pearl		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	platinum		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	heartGold		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	soulSilver		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	black		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	white		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	black2		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	white2		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	x		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	y		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	omegaRuby		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	alphaSapphire		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	sun		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	moon		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	ultraSun		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	ultraMoon		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	letsGoPikachu		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	letsGoEevee		Eevee		Leafeon		levelUpInArea	Near Moss Rock		
-Eevee	sword		Eevee		Leafeon		useItem	Leaf Stone		
-Eevee	shield		Eevee		Leafeon		useItem	Leaf Stone		
-Eevee	legendsArceus		Eevee		Leafeon		useItem	Leaf Stone		
-Eevee	diamond		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	pearl		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	platinum		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	heartGold		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	soulSilver		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	black		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	white		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	black2		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	white2		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	x		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	y		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	omegaRuby		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	alphaSapphire		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	sun		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	moon		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	ultraSun		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	ultraMoon		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	letsGoPikachu		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	letsGoEevee		Eevee		Glaceon		levelUpInArea	Near Ice Rock		
-Eevee	sword		Eevee		Glaceon		useItem	Ice Stone		
-Eevee	shield		Eevee		Glaceon		useItem	Ice Stone		
-Eevee	legendsArceus		Eevee		Glaceon		useItem	Ice Stone		
-Eevee			Eevee		Sylveon		levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move
-Porygon			Porygon		Porygon2		tradeHoldingItem	Upgrade		
-Porygon			Porygon2		Porygon-Z		tradeHoldingItem	Dubious Disc		
-Omanyte			Omanyte		Omastar		levelUp	40		
-Kabuto			Kabuto		Kabutops		levelUp	40		
-Snorlax			Munchlax		Snorlax		friendship			
-Dratini			Dratini		Dragonair		levelUp	30		
-Dratini			Dragonair		Dragonite		levelUp	55		
-Chikorita			Chikorita		Bayleef		levelUp	16		
-Chikorita			Bayleef		Meganium		levelUp	32		
-Cyndaquil		legendsArceus	Cyndaquil		Quilava		levelUp	14		
-Cyndaquil	legendsArceus		Cyndaquil		Quilava		levelUp	17		
-Cyndaquil		legendsArceus	Quilava		Typhlosion		levelUp	36		
-Cyndaquil	legendsArceus		Quilava		Typhlosion	Hisuian Typhlosion	levelUp	36		
-Totodile			Totodile		Croconaw		levelUp	18		
-Totodile			Croconaw		Feraligatr		levelUp	30		
-Sentret			Sentret		Furret		levelUp	15		
-Hoothoot			Hoothoot		Noctowl		levelUp	20		
-Ledyba			Ledyba		Ledian		levelUp	18		
-Spinarak			Spinarak		Ariados		levelUp	22		
-Chinchou			Chinchou		Lanturn		levelUp	27		
-Togepi			Togepi		Togetic		friendship			
-Togepi			Togetic		Togekiss		useItem	Shiny Stone		
-Natu			Natu		Xatu		levelUp	25		
-Mareep			Mareep		Flaaffy		levelUp	15		
-Mareep			Flaaffy		Ampharos		levelUp	30		
-Marill			Azurill		Marill		friendship			
-Marill			Marill		Azumarill		levelUp	18		
-Sudowoodo			Bonsly		Sudowoodo		levelUpKnowingMove	Mimic		
-Hoppip			Hoppip		Skiploom		levelUp	18		
-Hoppip			Skiploom		Jumpluff		levelUp	27		
-Aipom			Aipom		Ambipom		levelUpKnowingMove	Double Hit		
-Sunkern			Sunkern		Sunflora		useItem	Sun Stone		
-Yanma			Yanma		Yanmega		levelUpKnowingMove	Ancient Power		
-Wooper			Wooper		Quagsire		levelUp	20		
-Murkrow			Murkrow		Honchkrow		useItem	Dusk Stone		
-Misdreavus			Misdreavus		Mismagius		useItem	Dusk Stone		
-Wobbuffet			Wynaut		Wobbuffet		levelUp	15		
-Pineco			Pineco		Forretress		levelUp	31		
-Gligar			Gligar		Gliscor		levelUpHoldingItem	Razor Fang	timeOfDay	night
-Snubbull			Snubbull		Granbull		levelUp	23		
-Qwilfish			Qwilfish	Hisuian Qwilfish	Overqwil		other	Use Barb Barrage 20 times in Strong Style		
-Sneasel			Sneasel		Weavile		levelUpHoldingItem	Razor Claw	timeOfDay	night
-Sneasel			Sneasel	Hisuian Sneasel	Sneasler		useItem	Razor Claw	timeOfDay	day
-Teddiursa			Teddiursa		Ursaring		levelUp	30		
-Teddiursa			Ursaring		Ursaluna		useItem	Peat Block	other	Under a full moon
-Slugma			Slugma		Magcargo		levelUp	38		
-Swinub			Swinub		Piloswine		levelUp	33		
-Swinub			Piloswine		Mamoswine		levelUpKnowingMove	Ancient Power		
-Corsola			Corsola	Galarian Corsola	Cursola		levelUp	38		
-Remoraid			Remoraid		Octillery		levelUp	25		
-Mantine			Mantyke		Mantine		levelUpWithPartyMember	Remoraid		
-Houndour			Houndour		Houndoom		levelUp	24		
-Phanpy			Phanpy		Donphan		levelUp	25		
-Larvitar			Larvitar		Pupitar		levelUp	30		
-Larvitar			Pupitar		Tyranitar		levelUp	55		
-Treecko			Treecko		Grovyle		levelUp	16		
-Treecko			Grovyle		Sceptile		levelUp	36		
-Torchic			Torchic		Combusken		levelUp	16		
-Torchic			Combusken		Blaziken		levelUp	36		
-Mudkip			Mudkip		Marshtomp		levelUp	16		
-Mudkip			Marshtomp		Swampert		levelUp	36		
-Poochyena			Poochyena		Mightyena		levelUp	18		
-Zigzagoon			Zigzagoon		Linoone		levelUp	20		
-Zigzagoon			Zigzagoon	Galarian Zigzagoon	Linoone	Galarian Linoone	levelUp	20		
-Zigzagoon			Linoone	Galarian Linoone	Obstagoon		levelUp	35	timeOfDay	night
-Wurmple			Wurmple		Silcoon		levelUp	7		
-Wurmple			Silcoon		Beautifly		levelUp	10		
-Wurmple			Wurmple		Cascoon		levelUp	7		
-Wurmple			Cascoon		Dustox		levelUp	10		
-Lotad			Lotad		Lombre		levelUp	14		
-Lotad			Lombre		Ludicolo		useItem	Water Stone		
-Seedot			Seedot		Nuzleaf		levelUp	14		
-Seedot			Nuzleaf		Shiftry		useItem	Leaf Stone		
-Taillow			Taillow		Swellow		levelUp	22		
-Wingull			Wingull		Pelipper		levelUp	25		
-Ralts			Ralts		Kirlia		levelUp	20		
-Ralts			Kirlia		Gardevoir		levelUp	30		
-Ralts			Kirlia		Gallade		useItem	Dawn Stone	gender	male
-Surskit			Surskit		Masquerain		levelUp	22		
-Shroomish			Shroomish		Breloom		levelUp	23		
-Slakoth			Slakoth		Vigoroth		levelUp	18		
-Slakoth			Vigoroth		Slaking		levelUp	36		
-Nincada			Nincada		Ninjask		levelUp	20		
-Nincada			Nincada		Shedinja		levelUp	20	other	Free space in party & a Poké Ball in bag
-Whismur			Whismur		Loudred		levelUp	20		
-Whismur			Whismur		Exploud		levelUp	40		
-Makuhita			Makuhita		Hariyama		levelUp	24		
-Nosepass			Nosepass		Probopass		levelUpInArea	Special magnetic field		
-Skitty			Skitty		Delcatty		useItem	Moon Stone		
-Aron			Aron		Lairon		levelUp	32		
-Aron			Lairon		Aggron		levelUp	42		
-Meditite			Meditite		Medicham		levelUp	37		
-Electrike			Electrike		Manectric		levelUp	26		
-Roselia			Budew		Roselia		friendship		timeOfDay	day
-Roselia			Roselia		Roserade		useItem	Shiny Stone		
-Gulpin			Gulpin		Swalot		levelUp	26		
-Carvanha			Carvanha		Sharpedo		levelUp	30		
-Wailmer			Wailmer		Wailord		levelUp	40		
-Numel			Numel		Camerupt		levelUp	33		
-Spoink			Spoink		Grumpig		levelUp	32		
-Trapinch			Trapinch		Vibrava		levelUp	35		
-Trapinch			Vibrava		Flygon		levelUp	45		
-Cacnea			Cacnea		Cacturne		levelUp	32		
-Swablu			Swablu		Altaria		levelUp	35		
-Barboach			Barboach		Whiscash		levelUp	30		
-Corphish			Corphish		Crawdaunt		levelUp	30		
-Baltoy			Baltoy		Claydol		levelUp	36		
-Lileep			Lileep		Cradily		levelUp	40		
-Anorith			Anorith		Armaldo		levelUp	40		
-Feebas	ruby		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	sapphire		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	emerald		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	fireRed		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	leafGreen		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	diamond		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	pearl		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	platinum		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	heartGold		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	soulSilver		Feebas		Milotic		levelUpWithStats	Maximum Beauty		
-Feebas	black		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	white		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	black2		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	white2		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	x		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	y		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	omegaRuby		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	alphaSapphire		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	sun		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	moon		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	ultraSun		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	ultraMoon		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	letsGoPikachu		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	letsGoEevee		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	sword		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Feebas	shield		Feebas		Milotic		tradeHoldingItem	Prism Scale		
-Shuppet			Shuppet		Banette		levelUp	37		
-Duskull			Duskull		Dusclops		levelUp	37		
-Duskull			Dusclops		Dusknoir		tradeHoldingItem	Reaper Cloth		
-Chimecho			Chingling		Chimecho		friendship		timeOfDay	night
-Snorunt			Snorunt		Glalie		levelUp	42		
-Snorunt			Snorunt		Froslass		useItem	Dawn Stone	gender	female
-Spheal			Spheal		Sealeo		levelUp	32		
-Spheal			Sealeo		Walrein		levelUp	44		
-Clamperl			Clamperl		Huntail		tradeHoldingItem	Deep Sea Tooth		
-Clamperl			Clamperl		Gorebyss		tradeHoldingItem	Deep Sea Scale		
-Bagon			Bagon		Shelgon		levelUp	30		
-Bagon			Shelgon		Salamence		levelUp	50		
-Beldum			Beldum		Metang		levelUp	20		
-Beldum			Metang		Metagross		levelUp	45		
-Turtwig			Turtwig		Grotle		levelUp	18		
-Turtwig			Grotle		Torterra		levelUp	32		
-Chimchar			Chimchar		Monferno		levelUp	14		
-Chimchar			Monferno		Infernape		levelUp	36		
-Piplup			Piplup		Prinplup		levelUp	16		
-Piplup			Prinplup		Empoleon		levelUp	36		
-Starly			Starly		Staravia		levelUp	14		
-Starly			Staravia		Staraptor		levelUp	34		
-Bidoof			Bidoof		Bibarel		levelUp	15		
-Kricketot			Kricketot		Kricketune		levelUp	10		
-Shinx			Shinx		Luxio		levelUp	15		
-Shinx			Luxio		Luxray		levelUp	30		
-Cranidos			Cranidos		Rampardos		levelUp	30		
-Shieldon			Shieldon		Bastiodon		levelUp	30		
-Burmy			Burmy	Plant Cloak	Wormadam	Plant Cloak	levelUp	20	gender	female
-Burmy			Burmy	Sandy Cloak	Wormadam	Sandy Cloak	levelUp	20	gender	female
-Burmy			Burmy	Trash Cloak	Wormadam	Trash Cloak	levelUp	20	gender	female
-Burmy			Burmy		Mothim		levelUp	20	gender	male
-Combee			Combee		Vespiquen		levelUp	21	gender	female
-Buizel			Buizel		Floatzel		levelUp	26		
-Cherubi			Cherubi		Cherrim		levelUp	25		
-Cherubi			Cherubi		Cherrim	Sunshine Form	levelUp	25		
-Shellos			Shellos	Shellos	Gastrodon	Gastrodon	levelUp	30		
-Shellos			Shellos	West Sea Form	Gastrodon	West Sea Form	levelUp	30		
-Shellos			Shellos	East Sea Form	Gastrodon	East Sea Form	levelUp	30		
-Drifloon			Drifloon		Drifblim		levelUp	28		
-Buneary			Buneary		Lopunny		friendship			
-Glameow			Glameow		Purugly		levelUp	38		
-Stunky			Stunky		Skuntank		levelUp	34		
-Bronzor			Bronzor		Bronzong		levelUp	33		
-Gible			Gible		Gabite		levelUp	24		
-Gible			Gible		Garchomp		levelUp	48		
-Riolu			Riolu		Lucario		friendship		timeOfDay	day
-Hippopotas			Hippopotas		Hippowdon		levelUp	34		
-Skorupi			Skorupi		Drapion		levelUp	40		
-Croagunk			Croagunk		Toxicroak		levelUp	37		
-Finneon			Finneon		Lumineon		levelUp	31		
-Snover			Snover		Abomasnow		levelUp	40		
-Snivy			Snivy		Servine		levelUp	17		
-Snivy			Servine		Serperior		levelUp	36		
-Tepig			Tepig		Pignite		levelUp	17		
-Tepig			Pignite		Emboar		levelUp	36		
-Oshawott			Oshawott		Dewott		levelUp	17		
-Oshawott		legendsArceus	Dewott		Samurott		levelUp	36		
-Oshawott			Dewott		Samurott	Hisuian Samurott	levelUp	36		
-Patrat			Patrat		Watchog		levelUp	20		
-Lillipup			Lillipup		Herdier		levelUp	16		
-Lillipup			Herdier		Stoutland		levelUp	32		
-Purrloin			Purrloin		Liepard		levelUp	20		
-Pansage			Pansage		Simisage		useItem	Leaf Stone		
-Pansear			Pansear		Simisear		useItem	Fire Stone		
-Panpour			Panpour		Simipour		useItem	Water Stone		
-Munna			Munna		Musharna		useItem	Moon Stone		
-Pidove			Pidove		Tranquill		levelUp	21		
-Pidove			Tranquill		Unfezant		levelUp	32		
-Blitzle			Blitzle		Zebstrika		levelUp	27		
-Roggenrola			Roggenrola		Boldore		levelUp	25		
-Roggenrola			Boldore		Gigalith		trade			
-Woobat			Woobat		Swoobat		friendship			
-Drilbur			Drilbur		Excadrill		levelUp	31		
-Timburr			Timburr		Gurdurr		levelUp	25		
-Timburr			Gurdurr		Conkeldurr		trade			
-Tympole			Tympole		Palpitoad		levelUp	25		
-Tympole			Palpitoad		Seismitoad		levelUp	36		
-Sewaddle			Sewaddle		Swadloon		levelUp	20		
-Sewaddle			Swadloon		Leavanny		friendship			
-Venipede			Venipede		Whirlipede		levelUp	22		
-Venipede			Whirlipede		Scolipede		levelUp	30		
-Cottonee			Cottonee		Whimsicott		useItem	Sun Stone		
-Petilil		legendsArceus	Petilil		Lilligant		useItem	Sun Stone		
-Petilil			Petilil		Lilligant	Hisuian Lilligant	useItem	Sun Stone		
-Basculin			Basculin	White-Striped Form	Basculegion	Male	other	Receive 294 recoil damage in battle		
-Basculin			Basculin	White-Striped Form	Basculegion	Female	other	Receive 294 recoil damage in battle		
-Sandile			Sandile		Krokorok		levelUp	29		
-Sandile			Krokorok		Krookodile		levelUp	40		
-Darumaka			Darumaka		Darmanitan		levelUp	35		
-Darumaka			Darumaka	Galarian Darumaka	Darmanitan	Galarian Standard Mode	useItem	Ice Stone		
-Dwebble			Dwebble		Crustle		levelUp	34		
-Scraggy			Scraggy		Scrafty		levelUp	39		
-Yamask			Yamask		Cofagrigus		levelUp	34		
-Yamask			Yamask	Galarian Yamask	Runerigus		levelUp	34	other	Travel under the stone bridge in Dusty Bowl  after Yamask takes at least 49 HP damage in one attack without fainting
-Tirtouga			Tirtouga		Carracosta		levelUp	37		
-Archen			Archen		Archeops		levelUp	37		
-Trubbish			Trubbish		Garbodor		levelUp	36		
-Zorua		legendsArceus	Zorua		Zoroark		levelUp	30		
-Zorua			Zorua	Hisuian Zorua	Zoroark	Hisuian Zoroark	levelUp	30		
-Minccino			Minccino		Cinccino		useItem	Shiny Stone		
-Gothita			Gothita		Gothorita		levelUp	32		
-Gothita			Gothorita		Gothitelle		levelUp	41		
-Solosis			Solosis		Duosion		levelUp	32		
-Solosis			Duosion		Reuniclus		levelUp	41		
-Ducklett			Ducklett		Swanna		levelUp	35		
-Vanillite			Vanillite		Vanillish		levelUp	35		
-Vanillite			Vanillish		Vanilluxe		levelUp	47		
-Deerling			Deerling	Spring Form	Sawsbuck	Spring Form	levelUp	34		
-Deerling			Deerling	Summer Form	Sawsbuck	Summer Form	levelUp	34		
-Deerling			Deerling	Autumn Form	Sawsbuck	Autumn Form	levelUp	34		
-Deerling			Deerling	Winter Form	Sawsbuck	Winter Form	levelUp	34		
-Karrablast			Karrablast		Escavalier		tradeForPokemon	Shelmet		
-Foongus			Foongus		Amoonguss		levelUp	39		
-Frillish			Frillish		Jellicent		levelUp	40		
-Joltik			Joltik		Galvantula		levelUp	36		
-Ferroseed			Ferroseed		Ferrothorn		levelUp	40		
-Klink			Klink		Klang		levelUp	38		
-Klink			Klang		Klinklang		levelUp	49		
-Tynamo			Tynamo		Eelektrik		levelUp	39		
-Tynamo			Eelektrik		Eelektross		useItem	Thunder Stone		
-Elgyem			Elgyem		Beheeyem		levelUp	42		
-Litwick			Litwick		Lampent		levelUp	41		
-Litwick			Lampent		Chandelure		useItem	Dusk Stone		
-Axew			Axew		Fraxure		levelUp	38		
-Axew			Fraxure		Haxorus		levelUp	48		
-Cubchoo			Cubchoo		Beartic		levelUp	37		
-Shelmet			Shelmet		Accelgor		tradeForPokemon	Karrablast		
-Mienfoo			Mienfoo		Mienshao		levelUp	50		
-Golett			Golett		Golurk		levelUp	43		
-Pawniard			Pawniard		Bisharp		levelUp	52		
-Rufflet		legendsArceus	Rufflet		Braviary		levelUp	54		
-Rufflet			Rufflet		Braviary	Hisuian Braviary	levelUp	54		
-Vullaby			Vullaby		Mandibuzz		levelUp	54		
-Deino			Deino		Zweilous		levelUp	50		
-Deino			Zweilous		Hydreigon		levelUp	64		
-Larvesta			Larvesta		Volcarona		levelUp	59		
-Chespin			Chespin		Quilladin		levelUp	16		
-Chespin			Quilladin		Chesnaught		levelUp	36		
-Fennekin			Fennekin		Braixen		levelUp	16		
-Fennekin			Braixen		Delphox		levelUp	36		
-Froakie			Froakie		Frogadier		levelUp	16		
-Froakie			Frogadier		Greninja		levelUp	36		
-Bunnelby			Bunnelby		Diggersby		levelUp	20		
-Fletchling			Fletchling		Fletchinder		levelUp	17		
-Fletchling			Fletchinder		Talonflame		levelUp	35		
-Scatterbug			Scatterbug		Spewpa		levelUp	9		
-Scatterbug			Spewpa		Vivillon		levelUp	12		
-Litleo			Litleo		Pyroar		levelUp	35		
-Flabébé			Flabébé		Floette		levelUp	19		
-Flabébé			Floette		Florges		useItem	Shiny Stone		
-Skiddo			Skiddo		Gogoat		levelUp	32		
-Pancham			Pancham		Pangoro		levelUp	32	partyMemberType	Dark
-Espurr			Espurr		Meowstic		levelUp	25		
-Honedge			Honedge		Doublade		levelUp	35		
-Honedge			Doublade		Aegislash		useItem	Dusk Stone		
-Spritzee			Spritzee		Aromatisse		tradeHoldingItem	Sachet		
-Swirlix			Swirlix		Slurpuff		tradeHoldingItem	Whipped Dream		
-Inkay			Inkay		Malamar		levelUp	30	deviceHeldUpsideDown	
-Binacle			Binacle		Barbaracle		levelUp	39		
-Skrelp			Skrelp		Dragalge		levelUp	48		
-Clauncher			Clauncher		Clawitzer		levelUp	37		
-Helioptile			Helioptile		Heliolisk		useItem	Sun Stone		
-Tyrunt			Tyrunt		Tyrantrum		levelUp	39	timeOfDay	day
-Amaura			Amaura		Aurorus		levelUp	39	timeOfDay	night
-Goomy		legendsArceus	Goomy		Sliggoo		levelUp	40		
-Goomy			Goomy		Sliggoo	Hisuian Sliggoo	levelUp	40		
-Goomy		legendsArceus	Sliggoo		Goodra		levelUp	50	weather	rain
-Goomy	sun		Sliggoo		Goodra		levelUp	50	weather	fog
-Goomy	moon		Sliggoo		Goodra		levelUp	50	weather	fog
-Goomy	ultraSun		Sliggoo		Goodra		levelUp	50	weather	fog
-Goomy	ultraMoon		Sliggoo		Goodra		levelUp	50	weather	fog
-Goomy			Sliggoo	Hisuian Sliggoo	Goodra	Hisuian Goodra	levelUp	50	weather	fog
-Phantump			Phantump		Trevenant		trade			
-Pumpkaboo			Pumpkaboo		Gourgeist		trade			
-Bergmite		legendsArceus	Bergmite		Avalugg		levelUp	37		
-Bergmite			Bergmite		Avalugg	Hisuian Avalugg	levelUp	37		
-Noibat			Noibat		Noivern		levelUp	48		
-Rowlet			Rowlet		Dartrix		levelUp	17		
-Rowlet		legendsArceus	Dartrix		Decidueye		levelUp	34		
-Rowlet			Dartrix		Decidueye	Hisuian Decidueye	levelUp	34		
-Litten			Litten		Torracat		levelUp	17		
-Litten			Torracat		Incineroar		levelUp	34		
-Popplio			Popplio		Brionne		levelUp	17		
-Popplio			Brionne		Primarina		levelUp	34		
-Pikipek			Pikipek		Trumbeak		levelUp	14		
-Pikipek			Trumbeak		Toucannon		levelUp	28		
-Yungoos			Yungoos		Gumshoos		levelUp	20	timeOfDay	day
-Grubbin			Grubbin		Charjabug		levelUp	20		
-Grubbin	sun		Charjabug		Vikavolt		levelUpInArea	Special magnetic field		
-Grubbin	moon		Charjabug		Vikavolt		levelUpInArea	Special magnetic field		
-Grubbin	ultraSun		Charjabug		Vikavolt		levelUpInArea	Special magnetic field		
-Grubbin	ultraMoon		Charjabug		Vikavolt		levelUpInArea	Special magnetic field		
-Grubbin	letsGoPikachu		Charjabug		Vikavolt		levelUpInArea	Special magnetic field		
-Grubbin	letsGoEevee		Charjabug		Vikavolt		levelUpInArea	Special magnetic field		
-Grubbin	sword		Charjabug		Vikavolt		useItem	Thunder Stone		
-Grubbin	shield		Charjabug		Vikavolt		useItem	Thunder Stone		
-Crabrawler			Crabrawler		Crabominable		levelUpInArea	Mount Lanakila		
-Cutiefly			Cutiefly		Ribombee		levelUp	25		
-Rockruff	sun		Rockruff		Lycanroc	Midday Form	levelUp	25	timeOfDay	day
-Rockruff	ultraSun		Rockruff		Lycanroc	Midday Form	levelUp	25	timeOfDay	day
-Rockruff	moon		Rockruff		Lycanroc	Midnight Form	levelUp	25	timeOfDay	night
-Rockruff	ultraMoon		Rockruff		Lycanroc	Midnight Form	levelUp	25	timeOfDay	night
-Rockruff	ultraSun		Rockruff		Lycanroc	Dusk Form	levelUp	25	haveAbility	Own Tempo
-Rockruff	ultraMoon		Rockruff		Lycanroc	Dusk Form	levelUp	25	haveAbility	Own Tempo
-Mareanie			Mareanie		Toxapex		levelUp	38		
-Mudbray			Mudbray		Mudsdale		levelUp	30		
-Dewpider			Dewpider		Araquanid		levelUp	22		
-Fomantis			Fomantis		Lurantis		levelUp	34	timeOfDay	day
-Morelull			Morelull		Shiinotic		levelUp	24		
-Salandit			Salandit		Salazzle		levelUp	33	gender	female
-Stufful			Stufful		Bewear		levelUp	27		
-Bounsweet			Bounsweet		Steenee		levelUp	18		
-Bounsweet			Steenee		Tsareena		levelUpKnowingMove	Stomp		
-Wimpod			Wimpod		Golisopod		levelUp	30		
-Sandygast			Sandygast		Palossand		levelUp	42		
-Type: Null			Type: Null		Silvally		friendship			
-Jangmo-o			Jangmo-o		Hakamo-o		levelUp	35		
-Jangmo-o			Hakamo-o		Kommo-o		levelUp	45		
-Cosmog			Cosmog		Cosmoem		levelUp	43		
-Cosmog	sun		Cosmoem		Solgaleo		levelUp	53		
-Cosmog	ultraSun		Cosmoem		Solgaleo		levelUp	53		
-Cosmog	sword		Cosmoem		Solgaleo		levelUp	53		
-Cosmog	moon		Cosmoem		Lunala		levelUp	53		
-Cosmog	ultraMoon		Cosmoem		Lunala		levelUp	53		
-Cosmog	shield		Cosmoem		Lunala		levelUp	53		
-Poipole			Poipole		Naganadel		levelUpKnowingMove	Dragon Pulse		
-Grookey			Grookey		Thwackey		levelUp	16		
-Grookey			Thwackey		Rillaboom		levelUp	35		
-Scorbunny			Scorbunny		Raboot		levelUp	16		
-Scorbunny			Raboot		Cinderace		levelUp	35		
-Sobble			Sobble		Drizzile		levelUp	16		
-Sobble			Drizzile		Inteleon		levelUp	35		
-Skwovet			Skwovet		Greedent		levelUp	24		
-Rookidee			Rookidee		Corvisquire		levelUp	18		
-Rookidee			Corvisquire		Corviknight		levelUp	38		
-Blipbug			Blipbug		Dottler		levelUp	10		
-Blipbug			Dottler		Orbeetle		levelUp	30		
-Nickit			Nickit		Thievul		levelUp	18		
-Gossifleur			Gossifleur		Eldegoss		levelUp	20		
-Wooloo			Wooloo		Dubwool		levelUp	24		
-Chewtle			Chewtle		Drednaw		levelUp	22		
-Yamper			Yamper		Boltund		levelUp	25		
-Rolycoly			Rolycoly		Carkol		levelUp	18		
-Rolycoly			Carkol		Coalossal		levelUp	34		
-Applin			Applin		Flapple		useItem	Tart Apple		
-Applin			Applin		Appletun		useItem	Sweet Apple		
-Silicobra			Silicobra		Sandaconda		levelUp	36		
-Arrokuda			Arrokuda		Barraskewda		levelUp	26		
-Toxel			Toxel		Toxtricity		levelUp	30		
-Sizzlipede			Sizzlipede		Centiskorch		levelUp	28		
-Clobbopus			Clobbopus		Grapploct		levelUpKnowingMove	Taunt		
-Sinistea			Sinistea	Phony Form	Polteageist	Phony Form	useItem	Cracked Pot		
-Sinistea			Sinistea	Antique Form	Polteageist	Antique Form	useItem	Chipped Pot		
-Hatenna			Hatenna		Hattrem		levelUp	32		
-Hatenna			Hattrem		Hatterene		levelUp	42		
-Impidimp			Impidimp		Morgrem		levelUp	32		
-Impidimp			Morgrem		Grimmsnarl		levelUp	42		
-Milcery			Milcery		Alcremie		trainerAction	Spins and strikes a pose		
-Snom			Snom		Frosmoth		friendship		timeOfDay	night
-Cufant			Cufant		Copperajah		levelUp	34		
-Dreepy			Dreepy		Drakloak		levelUp	50		
-Dreepy			Drakloak		Dragapult		levelUp	60		
-Kubfu			Kubfu		Urshifu	Single Strike Style	other	Train in The Tower of Darkness		
-Kubfu			Kubfu		Urshifu	Rapid Strike Style	other	Train in The Tower of Waters		
-Stantler			Stantler		Wyrdeer		other	Use Psyshield Bash 20 times in Agile Style		
-Scyther			Scyther		Kleavor		useItem	Black Augurite		
+family	gameFilter	excludeGames	baseName	baseFormName	targetName	targetFormName	methodName	methodData	requirementName	requirementData	requirementName2	requirementData2
+Bulbasaur			Bulbasaur	Bulbasaur	Ivysaur	Ivysaur	levelUp	16				
+Bulbasaur			Ivysaur	Ivysaur	Venusaur	Venusaur	levelUp	32				
+Charmander			Charmander	Charmander	Charmeleon	Charmeleon	levelUp	16				
+Charmander			Charmeleon	Charmeleon	Charizard	Charizard	levelUp	36				
+Squirtle			Squirtle	Squirtle	Wartortle	Wartortle	levelUp	16				
+Squirtle			Wartortle	Wartortle	Blastoise	Blastoise	levelUp	36				
+Caterpie			Caterpie	Caterpie	Metapod	Metapod	levelUp	7				
+Caterpie			Metapod	Metapod	Butterfree	Butterfree	levelUp	10				
+Weedle			Weedle	Weedle	Kakuna	Kakuna	levelUp	7				
+Weedle			Kakuna	Kakuna	Beedrill	Beedrill	levelUp	10				
+Pidgey			Pidgey	Pidgey	Pidgeotto	Pidgeotto	levelUp	18				
+Pidgey			Pidgeotto	Pidgeotto	Pidgeot	Pidgeot	levelUp	36				
+Rattata			Rattata	Rattata	Raticate	Raticate	levelUp	20				
+Rattata			Rattata	Alolan Rattata	Raticate	Alolan Raticate	levelUp	20	timeOfDay	night	region	alola
+Spearow			Spearow	Spearow	Fearow	Fearow	levelUp	20				
+Ekans			Ekans	Ekans	Arbok	Arbok	levelUp	22				
+Pikachu			Pichu	Pichu	Pikachu	Pikachu	friendship					
+Pikachu			Pikachu	Pikachu	Raichu	Raichu	useItem	Thunder Stone				
+Pikachu			Pikachu	Pikachu	Raichu	Alolan Raichu	useItem	Thunder Stone	region	Alola		
+Sandshrew			Sandshrew	Sandshrew	Sandslash	Sandslash	levelUp	22				
+Sandshrew			Sandshrew	Alolan Sandshrew	Sandslash	Alolan Sandslash	useItem	Ice Stone	region	alola		
+Nidoran			Nidoran♀	Nidoran♀	Nidorina	Nidorina	levelUp	16				
+Nidoran			Nidorina	Nidorina	Nidoqueen	Nidoqueen	useItem	Moon Stone				
+Nidoran			Nidoran♂	Nidoran♂	Nidorino	Nidorino	levelUp	16				
+Nidoran			Nidorino	Nidorino	Nidoking	Nidoking	useItem	Moon Stone				
+Clefairy			Cleffa	Cleffa	Clefairy	Clefairy	friendship					
+Clefairy			Clefairy	Clefairy	Clefable	Clefable	useItem	Moon Stone				
+Vulpix			Vulpix	Vulpix	Ninetales	Ninetales	useItem	Fire Stone				
+Vulpix			Vulpix	Alolan Vulpix	Ninetales	Alolan Ninetales	useItem	Ice Stone	region	alola		
+Jigglypuff			Igglybuff	Igglybuff	Jigglypuff	Jigglypuff	friendship					
+Jigglypuff			Jigglypuff	Jigglypuff	Wigglytuff	Wigglytuff	useItem	Moon Stone				
+Zubat			Zubat	Zubat	Golbat	Golbat	levelUp	22				
+Zubat			Golbat	Golbat	Crobat	Crobat	friendship					
+Oddish			Oddish	Oddish	Gloom	Gloom	levelUp	21				
+Oddish			Gloom	Gloom	Vileplume	Vileplume	useItem	Leaf Stone				
+Oddish			Gloom	Gloom	Bellossom	Bellossom	useItem	Sun Stone				
+Paras			Paras	Paras	Parasect	Parasect	levelUp	24				
+Venonat			Venonat	Venonat	Venomoth	Venomoth	levelUp	31				
+Diglett			Diglett	Diglett	Dugtrio	Dugtrio	levelUp	26				
+Diglett			Diglett	Alolan Diglett	Dugtrio	Alolan Dugtrio	levelUp	26	region	alola		
+Meowth			Meowth	Meowth	Persian	Persian	levelUp	28				
+Meowth			Meowth	Alolan Meowth	Persian	Alolan Persian	friendship		region	alola		
+Meowth			Meowth	Galarian Meowth	Perrserker	Perrserker	levelUp	28	region	Galar		
+Psyduck			Psyduck	Psyduck	Golduck	Golduck	levelUp	33				
+Mankey			Mankey	Mankey	Primeape	Primeape	levelUp	28				
+Growlithe			Growlithe	Growlithe	Arcanine	Arcanine	useItem	Fire Stone				
+Growlithe			Growlithe	Hisuian Growlithe	Arcanine	Hisuian Arcanine	useItem	Fire Stone	region	hisui		
+Poliwag			Poliwag	Poliwag	Poliwhirl	Poliwhirl	levelUp	25				
+Poliwag			Poliwhirl	Poliwhirl	Poliwrath	Poliwrath	useItem	Water Stone				
+Poliwag			Poliwhirl	Poliwhirl	Politoed	Politoed	tradeHoldingItem	King's Rock				
+Abra			Abra	Abra	Kadabra	Kadabra	levelUp	16				
+Abra			Kadabra	Kadabra	Alakazam	Alakazam	trade					
+Machop			Machop	Machop	Machoke	Machoke	levelUp	28				
+Machop			Machoke	Machoke	Machamp	Machamp	trade					
+Bellsprout			Bellsprout	Bellsprout	Weepinbell	Weepinbell	levelUp	21				
+Bellsprout			Weepinbell	Weepinbell	Victreebel	Victreebel	useItem	Leaf Stone				
+Tentacool			Tentacool	Tentacool	Tentacruel	Tentacruel	levelUp	30				
+Geodude			Geodude	Geodude	Graveler	Graveler	levelUp	25				
+Geodude			Graveler	Graveler	Golem	Golem	trade					
+Geodude			Geodude	Alolan Geodude	Graveler	Alolan Graveler	levelUp	25	region	alola		
+Geodude			Graveler	Alolan Graveler	Golem	Alolan Golem	trade		region	alola		
+Ponyta			Ponyta	Ponyta	Rapidash	Rapidash	levelUp	40				
+Ponyta			Ponyta	Galarian Ponyta	Rapidash	Galarian Rapidash	levelUp	40	region	galar		
+Slowpoke			Slowpoke	Slowpoke	Slowbro	Slowbro	levelUp	37				
+Slowpoke			Slowpoke	Slowpoke	Slowking	Slowking	tradeHoldingItem	King's Rock				
+Slowpoke			Slowpoke	Galarian Slowpoke	Slowbro	Galarian Slowbro	useItem	Galarica Cuff	region	galar		
+Slowpoke			Slowpoke	Galarian Slowpoke	Slowking	Galarian Slowking	useItem	Galarica Wreath	region	galar		
+Magnemite			Magnemite	Magnemite	Magneton	Magneton	levelUp	30				
+Magnemite			Magneton	Magneton	Magnezone	Magnezone	levelUpInArea	Special magnetic field				
+Farfetch'd			Farfetch'd	Galarian Farfetch'd	Sirfetch'd	Sirfetch'd	completeBattlePerformingAction	3 critical hits in a single battle				
+Doduo			Doduo	Doduo	Dodrio	Dodrio	levelUp	31				
+Seel			Seel	Seel	Dewgong	Dewgong	levelUp	34				
+Grimer			Grimer	Grimer	Muk	Muk	levelUp	38				
+Grimer			Grimer	Alolan Grimer	Muk	Alolan Muk	levelUp	38	region	alola		
+Shellder			Shellder	Shellder	Cloyster	Cloyster	useItem	Water Stone				
+Gastly			Gastly	Gastly	Haunter	Haunter	levelUp	25				
+Gastly			Haunter	Haunter	Gengar	Gengar	trade					
+Onix			Onix	Onix	Steelix	Steelix	tradeHoldingItem	Metal Coat				
+Drowzee			Drowzee	Drowzee	Hypno	Hypno	levelUp	26				
+Krabby			Krabby	Krabby	Kingler	Kingler	levelUp	28				
+Voltorb			Voltorb	Voltorb	Electrode	Electrode	levelUp	30				
+Voltorb			Voltorb	Hisuian Voltorb	Electrode	Hisuian Electrode	useItem	Leaf Stone	region	hisui		
+Exeggcute			Exeggcute	Exeggcute	Exeggutor	Exeggutor	useItem	Leaf Stone				
+Exeggcute			Exeggcute	Exeggcute	Exeggutor	Alolan Exeggutor	useItem	Leaf Stone	region	alola		
+Cubone			Cubone	Cubone	Marowak	Marowak	levelUp	28				
+Cubone			Cubone	Cubone	Marowak	Alolan Marowak	levelUp	28	timeOfDay	night	region	alola
+Hitmon			Tyrogue	Tyrogue	Hitmonlee	Hitmonlee	levelUp	20	other	Attack > Defense		
+Hitmon			Tyrogue	Tyrogue	Hitmonchan	Hitmonchan	levelUp	20	other	Attack < Defense		
+Hitmon			Tyrogue	Tyrogue	Hitmontop	Hitmontop	levelUp	20	other	Attack = Defense		
+Lickitung			Lickitung	Lickitung	Lickilicky	Lickilicky	levelUpKnowingMove	Rollout				
+Koffing			Koffing	Koffing	Weezing	Weezing	levelUp	35				
+Koffing			Koffing	Koffing	Weezing	Galarian Weezing	levelUp	35	region	galar		
+Rhyhorn			Rhyhorn	Rhyhorn	Rhydon	Rhydon	levelUp	42				
+Rhyhorn			Rhydon	Rhydon	Rhyperior	Rhyperior	tradeHoldingItem	Protector				
+Chansey			Happiny	Happiny	Chansey	Chansey	levelUpHoldingItem	Oval Stone	timeOfDay	day		
+Chansey			Chansey	Chansey	Blissey	Blissey	friendship					
+Tangela			Tangela	Tangela	Tangrowth	Tangrowth	levelUpKnowingMove	Ancient Power				
+Horsea			Horsea	Horsea	Seadra	Seadra	levelUp	32				
+Horsea			Seadra	Seadra	Kingdra	Kingdra	tradeHoldingItem	Dragon Scale				
+Goldeen			Goldeen	Goldeen	Seaking	Seaking	levelUp	33				
+Staryu			Staryu	Staryu	Starmie	Starmie	useItem	Water Stone				
+Mr. Mime			Mime Jr.	Mime Jr.	Mr. Mime	Mr. Mime	levelUpKnowingMove	Mimic				
+Mr. Mime			Mime Jr.	Mime Jr.	Mr. Mime	Galarian Mr. Mime	levelUpKnowingMove	Mimic	region	galar		
+Mr. Mime			Mr. Mime	Galarian Mr. Mime	Mr. Rime	Mr. Rime	levelUp	42	region	galar		
+Scyther			Scyther	Scyther	Scizor	Scizor	tradeHoldingItem	Metal Coat				
+Scyther			Scyther	Scyther	Kleavor	Kleavor	useItem	Black Augurite				
+Jynx			Smoochum	Smoochum	Jynx	Jynx	levelUp	30				
+Electabuzz			Elekid	Elekid	Electabuzz	Electabuzz	levelUp	30				
+Electabuzz			Electabuzz	Electabuzz	Electivire	Electivire	tradeHoldingItem	Electirizer				
+Magmar			Magby	Magby	Magmar	Magmar	levelUp	30				
+Magmar			Magmar	Magmar	Magmortar	Magmortar	tradeHoldingItem	Magmarizer				
+Magikarp			Magikarp	Magikarp	Gyarados	Gyarados	levelUp	20				
+Eevee			Eevee	Eevee	Vaporeon	Vaporeon	useItem	Water Stone				
+Eevee			Eevee	Eevee	Jolteon	Jolteon	useItem	Thunder Stone				
+Eevee			Eevee	Eevee	Flareon	Flareon	useItem	Fire Stone				
+Eevee			Eevee	Eevee	Espeon	Espeon	friendship		timeOfDay	day		
+Eevee			Eevee	Eevee	Umbreon	Umbreon	friendship		timeOfDay	night		
+Eevee	diamond		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	pearl		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	platinum		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	heartGold		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	soulSilver		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	black		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	white		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	black2		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	white2		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	x		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	y		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	omegaRuby		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	alphaSapphire		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	sun		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	moon		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	ultraSun		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	ultraMoon		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	letsGoPikachu		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	letsGoEevee		Eevee	Eevee	Leafeon	Leafeon	levelUpInArea	Near Moss Rock				
+Eevee	sword		Eevee	Eevee	Leafeon	Leafeon	useItem	Leaf Stone				
+Eevee	shield		Eevee	Eevee	Leafeon	Leafeon	useItem	Leaf Stone				
+Eevee	legendsArceus		Eevee	Eevee	Leafeon	Leafeon	useItem	Leaf Stone				
+Eevee	brilliantDiamond		Eevee	Eevee	Leafeon	Leafeon	useItem	Leaf Stone				
+Eevee	shiningPearl		Eevee	Eevee	Leafeon	Leafeon	useItem	Leaf Stone				
+Eevee	national		Eevee	Eevee	Leafeon	Leafeon	useItem	Leaf Stone				
+Eevee	diamond		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	pearl		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	platinum		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	heartGold		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	soulSilver		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	black		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	white		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	black2		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	white2		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	x		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	y		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	omegaRuby		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	alphaSapphire		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	sun		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	moon		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	ultraSun		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	ultraMoon		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	letsGoPikachu		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	letsGoEevee		Eevee	Eevee	Glaceon	Glaceon	levelUpInArea	Near Ice Rock				
+Eevee	sword		Eevee	Eevee	Glaceon	Glaceon	useItem	Ice Stone				
+Eevee	shield		Eevee	Eevee	Glaceon	Glaceon	useItem	Ice Stone				
+Eevee	legendsArceus		Eevee	Eevee	Glaceon	Glaceon	useItem	Ice Stone				
+Eevee	brilliantDiamond		Eevee	Eevee	Glaceon	Glaceon	useItem	Ice Stone				
+Eevee	shiningPearl		Eevee	Eevee	Glaceon	Glaceon	useItem	Ice Stone				
+Eevee	national		Eevee	Eevee	Glaceon	Glaceon	useItem	Ice Stone				
+Eevee	x		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	y		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	omegaRuby		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	alphaSapphire		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	sun		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	moon		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	ultraSun		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	ultraMoon		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	letsGoPikachu		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	letsGoEevee		Eevee	Eevee	Sylveon	Sylveon	levelUpWithStats	2 Hearts of Affection	other	Know a Fairy-type move		
+Eevee	sword		Eevee	Eevee	Sylveon	Sylveon	friendship		other	Know a Fairy-type move		
+Eevee	shield		Eevee	Eevee	Sylveon	Sylveon	friendship		other	Know a Fairy-type move		
+Eevee	legendsArceus		Eevee	Eevee	Sylveon	Sylveon	friendship		other	Know a Fairy-type move		
+Eevee	brilliantDiamond		Eevee	Eevee	Sylveon	Sylveon	friendship		other	Know a Fairy-type move		
+Eevee	shiningPearl		Eevee	Eevee	Sylveon	Sylveon	friendship		other	Know a Fairy-type move		
+Eevee	national		Eevee	Eevee	Sylveon	Sylveon	friendship		other	Know a Fairy-type move		
+Porygon			Porygon	Porygon	Porygon2	Porygon2	tradeHoldingItem	Upgrade				
+Porygon			Porygon2	Porygon2	Porygon-Z	Porygon-Z	tradeHoldingItem	Dubious Disc				
+Omanyte			Omanyte	Omanyte	Omastar	Omastar	levelUp	40				
+Kabuto			Kabuto	Kabuto	Kabutops	Kabutops	levelUp	40				
+Snorlax			Munchlax	Munchlax	Snorlax	Snorlax	friendship					
+Dratini			Dratini	Dratini	Dragonair	Dragonair	levelUp	30				
+Dratini			Dragonair	Dragonair	Dragonite	Dragonite	levelUp	55				
+Chikorita			Chikorita	Chikorita	Bayleef	Bayleef	levelUp	16				
+Chikorita			Bayleef	Bayleef	Meganium	Meganium	levelUp	32				
+Cyndaquil		legendsArceus	Cyndaquil	Cyndaquil	Quilava	Quilava	levelUp	14				
+Cyndaquil	legendsArceus		Cyndaquil	Cyndaquil	Quilava	Quilava	levelUp	17				
+Cyndaquil	national		Cyndaquil	Cyndaquil	Quilava	Quilava	levelUp	17				
+Cyndaquil			Quilava	Quilava	Typhlosion	Typhlosion	levelUp	36				
+Cyndaquil			Quilava	Quilava	Typhlosion	Hisuian Typhlosion	levelUp	36	region	hisui		
+Totodile			Totodile	Totodile	Croconaw	Croconaw	levelUp	18				
+Totodile			Croconaw	Croconaw	Feraligatr	Feraligatr	levelUp	30				
+Sentret			Sentret	Sentret	Furret	Furret	levelUp	15				
+Hoothoot			Hoothoot	Hoothoot	Noctowl	Noctowl	levelUp	20				
+Ledyba			Ledyba	Ledyba	Ledian	Ledian	levelUp	18				
+Spinarak			Spinarak	Spinarak	Ariados	Ariados	levelUp	22				
+Chinchou			Chinchou	Chinchou	Lanturn	Lanturn	levelUp	27				
+Togepi			Togepi	Togepi	Togetic	Togetic	friendship					
+Togepi			Togetic	Togetic	Togekiss	Togekiss	useItem	Shiny Stone				
+Natu			Natu	Natu	Xatu	Xatu	levelUp	25				
+Mareep			Mareep	Mareep	Flaaffy	Flaaffy	levelUp	15				
+Mareep			Flaaffy	Flaaffy	Ampharos	Ampharos	levelUp	30				
+Marill			Azurill	Azurill	Marill	Marill	friendship					
+Marill			Marill	Marill	Azumarill	Azumarill	levelUp	18				
+Sudowoodo			Bonsly	Bonsly	Sudowoodo	Sudowoodo	levelUpKnowingMove	Mimic				
+Hoppip			Hoppip	Hoppip	Skiploom	Skiploom	levelUp	18				
+Hoppip			Skiploom	Skiploom	Jumpluff	Jumpluff	levelUp	27				
+Aipom			Aipom	Aipom	Ambipom	Ambipom	levelUpKnowingMove	Double Hit				
+Sunkern			Sunkern	Sunkern	Sunflora	Sunflora	useItem	Sun Stone				
+Yanma			Yanma	Yanma	Yanmega	Yanmega	levelUpKnowingMove	Ancient Power				
+Wooper			Wooper	Wooper	Quagsire	Quagsire	levelUp	20				
+Wooper			Wooper	Paldean Wooper	Clodsire	Clodsire	levelUp	20				
+Murkrow			Murkrow	Murkrow	Honchkrow	Honchkrow	useItem	Dusk Stone				
+Misdreavus			Misdreavus	Misdreavus	Mismagius	Mismagius	useItem	Dusk Stone				
+Wobbuffet			Wynaut	Wynaut	Wobbuffet	Wobbuffet	levelUp	15				
+Pineco			Pineco	Pineco	Forretress	Forretress	levelUp	31				
+Gligar			Gligar	Gligar	Gliscor	Gliscor	levelUpHoldingItem	Razor Fang	timeOfDay	night		
+Snubbull			Snubbull	Snubbull	Granbull	Granbull	levelUp	23				
+Qwilfish			Qwilfish	Hisuian Qwilfish	Overqwil	Overqwil	other	Use Barb Barrage 20 times in Strong Style	region	Hisui		
+Sneasel			Sneasel	Sneasel	Weavile	Weavile	levelUpHoldingItem	Razor Claw	timeOfDay	night		
+Sneasel			Sneasel	Hisuian Sneasel	Sneasler	Sneasler	useItem	Razor Claw	timeOfDay	day	region	Hisui
+Teddiursa			Teddiursa	Teddiursa	Ursaring	Ursaring	levelUp	30				
+Teddiursa	legendsArceus		Ursaring	Ursaring	Ursaluna	Ursaluna	useItem	Peat Block	other	Under a full moon		
+Teddiursa	national		Ursaring	Ursaring	Ursaluna	Ursaluna	useItem	Peat Block	other	Under a full moon		
+Slugma			Slugma	Slugma	Magcargo	Magcargo	levelUp	38				
+Swinub			Swinub	Swinub	Piloswine	Piloswine	levelUp	33				
+Swinub			Piloswine	Piloswine	Mamoswine	Mamoswine	levelUpKnowingMove	Ancient Power				
+Corsola			Corsola	Galarian Corsola	Cursola	Cursola	levelUp	38				
+Remoraid			Remoraid	Remoraid	Octillery	Octillery	levelUp	25				
+Mantine			Mantyke	Mantyke	Mantine	Mantine	levelUpWithPartyMember	Remoraid				
+Houndour			Houndour	Houndour	Houndoom	Houndoom	levelUp	24				
+Phanpy			Phanpy	Phanpy	Donphan	Donphan	levelUp	25				
+Larvitar			Larvitar	Larvitar	Pupitar	Pupitar	levelUp	30				
+Larvitar			Pupitar	Pupitar	Tyranitar	Tyranitar	levelUp	55				
+Stantler			Stantler	Stantler	Wyrdeer	Wyrdeer	other	Use Psyshield Bash 20 times in Agile Style				
+Treecko			Treecko	Treecko	Grovyle	Grovyle	levelUp	16				
+Treecko			Grovyle	Grovyle	Sceptile	Sceptile	levelUp	36				
+Torchic			Torchic	Torchic	Combusken	Combusken	levelUp	16				
+Torchic			Combusken	Combusken	Blaziken	Blaziken	levelUp	36				
+Mudkip			Mudkip	Mudkip	Marshtomp	Marshtomp	levelUp	16				
+Mudkip			Marshtomp	Marshtomp	Swampert	Swampert	levelUp	36				
+Poochyena			Poochyena	Poochyena	Mightyena	Mightyena	levelUp	18				
+Zigzagoon			Zigzagoon	Zigzagoon	Linoone	Linoone	levelUp	20				
+Zigzagoon			Zigzagoon	Galarian Zigzagoon	Linoone	Galarian Linoone	levelUp	20	region	galar		
+Zigzagoon			Linoone	Galarian Linoone	Obstagoon	Obstagoon	levelUp	35	timeOfDay	night		
+Wurmple			Wurmple	Wurmple	Silcoon	Silcoon	levelUp	7				
+Wurmple			Silcoon	Silcoon	Beautifly	Beautifly	levelUp	10				
+Wurmple			Wurmple	Wurmple	Cascoon	Cascoon	levelUp	7				
+Wurmple			Cascoon	Cascoon	Dustox	Dustox	levelUp	10				
+Lotad			Lotad	Lotad	Lombre	Lombre	levelUp	14				
+Lotad			Lombre	Lombre	Ludicolo	Ludicolo	useItem	Water Stone				
+Seedot			Seedot	Seedot	Nuzleaf	Nuzleaf	levelUp	14				
+Seedot			Nuzleaf	Nuzleaf	Shiftry	Shiftry	useItem	Leaf Stone				
+Taillow			Taillow	Taillow	Swellow	Swellow	levelUp	22				
+Wingull			Wingull	Wingull	Pelipper	Pelipper	levelUp	25				
+Ralts			Ralts	Ralts	Kirlia	Kirlia	levelUp	20				
+Ralts			Kirlia	Kirlia	Gardevoir	Gardevoir	levelUp	30				
+Ralts			Kirlia	Kirlia	Gallade	Gallade	useItem	Dawn Stone	gender	male		
+Surskit			Surskit	Surskit	Masquerain	Masquerain	levelUp	22				
+Shroomish			Shroomish	Shroomish	Breloom	Breloom	levelUp	23				
+Slakoth			Slakoth	Slakoth	Vigoroth	Vigoroth	levelUp	18				
+Slakoth			Vigoroth	Vigoroth	Slaking	Slaking	levelUp	36				
+Nincada			Nincada	Nincada	Ninjask	Ninjask	levelUp	20				
+Nincada			Nincada	Nincada	Shedinja	Shedinja	levelUp	20	other	Free space in party & a Poké Ball in bag		
+Whismur			Whismur	Whismur	Loudred	Loudred	levelUp	20				
+Whismur			Whismur	Whismur	Exploud	Exploud	levelUp	40				
+Makuhita			Makuhita	Makuhita	Hariyama	Hariyama	levelUp	24				
+Nosepass			Nosepass	Nosepass	Probopass	Probopass	levelUpInArea	Special magnetic field				
+Skitty			Skitty	Skitty	Delcatty	Delcatty	useItem	Moon Stone				
+Aron			Aron	Aron	Lairon	Lairon	levelUp	32				
+Aron			Lairon	Lairon	Aggron	Aggron	levelUp	42				
+Meditite			Meditite	Meditite	Medicham	Medicham	levelUp	37				
+Electrike			Electrike	Electrike	Manectric	Manectric	levelUp	26				
+Roselia			Budew	Budew	Roselia	Roselia	friendship		timeOfDay	day		
+Roselia			Roselia	Roselia	Roserade	Roserade	useItem	Shiny Stone				
+Gulpin			Gulpin	Gulpin	Swalot	Swalot	levelUp	26				
+Carvanha			Carvanha	Carvanha	Sharpedo	Sharpedo	levelUp	30				
+Wailmer			Wailmer	Wailmer	Wailord	Wailord	levelUp	40				
+Numel			Numel	Numel	Camerupt	Camerupt	levelUp	33				
+Spoink			Spoink	Spoink	Grumpig	Grumpig	levelUp	32				
+Trapinch			Trapinch	Trapinch	Vibrava	Vibrava	levelUp	35				
+Trapinch			Vibrava	Vibrava	Flygon	Flygon	levelUp	45				
+Cacnea			Cacnea	Cacnea	Cacturne	Cacturne	levelUp	32				
+Swablu			Swablu	Swablu	Altaria	Altaria	levelUp	35				
+Barboach			Barboach	Barboach	Whiscash	Whiscash	levelUp	30				
+Corphish			Corphish	Corphish	Crawdaunt	Crawdaunt	levelUp	30				
+Baltoy			Baltoy	Baltoy	Claydol	Claydol	levelUp	36				
+Lileep			Lileep	Lileep	Cradily	Cradily	levelUp	40				
+Anorith			Anorith	Anorith	Armaldo	Armaldo	levelUp	40				
+Feebas			Feebas	Feebas	Milotic	Milotic	levelUpWithStats	Maximum Beauty				
+Feebas	black		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	white		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	black2		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	white2		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	x		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	y		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	omegaRuby		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	alphaSapphire		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	sun		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	moon		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	ultraSun		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	ultraMoon		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	letsGoPikachu		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	letsGoEevee		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	sword		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	shield		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	legendsArceus		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	brilliantDiamond		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	shiningPearl		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Feebas	national		Feebas	Feebas	Milotic	Milotic	tradeHoldingItem	Prism Scale				
+Shuppet			Shuppet	Shuppet	Banette	Banette	levelUp	37				
+Duskull			Duskull	Duskull	Dusclops	Dusclops	levelUp	37				
+Duskull			Dusclops	Dusclops	Dusknoir	Dusknoir	tradeHoldingItem	Reaper Cloth				
+Chimecho			Chingling	Chingling	Chimecho	Chimecho	friendship		timeOfDay	night		
+Snorunt			Snorunt	Snorunt	Glalie	Glalie	levelUp	42				
+Snorunt			Snorunt	Snorunt	Froslass	Froslass	useItem	Dawn Stone	gender	female		
+Spheal			Spheal	Spheal	Sealeo	Sealeo	levelUp	32				
+Spheal			Sealeo	Sealeo	Walrein	Walrein	levelUp	44				
+Clamperl			Clamperl	Clamperl	Huntail	Huntail	tradeHoldingItem	Deep Sea Tooth				
+Clamperl			Clamperl	Clamperl	Gorebyss	Gorebyss	tradeHoldingItem	Deep Sea Scale				
+Bagon			Bagon	Bagon	Shelgon	Shelgon	levelUp	30				
+Bagon			Shelgon	Shelgon	Salamence	Salamence	levelUp	50				
+Beldum			Beldum	Beldum	Metang	Metang	levelUp	20				
+Beldum			Metang	Metang	Metagross	Metagross	levelUp	45				
+Turtwig			Turtwig	Turtwig	Grotle	Grotle	levelUp	18				
+Turtwig			Grotle	Grotle	Torterra	Torterra	levelUp	32				
+Chimchar			Chimchar	Chimchar	Monferno	Monferno	levelUp	14				
+Chimchar			Monferno	Monferno	Infernape	Infernape	levelUp	36				
+Piplup			Piplup	Piplup	Prinplup	Prinplup	levelUp	16				
+Piplup			Prinplup	Prinplup	Empoleon	Empoleon	levelUp	36				
+Starly			Starly	Starly	Staravia	Staravia	levelUp	14				
+Starly			Staravia	Staravia	Staraptor	Staraptor	levelUp	34				
+Bidoof			Bidoof	Bidoof	Bibarel	Bibarel	levelUp	15				
+Kricketot			Kricketot	Kricketot	Kricketune	Kricketune	levelUp	10				
+Shinx			Shinx	Shinx	Luxio	Luxio	levelUp	15				
+Shinx			Luxio	Luxio	Luxray	Luxray	levelUp	30				
+Cranidos			Cranidos	Cranidos	Rampardos	Rampardos	levelUp	30				
+Shieldon			Shieldon	Shieldon	Bastiodon	Bastiodon	levelUp	30				
+Burmy			Burmy	Plant Cloak	Wormadam	Plant Cloak	levelUp	20	gender	female	other	In grass
+Burmy			Burmy	Sandy Cloak	Wormadam	Sandy Cloak	levelUp	20	gender	female	other	In gaves
+Burmy			Burmy	Trash Cloak	Wormadam	Trash Cloak	levelUp	20	gender	female	other	In buildings
+Burmy			Burmy	Plant Cloak	Mothim	Mothim	levelUp	20	gender	male		
+Burmy			Burmy	Sandy Cloak	Mothim	Mothim	levelUp	20	gender	male		
+Burmy			Burmy	Trash Cloak	Mothim	Mothim	levelUp	20	gender	male		
+Combee			Combee	Combee	Vespiquen	Vespiquen	levelUp	21	gender	female		
+Buizel			Buizel	Buizel	Floatzel	Floatzel	levelUp	26				
+Cherubi			Cherubi	Cherubi	Cherrim	Cherrim	levelUp	25				
+Cherubi			Cherubi	Cherubi	Cherrim	Sunshine Form	levelUp	25				
+Shellos			Shellos	Shellos	Gastrodon	Gastrodon	levelUp	30				
+Shellos			Shellos	West Sea Form	Gastrodon	West Sea Form	levelUp	30				
+Shellos			Shellos	East Sea Form	Gastrodon	East Sea Form	levelUp	30				
+Drifloon			Drifloon	Drifloon	Drifblim	Drifblim	levelUp	28				
+Buneary			Buneary	Buneary	Lopunny	Lopunny	friendship					
+Glameow			Glameow	Glameow	Purugly	Purugly	levelUp	38				
+Stunky			Stunky	Stunky	Skuntank	Skuntank	levelUp	34				
+Bronzor			Bronzor	Bronzor	Bronzong	Bronzong	levelUp	33				
+Gible			Gible	Gible	Gabite	Gabite	levelUp	24				
+Gible			Gible	Gible	Garchomp	Garchomp	levelUp	48				
+Riolu			Riolu	Riolu	Lucario	Lucario	friendship		timeOfDay	day		
+Hippopotas			Hippopotas	Hippopotas	Hippowdon	Hippowdon	levelUp	34				
+Skorupi			Skorupi	Skorupi	Drapion	Drapion	levelUp	40				
+Croagunk			Croagunk	Croagunk	Toxicroak	Toxicroak	levelUp	37				
+Finneon			Finneon	Finneon	Lumineon	Lumineon	levelUp	31				
+Snover			Snover	Snover	Abomasnow	Abomasnow	levelUp	40				
+Snivy			Snivy	Snivy	Servine	Servine	levelUp	17				
+Snivy			Servine	Servine	Serperior	Serperior	levelUp	36				
+Tepig			Tepig	Tepig	Pignite	Pignite	levelUp	17				
+Tepig			Pignite	Pignite	Emboar	Emboar	levelUp	36				
+Oshawott			Oshawott	Oshawott	Dewott	Dewott	levelUp	17				
+Oshawott			Dewott	Dewott	Samurott	Samurott	levelUp	36				
+Oshawott			Dewott	Dewott	Samurott	Hisuian Samurott	levelUp	36	region	hisui		
+Patrat			Patrat	Patrat	Watchog	Watchog	levelUp	20				
+Lillipup			Lillipup	Lillipup	Herdier	Herdier	levelUp	16				
+Lillipup			Herdier	Herdier	Stoutland	Stoutland	levelUp	32				
+Purrloin			Purrloin	Purrloin	Liepard	Liepard	levelUp	20				
+Pansage			Pansage	Pansage	Simisage	Simisage	useItem	Leaf Stone				
+Pansear			Pansear	Pansear	Simisear	Simisear	useItem	Fire Stone				
+Panpour			Panpour	Panpour	Simipour	Simipour	useItem	Water Stone				
+Munna			Munna	Munna	Musharna	Musharna	useItem	Moon Stone				
+Pidove			Pidove	Pidove	Tranquill	Tranquill	levelUp	21				
+Pidove			Tranquill	Tranquill	Unfezant	Unfezant	levelUp	32				
+Blitzle			Blitzle	Blitzle	Zebstrika	Zebstrika	levelUp	27				
+Roggenrola			Roggenrola	Roggenrola	Boldore	Boldore	levelUp	25				
+Roggenrola			Boldore	Boldore	Gigalith	Gigalith	trade					
+Woobat			Woobat	Woobat	Swoobat	Swoobat	friendship					
+Drilbur			Drilbur	Drilbur	Excadrill	Excadrill	levelUp	31				
+Timburr			Timburr	Timburr	Gurdurr	Gurdurr	levelUp	25				
+Timburr			Gurdurr	Gurdurr	Conkeldurr	Conkeldurr	trade					
+Tympole			Tympole	Tympole	Palpitoad	Palpitoad	levelUp	25				
+Tympole			Palpitoad	Palpitoad	Seismitoad	Seismitoad	levelUp	36				
+Sewaddle			Sewaddle	Sewaddle	Swadloon	Swadloon	levelUp	20				
+Sewaddle			Swadloon	Swadloon	Leavanny	Leavanny	friendship					
+Venipede			Venipede	Venipede	Whirlipede	Whirlipede	levelUp	22				
+Venipede			Whirlipede	Whirlipede	Scolipede	Scolipede	levelUp	30				
+Cottonee			Cottonee	Cottonee	Whimsicott	Whimsicott	useItem	Sun Stone				
+Petilil			Petilil	Petilil	Lilligant	Lilligant	useItem	Sun Stone				
+Petilil			Petilil	Petilil	Lilligant	Hisuian Lilligant	useItem	Sun Stone	region	hisui		
+Basculin			Basculin	White-Striped Form	Basculegion	Male	other	Receive 294 recoil damage in battle				
+Basculin			Basculin	White-Striped Form	Basculegion	Female	other	Receive 294 recoil damage in battle				
+Sandile			Sandile	Sandile	Krokorok	Krokorok	levelUp	29				
+Sandile			Krokorok	Krokorok	Krookodile	Krookodile	levelUp	40				
+Darumaka			Darumaka	Darumaka	Darmanitan	Standard Mode	levelUp	35				
+Darumaka			Darumaka	Galarian Darumaka	Darmanitan	Galarian Standard Mode	useItem	Ice Stone	region	galar		
+Dwebble			Dwebble	Dwebble	Crustle	Crustle	levelUp	34				
+Scraggy			Scraggy	Scraggy	Scrafty	Scrafty	levelUp	39				
+Yamask			Yamask	Yamask	Cofagrigus	Cofagrigus	levelUp	34				
+Yamask			Yamask	Galarian Yamask	Runerigus	Runerigus	levelUp	34	other	Travel under the stone bridge in Dusty Bowl  after Yamask takes at least 49 HP damage in one attack without fainting		
+Tirtouga			Tirtouga	Tirtouga	Carracosta	Carracosta	levelUp	37				
+Archen			Archen	Archen	Archeops	Archeops	levelUp	37				
+Trubbish			Trubbish	Trubbish	Garbodor	Garbodor	levelUp	36				
+Zorua			Zorua	Zorua	Zoroark	Zoroark	levelUp	30				
+Zorua			Zorua	Hisuian Zorua	Zoroark	Hisuian Zoroark	levelUp	30	region	hisui		
+Minccino			Minccino	Minccino	Cinccino	Cinccino	useItem	Shiny Stone				
+Gothita			Gothita	Gothita	Gothorita	Gothorita	levelUp	32				
+Gothita			Gothorita	Gothorita	Gothitelle	Gothitelle	levelUp	41				
+Solosis			Solosis	Solosis	Duosion	Duosion	levelUp	32				
+Solosis			Duosion	Duosion	Reuniclus	Reuniclus	levelUp	41				
+Ducklett			Ducklett	Ducklett	Swanna	Swanna	levelUp	35				
+Vanillite			Vanillite	Vanillite	Vanillish	Vanillish	levelUp	35				
+Vanillite			Vanillish	Vanillish	Vanilluxe	Vanilluxe	levelUp	47				
+Deerling			Deerling	Spring Form	Sawsbuck	Spring Form	levelUp	34				
+Deerling			Deerling	Summer Form	Sawsbuck	Summer Form	levelUp	34				
+Deerling			Deerling	Autumn Form	Sawsbuck	Autumn Form	levelUp	34				
+Deerling			Deerling	Winter Form	Sawsbuck	Winter Form	levelUp	34				
+Karrablast			Karrablast	Karrablast	Escavalier	Escavalier	tradeForPokemon	Shelmet				
+Foongus			Foongus	Foongus	Amoonguss	Amoonguss	levelUp	39				
+Frillish			Frillish	Frillish	Jellicent	Jellicent	levelUp	40				
+Joltik			Joltik	Joltik	Galvantula	Galvantula	levelUp	36				
+Ferroseed			Ferroseed	Ferroseed	Ferrothorn	Ferrothorn	levelUp	40				
+Klink			Klink	Klink	Klang	Klang	levelUp	38				
+Klink			Klang	Klang	Klinklang	Klinklang	levelUp	49				
+Tynamo			Tynamo	Tynamo	Eelektrik	Eelektrik	levelUp	39				
+Tynamo			Eelektrik	Eelektrik	Eelektross	Eelektross	useItem	Thunder Stone				
+Elgyem			Elgyem	Elgyem	Beheeyem	Beheeyem	levelUp	42				
+Litwick			Litwick	Litwick	Lampent	Lampent	levelUp	41				
+Litwick			Lampent	Lampent	Chandelure	Chandelure	useItem	Dusk Stone				
+Axew			Axew	Axew	Fraxure	Fraxure	levelUp	38				
+Axew			Fraxure	Fraxure	Haxorus	Haxorus	levelUp	48				
+Cubchoo			Cubchoo	Cubchoo	Beartic	Beartic	levelUp	37				
+Shelmet			Shelmet	Shelmet	Accelgor	Accelgor	tradeForPokemon	Karrablast				
+Mienfoo			Mienfoo	Mienfoo	Mienshao	Mienshao	levelUp	50				
+Golett			Golett	Golett	Golurk	Golurk	levelUp	43				
+Pawniard			Pawniard	Pawniard	Bisharp	Bisharp	levelUp	52				
+Rufflet			Rufflet	Rufflet	Braviary	Braviary	levelUp	54				
+Rufflet			Rufflet	Rufflet	Braviary	Hisuian Braviary	levelUp	54	region	hisui		
+Vullaby			Vullaby	Vullaby	Mandibuzz	Mandibuzz	levelUp	54				
+Deino			Deino	Deino	Zweilous	Zweilous	levelUp	50				
+Deino			Zweilous	Zweilous	Hydreigon	Hydreigon	levelUp	64				
+Larvesta			Larvesta	Larvesta	Volcarona	Volcarona	levelUp	59				
+Chespin			Chespin	Chespin	Quilladin	Quilladin	levelUp	16				
+Chespin			Quilladin	Quilladin	Chesnaught	Chesnaught	levelUp	36				
+Fennekin			Fennekin	Fennekin	Braixen	Braixen	levelUp	16				
+Fennekin			Braixen	Braixen	Delphox	Delphox	levelUp	36				
+Froakie			Froakie	Froakie	Frogadier	Frogadier	levelUp	16				
+Froakie			Frogadier	Frogadier	Greninja	Greninja	levelUp	36				
+Bunnelby			Bunnelby	Bunnelby	Diggersby	Diggersby	levelUp	20				
+Fletchling			Fletchling	Fletchling	Fletchinder	Fletchinder	levelUp	17				
+Fletchling			Fletchinder	Fletchinder	Talonflame	Talonflame	levelUp	35				
+Scatterbug			Scatterbug	Scatterbug	Spewpa	Spewpa	levelUp	9				
+Scatterbug			Spewpa	Spewpa	Vivillon	Vivillon	levelUp	12				
+Litleo			Litleo	Litleo	Pyroar	Pyroar	levelUp	35				
+Flabébé			Flabébé	Flabébé	Floette	Floette	levelUp	19				
+Flabébé			Floette	Floette	Florges	Florges	useItem	Shiny Stone				
+Skiddo			Skiddo	Skiddo	Gogoat	Gogoat	levelUp	32				
+Pancham			Pancham	Pancham	Pangoro	Pangoro	levelUp	32	partyMemberType	Dark		
+Espurr			Espurr	Espurr	Meowstic	Male Meowstic	levelUp	25				
+Espurr			Espurr	Espurr	Meowstic	Female Meowstic	levelUp	25				
+Honedge			Honedge	Honedge	Doublade	Doublade	levelUp	35				
+Honedge			Doublade	Doublade	Aegislash	Aegislash	useItem	Dusk Stone				
+Spritzee			Spritzee	Spritzee	Aromatisse	Aromatisse	tradeHoldingItem	Sachet				
+Swirlix			Swirlix	Swirlix	Slurpuff	Slurpuff	tradeHoldingItem	Whipped Dream				
+Inkay			Inkay	Inkay	Malamar	Malamar	levelUp	30	deviceHeldUpsideDown			
+Binacle			Binacle	Binacle	Barbaracle	Barbaracle	levelUp	39				
+Skrelp			Skrelp	Skrelp	Dragalge	Dragalge	levelUp	48				
+Clauncher			Clauncher	Clauncher	Clawitzer	Clawitzer	levelUp	37				
+Helioptile			Helioptile	Helioptile	Heliolisk	Heliolisk	useItem	Sun Stone				
+Tyrunt			Tyrunt	Tyrunt	Tyrantrum	Tyrantrum	levelUp	39	timeOfDay	day		
+Amaura			Amaura	Amaura	Aurorus	Aurorus	levelUp	39	timeOfDay	night		
+Goomy			Goomy	Goomy	Sliggoo	Sliggoo	levelUp	40				
+Goomy			Goomy	Goomy	Sliggoo	Hisuian Sliggoo	levelUp	40			region	Hisui
+Goomy			Sliggoo	Sliggoo	Goodra	Goodra	levelUp	50	weather	rain		
+Goomy	sword		Sliggoo	Sliggoo	Goodra	Goodra	levelUp	50	weather	fog		
+Goomy	shield		Sliggoo	Sliggoo	Goodra	Goodra	levelUp	50	weather	fog		
+Goomy	national		Sliggoo	Sliggoo	Goodra	Goodra	levelUp	50	weather	fog		
+Goomy			Sliggoo	Hisuian Sliggoo	Goodra	Hisuian Goodra	levelUp	50	weather	rain	region	Hisui
+Goomy			Sliggoo	Hisuian Sliggoo	Goodra	Hisuian Goodra	levelUp	50	weather	fog	region	Hisui
+Phantump			Phantump	Phantump	Trevenant	Trevenant	trade					
+Pumpkaboo			Pumpkaboo	Pumpkaboo	Gourgeist	Gourgeist	trade					
+Bergmite		legendsArceus	Bergmite	Bergmite	Avalugg	Avalugg	levelUp	37				
+Bergmite			Bergmite	Bergmite	Avalugg	Hisuian Avalugg	levelUp	37	region	Hisui		
+Noibat			Noibat	Noibat	Noivern	Noivern	levelUp	48				
+Rowlet			Rowlet	Rowlet	Dartrix	Dartrix	levelUp	17				
+Rowlet		legendsArceus	Dartrix	Dartrix	Decidueye	Decidueye	levelUp	34				
+Rowlet			Dartrix	Dartrix	Decidueye	Hisuian Decidueye	levelUp	36	region	Hisui		
+Litten			Litten	Litten	Torracat	Torracat	levelUp	17				
+Litten			Torracat	Torracat	Incineroar	Incineroar	levelUp	34				
+Popplio			Popplio	Popplio	Brionne	Brionne	levelUp	17				
+Popplio			Brionne	Brionne	Primarina	Primarina	levelUp	34				
+Pikipek			Pikipek	Pikipek	Trumbeak	Trumbeak	levelUp	14				
+Pikipek			Trumbeak	Trumbeak	Toucannon	Toucannon	levelUp	28				
+Yungoos			Yungoos	Yungoos	Gumshoos	Gumshoos	levelUp	20	timeOfDay	day		
+Grubbin			Grubbin	Grubbin	Charjabug	Charjabug	levelUp	20				
+Grubbin			Charjabug	Charjabug	Vikavolt	Vikavolt	levelUpInArea	Special magnetic field				
+Grubbin	sword		Charjabug	Charjabug	Vikavolt	Vikavolt	useItem	Thunder Stone				
+Grubbin	shield		Charjabug	Charjabug	Vikavolt	Vikavolt	useItem	Thunder Stone				
+Grubbin	national		Charjabug	Charjabug	Vikavolt	Vikavolt	useItem	Thunder Stone				
+Crabrawler			Crabrawler	Crabrawler	Crabominable	Crabominable	levelUpInArea	Mount Lanakila				
+Cutiefly			Cutiefly	Cutiefly	Ribombee	Ribombee	levelUp	25				
+Rockruff			Rockruff	Rockruff	Lycanroc	Midday Form	levelUp	25	timeOfDay	day		
+Rockruff			Rockruff	Rockruff	Lycanroc	Midnight Form	levelUp	25	timeOfDay	night		
+Rockruff			Rockruff	Rockruff	Lycanroc	Dusk Form	levelUp	25	haveAbility	Own Tempo		
+Mareanie			Mareanie	Mareanie	Toxapex	Toxapex	levelUp	38				
+Mudbray			Mudbray	Mudbray	Mudsdale	Mudsdale	levelUp	30				
+Dewpider			Dewpider	Dewpider	Araquanid	Araquanid	levelUp	22				
+Fomantis			Fomantis	Fomantis	Lurantis	Lurantis	levelUp	34	timeOfDay	day		
+Morelull			Morelull	Morelull	Shiinotic	Shiinotic	levelUp	24				
+Salandit			Salandit	Salandit	Salazzle	Salazzle	levelUp	33	gender	female		
+Stufful			Stufful	Stufful	Bewear	Bewear	levelUp	27				
+Bounsweet			Bounsweet	Bounsweet	Steenee	Steenee	levelUp	18				
+Bounsweet			Steenee	Steenee	Tsareena	Tsareena	levelUpKnowingMove	Stomp				
+Wimpod			Wimpod	Wimpod	Golisopod	Golisopod	levelUp	30				
+Sandygast			Sandygast	Sandygast	Palossand	Palossand	levelUp	42				
+Type: Null			Type: Null	Type: Null	Silvally	Silvally	friendship					
+Jangmo-o			Jangmo-o	Jangmo-o	Hakamo-o	Hakamo-o	levelUp	35				
+Jangmo-o			Hakamo-o	Hakamo-o	Kommo-o	Kommo-o	levelUp	45				
+Cosmog			Cosmog	Cosmog	Cosmoem	Cosmoem	levelUp	43				
+Cosmog	sun		Cosmoem	Cosmoem	Solgaleo	Solgaleo	levelUp	53				
+Cosmog	ultraSun		Cosmoem	Cosmoem	Solgaleo	Solgaleo	levelUp	53				
+Cosmog	sword		Cosmoem	Cosmoem	Solgaleo	Solgaleo	levelUp	53				
+Cosmog	national		Cosmoem	Cosmoem	Solgaleo	Solgaleo	levelUp	53				
+Cosmog	moon		Cosmoem	Cosmoem	Lunala	Lunala	levelUp	53				
+Cosmog	ultraMoon		Cosmoem	Cosmoem	Lunala	Lunala	levelUp	53				
+Cosmog	shield		Cosmoem	Cosmoem	Lunala	Lunala	levelUp	53				
+Cosmog	national		Cosmoem	Cosmoem	Lunala	Lunala	levelUp	53				
+Poipole			Poipole	Poipole	Naganadel	Naganadel	levelUpKnowingMove	Dragon Pulse				
+Grookey			Grookey	Grookey	Thwackey	Thwackey	levelUp	16				
+Grookey			Thwackey	Thwackey	Rillaboom	Rillaboom	levelUp	35				
+Scorbunny			Scorbunny	Scorbunny	Raboot	Raboot	levelUp	16				
+Scorbunny			Raboot	Raboot	Cinderace	Cinderace	levelUp	35				
+Sobble			Sobble	Sobble	Drizzile	Drizzile	levelUp	16				
+Sobble			Drizzile	Drizzile	Inteleon	Inteleon	levelUp	35				
+Skwovet			Skwovet	Skwovet	Greedent	Greedent	levelUp	24				
+Rookidee			Rookidee	Rookidee	Corvisquire	Corvisquire	levelUp	18				
+Rookidee			Corvisquire	Corvisquire	Corviknight	Corviknight	levelUp	38				
+Blipbug			Blipbug	Blipbug	Dottler	Dottler	levelUp	10				
+Blipbug			Dottler	Dottler	Orbeetle	Orbeetle	levelUp	30				
+Nickit			Nickit	Nickit	Thievul	Thievul	levelUp	18				
+Gossifleur			Gossifleur	Gossifleur	Eldegoss	Eldegoss	levelUp	20				
+Wooloo			Wooloo	Wooloo	Dubwool	Dubwool	levelUp	24				
+Chewtle			Chewtle	Chewtle	Drednaw	Drednaw	levelUp	22				
+Yamper			Yamper	Yamper	Boltund	Boltund	levelUp	25				
+Rolycoly			Rolycoly	Rolycoly	Carkol	Carkol	levelUp	18				
+Rolycoly			Carkol	Carkol	Coalossal	Coalossal	levelUp	34				
+Applin			Applin	Applin	Flapple	Flapple	useItem	Tart Apple				
+Applin			Applin	Applin	Appletun	Appletun	useItem	Sweet Apple				
+Silicobra			Silicobra	Silicobra	Sandaconda	Sandaconda	levelUp	36				
+Arrokuda			Arrokuda	Arrokuda	Barraskewda	Barraskewda	levelUp	26				
+Toxel			Toxel	Toxel	Toxtricity	Amped Form	levelUp	30	other	Amped Nature		
+Toxel			Toxel	Toxel	Toxtricity	Low Key Form	levelUp	30	other	Low Key Nature		
+Sizzlipede			Sizzlipede	Sizzlipede	Centiskorch	Centiskorch	levelUp	28				
+Clobbopus			Clobbopus	Clobbopus	Grapploct	Grapploct	levelUpKnowingMove	Taunt				
+Sinistea			Sinistea	Phony Form	Polteageist	Phony Form	useItem	Cracked Pot				
+Sinistea			Sinistea	Antique Form	Polteageist	Antique Form	useItem	Chipped Pot				
+Hatenna			Hatenna	Hatenna	Hattrem	Hattrem	levelUp	32				
+Hatenna			Hattrem	Hattrem	Hatterene	Hatterene	levelUp	42				
+Impidimp			Impidimp	Impidimp	Morgrem	Morgrem	levelUp	32				
+Impidimp			Morgrem	Morgrem	Grimmsnarl	Grimmsnarl	levelUp	42				
+Milcery			Milcery	Milcery	Alcremie	Alcremie	trainerAction	Spins and strikes a pose				
+Snom			Snom	Snom	Frosmoth	Frosmoth	friendship		timeOfDay	night		
+Cufant			Cufant	Cufant	Copperajah	Copperajah	levelUp	34				
+Dreepy			Dreepy	Dreepy	Drakloak	Drakloak	levelUp	50				
+Dreepy			Drakloak	Drakloak	Dragapult	Dragapult	levelUp	60				
+Kubfu			Kubfu	Kubfu	Urshifu	Single Strike Style	other	Train in The Tower of Darkness				
+Kubfu			Kubfu	Kubfu	Urshifu	Rapid Strike Style	other	Train in The Tower of Waters				
+Sprigatito			Sprigatito	Sprigatito	Floragato	Floragato	levelUp	16				
+Sprigatito			Floragato	Floragato	Meowscarada	Meowscarada	levelUp	36				
+Fuecoco			Fuecoco	Fuecoco	Crocalor	Crocalor	levelUp	16				
+Fuecoco			Crocalor	Crocalor	Skeledirge	Skeledirge	levelUp	36				
+Quaxly			Quaxly	Quaxly	Quaxwell	Quaxwell	levelUp	16				
+Quaxly			Quaxwell	Quaxwell	Quaquaval	Quaquaval	levelUp	36				
+Lechonk			Lechonk	Lechonk	Oinkologne	Male	levelUp	18				
+Lechonk			Lechonk	Lechonk	Oinkologne	Female	levelUp	18				
+Tarountula			Tarountula	Tarountula	Spidops	Spidops	levelUp	15				
+Nymble			Nymble	Nymble	Lokix	Lokix	levelUp	24				
+Rellor			Rellor	Rellor	Rabsca	Rabsca	other	"Walk 1,000 steps in Let's Go mode"				
+Greavard			Greavard	Greavard	Houndstone	Houndstone	levelUp	30	timeOfDay	night		
+Flittle			Flittle	Flittle	Espathra	Espathra	levelUp	35				
+Wiglett			Wiglett	Wiglett	Wugtrio	Wugtrio	levelUp	26				
+Finizen			Finizen	Finizen	Palafin	Palafin	levelUp	38	other	In Multiplayer		
+Smoliv			Smoliv	Smoliv	Dolliv	Dollar	levelUp	25				
+Smoliv			Dolliv	Dolliv	Arboliva	Arboliva	levelUp	35				
+Capsakid			Capsakid	Capsakid	Scovillain	Scovillain	useItem	Fire Stone				
+Tadbulb			Tadbulb	Tadbulb	Bellibolt	Bellibolt	useItem	Thunder Stone				
+Varoom			Varoom	Varoom	Revavroom	Revavroom	levelUp	40				
+Tandemaus			Tandemaus	Tandemaus	Maushold	Family of Three	levelUp	25	other	Rare		
+Tandemaus			Tandemaus	Tandemaus	Maushold	Family of Four	levelUp	25				
+Cetoddle			Cetoddle	Cetoddle	Cetitan	Cetitan	useItem	Ice Stone				
+Frigibax			Frigibax	Frigibax	Arctibax	Arctibax	levelUp	35				
+Frigibax			Arctibax	Arctibax	Baxcalibur	Baxcalibur	levelUp	54				
+Pawmi			Pawmi	Pawmi	Pawmo	Pawmo	levelUp	18				
+Pawmi			Pawmo	Pawmo	Pawmot	Pawmot	other	"Walk 1,000 steps in Let's Go mode"				
+Wattrel			Wattrel	Wattrel	Kilowattrel	Kilowattrel	levelUp	25				
+Nacli			Nacli	Nacli	Naclstack	Naclstack	levelUp	24				
+Nacli			Naclstack	Naclstack	Garganacl	Garganacl	levelUp	38				
+Glimmet			Glimmet	Glimmet	Glimmora	Glimmora	levelUp	35				
+Shroodle			Shroodle	Shroodle	Grafaiai	Grafaiai	levelUp	28				
+Fidough			Fidough	Fidough	Dachsbun	Dachsbun	levelUp	26				
+Maschiff			Maschiff	Maschiff	Mabosstiff	Mabosstiff	levelUp	30				
+Bramblin			Bramblin	Bramblin	Brambleghast	Brambleghast	other	"Walk 1,000 steps in Let's Go mode"				
+Gimmighoul			Gimmighoul	Chest Form	Gholdengo	Gholdengo	other	Collect 999 coins in Roaming Form				
+Tinkatink			Tinkatink	Tinkatink	Tinkatuff	Tinkatuff	levelUp	24				
+Tinkatink			Tinkatuff	Tinkatuff	Tinkaton	Tinkaton	levelUp	38				
+Charcadet			Charcadet	Charcadet	Armarouge	Armarouge	other	Use Auspicious Armor				
+Charcadet			Charcadet	Charcadet	Ceruledge	Ceruledge	other	Use Malicious Armor				
+Toedscool			Toedscool	Toedscool	Toedscruel	Toedscruel	levelUp	30				

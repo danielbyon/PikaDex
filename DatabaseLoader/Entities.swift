@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PokedexCore
 
 struct BulbapediaItem: Decodable {
 
@@ -53,6 +54,7 @@ struct BulbapediaItem: Decodable {
         case "VI": return .vi
         case "VII": return .vii
         case "VIII": return .viii
+        case "IX": return .ix
         default: fatalError()
         }
     }
@@ -102,5 +104,3 @@ struct BulbapediaBerry: Decodable {
     var berrySour: Int16? { sour != nil ? Int16(sour!)! : nil }
 
 }
-
-extension Pocket: Decodable { }

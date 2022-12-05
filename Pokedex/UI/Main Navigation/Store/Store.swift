@@ -16,55 +16,52 @@ struct Store: View {
     @State private var thanksMessage: String?
 
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 44.0) {
-                    if storeViewModel.hasProducts {
-                        StoreSections(
-                            consoleProducts: storeViewModel.allConsoleProducts,
-                            tipProducts: storeViewModel.allTipProducts,
-                            isPurchasing: storeViewModel.isPurchasing) { product in
-                                self.storeViewModel.purchaseProduct(product)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 44.0) {
+                if storeViewModel.hasProducts {
+                    StoreSections(
+                        consoleProducts: storeViewModel.allConsoleProducts,
+                        tipProducts: storeViewModel.allTipProducts,
+                        isPurchasing: storeViewModel.isPurchasing) { product in
+                            self.storeViewModel.purchaseProduct(product)
                         }
                         .foregroundColor(.primary)
-                        RestorePurchases(onRestoreTriggered: self.storeViewModel.restorePurchases)
-                    } else if storeViewModel.error != nil {
-                        VStack {
-                            Text("Unable to load store")
-                            Button(action: self.refreshProducts) {
-                                Text("Refresh")
-                                    .padding()
-                            }
-                            .buttonStyle(DefaultButtonStyle())
+                    RestorePurchases(onRestoreTriggered: self.storeViewModel.restorePurchases)
+                } else if storeViewModel.error != nil {
+                    VStack {
+                        Text("Unable to load store")
+                        Button(action: self.refreshProducts) {
+                            Text("Refresh")
+                                .padding()
                         }
-                        .centered()
-                    } else {
-                        Text("Loading store...")
-                            .centered()
+                        .buttonStyle(DefaultButtonStyle())
                     }
-                }
-                .padding()
-            }
-            .navigationTitle("Store")
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    DoneButton(action: dismiss)
+                    .centered()
+                } else {
+                    Text("Loading store...")
+                        .centered()
                 }
             }
-            .onAppear {
-                self.refreshProducts()
-            }
-            .alert(item: $storeViewModel.alertInfo) { alertInfo in
-                Alert(
-                    title: Text(alertInfo.title),
-                    message: alertInfo.message != nil ? Text(alertInfo.message!) : nil,
-                    dismissButton: .default(Text(alertInfo.dismissTitle)))
-            }
-            .onReceive(NotificationCenter.default.publisher(for: StoreClient.purchasedNotification).receive(on: DispatchQueue.main)) { notification in
-                self.handlePurchasedNotification(notification)
+            .padding()
+        }
+        .navigationTitle("Store")
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                DoneButton(action: dismiss)
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
+            self.refreshProducts()
+        }
+        .alert(item: $storeViewModel.alertInfo) { alertInfo in
+            Alert(
+                title: Text(alertInfo.title),
+                message: alertInfo.message != nil ? Text(alertInfo.message!) : nil,
+                dismissButton: .default(Text(alertInfo.dismissTitle)))
+        }
+        .onReceive(NotificationCenter.default.publisher(for: StoreClient.purchasedNotification).receive(on: DispatchQueue.main)) { notification in
+            self.handlePurchasedNotification(notification)
+        }
     }
 
     private func refreshProducts() {
