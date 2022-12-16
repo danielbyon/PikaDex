@@ -61,3 +61,25 @@ public final class TeamViewModel: ObservableObject {
     }
 
 }
+
+extension TeamViewModel: Equatable {
+
+    public static func == (lhs: TeamViewModel, rhs: TeamViewModel) -> Bool {
+        lhs.name.wrappedValue == rhs.name.wrappedValue
+        && lhs.team == rhs.team
+        && lhs.members == rhs.members
+        && lhs.game == rhs.game
+    }
+
+}
+
+extension TeamViewModel: Hashable {
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(name.wrappedValue)
+        hasher.combine(team)
+        hasher.combine(members)
+        hasher.combine(game)
+    }
+
+}

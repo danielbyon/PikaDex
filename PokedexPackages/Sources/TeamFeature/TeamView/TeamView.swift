@@ -15,7 +15,7 @@ public struct TeamView<ViewFactory: TeamViewFactory>: View {
     let viewFactory: ViewFactory
 
     @Environment(\.pokedexDataStore) var dataStore
-    @Environment(\.editMode) var editMode
+//    @Environment(\.editMode) var editMode
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @ObservedObject var viewModel: TeamViewModel
     @State private var currentDeletingMember: TeamMember?
@@ -26,24 +26,13 @@ public struct TeamView<ViewFactory: TeamViewFactory>: View {
     public var body: some View {
         content(team: viewModel.team)
             .navigationTitle(viewModel.team.name)
-            .confirmationDialog(
-                "Delete team member?",
-                isPresented: $isShowingDeleteMember,
-                presenting: currentDeletingMember
-            ) { member in
-                Button("Delete", role: .destructive) {
-                    withAnimation {
-                        viewModel.removeMember(member)
-                    }
-                }
-            }
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
                     HomeButton()
                 }
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
+//                ToolbarItemGroup(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
             }
     }
 
@@ -130,23 +119,38 @@ public struct TeamView<ViewFactory: TeamViewFactory>: View {
     }
 
     private func teamMemberCell(member: TeamMemberViewModel) -> some View {
-        TeamMemberCell(viewModel: member)
-            .contextMenu {
-                Button(role: .destructive) {
-                    currentDeletingMember = member.teamMember
-                    isShowingDeleteMember.toggle()
-                } label: {
-                    Label("Delete", image: "trash")
+        ZStack(alignment: .topTrailing) {
+            TeamMemberCell(viewModel: member)
+//                .overlay(alignment: .topTrailing) {
+//
+//                }
+                .contextMenu {
+                    Button(role: .destructive) {
+                        currentDeletingMember = member.teamMember
+                        isShowingDeleteMember.toggle()
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
                 }
-            }
-            .overlay(alignment: .topTrailing) {
-                DeleteButton {
-                    currentDeletingMember = member.teamMember
-                    isShowingDeleteMember.toggle()
+                .confirmationDialog(
+                    "Delete team member?",
+                    isPresented: $isShowingDeleteMember,
+                    presenting: currentDeletingMember
+                ) { member in
+                    Button("Delete", role: .destructive) {
+                        withAnimation {
+                            viewModel.removeMember(member)
+                        }
+                    }
                 }
-                .opacity(editMode?.wrappedValue.isEditing == true ? 1.0 : 0.0)
-                .animation(.default, value: editMode?.wrappedValue)
-            }
+
+//            DeleteButton {
+//                currentDeletingMember = member.teamMember
+//                isShowingDeleteMember.toggle()
+//            }
+//            .opacity(editMode?.wrappedValue.isEditing == true ? 1.0 : 0.0)
+//            .animation(.default, value: editMode?.wrappedValue)
+        }
     }
 
 }

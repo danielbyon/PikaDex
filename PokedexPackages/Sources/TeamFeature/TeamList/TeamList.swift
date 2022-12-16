@@ -13,7 +13,7 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
     let game: Game
     let viewFactory: ViewFactory
 
-    @Environment(\.editMode) var editMode
+//    @Environment(\.editMode) var editMode
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var isShowingDeleteTeam = false
     @State private var isShowingPokepasteExport = false
@@ -35,7 +35,7 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                     HomeButton()
                 }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    EditButton()
+//                    EditButton()
                     Button {
                         if game == .national {
                             isShowingSelectGame.toggle()
@@ -47,6 +47,26 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .confirmationDialog("Add Team", isPresented: $isShowingSelectGame) {
+                        selectGame()
+                    }
+                    .confirmationDialog(
+                        "Delete Team?",
+                        isPresented: $isShowingDeleteTeam,
+                        presenting: currentDeletingTeam
+                    ) { teamViewModel in
+                        Button("Delete", role: .destructive) {
+                            withAnimation {
+                                viewModel.removeTeam(
+                                    teamViewModel.team,
+                                    for: teamViewModel.game
+                                )
+                            }
+                        }
+                        Button("Cancel", role: .cancel, action: { })
+                    } message: { _ in
+                        Text("This action cannot be undone.")
+                    }
                 }
             }
             .onAppear {
@@ -54,31 +74,6 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
             }
             .onChange(of: game) { newValue in
                 viewModel.game = newValue
-            }
-            .confirmationDialog(
-                "Delete Team?",
-                isPresented: $isShowingDeleteTeam,
-                presenting: currentDeletingTeam
-            ) { teamViewModel in
-                Button("Delete", role: .destructive) {
-                    withAnimation {
-                        viewModel.removeTeam(
-                            teamViewModel.team,
-                            for: teamViewModel.game
-                        )
-                    }
-                }
-                Button("Cancel", role: .cancel, action: { })
-            } message: { _ in
-                Text("This action cannot be undone.")
-            }
-            .alert("Copied to clipboard!", isPresented: $isShowingPokepasteExport) {
-                Button("Dismiss", action: { })
-            } message: {
-                Text("Your team has been exported to the PokéPaste format and copied to the clipboard.")
-            }
-            .confirmationDialog("Add Team", isPresented: $isShowingSelectGame) {
-                selectGame()
             }
             .onOpenURL(perform: handleURL)
     }
@@ -112,10 +107,27 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                         if viewModel.shouldShowSectionHeaders {
                             SectionHeader(section.game.title)
                         }
+                    } footer: {
+                        if viewModel.isLastSection(section) {
+                            footer()
+                        }
                     }
                 }
             }
             .padding()
+        }
+    }
+
+    @ViewBuilder
+    private func footer() -> some View {
+        if !viewModel.sections.isEmpty {
+#if targetEnvironment(macCatalyst)
+            Text("Right-click on a team for options")
+                .monospacedCaption()
+#else
+            Text("Tap and hold on a team for options")
+                .monospacedCaption()
+#endif
         }
     }
 
@@ -140,14 +152,19 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                     Label("Delete", image: "trash")
                 }
             }
-            .overlay(alignment: .topTrailing) {
-                DeleteButton {
-                    currentDeletingTeam = teamViewModel
-                    isShowingDeleteTeam.toggle()
-                }
-                .opacity(editMode?.wrappedValue.isEditing == true ? 1.0 : 0.0)
-                .animation(.default, value: editMode?.wrappedValue)
+            .alert("Copied to clipboard!", isPresented: $isShowingPokepasteExport) {
+                Button("Dismiss", action: { })
+            } message: {
+                Text("Your team has been exported to the PokéPaste format and copied to the clipboard.")
             }
+//            .overlay(alignment: .topTrailing) {
+//                DeleteButton {
+//                    currentDeletingTeam = teamViewModel
+//                    isShowingDeleteTeam.toggle()
+//                }
+//                .opacity(editMode?.wrappedValue.isEditing == true ? 1.0 : 0.0)
+//                .animation(.default, value: editMode?.wrappedValue)
+//            }
     }
 
     @ViewBuilder

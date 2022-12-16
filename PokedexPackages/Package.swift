@@ -60,9 +60,6 @@ targets.append(contentsOf: [
         name: "DesignSystem",
         dependencies: [
             "PokedexCore"
-        ],
-        resources: [
-            .process("Resources"),
         ]
     ),
     .testTarget(
