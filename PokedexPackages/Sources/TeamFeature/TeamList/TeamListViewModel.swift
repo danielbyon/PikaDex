@@ -56,6 +56,10 @@ final class TeamListViewModel: ObservableObject {
         UIPasteboard.general.string = team.pokePaste
     }
 
+    func isLastSection(_ section: Section) -> Bool {
+        section == sections.last
+    }
+
     // MARK: Private
 
     private func reloadSections() {
@@ -99,7 +103,7 @@ extension TeamListViewModel.Section: Equatable {
 
     static func == (lhs: TeamListViewModel.Section, rhs: TeamListViewModel.Section) -> Bool {
         lhs.game == rhs.game
-        && lhs.teams.map(\.team) == rhs.teams.map(\.team)
+        && lhs.teams == rhs.teams
     }
 
 }
@@ -108,7 +112,7 @@ extension TeamListViewModel.Section: Hashable {
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(game)
-        hasher.combine(teams.map(\.team))
+        hasher.combine(teams)
     }
 
 }
