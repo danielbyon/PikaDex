@@ -6,9 +6,8 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
-import SwiftUI
 import AppSupport
-import PokemonFeature
+import SwiftUI
 
 struct PokemonDetailOrderSettings: View {
 

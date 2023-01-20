@@ -35,7 +35,6 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                     HomeButton()
                 }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-//                    EditButton()
                     Button {
                         if game == .national {
                             isShowingSelectGame.toggle()
@@ -143,13 +142,13 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
                     viewModel.exportTeam(teamViewModel.team)
                     isShowingPokepasteExport.toggle()
                 } label: {
-                    Label("Export PokéPaste", image: "share")
+                    Label("Export PokéPaste", systemImage: "square.and.arrow.up")
                 }
                 Button(role: .destructive) {
                     currentDeletingTeam = teamViewModel
                     isShowingDeleteTeam.toggle()
                 } label: {
-                    Label("Delete", image: "trash")
+                    Label("Delete", systemImage: "trash")
                 }
             }
             .alert("Copied to clipboard!", isPresented: $isShowingPokepasteExport) {
@@ -157,14 +156,6 @@ public struct TeamList<ViewFactory: TeamViewFactory>: View {
             } message: {
                 Text("Your team has been exported to the PokéPaste format and copied to the clipboard.")
             }
-//            .overlay(alignment: .topTrailing) {
-//                DeleteButton {
-//                    currentDeletingTeam = teamViewModel
-//                    isShowingDeleteTeam.toggle()
-//                }
-//                .opacity(editMode?.wrappedValue.isEditing == true ? 1.0 : 0.0)
-//                .animation(.default, value: editMode?.wrappedValue)
-//            }
     }
 
     @ViewBuilder

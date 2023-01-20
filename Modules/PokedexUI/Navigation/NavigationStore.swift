@@ -14,32 +14,6 @@ public class NavigationStore: ObservableObject {
 
     public init() { }
 
-    public func restore(from data: Data) {
-        do {
-            let representation = try JSONDecoder().decode(
-                NavigationPath.CodableRepresentation.self,
-                from: data)
-            path = NavigationPath(representation)
-        } catch {
-            path = NavigationPath()
-        }
-    }
-
-    public func encoded() -> Data? {
-        guard let representation = path.codable else {
-            return nil
-        }
-        do {
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(representation)
-            return data
-        } catch {
-            // Handle error.
-            debugPrint(error)
-            return nil
-        }
-    }
-
     public func clear() {
         path = .init()
     }
