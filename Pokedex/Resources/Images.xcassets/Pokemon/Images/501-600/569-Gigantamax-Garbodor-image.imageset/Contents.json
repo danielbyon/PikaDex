@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "569-Gigantamax-Garbodor-image.png",
+      "filename" : "569-Gigantamax-Garbodor-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "569-Gigantamax-Garbodor-image-1.png",
+      "filename" : "569-Gigantamax-Garbodor-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "569-Gigantamax-Garbodor-image-2.png",
+      "filename" : "569-Gigantamax-Garbodor-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

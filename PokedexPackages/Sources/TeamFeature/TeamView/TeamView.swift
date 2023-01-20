@@ -60,12 +60,12 @@ public struct TeamView<ViewFactory: TeamViewFactory>: View {
                 alignment: .leading,
                 spacing: 24.0
             ) {
-                Section {
-                    Card {
-                        TextField("Name", text: viewModel.name)
-                            .monospacedBody()
-                    }
-                }
+//                Section {
+//                    Card {
+//                        TextField("Name", text: viewModel.name)
+//                            .monospacedBody()
+//                    }
+//                }
 
                 Section {
                     ForEach(viewModel.members, id: \.teamMember.id) { member in

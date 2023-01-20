@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "012-Gigantamax-Butterfree-image.png",
+      "filename" : "012-Gigantamax-Butterfree-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "012-Gigantamax-Butterfree-image-1.png",
+      "filename" : "012-Gigantamax-Butterfree-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "012-Gigantamax-Butterfree-image-2.png",
+      "filename" : "012-Gigantamax-Butterfree-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

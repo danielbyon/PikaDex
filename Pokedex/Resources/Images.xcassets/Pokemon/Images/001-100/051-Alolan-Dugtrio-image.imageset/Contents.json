@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "051-Alolan-Dugtrio-image.png",
+      "filename" : "051-Alolan-Dugtrio-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "051-Alolan-Dugtrio-image-1.png",
+      "filename" : "051-Alolan-Dugtrio-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "051-Alolan-Dugtrio-image-2.png",
+      "filename" : "051-Alolan-Dugtrio-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

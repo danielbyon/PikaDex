@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "714-image~universal@1x.png",
+      "filename" : "714-image~universal@1x.heic",
       "scale" : "1x",
       "idiom" : "universal"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "714-image~universal@2x.png"
+      "filename" : "714-image~universal@2x.heic"
     },
     {
       "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "714-image~universal@3x.png"
+      "filename" : "714-image~universal@3x.heic"
     }
   ],
   "info" : {

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "089-Alolan-Muk-image.png",
+      "filename" : "089-Alolan-Muk-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "089-Alolan-Muk-image-1.png",
+      "filename" : "089-Alolan-Muk-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "089-Alolan-Muk-image-2.png",
+      "filename" : "089-Alolan-Muk-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

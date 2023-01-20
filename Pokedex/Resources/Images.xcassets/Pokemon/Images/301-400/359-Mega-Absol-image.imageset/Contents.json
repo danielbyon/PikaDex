@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "359-Mega-Absol-image.png",
+      "filename" : "359-Mega-Absol-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "359-Mega-Absol-image-1.png",
+      "filename" : "359-Mega-Absol-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "359-Mega-Absol-image-2.png",
+      "filename" : "359-Mega-Absol-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "075-Alolan-Graveler-image.png",
+      "filename" : "075-Alolan-Graveler-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "075-Alolan-Graveler-image-1.png",
+      "filename" : "075-Alolan-Graveler-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "075-Alolan-Graveler-image-2.png",
+      "filename" : "075-Alolan-Graveler-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -3,15 +3,15 @@
     {
       "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "300-image~universal@1x.png"
+      "filename" : "300-image~universal@1x.heic"
     },
     {
-      "filename" : "300-image~universal@2x.png",
+      "filename" : "300-image~universal@2x.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "300-image~universal@3x.png",
+      "filename" : "300-image~universal@3x.heic",
       "scale" : "3x",
       "idiom" : "universal"
     }

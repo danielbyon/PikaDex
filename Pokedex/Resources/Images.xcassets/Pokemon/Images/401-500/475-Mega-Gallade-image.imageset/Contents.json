@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "475-Mega-Gallade-image.png",
+      "filename" : "475-Mega-Gallade-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "475-Mega-Gallade-image-1.png",
+      "filename" : "475-Mega-Gallade-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "475-Mega-Gallade-image-2.png",
+      "filename" : "475-Mega-Gallade-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

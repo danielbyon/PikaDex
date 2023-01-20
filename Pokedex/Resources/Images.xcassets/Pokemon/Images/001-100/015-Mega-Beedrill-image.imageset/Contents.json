@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "015-Mega-Beedrill.png",
+      "filename" : "015-Mega-Beedrill.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "015-Mega-Beedrill-1.png",
+      "filename" : "015-Mega-Beedrill-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "015-Mega-Beedrill-2.png",
+      "filename" : "015-Mega-Beedrill-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

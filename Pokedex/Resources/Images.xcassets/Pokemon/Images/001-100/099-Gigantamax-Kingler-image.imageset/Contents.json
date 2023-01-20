@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "099-Gigantamax-Kingler-image.png",
+      "filename" : "099-Gigantamax-Kingler-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "099-Gigantamax-Kingler-image-1.png",
+      "filename" : "099-Gigantamax-Kingler-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "099-Gigantamax-Kingler-image-2.png",
+      "filename" : "099-Gigantamax-Kingler-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

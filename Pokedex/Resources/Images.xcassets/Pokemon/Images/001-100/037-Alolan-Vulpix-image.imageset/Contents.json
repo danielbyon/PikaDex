@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "037-Alolan-Vulpix-image.png",
+      "filename" : "037-Alolan-Vulpix-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "037-Alolan-Vulpix-image-1.png",
+      "filename" : "037-Alolan-Vulpix-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "037-Alolan-Vulpix-image-2.png",
+      "filename" : "037-Alolan-Vulpix-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "260-Mega-Swampert-image.png",
+      "filename" : "260-Mega-Swampert-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "260-Mega-Swampert-image-1.png",
+      "filename" : "260-Mega-Swampert-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "260-Mega-Swampert-image-2.png",
+      "filename" : "260-Mega-Swampert-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

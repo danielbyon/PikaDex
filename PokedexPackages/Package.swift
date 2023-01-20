@@ -23,6 +23,7 @@ func addFeature(name: String) {
     products.append(
         .library(
             name: featureName,
+            type: .dynamic,
             targets: [featureName]
         )
     )
@@ -52,6 +53,7 @@ func addFeature(name: String) {
 products.append(
     .library(
         name: "DesignSystem",
+        type: .dynamic,
         targets: ["DesignSystem"]
     )
 )
@@ -72,6 +74,7 @@ targets.append(contentsOf: [
 products.append(
     .library(
         name: "PokedexCore",
+        type: .dynamic,
         targets: ["PokedexCore"]
     )
 )
@@ -96,6 +99,7 @@ targets.append(contentsOf: [
 products.append(
     .library(
         name: "PokedexUI",
+        type: .dynamic,
         targets: ["PokedexUI"]
     )
 )

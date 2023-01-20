@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "826-Gigantamax-Orbeetle-image.png",
+      "filename" : "826-Gigantamax-Orbeetle-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "826-Gigantamax-Orbeetle-image-1.png",
+      "filename" : "826-Gigantamax-Orbeetle-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "826-Gigantamax-Orbeetle-image-2.png",
+      "filename" : "826-Gigantamax-Orbeetle-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "858-Gigantamax-Hatterene-image.png",
+      "filename" : "858-Gigantamax-Hatterene-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "858-Gigantamax-Hatterene-image-1.png",
+      "filename" : "858-Gigantamax-Hatterene-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "858-Gigantamax-Hatterene-image-2.png",
+      "filename" : "858-Gigantamax-Hatterene-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

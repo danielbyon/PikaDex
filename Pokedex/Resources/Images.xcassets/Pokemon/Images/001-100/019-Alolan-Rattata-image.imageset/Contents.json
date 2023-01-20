@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "019-Alolan-Rattata-image.png",
+      "filename" : "019-Alolan-Rattata-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "019-Alolan-Rattata-image-1.png",
+      "filename" : "019-Alolan-Rattata-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "019-Alolan-Rattata-image-2.png",
+      "filename" : "019-Alolan-Rattata-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }
