@@ -2157,38 +2157,38 @@
 		65EE7D15297A514B00CBA045 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				65EE7D3F297A515A00CBA045 /* AbilityFeature */,
-				65EE7D22297A515600CBA045 /* BattleAssistantFeature */,
-				65EE7D16297A515400CBA045 /* DualTypeFeature */,
-				65EE7D32297A515700CBA045 /* ItemFeature */,
-				65EE7D45297A515B00CBA045 /* LocationFeature */,
-				65EE7D83297A515D00CBA045 /* MachineFeature */,
-				65EE7D87297A515E00CBA045 /* MoveFeature */,
-				65EE7D3B297A515900CBA045 /* NatureFeature */,
-				65EE7D5A297A515C00CBA045 /* PokemonFeature */,
-				65EE7D91297A515F00CBA045 /* TeamFeature */,
-				65EE7D1B297A515500CBA045 /* TypeFeature */,
+				65EE7D3F297A515A00CBA045 /* Ability */,
+				65EE7D22297A515600CBA045 /* BattleAssistant */,
+				65EE7D16297A515400CBA045 /* DualType */,
+				65EE7D32297A515700CBA045 /* Item */,
+				65EE7D45297A515B00CBA045 /* Location */,
+				65EE7D83297A515D00CBA045 /* Machine */,
+				65EE7D87297A515E00CBA045 /* Move */,
+				65EE7D3B297A515900CBA045 /* Nature */,
+				65EE7D5A297A515C00CBA045 /* Pokemon */,
+				65EE7D91297A515F00CBA045 /* Team */,
+				65EE7D1B297A515500CBA045 /* Type */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		65EE7D16297A515400CBA045 /* DualTypeFeature */ = {
+		65EE7D16297A515400CBA045 /* DualType */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D17297A515400CBA045 /* DualTypePokemonForms.swift */,
 				65EE7D19297A515400CBA045 /* TypeSelector.swift */,
 				65EE7D1A297A515400CBA045 /* DualTypeChecker.swift */,
 			);
-			path = DualTypeFeature;
+			path = DualType;
 			sourceTree = "<group>";
 		};
-		65EE7D1B297A515500CBA045 /* TypeFeature */ = {
+		65EE7D1B297A515500CBA045 /* Type */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D1F297A515500CBA045 /* TypeList */,
 				65EE7D1C297A515500CBA045 /* TypeView */,
 			);
-			path = TypeFeature;
+			path = Type;
 			sourceTree = "<group>";
 		};
 		65EE7D1C297A515500CBA045 /* TypeView */ = {
@@ -2208,14 +2208,14 @@
 			path = TypeList;
 			sourceTree = "<group>";
 		};
-		65EE7D22297A515600CBA045 /* BattleAssistantFeature */ = {
+		65EE7D22297A515600CBA045 /* BattleAssistant */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D23297A515600CBA045 /* Extensions */,
 				65EE7D25297A515600CBA045 /* Components */,
 				65EE7D2E297A515600CBA045 /* BattleAssistant */,
 			);
-			path = BattleAssistantFeature;
+			path = BattleAssistant;
 			sourceTree = "<group>";
 		};
 		65EE7D23297A515600CBA045 /* Extensions */ = {
@@ -2264,13 +2264,13 @@
 			path = BattleAssistant;
 			sourceTree = "<group>";
 		};
-		65EE7D32297A515700CBA045 /* ItemFeature */ = {
+		65EE7D32297A515700CBA045 /* Item */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D33297A515700CBA045 /* ItemList */,
 				65EE7D36297A515700CBA045 /* ItemView */,
 			);
-			path = ItemFeature;
+			path = Item;
 			sourceTree = "<group>";
 		};
 		65EE7D33297A515700CBA045 /* ItemList */ = {
@@ -2293,23 +2293,23 @@
 			path = ItemView;
 			sourceTree = "<group>";
 		};
-		65EE7D3B297A515900CBA045 /* NatureFeature */ = {
+		65EE7D3B297A515900CBA045 /* Nature */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D3C297A515900CBA045 /* NatureCell.swift */,
 				65EE7D3D297A515900CBA045 /* NatureCellViewModel.swift */,
 				65EE7D3E297A515900CBA045 /* NatureList.swift */,
 			);
-			path = NatureFeature;
+			path = Nature;
 			sourceTree = "<group>";
 		};
-		65EE7D3F297A515A00CBA045 /* AbilityFeature */ = {
+		65EE7D3F297A515A00CBA045 /* Ability */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D40297A515A00CBA045 /* AbilityView */,
 				65EE7D42297A515A00CBA045 /* AbilityList */,
 			);
-			path = AbilityFeature;
+			path = Ability;
 			sourceTree = "<group>";
 		};
 		65EE7D40297A515A00CBA045 /* AbilityView */ = {
@@ -2329,14 +2329,14 @@
 			path = AbilityList;
 			sourceTree = "<group>";
 		};
-		65EE7D45297A515B00CBA045 /* LocationFeature */ = {
+		65EE7D45297A515B00CBA045 /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D46297A515B00CBA045 /* LocationList */,
 				65EE7D48297A515B00CBA045 /* LocationView */,
 				65EE7D58297A515B00CBA045 /* Extensions */,
 			);
-			path = LocationFeature;
+			path = Location;
 			sourceTree = "<group>";
 		};
 		65EE7D46297A515B00CBA045 /* LocationList */ = {
@@ -2405,7 +2405,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		65EE7D5A297A515C00CBA045 /* PokemonFeature */ = {
+		65EE7D5A297A515C00CBA045 /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D5F297A515C00CBA045 /* Components */,
@@ -2414,7 +2414,7 @@
 				65EE7D64297A515C00CBA045 /* PokemonView */,
 				65EE7D5D297A515C00CBA045 /* Utilities */,
 			);
-			path = PokemonFeature;
+			path = Pokemon;
 			sourceTree = "<group>";
 		};
 		65EE7D5B297A515C00CBA045 /* Extensions */ = {
@@ -2550,12 +2550,12 @@
 			path = PokemonList;
 			sourceTree = "<group>";
 		};
-		65EE7D83297A515D00CBA045 /* MachineFeature */ = {
+		65EE7D83297A515D00CBA045 /* Machine */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D84297A515D00CBA045 /* MachineList */,
 			);
-			path = MachineFeature;
+			path = Machine;
 			sourceTree = "<group>";
 		};
 		65EE7D84297A515D00CBA045 /* MachineList */ = {
@@ -2567,14 +2567,14 @@
 			path = MachineList;
 			sourceTree = "<group>";
 		};
-		65EE7D87297A515E00CBA045 /* MoveFeature */ = {
+		65EE7D87297A515E00CBA045 /* Move */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D89297A515E00CBA045 /* Components */,
 				65EE7D8D297A515E00CBA045 /* MoveView */,
 				65EE7D8F297A515E00CBA045 /* MoveList */,
 			);
-			path = MoveFeature;
+			path = Move;
 			sourceTree = "<group>";
 		};
 		65EE7D89297A515E00CBA045 /* Components */ = {
@@ -2603,7 +2603,7 @@
 			path = MoveList;
 			sourceTree = "<group>";
 		};
-		65EE7D91297A515F00CBA045 /* TeamFeature */ = {
+		65EE7D91297A515F00CBA045 /* Team */ = {
 			isa = PBXGroup;
 			children = (
 				65EE7D97297A515F00CBA045 /* Components */,
@@ -2614,7 +2614,7 @@
 				65EE7D92297A515F00CBA045 /* TeamMemberView */,
 				65EE7DA3297A515F00CBA045 /* TeamView */,
 			);
-			path = TeamFeature;
+			path = Team;
 			sourceTree = "<group>";
 		};
 		65EE7D92297A515F00CBA045 /* TeamMemberView */ = {
