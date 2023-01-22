@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "381-Mega-Latios-image.png",
+      "filename" : "381-Mega-Latios-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "381-Mega-Latios-image-1.png",
+      "filename" : "381-Mega-Latios-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "381-Mega-Latios-image-2.png",
+      "filename" : "381-Mega-Latios-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

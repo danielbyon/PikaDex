@@ -4,17 +4,11 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
-		<string>Fixed missing Mega/Alolan/Galarian/etc forms on the National Pokédex. National Pokédex now shows all possible forms for each Pokémon.</string>
-		<string>Fixed move learnsets for alternate forms and the National Pokédex</string>
-		<string>Fixed Hisuian Zoroark&apos;s type</string>
+		<string>Fixed crash when renaming a team or modifying members</string>
 	</array>
 	<key>newFeatures</key>
 	<array>
-		<string>PikaDex has been rewritten from the ground up, leading to better performance and stability!</string>
-		<string>Initial Scarlet/Violet support. Note: these games are very new and information is still being discovered and documented. Some info might be missing or incorrect. Please use the contact form if you find any errors.</string>
-		<string>Implemented Caught Pokemon tracking (Beta): Swipe on a Pokémon or long press to mark it as caught.</string>
-		<string>Added Home button to conveniently jump back to the home screen.</string>
-		<string>Added Links to Bulbapedia and PokemonDB for Pokémon, Moves, Items, Locations, Abilities and Types.</string>
+		<string>Reduced app size by 1.1 GB (66%)</string>
 	</array>
 	<key>upcoming</key>
 	<array>

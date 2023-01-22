@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "212-Mega-Scizor-image.png",
+      "filename" : "212-Mega-Scizor-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "212-Mega-Scizor-image-1.png",
+      "filename" : "212-Mega-Scizor-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "212-Mega-Scizor-image-2.png",
+      "filename" : "212-Mega-Scizor-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

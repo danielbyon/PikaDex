@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "282-Mega-Gardevoir-image.png",
+      "filename" : "282-Mega-Gardevoir-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "282-Mega-Gardevoir-image-1.png",
+      "filename" : "282-Mega-Gardevoir-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "282-Mega-Gardevoir-image-2.png",
+      "filename" : "282-Mega-Gardevoir-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

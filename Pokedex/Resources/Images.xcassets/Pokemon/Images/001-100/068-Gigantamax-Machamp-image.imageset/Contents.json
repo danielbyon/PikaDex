@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "068-Gigantamax-Machamp-image.png",
+      "filename" : "068-Gigantamax-Machamp-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "068-Gigantamax-Machamp-image-1.png",
+      "filename" : "068-Gigantamax-Machamp-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "068-Gigantamax-Machamp-image-2.png",
+      "filename" : "068-Gigantamax-Machamp-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

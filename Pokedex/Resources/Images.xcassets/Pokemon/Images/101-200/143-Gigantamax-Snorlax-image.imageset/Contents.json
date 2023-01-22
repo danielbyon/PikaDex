@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "143-Gigantamax-Snorlax-image.png",
+      "filename" : "143-Gigantamax-Snorlax-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "143-Gigantamax-Snorlax-image-1.png",
+      "filename" : "143-Gigantamax-Snorlax-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "143-Gigantamax-Snorlax-image-2.png",
+      "filename" : "143-Gigantamax-Snorlax-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

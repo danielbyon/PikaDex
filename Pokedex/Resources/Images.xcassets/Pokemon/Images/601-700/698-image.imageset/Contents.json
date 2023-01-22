@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "698-image~universal@1x.png",
+      "filename" : "698-image~universal@1x.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "698-image~universal@2x.png"
+      "filename" : "698-image~universal@2x.heic"
     },
     {
       "scale" : "3x",
-      "filename" : "698-image~universal@3x.png",
+      "filename" : "698-image~universal@3x.heic",
       "idiom" : "universal"
     }
   ],

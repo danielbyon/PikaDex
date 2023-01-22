@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "094-Gigantamax-Gengar-image.png",
+      "filename" : "094-Gigantamax-Gengar-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "094-Gigantamax-Gengar-image-1.png",
+      "filename" : "094-Gigantamax-Gengar-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "094-Gigantamax-Gengar-image-2.png",
+      "filename" : "094-Gigantamax-Gengar-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

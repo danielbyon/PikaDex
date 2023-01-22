@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "618-Galarian-Stunfisk-image.png",
+      "filename" : "618-Galarian-Stunfisk-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "618-Galarian-Stunfisk-image-1.png",
+      "filename" : "618-Galarian-Stunfisk-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "618-Galarian-Stunfisk-image-2.png",
+      "filename" : "618-Galarian-Stunfisk-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

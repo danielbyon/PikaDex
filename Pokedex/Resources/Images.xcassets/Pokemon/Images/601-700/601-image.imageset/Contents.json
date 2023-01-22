@@ -5,18 +5,18 @@
   },
   "images" : [
     {
-      "filename" : "601-image~universal@1x.png",
+      "filename" : "601-image~universal@1x.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "601-image~universal@2x.png"
+      "filename" : "601-image~universal@2x.heic"
     },
     {
       "idiom" : "universal",
-      "filename" : "601-image~universal@3x.png",
+      "filename" : "601-image~universal@3x.heic",
       "scale" : "3x"
     }
   ]

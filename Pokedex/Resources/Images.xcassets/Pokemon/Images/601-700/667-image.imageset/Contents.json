@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "667-image~universal@1x.png"
+      "filename" : "667-image~universal@1x.heic"
     },
     {
       "idiom" : "universal",
-      "filename" : "667-image~universal@2x.png",
+      "filename" : "667-image~universal@2x.heic",
       "scale" : "2x"
     },
     {
       "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "667-image~universal@3x.png"
+      "filename" : "667-image~universal@3x.heic"
     }
   ],
   "info" : {

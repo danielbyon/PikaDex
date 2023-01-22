@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "841-Gigantamax-Flapple-image.png",
+      "filename" : "841-Gigantamax-Flapple-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "841-Gigantamax-Flapple-image-1.png",
+      "filename" : "841-Gigantamax-Flapple-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "841-Gigantamax-Flapple-image-2.png",
+      "filename" : "841-Gigantamax-Flapple-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

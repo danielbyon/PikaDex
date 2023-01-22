@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "110-Galarian-Weezing-image.png",
+      "filename" : "110-Galarian-Weezing-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "110-Galarian-Weezing-image-1.png",
+      "filename" : "110-Galarian-Weezing-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "110-Galarian-Weezing-image-2.png",
+      "filename" : "110-Galarian-Weezing-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

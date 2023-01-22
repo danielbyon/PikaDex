@@ -6,17 +6,17 @@
   "images" : [
     {
       "scale" : "1x",
-      "filename" : "380-image~universal@1x.png",
+      "filename" : "380-image~universal@1x.heic",
       "idiom" : "universal"
     },
     {
       "idiom" : "universal",
-      "filename" : "380-image~universal@2x.png",
+      "filename" : "380-image~universal@2x.heic",
       "scale" : "2x"
     },
     {
       "scale" : "3x",
-      "filename" : "380-image~universal@3x.png",
+      "filename" : "380-image~universal@3x.heic",
       "idiom" : "universal"
     }
   ]

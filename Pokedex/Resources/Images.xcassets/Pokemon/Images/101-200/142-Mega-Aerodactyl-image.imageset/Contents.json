@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "142-Mega-Aerodactyl-image.png",
+      "filename" : "142-Mega-Aerodactyl-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "142-Mega-Aerodactyl-image-1.png",
+      "filename" : "142-Mega-Aerodactyl-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "142-Mega-Aerodactyl-image-2.png",
+      "filename" : "142-Mega-Aerodactyl-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

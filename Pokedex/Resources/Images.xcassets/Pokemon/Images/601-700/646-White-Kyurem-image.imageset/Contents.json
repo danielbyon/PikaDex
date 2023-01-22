@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "646-White-Kyurem-image.png",
+      "filename" : "646-White-Kyurem-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "646-White-Kyurem-image-1.png",
+      "filename" : "646-White-Kyurem-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "646-White-Kyurem-image-2.png",
+      "filename" : "646-White-Kyurem-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

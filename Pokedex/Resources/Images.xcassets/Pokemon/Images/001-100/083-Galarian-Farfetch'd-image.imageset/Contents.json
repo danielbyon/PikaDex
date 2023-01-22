@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "083-Galarian-Farfetch'd-image.png",
+      "filename" : "083-Galarian-Farfetch'd-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "083-Galarian-Farfetch'd-image-1.png",
+      "filename" : "083-Galarian-Farfetch'd-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "083-Galarian-Farfetch'd-image-2.png",
+      "filename" : "083-Galarian-Farfetch'd-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -7,16 +7,16 @@
     {
       "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "273-image~universal@1x.png"
+      "filename" : "273-image~universal@1x.heic"
     },
     {
       "scale" : "2x",
-      "filename" : "273-image~universal@2x.png",
+      "filename" : "273-image~universal@2x.heic",
       "idiom" : "universal"
     },
     {
       "idiom" : "universal",
-      "filename" : "273-image~universal@3x.png",
+      "filename" : "273-image~universal@3x.heic",
       "scale" : "3x"
     }
   ]

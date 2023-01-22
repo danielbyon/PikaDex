@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "658-Ash-Greninja-image.png",
+      "filename" : "658-Ash-Greninja-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "658-Ash-Greninja-image-1.png",
+      "filename" : "658-Ash-Greninja-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "658-Ash-Greninja-image-2.png",
+      "filename" : "658-Ash-Greninja-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }

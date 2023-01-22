@@ -95,6 +95,10 @@ struct SelectTeamMemberMove<ViewFactory: TeamViewFactory>: View {
                     detailText: entry.detailText,
                     game: entry.game
                 )
+                .onTapGesture {
+                    onSelect(entry.move)
+                    dismiss()
+                }
             }
         } header: {
             SectionHeader(title)

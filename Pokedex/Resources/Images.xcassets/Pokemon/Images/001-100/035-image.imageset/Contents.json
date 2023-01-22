@@ -3,16 +3,16 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "035-image~universal@1x.png"
+      "filename" : "035-image~universal@1x.heic"
     },
     {
-      "filename" : "035-image~universal@2x.png",
+      "filename" : "035-image~universal@2x.heic",
       "scale" : "2x",
       "idiom" : "universal"
     },
     {
       "scale" : "3x",
-      "filename" : "035-image~universal@3x.png",
+      "filename" : "035-image~universal@3x.heic",
       "idiom" : "universal"
     }
   ],

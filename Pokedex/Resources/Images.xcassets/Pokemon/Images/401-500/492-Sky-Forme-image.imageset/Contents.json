@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "492-Sky-Forme-image.png",
+      "filename" : "492-Sky-Forme-image.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "492-Sky-Forme-image-1.png",
+      "filename" : "492-Sky-Forme-image-1.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "492-Sky-Forme-image-2.png",
+      "filename" : "492-Sky-Forme-image-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }
