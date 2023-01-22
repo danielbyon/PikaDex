@@ -3273,7 +3273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\nset -e\n\nif [ \"Release\" = \"${CONFIGURATION}\" ]; then # Only do this for release builds\n    \n    # Path to the app directory\n    APP_DIR_PATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\n    # Strip main binary\n    strip -rSTx ${APP_DIR_PATH}/${EXECUTABLE_NAME}\n    # Path to the Frameworks directory\n    APP_FRAMEWORKS_DIR=${APP_DIR_PATH}/\"Frameworks\"\n    \n    # Strip symbols from frameworks, if Frameworks/ exists at all\n    # ... as long as the framework is NOT signed by Apple\n    if [ -d $APP_FRAMEWORKS_DIR ]\n    then\n        find $APP_FRAMEWORKS_DIR -type f -perm +111 -maxdepth 2 -mindepth 2 -exec bash -c \"codesign -v -R='anchor apple' {} &> /dev/null || (echo {} && strip -rSTx {})\" \\;\n    fi\nfi\n";
+			shellScript = "##!/bin/bash\n#set -e\n#\n#if [ \"Release\" = \"${CONFIGURATION}\" ]; then # Only do this for release builds\n#    \n#    # Path to the app directory\n#    APP_DIR_PATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\n#    # Strip main binary\n#    strip -rSTx ${APP_DIR_PATH}/${EXECUTABLE_NAME}\n#    # Path to the Frameworks directory\n#    APP_FRAMEWORKS_DIR=${APP_DIR_PATH}/\"Frameworks\"\n#    \n#    # Strip symbols from frameworks, if Frameworks/ exists at all\n#    # ... as long as the framework is NOT signed by Apple\n#    if [ -d $APP_FRAMEWORKS_DIR ]\n#    then\n#        find $APP_FRAMEWORKS_DIR -type f -perm +111 -maxdepth 2 -mindepth 2 -exec bash -c \"codesign -v -R='anchor apple' {} &> /dev/null || (echo {} && strip -rSTx {})\" \\;\n#    fi\n#fi\n#\n";
 		};
 		6597D5E123CF163C0081482E /* Config Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4365,7 +4365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 45;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -4392,7 +4392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 45;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -4503,7 +4503,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 45;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4526,7 +4526,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 45;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4765,7 +4765,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 45;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4790,7 +4790,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 44;
+				CURRENT_PROJECT_VERSION = 45;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
