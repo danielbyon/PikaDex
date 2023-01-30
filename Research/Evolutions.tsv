@@ -512,7 +512,10 @@ Grubbin			Charjabug	Charjabug	Vikavolt	Vikavolt	levelUpInArea	Special magnetic f
 Grubbin	sword		Charjabug	Charjabug	Vikavolt	Vikavolt	useItem	Thunder Stone				
 Grubbin	shield		Charjabug	Charjabug	Vikavolt	Vikavolt	useItem	Thunder Stone				
 Grubbin	national		Charjabug	Charjabug	Vikavolt	Vikavolt	useItem	Thunder Stone				
-Crabrawler			Crabrawler	Crabrawler	Crabominable	Crabominable	levelUpInArea	Mount Lanakila				
+Crabrawler			Crabrawler	Crabrawler	Crabominable	Crabominable	levelUpInArea	Mount Lanakila	region	Alola		
+Crabrawler	scarlet		Crabrawler	Crabrawler	Crabominable	Crabominable	useItem	Ice Stone				
+Crabrawler	violet		Crabrawler	Crabrawler	Crabominable	Crabominable	useItem	Ice Stone				
+Crabrawler	national		Crabrawler	Crabrawler	Crabominable	Crabominable	useItem	Ice Stone				
 Cutiefly			Cutiefly	Cutiefly	Ribombee	Ribombee	levelUp	25				
 Rockruff			Rockruff	Rockruff	Lycanroc	Midday Form	levelUp	25	timeOfDay	day		
 Rockruff			Rockruff	Rockruff	Lycanroc	Midnight Form	levelUp	25	timeOfDay	night		

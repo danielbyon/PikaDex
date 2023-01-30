@@ -5181,15 +5181,15 @@
       "Scarlet": "When it targets an enemy, it charges furiously while whipping its body with its long tails.",
       "Violet": "They fight each other by locking horns. The herd\u2019s protector takes pride in its battle-scarred horns."
     },
-    "Paldean Tauros": {
+    "Combat Breed": {
       "Scarlet": "This Pok\u00e9mon has a muscular body and excels at close-quarters combat. It uses its short horns to strike the opponent\u2019s weak spots.",
       "Violet": "This kind of Tauros, known as the Combat Breed, is distinguished by its thick, powerful muscles and its fierce disposition."
     },
-    "Paldean Fire Tauros": {
+    "Blaze Breed": {
       "Scarlet": "When heated by fire energy, its horns can get hotter than 1,800 degrees Fahrenheit. Those gored by them will suffer both wounds and burns.",
       "Violet": "People call this kind of Tauros the Blaze Breed due to the hot air it snorts from its nostrils. Its three tails are intertwined."
     },
-    "Paldean Water Tauros": {
+    "Aqua Breed": {
       "Scarlet": "This Pok\u00e9mon blasts water from holes on the tips of its horns\u2014the high-pressure jets pierce right through Tauros\u2019s enemies.",
       "Violet": "It swims by jetting water from its horns. The most notable characteristic of the Aqua Breed is its high body fat, which allows it to float easily."
     },
@@ -21591,5 +21591,774 @@
       "Legends: Arceus": "A different guise from its feminine humanoid form. From the clouds, it descends upon those who treat any form of life with disrespect and metes out wrathful, ruthless punishment."
     },
     "number": "905"
+  },
+  "Sprigatito": {
+    "Sprigatito": {
+      "Scarlet": "Its fluffy fur is similar in composition to plants. This Pok\u00e9mon frequently washes its face to keep it from drying out.",
+      "Violet": "The sweet scent its body gives off mesmerizes those around it. The scent grows stronger when this Pok\u00e9mon is in the sun."
+    },
+    "number": "906"
+  },
+  "Floragato": {
+    "Floragato": {
+      "Scarlet": "Floragato deftly wields the vine hidden beneath its long fur, slamming the hard flower bud against its opponents.",
+      "Violet": "The hardness of Floragato\u2019s fur depends on the Pok\u00e9mon\u2019s mood. When Floragato is prepared to battle, its fur becomes pointed and needle sharp."
+    },
+    "number": "907"
+  },
+  "Meowscarada": {
+    "Meowscarada": {
+      "Scarlet": "This Pok\u00e9mon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating.",
+      "Violet": "With skillful misdirection, it rigs foes with pollen-packed flower bombs. Meowscarada sets off the bombs before its foes realize what\u2019s going on."
+    },
+    "number": "908"
+  },
+  "Fuecoco": {
+    "Fuecoco": {
+      "Scarlet": "It lies on warm rocks and uses the heat absorbed by its square-shaped scales to create fire energy.",
+      "Violet": "Its flame sac is small, so energy is always leaking out. This energy is released from the dent atop Fuecoco\u2019s head and flickers to and fro."
+    },
+    "number": "909"
+  },
+  "Crocalor": {
+    "Crocalor": {
+      "Scarlet": "The combination of Crocalor\u2019s fire energy and overflowing vitality has caused an egg-shaped fireball to appear on the Pok\u00e9mon\u2019s head.",
+      "Violet": "The valve in Crocalor\u2019s flame sac is closely connected to its vocal cords. This Pok\u00e9mon utters a guttural cry as it spews flames every which way."
+    },
+    "number": "910"
+  },
+  "Skeledirge": {
+    "Skeledirge": {
+      "Scarlet": "The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge\u2019s head gained a soul.",
+      "Violet": "Skeledirge\u2019s gentle singing soothes the souls of all that hear it. It burns its enemies to a crisp with flames of over 5,400 degrees Fahrenheit."
+    },
+    "number": "911"
+  },
+  "Quaxly": {
+    "Quaxly": {
+      "Scarlet": "This Pok\u00e9mon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.",
+      "Violet": "Its strong legs let it easily swim around in even fast-flowing rivers. It likes to keep things tidy and is prone to overthinking things."
+    },
+    "number": "912"
+  },
+  "Quaxwell": {
+    "Quaxwell": {
+      "Scarlet": "These Pok\u00e9mon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully.",
+      "Violet": "The hardworking Quaxwell observes people and Pok\u00e9mon from various regions and incorporates their movements into its own dance routines."
+    },
+    "number": "913"
+  },
+  "Quaquaval": {
+    "Quaquaval": {
+      "Scarlet": "A single kick from a Quaquaval can send a truck rolling. This Pok\u00e9mon uses its powerful legs to perform striking dances from far-off lands.",
+      "Violet": "Dancing in ways that evoke far-away places, this Pok\u00e9mon mesmerizes all that see it. Flourishes of its decorative water feathers slice into its foes."
+    },
+    "number": "914"
+  },
+  "Lechonk": {
+    "Lechonk": {
+      "Scarlet": "It searches for food all day. It possesses a keen sense of smell but doesn\u2019t use it for anything other than foraging.",
+      "Violet": "This Pok\u00e9mon spurns all but the finest of foods. Its body gives off an herblike scent that bug Pok\u00e9mon detest."
+    },
+    "number": "915"
+  },
+  "Oinkologne": {
+    "Male": {
+      "Scarlet": "Oinkologne is proud of its fine, glossy skin. It emits a concentrated scent from the tip of its tail.",
+      "Violet": "It entrances female Pok\u00e9mon with the sweet, alluring scent that wafts from all over its body."
+    },
+    "Female": {
+      "Scarlet": "This Pok\u00e9mon sends a flowerlike scent wafting about. Well-developed muscles in its legs allow it to leap more than 16 feet with no trouble at all.",
+      "Violet": "This is a meticulous Pok\u00e9mon that likes to keep things tidy. It shrouds itself in a floral aroma that soothes the Pok\u00e9mon around it."
+    },
+    "number": "916"
+  },
+  "Tarountula": {
+    "Tarountula": {
+      "Scarlet": "The ball of threads wrapped around its body is elastic enough to deflect the scythes of Scyther, this Pok\u00e9mon\u2019s natural enemy.",
+      "Violet": "The thread it secretes from its rear is as strong as wire. The secret behind the thread\u2019s strength is the topic of ongoing research."
+    },
+    "number": "917"
+  },
+  "Spidops": {
+    "Spidops": {
+      "Scarlet": "It clings to branches and ceilings using its threads and moves without a sound. It takes out its prey before the prey even notices it.",
+      "Violet": "Spidops covers its territory in tough, sticky threads to set up traps for intruders."
+    },
+    "number": "918"
+  },
+  "Nymble": {
+    "Nymble": {
+      "Scarlet": "It has its third set of legs folded up. When it\u2019s in a tough spot, this Pok\u00e9mon jumps over 30 feet using the strength of its legs.",
+      "Violet": "It\u2019s highly skilled at a fighting style in which it uses its jumping capabilities to dodge incoming attacks while also dealing damage to opponents."
+    },
+    "number": "919"
+  },
+  "Lokix": {
+    "Lokix": {
+      "Scarlet": "When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order.",
+      "Violet": "It uses its normally folded third set of legs when in Showdown Mode. This places a huge burden on its body, so it can\u2019t stay in this mode for long."
+    },
+    "number": "920"
+  },
+  "Pawmi": {
+    "Pawmi": {
+      "Scarlet": "It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.",
+      "Violet": "The pads of its paws are electricity-discharging organs. Pawmi fires electricity from its forepaws while standing unsteadily on its hind legs."
+    },
+    "number": "921"
+  },
+  "Pawmo": {
+    "Pawmo": {
+      "Scarlet": "When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks.",
+      "Violet": "Pawmo uses a unique fighting technique in which it uses its forepaws to strike foes and zap them with electricity from its paw pads simultaneously."
+    },
+    "number": "922"
+  },
+  "Pawmot": {
+    "Pawmot": {
+      "Scarlet": "This Pok\u00e9mon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.",
+      "Violet": "Pawmot\u2019s fluffy fur acts as a battery. It can store the same amount of electricity as an electric car."
+    },
+    "number": "923"
+  },
+  "Tandemaus": {
+    "Tandemaus": {
+      "Scarlet": "Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them.",
+      "Violet": "The pair sticks together no matter what. They split any food they find exactly in half and then eat it together."
+    },
+    "number": "924"
+  },
+  "Maushold": {
+    "Family of Four": {
+      "Scarlet": "The two little ones just appeared one day. The group might be a family of related Pok\u00e9mon, but nobody knows for sure.",
+      "Violet": "The larger pair protects the little ones during battles. When facing strong opponents, the whole group will join the fight."
+    },
+    "Family of Three": {
+      "Scarlet": "They build huge nests with many rooms that are used for different purposes, such as eating and sleeping.",
+      "Violet": "The little one just appeared one day. They all live together like a family, but the relationship between the three is still unclear."
+    },
+    "number": "925"
+  },
+  "Fidough": {
+    "Fidough": {
+      "Scarlet": "This Pok\u00e9mon is smooth and moist to the touch. Yeast in Fidough\u2019s breath induces fermentation in the Pok\u00e9mon\u2019s vicinity.",
+      "Violet": "The yeast in Fidough\u2019s breath is useful for cooking, so this Pok\u00e9mon has been protected by people since long ago."
+    },
+    "number": "926"
+  },
+  "Dachsbun": {
+    "Dachsbun": {
+      "Scarlet": "The pleasant aroma that emanates from this Pok\u00e9mon\u2019s body helps wheat grow, so Dachsbun has been treasured by farming villages.",
+      "Violet": "The surface of this Pok\u00e9mon\u2019s skin hardens when exposed to intense heat, and its body has an appetizing aroma."
+    },
+    "number": "927"
+  },
+  "Smoliv": {
+    "Smoliv": {
+      "Scarlet": "It protects itself from enemies by emitting oil from the fruit on its head. This oil is bitter and astringent enough to make someone flinch.",
+      "Violet": "This Pok\u00e9mon converts nutrients into oil, which it stores in the fruit on its head. It can easily go a whole week without eating or drinking."
+    },
+    "number": "928"
+  },
+  "Dolliv": {
+    "Dolliv": {
+      "Scarlet": "Dolliv shares its tasty, fresh-scented oil with others. This species has coexisted with humans since times long gone.",
+      "Violet": "It basks in the sun to its heart\u2019s content until the fruits on its head ripen. After that, Dolliv departs from human settlements and goes on a journey."
+    },
+    "number": "929"
+  },
+  "Arboliva": {
+    "Arboliva": {
+      "Scarlet": "This calm Pok\u00e9mon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pok\u00e9mon.",
+      "Violet": "This Pok\u00e9mon drives back enemies by launching its rich, aromatic oil at them with enough force to smash a boulder."
+    },
+    "number": "930"
+  },
+  "Squawkabilly": {
+    "Green Plumage": {
+      "Scarlet": "These Pok\u00e9mon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory.",
+      "Violet": "Green-feathered flocks hold the most sway. When they\u2019re out searching for food in the mornings and evenings, it gets very noisy."
+    },
+    "Blue Plumage": {
+      "Scarlet": "The largest of their flocks can contain more than 50 individuals. They fly around towns and forests, searching for food and making a racket.",
+      "Violet": "Blue-feathered Squawkabilly view their green-feathered counterparts as rivals, since the latter make up the largest, most powerful groups."
+    },
+    "Yellow Plumage": {
+      "Scarlet": "These Squawkabilly are hotheaded, and their fighting style is vicious. They\u2019ll leap within reach of their foes to engage in close combat.",
+      "Violet": "The yellow Squawkabilly are especially fierce. They\u2019ve even been known to drive other bird Pok\u00e9mon out of town."
+    },
+    "White Plumage": {
+      "Scarlet": "This Pok\u00e9mon dislikes being alone. It has a strong sense of community and survives by cooperating with allies.",
+      "Violet": "Though these Squawkabilly are the fewest in number, they have no trouble living in towns since they blend in with the white buildings."
+    },
+    "number": "931"
+  },
+  "Nacli": {
+    "Nacli": {
+      "Scarlet": "It was born in a layer of rock salt deep under the earth. This species was particularly treasured in the old days, as they would share precious salt.",
+      "Violet": "The ground scrapes its body as it travels, causing it to leave salt behind. Salt is constantly being created and replenished inside Nacli\u2019s body."
+    },
+    "number": "932"
+  },
+  "Naclstack": {
+    "Naclstack": {
+      "Scarlet": "This Pok\u00e9mon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey\u2019s body.",
+      "Violet": "It compresses rock salt inside its body and shoots out hardened salt pellets with enough force to perforate an iron sheet."
+    },
+    "number": "933"
+  },
+  "Garganacl": {
+    "Garganacl": {
+      "Scarlet": "Garganacl will rub its fingertips together and sprinkle injured Pok\u00e9mon with salt. Even severe wounds will promptly heal afterward.",
+      "Violet": "Many Pok\u00e9mon gather around Garganacl, hoping to lick at its mineral-rich salt."
+    },
+    "number": "934"
+  },
+  "Charcadet": {
+    "Charcadet": {
+      "Scarlet": "Burnt charcoal came to life and became a Pok\u00e9mon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents.",
+      "Violet": "Its firepower increases when it fights, reaching over 1,800 degrees Fahrenheit. It likes berries that are rich in fat."
+    },
+    "number": "935"
+  },
+  "Armarouge": {
+    "Armarouge": {
+      "Scarlet": "Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pok\u00e9mon is incredibly loyal.",
+      "Violet": "This Pok\u00e9mon clads itself in armor that has been fortified by psychic and fire energy, and it shoots blazing fireballs."
+    },
+    "number": "936"
+  },
+  "Ceruledge": {
+    "Ceruledge": {
+      "Scarlet": "The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.",
+      "Violet": "An old set of armor steeped in grudges caused this Pok\u00e9mon\u2019s evolution. Ceruledge cuts its enemies to pieces without mercy."
+    },
+    "number": "937"
+  },
+  "Tadbulb": {
+    "Tadbulb": {
+      "Scarlet": "Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies.",
+      "Violet": "It floats using the electricity stored in its body. When thunderclouds are around, Tadbulb will float higher off the ground."
+    },
+    "number": "938"
+  },
+  "Bellibolt": {
+    "Bellibolt": {
+      "Scarlet": "When this Pok\u00e9mon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity.",
+      "Violet": "What appear to be eyeballs are actually organs for discharging the electricity generated by Bellibolt\u2019s belly-button dynamo."
+    },
+    "number": "939"
+  },
+  "Wattrel": {
+    "Wattrel": {
+      "Scarlet": "When its wings catch the wind, the bones within produce electricity. This Pok\u00e9mon dives into the ocean, catching prey by electrocuting them.",
+      "Violet": "These Pok\u00e9mon make their nests on coastal cliffs. The nests have a strange, crackling texture, and they\u2019re a popular delicacy."
+    },
+    "number": "940"
+  },
+  "Kilowattrel": {
+    "Kilowattrel": {
+      "Scarlet": "Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pok\u00e9mon can fly over 430 miles in a day.",
+      "Violet": "It uses its throat sac to store electricity generated by its wings. There\u2019s hardly any oil in its feathers, so it is a poor swimmer."
+    },
+    "number": "941"
+  },
+  "Maschiff": {
+    "Maschiff": {
+      "Scarlet": "It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff\u2019s face.",
+      "Violet": "Its well-developed jaw and fangs are strong enough to crunch through boulders, and its thick fat makes for an excellent defense."
+    },
+    "number": "942"
+  },
+  "Mabosstiff": {
+    "Mabosstiff": {
+      "Scarlet": "This Pok\u00e9mon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.",
+      "Violet": "Mabosstiff loves playing with children. Though usually gentle, it takes on an intimidating look when protecting its family."
+    },
+    "number": "943"
+  },
+  "Shroodle": {
+    "Shroodle": {
+      "Scarlet": "Though usually a mellow Pok\u00e9mon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire.",
+      "Violet": "To keep enemies away from its territory, it paints markings around its nest using a poisonous liquid that has an acrid odor."
+    },
+    "number": "944"
+  },
+  "Grafaiai": {
+    "Grafaiai": {
+      "Scarlet": "The color of the poisonous saliva depends on what the Pok\u00e9mon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests.",
+      "Violet": "Each Grafaiai paints its own individual pattern, and it will paint that same pattern over and over again throughout its life."
+    },
+    "number": "945"
+  },
+  "Bramblin": {
+    "Bramblin": {
+      "Scarlet": "A soul unable to move on to the afterlife was blown around by the wind until it got tangled up with dried grass and became a Pok\u00e9mon.",
+      "Violet": "Not even Bramblin knows where it is headed as it tumbles across the wilderness, blown by the wind. It loathes getting wet."
+    },
+    "number": "946"
+  },
+  "Brambleghast": {
+    "Brambleghast": {
+      "Scarlet": "It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it.",
+      "Violet": "Brambleghast wanders around arid regions. On rare occasions, mass outbreaks of these Pok\u00e9mon will bury an entire town."
+    },
+    "number": "947"
+  },
+  "Toedscool": {
+    "Toedscool": {
+      "Scarlet": "Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious.",
+      "Violet": "Though it looks like Tentacool, Toedscool is a completely different species. Its legs may be thin, but it can run at a speed of 30 mph."
+    },
+    "number": "948"
+  },
+  "Toedscruel": {
+    "Toedscruel": {
+      "Scarlet": "These Pok\u00e9mon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach.",
+      "Violet": "It coils its 10 tentacles around prey and sucks out their nutrients, causing the prey pain. The folds along the rim of its head are a popular delicacy."
+    },
+    "number": "949"
+  },
+  "Klawf": {
+    "Klawf": {
+      "Scarlet": "Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can\u2019t remain in this position for long because its blood rushes to its head.",
+      "Violet": "This Pok\u00e9mon lives on sheer cliffs. It sidesteps opponents\u2019 attacks, then lunges for their weak spots with its claws."
+    },
+    "number": "950"
+  },
+  "Capsakid": {
+    "Capsakid": {
+      "Scarlet": "The more sunlight this Pok\u00e9mon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become.",
+      "Violet": "Traditional Paldean dishes can be extremely spicy because they include the shed front teeth of Capsakid among their ingredients."
+    },
+    "number": "951"
+  },
+  "Scovillain": {
+    "Scovillain": {
+      "Scarlet": "The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.",
+      "Violet": "The green head has turned vicious due to the spicy chemicals stimulating its brain. Once it goes on a rampage, there is no stopping it."
+    },
+    "number": "952"
+  },
+  "Rellor": {
+    "Rellor": {
+      "Scarlet": "This Pok\u00e9mon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.",
+      "Violet": "It rolls its mud ball around while the energy it needs for evolution matures. Eventually the time comes for it to evolve."
+    },
+    "number": "953"
+  },
+  "Rabsca": {
+    "Rabsca": {
+      "Scarlet": "The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pok\u00e9mon is actually inside the ball.",
+      "Violet": "An infant sleeps inside the ball. Rabsca rolls the ball soothingly with its legs to ensure the infant sleeps comfortably."
+    },
+    "number": "954"
+  },
+  "Flittle": {
+    "Flittle": {
+      "Scarlet": "Flittle\u2019s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pok\u00e9mon\u2019s belly.",
+      "Violet": "It spends its time running around wastelands. If anyone steals its beloved berries, it will chase them down and exact its revenge."
+    },
+    "number": "955"
+  },
+  "Espathra": {
+    "Espathra": {
+      "Scarlet": "It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament.",
+      "Violet": "It emits psychic power from the gaps between its multicolored frills and sprints at speeds greater than 120 mph."
+    },
+    "number": "956"
+  },
+  "Tinkatink": {
+    "Tinkatink": {
+      "Scarlet": "It swings its handmade hammer around to protect itself, but the hammer is often stolen by Pok\u00e9mon that eat metal.",
+      "Violet": "This Pok\u00e9mon pounds iron scraps together to make a hammer. It will remake the hammer again and again until it\u2019s satisfied with the result."
+    },
+    "number": "957"
+  },
+  "Tinkatuff": {
+    "Tinkatuff": {
+      "Scarlet": "This Pok\u00e9mon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer.",
+      "Violet": "These Pok\u00e9mon make their homes in piles of scrap metal. They test the strength of each other\u2019s hammers by smashing them together."
+    },
+    "number": "958"
+  },
+  "Tinkaton": {
+    "Tinkaton": {
+      "Scarlet": "This intelligent Pok\u00e9mon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.",
+      "Violet": "The hammer tops 220 pounds, yet it gets swung around easily by Tinkaton as it steals whatever it pleases and carries its plunder back home."
+    },
+    "number": "959"
+  },
+  "Wiglett": {
+    "Wiglett": {
+      "Scarlet": "This Pok\u00e9mon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand.",
+      "Violet": "Though it looks like Diglett, Wiglett is an entirely different species. The resemblance seems to be a coincidental result of environmental adaptation."
+    },
+    "number": "960"
+  },
+  "Wugtrio": {
+    "Wugtrio": {
+      "Scarlet": "It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.",
+      "Violet": "A variety of fish Pok\u00e9mon, Wugtrio was once considered to be a regional form of Dugtrio."
+    },
+    "number": "961"
+  },
+  "Bombirdier": {
+    "Bombirdier": {
+      "Scarlet": "It gathers things up in an apron made from shed feathers added to the Pok\u00e9mon\u2019s chest feathers, then drops those things from high places for fun.",
+      "Violet": "Bombirdier uses the apron on its chest to bundle up food, which it carries back to its nest. It enjoys dropping things that make loud noises."
+    },
+    "number": "962"
+  },
+  "Finizen": {
+    "Finizen": {
+      "Scarlet": "It likes playing with others of its kind using the water ring on its tail. It uses ultrasonic waves to sense the emotions of other living creatures.",
+      "Violet": "Its water ring is made from seawater mixed with a sticky fluid that Finizen secretes from its blowhole."
+    },
+    "number": "963"
+  },
+  "Palafin": {
+    "Zero Form": {
+      "Scarlet": "This Pok\u00e9mon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation.",
+      "Violet": "Its physical capabilities are no different than a Finizen\u2019s, but when its allies are in danger, it transforms and powers itself up."
+    },
+    "Hero Form": {
+      "Scarlet": "This Pok\u00e9mon\u2019s ancient genes have awakened. It is now so extraordinarily strong that it can easily lift a cruise ship with one fin.",
+      "Violet": "This hero of the ocean swims at a speed of 50 knots and saves drowning people and Pok\u00e9mon."
+    },
+    "number": "964"
+  },
+  "Varoom": {
+    "Varoom": {
+      "Scarlet": "It is said that this Pok\u00e9mon was born when an unknown poison Pok\u00e9mon entered and inspirited an engine left at a scrap-processing factory.",
+      "Violet": "The steel section is Varoom\u2019s actual body. This Pok\u00e9mon clings to rocks and converts the minerals within into energy to fuel its activities."
+    },
+    "number": "965"
+  },
+  "Revavroom": {
+    "Revavroom": {
+      "Scarlet": "It creates a gas out of poison and minerals from rocks. It then detonates the gas in its cylinders\u2014now numbering eight\u2014to generate energy.",
+      "Violet": "Revavroom viciously threatens others with the sound of its exhaust. It sticks its tongue out from its cylindrical mouth and sprays toxic fluids."
+    },
+    "number": "966"
+  },
+  "Cyclizar": {
+    "Cyclizar": {
+      "Scarlet": "Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals.",
+      "Violet": "It can sprint at over 70 mph while carrying a human. The rider\u2019s body heat warms Cyclizar\u2019s back and lifts the Pok\u00e9mon\u2019s spirit."
+    },
+    "number": "967"
+  },
+  "Orthworm": {
+    "Orthworm": {
+      "Scarlet": "When attacked, this Pok\u00e9mon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches.",
+      "Violet": "This Pok\u00e9mon lives in arid deserts. It maintains its metal body by consuming iron from the soil."
+    },
+    "number": "968"
+  },
+  "Glimmet": {
+    "Glimmet": {
+      "Scarlet": "It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison.",
+      "Violet": "Glimmet\u2019s toxic mineral crystals look just like flower petals. This Pok\u00e9mon scatters poisonous powder like pollen to protect itself."
+    },
+    "number": "969"
+  },
+  "Glimmora": {
+    "Glimmora": {
+      "Scarlet": "When this Pok\u00e9mon detects danger, it will open up its crystalline petals and fire beams from its conical body.",
+      "Violet": "Glimmora\u2019s petals are made of crystallized poison energy. It has recently become evident that these petals resemble Tera Jewels."
+    },
+    "number": "970"
+  },
+  "Greavard": {
+    "Greavard": {
+      "Scarlet": "It is said that a dog Pok\u00e9mon that died in the wild without ever interacting with a human was reborn as this Pok\u00e9mon.",
+      "Violet": "This friendly Pok\u00e9mon doesn\u2019t like being alone. Pay it even the slightest bit of attention, and it will follow you forever."
+    },
+    "number": "971"
+  },
+  "Houndstone": {
+    "Houndstone": {
+      "Scarlet": "Houndstone spends most of its time sleeping in graveyards. Among all the dog Pok\u00e9mon, this one is most loyal to its master.",
+      "Violet": "A lovingly mourned Pok\u00e9mon was reborn as Houndstone. It doesn\u2019t like anyone touching the protuberance atop its head."
+    },
+    "number": "972"
+  },
+  "Flamigo": {
+    "Flamigo": {
+      "Scarlet": "This Pok\u00e9mon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak.",
+      "Violet": "Thanks to a behavior of theirs known as \u201csynchronizing,\u201d an entire flock of these Pok\u00e9mon can attack simultaneously in perfect harmony."
+    },
+    "number": "973"
+  },
+  "Cetoddle": {
+    "Cetoddle": {
+      "Scarlet": "This species left the ocean and began living on land a very long time ago. It seems to be closely related to Wailmer.",
+      "Violet": "It lives in frigid regions in pods of five or so individuals. It loves the minerals found in snow and ice."
+    },
+    "number": "974"
+  },
+  "Cetitan": {
+    "Cetitan": {
+      "Scarlet": "This Pok\u00e9mon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin.",
+      "Violet": "Ice energy builds up in the horn on its upper jaw, causing the horn to reach cryogenic temperatures that freeze its surroundings."
+    },
+    "number": "975"
+  },
+  "Veluza": {
+    "Veluza": {
+      "Scarlet": "When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor.",
+      "Violet": "Veluza has excellent regenerative capabilities. It sheds spare flesh from its body to boost its agility, then charges at its prey."
+    },
+    "number": "976"
+  },
+  "Dondozo": {
+    "Dondozo": {
+      "Scarlet": "This Pok\u00e9mon is a glutton, but it\u2019s bad at getting food. It teams up with a Tatsugiri to catch prey.",
+      "Violet": "It treats Tatsugiri like its boss and follows it loyally. Though powerful, Dondozo is apparently not very smart."
+    },
+    "number": "977"
+  },
+  "Tatsugiri": {
+    "Curly Form": {
+      "Scarlet": "This is a small dragon Pok\u00e9mon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.",
+      "Violet": "Tatsugiri is an extremely cunning Pok\u00e9mon. It feigns weakness to lure in prey, then orders its partner to attack."
+    },
+    "Droopy Form": {
+      "Scarlet": "This species\u2019 differing colors and patterns are apparently the result of Tatsugiri changing itself to suit the preferences of the prey it lures in.",
+      "Violet": "This Pok\u00e9mon tricks its opponents by playing dead. It is small and weak, but it uses its smarts to survive."
+    },
+    "Stretchy Form": {
+      "Scarlet": "Bird Pok\u00e9mon are its main prey. This Pok\u00e9mon knows it\u2019s weak, so it hunts with a partner.",
+      "Violet": "It\u2019s one of the most intelligent dragon Pok\u00e9mon. It camouflages itself by inflating its throat sac."
+    },
+    "number": "978"
+  },
+  "Annihilape": {
+    "Annihilape": {
+      "Scarlet": "When its anger rose beyond a critical point, this Pok\u00e9mon gained power that is unfettered by the limits of its physical body.",
+      "Violet": "It imbues its fists with the power of the rage that it kept hidden in its heart. Opponents struck by these imbued fists will be shattered to their core."
+    },
+    "number": "979"
+  },
+  "Clodsire": {
+    "Clodsire": {
+      "Scarlet": "When attacked, this Pok\u00e9mon will retaliate by sticking thick spines out from its body. It\u2019s a risky move that puts everything on the line.",
+      "Violet": "It lives at the bottom of ponds and swamps. It will carry Wooper on its back and ferry them across water from one shore to the other."
+    },
+    "number": "980"
+  },
+  "Farigiraf": {
+    "Farigiraf": {
+      "Scarlet": "Now that the brain waves from the head and tail are synced up, the psychic power of this Pok\u00e9mon is 10 times stronger than Girafarig\u2019s.",
+      "Violet": "The hardened head from the tail protects the head of the main body as Farigiraf whips its long neck around to headbutt enemies."
+    },
+    "number": "981"
+  },
+  "Dudunsparce": {
+    "Two-Segment Form": {
+      "Scarlet": "This Pok\u00e9mon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.",
+      "Violet": "It drives enemies out of its nest by sucking in enough air to fill its long, narrow lungs, then releasing the air in an intense blast."
+    },
+    "Three-Segment Form": {
+      "Scarlet": "The gentle Dudunsparce will put Pok\u00e9mon that wander into its nest onto its back and carry them to the entrance.",
+      "Violet": "A recent study uncovered that the number of segments a Dudunsparce\u2019s body has is determined by the Pok\u00e9mon\u2019s genes."
+    },
+    "number": "982"
+  },
+  "Kingambit": {
+    "Kingambit": {
+      "Scarlet": "Only a Bisharp that stands above all others in its vast army can evolve into Kingambit.",
+      "Violet": "Though it commands a massive army in battle, it\u2019s not skilled at devising complex strategies. It just uses brute strength to keep pushing."
+    },
+    "number": "983"
+  },
+  "Great Tusk": {
+    "Great Tusk": {
+      "Scarlet": "Sightings of this Pok\u00e9mon have occurred in recent years. The name Great Tusk was taken from a creature listed in a certain book.",
+      "Violet": "This creature resembles a mysterious Pok\u00e9mon that, according to a paranormal magazine, has lived since ancient times."
+    },
+    "number": "984"
+  },
+  "Scream Tail": {
+    "Scream Tail": {
+      "Scarlet": "There has been only one reported sighting of this Pok\u00e9mon. It resembles a mysterious creature depicted in an old expedition journal.",
+      "Violet": "It resembles a mysterious Pok\u00e9mon described in a paranormal magazine as a Jigglypuff from one billion years ago."
+    },
+    "number": "985"
+  },
+  "Brute Bonnet": {
+    "Brute Bonnet": {
+      "Scarlet": "It is possible that the creature listed as Brute Bonnet in a certain book could actually be this Pok\u00e9mon.",
+      "Violet": "It bears a slight resemblance to a Pok\u00e9mon described in a dubious magazine as a cross between a dinosaur and a mushroom."
+    },
+    "number": "986"
+  },
+  "Flutter Mane": {
+    "Flutter Mane": {
+      "Scarlet": "This Pok\u00e9mon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book.",
+      "Violet": "It has similar features to a ghostly pterosaur that was covered in a paranormal magazine, but the two have little else in common."
+    },
+    "number": "987"
+  },
+  "Slither Wing": {
+    "Slither Wing": {
+      "Scarlet": "This mysterious Pok\u00e9mon has some similarities to a creature that an old book introduced as Slither Wing.",
+      "Violet": "This Pok\u00e9mon somewhat resembles an ancient form of Volcarona that was introduced in a dubious magazine."
+    },
+    "number": "988"
+  },
+  "Sandy Shocks": {
+    "Sandy Shocks": {
+      "Scarlet": "No records exist of this Pok\u00e9mon being caught. Data is lacking, but the Pok\u00e9mon\u2019s traits match up with a creature shown in an expedition journal.",
+      "Violet": "It slightly resembles a Magneton that lived for 10,000 years and was featured in an article in a paranormal magazine."
+    },
+    "number": "989"
+  },
+  "Iron Treads": {
+    "Iron Treads": {
+      "Scarlet": "This Pok\u00e9mon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens.",
+      "Violet": "Sightings of this Pok\u00e9mon have occurred in recent years. It resembles a mysterious object described in an old expedition journal."
+    },
+    "number": "990"
+  },
+  "Iron Bundle": {
+    "Iron Bundle": {
+      "Scarlet": "Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization.",
+      "Violet": "It resembles a mysterious object mentioned in an old book. There are only two reported sightings of this Pok\u00e9mon."
+    },
+    "number": "991"
+  },
+  "Iron Hands": {
+    "Iron Hands": {
+      "Scarlet": "It is very similar to a cyborg covered exclusively by a paranormal magazine. The cyborg was said to be the modified form of a certain athlete.",
+      "Violet": "This Pok\u00e9mon shares many similarities with Iron Hands, an object mentioned in a certain expedition journal."
+    },
+    "number": "992"
+  },
+  "Iron Jugulis": {
+    "Iron Jugulis": {
+      "Scarlet": "It resembles a certain Pok\u00e9mon introduced in a paranormal magazine, described as the offspring of a Hydreigon that fell in love with a robot.",
+      "Violet": "It\u2019s possible that Iron Jugulis, an object described in an old book, may actually be this Pok\u00e9mon."
+    },
+    "number": "993"
+  },
+  "Iron Moth": {
+    "Iron Moth": {
+      "Scarlet": "This Pok\u00e9mon resembles an unknown object described in a paranormal magazine as a UFO sent to observe humanity.",
+      "Violet": "No records exist of this species being caught. Data is lacking, but the Pok\u00e9mon\u2019s traits match up with an object described in an old book."
+    },
+    "number": "994"
+  },
+  "Iron Thorns": {
+    "Iron Thorns": {
+      "Scarlet": "It has some similarities to a Pok\u00e9mon introduced in a dubious magazine as a Tyranitar from one billion years into the future.",
+      "Violet": "Some of its notable features match those of an object named within a certain expedition journal as Iron Thorns."
+    },
+    "number": "995"
+  },
+  "Frigibax": {
+    "Frigibax": {
+      "Scarlet": "Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores.",
+      "Violet": "This Pok\u00e9mon lives in forests and craggy areas. Using the power of its dorsal fin, it cools the inside of its nest like a refrigerator."
+    },
+    "number": "996"
+  },
+  "Arctibax": {
+    "Arctibax": {
+      "Scarlet": "Arctibax freezes the air around it, protecting its face with an ice mask and turning its dorsal fin into a blade of ice.",
+      "Violet": "It attacks with the blade of its frozen dorsal fin by doing a front flip in the air. Arctibax\u2019s strong back and legs allow it to pull off this technique."
+    },
+    "number": "997"
+  },
+  "Baxcalibur": {
+    "Baxcalibur": {
+      "Scarlet": "This Pok\u00e9mon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava.",
+      "Violet": "It launches itself into battle by flipping upside down and spewing frigid air from its mouth. It finishes opponents off with its dorsal blade."
+    },
+    "number": "998"
+  },
+  "Gimmighoul": {
+    "Chest Form": {
+      "Scarlet": "This Pok\u00e9mon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure.",
+      "Violet": "It lives inside an old treasure chest. Sometimes it gets left in shop corners since no one realizes it\u2019s actually a Pok\u00e9mon."
+    },
+    "Roaming Form": {
+      "Scarlet": "This Pok\u00e9mon was born from passion that seeped into a coin. It wanders, apparently seeking to return to the treasure chest it once inhabited.",
+      "Violet": "It wanders around, carrying an old coin on its back. It survives by draining the life-force from humans who try to pick up its coin."
+    },
+    "number": "999"
+  },
+  "Gholdengo": {
+    "Gholdengo": {
+      "Scarlet": "Its body seems to be made up of 1,000 coins. This Pok\u00e9mon gets along well with others and is quick to make friends with anybody.",
+      "Violet": "It has a sturdy body made up of stacked coins. Gholdengo overwhelms its enemies by firing coin after coin at them in quick succession."
+    },
+    "number": "1000"
+  },
+  "Wo-Chien": {
+    "Wo-Chien": {
+      "Scarlet": "The grudge of a person punished for writing the king\u2019s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pok\u00e9mon.",
+      "Violet": "It drains the life-force from vegetation, causing nearby forests to instantly wither and fields to turn barren."
+    },
+    "number": "1001"
+  },
+  "Chien-Pao": {
+    "Chien-Pao": {
+      "Scarlet": "This Pok\u00e9mon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused.",
+      "Violet": "The hatred of those who perished by the sword long ago has clad itself in snow and become a Pok\u00e9mon."
+    },
+    "number": "1002"
+  },
+  "Ting-Lu": {
+    "Ting-Lu": {
+      "Scarlet": "The fear poured into an ancient ritual vessel has clad itself in rocks and dirt to become a Pok\u00e9mon.",
+      "Violet": "It slowly brings its exceedingly heavy head down upon the ground, splitting the earth open with huge fissures that run over 160 feet deep."
+    },
+    "number": "1003"
+  },
+  "Chi-Yu": {
+    "Chi-Yu": {
+      "Scarlet": "It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand.",
+      "Violet": "The envy accumulated within curved beads that sparked multiple conflicts has clad itself in fire and become a Pok\u00e9mon."
+    },
+    "number": "1004"
+  },
+  "Roaring Moon": {
+    "Roaring Moon": {
+      "Scarlet": "It is possible that this is the creature listed as Roaring Moon in an expedition journal that still holds many mysteries.",
+      "Violet": "According to an article in a dubious magazine, this Pok\u00e9mon has some connection to a phenomenon that occurs in a certain region."
+    },
+    "number": "1005"
+  },
+  "Iron Valiant": {
+    "Iron Valiant": {
+      "Scarlet": "It has some similarities to a mad scientist\u2019s invention covered in a paranormal magazine.",
+      "Violet": "It\u2019s possible that this is the object listed as Iron Valiant in a certain expedition journal."
+    },
+    "number": "1006"
+  },
+  "Koraidon": {
+    "Koraidon": {
+      "Scarlet": "This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists.",
+      "Violet": "This Pok\u00e9mon resembles Cyclizar, but it is far burlier and more ferocious. Nothing is known about its ecology or other features."
+    },
+    "Limited Build": {
+      "Scarlet": "The ecology and other data about this Pok\u00e9mon are unknown. It was named Koraidon by the professor who discovered it.",
+      "Violet": "It has similar characteristics to a creature described in an old book as the Winged King."
+    },
+    "number": "1007"
+  },
+  "Miraidon": {
+    "Miraidon": {
+      "Scarlet": "Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful.",
+      "Violet": "This seems to be the Iron Serpent mentioned in an old book. The Iron Serpent is said to have turned the land to ash with its lightning."
+    },
+    "Low-Power Mode": {
+      "Scarlet": "Its characteristics match those of a mysterious object recorded in an old expedition journal as the Iron Serpent.",
+      "Violet": "It was given the name Miraidon by the professor who discovered it. Its ecology and other details are unknown."
+    },
+    "number": "1008"
   }
 }

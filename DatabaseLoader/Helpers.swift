@@ -38,7 +38,7 @@ private class PersistentContainer: NSPersistentContainer {
     override class func defaultDirectoryURL() -> URL {
         let configURL = Bundle.main.url(forResource: "Config", withExtension: "txt")!
         let config = try! String(contentsOf: configURL, encoding: .utf8).replacingOccurrences(of: "\n", with: "")
-        let directoryURL = URL(fileURLWithPath: config, isDirectory: true).appendingPathComponent("PokedexPackages/Sources/PokedexCore/Resources/Database", isDirectory: true)
+        let directoryURL = URL(fileURLWithPath: config, isDirectory: true).appendingPathComponent("Modules/PokedexCore/Resources/Database", isDirectory: true)
         try! FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true, attributes: nil)
         return directoryURL
     }

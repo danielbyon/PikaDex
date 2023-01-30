@@ -1,313 +1,4 @@
 {
-  "Sprigatito": {
-    "gen9": {}
-  },
-  "Floragato": {
-    "gen9": {}
-  },
-  "Meowscarada": {
-    "gen9": {}
-  },
-  "Fuecoco": {
-    "gen9": {}
-  },
-  "Crocalor": {
-    "gen9": {}
-  },
-  "Skeledirge": {
-    "gen9": {}
-  },
-  "Quaxly": {
-    "gen9": {}
-  },
-  "Quaxwell": {
-    "gen9": {}
-  },
-  "Quaquaval": {
-    "gen9": {}
-  },
-  "Lechonk": {
-    "gen9": {}
-  },
-  "Oinkologne": {
-    "gen9": {}
-  },
-  "Dudunsparce": {
-    "gen9": {}
-  },
-  "Tarountula": {
-    "gen9": {}
-  },
-  "Spidops": {
-    "gen9": {}
-  },
-  "Nymble": {
-    "gen9": {}
-  },
-  "Lokix": {
-    "gen9": {}
-  },
-  "Rellor": {
-    "gen9": {}
-  },
-  "Rabsca": {
-    "gen9": {}
-  },
-  "Greavard": {
-    "gen9": {}
-  },
-  "Houndstone": {
-    "gen9": {}
-  },
-  "Flittle": {
-    "gen9": {}
-  },
-  "Espathra": {
-    "gen9": {}
-  },
-  "Farigiraf": {
-    "gen9": {}
-  },
-  "Wiglett": {
-    "gen9": {}
-  },
-  "Wugtrio": {
-    "gen9": {}
-  },
-  "Dondozo": {
-    "gen9": {}
-  },
-  "Veluza": {
-    "gen9": {}
-  },
-  "Finizen": {
-    "gen9": {}
-  },
-  "Palafin": {
-    "gen9": {}
-  },
-  "Smoliv": {
-    "gen9": {}
-  },
-  "Dolliv": {
-    "gen9": {}
-  },
-  "Arboliva": {
-    "gen9": {}
-  },
-  "Capsakid": {
-    "gen9": {}
-  },
-  "Scovillain": {
-    "gen9": {}
-  },
-  "Tadbulb": {
-    "gen9": {}
-  },
-  "Bellibolt": {
-    "gen9": {}
-  },
-  "Varoom": {
-    "gen9": {}
-  },
-  "Revavroom": {
-    "gen9": {}
-  },
-  "Orthworm": {
-    "gen9": {}
-  },
-  "Tandemaus": {
-    "gen9": {}
-  },
-  "Maushold": {
-    "gen9": {}
-  },
-  "Cetoddle": {
-    "gen9": {}
-  },
-  "Cetitan": {
-    "gen9": {}
-  },
-  "Frigibax": {
-    "gen9": {}
-  },
-  "Arctibax": {
-    "gen9": {}
-  },
-  "Baxcalibur": {
-    "gen9": {}
-  },
-  "Tatsugiri": {
-    "gen9": {}
-  },
-  "Cyclizar": {
-    "gen9": {}
-  },
-  "Pawmi": {
-    "gen9": {}
-  },
-  "Pawmo": {
-    "gen9": {}
-  },
-  "Pawmot": {
-    "gen9": {}
-  },
-  "Wattrel": {
-    "gen9": {}
-  },
-  "Kilowattrel": {
-    "gen9": {}
-  },
-  "Bombirdier": {
-    "gen9": {}
-  },
-  "Squawkabilly": {
-    "gen9": {}
-  },
-  "Flamigo": {
-    "gen9": {}
-  },
-  "Klawf": {
-    "gen9": {}
-  },
-  "Nacli": {
-    "gen9": {}
-  },
-  "Naclstack": {
-    "gen9": {}
-  },
-  "Garganacl": {
-    "gen9": {}
-  },
-  "Glimmet": {
-    "gen9": {}
-  },
-  "Glimmora": {
-    "gen9": {}
-  },
-  "Shroodle": {
-    "gen9": {}
-  },
-  "Grafaiai": {
-    "gen9": {}
-  },
-  "Fidough": {
-    "gen9": {}
-  },
-  "Dachsbun": {
-    "gen9": {}
-  },
-  "Maschiff": {
-    "gen9": {}
-  },
-  "Mabosstiff": {
-    "gen9": {}
-  },
-  "Bramblin": {
-    "gen9": {}
-  },
-  "Brambleghast": {
-    "gen9": {}
-  },
-  "Gimmighoul": {
-    "gen9": {}
-  },
-  "Gholdengo": {
-    "gen9": {}
-  },
-  "Great Tusk": {
-    "gen9": {}
-  },
-  "Brute Bonnet": {
-    "gen9": {}
-  },
-  "Sandy Shocks": {
-    "gen9": {}
-  },
-  "Scream Tail": {
-    "gen9": {}
-  },
-  "Flutter Mane": {
-    "gen9": {}
-  },
-  "Slither Wing": {
-    "gen9": {}
-  },
-  "Roaring Moon": {
-    "gen9": {}
-  },
-  "Iron Treads": {
-    "gen9": {}
-  },
-  "Iron Moth": {
-    "gen9": {}
-  },
-  "Iron Hands": {
-    "gen9": {}
-  },
-  "Iron Jugulis": {
-    "gen9": {}
-  },
-  "Iron Thorns": {
-    "gen9": {}
-  },
-  "Iron Bundle": {
-    "gen9": {}
-  },
-  "Iron Valiant": {
-    "gen9": {}
-  },
-  "Ting-Lu": {
-    "gen9": {}
-  },
-  "Chien-Pao": {
-    "gen9": {}
-  },
-  "Wo-Chien": {
-    "gen9": {}
-  },
-  "Chi-Yu": {
-    "gen9": {}
-  },
-  "Koraidon": {
-    "gen9": {}
-  },
-  "Miraidon": {
-    "gen9": {}
-  },
-  "Tinkatink": {
-    "gen9": {}
-  },
-  "Tinkatuff": {
-    "gen9": {}
-  },
-  "Tinkaton": {
-    "gen9": {}
-  },
-  "Charcadet": {
-    "gen9": {}
-  },
-  "Armarouge": {
-    "gen9": {}
-  },
-  "Ceruledge": {
-    "gen9": {}
-  },
-  "Toedscool": {
-    "gen9": {}
-  },
-  "Toedscruel": {
-    "gen9": {}
-  },
-  "Kingambit": {
-    "gen9": {}
-  },
-  "Clodsire": {
-    "gen9": {}
-  },
-  "Annihilape": {
-    "gen9": {}
-  },
   "Bulbasaur": {
     "gen9": {},
     "gen8": {
@@ -110831,5 +110522,314 @@
         "Zen Headbutt"
       ]
     }
+  },
+  "Sprigatito": {
+    "gen9": {}
+  },
+  "Floragato": {
+    "gen9": {}
+  },
+  "Meowscarada": {
+    "gen9": {}
+  },
+  "Fuecoco": {
+    "gen9": {}
+  },
+  "Crocalor": {
+    "gen9": {}
+  },
+  "Skeledirge": {
+    "gen9": {}
+  },
+  "Quaxly": {
+    "gen9": {}
+  },
+  "Quaxwell": {
+    "gen9": {}
+  },
+  "Quaquaval": {
+    "gen9": {}
+  },
+  "Lechonk": {
+    "gen9": {}
+  },
+  "Oinkologne": {
+    "gen9": {}
+  },
+  "Tarountula": {
+    "gen9": {}
+  },
+  "Spidops": {
+    "gen9": {}
+  },
+  "Nymble": {
+    "gen9": {}
+  },
+  "Lokix": {
+    "gen9": {}
+  },
+  "Pawmi": {
+    "gen9": {}
+  },
+  "Pawmo": {
+    "gen9": {}
+  },
+  "Pawmot": {
+    "gen9": {}
+  },
+  "Tandemaus": {
+    "gen9": {}
+  },
+  "Maushold": {
+    "gen9": {}
+  },
+  "Fidough": {
+    "gen9": {}
+  },
+  "Dachsbun": {
+    "gen9": {}
+  },
+  "Smoliv": {
+    "gen9": {}
+  },
+  "Dolliv": {
+    "gen9": {}
+  },
+  "Arboliva": {
+    "gen9": {}
+  },
+  "Squawkabilly": {
+    "gen9": {}
+  },
+  "Nacli": {
+    "gen9": {}
+  },
+  "Naclstack": {
+    "gen9": {}
+  },
+  "Garganacl": {
+    "gen9": {}
+  },
+  "Charcadet": {
+    "gen9": {}
+  },
+  "Armarouge": {
+    "gen9": {}
+  },
+  "Ceruledge": {
+    "gen9": {}
+  },
+  "Tadbulb": {
+    "gen9": {}
+  },
+  "Bellibolt": {
+    "gen9": {}
+  },
+  "Wattrel": {
+    "gen9": {}
+  },
+  "Kilowattrel": {
+    "gen9": {}
+  },
+  "Maschiff": {
+    "gen9": {}
+  },
+  "Mabosstiff": {
+    "gen9": {}
+  },
+  "Shroodle": {
+    "gen9": {}
+  },
+  "Grafaiai": {
+    "gen9": {}
+  },
+  "Bramblin": {
+    "gen9": {}
+  },
+  "Brambleghast": {
+    "gen9": {}
+  },
+  "Toedscool": {
+    "gen9": {}
+  },
+  "Toedscruel": {
+    "gen9": {}
+  },
+  "Klawf": {
+    "gen9": {}
+  },
+  "Capsakid": {
+    "gen9": {}
+  },
+  "Scovillain": {
+    "gen9": {}
+  },
+  "Rellor": {
+    "gen9": {}
+  },
+  "Rabsca": {
+    "gen9": {}
+  },
+  "Flittle": {
+    "gen9": {}
+  },
+  "Espathra": {
+    "gen9": {}
+  },
+  "Tinkatink": {
+    "gen9": {}
+  },
+  "Tinkatuff": {
+    "gen9": {}
+  },
+  "Tinkaton": {
+    "gen9": {}
+  },
+  "Wiglett": {
+    "gen9": {}
+  },
+  "Wugtrio": {
+    "gen9": {}
+  },
+  "Bombirdier": {
+    "gen9": {}
+  },
+  "Finizen": {
+    "gen9": {}
+  },
+  "Palafin": {
+    "gen9": {}
+  },
+  "Varoom": {
+    "gen9": {}
+  },
+  "Revavroom": {
+    "gen9": {}
+  },
+  "Cyclizar": {
+    "gen9": {}
+  },
+  "Orthworm": {
+    "gen9": {}
+  },
+  "Glimmet": {
+    "gen9": {}
+  },
+  "Glimmora": {
+    "gen9": {}
+  },
+  "Greavard": {
+    "gen9": {}
+  },
+  "Houndstone": {
+    "gen9": {}
+  },
+  "Flamigo": {
+    "gen9": {}
+  },
+  "Cetoddle": {
+    "gen9": {}
+  },
+  "Cetitan": {
+    "gen9": {}
+  },
+  "Veluza": {
+    "gen9": {}
+  },
+  "Dondozo": {
+    "gen9": {}
+  },
+  "Tatsugiri": {
+    "gen9": {}
+  },
+  "Annihilape": {
+    "gen9": {}
+  },
+  "Clodsire": {
+    "gen9": {}
+  },
+  "Farigiraf": {
+    "gen9": {}
+  },
+  "Dudunsparce": {
+    "gen9": {}
+  },
+  "Kingambit": {
+    "gen9": {}
+  },
+  "Great Tusk": {
+    "gen9": {}
+  },
+  "Scream Tail": {
+    "gen9": {}
+  },
+  "Brute Bonnet": {
+    "gen9": {}
+  },
+  "Flutter Mane": {
+    "gen9": {}
+  },
+  "Slither Wing": {
+    "gen9": {}
+  },
+  "Sandy Shocks": {
+    "gen9": {}
+  },
+  "Iron Treads": {
+    "gen9": {}
+  },
+  "Iron Bundle": {
+    "gen9": {}
+  },
+  "Iron Hands": {
+    "gen9": {}
+  },
+  "Iron Jugulis": {
+    "gen9": {}
+  },
+  "Iron Moth": {
+    "gen9": {}
+  },
+  "Iron Thorns": {
+    "gen9": {}
+  },
+  "Frigibax": {
+    "gen9": {}
+  },
+  "Arctibax": {
+    "gen9": {}
+  },
+  "Baxcalibur": {
+    "gen9": {}
+  },
+  "Gimmighoul": {
+    "gen9": {}
+  },
+  "Gholdengo": {
+    "gen9": {}
+  },
+  "Wo-Chien": {
+    "gen9": {}
+  },
+  "Chien-Pao": {
+    "gen9": {}
+  },
+  "Ting-Lu": {
+    "gen9": {}
+  },
+  "Chi-Yu": {
+    "gen9": {}
+  },
+  "Roaring Moon": {
+    "gen9": {}
+  },
+  "Iron Valiant": {
+    "gen9": {}
+  },
+  "Koraidon": {
+    "gen9": {}
+  },
+  "Miraidon": {
+    "gen9": {}
   }
 }

@@ -83,12 +83,12 @@
 123,Scyther,Scyther,Violet,The sharp scythes on its forearms become increasingly sharp by cutting through hard objects.
 128,Tauros,Tauros,Scarlet,"When it targets an enemy, it charges furiously while whipping its body with its long tails."
 128,Tauros,Tauros,Violet,They fight each other by locking horns. The herd’s protector takes pride in its battle-scarred horns.
-128,Tauros,Paldean Tauros,Scarlet,This Pokémon has a muscular body and excels at close-quarters combat. It uses its short horns to strike the opponent’s weak spots.
-128,Tauros,Paldean Tauros,Violet,"This kind of Tauros, known as the Combat Breed, is distinguished by its thick, powerful muscles and its fierce disposition."
-128,Tauros,Paldean Fire Tauros,Scarlet,"When heated by fire energy, its horns can get hotter than 1,800 degrees Fahrenheit. Those gored by them will suffer both wounds and burns."
-128,Tauros,Paldean Fire Tauros,Violet,People call this kind of Tauros the Blaze Breed due to the hot air it snorts from its nostrils. Its three tails are intertwined.
-128,Tauros,Paldean Water Tauros,Scarlet,This Pokémon blasts water from holes on the tips of its horns—the high-pressure jets pierce right through Tauros’s enemies.
-128,Tauros,Paldean Water Tauros,Violet,"It swims by jetting water from its horns. The most notable characteristic of the Aqua Breed is its high body fat, which allows it to float easily."
+128,Tauros,Combat Breed,Scarlet,This Pokémon has a muscular body and excels at close-quarters combat. It uses its short horns to strike the opponent’s weak spots.
+128,Tauros,Combat Breed,Violet,"This kind of Tauros, known as the Combat Breed, is distinguished by its thick, powerful muscles and its fierce disposition."
+128,Tauros,Blaze Breed,Scarlet,"When heated by fire energy, its horns can get hotter than 1,800 degrees Fahrenheit. Those gored by them will suffer both wounds and burns."
+128,Tauros,Blaze Breed,Violet,People call this kind of Tauros the Blaze Breed due to the hot air it snorts from its nostrils. Its three tails are intertwined.
+128,Tauros,Aqua Breed,Scarlet,This Pokémon blasts water from holes on the tips of its horns—the high-pressure jets pierce right through Tauros’s enemies.
+128,Tauros,Aqua Breed,Violet,"It swims by jetting water from its horns. The most notable characteristic of the Aqua Breed is its high body fat, which allows it to float easily."
 129,Magikarp,Magikarp,Scarlet,"An underpowered, pathetic Pokémon. It may jump high on rare occasions but never more than seven feet."
 129,Magikarp,Magikarp,Violet,"In the distant past, it was somewhat stronger than the horribly weak descendants that exist today."
 130,Gyarados,Gyarados,Scarlet,"Once it appears, it goes on a rampage. It remains enraged until it demolishes everything around it."
@@ -721,3 +721,233 @@
 886,Drakloak,Drakloak,Violet,"This Pokémon stores up energy in its lungs, then shoots it out. It takes care of Dreepy and battles alongside them until they’re all grown up."
 887,Dragapult,Dragapult,Scarlet,Dragapult can make its whole body transparent by clearing its mind and focusing. Even the Dreepy in Dragapult’s horns become invisible.
 887,Dragapult,Dragapult,Violet,The fastest Dragapult of the group is always surrounded by Dreepy that want to fly at sonic speed.
+906,Sprigatito,Sprigatito,Scarlet,Its fluffy fur is similar in composition to plants. This Pokémon frequently washes its face to keep it from drying out.
+906,Sprigatito,Sprigatito,Violet,The sweet scent its body gives off mesmerizes those around it. The scent grows stronger when this Pokémon is in the sun.
+907,Floragato,Floragato,Scarlet,"Floragato deftly wields the vine hidden beneath its long fur, slamming the hard flower bud against its opponents."
+907,Floragato,Floragato,Violet,"The hardness of Floragato’s fur depends on the Pokémon’s mood. When Floragato is prepared to battle, its fur becomes pointed and needle sharp."
+908,Meowscarada,Meowscarada,Scarlet,"This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating."
+908,Meowscarada,Meowscarada,Violet,"With skillful misdirection, it rigs foes with pollen-packed flower bombs. Meowscarada sets off the bombs before its foes realize what’s going on."
+909,Fuecoco,Fuecoco,Scarlet,It lies on warm rocks and uses the heat absorbed by its square-shaped scales to create fire energy.
+909,Fuecoco,Fuecoco,Violet,"Its flame sac is small, so energy is always leaking out. This energy is released from the dent atop Fuecoco’s head and flickers to and fro."
+910,Crocalor,Crocalor,Scarlet,The combination of Crocalor’s fire energy and overflowing vitality has caused an egg-shaped fireball to appear on the Pokémon’s head.
+910,Crocalor,Crocalor,Violet,The valve in Crocalor’s flame sac is closely connected to its vocal cords. This Pokémon utters a guttural cry as it spews flames every which way.
+911,Skeledirge,Skeledirge,Scarlet,The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul.
+911,Skeledirge,Skeledirge,Violet,"Skeledirge’s gentle singing soothes the souls of all that hear it. It burns its enemies to a crisp with flames of over 5,400 degrees Fahrenheit."
+912,Quaxly,Quaxly,Scarlet,This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.
+912,Quaxly,Quaxly,Violet,Its strong legs let it easily swim around in even fast-flowing rivers. It likes to keep things tidy and is prone to overthinking things.
+913,Quaxwell,Quaxwell,Scarlet,"These Pokémon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully."
+913,Quaxwell,Quaxwell,Violet,The hardworking Quaxwell observes people and Pokémon from various regions and incorporates their movements into its own dance routines.
+914,Quaquaval,Quaquaval,Scarlet,A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands.
+914,Quaquaval,Quaquaval,Violet,"Dancing in ways that evoke far-away places, this Pokémon mesmerizes all that see it. Flourishes of its decorative water feathers slice into its foes."
+915,Lechonk,Lechonk,Scarlet,It searches for food all day. It possesses a keen sense of smell but doesn’t use it for anything other than foraging.
+915,Lechonk,Lechonk,Violet,This Pokémon spurns all but the finest of foods. Its body gives off an herblike scent that bug Pokémon detest.
+916,Oinkologne,Male,Scarlet,"Oinkologne is proud of its fine, glossy skin. It emits a concentrated scent from the tip of its tail."
+916,Oinkologne,Male,Violet,"It entrances female Pokémon with the sweet, alluring scent that wafts from all over its body."
+916,Oinkologne,Female,Scarlet,This Pokémon sends a flowerlike scent wafting about. Well-developed muscles in its legs allow it to leap more than 16 feet with no trouble at all.
+916,Oinkologne,Female,Violet,This is a meticulous Pokémon that likes to keep things tidy. It shrouds itself in a floral aroma that soothes the Pokémon around it.
+917,Tarountula,Tarountula,Scarlet,"The ball of threads wrapped around its body is elastic enough to deflect the scythes of Scyther, this Pokémon’s natural enemy."
+917,Tarountula,Tarountula,Violet,The thread it secretes from its rear is as strong as wire. The secret behind the thread’s strength is the topic of ongoing research.
+918,Spidops,Spidops,Scarlet,It clings to branches and ceilings using its threads and moves without a sound. It takes out its prey before the prey even notices it.
+918,Spidops,Spidops,Violet,"Spidops covers its territory in tough, sticky threads to set up traps for intruders."
+919,Nymble,Nymble,Scarlet,"It has its third set of legs folded up. When it’s in a tough spot, this Pokémon jumps over 30 feet using the strength of its legs."
+919,Nymble,Nymble,Violet,It’s highly skilled at a fighting style in which it uses its jumping capabilities to dodge incoming attacks while also dealing damage to opponents.
+920,Lokix,Lokix,Scarlet,"When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order."
+920,Lokix,Lokix,Violet,"It uses its normally folded third set of legs when in Showdown Mode. This places a huge burden on its body, so it can’t stay in this mode for long."
+921,Pawmi,Pawmi,Scarlet,It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.
+921,Pawmi,Pawmi,Violet,The pads of its paws are electricity-discharging organs. Pawmi fires electricity from its forepaws while standing unsteadily on its hind legs.
+922,Pawmo,Pawmo,Scarlet,"When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks."
+922,Pawmo,Pawmo,Violet,Pawmo uses a unique fighting technique in which it uses its forepaws to strike foes and zap them with electricity from its paw pads simultaneously.
+923,Pawmot,Pawmot,Scarlet,"This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements."
+923,Pawmot,Pawmot,Violet,Pawmot’s fluffy fur acts as a battery. It can store the same amount of electricity as an electric car.
+924,Tandemaus,Tandemaus,Scarlet,"Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them."
+924,Tandemaus,Tandemaus,Violet,The pair sticks together no matter what. They split any food they find exactly in half and then eat it together.
+925,Maushold,Family of Four,Scarlet,"The two little ones just appeared one day. The group might be a family of related Pokémon, but nobody knows for sure."
+925,Maushold,Family of Four,Violet,"The larger pair protects the little ones during battles. When facing strong opponents, the whole group will join the fight."
+925,Maushold,Family of Three,Scarlet,"They build huge nests with many rooms that are used for different purposes, such as eating and sleeping."
+925,Maushold,Family of Three,Violet,"The little one just appeared one day. They all live together like a family, but the relationship between the three is still unclear."
+926,Fidough,Fidough,Scarlet,This Pokémon is smooth and moist to the touch. Yeast in Fidough’s breath induces fermentation in the Pokémon’s vicinity.
+926,Fidough,Fidough,Violet,"The yeast in Fidough’s breath is useful for cooking, so this Pokémon has been protected by people since long ago."
+927,Dachsbun,Dachsbun,Scarlet,"The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages."
+927,Dachsbun,Dachsbun,Violet,"The surface of this Pokémon’s skin hardens when exposed to intense heat, and its body has an appetizing aroma."
+928,Smoliv,Smoliv,Scarlet,It protects itself from enemies by emitting oil from the fruit on its head. This oil is bitter and astringent enough to make someone flinch.
+928,Smoliv,Smoliv,Violet,"This Pokémon converts nutrients into oil, which it stores in the fruit on its head. It can easily go a whole week without eating or drinking."
+929,Dolliv,Dolliv,Scarlet,"Dolliv shares its tasty, fresh-scented oil with others. This species has coexisted with humans since times long gone."
+929,Dolliv,Dolliv,Violet,"It basks in the sun to its heart’s content until the fruits on its head ripen. After that, Dolliv departs from human settlements and goes on a journey."
+930,Arboliva,Arboliva,Scarlet,"This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon."
+930,Arboliva,Arboliva,Violet,"This Pokémon drives back enemies by launching its rich, aromatic oil at them with enough force to smash a boulder."
+931,Squawkabilly,Green Plumage,Scarlet,"These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory."
+931,Squawkabilly,Green Plumage,Violet,"Green-feathered flocks hold the most sway. When they’re out searching for food in the mornings and evenings, it gets very noisy."
+931,Squawkabilly,Blue Plumage,Scarlet,"The largest of their flocks can contain more than 50 individuals. They fly around towns and forests, searching for food and making a racket."
+931,Squawkabilly,Blue Plumage,Violet,"Blue-feathered Squawkabilly view their green-feathered counterparts as rivals, since the latter make up the largest, most powerful groups."
+931,Squawkabilly,Yellow Plumage,Scarlet,"These Squawkabilly are hotheaded, and their fighting style is vicious. They’ll leap within reach of their foes to engage in close combat."
+931,Squawkabilly,Yellow Plumage,Violet,The yellow Squawkabilly are especially fierce. They’ve even been known to drive other bird Pokémon out of town.
+931,Squawkabilly,White Plumage,Scarlet,This Pokémon dislikes being alone. It has a strong sense of community and survives by cooperating with allies.
+931,Squawkabilly,White Plumage,Violet,"Though these Squawkabilly are the fewest in number, they have no trouble living in towns since they blend in with the white buildings."
+932,Nacli,Nacli,Scarlet,"It was born in a layer of rock salt deep under the earth. This species was particularly treasured in the old days, as they would share precious salt."
+932,Nacli,Nacli,Violet,"The ground scrapes its body as it travels, causing it to leave salt behind. Salt is constantly being created and replenished inside Nacli’s body."
+933,Naclstack,Naclstack,Scarlet,This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body.
+933,Naclstack,Naclstack,Violet,It compresses rock salt inside its body and shoots out hardened salt pellets with enough force to perforate an iron sheet.
+934,Garganacl,Garganacl,Scarlet,Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward.
+934,Garganacl,Garganacl,Violet,"Many Pokémon gather around Garganacl, hoping to lick at its mineral-rich salt."
+935,Charcadet,Charcadet,Scarlet,"Burnt charcoal came to life and became a Pokémon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents."
+935,Charcadet,Charcadet,Violet,"Its firepower increases when it fights, reaching over 1,800 degrees Fahrenheit. It likes berries that are rich in fat."
+936,Armarouge,Armarouge,Scarlet,Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal.
+936,Armarouge,Armarouge,Violet,"This Pokémon clads itself in armor that has been fortified by psychic and fire energy, and it shoots blazing fireballs."
+937,Ceruledge,Ceruledge,Scarlet,The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.
+937,Ceruledge,Ceruledge,Violet,An old set of armor steeped in grudges caused this Pokémon’s evolution. Ceruledge cuts its enemies to pieces without mercy.
+938,Tadbulb,Tadbulb,Scarlet,"Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies."
+938,Tadbulb,Tadbulb,Violet,"It floats using the electricity stored in its body. When thunderclouds are around, Tadbulb will float higher off the ground."
+939,Bellibolt,Bellibolt,Scarlet,"When this Pokémon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity."
+939,Bellibolt,Bellibolt,Violet,What appear to be eyeballs are actually organs for discharging the electricity generated by Bellibolt’s belly-button dynamo.
+940,Wattrel,Wattrel,Scarlet,"When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them."
+940,Wattrel,Wattrel,Violet,"These Pokémon make their nests on coastal cliffs. The nests have a strange, crackling texture, and they’re a popular delicacy."
+941,Kilowattrel,Kilowattrel,Scarlet,"Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pokémon can fly over 430 miles in a day."
+941,Kilowattrel,Kilowattrel,Violet,"It uses its throat sac to store electricity generated by its wings. There’s hardly any oil in its feathers, so it is a poor swimmer."
+942,Maschiff,Maschiff,Scarlet,"It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff’s face."
+942,Maschiff,Maschiff,Violet,"Its well-developed jaw and fangs are strong enough to crunch through boulders, and its thick fat makes for an excellent defense."
+943,Mabosstiff,Mabosstiff,Scarlet,This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.
+943,Mabosstiff,Mabosstiff,Violet,"Mabosstiff loves playing with children. Though usually gentle, it takes on an intimidating look when protecting its family."
+944,Shroodle,Shroodle,Scarlet,"Though usually a mellow Pokémon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire."
+944,Shroodle,Shroodle,Violet,"To keep enemies away from its territory, it paints markings around its nest using a poisonous liquid that has an acrid odor."
+945,Grafaiai,Grafaiai,Scarlet,The color of the poisonous saliva depends on what the Pokémon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests.
+945,Grafaiai,Grafaiai,Violet,"Each Grafaiai paints its own individual pattern, and it will paint that same pattern over and over again throughout its life."
+946,Bramblin,Bramblin,Scarlet,A soul unable to move on to the afterlife was blown around by the wind until it got tangled up with dried grass and became a Pokémon.
+946,Bramblin,Bramblin,Violet,"Not even Bramblin knows where it is headed as it tumbles across the wilderness, blown by the wind. It loathes getting wet."
+947,Brambleghast,Brambleghast,Scarlet,"It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it."
+947,Brambleghast,Brambleghast,Violet,"Brambleghast wanders around arid regions. On rare occasions, mass outbreaks of these Pokémon will bury an entire town."
+948,Toedscool,Toedscool,Scarlet,Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious.
+948,Toedscool,Toedscool,Violet,"Though it looks like Tentacool, Toedscool is a completely different species. Its legs may be thin, but it can run at a speed of 30 mph."
+949,Toedscruel,Toedscruel,Scarlet,These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach.
+949,Toedscruel,Toedscruel,Violet,"It coils its 10 tentacles around prey and sucks out their nutrients, causing the prey pain. The folds along the rim of its head are a popular delicacy."
+950,Klawf,Klawf,Scarlet,"Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can’t remain in this position for long because its blood rushes to its head."
+950,Klawf,Klawf,Violet,"This Pokémon lives on sheer cliffs. It sidesteps opponents’ attacks, then lunges for their weak spots with its claws."
+951,Capsakid,Capsakid,Scarlet,"The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become."
+951,Capsakid,Capsakid,Violet,Traditional Paldean dishes can be extremely spicy because they include the shed front teeth of Capsakid among their ingredients.
+952,Scovillain,Scovillain,Scarlet,The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.
+952,Scovillain,Scovillain,Violet,"The green head has turned vicious due to the spicy chemicals stimulating its brain. Once it goes on a rampage, there is no stopping it."
+953,Rellor,Rellor,Scarlet,This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.
+953,Rellor,Rellor,Violet,It rolls its mud ball around while the energy it needs for evolution matures. Eventually the time comes for it to evolve.
+954,Rabsca,Rabsca,Scarlet,"The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball."
+954,Rabsca,Rabsca,Violet,An infant sleeps inside the ball. Rabsca rolls the ball soothingly with its legs to ensure the infant sleeps comfortably.
+955,Flittle,Flittle,Scarlet,Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly.
+955,Flittle,Flittle,Violet,"It spends its time running around wastelands. If anyone steals its beloved berries, it will chase them down and exact its revenge."
+956,Espathra,Espathra,Scarlet,"It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament."
+956,Espathra,Espathra,Violet,It emits psychic power from the gaps between its multicolored frills and sprints at speeds greater than 120 mph.
+957,Tinkatink,Tinkatink,Scarlet,"It swings its handmade hammer around to protect itself, but the hammer is often stolen by Pokémon that eat metal."
+957,Tinkatink,Tinkatink,Violet,This Pokémon pounds iron scraps together to make a hammer. It will remake the hammer again and again until it’s satisfied with the result.
+958,Tinkatuff,Tinkatuff,Scarlet,"This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer."
+958,Tinkatuff,Tinkatuff,Violet,These Pokémon make their homes in piles of scrap metal. They test the strength of each other’s hammers by smashing them together.
+959,Tinkaton,Tinkaton,Scarlet,"This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight."
+959,Tinkaton,Tinkaton,Violet,"The hammer tops 220 pounds, yet it gets swung around easily by Tinkaton as it steals whatever it pleases and carries its plunder back home."
+960,Wiglett,Wiglett,Scarlet,This Pokémon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand.
+960,Wiglett,Wiglett,Violet,"Though it looks like Diglett, Wiglett is an entirely different species. The resemblance seems to be a coincidental result of environmental adaptation."
+961,Wugtrio,Wugtrio,Scarlet,"It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den."
+961,Wugtrio,Wugtrio,Violet,"A variety of fish Pokémon, Wugtrio was once considered to be a regional form of Dugtrio."
+962,Bombirdier,Bombirdier,Scarlet,"It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun."
+962,Bombirdier,Bombirdier,Violet,"Bombirdier uses the apron on its chest to bundle up food, which it carries back to its nest. It enjoys dropping things that make loud noises."
+963,Finizen,Finizen,Scarlet,It likes playing with others of its kind using the water ring on its tail. It uses ultrasonic waves to sense the emotions of other living creatures.
+963,Finizen,Finizen,Violet,Its water ring is made from seawater mixed with a sticky fluid that Finizen secretes from its blowhole.
+964,Palafin,Zero Form,Scarlet,This Pokémon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation.
+964,Palafin,Zero Form,Violet,"Its physical capabilities are no different than a Finizen’s, but when its allies are in danger, it transforms and powers itself up."
+964,Palafin,Hero Form,Scarlet,This Pokémon’s ancient genes have awakened. It is now so extraordinarily strong that it can easily lift a cruise ship with one fin.
+964,Palafin,Hero Form,Violet,This hero of the ocean swims at a speed of 50 knots and saves drowning people and Pokémon.
+965,Varoom,Varoom,Scarlet,It is said that this Pokémon was born when an unknown poison Pokémon entered and inspirited an engine left at a scrap-processing factory.
+965,Varoom,Varoom,Violet,The steel section is Varoom’s actual body. This Pokémon clings to rocks and converts the minerals within into energy to fuel its activities.
+966,Revavroom,Revavroom,Scarlet,It creates a gas out of poison and minerals from rocks. It then detonates the gas in its cylinders—now numbering eight—to generate energy.
+966,Revavroom,Revavroom,Violet,Revavroom viciously threatens others with the sound of its exhaust. It sticks its tongue out from its cylindrical mouth and sprays toxic fluids.
+967,Cyclizar,Cyclizar,Scarlet,"Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals."
+967,Cyclizar,Cyclizar,Violet,It can sprint at over 70 mph while carrying a human. The rider’s body heat warms Cyclizar’s back and lifts the Pokémon’s spirit.
+968,Orthworm,Orthworm,Scarlet,"When attacked, this Pokémon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches."
+968,Orthworm,Orthworm,Violet,This Pokémon lives in arid deserts. It maintains its metal body by consuming iron from the soil.
+969,Glimmet,Glimmet,Scarlet,It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison.
+969,Glimmet,Glimmet,Violet,Glimmet’s toxic mineral crystals look just like flower petals. This Pokémon scatters poisonous powder like pollen to protect itself.
+970,Glimmora,Glimmora,Scarlet,"When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body."
+970,Glimmora,Glimmora,Violet,Glimmora’s petals are made of crystallized poison energy. It has recently become evident that these petals resemble Tera Jewels.
+971,Greavard,Greavard,Scarlet,It is said that a dog Pokémon that died in the wild without ever interacting with a human was reborn as this Pokémon.
+971,Greavard,Greavard,Violet,"This friendly Pokémon doesn’t like being alone. Pay it even the slightest bit of attention, and it will follow you forever."
+972,Houndstone,Houndstone,Scarlet,"Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master."
+972,Houndstone,Houndstone,Violet,A lovingly mourned Pokémon was reborn as Houndstone. It doesn’t like anyone touching the protuberance atop its head.
+973,Flamigo,Flamigo,Scarlet,This Pokémon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak.
+973,Flamigo,Flamigo,Violet,"Thanks to a behavior of theirs known as “synchronizing,” an entire flock of these Pokémon can attack simultaneously in perfect harmony."
+974,Cetoddle,Cetoddle,Scarlet,This species left the ocean and began living on land a very long time ago. It seems to be closely related to Wailmer.
+974,Cetoddle,Cetoddle,Violet,It lives in frigid regions in pods of five or so individuals. It loves the minerals found in snow and ice.
+975,Cetitan,Cetitan,Scarlet,"This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin."
+975,Cetitan,Cetitan,Violet,"Ice energy builds up in the horn on its upper jaw, causing the horn to reach cryogenic temperatures that freeze its surroundings."
+976,Veluza,Veluza,Scarlet,"When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor."
+976,Veluza,Veluza,Violet,"Veluza has excellent regenerative capabilities. It sheds spare flesh from its body to boost its agility, then charges at its prey."
+977,Dondozo,Dondozo,Scarlet,"This Pokémon is a glutton, but it’s bad at getting food. It teams up with a Tatsugiri to catch prey."
+977,Dondozo,Dondozo,Violet,"It treats Tatsugiri like its boss and follows it loyally. Though powerful, Dondozo is apparently not very smart."
+978,Tatsugiri,Curly Form,Scarlet,This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.
+978,Tatsugiri,Curly Form,Violet,"Tatsugiri is an extremely cunning Pokémon. It feigns weakness to lure in prey, then orders its partner to attack."
+978,Tatsugiri,Droopy Form,Scarlet,This species’ differing colors and patterns are apparently the result of Tatsugiri changing itself to suit the preferences of the prey it lures in.
+978,Tatsugiri,Droopy Form,Violet,"This Pokémon tricks its opponents by playing dead. It is small and weak, but it uses its smarts to survive."
+978,Tatsugiri,Stretchy Form,Scarlet,"Bird Pokémon are its main prey. This Pokémon knows it’s weak, so it hunts with a partner."
+978,Tatsugiri,Stretchy Form,Violet,It’s one of the most intelligent dragon Pokémon. It camouflages itself by inflating its throat sac.
+979,Annihilape,Annihilape,Scarlet,"When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body."
+979,Annihilape,Annihilape,Violet,It imbues its fists with the power of the rage that it kept hidden in its heart. Opponents struck by these imbued fists will be shattered to their core.
+980,Clodsire,Clodsire,Scarlet,"When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line."
+980,Clodsire,Clodsire,Violet,It lives at the bottom of ponds and swamps. It will carry Wooper on its back and ferry them across water from one shore to the other.
+981,Farigiraf,Farigiraf,Scarlet,"Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s."
+981,Farigiraf,Farigiraf,Violet,The hardened head from the tail protects the head of the main body as Farigiraf whips its long neck around to headbutt enemies.
+982,Dudunsparce,Two-Segment Form,Scarlet,This Pokémon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.
+982,Dudunsparce,Two-Segment Form,Violet,"It drives enemies out of its nest by sucking in enough air to fill its long, narrow lungs, then releasing the air in an intense blast."
+982,Dudunsparce,Three-Segment Form,Scarlet,The gentle Dudunsparce will put Pokémon that wander into its nest onto its back and carry them to the entrance.
+982,Dudunsparce,Three-Segment Form,Violet,A recent study uncovered that the number of segments a Dudunsparce’s body has is determined by the Pokémon’s genes.
+983,Kingambit,Kingambit,Scarlet,Only a Bisharp that stands above all others in its vast army can evolve into Kingambit.
+983,Kingambit,Kingambit,Violet,"Though it commands a massive army in battle, it’s not skilled at devising complex strategies. It just uses brute strength to keep pushing."
+984,Great Tusk,Great Tusk,Scarlet,Sightings of this Pokémon have occurred in recent years. The name Great Tusk was taken from a creature listed in a certain book.
+984,Great Tusk,Great Tusk,Violet,"This creature resembles a mysterious Pokémon that, according to a paranormal magazine, has lived since ancient times."
+985,Scream Tail,Scream Tail,Scarlet,There has been only one reported sighting of this Pokémon. It resembles a mysterious creature depicted in an old expedition journal.
+985,Scream Tail,Scream Tail,Violet,It resembles a mysterious Pokémon described in a paranormal magazine as a Jigglypuff from one billion years ago.
+986,Brute Bonnet,Brute Bonnet,Scarlet,It is possible that the creature listed as Brute Bonnet in a certain book could actually be this Pokémon.
+986,Brute Bonnet,Brute Bonnet,Violet,It bears a slight resemblance to a Pokémon described in a dubious magazine as a cross between a dinosaur and a mushroom.
+987,Flutter Mane,Flutter Mane,Scarlet,"This Pokémon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book."
+987,Flutter Mane,Flutter Mane,Violet,"It has similar features to a ghostly pterosaur that was covered in a paranormal magazine, but the two have little else in common."
+988,Slither Wing,Slither Wing,Scarlet,This mysterious Pokémon has some similarities to a creature that an old book introduced as Slither Wing.
+988,Slither Wing,Slither Wing,Violet,This Pokémon somewhat resembles an ancient form of Volcarona that was introduced in a dubious magazine.
+989,Sandy Shocks,Sandy Shocks,Scarlet,"No records exist of this Pokémon being caught. Data is lacking, but the Pokémon’s traits match up with a creature shown in an expedition journal."
+989,Sandy Shocks,Sandy Shocks,Violet,"It slightly resembles a Magneton that lived for 10,000 years and was featured in an article in a paranormal magazine."
+990,Iron Treads,Iron Treads,Scarlet,This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens.
+990,Iron Treads,Iron Treads,Violet,Sightings of this Pokémon have occurred in recent years. It resembles a mysterious object described in an old expedition journal.
+991,Iron Bundle,Iron Bundle,Scarlet,Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization.
+991,Iron Bundle,Iron Bundle,Violet,It resembles a mysterious object mentioned in an old book. There are only two reported sightings of this Pokémon.
+992,Iron Hands,Iron Hands,Scarlet,It is very similar to a cyborg covered exclusively by a paranormal magazine. The cyborg was said to be the modified form of a certain athlete.
+992,Iron Hands,Iron Hands,Violet,"This Pokémon shares many similarities with Iron Hands, an object mentioned in a certain expedition journal."
+993,Iron Jugulis,Iron Jugulis,Scarlet,"It resembles a certain Pokémon introduced in a paranormal magazine, described as the offspring of a Hydreigon that fell in love with a robot."
+993,Iron Jugulis,Iron Jugulis,Violet,"It’s possible that Iron Jugulis, an object described in an old book, may actually be this Pokémon."
+994,Iron Moth,Iron Moth,Scarlet,This Pokémon resembles an unknown object described in a paranormal magazine as a UFO sent to observe humanity.
+994,Iron Moth,Iron Moth,Violet,"No records exist of this species being caught. Data is lacking, but the Pokémon’s traits match up with an object described in an old book."
+995,Iron Thorns,Iron Thorns,Scarlet,It has some similarities to a Pokémon introduced in a dubious magazine as a Tyranitar from one billion years into the future.
+995,Iron Thorns,Iron Thorns,Violet,Some of its notable features match those of an object named within a certain expedition journal as Iron Thorns.
+996,Frigibax,Frigibax,Scarlet,"Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores."
+996,Frigibax,Frigibax,Violet,"This Pokémon lives in forests and craggy areas. Using the power of its dorsal fin, it cools the inside of its nest like a refrigerator."
+997,Arctibax,Arctibax,Scarlet,"Arctibax freezes the air around it, protecting its face with an ice mask and turning its dorsal fin into a blade of ice."
+997,Arctibax,Arctibax,Violet,It attacks with the blade of its frozen dorsal fin by doing a front flip in the air. Arctibax’s strong back and legs allow it to pull off this technique.
+998,Baxcalibur,Baxcalibur,Scarlet,This Pokémon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava.
+998,Baxcalibur,Baxcalibur,Violet,It launches itself into battle by flipping upside down and spewing frigid air from its mouth. It finishes opponents off with its dorsal blade.
+999,Gimmighoul,Chest Form,Scarlet,"This Pokémon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure."
+999,Gimmighoul,Chest Form,Violet,It lives inside an old treasure chest. Sometimes it gets left in shop corners since no one realizes it’s actually a Pokémon.
+999,Gimmighoul,Roaming Form,Scarlet,"This Pokémon was born from passion that seeped into a coin. It wanders, apparently seeking to return to the treasure chest it once inhabited."
+999,Gimmighoul,Roaming Form,Violet,"It wanders around, carrying an old coin on its back. It survives by draining the life-force from humans who try to pick up its coin."
+1000,Gholdengo,Gholdengo,Scarlet,"Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody."
+1000,Gholdengo,Gholdengo,Violet,It has a sturdy body made up of stacked coins. Gholdengo overwhelms its enemies by firing coin after coin at them in quick succession.
+1001,Wo-Chien,Wo-Chien,Scarlet,The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon.
+1001,Wo-Chien,Wo-Chien,Violet,"It drains the life-force from vegetation, causing nearby forests to instantly wither and fields to turn barren."
+1002,Chien-Pao,Chien-Pao,Scarlet,This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused.
+1002,Chien-Pao,Chien-Pao,Violet,The hatred of those who perished by the sword long ago has clad itself in snow and become a Pokémon.
+1003,Ting-Lu,Ting-Lu,Scarlet,The fear poured into an ancient ritual vessel has clad itself in rocks and dirt to become a Pokémon.
+1003,Ting-Lu,Ting-Lu,Violet,"It slowly brings its exceedingly heavy head down upon the ground, splitting the earth open with huge fissures that run over 160 feet deep."
+1004,Chi-Yu,Chi-Yu,Scarlet,"It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand."
+1004,Chi-Yu,Chi-Yu,Violet,The envy accumulated within curved beads that sparked multiple conflicts has clad itself in fire and become a Pokémon.
+1005,Roaring Moon,Roaring Moon,Scarlet,It is possible that this is the creature listed as Roaring Moon in an expedition journal that still holds many mysteries.
+1005,Roaring Moon,Roaring Moon,Violet,"According to an article in a dubious magazine, this Pokémon has some connection to a phenomenon that occurs in a certain region."
+1006,Iron Valiant,Iron Valiant,Scarlet,It has some similarities to a mad scientist’s invention covered in a paranormal magazine.
+1006,Iron Valiant,Iron Valiant,Violet,It’s possible that this is the object listed as Iron Valiant in a certain expedition journal.
+1007,Koraidon,Koraidon,Scarlet,This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists.
+1007,Koraidon,Koraidon,Violet,"This Pokémon resembles Cyclizar, but it is far burlier and more ferocious. Nothing is known about its ecology or other features."
+1007,Koraidon,Limited Build,Scarlet,The ecology and other data about this Pokémon are unknown. It was named Koraidon by the professor who discovered it.
+1007,Koraidon,Limited Build,Violet,It has similar characteristics to a creature described in an old book as the Winged King.
+1008,Miraidon,Miraidon,Scarlet,"Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful."
+1008,Miraidon,Miraidon,Violet,This seems to be the Iron Serpent mentioned in an old book. The Iron Serpent is said to have turned the land to ash with its lightning.
+1008,Miraidon,Low-Power Mode,Scarlet,Its characteristics match those of a mysterious object recorded in an old expedition journal as the Iron Serpent.
+1008,Miraidon,Low-Power Mode,Violet,It was given the name Miraidon by the professor who discovered it. Its ecology and other details are unknown.

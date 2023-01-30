@@ -295,7 +295,6 @@
 		658C0855297936A6009D50A1 /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = 658C0854297936A6009D50A1 /* CombineSchedulers */; };
 		658C08572979416F009D50A1 /* PokemonImageNameFormatter+HardcodedIndices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658C08562979416E009D50A1 /* PokemonImageNameFormatter+HardcodedIndices.swift */; };
 		658D0A6C2726ADB60054A6B1 /* UpdateMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D0A6B2726ADB60054A6B1 /* UpdateMessageView.swift */; };
-		658FF910246BCDA500FE2185 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 658FF90F246BCDA500FE2185 /* AppSupport */; };
 		6594F7C82588EF5700150E4A /* URL+DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594F7C72588EF5700150E4A /* URL+DeepLinks.swift */; };
 		6594F7CD2588F0C500150E4A /* URL+DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594F7C72588EF5700150E4A /* URL+DeepLinks.swift */; };
 		6594F801258F0DD300150E4A /* WidgetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594F800258F0DD300150E4A /* WidgetAdapter.swift */; };
@@ -333,6 +332,8 @@
 		65D703CF28D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D703E828D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D7040128D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
+		65D9701C29875D6400B3D71A /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
+		65D9701D29875D6400B3D71A /* PokedexCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		65E890052576255C00C0A483 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 65E890042576255C00C0A483 /* AppSupport */; };
 		65EE7C23297A4F0A00CBA045 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021DF2978EC9E005BF4DC /* Tab.swift */; };
 		65EE7C24297A4F0A00CBA045 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021E02978EC9E005BF4DC /* Route.swift */; };
@@ -534,6 +535,13 @@
 			remoteGlobalIDString = 65721CDB257E2CEB00DA8F7C;
 			remoteInfo = TeamIntentHandler;
 		};
+		65D9701E29875D6400B3D71A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65401F412978EA91005BF4DC;
+			remoteInfo = PokedexCore;
+		};
 		65F2B01028BB4F3A00218C89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
@@ -592,6 +600,17 @@
 			files = (
 				65848461293D0CCE00BF985C /* Config.txt in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65D9702029875D6500B3D71A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				65D9701D29875D6400B3D71A /* PokedexCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		65FC40962574636800E64BD0 /* Embed Foundation Extensions */ = {
@@ -1027,7 +1046,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658FF910246BCDA500FE2185 /* AppSupport in Frameworks */,
+				65D9701C29875D6400B3D71A /* PokedexCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2768,16 +2787,17 @@
 				6518ACAE23BED1D7004B7C58 /* Frameworks */,
 				6597D5E123CF163C0081482E /* Config Run Script */,
 				6518ACAF23BED1D7004B7C58 /* Copy Files */,
+				65D9702029875D6500B3D71A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				65A4D99223F8FB6100688333 /* PBXTargetDependency */,
 				65A4D99423F8FB6100688333 /* PBXTargetDependency */,
+				65D9701F29875D6400B3D71A /* PBXTargetDependency */,
 			);
 			name = DatabaseLoader;
 			packageProductDependencies = (
-				658FF90F246BCDA500FE2185 /* AppSupport */,
 			);
 			productName = DatabaseLoader;
 			productReference = 6518ACB123BED1D7004B7C58 /* DatabaseLoader */;
@@ -3878,6 +3898,11 @@
 			isa = PBXTargetDependency;
 			productRef = 65A4D99323F8FB6100688333 /* Entity */;
 		};
+		65D9701F29875D6400B3D71A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65401F412978EA91005BF4DC /* PokedexCore */;
+			targetProxy = 65D9701E29875D6400B3D71A /* PBXContainerItemProxy */;
+		};
 		65DB72E123F3F3A900F1DCF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 65DB72E023F3F3A900F1DCF1 /* Convert */;
@@ -3920,6 +3945,7 @@
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabaseLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -3935,6 +3961,7 @@
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabaseLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -5020,11 +5047,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 65401F612978EB14005BF4DC /* XCRemoteSwiftPackageReference "combine-schedulers" */;
 			productName = CombineSchedulers;
-		};
-		658FF90F246BCDA500FE2185 /* AppSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 659C7CEE24695FF100E92C1C /* XCRemoteSwiftPackageReference "AppSupport" */;
-			productName = AppSupport;
 		};
 		659C7CEF24695FF100E92C1C /* AppSupport */ = {
 			isa = XCSwiftPackageProductDependency;

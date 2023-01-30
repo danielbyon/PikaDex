@@ -1064,13 +1064,13 @@
     "moon": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "ultraSun": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "ultraMoon": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
+    "letsGoPikachu": "The target is blown away, and a different Pok\u00e9mon is dragged out.",
+    "letsGoEevee": "The target is blown away, and a different Pok\u00e9mon is dragged out.",
     "sword": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "shield": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "brilliantDiamond": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "shiningPearl": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "legendsArceus": "The target is blown away, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
-    "letsGoPikachu": "The target is blown away, and a different Pok\u00e9mon is dragged out.",
-    "letsGoEevee": "The target is blown away, and a different Pok\u00e9mon is dragged out.",
     "number": "17"
   },
   "Fly": {
@@ -2736,13 +2736,13 @@
     "moon": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "ultraSun": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "ultraMoon": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
+    "letsGoPikachu": "The target is scared off, and a different Pok\u00e9mon is dragged out.",
+    "letsGoEevee": "The target is scared off, and a different Pok\u00e9mon is dragged out.",
     "sword": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "shield": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "brilliantDiamond": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "shiningPearl": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
     "legendsArceus": "The target is scared off, and a different Pok\u00e9mon is dragged out. In the wild, this ends a battle against a single Pok\u00e9mon.",
-    "letsGoPikachu": "The target is scared off, and a different Pok\u00e9mon is dragged out.",
-    "letsGoEevee": "The target is scared off, and a different Pok\u00e9mon is dragged out.",
     "number": "45"
   },
   "Sing": {
@@ -2976,6 +2976,8 @@
     "letsGoEevee": "For four turns, this move prevents the target from using the move it last used.",
     "sword": "For four turns, this move prevents the target from using the move it last used.",
     "shield": "For four turns, this move prevents the target from using the move it last used.",
+    "brilliantDiamond": "For four turns, this move prevents the target from using the move it last used.",
+    "shiningPearl": "For four turns, this move prevents the target from using the move it last used.",
     "number": "49"
   },
   "Acid": {
@@ -3271,6 +3273,9 @@
     "letsGoEevee": "The target is blasted with a forceful shot of water.",
     "sword": "The target is blasted with a forceful shot of water.",
     "shield": "The target is blasted with a forceful shot of water.",
+    "brilliantDiamond": "The target is blasted with a forceful shot of water.",
+    "shiningPearl": "The target is blasted with a forceful shot of water.",
+    "legendsArceus": "The target is blasted with a forceful shot of water.",
     "number": "54"
   },
   "Hydro Pump": {
@@ -7107,6 +7112,8 @@
     "letsGoEevee": "The user attacks everything around it by causing an explosion. The user faints upon using this move.",
     "sword": "The user attacks everything around it by causing an explosion. The user faints upon using this move.",
     "shield": "The user attacks everything around it by causing an explosion. The user faints upon using this move.",
+    "brilliantDiamond": "The user attacks everything around it by causing an explosion. The user faints upon using this move.",
+    "shiningPearl": "The user attacks everything around it by causing an explosion. The user faints upon using this move.",
     "legendsArceus": "The user causes an explosion to inflict damage on the target. This also damages the user.",
     "number": "119"
   },
@@ -7939,8 +7946,10 @@
     "ultraMoon": "The user distracts the target by bending a spoon. This lowers the target's accuracy.",
     "letsGoPikachu": "The user distracts the target by bending a spoon. This lowers the target's accuracy.",
     "letsGoEevee": "The user distracts the target by bending a spoon. This lowers the target's accuracy.",
-    "sword": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.*The user distracts the target by bending a spoon. This lowers the target's accuracy.*",
-    "shield": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.*The user distracts the target by bending a spoon. This lowers the target's accuracy.*",
+    "sword": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shield": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "brilliantDiamond": "The user distracts the target by bending a spoon. This lowers the target's accuracy.",
+    "shiningPearl": "The user distracts the target by bending a spoon. This lowers the target's accuracy.",
     "legendsArceus": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "133"
   },
@@ -8534,6 +8543,7 @@
     "shield": "The user transforms into a copy of the target right down to having the same move set.",
     "brilliantDiamond": "The user transforms into a copy of the target right down to having the same move set.",
     "shiningPearl": "The user transforms into a copy of the target right down to having the same move set.",
+    "legendsArceus": "The user transforms into a copy of the target right down to having the same move set.",
     "number": "143"
   },
   "Bubble": {
@@ -16100,8 +16110,8 @@
     "ruby": "Reflects special effects back to the attacker.",
     "sapphire": "Reflects special effects back to the attacker.",
     "emerald": "Reflects special effects back to the attacker.",
-    "fireRed": "Reflects back the foe's Leech Seed and any status- damaging move.",
-    "leafGreen": "Reflects back the foe's Leech Seed and any status- damaging move.",
+    "fireRed": "Reflects back the foe's Leech Seed and any status-damaging move.",
+    "leafGreen": "Reflects back the foe's Leech Seed and any status-damaging move.",
     "diamond": "A barrier reflects back to the foe moves like Leech Seed and moves that damage status.",
     "pearl": "A barrier reflects back to the foe moves like Leech Seed and moves that damage status.",
     "platinum": "A barrier reflects back to the foe moves like Leech Seed and moves that damage status.",
@@ -22429,7 +22439,7 @@
     "shield": "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
     "brilliantDiamond": "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
     "shiningPearl": "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
-    "legendsArceus": "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
+    "legendsArceus": "The user slashes the target the instant the target lowers its guard. This move has a heightened chance of landing a critical hit.",
     "number": "399"
   },
   "Aqua Tail": {
@@ -24565,6 +24575,7 @@
     "category": "Special",
     "maxPP": "32",
     "pp": "20",
+    "power": "Varies",
     "accuracy": "100",
     "generationIntroduced": "Generation IV",
     "superContestCondition": "Smart",
@@ -29259,6 +29270,7 @@
     "ultraMoon": "The user takes the target trick-or-treating. This adds Ghost type to the target's type.",
     "sword": "The user takes the target trick-or-treating. This adds Ghost type to the target's type.",
     "shield": "The user takes the target trick-or-treating. This adds Ghost type to the target's type.",
+    "legendsArceus": "The user takes the target trick-or-treating. This adds Ghost type to the target's type.",
     "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "566"
@@ -32269,8 +32281,8 @@
     "sword": "The user instructs the target to use the target's last move again.",
     "shield": "The user instructs the target to use the target's last move again.",
     "legendsArceus": "The user instructs the target to use the target's last move again.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "688"
   },
   "Beak Blast": {
@@ -32870,8 +32882,8 @@
     "sword": "The user slams into the target with the force of a meteor. This move can be used on the target regardless of its Abilities.",
     "shield": "The user slams into the target with the force of a meteor. This move can be used on the target regardless of its Abilities.",
     "legendsArceus": "The user slams into the target with the force of a meteor. This move can be used on the target regardless of its Abilities.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "712"
   },
   "Moongeist Beam": {
@@ -32896,8 +32908,8 @@
     "sword": "The user emits a sinister ray to attack the target. This move can be used on the target regardless of its Abilities.",
     "shield": "The user emits a sinister ray to attack the target. This move can be used on the target regardless of its Abilities.",
     "legendsArceus": "The user emits a sinister ray to attack the target. This move can be used on the target regardless of its Abilities.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "713"
   },
   "Tearful Look": {
@@ -33093,8 +33105,8 @@
     "sword": "The user attacks a target with a pillar of light. This move inflicts Attack or Sp. Atk damage\u2014whichever stat is higher for the user.",
     "shield": "The user attacks a target with a pillar of light. This move inflicts Attack or Sp. Atk damage\u2014whichever stat is higher for the user.",
     "legendsArceus": "The user attacks a target with a pillar of light. This move inflicts Attack or Sp. Atk damage\u2014whichever stat is higher for the user.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "721"
   },
   "Light That Burns the Sky": {
@@ -33316,6 +33328,11 @@
     "targetDescription": "May affect anyone adjacent to the user",
     "letsGoPikachu": "The more Pikachu loves its Trainer, the greater the move's power. It never misses.",
     "letsGoEevee": "The more Pikachu loves its Trainer, the greater the move's power. It never misses.",
+    "sword": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shield": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "legendsArceus": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "731"
   },
   "Bouncy Bubble": {
@@ -33570,8 +33587,8 @@
     "targetDescription": "Affects the user",
     "sword": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.",
     "shield": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.",
-    "brilliantDiamond": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.",
-    "shiningPearl": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "legendsArceus": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.",
     "number": "742"
   },
@@ -33865,6 +33882,8 @@
     "sword": "This is a Fire-type attack Dynamax Pok\u00e9mon use. The user intensifies the sun for five turns.",
     "shield": "This is a Fire-type attack Dynamax Pok\u00e9mon use. The user intensifies the sun for five turns.",
     "legendsArceus": "This is a Fire-type attack Dynamax Pok\u00e9mon use. The user intensifies the sun for five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "756"
   },
   "Max Flutterby": {
@@ -33881,6 +33900,8 @@
     "sword": "This is a Bug-type attack Dynamax Pok\u00e9mon use. This lowers the target's Sp. Atk stat.",
     "shield": "This is a Bug-type attack Dynamax Pok\u00e9mon use. This lowers the target's Sp. Atk stat.",
     "legendsArceus": "This is a Bug-type attack Dynamax Pok\u00e9mon use. This lowers the target's Sp. Atk stat.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "757"
   },
   "Max Lightning": {
@@ -33897,6 +33918,8 @@
     "sword": "This is an Electric-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Electric Terrain for five turns.",
     "shield": "This is an Electric-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Electric Terrain for five turns.",
     "legendsArceus": "This is an Electric-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Electric Terrain for five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "758"
   },
   "Max Strike": {
@@ -33913,6 +33936,8 @@
     "sword": "This is a Normal-type attack Dynamax Pok\u00e9mon use. This lowers the target's Speed stat.",
     "shield": "This is a Normal-type attack Dynamax Pok\u00e9mon use. This lowers the target's Speed stat.",
     "legendsArceus": "This is a Normal-type attack Dynamax Pok\u00e9mon use. This lowers the target's Speed stat.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "759"
   },
   "Max Knuckle": {
@@ -33929,6 +33954,8 @@
     "sword": "This is a Fighting-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Attack stats.",
     "shield": "This is a Fighting-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Attack stats.",
     "legendsArceus": "This is a Fighting-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Attack stats.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "760"
   },
   "Max Phantasm": {
@@ -33945,6 +33972,8 @@
     "sword": "This is a Ghost-type attack Dynamax Pok\u00e9mon use. This lowers the target's Defense stat.",
     "shield": "This is a Ghost-type attack Dynamax Pok\u00e9mon use. This lowers the target's Defense stat.",
     "legendsArceus": "This is a Ghost-type attack Dynamax Pok\u00e9mon use. This lowers the target's Defense stat.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "761"
   },
   "Max Hailstorm": {
@@ -33961,6 +33990,8 @@
     "sword": "This is an Ice-type attack Dynamax Pok\u00e9mon use. The user summons a hailstorm lasting five turns.",
     "shield": "This is an Ice-type attack Dynamax Pok\u00e9mon use. The user summons a hailstorm lasting five turns.",
     "legendsArceus": "This is an Ice-type attack Dynamax Pok\u00e9mon use. The user summons a hailstorm lasting five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "762"
   },
   "Max Ooze": {
@@ -33977,6 +34008,8 @@
     "sword": "This is a Poison-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Sp. Atk stats.",
     "shield": "This is a Poison-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Sp. Atk stats.",
     "legendsArceus": "This is a Poison-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Sp. Atk stats.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "763"
   },
   "Max Geyser": {
@@ -33993,6 +34026,8 @@
     "sword": "This is a Water-type attack Dynamax Pok\u00e9mon use. The user summons a heavy rain that falls for five turns.",
     "shield": "This is a Water-type attack Dynamax Pok\u00e9mon use. The user summons a heavy rain that falls for five turns.",
     "legendsArceus": "This is a Water-type attack Dynamax Pok\u00e9mon use. The user summons a heavy rain that falls for five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "764"
   },
   "Max Airstream": {
@@ -34009,6 +34044,8 @@
     "sword": "This is a Flying-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Speed stats.",
     "shield": "This is a Flying-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Speed stats.",
     "legendsArceus": "This is a Flying-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Speed stats.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "765"
   },
   "Max Starfall": {
@@ -34025,6 +34062,8 @@
     "sword": "This is a Fairy-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Misty Terrain for five turns.",
     "shield": "This is a Fairy-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Misty Terrain for five turns.",
     "legendsArceus": "This is a Fairy-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Misty Terrain for five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "766"
   },
   "Max Wyrmwind": {
@@ -34041,6 +34080,8 @@
     "sword": "This is a Dragon-type attack Dynamax Pok\u00e9mon use. This lowers the target's Attack stat.",
     "shield": "This is a Dragon-type attack Dynamax Pok\u00e9mon use. This lowers the target's Attack stat.",
     "legendsArceus": "This is a Dragon-type attack Dynamax Pok\u00e9mon use. This lowers the target's Attack stat.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "767"
   },
   "Max Mindstorm": {
@@ -34057,6 +34098,8 @@
     "sword": "This is a Psychic-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Psychic Terrain for five turns.",
     "shield": "This is a Psychic-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Psychic Terrain for five turns.",
     "legendsArceus": "This is a Psychic-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Psychic Terrain for five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "768"
   },
   "Max Rockfall": {
@@ -34073,6 +34116,8 @@
     "sword": "This is a Rock-type attack Dynamax Pok\u00e9mon use. The user summons a sandstorm lasting five turns.",
     "shield": "This is a Rock-type attack Dynamax Pok\u00e9mon use. The user summons a sandstorm lasting five turns.",
     "legendsArceus": "This is a Rock-type attack Dynamax Pok\u00e9mon use. The user summons a sandstorm lasting five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "769"
   },
   "Max Quake": {
@@ -34089,6 +34134,8 @@
     "sword": "This is a Ground-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Sp. Def stats.",
     "shield": "This is a Ground-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Sp. Def stats.",
     "legendsArceus": "This is a Ground-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Sp. Def stats.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "770"
   },
   "Max Darkness": {
@@ -34105,6 +34152,8 @@
     "sword": "This is a Dark-type attack Dynamax Pok\u00e9mon use. This lowers the target's Sp. Def stat.",
     "shield": "This is a Dark-type attack Dynamax Pok\u00e9mon use. This lowers the target's Sp. Def stat.",
     "legendsArceus": "This is a Dark-type attack Dynamax Pok\u00e9mon use. This lowers the target's Sp. Def stat.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "771"
   },
   "Max Overgrowth": {
@@ -34121,6 +34170,8 @@
     "sword": "This is a Grass-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Grassy Terrain for five turns.",
     "shield": "This is a Grass-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Grassy Terrain for five turns.",
     "legendsArceus": "This is a Grass-type attack Dynamax Pok\u00e9mon use. The user turns the ground into Grassy Terrain for five turns.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "772"
   },
   "Max Steelspike": {
@@ -34137,6 +34188,8 @@
     "sword": "This is a Steel-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Defense stats.",
     "shield": "This is a Steel-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Defense stats.",
     "legendsArceus": "This is a Steel-type attack Dynamax Pok\u00e9mon use. This raises ally Pok\u00e9mon's Defense stats.",
+    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
     "number": "773"
   },
   "Clangorous Soul": {
@@ -34285,8 +34338,8 @@
     "sword": "The user becomes a gigantic sword and cuts the target. This move deals twice the damage if the target is Dynamaxed.",
     "shield": "The user becomes a gigantic sword and cuts the target. This move deals twice the damage if the target is Dynamaxed.",
     "legendsArceus": "The user becomes a gigantic sword and cuts the target. This move deals twice the damage if the target is Dynamaxed.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "780"
   },
   "Behemoth Bash": {
@@ -34307,8 +34360,8 @@
     "sword": "The user becomes a gigantic shield and slams into the target. This move deals twice the damage if the target is Dynamaxed.",
     "shield": "The user becomes a gigantic shield and slams into the target. This move deals twice the damage if the target is Dynamaxed.",
     "legendsArceus": "The user becomes a gigantic shield and slams into the target. This move deals twice the damage if the target is Dynamaxed.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "781"
   },
   "Aura Wheel": {
@@ -34567,8 +34620,8 @@
     "sword": "The user attacks wildly with its thick leek. The user can't move on the next turn, because the force of this move makes it stagger.",
     "shield": "The user attacks wildly with its thick leek. The user can't move on the next turn, because the force of this move makes it stagger.",
     "legendsArceus": "The user attacks wildly with its thick leek. The user can't move on the next turn, because the force of this move makes it stagger.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "793"
   },
   "Eternabeam": {
@@ -34655,8 +34708,8 @@
     "sword": "The user attacks while destroying the terrain. This move fails when the ground hasn't turned into a terrain.",
     "shield": "The user attacks while destroying the terrain. This move fails when the ground hasn't turned into a terrain.",
     "legendsArceus": "The user attacks while destroying the terrain. This move fails when the ground hasn't turned into a terrain.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "797"
   },
   "Scale Shot": {
@@ -34699,8 +34752,8 @@
     "sword": "In this two-turn attack, the user gathers space power and boosts its Sp. Atk stat, then attacks the target on the next turn.",
     "shield": "In this two-turn attack, the user gathers space power and boosts its Sp. Atk stat, then attacks the target on the next turn.",
     "legendsArceus": "In this two-turn attack, the user gathers space power and boosts its Sp. Atk stat, then attacks the target on the next turn.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "799"
   },
   "Shell Side Arm": {
@@ -34918,8 +34971,8 @@
     "sword": "The user surrounds everything around it with highly acidic gas and melts away items they hold.",
     "shield": "The user surrounds everything around it with highly acidic gas and melts away items they hold.",
     "legendsArceus": "The user surrounds everything around it with highly acidic gas and melts away items they hold.",
-    "brilliantDiamond": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
-    "shiningPearl": "This move can\u2019t be used. It\u2019s recommended that this move is forgotten. Once forgotten, this move can\u2019t be remembered.",
+    "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
+    "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "809"
   },
   "Coaching": {
@@ -35111,6 +35164,7 @@
     "targetDescription": "May affect anyone adjacent to the user",
     "sword": "The user traps the target in a cage of sparking electricity for four to five turns.",
     "shield": "The user traps the target in a cage of sparking electricity for four to five turns.",
+    "legendsArceus": "The user traps the target in a cage of sparking electricity for four to five turns.",
     "brilliantDiamond": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "shiningPearl": "This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.",
     "number": "818"
@@ -35626,9 +35680,9 @@
   "Wildbolt Storm": {
     "type": "Electric",
     "category": "Special",
-    "maxPP": "5",
-    "pp": "5",
-    "power": "95",
+    "maxPP": "16",
+    "pp": "10",
+    "power": "100",
     "accuracy": "80",
     "generationIntroduced": "Generation VIII",
     "targetFoe1": "1",
@@ -35644,9 +35698,9 @@
   "Sandsear Storm": {
     "type": "Ground",
     "category": "Special",
-    "maxPP": "5",
-    "pp": "5",
-    "power": "95",
+    "maxPP": "16",
+    "pp": "10",
+    "power": "100",
     "accuracy": "80",
     "generationIntroduced": "Generation VIII",
     "targetFoe1": "1",
@@ -36660,7 +36714,7 @@
   "Order Up": {
     "type": "Dragon",
     "category": "Physical",
-    "maxPP": "",
+    "maxPP": "16",
     "pp": "10",
     "power": "80",
     "accuracy": "100",
@@ -36728,7 +36782,7 @@
   "Raging Bull": {
     "type": "Normal",
     "category": "Physical",
-    "maxPP": "",
+    "maxPP": "16",
     "pp": "10",
     "power": "90",
     "accuracy": "100",
@@ -36808,7 +36862,7 @@
   "Silk Trap": {
     "type": "Bug",
     "category": "Status",
-    "maxPP": "",
+    "maxPP": "16",
     "pp": "10",
     "generationIntroduced": "Generation IX",
     "targetFoe1": "0",
@@ -36869,6 +36923,7 @@
   },
   "Tera Blast": {
     "type": "Normal",
+    "category": "Special",
     "maxPP": "16",
     "pp": "10",
     "power": "80",

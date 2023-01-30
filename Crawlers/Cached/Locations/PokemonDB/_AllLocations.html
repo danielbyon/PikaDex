@@ -16,7 +16,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
 <link rel="alternate" type="application/rss+xml" href="https://pokemondb.net/news/feed" title="The Pokémon Database newsfeed">
-<script>var localDbVersions = 221102;</script>
+<script>var localDbVersions = 230104;</script>
 <script defer src="/static/js/global-a088974446.js"></script>
 <script defer src="data:text/javascript;base64,Zm9yIChsZXQgdGFiU2V0IG9mIGVsUVNBKCcuc3YtdGFicy13cmFwcGVyJykpIHsKCW5ldyBTVi5UYWJzKHRhYlNldCwge3VzZUFuY2hvcnM6IHRydWV9KTsKfQoK"></script>
 <script>
@@ -73,8 +73,8 @@
 <li class="main-menu-hr-title">Quick links</li>
 <li><a href="/pokedex/national">National Pokédex</a></li>
 <li><a href="/pokedex/all">Pokémon list with stats</a></li>
-<li><a href="/pokedex/game/brilliant-diamond-shining-pearl">BD &amp; SP Pokédex</a></li>
 <li><a href="/pokedex/game/legends-arceus">Legends: Arceus Pokédex</a></li>
+<li><a href="/pokedex/game/scarlet-violet">Scarlet &amp; Violet Pokédex</a></li>
 </ul>
 </li>
 <li class="main-menu-item">
@@ -454,7 +454,7 @@
 <div class="grid-col span-sm-6 span-md-4 span-lg-2">
 <a href="/location/hoenn-sealed-chamber">Sealed Chamber</a><br>
 <a href="/location/hoenn-shoal-cave">Shoal Cave</a><br>
- <a href="/location/hoenn-sky-pillar">Sky Pillar</a><br>
+<a href="/location/hoenn-sky-pillar">Sky Pillar</a><br>
 <a href="/location/hoenn-slateport-city">Slateport City</a><br>
 <a href="/location/hoenn-sootopolis-city">Sootopolis City</a><br>
 <a href="/location/hoenn-southern-island">Southern Island</a><br>
@@ -626,7 +626,7 @@
 <a href="/location/unova-abundant-shrine">Abundant Shrine</a><br>
 <a href="/location/unova-accumula-town">Accumula Town</a><br>
 <span class="text-muted">Anville Town</span><br>
-<a href="/location/unova-aspertia-city">Aspertia City</a><br>
+ <a href="/location/unova-aspertia-city">Aspertia City</a><br>
 <span class="text-muted">Battle Subway</span><br>
 <span class="text-muted">Black City</span><br>
 <a href="/location/unova-castelia-city">Castelia City</a><br>
@@ -742,7 +742,7 @@
 <span class="text-muted">Chamber of Emptiness</span><br>
 <a href="/location/kalos-connecting-cave">Connecting Cave</a><br>
 <a href="/location/kalos-coumarine-city">Coumarine City</a><br>
-<a href="/location/kalos-couriway-town">Couriway Town</a><br>
+ <a href="/location/kalos-couriway-town">Couriway Town</a><br>
 </div>
 <div class="grid-col span-sm-6 span-md-4 span-lg-2">
 <a href="/location/kalos-cyllage-city">Cyllage City</a><br>
@@ -803,7 +803,7 @@
 <div class="grid-col span-sm-6 span-md-4 span-lg-2">
 <a href="/location/alola-route-17">Route 17</a><br>
 <a href="/location/alola-aether-paradise">Aether Paradise</a><br>
-<a href="/location/alola-akala-outskirts">Akala Outskirts</a><br>
+ <a href="/location/alola-akala-outskirts">Akala Outskirts</a><br>
 <a href="/location/alola-altar-of-the-moone">Altar of the Moone</a><br>
 <a href="/location/alola-altar-of-the-sunne">Altar of the Sunne</a><br>
 <a href="/location/alola-ancient-poni-path">Ancient Poni Path</a><br>
@@ -970,7 +970,7 @@
 <span class="text-muted">Split-Decision Ruins</span><br>
 <span class="text-muted">Steamdrift Way</span><br>
 <a href="/location/galar-stepping-stone-sea">Stepping-Stone Sea</a><br>
-<a href="/location/galar-stony-wilderness">Stony Wilderness</a><br>
+ <a href="/location/galar-stony-wilderness">Stony Wilderness</a><br>
 <span class="text-muted">Stow-on-Side</span><br>
 <a href="/location/three-point-pass">Three-Point Pass</a><br>
 <span class="text-muted">Tower of Darkness</span><br>
@@ -1080,7 +1080,7 @@
 <a href="/location/hisui-stonetooth-rows">Stonetooth Rows</a><br>
 <a href="/location/hisui-temple-of-sinnoh">Temple of Sinnoh</a><br>
 <a href="/location/hisui-the-heartwood">The Heartwood</a><br>
-<a href="/location/hisui-tidewater-dam">Tidewater Dam</a><br>
+ <a href="/location/hisui-tidewater-dam">Tidewater Dam</a><br>
 <a href="/location/hisui-tombolo-walk">Tombolo Walk</a><br>
 <a href="/location/hisui-tranquility-cove">Tranquility Cove</a><br>
 <a href="/location/hisui-turnback-cave">Turnback Cave</a><br>
@@ -1097,7 +1097,7 @@
 </div>
 <div class="sv-tabs-panel " id="loc-paldea">
 <div class="grid-row">
-<div class="grid-col span-sm-6 span-md-4 span-lg-2">
+<div class="grid-col span-sm-6 span-md-6 span-lg-3">
 <span class="text-muted">Alfornada</span><br>
 <span class="text-muted">Alfornada Cavern</span><br>
 <span class="text-muted">Artazon</span><br>
@@ -1105,45 +1105,41 @@
 <a href="/location/paldea-cabo-poco">Cabo Poco</a><br>
 <span class="text-muted">Cascarrafa</span><br>
 <a href="/location/paldea-casseroya-lake">Casseroya Lake</a><br>
-</div>
-<div class="grid-col span-sm-6 span-md-4 span-lg-2">
 <span class="text-muted">Cortondo</span><br>
 <span class="text-muted">Dalizapa Passage</span><br>
 <a href="/location/paldea-east-paldean-sea">East Paldean Sea</a><br>
 <a href="/location/paldea-east-province-area-one">East Province (Area One)</a><br>
+</div>
+<div class="grid-col span-sm-6 span-md-6 span-lg-3">
 <a href="/location/paldea-east-province-area-three">East Province (Area Three)</a><br>
 <a href="/location/paldea-east-province-area-two">East Province (Area Two)</a><br>
 <a href="/location/paldea-glaseado-mountain">Glaseado Mountain</a><br>
-</div>
-<div class="grid-col span-sm-6 span-md-4 span-lg-2">
 <span class="text-muted">Inlet Grotto</span><br>
 <span class="text-muted">Levincia</span><br>
+<span class="text-muted">Los Platos</span><br>
 <span class="text-muted">Medali</span><br>
 <span class="text-muted">Mesagoza</span><br>
 <span class="text-muted">Montenevera</span><br>
 <a href="/location/paldea-north-paldean-sea">North Paldean Sea</a><br>
 <a href="/location/paldea-north-province-area-one">North Province (Area One)</a><br>
 </div>
-<div class="grid-col span-sm-6 span-md-4 span-lg-2">
+<div class="grid-col span-sm-6 span-md-6 span-lg-3">
 <a href="/location/paldea-north-province-area-three">North Province (Area Three)</a><br>
 <a href="/location/paldea-north-province-area-two">North Province (Area Two)</a><br>
-<span class="text-muted">Poco Path</span><br>
+<a href="/location/paldea-poco-path">Poco Path</a><br>
+<span class="text-muted">Porto Marinada</span><br>
+<a href="/location/paldea-socarrat-trail">Socarrat Trail</a><br>
 <a href="/location/paldea-south-paldean-sea">South Paldean Sea</a><br>
 <a href="/location/paldea-south-province-area-five">South Province (Area Five)</a><br>
 <a href="/location/paldea-south-province-area-four">South Province (Area Four)</a><br>
 <a href="/location/paldea-south-province-area-one">South Province (Area One)</a><br>
-</div>
-<div class="grid-col span-sm-6 span-md-4 span-lg-2">
 <a href="/location/paldea-south-province-area-six">South Province (Area Six)</a><br>
 <a href="/location/paldea-south-province-area-three">South Province (Area Three)</a><br>
+</div>
+<div class="grid-col span-sm-6 span-md-6 span-lg-3">
 <a href="/location/paldea-south-province-area-two">South Province (Area Two)</a><br>
 <a href="/location/paldea-tagtree-thicket">Tagtree Thicket</a><br>
-<a href="/location/paldea-the-great-crater-of-paldea-area-one">The Great Crater of Paldea (Area One)</a><br>
-<a href="/location/paldea-the-great-crater-of-paldea-area-three">The Great Crater of Paldea (Area Three)</a><br>
-<a href="/location/paldea-the-great-crater-of-paldea-area-two">The Great Crater of Paldea (Area Two)</a><br>
-</div>
-<div class="grid-col span-sm-6 span-md-4 span-lg-2">
-<a href="/location/paldea-the-great-crater-of-paldea-area-zero">The Great Crater of Paldea (Area Zero)</a><br>
+<a href="/location/paldea-the-great-crater-of-paldea">The Great Crater of Paldea</a><br>
 <a href="/location/paldea-the-pokemon-league">The Pokémon League</a><br>
 <a href="/location/paldea-west-paldean-sea">West Paldean Sea</a><br>
 <a href="/location/paldea-west-province-area-one">West Province (Area One)</a><br>
@@ -1177,8 +1173,8 @@
 <footer class="main-footer">
 <div class="grid-container">
 <a class="wrap-right" href="/about#privacy">Privacy Policy</a>
-All content &amp; design &copy; Pokémon Database, 2008-2022.
-Pokémon images &amp; names &copy; 1995-2022 Nintendo/Game Freak.
+All content &amp; design &copy; Pokémon Database, 2008-2023.
+Pokémon images &amp; names &copy; 1995-2023 Nintendo/Game Freak.
 </div>
 </footer>
 </body>
