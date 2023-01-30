@@ -55,8 +55,8 @@ class ModelObjectBaseTestCase: XCTestCase {
         XCTAssertNotEqual(value, _missingInt)
     }
     
-    func validateInt64(_ value: Int64?) {
-        XCTAssertNotEqual(value, _missingInt64)
+    func validateInt16(_ value: Int16?) {
+        XCTAssertNotEqual(value, _missingInt16)
     }
     
     func validateDouble(_ value: Double?) {

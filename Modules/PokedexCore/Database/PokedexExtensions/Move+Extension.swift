@@ -65,8 +65,8 @@ extension StoredMove: CanonicallyNamed {
 public extension StoredMove {
 
     var accuracy: Int? {
-        get { (value(forKeyPath: #keyPath(StoredMove.z_accuracy)) as? Int64)?.toInt() }
-        set { z_accuracy = newValue?.toInt64() ?? 0 }
+        get { (value(forKeyPath: #keyPath(StoredMove.z_accuracy)) as? Int16)?.toInt() }
+        set { z_accuracy = newValue?.toInt16() ?? 0 }
     }
     var bulbapediaURL: URL {
         get { URL(string: z_bulbapediaURL!)! }
@@ -78,19 +78,19 @@ public extension StoredMove {
     }
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int32(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
     }
     var generationIntroduced: Generation {
         get { Generation(rawValue: Int(z_generationIntroduced))! }
-        set { z_generationIntroduced = Int64(newValue.rawValue) }
+        set { z_generationIntroduced = Int16(newValue.rawValue) }
     }
     var index: Int {
         get { Int(z_index) }
-        set { z_index = Int64(newValue) }
+        set { z_index = Int16(newValue) }
     }
     var maxPP: Int? {
-        get { (value(forKeyPath: #keyPath(StoredMove.z_maxPP)) as? Int64)?.toInt() }
-        set { z_maxPP = newValue?.toInt64() ?? 0 }
+        get { (value(forKeyPath: #keyPath(StoredMove.z_maxPP)) as? Int16)?.toInt() }
+        set { z_maxPP = newValue?.toInt16() ?? 0 }
     }
     var moveDescription: String {
         get { z_moveDescription! }
@@ -105,17 +105,17 @@ public extension StoredMove {
         set { z_pokemonDBURL = newValue.absoluteString }
     }
     var power: Int? {
-        get { (value(forKeyPath: #keyPath(StoredMove.z_power)) as? Int64)?.toInt() }
-        set { z_power = newValue?.toInt64() ?? 0 }
+        get { (value(forKeyPath: #keyPath(StoredMove.z_power)) as? Int16)?.toInt() }
+        set { z_power = newValue?.toInt16() ?? 0 }
     }
     var pp: Int? {
-        get { (value(forKeyPath: #keyPath(StoredMove.z_pp)) as? Int64)?.toInt() }
-        set { z_pp = newValue?.toInt64() ?? 0 }
+        get { (value(forKeyPath: #keyPath(StoredMove.z_pp)) as? Int16)?.toInt() }
+        set { z_pp = newValue?.toInt16() ?? 0 }
     }
     /// Unused
     var priority: Int {
         get { Int(z_priority) }
-        set { z_priority = Int64(newValue) }
+        set { z_priority = Int16(newValue) }
     }
     var targetAlly1: Bool {
         get { z_targetAlly1 }

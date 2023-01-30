@@ -334,6 +334,7 @@
 		65D7040128D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D9701C29875D6400B3D71A /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
 		65D9701D29875D6400B3D71A /* PokedexCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65D970222987883D00B3D71A /* Int16+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D970212987883D00B3D71A /* Int16+Int.swift */; };
 		65E890052576255C00C0A483 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 65E890042576255C00C0A483 /* AppSupport */; };
 		65EE7C23297A4F0A00CBA045 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021DF2978EC9E005BF4DC /* Tab.swift */; };
 		65EE7C24297A4F0A00CBA045 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021E02978EC9E005BF4DC /* Route.swift */; };
@@ -931,6 +932,7 @@
 		65BB4C68257F7C3400298D10 /* Menusprites.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Menusprites.xcassets; sourceTree = "<group>"; };
 		65CD94DE23C1333B005D005E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		65D703A628D96B93000CDA55 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
+		65D970212987883D00B3D71A /* Int16+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int16+Int.swift"; sourceTree = "<group>"; };
 		65EE7D17297A515400CBA045 /* DualTypePokemonForms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualTypePokemonForms.swift; sourceTree = "<group>"; };
 		65EE7D19297A515400CBA045 /* TypeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeSelector.swift; sourceTree = "<group>"; };
 		65EE7D1A297A515400CBA045 /* DualTypeChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualTypeChecker.swift; sourceTree = "<group>"; };
@@ -1631,11 +1633,12 @@
 		654022102978ECA7005BF4DC /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				654022112978ECA7005BF4DC /* Int64+Int.swift */,
+				654022252978ECA7005BF4DC /* DatabaseConstants.swift */,
+				65D970212987883D00B3D71A /* Int16+Int.swift */,
 				654022122978ECA7005BF4DC /* Int32+Int.swift */,
+				654022112978ECA7005BF4DC /* Int64+Int.swift */,
 				654022132978ECA7005BF4DC /* PokedexExtensions */,
 				654022232978ECA7005BF4DC /* UserDataExtensions */,
-				654022252978ECA7005BF4DC /* DatabaseConstants.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -3424,6 +3427,7 @@
 				654022552978ECA9005BF4DC /* PokemonFilter.swift in Sources */,
 				6540224C2978ECA9005BF4DC /* LearnsetMachineEntryFilter.swift in Sources */,
 				6540223A2978ECA9005BF4DC /* EggGroup+Strings.swift in Sources */,
+				65D970222987883D00B3D71A /* Int16+Int.swift in Sources */,
 				6540225E2978ECA9005BF4DC /* Item+Stub.swift in Sources */,
 				654022732978ECA9005BF4DC /* Stats.swift in Sources */,
 				654022992978ECA9005BF4DC /* BerryFirmness.swift in Sources */,
@@ -4392,7 +4396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -4401,7 +4405,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia;
 				PRODUCT_NAME = PikaDex;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -4419,7 +4423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -4428,7 +4432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				OTHER_LDFLAGS = "-Wl,-exported_symbols_list,/dev/null";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia;
 				PRODUCT_NAME = PikaDex;
@@ -4530,7 +4534,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4538,7 +4542,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.TeamIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -4553,7 +4557,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4561,7 +4565,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.TeamIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -4792,7 +4796,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4800,7 +4804,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.PokedexWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -4817,7 +4821,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4825,7 +4829,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.PokedexWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -15,6 +15,5 @@ public let _missingString = ""
 #endif
 
 public let _missingInt = -1001
-public let _missingInt32: Int32 = -1001
-public let _missingInt64: Int64 = -1001
+public let _missingInt16: Int16 = -1001
 public let _missingDouble = -1001.0

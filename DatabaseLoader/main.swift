@@ -480,7 +480,7 @@ for dict in Helper.loadTSV(from: "Research/PokemonForms.tsv") {
     storedForm.index = index
     storedForm.formIndex = gameForms.count
     storedForm.pokemonIndex = pokemon.index
-    storedForm.i_pokemonNameIndex = Int32(pokemonNameIndices[sanitizedName(pokemon.name)]!)
+    storedForm.i_pokemonNameIndex = Int16(pokemonNameIndices[sanitizedName(pokemon.name)]!)
     storedForm.game = game
     storedForm.familyName = dict["familyName"]!
     storedForm.species = dict["species"]!
@@ -1283,7 +1283,7 @@ allLocations.values.forEach {
     }
     .enumerated()
     .forEach { i, location in
-        location.i_nameIndex = Int32(i)
+        location.i_nameIndex = Int16(i)
     }
 }
 
@@ -1382,7 +1382,7 @@ for bulbapediaItem in bulbapediaItems {
         let item = StoredItem(context: moc)
         item.name = bulbapediaItem.name
         item.game = game
-        item.i_gameIndex = Int32(game.index)
+        item.i_gameIndex = Int16(game.index)
         item.generationIntroduced = generationIntroduced
         item.imageName = bulbapediaItem.imageName.removingDiacritics()
         item.itemType = .item
@@ -1424,7 +1424,7 @@ for bulbapediaItem in bulbapediaItems {
 //    let item = StoredItem(context: moc)
 //    item.name = usumItem.name
 //    item.game = game
-//    item.i_gameIndex = Int32(game.index)
+//    item.i_gameIndex = Int16(game.index)
 //    item.generationIntroduced = usumItem.generationIntroduced
 //    item.imageName = usumItem.imageName
 //    item.itemType = usumItem.itemType
@@ -1455,7 +1455,7 @@ for dict in Helper.loadTSV(from: "Research/Berries.tsv") {
     let item = StoredItem(context: moc)
     item.name = dict["name"]!
     item.game = game
-    item.i_gameIndex = Int32(item.game.index)
+    item.i_gameIndex = Int16(item.game.index)
     item.generationIntroduced = Generation(rawValue: Int(dict["generation"]!)!)!
     item.imageName = item.name.lowercased().replacingOccurrences(of: " ", with: "-").removingDiacritics()
     item.itemType = .berry
@@ -1535,7 +1535,7 @@ for (_, gameToItem) in allItems {
 
     let copy = makeItemCopy(source: source)
     copy.game = .national
-    copy.i_gameIndex = Game.national.index.toInt32()
+    copy.i_gameIndex = Game.national.index.toInt16()
 
     let key = sanitizedItemName(copy.name)
     if var items = allItems[key] {
@@ -1552,11 +1552,11 @@ for (_, gameToItem) in allItems where gameToItem[.scarlet] == nil {
 
     let scarletCopy = makeItemCopy(source: source)
     scarletCopy.game = .scarlet
-    scarletCopy.i_gameIndex = Game.scarlet.index.toInt32()
+    scarletCopy.i_gameIndex = Game.scarlet.index.toInt16()
 
     let violetCopy = makeItemCopy(source: source)
     violetCopy.game = .violet
-    violetCopy.i_gameIndex = Game.violet.index.toInt32()
+    violetCopy.i_gameIndex = Game.violet.index.toInt16()
 
     let key = sanitizedItemName(source.name)
     if var items = allItems[key] {
@@ -1582,7 +1582,7 @@ for (_, gameToItem) in allItems where gameToItem[.scarlet] == nil {
 //
 //    let brilliantDiamondCopy = makeItemCopy(source: source)
 //    brilliantDiamondCopy.game = .brilliantDiamond
-//    brilliantDiamondCopy.i_gameIndex = Game.brilliantDiamond.index.toInt32()
+//    brilliantDiamondCopy.i_gameIndex = Game.brilliantDiamond.index.toInt16()
 //    let brilliantDiamondKey = sanitizedItemName(brilliantDiamondCopy.name)
 //    if var items = allItems[brilliantDiamondKey] {
 //        items[.brilliantDiamond] = brilliantDiamondCopy
@@ -1593,7 +1593,7 @@ for (_, gameToItem) in allItems where gameToItem[.scarlet] == nil {
 //
 //    let shiningPearlCopy = makeItemCopy(source: source)
 //    shiningPearlCopy.game = .shiningPearl
-//    shiningPearlCopy.i_gameIndex = Game.shiningPearl.index.toInt32()
+//    shiningPearlCopy.i_gameIndex = Game.shiningPearl.index.toInt16()
 //    let shiningPearlKey = sanitizedItemName(shiningPearlCopy.name)
 //    if var items = allItems[shiningPearlKey] {
 //        items[.shiningPearl] = shiningPearlCopy
@@ -1610,7 +1610,7 @@ allItems.keys
     .sorted()
     .enumerated()
     .forEach { i, key in
-        let index = Int32(i)
+        let index = Int16(i)
         allItems[key]!.values.forEach { $0.i_nameIndex = index }
     }
 
