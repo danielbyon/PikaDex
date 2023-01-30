@@ -4,6 +4,8 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
+		<string>Fixed Lycanroc not appearing in Scarlet/Violet Pokedex</string>
+		<string>Fixed Crabrawler evolution data</string>
 		<string>Fixed crash when renaming a team or modifying members</string>
 	</array>
 	<key>newFeatures</key>
