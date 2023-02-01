@@ -55,7 +55,7 @@ extension PokemonDetailFormFilter {
     }
 
     public init(ability: Ability, game: Game) {
-        let abilityIndex = Int32(ability.index)
+        let abilityIndex = Int16(ability.index)
         self.init(
             predicate: NSCompoundPredicate(andPredicateWithSubpredicates: [
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),

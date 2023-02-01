@@ -79,11 +79,11 @@ public extension StoredAbility {
     }
     var generationIntroduced: Generation {
         get { Generation(rawValue: Int(z_generationIntroduced))! }
-        set { z_generationIntroduced = Int64(newValue.rawValue) }
+        set { z_generationIntroduced = Int16(newValue.rawValue) }
     }
     var index: Int {
         get { Int(z_index) }
-        set { z_index = Int64(newValue) }
+        set { z_index = Int16(newValue) }
     }
     var name: String {
         get { z_name! }

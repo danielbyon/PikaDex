@@ -70,7 +70,7 @@ public extension StoredItem {
     }
     var generationIntroduced: Generation {
         get { Generation(rawValue: Int(z_generationIntroduced))! }
-        set { z_generationIntroduced = Int32(newValue.rawValue) }
+        set { z_generationIntroduced = Int16(newValue.rawValue) }
     }
     var imageName: String {
         get { z_imageName! }
@@ -82,7 +82,7 @@ public extension StoredItem {
     }
     var itemType: ItemType {
         get { ItemType(rawValue: Int(z_itemType))! }
-        set { z_itemType = Int64(newValue.rawValue) }
+        set { z_itemType = Int16(newValue.rawValue) }
     }
     var name: String {
         get { z_name! }

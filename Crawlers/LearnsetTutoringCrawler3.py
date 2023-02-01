@@ -92,17 +92,6 @@ def main():
 	
 	pokemons = []
 	
-	with codecs.open("Gen9Pokemon.txt", 'r', encoding='utf8') as f:
-		for line in f:
-			components = line.split('\t')
-			number = components[0].strip()
-			name = components[1].strip()
-			pokemons.append({
-				'name': name,
-				'number': number,
-				'urlPath': '/pokedex/{}'.format(name.lower().replace(' ', '-'))
-			})
-			
 	for row in table.tbody.find_all('tr'):
 		cells = row.find_all('td')
 		number = cells[0].text.strip()

@@ -109,7 +109,7 @@ public extension StoredPokemon {
     }
     var catchRate: Int {
         get { Int(z_catchRate) }
-        set { z_catchRate = Int64(newValue) }
+        set { z_catchRate = Int16(newValue) }
     }
     var eggGroups: [EggGroup] {
         get { (z_eggGroups ?? _missingString).components(separatedBy: ",").compactMap { EggGroup(rawValue: $0) } }
@@ -117,15 +117,15 @@ public extension StoredPokemon {
     }
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int32(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
     }
     var generationIntroduced: Generation {
         get { Generation(rawValue: Int(z_generationIntroduced))! }
-        set { z_generationIntroduced = Int32(newValue.rawValue) }
+        set { z_generationIntroduced = Int16(newValue.rawValue) }
     }
     var index: Int {
         get { Int(z_index) }
-        set { z_index = Int32(newValue) }
+        set { z_index = Int16(newValue) }
     }
     var levelingRate: LevelingRate {
         get { LevelingRate(rawValue: z_levelingRate!)! }

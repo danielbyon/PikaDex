@@ -10,6 +10,7 @@ import codecs
 import csv
 import io
 import shutil
+from pathlib import Path
 from bs4 import BeautifulSoup
 
 class DictUnicodeWriter(object):
@@ -69,8 +70,12 @@ def download(url):
     session = HTMLSession()
     r = session.get(url)
     return r.text.encode('utf-8')
+
+def ensure_dir(filename):
+    Path(filename).parent.mkdir(exist_ok=True, parents=True)
     
 def cache_file(contents, filename):
+    ensure_dir(filename)
     with codecs.open(filename, 'w', encoding='utf-8') as f:
         f.write(contents)
 
@@ -78,6 +83,7 @@ def write_data_to_file(data, title):
     print("Writing data to %s.json" % title)
     
     filename = title + ".json"
+    ensure_dir(filename)
     
     with codecs.open(filename, 'w', encoding='utf8') as f:
         json.dump(data, f, indent=2)
@@ -86,6 +92,7 @@ def write_entries_to_tsv(data, fieldnames, title):
     print("Writing data to %s.tsv" % title)
 
     filename = title + ".tsv"
+    ensure_dir(filename)
 
     with open(filename,'w',encoding='utf-8-sig',newline='') as f:
         writer = csv.DictWriter(f,fieldnames=fieldnames)
@@ -137,6 +144,7 @@ def download_image(url, filename):
         return
     
     response = requests.get(url, stream=True)
+    ensure_dir(filename)
     with open(filename, 'wb') as out_file:
         shutil.copyfileobj(response.raw, out_file)
     del response

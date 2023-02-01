@@ -40,12 +40,12 @@ public extension StoredMachine {
 
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int32(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
     }
 
     var number: Int {
         get { Int(z_number) }
-        set { z_number = Int32(newValue) }
+        set { z_number = Int16(newValue) }
     }
 
     var move: StoredMove {
@@ -55,7 +55,7 @@ public extension StoredMachine {
 
     var type: MachineType {
         get { MachineType(intValue: Int(z_type))! }
-        set { z_type = Int64(newValue.intValue) }
+        set { z_type = Int16(newValue.intValue) }
     }
 
 }

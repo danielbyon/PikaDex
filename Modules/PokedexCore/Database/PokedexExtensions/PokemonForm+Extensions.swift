@@ -13,7 +13,7 @@ import CoreData
 public extension StoredPokemonForm {
 
     static func fetchRequest(for ability: StoredAbility, game: Game) -> NSFetchRequest<StoredPokemonForm> {
-        let abilityIndex = Int32(ability.index)
+        let abilityIndex = Int16(ability.index)
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
             NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),
             NSCompoundPredicate(orPredicateWithSubpredicates: [
@@ -100,11 +100,11 @@ public extension StoredPokemonForm {
 
     var baseExperienceYield: Int {
         get { Int(z_baseExperienceYield) }
-        set { z_baseExperienceYield = Int64(newValue) }
+        set { z_baseExperienceYield = Int16(newValue) }
     }
     var baseFriendship: Int {
         get { Int(z_baseFriendship) }
-        set { z_baseFriendship = Int64(newValue) }
+        set { z_baseFriendship = Int16(newValue) }
     }
     var color: PokemonColor {
         get { PokemonColor(rawValue: z_color!)! }
@@ -116,11 +116,11 @@ public extension StoredPokemonForm {
     }
     var formIndex: Int {
         get { Int(z_formIndex) }
-        set { z_formIndex = Int64(newValue); i_formIndex = Int32(newValue) }
+        set { z_formIndex = Int16(newValue); i_formIndex = Int16(newValue) }
     }
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int32(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
     }
     var heightInMeters: Double {
         get { z_heightInMeters }
@@ -128,7 +128,7 @@ public extension StoredPokemonForm {
     }
     var index: Int {
         get { Int(z_index) }
-        set { z_index = Int64(newValue) }
+        set { z_index = Int16(newValue) }
     }
     var name: String {
         get { z_name! }
@@ -140,7 +140,7 @@ public extension StoredPokemonForm {
     }
     var pokemonIndex: Int {
         get { Int(i_pokemonIndex) }
-        set { i_pokemonIndex = Int32(newValue) }
+        set { i_pokemonIndex = Int16(newValue) }
     }
     var primaryType: PokemonType {
         get { PokemonType(rawValue: z_primaryType!)! }
@@ -197,7 +197,7 @@ public extension StoredPokemonForm {
     }
     var hiddenAbility: StoredAbility? {
         get { z_hiddenAbility }
-        set { z_hiddenAbility = newValue; i_hiddenAbilityIndex = Int32(newValue?.index ?? -1) }
+        set { z_hiddenAbility = newValue; i_hiddenAbilityIndex = Int16(newValue?.index ?? -1) }
     }
     var pokemon: StoredPokemon {
         get { z_pokemon! }
@@ -205,11 +205,11 @@ public extension StoredPokemonForm {
     }
     var primaryAbility: StoredAbility? {
         get { z_primaryAbility }
-        set { z_primaryAbility = newValue; i_primaryAbilityIndex = Int32(newValue?.index ?? -1) }
+        set { z_primaryAbility = newValue; i_primaryAbilityIndex = Int16(newValue?.index ?? -1) }
     }
     var secondaryAbility: StoredAbility? {
         get { z_secondaryAbility }
-        set { z_secondaryAbility = newValue; i_secondaryAbilityIndex = Int32(newValue?.index ?? -1) }
+        set { z_secondaryAbility = newValue; i_secondaryAbilityIndex = Int16(newValue?.index ?? -1) }
     }
 
 }

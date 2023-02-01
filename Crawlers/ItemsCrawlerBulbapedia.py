@@ -140,6 +140,9 @@ def addItems(gen, filename, url, link_column, items, items_set, skip_asterisk):
     if 'This article is incomplete' in outer_table.text:
         outer_table = outer_table.find_next_sibling().find_next_sibling().find_next_sibling()
     
+#   if gen == '2':
+#       outer_table = outer_table.find_next_sibling('table')
+    
     for row in outer_table.table.tbody.find_all("tr")[1:]:
         td = row.find_all("td")[link_column]
         name = td.text.strip()

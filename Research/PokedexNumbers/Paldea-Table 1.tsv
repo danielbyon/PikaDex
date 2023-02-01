@@ -10,19 +10,19 @@ paldea	national	name
 009	914	Quaquaval
 010	915	Lechonk
 011	916	Oinkologne
-012	918	Tarountula
-013	919	Spidops
-014	920	Nymble
-015	921	Lokix
+012	917	Tarountula
+013	918	Spidops
+014	919	Nymble
+015	920	Lokix
 016	187	Hoppip
 017	188	Skiploom
 018	189	Jumpluff
 019	661	Fletchling
 020	662	Fletchinder
 021	663	Talonflame
-022	954	Pawmi
-023	955	Pawmo
-024	956	Pawmot
+022	921	Pawmi
+023	922	Pawmo
+024	923	Pawmot
 025	228	Houndour
 026	229	Houndoom
 027	734	Yungoos
@@ -52,7 +52,7 @@ paldea	national	name
 051	418	Buizel
 052	419	Floatzel
 053	194	Wooper
-054	1009	Clodsire
+054	980	Clodsire
 055	054	Psyduck
 056	055	Golduck
 057	833	Chewtle
@@ -70,21 +70,21 @@ paldea	national	name
 069	093	Haunter
 070	094	Gengar
 071	945	Tandemaus
-072	946	Maushold
+072	925	Maushold
 073	172	Pichu
 074	025	Pikachu
 075	026	Raichu
-076	970	Fidough
-077	971	Dachsbun
+076	926	Fidough
+077	927	Dachsbun
 078	287	Slakoth
 079	288	Vigoroth
 080	289	Slaking
 081	761	Bounsweet
 082	762	Steenee
 083	763	Tsareena
-084	935	Smoliv
-085	936	Dolliv
-086	937	Arboliva
+084	928	Smoliv
+085	929	Dolliv
+086	930	Arboliva
 087	438	Bonsly
 088	185	Sudowoodo
 089	744	Rockruff
@@ -111,7 +111,7 @@ paldea	national	name
 110	842	Appletun
 111	325	Spoink
 112	326	Grumpig
-113	960	Squawkabilly
+113	931	Squawkabilly
 114	200	Misdreavus
 115	429	Mismagius
 116	296	Makuhita
@@ -127,9 +127,9 @@ paldea	national	name
 126	443	Gible
 127	444	Gabite
 128	445	Garchomp
-129	963	Nacli
-130	964	Naclstack
-131	965	Garganacl
+129	932	Nacli
+130	933	Naclstack
+131	934	Garganacl
 132	278	Wingull
 133	279	Pelipper
 134	129	Magikarp
@@ -158,25 +158,25 @@ paldea	national	name
 157	612	Haxorus
 158	056	Mankey
 159	057	Primeape
-160	1010	Annihilape
+160	979	Annihilape
 161	307	Meditite
 162	308	Medicham
 163	447	Riolu
 164	448	Lucario
-165	1003	Charcadet
-166	1004	Armarouge
-167	1005	Ceruledge
+165	935	Charcadet
+166	936	Armarouge
+167	937	Ceruledge
 168	339	Barboach
 169	340	Whiscash
-170	940	Tadbulb
-171	941	Bellibolt
+170	938	Tadbulb
+171	939	Bellibolt
 172	704	Goomy
 173	705	Sliggoo
 174	706	Goodra
 175	453	Croagunk
 176	454	Toxicroak
-177	957	Wattrel
-178	958	Kilowattrel
+177	940	Wattrel
+178	941	Kilowattrel
 179	133	Eevee
 180	134	Vaporeon
 181	135	Jolteon
@@ -187,21 +187,21 @@ paldea	national	name
 186	471	Glaceon
 187	700	Sylveon
 188	206	Dunsparce
-189	917	Dudunsparce
+189	982	Dudunsparce
 190	585	Deerling
 191	586	Sawsbuck
 192	203	Girafarig
-193	928	Farigiraf
+193	981	Farigiraf
 194	088	Grimer
 195	089	Muk
-196	972	Maschiff
-197	973	Mabosstiff
+196	942	Maschiff
+197	943	Mabosstiff
 198	848	Toxel
 199	849	Toxtricity
 200	702	Dedenne
 201	417	Pachirisu
-202	968	Shroodle
-203	969	Grafaiai
+202	944	Shroodle
+203	945	Grafaiai
 204	234	Stantler
 205	590	Foongus
 206	591	Amoonguss
@@ -240,20 +240,20 @@ paldea	national	name
 239	778	Mimikyu
 240	707	Klefki
 241	876	Indeedee
-242	974	Bramblin
-243	975	Brambleghast
-244	1006	Toedscool
-245	1007	Toedscruel
+242	946	Bramblin
+243	947	Brambleghast
+244	948	Toedscool
+245	949	Toedscruel
 246	357	Tropius
 247	753	Fomantis
 248	754	Lurantis
-249	962	Klawf
-250	938	Capsakid
-251	939	Scovillain
+249	950	Klawf
+250	951	Capsakid
+251	952	Scovillain
 252	331	Cacnea
 253	332	Cacturne
-254	922	Rellor
-255	923	Rabsca
+254	953	Rellor
+255	954	Rabsca
 256	048	Venonat
 257	049	Venomoth
 258	204	Pineco
@@ -261,8 +261,8 @@ paldea	national	name
 260	123	Scyther
 261	212	Scizor
 262	214	Heracross
-263	926	Flittle
-264	927	Espathra
+263	955	Flittle
+264	956	Espathra
 265	449	Hippopotas
 266	450	Hippowdon
 267	551	Sandile
@@ -277,24 +277,24 @@ paldea	national	name
 276	371	Bagon
 277	372	Shelgon
 278	373	Salamence
-279	1000	Tinkatink
-280	1001	Tinkatuff
-281	1002	Tinkaton
+279	957	Tinkatink
+280	958	Tinkatuff
+281	959	Tinkaton
 282	856	Hatenna
 283	857	Hattrem
 284	858	Hatterene
 285	859	Impidimp
 286	860	Morgrem
 287	861	Grimmsnarl
-288	929	Wiglett
-289	930	Wugtrio
-290	959	Bombirdier
-291	933	Finizen
-292	934	Palafin
-293	942	Varoom
-294	943	Revavroom
-295	953	Cyclizar
-296	944	Orthworm
+288	960	Wiglett
+289	961	Wugtrio
+290	962	Bombirdier
+291	963	Finizen
+292	964	Palafin
+293	965	Varoom
+294	966	Revavroom
+295	967	Cyclizar
+296	968	Orthworm
 297	302	Sableye
 298	353	Shuppet
 299	354	Banette
@@ -306,11 +306,11 @@ paldea	national	name
 305	885	Dreepy
 306	886	Drakloak
 307	887	Dragapult
-308	966	Glimmet
-309	967	Glimmora
+308	969	Glimmet
+309	970	Glimmora
 310	479	Rotom
-311	924	Greavard
-312	925	Houndstone
+311	971	Greavard
+312	972	Houndstone
 313	765	Oranguru
 314	766	Passimian
 315	775	Komala
@@ -344,7 +344,7 @@ paldea	national	name
 343	604	Eelektross
 344	747	Mareanie
 345	748	Toxapex
-346	961	Flamigo
+346	973	Flamigo
 347	147	Dratini
 348	148	Dragonair
 349	149	Dragonite
@@ -359,43 +359,43 @@ paldea	national	name
 358	362	Glalie
 359	478	Froslass
 360	615	Cryogonal
-361	947	Cetoddle
-362	948	Cetitan
+361	974	Cetoddle
+362	975	Cetitan
 363	712	Bergmite
 364	713	Avalugg
 365	627	Rufflet
 366	628	Braviary
 367	624	Pawniard
 368	625	Bisharp
-369	1008	Kingambit
+369	983	Kingambit
 370	633	Deino
 371	634	Zweilous
 372	635	Hydreigon
-373	932	Veluza
-374	931	Dondozo
-375	952	Tatsugiri
-376	978	Great Tusk
-377	982	Scream Tail
-378	979	Brute Bonnet
-379	983	Flutter Mane
-380	984	Slither Wing
-381	981	Sandy Shocks
-382	986	Iron Treads
-383	992	Iron Bundle
-384	989	Iron Hands
-385	990	Iron Jugulis
-386	988	Iron Moth
-387	991	Iron Thorns
-388	949	Frigibax
-389	950	Arctibax
-390	951	Baxcalibur
-391	976	Gimmighoul
-392	977	Gholdengo
-393	996	Wo-Chien
-394	995	Chien-Pao
-395	994	Ting-Lu
-396	997	Chi-Yu
-397	985	Roaring Moon
-398	993	Iron Valiant
-399	998	Koraidon
-400	999	Miraidon
+373	976	Veluza
+374	977	Dondozo
+375	978	Tatsugiri
+376	984	Great Tusk
+377	985	Scream Tail
+378	986	Brute Bonnet
+379	987	Flutter Mane
+380	988	Slither Wing
+381	989	Sandy Shocks
+382	990	Iron Treads
+383	991	Iron Bundle
+384	992	Iron Hands
+385	993	Iron Jugulis
+386	994	Iron Moth
+387	995	Iron Thorns
+388	996	Frigibax
+389	997	Arctibax
+390	998	Baxcalibur
+391	999	Gimmighoul
+392	1000	Gholdengo
+393	1001	Wo-Chien
+394	1002	Chien-Pao
+395	1003	Ting-Lu
+396	1004	Chi-Yu
+397	1005	Roaring Moon
+398	1006	Iron Valiant
+399	1007	Koraidon
+400	1008	Miraidon

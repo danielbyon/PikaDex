@@ -23,7 +23,7 @@ public extension StoredLearnsetEntry {
 
     var level: Int {
         get { Int(z_level) }
-        set { z_level = Int64(newValue) }
+        set { z_level = Int16(newValue) }
     }
 
     var move: StoredMove {

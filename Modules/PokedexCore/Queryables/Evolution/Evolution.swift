@@ -143,7 +143,17 @@ extension Evolution: Hashable { }
 extension Evolution: Identifiable {
 
     public var id: String {
-        familyName + from.name + from.formName + to.name + to.formName + game.rawValue
+        [
+            familyName,
+            game.rawValue,
+            method.id,
+            condition?.id ?? "",
+            condition2?.id ?? "",
+            from.name,
+            from.formName,
+            to.name,
+            to.formName
+        ].joined()
     }
 
 }
@@ -152,9 +162,71 @@ extension Evolution.Condition: Codable { }
 
 extension Evolution.Condition: Hashable { }
 
+extension Evolution.Condition: Identifiable {
+
+    public var id: String {
+        switch self {
+        case .deviceHeldUpsideDown:
+            return "deviceHeldUpsideDown"
+        case .gender(let gender):
+            return gender.rawValue
+        case .haveAbility(let ability):
+            return ability
+        case .other(let value):
+            return value
+        case .partyMemberType(let type):
+            return type.rawValue
+        case .region(let region):
+            return region.rawValue
+        case .timeOfDay(let timeOfDay):
+            return timeOfDay.rawValue
+        case .weather(let weather):
+            return weather.rawValue
+        }
+    }
+
+}
+
 extension Evolution.Method: Codable { }
 
 extension Evolution.Method: Hashable { }
+
+extension Evolution.Method: Identifiable {
+
+    public var id: String {
+        switch self {
+        case .completeBattlePerformingAction(let value):
+            return value
+        case .friendship:
+            return "friendship"
+        case .levelUp(let level):
+            return "\(level)"
+        case .levelUpHoldingItem(let value, _):
+            return value
+        case .levelUpInArea(let value):
+            return value
+        case .levelUpKnowingMove(let value):
+            return value
+        case .levelUpWithPartyMember(let value):
+            return value
+        case .levelUpWithStats(let value):
+            return value
+        case .other(let value):
+            return value
+        case .trade:
+            return "trade"
+        case .tradeForPokemon(let value):
+            return value
+        case .tradeHoldingItem(let value, _):
+            return value
+        case .trainerAction(let value):
+            return value
+        case .useItem(let value, _):
+            return value
+        }
+    }
+
+}
 
 extension Evolution.PokemonForm: Codable { }
 

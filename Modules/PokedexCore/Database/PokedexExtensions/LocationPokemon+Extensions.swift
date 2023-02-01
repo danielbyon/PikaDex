@@ -87,13 +87,13 @@ public extension StoredLocationPokemon {
     }
 
     var levelHigh: Int? {
-        get { (value(forKeyPath: #keyPath(StoredLocationPokemon.z_levelHigh)) as? Int64)?.toInt() }
+        get { (value(forKeyPath: #keyPath(StoredLocationPokemon.z_levelHigh)) as? Int16)?.toInt() }
         set { setValue(newValue, forKeyPath: #keyPath(StoredLocationPokemon.z_levelHigh)) }
     }
 
     var levelLow: Int {
         get { Int(z_levelLow) }
-        set { z_levelLow = Int64(newValue) }
+        set { z_levelLow = Int16(newValue) }
     }
 
     var encounterRate: EncounterRate {

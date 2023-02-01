@@ -145,30 +145,18 @@ def main():
 	
 	pokemons = []
 	
-	# TODO: Add gen 9 pokemon as a manual list
-	with codecs.open("Gen9Pokemon.txt", 'r', encoding='utf8') as f:
-		for line in f:
-			components = line.split('\t')
-			number = components[0].strip()
-			name = components[1].strip()
-			pokemons.append({
-				'name': name,
-				'number': number,
-				'urlPath': '/pokedex/{}'.format(name.lower().replace(' ', '-'))
-			})
-			
-		for row in table.tbody.find_all('tr'):
-			cells = row.find_all('td')
-			number = cells[0].text.strip()
-			moveNode = cells[1].a
-			name = cells[1].a.text.strip()
-			urlPath = moveNode['href']
-			
-			pokemons.append({
-				'name': name,
-				'number': number,
-				'urlPath': urlPath
-			})
+	for row in table.tbody.find_all('tr'):
+		cells = row.find_all('td')
+		number = cells[0].text.strip()
+		moveNode = cells[1].a
+		name = cells[1].a.text.strip()
+		urlPath = moveNode['href']
+		
+		pokemons.append({
+			'name': name,
+			'number': number,
+			'urlPath': urlPath
+		})
 		
 	for pokemon in pokemons:
 		name = pokemon['name']

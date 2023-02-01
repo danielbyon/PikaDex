@@ -30,7 +30,7 @@ public struct AbilityPokemonFormFilter: QueryFilter {
     public var game: Game
 
     public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredPokemonForm> {
-        let abilityIndex = Int32(ability.index)
+        let abilityIndex = Int16(ability.index)
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
             NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),
             NSCompoundPredicate(orPredicateWithSubpredicates: [
