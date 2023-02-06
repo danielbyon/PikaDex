@@ -4,19 +4,11 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
-		<string>Fixed Lycanroc not appearing in Scarlet/Violet Pokedex</string>
-		<string>Fixed Crabrawler evolution data</string>
-		<string>Fixed crash when renaming a team or modifying members</string>
+		<string>Fix images for Scarlet/Violet Pokemon</string>
 	</array>
 	<key>newFeatures</key>
-	<array>
-		<string>Reduced app size by 1.1 GB (66%)</string>
-	</array>
+	<array/>
 	<key>upcoming</key>
-	<array>
-		<string>Universal Search: Search for Pokémon, Moves, Items, Locations, Abilities, etc all from one search bar on the home screen!</string>
-		<string>Search by national number on the Pokémon list</string>
-		<string>Gym leader info</string>
-	</array>
+	<array/>
 </dict>
 </plist>
