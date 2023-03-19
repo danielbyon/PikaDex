@@ -76,7 +76,7 @@ private struct TeamMemberFormInfo: View {
 
     var body: some View {
         HStack {
-            Sprite(form.spriteName)
+            Sprite(form.spriteName, bundle: .resources)
             VStack(alignment: .leading) {
                 Text(resolvedName)
                     .monospacedBody()

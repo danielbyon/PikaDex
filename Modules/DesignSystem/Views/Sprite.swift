@@ -6,22 +6,29 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import PokedexResources
 import SwiftUI
 
 public struct Sprite: View {
 
     let spriteName: String
+    let bundle: Bundle?
     let width: CGFloat
 
     public var body: some View {
-        Image(spriteName)
+        Image(spriteName, bundle: bundle)
             .interpolation(.none)
             .renderingMode(.original)
             .sprite(width: width)
     }
 
-    public init(_ spriteName: String, width: CGFloat = 40.0) {
+    public init(
+        _ spriteName: String,
+        bundle: Bundle? = nil,
+        width: CGFloat = 40.0
+    ) {
         self.spriteName = spriteName
+        self.bundle = bundle
         self.width = width
     }
 
@@ -29,7 +36,7 @@ public struct Sprite: View {
 
 struct Sprite_Previews: PreviewProvider {
     static var previews: some View {
-        Sprite("rare-candy")
+        Sprite("rare-candy", bundle: .resources)
     }
 }
 

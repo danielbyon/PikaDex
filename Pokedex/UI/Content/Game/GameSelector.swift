@@ -6,6 +6,7 @@
 //  Copyright © 2019 Daniel Byon. All rights reserved.
 //
 
+import PokedexUI
 import SwiftUI
 
 struct GameSelector: View {
@@ -73,7 +74,7 @@ struct GameSelectorCell: View {
 
     var body: some View {
         HStack {
-            Image("BoxArt/\(game.rawValue)")
+            Image("BoxArt/\(game.rawValue)", bundle: .resources)
                 .renderingMode(.original)
                 .resizable()
                 .scaledToFit()

@@ -68,7 +68,7 @@ extension BadgeCell {
         self.init(
             title: row.title,
             subtitle: row.subtitle,
-            image: UIImage(named: row.spriteName),
+            image: UIImage(named: row.spriteName, in: .resources, with: nil),
             badge: Badge(encounterRate: row.encounterRate)
         )
     }

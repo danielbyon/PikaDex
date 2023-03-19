@@ -13,7 +13,7 @@ extension LocationMap {
     var image: UIImage? {
         for namespace in game.imageNamespaces {
             let imageName = ["LocationMaps", namespace, filename].joined(separator: "/")
-            if let image = UIImage(named: imageName) {
+            if let image = UIImage(named: imageName, in: .resources, with: nil) {
                 return image
             }
         }

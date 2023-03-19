@@ -6,6 +6,7 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import PokedexResources
 import SwiftUI
 
 public enum AppColor: String {
@@ -21,7 +22,7 @@ public enum AppColor: String {
     case pink
     case red
 
-    public var uiColor: UIColor { UIColor(named: "App/\(rawValue)", in: .main, compatibleWith: nil)! }
+    public var uiColor: UIColor { UIColor(named: "App/\(rawValue)", in: .resources, compatibleWith: nil)! }
 
     public var color: Color { Color(uiColor) }
 

@@ -8,3 +8,4 @@
 @_exported import DesignSystem
 @_exported import Foundation
 @_exported import PokedexCore
+@_exported import PokedexResources

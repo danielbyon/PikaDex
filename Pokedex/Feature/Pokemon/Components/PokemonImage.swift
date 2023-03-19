@@ -42,7 +42,7 @@ public struct PokemonImage: View {
     }
 
     public init(form: PokemonDetailForm) {
-        self.init(imageName: form.imageName, backgroundColor: Color(form.color.uiColor))
+        self.init(imageName: form.imageName, bundle: .resources, backgroundColor: Color(form.color.uiColor))
     }
 
 }

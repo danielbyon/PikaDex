@@ -22,7 +22,7 @@ struct TeamWidgetEntryView : View {
                 LazyVGrid(columns: [.init(), .init()], alignment: .leading, spacing: 4.0) {
                     ForEach(0..<entry.teamMemberSpriteNames.count, id: \.self) { i in
                         HStack {
-                            Sprite(entry.teamMemberSpriteNames[i], width: 32.0)
+                            Sprite(entry.teamMemberSpriteNames[i], bundle: .resources, width: 32.0)
                             Text(entry.teamMemberNames[i])
                                 .monospacedCaption()
                             Spacer()
