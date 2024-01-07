@@ -78,7 +78,7 @@ public struct PokemonList: View {
             $caughtPokemons.wrappedValue = .init(game: game)
             $pokemons.wrappedValue = viewModel.filter
         }
-        .onChange(of: $pokemons.wrappedValue) { newValue in
+        .onChange(of: $pokemons.wrappedValue) { _, newValue in
             viewModel.filter = newValue
         }
     }

@@ -46,7 +46,9 @@ public struct PokemonLearnsetView: View {
         .onAppear {
             updateQueryFilter(learnsetType: selectedLearnsetType)
         }
-        .onChange(of: selectedLearnsetType, perform: updateQueryFilter)
+        .onChange(of: selectedLearnsetType) { _, newLearnsetType in
+            updateQueryFilter(learnsetType: newLearnsetType)
+        }
     }
 
     public init(form: PokemonDetailForm, game: Game, learnsetType: LearnsetType) {

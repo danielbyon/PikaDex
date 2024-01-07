@@ -32,7 +32,7 @@ struct BattleAssistantDetail: View {
         .onAppear {
             $entries.wrappedValue = .level(pokemonForm: pokemonForm, maxLevel: level)
         }
-        .onChange(of: level) { newValue in
+        .onChange(of: level) { _, newValue in
             $entries.wrappedValue = .level(pokemonForm: pokemonForm, maxLevel: newValue)
         }
 
