@@ -7,6 +7,7 @@
 
 import Combine
 import CombineSchedulers
+import Dependencies
 import Foundation
 
 public protocol TeamStore {
@@ -30,7 +31,7 @@ public final class DefaultTeamStore: TeamStore {
 
     public var teams: AnyPublisher<Teams, Never> { cacheSubject.eraseToAnyPublisher() }
 
-    private let storage: TeamStorage
+    @Dependency(\.teamStorage) var storage
     private let cacheScheduler: AnySchedulerOf<DispatchQueue>
     private let notificationCenter: NotificationCenter
     private let cacheSubject: CurrentValueSubject<Teams, Never>
@@ -38,21 +39,21 @@ public final class DefaultTeamStore: TeamStore {
     private var cancellables: Set<AnyCancellable> = []
 
     public init(
-        storage: TeamStorage = UserDefaults.appGroup,
         cacheScheduler: AnySchedulerOf<DispatchQueue> = .appProcessing,
         notificationCenter: NotificationCenter = .default
     ) {
-        self.storage = storage
         self.cacheScheduler = cacheScheduler
         self.notificationCenter = notificationCenter
-        cacheSubject = .init(Self.loadCache(from: storage))
+        cacheSubject = .init([:])
+        cacheSubject.value = Self.loadCache(from: storage)
 
         cacheSubject
             .dropFirst()
             .debounce(for: 0.2, scheduler: cacheScheduler)
-            .sink { updatedCache in
+            .sink { [weak self] updatedCache in
+                guard let self else { return }
                 debugPrint("Flushing team cache")
-                Self.flushCache(updatedCache, to: storage)
+                Self.flushCache(updatedCache, to: self.storage)
                 notificationCenter.post(name: .teamsUpdated, object: nil)
             }
             .store(in: &cancellables)

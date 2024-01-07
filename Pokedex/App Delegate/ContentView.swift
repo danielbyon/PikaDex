@@ -6,11 +6,12 @@
 //  Copyright © 2019 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import SwiftUI
 
 struct ContentView: View {
 
-    @EnvironmentObject var settings: AppSettings
+    @Dependency(\.appSettings) var settings
     @SceneStorage("navigationPath") private var navigationData: Data?
     @State private var columnVisibility: NavigationSplitViewVisibility = .doubleColumn
     @StateObject private var navigationStore = NavigationStore()
@@ -238,17 +239,14 @@ struct ContentView: View {
         case .selectGame:
             NavigationStack {
                 GameSelector()
-                    .injectDependencies()
             }
         case .settings:
             NavigationStack {
                 Settings()
-                    .injectDependencies()
             }
         case .store:
             NavigationStack {
                 Store()
-                    .injectDependencies()
             }
         case .none:
             EmptyView()
@@ -285,6 +283,5 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .environment(\.colorScheme, .dark)
         }
-        .injectDependencies()
     }
 }

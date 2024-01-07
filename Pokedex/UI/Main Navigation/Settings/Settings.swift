@@ -6,13 +6,14 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import SwiftUI
 import AppSupport
 
 struct Settings: View {
 
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var appSettings: AppSettings
+    @Dependency(\.appSettings) var appSettings
     @State private var isShowingUpdateMessage = false
 
     private var spacing: CGFloat { 16.0 }
@@ -41,9 +42,9 @@ struct Settings: View {
 
     var body: some View {
         List {
-            Toggle("Show weight in kilograms", isOn: $appSettings.shouldUseKilogramsForWeight)
+            Toggle("Show weight in kilograms", isOn: appSettings.$shouldUseKilogramsForWeight)
 
-            Toggle("Show height in meters", isOn: $appSettings.shouldUseMetersForHeight)
+            Toggle("Show height in meters", isOn: appSettings.$shouldUseMetersForHeight)
 
             NavigationLink("Pokémon detail ordering", destination: PokemonDetailOrderSettings())
 
@@ -107,6 +108,5 @@ struct Settings: View {
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
-            .injectDependencies()
     }
 }

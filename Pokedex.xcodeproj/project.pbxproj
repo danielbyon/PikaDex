@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		650D174323A0ED1300173F68 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D174223A0ED1300173F68 /* Dependencies.swift */; };
 		650E221823F69DD300FACCE7 /* Data in Copy Files */ = {isa = PBXBuildFile; fileRef = 650E221723F65C1700FACCE7 /* Data */; };
 		6518ACB423BED1D7004B7C58 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518ACB323BED1D7004B7C58 /* main.swift */; };
 		6518ACCD23BFCD32004B7C58 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518ACCC23BFCD32004B7C58 /* Helpers.swift */; };
@@ -138,9 +137,9 @@
 		654022A22978ECA9005BF4DC /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654022042978ECA0005BF4DC /* Generation.swift */; };
 		654022A32978ECA9005BF4DC /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 654022062978ECA2005BF4DC /* UserData.xcdatamodeld */; };
 		654022A42978ECA9005BF4DC /* Pokedex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 654022082978ECA2005BF4DC /* Pokedex.xcdatamodeld */; };
-		654022A52978ECA9005BF4DC /* Environment+TeamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540220B2978ECA2005BF4DC /* Environment+TeamStore.swift */; };
+		654022A52978ECA9005BF4DC /* TeamStore+Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540220B2978ECA2005BF4DC /* TeamStore+Dependency.swift */; };
 		654022A62978ECA9005BF4DC /* TeamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540220C2978ECA2005BF4DC /* TeamStore.swift */; };
-		654022A72978ECA9005BF4DC /* EnvironmentKey+TeamStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540220E2978ECA2005BF4DC /* EnvironmentKey+TeamStorage.swift */; };
+		654022A72978ECA9005BF4DC /* TeamStorage+Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540220E2978ECA2005BF4DC /* TeamStorage+Dependency.swift */; };
 		654022A82978ECA9005BF4DC /* TeamStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540220F2978ECA2005BF4DC /* TeamStorage.swift */; };
 		654022A92978ECA9005BF4DC /* Int64+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654022112978ECA7005BF4DC /* Int64+Int.swift */; };
 		654022AA2978ECA9005BF4DC /* Int32+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654022122978ECA7005BF4DC /* Int32+Int.swift */; };
@@ -261,6 +260,11 @@
 		657262F524011C3E00A38BCE /* TutorLearnsetEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657262E624011C3E00A38BCE /* TutorLearnsetEntryTests.swift */; };
 		657262F624011C3E00A38BCE /* PokedexEntriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657262E724011C3E00A38BCE /* PokedexEntriesTests.swift */; };
 		6576FCCA23A0BD39009AFF5E /* GameSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576FCC923A0BD39009AFF5E /* GameSelector.swift */; };
+		657AD2B12B4AD0E00038F382 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 657AD2B02B4AD0E00038F382 /* Dependencies */; };
+		657AD2B32B4AD1040038F382 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 657AD2B22B4AD1040038F382 /* Dependencies */; };
+		657AD2B52B4AD10A0038F382 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 657AD2B42B4AD10A0038F382 /* Dependencies */; };
+		657AD2B72B4AD1190038F382 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 657AD2B62B4AD1190038F382 /* Dependencies */; };
+		657AD2B92B4AD11F0038F382 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 657AD2B82B4AD11F0038F382 /* Dependencies */; };
 		65841A2A28FD2FF0006BEFAE /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65841A2928FD2FF0006BEFAE /* AppSettings.swift */; };
 		65841A2B28FD2FF0006BEFAE /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65841A2928FD2FF0006BEFAE /* AppSettings.swift */; };
 		65841A2C28FD2FF0006BEFAE /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65841A2928FD2FF0006BEFAE /* AppSettings.swift */; };
@@ -668,7 +672,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		650D174223A0ED1300173F68 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		650E221723F65C1700FACCE7 /* Data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Data; path = Crawlers/Data; sourceTree = SOURCE_ROOT; };
 		6518ACB123BED1D7004B7C58 /* DatabaseLoader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatabaseLoader; sourceTree = BUILT_PRODUCTS_DIR; };
 		6518ACB323BED1D7004B7C58 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -798,9 +801,9 @@
 		654022042978ECA0005BF4DC /* Generation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
 		654022072978ECA2005BF4DC /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		654022092978ECA2005BF4DC /* Pokedex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pokedex.xcdatamodel; sourceTree = "<group>"; };
-		6540220B2978ECA2005BF4DC /* Environment+TeamStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Environment+TeamStore.swift"; sourceTree = "<group>"; };
+		6540220B2978ECA2005BF4DC /* TeamStore+Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TeamStore+Dependency.swift"; sourceTree = "<group>"; };
 		6540220C2978ECA2005BF4DC /* TeamStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStore.swift; sourceTree = "<group>"; };
-		6540220E2978ECA2005BF4DC /* EnvironmentKey+TeamStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentKey+TeamStorage.swift"; sourceTree = "<group>"; };
+		6540220E2978ECA2005BF4DC /* TeamStorage+Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TeamStorage+Dependency.swift"; sourceTree = "<group>"; };
 		6540220F2978ECA2005BF4DC /* TeamStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStorage.swift; sourceTree = "<group>"; };
 		654022112978ECA7005BF4DC /* Int64+Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int64+Int.swift"; sourceTree = "<group>"; };
 		654022122978ECA7005BF4DC /* Int32+Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int32+Int.swift"; sourceTree = "<group>"; };
@@ -1097,6 +1100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657AD2B32B4AD1040038F382 /* Dependencies in Frameworks */,
 				658C0855297936A6009D50A1 /* CombineSchedulers in Frameworks */,
 				65401F602978EABD005BF4DC /* AppSupport in Frameworks */,
 			);
@@ -1114,6 +1118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657AD2B52B4AD10A0038F382 /* Dependencies in Frameworks */,
 				654023822979120C005BF4DC /* DesignSystem.framework in Frameworks */,
 				65992A2729C74DA0001ECD43 /* PokedexResources.framework in Frameworks */,
 				654022E4297906B1005BF4DC /* PokedexCore.framework in Frameworks */,
@@ -1142,6 +1147,7 @@
 				65B8311E258229DF0035B0B5 /* CombineExtensions in Frameworks */,
 				65D6A68323DB07E200542D6C /* Convert in Frameworks */,
 				659C7CF32469617000E92C1C /* StoreKit.framework in Frameworks */,
+				657AD2B12B4AD0E00038F382 /* Dependencies in Frameworks */,
 				654025C029791DAA005BF4DC /* CombineSchedulers in Frameworks */,
 				65B83117258229A00035B0B5 /* SwiftUIExtensions in Frameworks */,
 			);
@@ -1165,6 +1171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657AD2B92B4AD11F0038F382 /* Dependencies in Frameworks */,
 				654025BB29791944005BF4DC /* PokedexCore.framework in Frameworks */,
 				65721D34257E30FB00DA8F7C /* AppSupport in Frameworks */,
 			);
@@ -1212,6 +1219,7 @@
 				65E890052576255C00C0A483 /* AppSupport in Frameworks */,
 				654025B729791936005BF4DC /* PokedexUI.framework in Frameworks */,
 				65FC40882574636700E64BD0 /* SwiftUI.framework in Frameworks */,
+				657AD2B72B4AD1190038F382 /* Dependencies in Frameworks */,
 				654025B329791936005BF4DC /* PokedexCore.framework in Frameworks */,
 				65FC40862574636700E64BD0 /* WidgetKit.framework in Frameworks */,
 			);
@@ -1662,7 +1670,7 @@
 		6540220A2978ECA2005BF4DC /* TeamStore */ = {
 			isa = PBXGroup;
 			children = (
-				6540220B2978ECA2005BF4DC /* Environment+TeamStore.swift */,
+				6540220B2978ECA2005BF4DC /* TeamStore+Dependency.swift */,
 				6540220C2978ECA2005BF4DC /* TeamStore.swift */,
 			);
 			path = TeamStore;
@@ -1671,7 +1679,7 @@
 		6540220D2978ECA2005BF4DC /* TeamStorage */ = {
 			isa = PBXGroup;
 			children = (
-				6540220E2978ECA2005BF4DC /* EnvironmentKey+TeamStorage.swift */,
+				6540220E2978ECA2005BF4DC /* TeamStorage+Dependency.swift */,
 				6540220F2978ECA2005BF4DC /* TeamStorage.swift */,
 			);
 			path = TeamStorage;
@@ -1985,7 +1993,6 @@
 			isa = PBXGroup;
 			children = (
 				6531EF4F23A877BF00DC1F0A /* App Delegate */,
-				6576FCCB23A0BFC5009AFF5E /* Dependency Injection */,
 				6572631A2401241D00A38BCE /* Entity */,
 				6531EF4E23A877A700DC1F0A /* Extensions */,
 				65EE7D15297A514B00CBA045 /* Feature */,
@@ -2116,14 +2123,6 @@
 				6576FCC923A0BD39009AFF5E /* GameSelector.swift */,
 			);
 			path = Game;
-			sourceTree = "<group>";
-		};
-		6576FCCB23A0BFC5009AFF5E /* Dependency Injection */ = {
-			isa = PBXGroup;
-			children = (
-				650D174223A0ED1300173F68 /* Dependencies.swift */,
-			);
-			path = "Dependency Injection";
 			sourceTree = "<group>";
 		};
 		65848450293D0A8300BF985C /* DatabaseValidator */ = {
@@ -2891,6 +2890,7 @@
 			packageProductDependencies = (
 				65401F5F2978EABD005BF4DC /* AppSupport */,
 				658C0854297936A6009D50A1 /* CombineSchedulers */,
+				657AD2B22B4AD1040038F382 /* Dependencies */,
 			);
 			productName = PokedexCore;
 			productReference = 65401F422978EA91005BF4DC /* PokedexCore.framework */;
@@ -2933,6 +2933,7 @@
 			name = PokedexUI;
 			packageProductDependencies = (
 				654022E2297906B1005BF4DC /* CombineSchedulers */,
+				657AD2B42B4AD10A0038F382 /* Dependencies */,
 			);
 			productName = PokedexUI;
 			productReference = 654022C72979068A005BF4DC /* PokedexUI.framework */;
@@ -2989,6 +2990,7 @@
 				65B83116258229A00035B0B5 /* SwiftUIExtensions */,
 				65B8311D258229DF0035B0B5 /* CombineExtensions */,
 				654025BF29791DAA005BF4DC /* CombineSchedulers */,
+				657AD2B02B4AD0E00038F382 /* Dependencies */,
 			);
 			productName = Pokedex;
 			productReference = 6547F7F2237968D20091A083 /* PikaDex.app */;
@@ -3046,6 +3048,7 @@
 			name = TeamIntentHandler;
 			packageProductDependencies = (
 				65721D33257E30FB00DA8F7C /* AppSupport */,
+				657AD2B82B4AD11F0038F382 /* Dependencies */,
 			);
 			productName = TeamIntentHandler;
 			productReference = 65721CDC257E2CEB00DA8F7C /* TeamIntentHandler.appex */;
@@ -3159,6 +3162,7 @@
 			name = PokedexWidgetExtension;
 			packageProductDependencies = (
 				65E890042576255C00C0A483 /* AppSupport */,
+				657AD2B62B4AD1190038F382 /* Dependencies */,
 			);
 			productName = PokedexWidgetExtension;
 			productReference = 65FC40842574636700E64BD0 /* PokedexWidgetExtension.appex */;
@@ -3246,6 +3250,7 @@
 				65B83115258229A00035B0B5 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */,
 				65B8311C258229DF0035B0B5 /* XCRemoteSwiftPackageReference "CombineExtensions" */,
 				65401F612978EB14005BF4DC /* XCRemoteSwiftPackageReference "combine-schedulers" */,
+				657AD2AF2B4AD0340038F382 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
 			);
 			productRefGroup = 6547F7F3237968D20091A083 /* Products */;
 			projectDirPath = "";
@@ -3507,7 +3512,7 @@
 				654022562978ECA9005BF4DC /* Pokemon.swift in Sources */,
 				654022AE2978ECA9005BF4DC /* Ability+Extension.swift in Sources */,
 				654022622978ECA9005BF4DC /* Machine+Stub.swift in Sources */,
-				654022A72978ECA9005BF4DC /* EnvironmentKey+TeamStorage.swift in Sources */,
+				654022A72978ECA9005BF4DC /* TeamStorage+Dependency.swift in Sources */,
 				654022B82978ECA9005BF4DC /* LocationPokemon+Extensions.swift in Sources */,
 				654022A42978ECA9005BF4DC /* Pokedex.xcdatamodeld in Sources */,
 				654022492978ECA9005BF4DC /* MoveFilter.swift in Sources */,
@@ -3586,7 +3591,7 @@
 				654022912978ECA9005BF4DC /* ItemType.swift in Sources */,
 				654022502978ECA9005BF4DC /* CaughtPokemonFilter.swift in Sources */,
 				6540224A2978ECA9005BF4DC /* Move+Stub.swift in Sources */,
-				654022A52978ECA9005BF4DC /* Environment+TeamStore.swift in Sources */,
+				654022A52978ECA9005BF4DC /* TeamStore+Dependency.swift in Sources */,
 				654022852978ECA9005BF4DC /* Pocket.swift in Sources */,
 				654022682978ECA9005BF4DC /* PokedexNumbers.swift in Sources */,
 				654022922978ECA9005BF4DC /* Team.swift in Sources */,
@@ -3704,7 +3709,6 @@
 				65EE7DAF297A515F00CBA045 /* TypeList.swift in Sources */,
 				65EE7DD0297A516000CBA045 /* LocationMapView.swift in Sources */,
 				65EE7DD6297A516000CBA045 /* PokemonFilterView.swift in Sources */,
-				650D174323A0ED1300173F68 /* Dependencies.swift in Sources */,
 				65881A77247D96E700526CBD /* Game+BitwiseValue.swift in Sources */,
 				65EE7DE0297A516000CBA045 /* PokemonView.swift in Sources */,
 				65EE7DED297A516000CBA045 /* PokemonList.swift in Sources */,
@@ -5231,7 +5235,15 @@
 			repositoryURL = "https://github.com/pointfreeco/combine-schedulers";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.1;
+				minimumVersion = 1.0.0;
+			};
+		};
+		657AD2AF2B4AD0340038F382 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.5;
 			};
 		};
 		659C7CEE24695FF100E92C1C /* XCRemoteSwiftPackageReference "AppSupport" */ = {
@@ -5288,6 +5300,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 659C7CEE24695FF100E92C1C /* XCRemoteSwiftPackageReference "AppSupport" */;
 			productName = AppSupport;
+		};
+		657AD2B02B4AD0E00038F382 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 657AD2AF2B4AD0340038F382 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		657AD2B22B4AD1040038F382 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 657AD2AF2B4AD0340038F382 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		657AD2B42B4AD10A0038F382 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 657AD2AF2B4AD0340038F382 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		657AD2B62B4AD1190038F382 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 657AD2AF2B4AD0340038F382 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		657AD2B82B4AD11F0038F382 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 657AD2AF2B4AD0340038F382 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
 		};
 		65848462293D0E8100BF985C /* PokedexCore */ = {
 			isa = XCSwiftPackageProductDependency;

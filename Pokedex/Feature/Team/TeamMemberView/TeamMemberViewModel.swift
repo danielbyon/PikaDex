@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Dependencies
 import PokedexUI
 import SwiftUI
 
@@ -89,7 +90,7 @@ public final class TeamMemberViewModel: ObservableObject {
 
     private let team: Team
     private let dataStore: DataStore = .pokedex
-    private let teamStore: TeamStore = DefaultTeamStore.shared
+    @Dependency(\.teamStore) var teamStore
 
     private var cancellables: Set<AnyCancellable> = []
 

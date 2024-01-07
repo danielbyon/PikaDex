@@ -6,14 +6,15 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import Intents
 import AppSupport
 import PokedexCore
 
 class IntentHandler: INExtension, TeamConfigurationIntentHandling {
 
-    private let settings = AppSettings()
-    private let storage: TeamStorage = UserDefaults.appGroup
+    @Dependency(\.appSettings) var settings
+    @Dependency(\.teamStorage) var storage
 
     func provideTeamOptionsCollection(for intent: TeamConfigurationIntent, with completion: @escaping (INObjectCollection<DynamicTeam>?, Error?) -> Void) {
         var sections: [INObjectSection<DynamicTeam>] = []

@@ -58,6 +58,5 @@ struct PokemonDetailOrderSettings_Previews: PreviewProvider {
         NavigationStack {
             PokemonDetailOrderSettings()
         }
-        .injectDependencies()
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Dependencies
 import PokedexCore
 import SwiftUI
 
@@ -25,13 +26,12 @@ final class TeamListViewModel: ObservableObject {
     var hasMultipleSections: Bool { sections.count > 1 }
     var shouldShowSectionHeaders: Bool { hasMultipleSections || game == .national }
 
-    private let teamStore: TeamStore
+    @Dependency(\.teamStore) var teamStore
     private var cancellables: Set<AnyCancellable> = []
 
     // MARK: Init
 
-    init(teamStore: TeamStore = DefaultTeamStore.shared) {
-        self.teamStore = teamStore
+    init() {
         teamStore.teams
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] _ in

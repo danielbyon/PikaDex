@@ -6,14 +6,15 @@
 //  Copyright © 2019 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import PokedexUI
 import SwiftUI
 
 struct GameSelector: View {
 
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var settings: AppSettings
-    @EnvironmentObject var purchasedProductState: PurchasedProductState
+    @Dependency(\.appSettings) var settings
+    @Dependency(\.purchasedProductState) var purchasedProductState
     @State private var isShowingStore = false
 
     var body: some View {
@@ -63,7 +64,6 @@ struct GameSelector: View {
 struct GameSelector_Previews: PreviewProvider {
     static var previews: some View {
         GameSelector()
-            .injectDependencies()
     }
 }
 
