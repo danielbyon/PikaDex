@@ -6,6 +6,7 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import PokedexUI
 import SwiftUI
 
 public final class PokemonDetailOrdering: ObservableObject {
@@ -16,7 +17,7 @@ public final class PokemonDetailOrdering: ObservableObject {
         }
     }
 
-    @AppStorage("PokemonDetailOrdering") private var storedOrdering: Data?
+    @AppStorage("PokemonDetailOrdering", store: .appGroup) private var storedOrdering: Data?
 
     public init() {
         if let storedOrdering = storedOrdering,
