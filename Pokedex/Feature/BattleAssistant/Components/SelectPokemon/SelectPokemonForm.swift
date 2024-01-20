@@ -19,7 +19,7 @@ public struct SelectPokemonForm: View {
     public var body: some View {
         SearchableList(
             items: pokemonForms,
-            query: $pokemonForms.query,
+            query: $pokemonForms.query.toString(),
             searchPrompt: "Search for a Pokémon",
             id: \.self
         ) { pokemonForm in

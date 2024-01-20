@@ -17,11 +17,11 @@ public struct LocationFilter: SearchableFilter {
     }
 
     private let predicate: NSPredicate
-    public var query: String
+    public var query: SearchQuery
 
     public init(
         game: Game,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.predicate = NSPredicate(format: "z_game == %@", game.rawValue)
         self.query = query
@@ -31,7 +31,7 @@ public struct LocationFilter: SearchableFilter {
         locationName: String,
         region: Region,
         game: Game,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
             NSPredicate(format: "\(#keyPath(StoredLocation.z_game)) == %@", game.rawValue),
@@ -44,7 +44,7 @@ public struct LocationFilter: SearchableFilter {
     public init(
         pokemonName: String,
         game: Game,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
             NSPredicate(format: "\(#keyPath(StoredLocation.z_game)) == %@", game.rawValue),
@@ -56,9 +56,16 @@ public struct LocationFilter: SearchableFilter {
     public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredLocation> {
         let request: NSFetchRequest<StoredLocation> = StoredLocation.fetchRequest() as NSFetchRequest<StoredLocation>
         var predicates = [predicate]
+
         if !query.isEmpty {
-            predicates.append(.init(format: "\(#keyPath(StoredLocation.z_canonicalName)) CONTAINS[cd] %@", query))
+            switch query {
+            case .contains(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredLocation.z_canonicalName)) CONTAINS %@", string.normalizedForSearch))
+            case .exact(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredLocation.z_canonicalName)) == %@", string.normalizedForSearch))
+            }
         }
+
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         request.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredLocation.z_maps)

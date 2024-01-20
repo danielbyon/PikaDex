@@ -18,12 +18,12 @@ public struct MoveFilter: SearchableFilter {
 
     public let game: Game
     public let type: PokemonType?
-    public var query: String
+    public var query: SearchQuery
 
     public init(
         game: Game,
         type: PokemonType? = nil,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.game = game
         self.type = type
@@ -40,7 +40,12 @@ public struct MoveFilter: SearchableFilter {
             predicates.append(.init(format: "\(#keyPath(StoredMove.z_type)) == %@", type.rawValue))
         }
         if !query.isEmpty {
-            predicates.append(.init(format: "\(#keyPath(StoredMove.z_canonicalName)) CONTAINS[cd] %@", query))
+            switch query {
+            case .contains(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredMove.z_canonicalName)) CONTAINS %@", string.normalizedForSearch))
+            case .exact(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredMove.z_canonicalName)) == %@", string.normalizedForSearch))
+            }
         }
         fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
 

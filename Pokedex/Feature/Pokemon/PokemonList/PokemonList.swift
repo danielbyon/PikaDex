@@ -30,7 +30,7 @@ public struct PokemonList: View {
         Group {
             SearchableList(
                 items: pokemons,
-                query: $pokemons.query,
+                query: $pokemons.query.toString(),
                 searchPrompt: "Search for a Pokémon",
                 id: \.index
             ) { pokemon in
