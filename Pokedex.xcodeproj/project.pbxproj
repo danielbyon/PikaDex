@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		650E221823F69DD300FACCE7 /* Data in Copy Files */ = {isa = PBXBuildFile; fileRef = 650E221723F65C1700FACCE7 /* Data */; };
 		65188C092B5C7E7600CA8393 /* Binding+SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65188C082B5C7E7600CA8393 /* Binding+SearchQuery.swift */; };
+		65188C0A2B5CA23C00CA8393 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
+		65188C0B2B5CA23C00CA8393 /* PokedexCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6518ACB423BED1D7004B7C58 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518ACB323BED1D7004B7C58 /* main.swift */; };
 		6518ACCD23BFCD32004B7C58 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518ACCC23BFCD32004B7C58 /* Helpers.swift */; };
 		652B50592594648B00FC8A48 /* AppGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B50582594648B00FC8A48 /* AppGroupStorage.swift */; };
@@ -344,8 +346,6 @@
 		65D703CF28D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D703E828D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D7040128D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
-		65D9701C29875D6400B3D71A /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
-		65D9701D29875D6400B3D71A /* PokedexCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		65D970222987883D00B3D71A /* Int16+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D970212987883D00B3D71A /* Int16+Int.swift */; };
 		65E890052576255C00C0A483 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 65E890042576255C00C0A483 /* AppSupport */; };
 		65EE7C23297A4F0A00CBA045 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021DF2978EC9E005BF4DC /* Tab.swift */; };
@@ -653,7 +653,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				65D9701D29875D6400B3D71A /* PokedexCore.framework in Embed Frameworks */,
+				65188C0B2B5CA23C00CA8393 /* PokedexCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1094,7 +1094,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D9701C29875D6400B3D71A /* PokedexCore.framework in Frameworks */,
+				65188C0A2B5CA23C00CA8393 /* PokedexCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2865,8 +2865,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				65A4D99223F8FB6100688333 /* PBXTargetDependency */,
-				65A4D99423F8FB6100688333 /* PBXTargetDependency */,
 				65D9701F29875D6400B3D71A /* PBXTargetDependency */,
 			);
 			name = DatabaseLoader;
@@ -3426,7 +3424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npwd\necho $SRCROOT > DatabaseLoader/Config.txt\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#pwd\n#echo $SRCROOT > DatabaseLoader/Config.txt\n";
 		};
 		659C7CDF2466C16200E92C1C /* Generate Icon Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4028,14 +4026,6 @@
 			target = 65992A1B29C74D7A001ECD43 /* PokedexResources */;
 			targetProxy = 65992A3429C755A4001ECD43 /* PBXContainerItemProxy */;
 		};
-		65A4D99223F8FB6100688333 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 65A4D99123F8FB6100688333 /* Core */;
-		};
-		65A4D99423F8FB6100688333 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 65A4D99323F8FB6100688333 /* Entity */;
-		};
 		65D9701F29875D6400B3D71A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 65401F412978EA91005BF4DC /* PokedexCore */;
@@ -4109,6 +4099,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -4152,6 +4143,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -4738,6 +4730,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -4754,6 +4747,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -5343,14 +5337,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 659C7CEE24695FF100E92C1C /* XCRemoteSwiftPackageReference "AppSupport" */;
 			productName = AppSupport;
-		};
-		65A4D99123F8FB6100688333 /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Core;
-		};
-		65A4D99323F8FB6100688333 /* Entity */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Entity;
 		};
 		65B83116258229A00035B0B5 /* SwiftUIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
