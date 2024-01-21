@@ -44,6 +44,7 @@ Meowth			Meowth	Alolan Meowth	Persian	Alolan Persian	friendship		region	alola
 Meowth			Meowth	Galarian Meowth	Perrserker	Perrserker	levelUp	28	region	Galar		
 Psyduck			Psyduck	Psyduck	Golduck	Golduck	levelUp	33				
 Mankey			Mankey	Mankey	Primeape	Primeape	levelUp	28				
+Mankey			Primeape	Primeape	Annihilape	Annihilape	other	Use Rage Fist 20 times				
 Growlithe			Growlithe	Growlithe	Arcanine	Arcanine	useItem	Fire Stone				
 Growlithe			Growlithe	Hisuian Growlithe	Arcanine	Hisuian Arcanine	useItem	Fire Stone	region	hisui		
 Poliwag			Poliwag	Poliwag	Poliwhirl	Poliwhirl	levelUp	25				
@@ -597,7 +598,8 @@ Rellor			Rellor	Rellor	Rabsca	Rabsca	other	"Walk 1,000 steps in Let's Go mode"
 Greavard			Greavard	Greavard	Houndstone	Houndstone	levelUp	30	timeOfDay	night		
 Flittle			Flittle	Flittle	Espathra	Espathra	levelUp	35				
 Wiglett			Wiglett	Wiglett	Wugtrio	Wugtrio	levelUp	26				
-Finizen			Finizen	Finizen	Palafin	Palafin	levelUp	38	other	In Multiplayer		
+Finizen			Finizen	Finizen	Palafin	Zero Form	levelUp	38	other	In Multiplayer		
+Finizen			Finizen	Finizen	Palafin	Hero Form	levelUp	38	other	In Multiplayer		
 Smoliv			Smoliv	Smoliv	Dolliv	Dollar	levelUp	25				
 Smoliv			Dolliv	Dolliv	Arboliva	Arboliva	levelUp	35				
 Capsakid			Capsakid	Capsakid	Scovillain	Scovillain	useItem	Fire Stone				
@@ -624,3 +626,4 @@ Tinkatink			Tinkatuff	Tinkatuff	Tinkaton	Tinkaton	levelUp	38
 Charcadet			Charcadet	Charcadet	Armarouge	Armarouge	other	Use Auspicious Armor				
 Charcadet			Charcadet	Charcadet	Ceruledge	Ceruledge	other	Use Malicious Armor				
 Toedscool			Toedscool	Toedscool	Toedscruel	Toedscruel	levelUp	30				
+Girafarig			Girafarig	Girafarig	Farigiraf	Farigiraf	levelUpKnowingMove	Twin Beam				

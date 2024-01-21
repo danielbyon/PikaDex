@@ -1637,7 +1637,7 @@ func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMet
         return .levelUp(Int(data)!)
     case "levelUpHoldingItem":
         guard let item = getItem(forName: data, game: game) else {
-            debugPrint("Could not find item named \(data) in \(game)")
+            assertionFailure("Could not find item named \(data) in \(game)")
             return nil
         }
         return .levelUpHoldingItem(item)
@@ -1645,7 +1645,7 @@ func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMet
         return .levelUpInArea(data)
     case "levelUpKnowingMove":
         guard let move = getMove(forName: data, game: game) else {
-            debugPrint("Could not find move named \(data) in \(game)")
+            assertionFailure("Could not find move named \(data) in \(game)")
             return nil
         }
         return .levelUpKnowingMove(move)
@@ -1662,7 +1662,7 @@ func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMet
         return .tradeForPokemon(pokemon)
     case "tradeHoldingItem":
         guard let item = getItem(forName: data, game: game) else {
-            debugPrint("Could not find item named \(data) in \(game)")
+            assertionFailure("Could not find item named \(data) in \(game)")
             return nil
         }
         return .tradeHoldingItem(item)
@@ -1670,7 +1670,7 @@ func evolutionMethod(for name: String, data: String, game: Game) -> EvolutionMet
         return .trainerAction(data)
     case "useItem":
         guard let item = getItem(forName: data, game: game) else {
-            debugPrint("Could not find item named \(data) in \(game)")
+            assertionFailure("Could not find item named \(data) in \(game)")
             return nil
         }
         return .useItem(item)
@@ -1696,7 +1696,10 @@ func evolutionCondition(for name: String, data: String, game: Game) -> Evolution
         return .timeOfDay(TimeOfDay(rawValue: data.capitalized)!)
     case "weather":
         return .weather(Weather(rawValue: data)!)
+    case "":
+        return nil
     default:
+        assertionFailure()
         return nil
     }
 }
