@@ -117,7 +117,7 @@ def main():
             
             print(u"Processing {} - {}".format(index, pokemon))
 
-            filename = u"Cached/Pokemon/{:03d}-{}.html".format(index, pokemon.rstrip('.'))
+            filename = u"Cached/Pokemon/{:04d}-{}.html".format(index, pokemon.rstrip('.'))
 
             url = u"http://bulbapedia.bulbagarden.net/wiki/" + pokemon + u"_(Pokémon)"
             contents = crawler.fetch_or_download(filename, url)
@@ -128,10 +128,10 @@ def main():
             for entries in allFormEntries:
                 all_entries.append(entries)
 
-    fieldnames = [u'number', u'name', u'formName', u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl']
+    fieldnames = [u'number', u'name', u'formName', u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl', u'Scarlet', u'Violet']
     crawler.write_entries_to_tsv(all_entries, fieldnames, "Data/PokedexEntries")
     
-    all_games = [u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl']
+    all_games = [u'Red', u'Blue', u'Yellow', u'Gold', u'Silver', u'Crystal', u'Ruby', u'Sapphire', u'Emerald', u'FireRed', u'LeafGreen', u'Diamond', u'Pearl', u'Platinum', u'HeartGold', u'SoulSilver', u'Black', u'White', u'Black 2', u'White 2', u'X', u'Y', u'Omega Ruby', u'Alpha Sapphire', u'Sun', u'Moon', u'Ultra Sun', u'Ultra Moon', u'Let\'s Go Pikachu', u'Let\'s Go Eevee', u'Sword', u'Shield', u'Brilliant Diamond', u'Shining Pearl', u'Scarlet', u'Violet']
     all_vertical_entries = []
     for entries in all_entries:
         for game in all_games:

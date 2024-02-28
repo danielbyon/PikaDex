@@ -37,6 +37,7 @@ struct BulbapediaItem: Decodable {
         let price: Price?
     }
 
+    let bulbapediaURL: URL
     let descriptions: [String: String]
     let generationIntroduced: String
     let imageName: String

@@ -258,6 +258,10 @@ final class Validator {
         fetchRequest.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.z_game)) == %@", game.rawValue)
         let pokemons = try! context.fetch(fetchRequest)
 
+        if case .national = game {
+            assert(!pokemons.isEmpty)
+        }
+
         for pokemon in pokemons {
             let _ = pokemon.bulbapediaURL
             let _ = pokemon.canonicalName
@@ -281,6 +285,10 @@ final class Validator {
         let fetchRequest: NSFetchRequest<StoredPokemonForm> = StoredPokemonForm.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "\(#keyPath(StoredPokemonForm.z_game)) == %@", game.rawValue)
         let pokemonForms = try! context.fetch(fetchRequest)
+
+        if case .national = game {
+            assert(!pokemonForms.isEmpty)
+        }
 
         for pokemonForm in pokemonForms {
             let _ = pokemonForm.baseExperienceYield

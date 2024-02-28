@@ -179,6 +179,10 @@ private extension Pokedex {
             return #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)
         case .paldea:
             return #keyPath(StoredPokemon.z_pokedexNumbers.z_paldea)
+        case .kitakami:
+            return #keyPath(StoredPokemon.z_pokedexNumbers.z_kitakami)
+        case .blueberry:
+            return #keyPath(StoredPokemon.z_pokedexNumbers.z_blueberry)
         }
     }
 

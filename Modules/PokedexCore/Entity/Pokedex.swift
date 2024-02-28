@@ -37,6 +37,8 @@ public enum Pokedex: String, Codable, Equatable {
     case crownTundra
     case hisui
     case paldea
+    case kitakami
+    case blueberry
 
     public var title: String {
         switch self {
@@ -78,6 +80,10 @@ public enum Pokedex: String, Codable, Equatable {
             return "Hisui"
         case .paldea:
             return "Paldea"
+        case .kitakami:
+            return "Kitakami"
+        case .blueberry:
+            return "Blueberry"
         }
     }
 }

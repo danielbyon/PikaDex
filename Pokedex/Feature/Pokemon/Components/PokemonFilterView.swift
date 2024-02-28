@@ -120,7 +120,9 @@ private extension Pokedex {
                 .isleOfArmor,
                 .crownTundra,
                 .hisui,
-                .paldea:
+                .paldea,
+                .kitakami,
+                .blueberry:
             return "Regional (\(title))"
         }
     }

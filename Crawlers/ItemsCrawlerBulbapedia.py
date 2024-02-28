@@ -42,6 +42,33 @@ def process_file(contents, item_name):
     
     outer_table = soup.find('div', id='mw-content-text')
     
+    # Generation introduced
+    for td in outer_table.find_all('td'):
+        text = td.text.strip()
+        if "Introduced in" not in text:
+            continue
+        
+        if "Introduced in Generation I\n" in text:
+            entries['generationIntroduced'] = '1'
+        elif "Introduced in Generation II\n" in text:
+            entries['generationIntroduced'] = '2'
+        elif "Introduced in Generation III\n" in text:
+            entries['generationIntroduced'] = '3'
+        elif "Introduced in Generation IV\n" in text:
+            entries['generationIntroduced'] = '4'
+        elif "Introduced in Generation V\n" in text:
+            entries['generationIntroduced'] = '5'
+        elif "Introduced in Generation VI\n" in text:
+            entries['generationIntroduced'] = '6'
+        elif "Introduced in Generation VII\n" in text:
+            entries['generationIntroduced'] = '7'
+        elif "Introduced in Generation VIII\n" in text:
+            entries['generationIntroduced'] = '8'
+        elif "Introduced in Generation IX\n" in text:
+            entries['generationIntroduced'] = '9'
+        
+        break
+    
     # Pocket
     for th in outer_table.find_all('th'):
         if th.text.strip() != 'Pocket':
@@ -140,8 +167,8 @@ def addItems(gen, filename, url, link_column, items, items_set, skip_asterisk):
     if 'This article is incomplete' in outer_table.text:
         outer_table = outer_table.find_next_sibling().find_next_sibling().find_next_sibling()
     
-#   if gen == '2':
-#       outer_table = outer_table.find_next_sibling('table')
+    if gen == '2':
+        outer_table = outer_table.find_next_sibling('table')
     
     for row in outer_table.table.tbody.find_all("tr")[1:]:
         td = row.find_all("td")[link_column]
@@ -163,7 +190,7 @@ def addItems(gen, filename, url, link_column, items, items_set, skip_asterisk):
         
         item = {
             'name': name,
-            'generationIntroduced': gen,
+#           'generationIntroduced': gen,
             'url': item_url,
         }
         items.append(item)
@@ -180,79 +207,9 @@ def main():
     items_set = set()
     
     addItems(
-        '1',
-        file_path + '_AllItemsGen1.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_I)',
-        2,
-        items,
-        items_set,
-        True
-    )
-    
-    addItems(
-        '2',
-        file_path + '_AllItemsGen2.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_II)',
-        2,
-        items,
-        items_set,
-        False
-    )
-    
-    addItems(
-        '3',
-        file_path + '_AllItemsGen3.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_III)',
-        3,
-        items,
-        items_set,
-        False
-    )
-    
-    addItems(
-        '4',
-        file_path + '_AllItemsGen4.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_IV)',
-        3,
-        items,
-        items_set,
-        False
-    )
-    
-    addItems(
-        '5',
-        file_path + '_AllItemsGen5.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_V)',
-        3,
-        items,
-        items_set,
-        False
-    )
-    
-    addItems(
-        '6',
-        file_path + '_AllItemsGen6.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_VI)',
-        3,
-        items,
-        items_set,
-        False
-    )
-    
-    addItems(
-        '7',
-        file_path + '_AllItemsGen7_SM_USUM.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Sun,_Moon,_Ultra_Sun,_and_Ultra_Moon)',
-        3,
-        items,
-        items_set,
-        False
-    )
-    
-    addItems(
-        '7',
-        file_path + '_AllItemsGen7_LGP_LGE.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!)',
+        '9',
+        file_path + '_AllItemsGen9.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_IX)',
         3,
         items,
         items_set,
@@ -270,9 +227,9 @@ def main():
     )
     
     addItems(
-        '8',
-        file_path + '_AllItemsBDSP.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Brilliant_Diamond_and_Shining_Pearl)',
+        '7',
+        file_path + '_AllItemsGen7.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_VII)',
         3,
         items,
         items_set,
@@ -280,9 +237,9 @@ def main():
     )
     
     addItems(
-        '8',
-        file_path + '_AllItemsLegendsArceus.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Legends:_Arceus)',
+        '6',
+        file_path + '_AllItemsGen6.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_VI)',
         3,
         items,
         items_set,
@@ -290,13 +247,53 @@ def main():
     )
     
     addItems(
-        '9',
-        file_path + '_AllItemsScarletViolet.html',
-        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Scarlet_and_Violet)',
+        '5',
+        file_path + '_AllItemsGen5.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_V)',
         3,
         items,
         items_set,
         False
+    )
+    
+    addItems(
+        '4',
+        file_path + '_AllItemsGen4.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_IV)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '3',
+        file_path + '_AllItemsGen3.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_III)',
+        3,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '2',
+        file_path + '_AllItemsGen2.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_II)',
+        2,
+        items,
+        items_set,
+        False
+    )
+    
+    addItems(
+        '1',
+        file_path + '_AllItemsGen1.html',
+        'https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_(Generation_I)',
+        2,
+        items,
+        items_set,
+        True
     )
     
     for item in items:
@@ -305,20 +302,18 @@ def main():
         if name == "Adventure Guide":
             name = "Adventure Rules"
         
-        generationIntroduced = item['generationIntroduced']
         url = item['url']
         
         filename = file_path + '{}.html'.format(name.replace(' ', '-'))
         
         print('Processing {}'.format(name))
-#       print('{}\t{}'.format(name, url)) # Used for external links
         
         contents = crawler.fetch_or_download(filename, url)
         entries = process_file(contents, name)
         if entries:
             entries['name'] = name
             entries['imageName'] = name.replace(' ', '-').lower()
-            entries['generationIntroduced'] = generationIntroduced
+            entries['bulbapediaURL'] = url
             all_entries.append(entries)
             
     crawler.write_data_to_file(all_entries, "Data/BulbapediaItems")

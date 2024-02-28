@@ -22,7 +22,8 @@
     "B.Diamond": "Powers up moves of the same type as the Pok\u00e9mon.",
     "S.Pearl": "Powers up moves of the same type as the Pok\u00e9mon.",
     "Scarlet": "Powers up moves of the same type as the Pok\u00e9mon.",
-    "Violet": "Powers up moves of the same type as the Pok\u00e9mon."
+    "Violet": "Powers up moves of the same type as the Pok\u00e9mon.",
+    "generationIntroduced": "4"
   },
   "Aerilate": {
     "X": "Normal-type moves become Flying-type moves.",
@@ -38,7 +39,8 @@
     "B.Diamond": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little.",
     "S.Pearl": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little.",
     "Scarlet": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little.",
-    "Violet": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little."
+    "Violet": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little.",
+    "generationIntroduced": "6"
   },
   "Aftermath": {
     "Diamond": "Damages the foe landing the finishing hit.",
@@ -63,7 +65,8 @@
     "B.Diamond": "Damages the attacker if it contacts the Pok\u00e9mon with a finishing hit.",
     "S.Pearl": "Damages the attacker if it contacts the Pok\u00e9mon with a finishing hit.",
     "Scarlet": "Damages the attacker if it knocks out the Pok\u00e9mon with a move that makes direct contact.",
-    "Violet": "Damages the attacker if it knocks out the Pok\u00e9mon with a move that makes direct contact."
+    "Violet": "Damages the attacker if it knocks out the Pok\u00e9mon with a move that makes direct contact.",
+    "generationIntroduced": "4"
   },
   "Air Lock": {
     "Ruby": "Negates weather effects.",
@@ -93,7 +96,8 @@
     "B.Diamond": "Eliminates the effects of weather.",
     "S.Pearl": "Eliminates the effects of weather.",
     "Scarlet": "Eliminates the effects of weather.",
-    "Violet": "Eliminates the effects of weather."
+    "Violet": "Eliminates the effects of weather.",
+    "generationIntroduced": "3"
   },
   "Analytic": {
     "Black": "Boosts move power when the Pok\u00e9mon moves last.",
@@ -113,7 +117,8 @@
     "B.Diamond": "Boosts move power when the Pok\u00e9mon moves last.",
     "S.Pearl": "Boosts move power when the Pok\u00e9mon moves last.",
     "Scarlet": "Boosts the power of the Pok\u00e9mon\u2019s move if it is the last to act that turn.",
-    "Violet": "Boosts the power of the Pok\u00e9mon\u2019s move if it is the last to act that turn."
+    "Violet": "Boosts the power of the Pok\u00e9mon\u2019s move if it is the last to act that turn.",
+    "generationIntroduced": "5"
   },
   "Anger Point": {
     "Diamond": "Raises Attack upon taking a critical hit.",
@@ -138,11 +143,13 @@
     "B.Diamond": "The Pok\u00e9mon is angered when it takes a critical hit, and that maxes its Attack stat.",
     "S.Pearl": "The Pok\u00e9mon is angered when it takes a critical hit, and that maxes its Attack stat.",
     "Scarlet": "The Pok\u00e9mon is angered when it takes a critical hit, and that maxes its Attack stat.",
-    "Violet": "The Pok\u00e9mon is angered when it takes a critical hit, and that maxes its Attack stat."
+    "Violet": "The Pok\u00e9mon is angered when it takes a critical hit, and that maxes its Attack stat.",
+    "generationIntroduced": "4"
   },
   "Anger Shell": {
     "Scarlet": "When an attack causes its HP to drop to half or less, the Pok\u00e9mon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats.",
-    "Violet": "When an attack causes its HP to drop to half or less, the Pok\u00e9mon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats."
+    "Violet": "When an attack causes its HP to drop to half or less, the Pok\u00e9mon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats.",
+    "generationIntroduced": "9"
   },
   "Anticipation": {
     "Diamond": "Senses the foe\u2019s dangerous moves.",
@@ -167,7 +174,8 @@
     "B.Diamond": "The Pok\u00e9mon can sense an opposing Pok\u00e9mon\u2019s dangerous moves.",
     "S.Pearl": "The Pok\u00e9mon can sense an opposing Pok\u00e9mon\u2019s dangerous moves.",
     "Scarlet": "The Pok\u00e9mon can sense an opposing Pok\u00e9mon\u2019s dangerous moves.",
-    "Violet": "The Pok\u00e9mon can sense an opposing Pok\u00e9mon\u2019s dangerous moves."
+    "Violet": "The Pok\u00e9mon can sense an opposing Pok\u00e9mon\u2019s dangerous moves.",
+    "generationIntroduced": "4"
   },
   "Arena Trap": {
     "Ruby": "Prevents fleeing.",
@@ -197,11 +205,13 @@
     "B.Diamond": "Prevents opposing Pok\u00e9mon from fleeing.",
     "S.Pearl": "Prevents opposing Pok\u00e9mon from fleeing.",
     "Scarlet": "Prevents opposing Pok\u00e9mon from fleeing from battle.",
-    "Violet": "Prevents opposing Pok\u00e9mon from fleeing from battle."
+    "Violet": "Prevents opposing Pok\u00e9mon from fleeing from battle.",
+    "generationIntroduced": "3"
   },
   "Armor Tail": {
     "Scarlet": "The mysterious tail covering the Pok\u00e9mon\u2019s head makes opponents unable to use priority moves against the Pok\u00e9mon or its allies.",
-    "Violet": "The mysterious tail covering the Pok\u00e9mon\u2019s head makes opponents unable to use priority moves against the Pok\u00e9mon or its allies."
+    "Violet": "The mysterious tail covering the Pok\u00e9mon\u2019s head makes opponents unable to use priority moves against the Pok\u00e9mon or its allies.",
+    "generationIntroduced": "9"
   },
   "Aroma Veil": {
     "X": "Protects allies from attacks that limit their move choices.",
@@ -217,7 +227,8 @@
     "B.Diamond": "Protects itself and its allies from attacks that limit their move choices.",
     "S.Pearl": "Protects itself and its allies from attacks that limit their move choices.",
     "Scarlet": "Protects the Pok\u00e9mon and its allies from effects that prevent the use of moves.",
-    "Violet": "Protects the Pok\u00e9mon and its allies from effects that prevent the use of moves."
+    "Violet": "Protects the Pok\u00e9mon and its allies from effects that prevent the use of moves.",
+    "generationIntroduced": "6"
   },
   "As One": {
     "Sword": "This Ability combines the effects of both Calyrex\u2019s Unnerve Ability and Glastrier\u2019s/Spectrier\u2019s Chilling Neigh/Grim Neigh Ability.",
@@ -225,7 +236,8 @@
     "B.Diamond": "This Ability combines the effects of both Calyrex\u2019s Unnerve Ability and Glastrier\u2019s/Spectrier\u2019s Chilling Neigh/Grim Neigh Ability.",
     "S.Pearl": "This Ability combines the effects of both Calyrex\u2019s Unnerve Ability and Glastrier\u2019s/Spectrier\u2019s Chilling Neigh/Grim Neigh Ability.",
     "Scarlet": "This Ability combines the effects of both Calyrex\u2019s Unnerve Ability and Glastrier\u2019s/Spectrier\u2019s Chilling Neigh/Grim Neigh Ability.",
-    "Violet": "This Ability combines the effects of both Calyrex\u2019s Unnerve Ability and Glastrier\u2019s/Spectrier\u2019s Chilling Neigh/Grim Neigh Ability."
+    "Violet": "This Ability combines the effects of both Calyrex\u2019s Unnerve Ability and Glastrier\u2019s/Spectrier\u2019s Chilling Neigh/Grim Neigh Ability.",
+    "generationIntroduced": "8"
   },
   "Aura Break": {
     "X": "The effects of \u201cAura\u201d Abilities are reversed.",
@@ -241,7 +253,8 @@
     "B.Diamond": "The effects of \u201cAura\u201d Abilities are reversed to lower the power of affected moves.",
     "S.Pearl": "The effects of \u201cAura\u201d Abilities are reversed to lower the power of affected moves.",
     "Scarlet": "The effects of \u201cAura\u201d Abilities are reversed to lower the power of affected moves.",
-    "Violet": "The effects of \u201cAura\u201d Abilities are reversed to lower the power of affected moves."
+    "Violet": "The effects of \u201cAura\u201d Abilities are reversed to lower the power of affected moves.",
+    "generationIntroduced": "6"
   },
   "Bad Dreams": {
     "Diamond": "Reduces a sleeping foe\u2019s HP.",
@@ -266,7 +279,8 @@
     "B.Diamond": "Reduces the HP of sleeping opposing Pok\u00e9mon.",
     "S.Pearl": "Reduces the HP of sleeping opposing Pok\u00e9mon.",
     "Scarlet": "Damages opposing Pok\u00e9mon that are asleep.",
-    "Violet": "Damages opposing Pok\u00e9mon that are asleep."
+    "Violet": "Damages opposing Pok\u00e9mon that are asleep.",
+    "generationIntroduced": "4"
   },
   "Ball Fetch": {
     "Sword": "If the Pok\u00e9mon is not holding an item, it will fetch the Pok\u00e9 Ball from the first failed throw of the battle.",
@@ -274,7 +288,8 @@
     "B.Diamond": "If the Pok\u00e9mon is not holding an item, it will fetch the Pok\u00e9 Ball from the first failed throw of the battle.",
     "S.Pearl": "If the Pok\u00e9mon is not holding an item, it will fetch the Pok\u00e9 Ball from the first failed throw of the battle.",
     "Scarlet": "If the Pok\u00e9mon is not holding an item, it will fetch the Pok\u00e9 Ball from the first failed throw of the battle.",
-    "Violet": "If the Pok\u00e9mon is not holding an item, it will fetch the Pok\u00e9 Ball from the first failed throw of the battle."
+    "Violet": "If the Pok\u00e9mon is not holding an item, it will fetch the Pok\u00e9 Ball from the first failed throw of the battle.",
+    "generationIntroduced": "8"
   },
   "Battery": {
     "Sun": "Powers up ally Pok\u00e9mon\u2019s special moves.",
@@ -286,7 +301,8 @@
     "B.Diamond": "Powers up ally Pok\u00e9mon\u2019s special moves.",
     "S.Pearl": "Powers up ally Pok\u00e9mon\u2019s special moves.",
     "Scarlet": "Powers up ally Pok\u00e9mon\u2019s special moves.",
-    "Violet": "Powers up ally Pok\u00e9mon\u2019s special moves."
+    "Violet": "Powers up ally Pok\u00e9mon\u2019s special moves.",
+    "generationIntroduced": "7"
   },
   "Battle Armor": {
     "Ruby": "Blocks critical hits.",
@@ -316,7 +332,8 @@
     "B.Diamond": "Hard armor protects the Pok\u00e9mon from critical hits.",
     "S.Pearl": "Hard armor protects the Pok\u00e9mon from critical hits.",
     "Scarlet": "Hard armor protects the Pok\u00e9mon from critical hits.",
-    "Violet": "Hard armor protects the Pok\u00e9mon from critical hits."
+    "Violet": "Hard armor protects the Pok\u00e9mon from critical hits.",
+    "generationIntroduced": "3"
   },
   "Battle Bond": {
     "Sun": "Defeating an opposing Pok\u00e9mon strengthens the Pok\u00e9mon\u2019s bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.",
@@ -328,11 +345,13 @@
     "B.Diamond": "Defeating an opposing Pok\u00e9mon strengthens the Pok\u00e9mon\u2019s bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.",
     "S.Pearl": "Defeating an opposing Pok\u00e9mon strengthens the Pok\u00e9mon\u2019s bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful.",
     "Scarlet": "When the Pok\u00e9mon knocks out a target, its bond with its Trainer is strengthened, and its Attack, Sp. Atk, and Speed stats are boosted.",
-    "Violet": "When the Pok\u00e9mon knocks out a target, its bond with its Trainer is strengthened, and its Attack, Sp. Atk, and Speed stats are boosted."
+    "Violet": "When the Pok\u00e9mon knocks out a target, its bond with its Trainer is strengthened, and its Attack, Sp. Atk, and Speed stats are boosted.",
+    "generationIntroduced": "7"
   },
   "Beads of Ruin": {
     "Scarlet": "The power of the Pok\u00e9mon\u2019s ruinous beads lowers the Sp. Def stats of all Pok\u00e9mon except itself.",
-    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous beads lowers the Sp. Def stats of all Pok\u00e9mon except itself."
+    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous beads lowers the Sp. Def stats of all Pok\u00e9mon except itself.",
+    "generationIntroduced": "9"
   },
   "Beast Boost": {
     "Sun": "The Pok\u00e9mon boosts its most proficient stat each time it knocks out a Pok\u00e9mon.",
@@ -344,7 +363,8 @@
     "B.Diamond": "The Pok\u00e9mon boosts its most proficient stat each time it knocks out a Pok\u00e9mon.",
     "S.Pearl": "The Pok\u00e9mon boosts its most proficient stat each time it knocks out a Pok\u00e9mon.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s most proficient stat every time it knocks out a target.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s most proficient stat every time it knocks out a target."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s most proficient stat every time it knocks out a target.",
+    "generationIntroduced": "7"
   },
   "Berserk": {
     "Sun": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat when it takes a hit that causes its HP to become half or less.",
@@ -356,7 +376,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat when it takes a hit that causes its HP to become half or less.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat when it takes a hit that causes its HP to become half or less.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat when it takes a hit that causes its HP to drop to half or less.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat when it takes a hit that causes its HP to drop to half or less."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat when it takes a hit that causes its HP to drop to half or less.",
+    "generationIntroduced": "7"
   },
   "Big Pecks": {
     "Black": "Protects the Pok\u00e9mon from Defense-lowering attacks.",
@@ -376,7 +397,8 @@
     "B.Diamond": "Protects the Pok\u00e9mon from Defense-lowering effects.",
     "S.Pearl": "Protects the Pok\u00e9mon from Defense-lowering effects.",
     "Scarlet": "Prevents the Pok\u00e9mon from having its Defense stat lowered.",
-    "Violet": "Prevents the Pok\u00e9mon from having its Defense stat lowered."
+    "Violet": "Prevents the Pok\u00e9mon from having its Defense stat lowered.",
+    "generationIntroduced": "5"
   },
   "Blaze": {
     "Ruby": "Ups FIRE moves in a pinch.",
@@ -406,7 +428,8 @@
     "B.Diamond": "Powers up Fire-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "S.Pearl": "Powers up Fire-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "Scarlet": "Powers up Fire-type moves when the Pok\u00e9mon\u2019s HP is low.",
-    "Violet": "Powers up Fire-type moves when the Pok\u00e9mon\u2019s HP is low."
+    "Violet": "Powers up Fire-type moves when the Pok\u00e9mon\u2019s HP is low.",
+    "generationIntroduced": "3"
   },
   "Bulletproof": {
     "X": "Protects the Pok\u00e9mon from some ball and bomb moves.",
@@ -422,7 +445,8 @@
     "B.Diamond": "Protects the Pok\u00e9mon from some ball and bomb moves.",
     "S.Pearl": "Protects the Pok\u00e9mon from some ball and bomb moves.",
     "Scarlet": "Protects the Pok\u00e9mon from ball and bomb moves.",
-    "Violet": "Protects the Pok\u00e9mon from ball and bomb moves."
+    "Violet": "Protects the Pok\u00e9mon from ball and bomb moves.",
+    "generationIntroduced": "6"
   },
   "Cheek Pouch": {
     "X": "Restores HP as well when the Pok\u00e9mon eats a Berry.",
@@ -438,7 +462,8 @@
     "B.Diamond": "Restores HP as well when the Pok\u00e9mon eats a Berry.",
     "S.Pearl": "Restores HP as well when the Pok\u00e9mon eats a Berry.",
     "Scarlet": "The Pok\u00e9mon\u2019s HP is restored when it eats any Berry, in addition to the Berry\u2019s usual effect.",
-    "Violet": "The Pok\u00e9mon\u2019s HP is restored when it eats any Berry, in addition to the Berry\u2019s usual effect."
+    "Violet": "The Pok\u00e9mon\u2019s HP is restored when it eats any Berry, in addition to the Berry\u2019s usual effect.",
+    "generationIntroduced": "6"
   },
   "Chilling Neigh": {
     "Sword": "When the Pok\u00e9mon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.",
@@ -446,7 +471,8 @@
     "B.Diamond": "When the Pok\u00e9mon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.",
     "S.Pearl": "When the Pok\u00e9mon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.",
     "Scarlet": "When the Pok\u00e9mon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.",
-    "Violet": "When the Pok\u00e9mon knocks out a target, it utters a chilling neigh, which boosts its Attack stat."
+    "Violet": "When the Pok\u00e9mon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.",
+    "generationIntroduced": "8"
   },
   "Chlorophyll": {
     "Ruby": "Raises SPEED in sunshine.",
@@ -476,7 +502,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Speed stat in harsh sunlight.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Speed stat in harsh sunlight.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Speed stat in harsh sunlight.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in harsh sunlight."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in harsh sunlight.",
+    "generationIntroduced": "3"
   },
   "Clear Body": {
     "Ruby": "Prevents ability reduction.",
@@ -506,7 +533,8 @@
     "B.Diamond": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
     "S.Pearl": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
     "Scarlet": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
-    "Violet": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats."
+    "Violet": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
+    "generationIntroduced": "3"
   },
   "Cloud Nine": {
     "Ruby": "Negates weather effects.",
@@ -536,7 +564,8 @@
     "B.Diamond": "Eliminates the effects of weather.",
     "S.Pearl": "Eliminates the effects of weather.",
     "Scarlet": "Eliminates the effects of weather.",
-    "Violet": "Eliminates the effects of weather."
+    "Violet": "Eliminates the effects of weather.",
+    "generationIntroduced": "3"
   },
   "Color Change": {
     "Ruby": "Changes type to foe\u2019s move.",
@@ -566,7 +595,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s type becomes the type of the move used on it.",
     "S.Pearl": "The Pok\u00e9mon\u2019s type becomes the type of the move used on it.",
     "Scarlet": "The Pok\u00e9mon\u2019s type becomes the type of the move used on it.",
-    "Violet": "The Pok\u00e9mon\u2019s type becomes the type of the move used on it."
+    "Violet": "The Pok\u00e9mon\u2019s type becomes the type of the move used on it.",
+    "generationIntroduced": "3"
   },
   "Comatose": {
     "Sun": "It\u2019s always drowsing and will never wake up. It can attack without waking up.",
@@ -578,11 +608,13 @@
     "B.Diamond": "It\u2019s always drowsing and will never wake up. It can attack without waking up.",
     "S.Pearl": "It\u2019s always drowsing and will never wake up. It can attack without waking up.",
     "Scarlet": "The Pok\u00e9mon is always drowsing and will never wake up. It can attack while in its sleeping state.",
-    "Violet": "The Pok\u00e9mon is always drowsing and will never wake up. It can attack while in its sleeping state."
+    "Violet": "The Pok\u00e9mon is always drowsing and will never wake up. It can attack while in its sleeping state.",
+    "generationIntroduced": "7"
   },
   "Commander": {
     "Scarlet": "When the Pok\u00e9mon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pok\u00e9mon then issues commands from there.",
-    "Violet": "When the Pok\u00e9mon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pok\u00e9mon then issues commands from there."
+    "Violet": "When the Pok\u00e9mon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pok\u00e9mon then issues commands from there.",
+    "generationIntroduced": "9"
   },
   "Competitive": {
     "X": "Boosts the Sp. Atk stat when a stat is lowered.",
@@ -598,7 +630,8 @@
     "B.Diamond": "Boosts the Sp. Atk stat sharply when a stat is lowered.",
     "S.Pearl": "Boosts the Sp. Atk stat sharply when a stat is lowered.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat sharply when its stats are lowered by an opposing Pok\u00e9mon.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat sharply when its stats are lowered by an opposing Pok\u00e9mon."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat sharply when its stats are lowered by an opposing Pok\u00e9mon.",
+    "generationIntroduced": "6"
   },
   "Compound Eyes": {
     "Ruby": "Raises accuracy.",
@@ -628,7 +661,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s compound eyes boost its accuracy.",
     "S.Pearl": "The Pok\u00e9mon\u2019s compound eyes boost its accuracy.",
     "Scarlet": "The Pok\u00e9mon\u2019s compound eyes boost its accuracy.",
-    "Violet": "The Pok\u00e9mon\u2019s compound eyes boost its accuracy."
+    "Violet": "The Pok\u00e9mon\u2019s compound eyes boost its accuracy.",
+    "generationIntroduced": "3"
   },
   "Contrary": {
     "Black": "Makes stat changes have an opposite effect.",
@@ -648,7 +682,8 @@
     "B.Diamond": "Makes stat changes have an opposite effect.",
     "S.Pearl": "Makes stat changes have an opposite effect.",
     "Scarlet": "Reverses any stat changes affecting the Pok\u00e9mon so that attempts to boost its stats instead lower them\u2014 and attempts to lower its stats will boost them.",
-    "Violet": "Reverses any stat changes affecting the Pok\u00e9mon so that attempts to boost its stats instead lower them\u2014 and attempts to lower its stats will boost them."
+    "Violet": "Reverses any stat changes affecting the Pok\u00e9mon so that attempts to boost its stats instead lower them\u2014 and attempts to lower its stats will boost them.",
+    "generationIntroduced": "5"
   },
   "Corrosion": {
     "Sun": "The Pok\u00e9mon can poison the target even if it\u2019s a Steel or Poison type.",
@@ -660,11 +695,13 @@
     "B.Diamond": "The Pok\u00e9mon can poison the target even if it\u2019s a Steel or Poison type.",
     "S.Pearl": "The Pok\u00e9mon can poison the target even if it\u2019s a Steel or Poison type.",
     "Scarlet": "The Pok\u00e9mon can poison the target even if it\u2019s a Steel or Poison type.",
-    "Violet": "The Pok\u00e9mon can poison the target even if it\u2019s a Steel or Poison type."
+    "Violet": "The Pok\u00e9mon can poison the target even if it\u2019s a Steel or Poison type.",
+    "generationIntroduced": "7"
   },
   "Costar": {
     "Scarlet": "When the Pok\u00e9mon enters a battle, it copies an ally\u2019s stat changes.",
-    "Violet": "When the Pok\u00e9mon enters a battle, it copies an ally\u2019s stat changes."
+    "Violet": "When the Pok\u00e9mon enters a battle, it copies an ally\u2019s stat changes.",
+    "generationIntroduced": "9"
   },
   "Cotton Down": {
     "Sword": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pok\u00e9mon except itself.",
@@ -672,17 +709,20 @@
     "B.Diamond": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pok\u00e9mon except itself.",
     "S.Pearl": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stat of all Pok\u00e9mon except itself.",
     "Scarlet": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stats of all Pok\u00e9mon except itself.",
-    "Violet": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stats of all Pok\u00e9mon except itself."
+    "Violet": "When the Pok\u00e9mon is hit by an attack, it scatters cotton fluff around and lowers the Speed stats of all Pok\u00e9mon except itself.",
+    "generationIntroduced": "8"
   },
   "Cud Chew": {
     "Scarlet": "When the Pok\u00e9mon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
-    "Violet": "When the Pok\u00e9mon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time."
+    "Violet": "When the Pok\u00e9mon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
+    "generationIntroduced": "9"
   },
   "Curious Medicine": {
     "B.Diamond": "When the Pok\u00e9mon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.",
     "S.Pearl": "When the Pok\u00e9mon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.",
     "Scarlet": "When the Pok\u00e9mon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.",
-    "Violet": "When the Pok\u00e9mon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies."
+    "Violet": "When the Pok\u00e9mon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies.",
+    "generationIntroduced": "8"
   },
   "Cursed Body": {
     "Black": "May disable a move used on the Pok\u00e9mon.",
@@ -702,7 +742,8 @@
     "B.Diamond": "May disable a move used on the Pok\u00e9mon.",
     "S.Pearl": "May disable a move used on the Pok\u00e9mon.",
     "Scarlet": "May disable a move that has dealt damage to the Pok\u00e9mon.",
-    "Violet": "May disable a move that has dealt damage to the Pok\u00e9mon."
+    "Violet": "May disable a move that has dealt damage to the Pok\u00e9mon.",
+    "generationIntroduced": "5"
   },
   "Cute Charm": {
     "Ruby": "Infatuates on contact.",
@@ -732,7 +773,8 @@
     "B.Diamond": "Contact with the Pok\u00e9mon may cause infatuation.",
     "S.Pearl": "Contact with the Pok\u00e9mon may cause infatuation.",
     "Scarlet": "The Pok\u00e9mon may infatuate attackers that make direct contact with it.",
-    "Violet": "The Pok\u00e9mon may infatuate attackers that make direct contact with it."
+    "Violet": "The Pok\u00e9mon may infatuate attackers that make direct contact with it.",
+    "generationIntroduced": "3"
   },
   "Damp": {
     "Ruby": "Prevents self-destruction.",
@@ -762,7 +804,8 @@
     "B.Diamond": "Prevents the use of explosive moves, such as Self-Destruct, by dampening its surroundings.",
     "S.Pearl": "Prevents the use of explosive moves, such as Self-Destruct, by dampening its surroundings.",
     "Scarlet": "The Pok\u00e9mon dampens its surroundings, preventing all Pok\u00e9mon from using explosive moves such as Self-Destruct.",
-    "Violet": "The Pok\u00e9mon dampens its surroundings, preventing all Pok\u00e9mon from using explosive moves such as Self-Destruct."
+    "Violet": "The Pok\u00e9mon dampens its surroundings, preventing all Pok\u00e9mon from using explosive moves such as Self-Destruct.",
+    "generationIntroduced": "3"
   },
   "Dancer": {
     "Sun": "When another Pok\u00e9mon uses a dance move, it can use a dance move following it regardless of its Speed.",
@@ -774,7 +817,8 @@
     "B.Diamond": "When another Pok\u00e9mon uses a dance move, it can use a dance move following it regardless of its Speed.",
     "S.Pearl": "When another Pok\u00e9mon uses a dance move, it can use a dance move following it regardless of its Speed.",
     "Scarlet": "Whenever a dance move is used in battle, the Pok\u00e9mon will copy the user to immediately perform that dance move itself.",
-    "Violet": "Whenever a dance move is used in battle, the Pok\u00e9mon will copy the user to immediately perform that dance move itself."
+    "Violet": "Whenever a dance move is used in battle, the Pok\u00e9mon will copy the user to immediately perform that dance move itself.",
+    "generationIntroduced": "7"
   },
   "Dark Aura": {
     "X": "Powers up each Pok\u00e9mon\u2019s Dark-type moves.",
@@ -790,7 +834,8 @@
     "B.Diamond": "Powers up each Pok\u00e9mon\u2019s Dark-type moves.",
     "S.Pearl": "Powers up each Pok\u00e9mon\u2019s Dark-type moves.",
     "Scarlet": "Powers up the Dark-type moves of all Pok\u00e9mon on the field.",
-    "Violet": "Powers up the Dark-type moves of all Pok\u00e9mon on the field."
+    "Violet": "Powers up the Dark-type moves of all Pok\u00e9mon on the field.",
+    "generationIntroduced": "6"
   },
   "Dauntless Shield": {
     "Sword": "Boosts the Pok\u00e9mon\u2019s Defense stat when the Pok\u00e9mon enters a battle.",
@@ -798,7 +843,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Defense stat when the Pok\u00e9mon enters a battle.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Defense stat when the Pok\u00e9mon enters a battle.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Defense stat the first time the Pok\u00e9mon enters a battle.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Defense stat the first time the Pok\u00e9mon enters a battle."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Defense stat the first time the Pok\u00e9mon enters a battle.",
+    "generationIntroduced": "8"
   },
   "Dazzling": {
     "Sun": "Surprises the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
@@ -810,7 +856,8 @@
     "B.Diamond": "Surprises the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
     "S.Pearl": "Surprises the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
     "Scarlet": "The Pok\u00e9mon dazzles its opponents, making them unable to use priority moves against the Pok\u00e9mon or its allies.",
-    "Violet": "The Pok\u00e9mon dazzles its opponents, making them unable to use priority moves against the Pok\u00e9mon or its allies."
+    "Violet": "The Pok\u00e9mon dazzles its opponents, making them unable to use priority moves against the Pok\u00e9mon or its allies.",
+    "generationIntroduced": "7"
   },
   "Defeatist": {
     "Black": "Lowers stats when HP becomes half or less.",
@@ -830,7 +877,8 @@
     "B.Diamond": "Halves the Pok\u00e9mon\u2019s Attack and Sp. Atk stats when its HP becomes half or less.",
     "S.Pearl": "Halves the Pok\u00e9mon\u2019s Attack and Sp. Atk stats when its HP becomes half or less.",
     "Scarlet": "Halves the Pok\u00e9mon\u2019s Attack and Sp. Atk stats when its HP drops to half or less.",
-    "Violet": "Halves the Pok\u00e9mon\u2019s Attack and Sp. Atk stats when its HP drops to half or less."
+    "Violet": "Halves the Pok\u00e9mon\u2019s Attack and Sp. Atk stats when its HP drops to half or less.",
+    "generationIntroduced": "5"
   },
   "Defiant": {
     "Black": "When its stats are lowered its Attack increases.",
@@ -850,7 +898,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Attack stat sharply when its stats are lowered.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Attack stat sharply when its stats are lowered.",
     "Scarlet": "If the Pok\u00e9mon has any stat lowered by an opposing Pok\u00e9mon, its Attack stat will be boosted sharply.",
-    "Violet": "If the Pok\u00e9mon has any stat lowered by an opposing Pok\u00e9mon, its Attack stat will be boosted sharply."
+    "Violet": "If the Pok\u00e9mon has any stat lowered by an opposing Pok\u00e9mon, its Attack stat will be boosted sharply.",
+    "generationIntroduced": "5"
   },
   "Delta Stream": {
     "O.Ruby": "Affects weather and eliminates all of the Flying type\u2019s weaknesses.",
@@ -864,7 +913,8 @@
     "B.Diamond": "The Pok\u00e9mon changes the weather to eliminate all of the Flying type\u2019s weaknesses.",
     "S.Pearl": "The Pok\u00e9mon changes the weather to eliminate all of the Flying type\u2019s weaknesses.",
     "Scarlet": "The Pok\u00e9mon changes the weather so that no moves are supereffective against the Flying type.",
-    "Violet": "The Pok\u00e9mon changes the weather so that no moves are supereffective against the Flying type."
+    "Violet": "The Pok\u00e9mon changes the weather so that no moves are supereffective against the Flying type.",
+    "generationIntroduced": "6"
   },
   "Desolate Land": {
     "O.Ruby": "Affects weather and nullifies any Water-type attacks.",
@@ -878,7 +928,8 @@
     "B.Diamond": "The Pok\u00e9mon changes the weather to nullify Water-type attacks.",
     "S.Pearl": "The Pok\u00e9mon changes the weather to nullify Water-type attacks.",
     "Scarlet": "The Pok\u00e9mon changes the weather to nullify Water-type attacks.",
-    "Violet": "The Pok\u00e9mon changes the weather to nullify Water-type attacks."
+    "Violet": "The Pok\u00e9mon changes the weather to nullify Water-type attacks.",
+    "generationIntroduced": "6"
   },
   "Disguise": {
     "Sun": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack.",
@@ -890,7 +941,8 @@
     "B.Diamond": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack.",
     "S.Pearl": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack.",
     "Scarlet": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack.",
-    "Violet": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack."
+    "Violet": "Once per battle, the shroud that covers the Pok\u00e9mon can protect it from an attack.",
+    "generationIntroduced": "7"
   },
   "Download": {
     "Diamond": "Adjusts power according to the foe\u2019s ability.",
@@ -915,7 +967,8 @@
     "B.Diamond": "Compares an opposing Pok\u00e9mon\u2019s Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat\u2014whichever will be more effective.",
     "S.Pearl": "Compares an opposing Pok\u00e9mon\u2019s Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat\u2014whichever will be more effective.",
     "Scarlet": "The Pok\u00e9mon compares an opposing Pok\u00e9mon\u2019s Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat\u2014whichever will be more effective.",
-    "Violet": "The Pok\u00e9mon compares an opposing Pok\u00e9mon\u2019s Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat\u2014whichever will be more effective."
+    "Violet": "The Pok\u00e9mon compares an opposing Pok\u00e9mon\u2019s Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat\u2014whichever will be more effective.",
+    "generationIntroduced": "4"
   },
   "Dragon's Maw": {
     "Sword": "Powers up Dragon-type moves.",
@@ -923,7 +976,8 @@
     "B.Diamond": "Powers up Dragon-type moves.",
     "S.Pearl": "Powers up Dragon-type moves.",
     "Scarlet": "Powers up Dragon-type moves.",
-    "Violet": "Powers up Dragon-type moves."
+    "Violet": "Powers up Dragon-type moves.",
+    "generationIntroduced": "8"
   },
   "Drizzle": {
     "Ruby": "Summons rain in battle.",
@@ -953,7 +1007,8 @@
     "B.Diamond": "The Pok\u00e9mon makes it rain when it enters a battle.",
     "S.Pearl": "The Pok\u00e9mon makes it rain when it enters a battle.",
     "Scarlet": "The Pok\u00e9mon makes it rain when it enters a battle.",
-    "Violet": "The Pok\u00e9mon makes it rain when it enters a battle."
+    "Violet": "The Pok\u00e9mon makes it rain when it enters a battle.",
+    "generationIntroduced": "3"
   },
   "Drought": {
     "Ruby": "Summons sunlight in battle.",
@@ -983,7 +1038,8 @@
     "B.Diamond": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle.",
     "S.Pearl": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle.",
     "Scarlet": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle.",
-    "Violet": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle."
+    "Violet": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle.",
+    "generationIntroduced": "3"
   },
   "Dry Skin": {
     "Diamond": "Reduces HP if it is hot. Water restores HP.",
@@ -1008,7 +1064,8 @@
     "B.Diamond": "Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.",
     "S.Pearl": "Restores HP in rain or when hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.",
     "Scarlet": "Restores the Pok\u00e9mon\u2019s HP in rain or when it is hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.",
-    "Violet": "Restores the Pok\u00e9mon\u2019s HP in rain or when it is hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves."
+    "Violet": "Restores the Pok\u00e9mon\u2019s HP in rain or when it is hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves.",
+    "generationIntroduced": "4"
   },
   "Early Bird": {
     "Ruby": "Awakens quickly from sleep.",
@@ -1038,11 +1095,13 @@
     "B.Diamond": "The Pok\u00e9mon awakens from sleep twice as fast as other Pok\u00e9mon.",
     "S.Pearl": "The Pok\u00e9mon awakens from sleep twice as fast as other Pok\u00e9mon.",
     "Scarlet": "The Pok\u00e9mon awakens from sleep twice as fast as other Pok\u00e9mon.",
-    "Violet": "The Pok\u00e9mon awakens from sleep twice as fast as other Pok\u00e9mon."
+    "Violet": "The Pok\u00e9mon awakens from sleep twice as fast as other Pok\u00e9mon.",
+    "generationIntroduced": "3"
   },
   "Earth Eater": {
     "Scarlet": "If hit by a Ground-type move, the Pok\u00e9mon has its HP restored instead of taking damage.",
-    "Violet": "If hit by a Ground-type move, the Pok\u00e9mon has its HP restored instead of taking damage."
+    "Violet": "If hit by a Ground-type move, the Pok\u00e9mon has its HP restored instead of taking damage.",
+    "generationIntroduced": "9"
   },
   "Effect Spore": {
     "Ruby": "Leaves spores on contact.",
@@ -1072,7 +1131,8 @@
     "B.Diamond": "Contact with the Pok\u00e9mon may inflict poison, sleep, or paralysis on its attacker.",
     "S.Pearl": "Contact with the Pok\u00e9mon may inflict poison, sleep, or paralysis on its attacker.",
     "Scarlet": "Contact with the Pok\u00e9mon may inflict poison, sleep, or paralysis on the attacker.",
-    "Violet": "Contact with the Pok\u00e9mon may inflict poison, sleep, or paralysis on the attacker."
+    "Violet": "Contact with the Pok\u00e9mon may inflict poison, sleep, or paralysis on the attacker.",
+    "generationIntroduced": "3"
   },
   "Electric Surge": {
     "Sun": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle.",
@@ -1084,11 +1144,13 @@
     "B.Diamond": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle.",
     "S.Pearl": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle.",
     "Scarlet": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle.",
-    "Violet": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle."
+    "Violet": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle.",
+    "generationIntroduced": "7"
   },
   "Electromorphosis": {
     "Scarlet": "The Pok\u00e9mon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pok\u00e9mon uses.",
-    "Violet": "The Pok\u00e9mon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pok\u00e9mon uses."
+    "Violet": "The Pok\u00e9mon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pok\u00e9mon uses.",
+    "generationIntroduced": "9"
   },
   "Emergency Exit": {
     "Sun": "The Pok\u00e9mon, sensing danger, switches out when its HP becomes half or less.",
@@ -1100,7 +1162,8 @@
     "B.Diamond": "The Pok\u00e9mon, sensing danger, switches out when its HP becomes half or less.",
     "S.Pearl": "The Pok\u00e9mon, sensing danger, switches out when its HP becomes half or less.",
     "Scarlet": "The Pok\u00e9mon, sensing danger, switches out when its HP drops to half or less.",
-    "Violet": "The Pok\u00e9mon, sensing danger, switches out when its HP drops to half or less."
+    "Violet": "The Pok\u00e9mon, sensing danger, switches out when its HP drops to half or less.",
+    "generationIntroduced": "7"
   },
   "Fairy Aura": {
     "X": "Powers up each Pok\u00e9mon\u2019s Fairy-type moves.",
@@ -1116,7 +1179,8 @@
     "B.Diamond": "Powers up each Pok\u00e9mon\u2019s Fairy-type moves.",
     "S.Pearl": "Powers up each Pok\u00e9mon\u2019s Fairy-type moves.",
     "Scarlet": "Powers up the Fairy-type moves of all Pok\u00e9mon on the field.",
-    "Violet": "Powers up the Fairy-type moves of all Pok\u00e9mon on the field."
+    "Violet": "Powers up the Fairy-type moves of all Pok\u00e9mon on the field.",
+    "generationIntroduced": "6"
   },
   "Filter": {
     "Diamond": "Powers down supereffective moves.",
@@ -1141,7 +1205,8 @@
     "B.Diamond": "Reduces the power of supereffective attacks taken.",
     "S.Pearl": "Reduces the power of supereffective attacks taken.",
     "Scarlet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon.",
-    "Violet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon."
+    "Violet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon.",
+    "generationIntroduced": "4"
   },
   "Flame Body": {
     "Ruby": "Burns the foe on contact.",
@@ -1171,7 +1236,8 @@
     "B.Diamond": "Contact with the Pok\u00e9mon may burn the attacker.",
     "S.Pearl": "Contact with the Pok\u00e9mon may burn the attacker.",
     "Scarlet": "Contact with the Pok\u00e9mon may burn the attacker.",
-    "Violet": "Contact with the Pok\u00e9mon may burn the attacker."
+    "Violet": "Contact with the Pok\u00e9mon may burn the attacker.",
+    "generationIntroduced": "3"
   },
   "Flare Boost": {
     "Black": "Powers up special attacks when burned.",
@@ -1191,7 +1257,8 @@
     "B.Diamond": "Powers up special attacks when the Pok\u00e9mon is burned.",
     "S.Pearl": "Powers up special attacks when the Pok\u00e9mon is burned.",
     "Scarlet": "Powers up special moves when the Pok\u00e9mon is burned.",
-    "Violet": "Powers up special moves when the Pok\u00e9mon is burned."
+    "Violet": "Powers up special moves when the Pok\u00e9mon is burned.",
+    "generationIntroduced": "5"
   },
   "Flash Fire": {
     "Ruby": "Powers up if hit by fire.",
@@ -1221,7 +1288,8 @@
     "B.Diamond": "Powers up the Pok\u00e9mon\u2019s Fire-type moves if it\u2019s hit by one.",
     "S.Pearl": "Powers up the Pok\u00e9mon\u2019s Fire-type moves if it\u2019s hit by one.",
     "Scarlet": "If hit by a Fire-type move, the Pok\u00e9mon absorbs the flames and uses them to power up its own Fire-type moves.",
-    "Violet": "If hit by a Fire-type move, the Pok\u00e9mon absorbs the flames and uses them to power up its own Fire-type moves."
+    "Violet": "If hit by a Fire-type move, the Pok\u00e9mon absorbs the flames and uses them to power up its own Fire-type moves.",
+    "generationIntroduced": "3"
   },
   "Flower Gift": {
     "Diamond": "Powers up party Pok\u00e9mon when it is sunny.",
@@ -1246,7 +1314,8 @@
     "B.Diamond": "Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.",
     "S.Pearl": "Boosts the Attack and Sp. Def stats of itself and allies in harsh sunlight.",
     "Scarlet": "Boosts the Attack and Sp. Def stats of the Pok\u00e9mon and its allies in harsh sunlight.",
-    "Violet": "Boosts the Attack and Sp. Def stats of the Pok\u00e9mon and its allies in harsh sunlight."
+    "Violet": "Boosts the Attack and Sp. Def stats of the Pok\u00e9mon and its allies in harsh sunlight.",
+    "generationIntroduced": "4"
   },
   "Flower Veil": {
     "X": "Prevents lowering of ally Grass-type Pok\u00e9mon\u2019s stats.",
@@ -1262,7 +1331,8 @@
     "B.Diamond": "Ally Grass-type Pok\u00e9mon are protected from status conditions and the lowering of their stats.",
     "S.Pearl": "Ally Grass-type Pok\u00e9mon are protected from status conditions and the lowering of their stats.",
     "Scarlet": "Ally Grass-type Pok\u00e9mon are protected from status conditions and the lowering of their stats.",
-    "Violet": "Ally Grass-type Pok\u00e9mon are protected from status conditions and the lowering of their stats."
+    "Violet": "Ally Grass-type Pok\u00e9mon are protected from status conditions and the lowering of their stats.",
+    "generationIntroduced": "6"
   },
   "Fluffy": {
     "Sun": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.",
@@ -1274,7 +1344,8 @@
     "B.Diamond": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.",
     "S.Pearl": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.",
     "Scarlet": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.",
-    "Violet": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves."
+    "Violet": "Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves.",
+    "generationIntroduced": "7"
   },
   "Forecast": {
     "Ruby": "Changes with the weather.",
@@ -1304,7 +1375,8 @@
     "B.Diamond": "The Pok\u00e9mon transforms with the weather to change its type to Water, Fire, or Ice.",
     "S.Pearl": "The Pok\u00e9mon transforms with the weather to change its type to Water, Fire, or Ice.",
     "Scarlet": "The Pok\u00e9mon transforms with the weather to change its type to Water, Fire, or Ice.",
-    "Violet": "The Pok\u00e9mon transforms with the weather to change its type to Water, Fire, or Ice."
+    "Violet": "The Pok\u00e9mon transforms with the weather to change its type to Water, Fire, or Ice.",
+    "generationIntroduced": "3"
   },
   "Forewarn": {
     "Diamond": "Determines what moves the foe has.",
@@ -1329,7 +1401,8 @@
     "B.Diamond": "When it enters a battle, the Pok\u00e9mon can tell one of the moves an opposing Pok\u00e9mon has.",
     "S.Pearl": "When it enters a battle, the Pok\u00e9mon can tell one of the moves an opposing Pok\u00e9mon has.",
     "Scarlet": "When it enters a battle, the Pok\u00e9mon can tell one of the moves an opposing Pok\u00e9mon has.",
-    "Violet": "When it enters a battle, the Pok\u00e9mon can tell one of the moves an opposing Pok\u00e9mon has."
+    "Violet": "When it enters a battle, the Pok\u00e9mon can tell one of the moves an opposing Pok\u00e9mon has.",
+    "generationIntroduced": "4"
   },
   "Friend Guard": {
     "Black": "Reduces damage done to allies.",
@@ -1349,7 +1422,8 @@
     "B.Diamond": "Reduces damage done to allies.",
     "S.Pearl": "Reduces damage done to allies.",
     "Scarlet": "Reduces damage dealt to allies.",
-    "Violet": "Reduces damage dealt to allies."
+    "Violet": "Reduces damage dealt to allies.",
+    "generationIntroduced": "5"
   },
   "Frisk": {
     "Diamond": "The Pok\u00e9mon can check the foe\u2019s held item.",
@@ -1374,7 +1448,8 @@
     "B.Diamond": "When it enters a battle, the Pok\u00e9mon can check an opposing Pok\u00e9mon\u2019s held item.",
     "S.Pearl": "When it enters a battle, the Pok\u00e9mon can check an opposing Pok\u00e9mon\u2019s held item.",
     "Scarlet": "When it enters a battle, the Pok\u00e9mon can check an opposing Pok\u00e9mon\u2019s held item.",
-    "Violet": "When it enters a battle, the Pok\u00e9mon can check an opposing Pok\u00e9mon\u2019s held item."
+    "Violet": "When it enters a battle, the Pok\u00e9mon can check an opposing Pok\u00e9mon\u2019s held item.",
+    "generationIntroduced": "4"
   },
   "Full Metal Body": {
     "Sun": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
@@ -1386,7 +1461,8 @@
     "B.Diamond": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
     "S.Pearl": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
     "Scarlet": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
-    "Violet": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats."
+    "Violet": "Prevents other Pok\u00e9mon\u2019s moves or Abilities from lowering the Pok\u00e9mon\u2019s stats.",
+    "generationIntroduced": "7"
   },
   "Fur Coat": {
     "X": "Halves damage from physical moves.",
@@ -1402,7 +1478,8 @@
     "B.Diamond": "Halves the damage from physical moves.",
     "S.Pearl": "Halves the damage from physical moves.",
     "Scarlet": "Halves the damage from physical moves.",
-    "Violet": "Halves the damage from physical moves."
+    "Violet": "Halves the damage from physical moves.",
+    "generationIntroduced": "6"
   },
   "Gale Wings": {
     "X": "Gives priority to Flying-type moves.",
@@ -1418,7 +1495,8 @@
     "B.Diamond": "Gives priority to Flying-type moves when the Pok\u00e9mon\u2019s HP is full.",
     "S.Pearl": "Gives priority to Flying-type moves when the Pok\u00e9mon\u2019s HP is full.",
     "Scarlet": "Gives priority to the Pok\u00e9mon\u2019s Flying-type moves while its HP is full.",
-    "Violet": "Gives priority to the Pok\u00e9mon\u2019s Flying-type moves while its HP is full."
+    "Violet": "Gives priority to the Pok\u00e9mon\u2019s Flying-type moves while its HP is full.",
+    "generationIntroduced": "6"
   },
   "Galvanize": {
     "Sun": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
@@ -1430,7 +1508,8 @@
     "B.Diamond": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
     "S.Pearl": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
     "Scarlet": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
-    "Violet": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little."
+    "Violet": "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
+    "generationIntroduced": "7"
   },
   "Gluttony": {
     "Diamond": "Encourages the early use of a held Berry.",
@@ -1455,11 +1534,13 @@
     "B.Diamond": "Makes the Pok\u00e9mon eat a held Berry when its HP drops to half or less, which is sooner than usual.",
     "S.Pearl": "Makes the Pok\u00e9mon eat a held Berry when its HP drops to half or less, which is sooner than usual.",
     "Scarlet": "If the Pok\u00e9mon is holding a Berry to be eaten when its HP is low, it will instead eat the Berry when its HP drops to half or less.",
-    "Violet": "If the Pok\u00e9mon is holding a Berry to be eaten when its HP is low, it will instead eat the Berry when its HP drops to half or less."
+    "Violet": "If the Pok\u00e9mon is holding a Berry to be eaten when its HP is low, it will instead eat the Berry when its HP drops to half or less.",
+    "generationIntroduced": "4"
   },
   "Good as Gold": {
     "Scarlet": "A body of pure, solid gold gives the Pok\u00e9mon full immunity to other Pok\u00e9mon\u2019s status moves.",
-    "Violet": "A body of pure, solid gold gives the Pok\u00e9mon full immunity to other Pok\u00e9mon\u2019s status moves."
+    "Violet": "A body of pure, solid gold gives the Pok\u00e9mon full immunity to other Pok\u00e9mon\u2019s status moves.",
+    "generationIntroduced": "9"
   },
   "Gooey": {
     "X": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
@@ -1475,7 +1556,8 @@
     "B.Diamond": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
     "S.Pearl": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
     "Scarlet": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
-    "Violet": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat."
+    "Violet": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
+    "generationIntroduced": "6"
   },
   "Gorilla Tactics": {
     "Sword": "Boosts the Pok\u00e9mon\u2019s Attack stat but only allows the use of the first selected move.",
@@ -1483,7 +1565,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Attack stat but only allows the use of the first selected move.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Attack stat but only allows the use of the first selected move.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Attack stat but only allows the use of the first selected move.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat but only allows the use of the first selected move."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat but only allows the use of the first selected move.",
+    "generationIntroduced": "8"
   },
   "Grass Pelt": {
     "X": "Boosts the Defense stat in Grassy Terrain.",
@@ -1499,7 +1582,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Defense stat on Grassy Terrain.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Defense stat on Grassy Terrain.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Defense stat on Grassy Terrain.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Defense stat on Grassy Terrain."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Defense stat on Grassy Terrain.",
+    "generationIntroduced": "6"
   },
   "Grassy Surge": {
     "Sun": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle.",
@@ -1511,7 +1595,8 @@
     "B.Diamond": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle.",
     "S.Pearl": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle.",
     "Scarlet": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle.",
-    "Violet": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle."
+    "Violet": "Turns the ground into Grassy Terrain when the Pok\u00e9mon enters a battle.",
+    "generationIntroduced": "7"
   },
   "Grim Neigh": {
     "Sword": "When the Pok\u00e9mon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.",
@@ -1519,11 +1604,13 @@
     "B.Diamond": "When the Pok\u00e9mon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.",
     "S.Pearl": "When the Pok\u00e9mon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.",
     "Scarlet": "When the Pok\u00e9mon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.",
-    "Violet": "When the Pok\u00e9mon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat."
+    "Violet": "When the Pok\u00e9mon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.",
+    "generationIntroduced": "8"
   },
   "Guard Dog": {
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Attack stat if intimidated. Moves and items that would force the Pok\u00e9mon to switch out also fail to work.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat if intimidated. Moves and items that would force the Pok\u00e9mon to switch out also fail to work."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat if intimidated. Moves and items that would force the Pok\u00e9mon to switch out also fail to work.",
+    "generationIntroduced": "9"
   },
   "Gulp Missile": {
     "Sword": "When the Pok\u00e9mon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.",
@@ -1531,7 +1618,8 @@
     "B.Diamond": "When the Pok\u00e9mon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.",
     "S.Pearl": "When the Pok\u00e9mon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.",
     "Scarlet": "When the Pok\u00e9mon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.",
-    "Violet": "When the Pok\u00e9mon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack."
+    "Violet": "When the Pok\u00e9mon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack.",
+    "generationIntroduced": "8"
   },
   "Guts": {
     "Ruby": "Ups ATTACK if suffering.",
@@ -1561,11 +1649,13 @@
     "B.Diamond": "It\u2019s so gutsy that having a status condition boosts the Pok\u00e9mon\u2019s Attack stat.",
     "S.Pearl": "It\u2019s so gutsy that having a status condition boosts the Pok\u00e9mon\u2019s Attack stat.",
     "Scarlet": "It\u2019s so gutsy that having a status condition boosts the Pok\u00e9mon\u2019s Attack stat.",
-    "Violet": "It\u2019s so gutsy that having a status condition boosts the Pok\u00e9mon\u2019s Attack stat."
+    "Violet": "It\u2019s so gutsy that having a status condition boosts the Pok\u00e9mon\u2019s Attack stat.",
+    "generationIntroduced": "3"
   },
   "Hadron Engine": {
     "Scarlet": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle. The futuristic engine within the Pok\u00e9mon also boosts its Sp. Atk stat on Electric Terrain.",
-    "Violet": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle. The futuristic engine within the Pok\u00e9mon also boosts its Sp. Atk stat on Electric Terrain."
+    "Violet": "Turns the ground into Electric Terrain when the Pok\u00e9mon enters a battle. The futuristic engine within the Pok\u00e9mon also boosts its Sp. Atk stat on Electric Terrain.",
+    "generationIntroduced": "9"
   },
   "Harvest": {
     "Black": "May create another Berry after one is used.",
@@ -1585,7 +1675,8 @@
     "B.Diamond": "May create another Berry after one is used.",
     "S.Pearl": "May create another Berry after one is used.",
     "Scarlet": "May create another Berry after one is used.",
-    "Violet": "May create another Berry after one is used."
+    "Violet": "May create another Berry after one is used.",
+    "generationIntroduced": "5"
   },
   "Healer": {
     "Black": "May heal an ally\u2019s status conditions.",
@@ -1605,7 +1696,8 @@
     "B.Diamond": "Sometimes heals an ally\u2019s status condition.",
     "S.Pearl": "Sometimes heals an ally\u2019s status condition.",
     "Scarlet": "Sometimes cures the status conditions of the Pok\u00e9mon\u2019s allies.",
-    "Violet": "Sometimes cures the status conditions of the Pok\u00e9mon\u2019s allies."
+    "Violet": "Sometimes cures the status conditions of the Pok\u00e9mon\u2019s allies.",
+    "generationIntroduced": "5"
   },
   "Heatproof": {
     "Diamond": "Weakens the power of Fire-type moves.",
@@ -1630,7 +1722,8 @@
     "B.Diamond": "The heatproof body of the Pok\u00e9mon halves the damage from Fire-type moves that hit it.",
     "S.Pearl": "The heatproof body of the Pok\u00e9mon halves the damage from Fire-type moves that hit it.",
     "Scarlet": "The Pok\u00e9mon\u2019s heatproof body halves the damage taken from Fire-type moves.",
-    "Violet": "The Pok\u00e9mon\u2019s heatproof body halves the damage taken from Fire-type moves."
+    "Violet": "The Pok\u00e9mon\u2019s heatproof body halves the damage taken from Fire-type moves.",
+    "generationIntroduced": "4"
   },
   "Heavy Metal": {
     "Black": "Doubles the Pok\u00e9mon\u2019s weight.",
@@ -1650,7 +1743,8 @@
     "B.Diamond": "Doubles the Pok\u00e9mon\u2019s weight.",
     "S.Pearl": "Doubles the Pok\u00e9mon\u2019s weight.",
     "Scarlet": "Doubles the Pok\u00e9mon\u2019s weight.",
-    "Violet": "Doubles the Pok\u00e9mon\u2019s weight."
+    "Violet": "Doubles the Pok\u00e9mon\u2019s weight.",
+    "generationIntroduced": "5"
   },
   "Honey Gather": {
     "Diamond": "The Pok\u00e9mon may gather Honey from somewhere.",
@@ -1675,7 +1769,8 @@
     "B.Diamond": "The Pok\u00e9mon may gather Honey after a battle.",
     "S.Pearl": "The Pok\u00e9mon may gather Honey after a battle.",
     "Scarlet": "The Pok\u00e9mon may gather Honey after a battle.",
-    "Violet": "The Pok\u00e9mon may gather Honey after a battle."
+    "Violet": "The Pok\u00e9mon may gather Honey after a battle.",
+    "generationIntroduced": "4"
   },
   "Huge Power": {
     "Ruby": "Raises ATTACK.",
@@ -1705,7 +1800,8 @@
     "B.Diamond": "Doubles the Pok\u00e9mon\u2019s Attack stat.",
     "S.Pearl": "Doubles the Pok\u00e9mon\u2019s Attack stat.",
     "Scarlet": "Doubles the Pok\u00e9mon\u2019s Attack stat.",
-    "Violet": "Doubles the Pok\u00e9mon\u2019s Attack stat."
+    "Violet": "Doubles the Pok\u00e9mon\u2019s Attack stat.",
+    "generationIntroduced": "3"
   },
   "Hunger Switch": {
     "Sword": "The Pok\u00e9mon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.",
@@ -1713,7 +1809,8 @@
     "B.Diamond": "The Pok\u00e9mon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.",
     "S.Pearl": "The Pok\u00e9mon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.",
     "Scarlet": "The Pok\u00e9mon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of every turn.",
-    "Violet": "The Pok\u00e9mon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of every turn."
+    "Violet": "The Pok\u00e9mon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of every turn.",
+    "generationIntroduced": "8"
   },
   "Hustle": {
     "Ruby": "Trades accuracy for power.",
@@ -1743,7 +1840,8 @@
     "B.Diamond": "Boosts the Attack stat, but lowers accuracy.",
     "S.Pearl": "Boosts the Attack stat, but lowers accuracy.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Attack stat but lowers its accuracy.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat but lowers its accuracy."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat but lowers its accuracy.",
+    "generationIntroduced": "3"
   },
   "Hydration": {
     "Diamond": "Heals status problems if it is raining.",
@@ -1768,7 +1866,8 @@
     "B.Diamond": "Heals status conditions if it\u2019s raining.",
     "S.Pearl": "Heals status conditions if it\u2019s raining.",
     "Scarlet": "Cures the Pok\u00e9mon\u2019s status conditions in rain.",
-    "Violet": "Cures the Pok\u00e9mon\u2019s status conditions in rain."
+    "Violet": "Cures the Pok\u00e9mon\u2019s status conditions in rain.",
+    "generationIntroduced": "4"
   },
   "Hyper Cutter": {
     "Ruby": "Prevents ATTACK reduction.",
@@ -1798,7 +1897,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s proud of its powerful pincers. They prevent other Pok\u00e9mon from lowering its Attack stat.",
     "S.Pearl": "The Pok\u00e9mon\u2019s proud of its powerful pincers. They prevent other Pok\u00e9mon from lowering its Attack stat.",
     "Scarlet": "The Pok\u00e9mon\u2019s prized, mighty pincers prevent other Pok\u00e9mon from lowering its Attack stat.",
-    "Violet": "The Pok\u00e9mon\u2019s prized, mighty pincers prevent other Pok\u00e9mon from lowering its Attack stat."
+    "Violet": "The Pok\u00e9mon\u2019s prized, mighty pincers prevent other Pok\u00e9mon from lowering its Attack stat.",
+    "generationIntroduced": "3"
   },
   "Ice Body": {
     "Diamond": "The Pok\u00e9mon regains HP in a hailstorm.",
@@ -1823,7 +1923,8 @@
     "B.Diamond": "The Pok\u00e9mon gradually regains HP in a hailstorm.",
     "S.Pearl": "The Pok\u00e9mon gradually regains HP in a hailstorm.",
     "Scarlet": "The Pok\u00e9mon gradually regains HP in snow.",
-    "Violet": "The Pok\u00e9mon gradually regains HP in snow."
+    "Violet": "The Pok\u00e9mon gradually regains HP in snow.",
+    "generationIntroduced": "4"
   },
   "Ice Face": {
     "Sword": "The Pok\u00e9mon\u2019s ice head can take a physical attack as a substitute, but the attack also changes the Pok\u00e9mon\u2019s appearance. The ice will be restored when it hails.",
@@ -1831,7 +1932,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s ice head can take a physical attack as a substitute, but the attack also changes the Pok\u00e9mon\u2019s appearance. The ice will be restored when it hails.",
     "S.Pearl": "The Pok\u00e9mon\u2019s ice head can take a physical attack as a substitute, but the attack also changes the Pok\u00e9mon\u2019s appearance. The ice will be restored when it hails.",
     "Scarlet": "The Pok\u00e9mon\u2019s ice head can take a physical attack as a substitute, but the attack also changes the Pok\u00e9mon\u2019s appearance. The ice will be restored when it snows.",
-    "Violet": "The Pok\u00e9mon\u2019s ice head can take a physical attack as a substitute, but the attack also changes the Pok\u00e9mon\u2019s appearance. The ice will be restored when it snows."
+    "Violet": "The Pok\u00e9mon\u2019s ice head can take a physical attack as a substitute, but the attack also changes the Pok\u00e9mon\u2019s appearance. The ice will be restored when it snows.",
+    "generationIntroduced": "8"
   },
   "Ice Scales": {
     "Sword": "The Pok\u00e9mon is protected by ice scales, which halve the damage taken from special moves.",
@@ -1839,7 +1941,8 @@
     "B.Diamond": "The Pok\u00e9mon is protected by ice scales, which halve the damage taken from special moves.",
     "S.Pearl": "The Pok\u00e9mon is protected by ice scales, which halve the damage taken from special moves.",
     "Scarlet": "The Pok\u00e9mon is protected by ice scales, which halve the damage taken from special moves.",
-    "Violet": "The Pok\u00e9mon is protected by ice scales, which halve the damage taken from special moves."
+    "Violet": "The Pok\u00e9mon is protected by ice scales, which halve the damage taken from special moves.",
+    "generationIntroduced": "8"
   },
   "Illuminate": {
     "Ruby": "Encounter rate increases.",
@@ -1869,7 +1972,8 @@
     "B.Diamond": "Raises the likelihood of meeting wild Pok\u00e9mon by illuminating the surroundings.",
     "S.Pearl": "Raises the likelihood of meeting wild Pok\u00e9mon by illuminating the surroundings.",
     "Scarlet": "Raises the likelihood of meeting wild Pok\u00e9mon by illuminating the surroundings.",
-    "Violet": "Raises the likelihood of meeting wild Pok\u00e9mon by illuminating the surroundings."
+    "Violet": "Raises the likelihood of meeting wild Pok\u00e9mon by illuminating the surroundings.",
+    "generationIntroduced": "3"
   },
   "Illusion": {
     "Black": "Comes out disguised as the Pok\u00e9mon in back.",
@@ -1889,7 +1993,8 @@
     "B.Diamond": "Comes out disguised as the Pok\u00e9mon in the party\u2019s last spot.",
     "S.Pearl": "Comes out disguised as the Pok\u00e9mon in the party\u2019s last spot.",
     "Scarlet": "The Pok\u00e9mon fools opponents by entering battle disguised as the last Pok\u00e9mon in its Trainer\u2019s party.",
-    "Violet": "The Pok\u00e9mon fools opponents by entering battle disguised as the last Pok\u00e9mon in its Trainer\u2019s party."
+    "Violet": "The Pok\u00e9mon fools opponents by entering battle disguised as the last Pok\u00e9mon in its Trainer\u2019s party.",
+    "generationIntroduced": "5"
   },
   "Immunity": {
     "Ruby": "Prevents poisoning.",
@@ -1919,7 +2024,8 @@
     "B.Diamond": "The immune system of the Pok\u00e9mon prevents it from getting poisoned.",
     "S.Pearl": "The immune system of the Pok\u00e9mon prevents it from getting poisoned.",
     "Scarlet": "The Pok\u00e9mon\u2019s immune system prevents it from being poisoned.",
-    "Violet": "The Pok\u00e9mon\u2019s immune system prevents it from being poisoned."
+    "Violet": "The Pok\u00e9mon\u2019s immune system prevents it from being poisoned.",
+    "generationIntroduced": "3"
   },
   "Imposter": {
     "Black": "It transforms itself into the Pok\u00e9mon it is facing.",
@@ -1939,7 +2045,8 @@
     "B.Diamond": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it\u2019s facing.",
     "S.Pearl": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it\u2019s facing.",
     "Scarlet": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it\u2019s facing.",
-    "Violet": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it\u2019s facing."
+    "Violet": "The Pok\u00e9mon transforms itself into the Pok\u00e9mon it\u2019s facing.",
+    "generationIntroduced": "5"
   },
   "Infiltrator": {
     "Black": "Passes through the foe\u2019s barrier and strikes.",
@@ -1959,7 +2066,8 @@
     "B.Diamond": "Passes through the opposing Pok\u00e9mon\u2019s barrier, substitute, and the like and strikes.",
     "S.Pearl": "Passes through the opposing Pok\u00e9mon\u2019s barrier, substitute, and the like and strikes.",
     "Scarlet": "The Pok\u00e9mon\u2019s moves are unaffected by the target\u2019s barriers, substitutes, and the like.",
-    "Violet": "The Pok\u00e9mon\u2019s moves are unaffected by the target\u2019s barriers, substitutes, and the like."
+    "Violet": "The Pok\u00e9mon\u2019s moves are unaffected by the target\u2019s barriers, substitutes, and the like.",
+    "generationIntroduced": "5"
   },
   "Innards Out": {
     "Sun": "Damages the attacker landing the finishing hit by the amount equal to its last HP.",
@@ -1971,7 +2079,8 @@
     "B.Diamond": "Damages the attacker landing the finishing hit by the amount equal to its last HP.",
     "S.Pearl": "Damages the attacker landing the finishing hit by the amount equal to its last HP.",
     "Scarlet": "When the Pok\u00e9mon is knocked out, it damages its attacker by the amount equal to the HP it had left before it was hit.",
-    "Violet": "When the Pok\u00e9mon is knocked out, it damages its attacker by the amount equal to the HP it had left before it was hit."
+    "Violet": "When the Pok\u00e9mon is knocked out, it damages its attacker by the amount equal to the HP it had left before it was hit.",
+    "generationIntroduced": "7"
   },
   "Inner Focus": {
     "Ruby": "Prevents flinching.",
@@ -2001,7 +2110,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s intensely focused, and that protects the Pok\u00e9mon from flinching.",
     "S.Pearl": "The Pok\u00e9mon\u2019s intensely focused, and that protects the Pok\u00e9mon from flinching.",
     "Scarlet": "The Pok\u00e9mon\u2019s intense focus prevents it from flinching or being affected by Intimidate.",
-    "Violet": "The Pok\u00e9mon\u2019s intense focus prevents it from flinching or being affected by Intimidate."
+    "Violet": "The Pok\u00e9mon\u2019s intense focus prevents it from flinching or being affected by Intimidate.",
+    "generationIntroduced": "3"
   },
   "Insomnia": {
     "Ruby": "Prevents sleep.",
@@ -2031,7 +2141,8 @@
     "B.Diamond": "The Pok\u00e9mon is suffering from insomnia and cannot fall asleep.",
     "S.Pearl": "The Pok\u00e9mon is suffering from insomnia and cannot fall asleep.",
     "Scarlet": "The Pok\u00e9mon\u2019s insomnia prevents it from falling asleep.",
-    "Violet": "The Pok\u00e9mon\u2019s insomnia prevents it from falling asleep."
+    "Violet": "The Pok\u00e9mon\u2019s insomnia prevents it from falling asleep.",
+    "generationIntroduced": "3"
   },
   "Intimidate": {
     "Ruby": "Lowers the foe\u2019s ATTACK.",
@@ -2061,7 +2172,8 @@
     "B.Diamond": "The Pok\u00e9mon intimidates opposing Pok\u00e9mon upon entering battle, lowering their Attack stat.",
     "S.Pearl": "The Pok\u00e9mon intimidates opposing Pok\u00e9mon upon entering battle, lowering their Attack stat.",
     "Scarlet": "When the Pok\u00e9mon enters a battle, it intimidates opposing Pok\u00e9mon and makes them cower, lowering their Attack stats.",
-    "Violet": "When the Pok\u00e9mon enters a battle, it intimidates opposing Pok\u00e9mon and makes them cower, lowering their Attack stats."
+    "Violet": "When the Pok\u00e9mon enters a battle, it intimidates opposing Pok\u00e9mon and makes them cower, lowering their Attack stats.",
+    "generationIntroduced": "3"
   },
   "Intrepid Sword": {
     "Sword": "Boosts the Pok\u00e9mon\u2019s Attack stat when the Pok\u00e9mon enters a battle.",
@@ -2069,7 +2181,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Attack stat when the Pok\u00e9mon enters a battle.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Attack stat when the Pok\u00e9mon enters a battle.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Attack stat the first time the Pok\u00e9mon enters a battle.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat the first time the Pok\u00e9mon enters a battle."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat the first time the Pok\u00e9mon enters a battle.",
+    "generationIntroduced": "8"
   },
   "Iron Barbs": {
     "Black": "Inflicts damage to the Pok\u00e9mon on contact.",
@@ -2089,7 +2202,8 @@
     "B.Diamond": "Inflicts damage on the attacker upon contact with iron barbs.",
     "S.Pearl": "Inflicts damage on the attacker upon contact with iron barbs.",
     "Scarlet": "The Pok\u00e9mon\u2019s iron barbs damage the attacker if it makes direct contact.",
-    "Violet": "The Pok\u00e9mon\u2019s iron barbs damage the attacker if it makes direct contact."
+    "Violet": "The Pok\u00e9mon\u2019s iron barbs damage the attacker if it makes direct contact.",
+    "generationIntroduced": "5"
   },
   "Iron Fist": {
     "Diamond": "Boosts the power of punching moves.",
@@ -2114,7 +2228,8 @@
     "B.Diamond": "Powers up punching moves.",
     "S.Pearl": "Powers up punching moves.",
     "Scarlet": "Powers up punching moves.",
-    "Violet": "Powers up punching moves."
+    "Violet": "Powers up punching moves.",
+    "generationIntroduced": "4"
   },
   "Justified": {
     "Black": "Raises Attack when hit by a Dark-type move.",
@@ -2134,7 +2249,8 @@
     "B.Diamond": "Being hit by a Dark-type move boosts the Attack stat of the Pok\u00e9mon, for justice.",
     "S.Pearl": "Being hit by a Dark-type move boosts the Attack stat of the Pok\u00e9mon, for justice.",
     "Scarlet": "When the Pok\u00e9mon is hit by a Dark-type attack, its Attack stat is boosted by its sense of justice.",
-    "Violet": "When the Pok\u00e9mon is hit by a Dark-type attack, its Attack stat is boosted by its sense of justice."
+    "Violet": "When the Pok\u00e9mon is hit by a Dark-type attack, its Attack stat is boosted by its sense of justice.",
+    "generationIntroduced": "5"
   },
   "Keen Eye": {
     "Ruby": "Prevents loss of accuracy.",
@@ -2164,7 +2280,8 @@
     "B.Diamond": "Keen eyes prevent other Pok\u00e9mon from lowering this Pok\u00e9mon\u2019s accuracy.",
     "S.Pearl": "Keen eyes prevent other Pok\u00e9mon from lowering this Pok\u00e9mon\u2019s accuracy.",
     "Scarlet": "The Pok\u00e9mon\u2019s keen eyes prevent its accuracy from being lowered.",
-    "Violet": "The Pok\u00e9mon\u2019s keen eyes prevent its accuracy from being lowered."
+    "Violet": "The Pok\u00e9mon\u2019s keen eyes prevent its accuracy from being lowered.",
+    "generationIntroduced": "3"
   },
   "Klutz": {
     "Diamond": "The Pok\u00e9mon can\u2019t use any held items.",
@@ -2189,7 +2306,8 @@
     "B.Diamond": "The Pok\u00e9mon can\u2019t use any held items.",
     "S.Pearl": "The Pok\u00e9mon can\u2019t use any held items.",
     "Scarlet": "The Pok\u00e9mon can\u2019t use any held items.",
-    "Violet": "The Pok\u00e9mon can\u2019t use any held items."
+    "Violet": "The Pok\u00e9mon can\u2019t use any held items.",
+    "generationIntroduced": "4"
   },
   "Leaf Guard": {
     "Diamond": "Prevents status problems in sunny weather.",
@@ -2214,7 +2332,8 @@
     "B.Diamond": "Prevents status conditions in harsh sunlight.",
     "S.Pearl": "Prevents status conditions in harsh sunlight.",
     "Scarlet": "Prevents status conditions in harsh sunlight.",
-    "Violet": "Prevents status conditions in harsh sunlight."
+    "Violet": "Prevents status conditions in harsh sunlight.",
+    "generationIntroduced": "4"
   },
   "Levitate": {
     "Ruby": "Not hit by GROUND attacks.",
@@ -2244,7 +2363,8 @@
     "B.Diamond": "By floating in the air, the Pok\u00e9mon receives full immunity to all Ground-type moves.",
     "S.Pearl": "By floating in the air, the Pok\u00e9mon receives full immunity to all Ground-type moves.",
     "Scarlet": "By floating in the air, the Pok\u00e9mon receives full immunity to all Ground-type moves.",
-    "Violet": "By floating in the air, the Pok\u00e9mon receives full immunity to all Ground-type moves."
+    "Violet": "By floating in the air, the Pok\u00e9mon receives full immunity to all Ground-type moves.",
+    "generationIntroduced": "3"
   },
   "Libero": {
     "Sword": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use.",
@@ -2252,7 +2372,8 @@
     "B.Diamond": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use.",
     "S.Pearl": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use.",
     "Scarlet": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use. This works only once each time the Pok\u00e9mon enters battle.",
-    "Violet": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use. This works only once each time the Pok\u00e9mon enters battle."
+    "Violet": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use. This works only once each time the Pok\u00e9mon enters battle.",
+    "generationIntroduced": "8"
   },
   "Light Metal": {
     "Black": "Halves the Pok\u00e9mon\u2019s weight.",
@@ -2272,7 +2393,8 @@
     "B.Diamond": "Halves the Pok\u00e9mon\u2019s weight.",
     "S.Pearl": "Halves the Pok\u00e9mon\u2019s weight.",
     "Scarlet": "Halves the Pok\u00e9mon\u2019s weight.",
-    "Violet": "Halves the Pok\u00e9mon\u2019s weight."
+    "Violet": "Halves the Pok\u00e9mon\u2019s weight.",
+    "generationIntroduced": "5"
   },
   "Lightning Rod": {
     "Ruby": "Draws electrical moves.",
@@ -2302,7 +2424,8 @@
     "B.Diamond": "The Pok\u00e9mon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.",
     "S.Pearl": "The Pok\u00e9mon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.",
     "Scarlet": "The Pok\u00e9mon draws in all Electric-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted.",
-    "Violet": "The Pok\u00e9mon draws in all Electric-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted."
+    "Violet": "The Pok\u00e9mon draws in all Electric-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted.",
+    "generationIntroduced": "3"
   },
   "Limber": {
     "Ruby": "Prevents paralysis.",
@@ -2332,11 +2455,13 @@
     "B.Diamond": "Its limber body protects the Pok\u00e9mon from paralysis.",
     "S.Pearl": "Its limber body protects the Pok\u00e9mon from paralysis.",
     "Scarlet": "The Pok\u00e9mon\u2019s limber body prevents it from being paralyzed.",
-    "Violet": "The Pok\u00e9mon\u2019s limber body prevents it from being paralyzed."
+    "Violet": "The Pok\u00e9mon\u2019s limber body prevents it from being paralyzed.",
+    "generationIntroduced": "3"
   },
   "Lingering Aroma": {
     "Scarlet": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Lingering Aroma.",
-    "Violet": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Lingering Aroma."
+    "Violet": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Lingering Aroma.",
+    "generationIntroduced": "9"
   },
   "Liquid Ooze": {
     "Ruby": "Draining causes injury.",
@@ -2366,7 +2491,8 @@
     "B.Diamond": "The oozed liquid has a strong stench, which damages attackers using any draining move.",
     "S.Pearl": "The oozed liquid has a strong stench, which damages attackers using any draining move.",
     "Scarlet": "The strong stench of the Pok\u00e9mon\u2019s oozed liquid damages attackers that use HP-draining moves.",
-    "Violet": "The strong stench of the Pok\u00e9mon\u2019s oozed liquid damages attackers that use HP-draining moves."
+    "Violet": "The strong stench of the Pok\u00e9mon\u2019s oozed liquid damages attackers that use HP-draining moves.",
+    "generationIntroduced": "3"
   },
   "Liquid Voice": {
     "Sun": "All sound-based moves become Water-type moves.",
@@ -2378,7 +2504,8 @@
     "B.Diamond": "All sound-based moves become Water-type moves.",
     "S.Pearl": "All sound-based moves become Water-type moves.",
     "Scarlet": "Sound-based moves become Water-type moves.",
-    "Violet": "Sound-based moves become Water-type moves."
+    "Violet": "Sound-based moves become Water-type moves.",
+    "generationIntroduced": "7"
   },
   "Long Reach": {
     "Sun": "The Pok\u00e9mon uses its moves without making contact with the target.",
@@ -2390,7 +2517,8 @@
     "B.Diamond": "The Pok\u00e9mon uses its moves without making contact with the target.",
     "S.Pearl": "The Pok\u00e9mon uses its moves without making contact with the target.",
     "Scarlet": "The Pok\u00e9mon uses its moves without making contact with the target.",
-    "Violet": "The Pok\u00e9mon uses its moves without making contact with the target."
+    "Violet": "The Pok\u00e9mon uses its moves without making contact with the target.",
+    "generationIntroduced": "7"
   },
   "Magic Bounce": {
     "Black": "Reflects status-changing moves.",
@@ -2410,7 +2538,8 @@
     "B.Diamond": "Reflects status moves instead of getting hit by them.",
     "S.Pearl": "Reflects status moves instead of getting hit by them.",
     "Scarlet": "The Pok\u00e9mon reflects status moves instead of getting hit by them.",
-    "Violet": "The Pok\u00e9mon reflects status moves instead of getting hit by them."
+    "Violet": "The Pok\u00e9mon reflects status moves instead of getting hit by them.",
+    "generationIntroduced": "5"
   },
   "Magic Guard": {
     "Diamond": "The Pok\u00e9mon only takes damage from attacks.",
@@ -2435,7 +2564,8 @@
     "B.Diamond": "The Pok\u00e9mon only takes damage from attacks.",
     "S.Pearl": "The Pok\u00e9mon only takes damage from attacks.",
     "Scarlet": "The Pok\u00e9mon only takes damage from attacks.",
-    "Violet": "The Pok\u00e9mon only takes damage from attacks."
+    "Violet": "The Pok\u00e9mon only takes damage from attacks.",
+    "generationIntroduced": "4"
   },
   "Magician": {
     "X": "The Pok\u00e9mon steals the held item of a Pok\u00e9mon it hits with a move.",
@@ -2451,7 +2581,8 @@
     "B.Diamond": "The Pok\u00e9mon steals the held item of a Pok\u00e9mon it hits with a move.",
     "S.Pearl": "The Pok\u00e9mon steals the held item of a Pok\u00e9mon it hits with a move.",
     "Scarlet": "The Pok\u00e9mon steals the held item from any target it hits with a move.",
-    "Violet": "The Pok\u00e9mon steals the held item from any target it hits with a move."
+    "Violet": "The Pok\u00e9mon steals the held item from any target it hits with a move.",
+    "generationIntroduced": "6"
   },
   "Magma Armor": {
     "Ruby": "Prevents freezing.",
@@ -2481,7 +2612,8 @@
     "B.Diamond": "The Pok\u00e9mon is covered with hot magma, which prevents the Pok\u00e9mon from becoming frozen.",
     "S.Pearl": "The Pok\u00e9mon is covered with hot magma, which prevents the Pok\u00e9mon from becoming frozen.",
     "Scarlet": "The Pok\u00e9mon\u2019s hot magma coating prevents it from being frozen.",
-    "Violet": "The Pok\u00e9mon\u2019s hot magma coating prevents it from being frozen."
+    "Violet": "The Pok\u00e9mon\u2019s hot magma coating prevents it from being frozen.",
+    "generationIntroduced": "3"
   },
   "Magnet Pull": {
     "Ruby": "Traps STEEL-type POK\u00e9MON.",
@@ -2511,7 +2643,8 @@
     "B.Diamond": "Prevents Steel-type Pok\u00e9mon from escaping using its magnetic force.",
     "S.Pearl": "Prevents Steel-type Pok\u00e9mon from escaping using its magnetic force.",
     "Scarlet": "Prevents Steel-type Pok\u00e9mon from fleeing by pulling them in with magnetism.",
-    "Violet": "Prevents Steel-type Pok\u00e9mon from fleeing by pulling them in with magnetism."
+    "Violet": "Prevents Steel-type Pok\u00e9mon from fleeing by pulling them in with magnetism.",
+    "generationIntroduced": "3"
   },
   "Marvel Scale": {
     "Ruby": "Ups DEFENSE if suffering.",
@@ -2541,7 +2674,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s marvelous scales boost the Defense stat if it has a status condition.",
     "S.Pearl": "The Pok\u00e9mon\u2019s marvelous scales boost the Defense stat if it has a status condition.",
     "Scarlet": "The Pok\u00e9mon\u2019s marvelous scales boost its Defense stat if it has a status condition.",
-    "Violet": "The Pok\u00e9mon\u2019s marvelous scales boost its Defense stat if it has a status condition."
+    "Violet": "The Pok\u00e9mon\u2019s marvelous scales boost its Defense stat if it has a status condition.",
+    "generationIntroduced": "3"
   },
   "Mega Launcher": {
     "X": "Powers up aura and pulse moves.",
@@ -2557,7 +2691,8 @@
     "B.Diamond": "Powers up aura and pulse moves.",
     "S.Pearl": "Powers up aura and pulse moves.",
     "Scarlet": "Powers up pulse moves.",
-    "Violet": "Powers up pulse moves."
+    "Violet": "Powers up pulse moves.",
+    "generationIntroduced": "6"
   },
   "Merciless": {
     "Sun": "The Pok\u00e9mon\u2019s attacks become critical hits if the target is poisoned.",
@@ -2569,7 +2704,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s attacks become critical hits if the target is poisoned.",
     "S.Pearl": "The Pok\u00e9mon\u2019s attacks become critical hits if the target is poisoned.",
     "Scarlet": "The Pok\u00e9mon\u2019s attacks become critical hits if the target is poisoned.",
-    "Violet": "The Pok\u00e9mon\u2019s attacks become critical hits if the target is poisoned."
+    "Violet": "The Pok\u00e9mon\u2019s attacks become critical hits if the target is poisoned.",
+    "generationIntroduced": "7"
   },
   "Mimicry": {
     "Sword": "Changes the Pok\u00e9mon\u2019s type depending on the terrain.",
@@ -2577,7 +2713,8 @@
     "B.Diamond": "Changes the Pok\u00e9mon\u2019s type depending on the terrain.",
     "S.Pearl": "Changes the Pok\u00e9mon\u2019s type depending on the terrain.",
     "Scarlet": "Changes the Pok\u00e9mon\u2019s type depending on the terrain.",
-    "Violet": "Changes the Pok\u00e9mon\u2019s type depending on the terrain."
+    "Violet": "Changes the Pok\u00e9mon\u2019s type depending on the terrain.",
+    "generationIntroduced": "8"
   },
   "Minus": {
     "Ruby": "Powers up with PLUS.",
@@ -2607,7 +2744,8 @@
     "B.Diamond": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
     "S.Pearl": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
     "Scarlet": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
-    "Violet": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle."
+    "Violet": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
+    "generationIntroduced": "3"
   },
   "Mirror Armor": {
     "Sword": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives.",
@@ -2615,7 +2753,8 @@
     "B.Diamond": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives.",
     "S.Pearl": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives.",
     "Scarlet": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives.",
-    "Violet": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives."
+    "Violet": "Bounces back only the stat-lowering effects that the Pok\u00e9mon receives.",
+    "generationIntroduced": "8"
   },
   "Misty Surge": {
     "Sun": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle.",
@@ -2627,7 +2766,8 @@
     "B.Diamond": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle.",
     "S.Pearl": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle.",
     "Scarlet": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle.",
-    "Violet": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle."
+    "Violet": "Turns the ground into Misty Terrain when the Pok\u00e9mon enters a battle.",
+    "generationIntroduced": "7"
   },
   "Mold Breaker": {
     "Diamond": "Moves can be used regardless of abilities.",
@@ -2652,7 +2792,8 @@
     "B.Diamond": "Moves can be used on the target regardless of its Abilities.",
     "S.Pearl": "Moves can be used on the target regardless of its Abilities.",
     "Scarlet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target.",
-    "Violet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target."
+    "Violet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target.",
+    "generationIntroduced": "4"
   },
   "Moody": {
     "Black": "Raises one stat and lowers another.",
@@ -2672,7 +2813,8 @@
     "B.Diamond": "Raises one stat sharply and lowers another every turn.",
     "S.Pearl": "Raises one stat sharply and lowers another every turn.",
     "Scarlet": "Every turn, one of the Pok\u00e9mon\u2019s stats will be boosted sharply but another stat will be lowered.",
-    "Violet": "Every turn, one of the Pok\u00e9mon\u2019s stats will be boosted sharply but another stat will be lowered."
+    "Violet": "Every turn, one of the Pok\u00e9mon\u2019s stats will be boosted sharply but another stat will be lowered.",
+    "generationIntroduced": "5"
   },
   "Motor Drive": {
     "Diamond": "Raises Speed if hit by an Electric-type move.",
@@ -2697,7 +2839,8 @@
     "B.Diamond": "Boosts its Speed stat if hit by an Electric-type move instead of taking damage.",
     "S.Pearl": "Boosts its Speed stat if hit by an Electric-type move instead of taking damage.",
     "Scarlet": "The Pok\u00e9mon takes no damage when hit by Electric-type moves. Instead, its Speed stat is boosted.",
-    "Violet": "The Pok\u00e9mon takes no damage when hit by Electric-type moves. Instead, its Speed stat is boosted."
+    "Violet": "The Pok\u00e9mon takes no damage when hit by Electric-type moves. Instead, its Speed stat is boosted.",
+    "generationIntroduced": "4"
   },
   "Moxie": {
     "Black": "Boosts Attack after knocking out any Pok\u00e9mon.",
@@ -2717,7 +2860,8 @@
     "B.Diamond": "The Pok\u00e9mon shows moxie, and that boosts the Attack stat after knocking out any Pok\u00e9mon.",
     "S.Pearl": "The Pok\u00e9mon shows moxie, and that boosts the Attack stat after knocking out any Pok\u00e9mon.",
     "Scarlet": "When the Pok\u00e9mon knocks out a target, it shows moxie, which boosts its Attack stat.",
-    "Violet": "When the Pok\u00e9mon knocks out a target, it shows moxie, which boosts its Attack stat."
+    "Violet": "When the Pok\u00e9mon knocks out a target, it shows moxie, which boosts its Attack stat.",
+    "generationIntroduced": "5"
   },
   "Multiscale": {
     "Black": "Reduces damage when HP is full.",
@@ -2737,7 +2881,8 @@
     "B.Diamond": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
     "S.Pearl": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
     "Scarlet": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
-    "Violet": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full."
+    "Violet": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
+    "generationIntroduced": "5"
   },
   "Multitype": {
     "Diamond": "Changes type to match the held Plate.",
@@ -2762,7 +2907,8 @@
     "B.Diamond": "Changes the Pok\u00e9mon\u2019s type to match the Plate it holds.",
     "S.Pearl": "Changes the Pok\u00e9mon\u2019s type to match the Plate it holds.",
     "Scarlet": "Changes the Pok\u00e9mon\u2019s type to match the plate it holds.",
-    "Violet": "Changes the Pok\u00e9mon\u2019s type to match the plate it holds."
+    "Violet": "Changes the Pok\u00e9mon\u2019s type to match the plate it holds.",
+    "generationIntroduced": "4"
   },
   "Mummy": {
     "Black": "Contact with this Pok\u00e9mon spreads this Ability.",
@@ -2782,11 +2928,13 @@
     "B.Diamond": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Mummy.",
     "S.Pearl": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Mummy.",
     "Scarlet": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Mummy.",
-    "Violet": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Mummy."
+    "Violet": "Contact with the Pok\u00e9mon changes the attacker\u2019s Ability to Mummy.",
+    "generationIntroduced": "5"
   },
   "Mycelium Might": {
     "Scarlet": "The Pok\u00e9mon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target.",
-    "Violet": "The Pok\u00e9mon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target."
+    "Violet": "The Pok\u00e9mon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target.",
+    "generationIntroduced": "9"
   },
   "Natural Cure": {
     "Ruby": "Heals upon switching out.",
@@ -2816,7 +2964,8 @@
     "B.Diamond": "All status conditions heal when the Pok\u00e9mon switches out.",
     "S.Pearl": "All status conditions heal when the Pok\u00e9mon switches out.",
     "Scarlet": "The Pok\u00e9mon\u2019s status conditions are cured when it switches out.",
-    "Violet": "The Pok\u00e9mon\u2019s status conditions are cured when it switches out."
+    "Violet": "The Pok\u00e9mon\u2019s status conditions are cured when it switches out.",
+    "generationIntroduced": "3"
   },
   "Neuroforce": {
     "Ultra Sun": "Powers up moves that are super effective.",
@@ -2826,7 +2975,8 @@
     "B.Diamond": "Powers up moves that are super effective.",
     "S.Pearl": "Powers up moves that are super effective.",
     "Scarlet": "Powers up the Pok\u00e9mon\u2019s supereffective attacks even further.",
-    "Violet": "Powers up the Pok\u00e9mon\u2019s supereffective attacks even further."
+    "Violet": "Powers up the Pok\u00e9mon\u2019s supereffective attacks even further.",
+    "generationIntroduced": "7"
   },
   "Neutralizing Gas": {
     "Sword": "If the Pok\u00e9mon with Neutralizing Gas is in the battle, the effects of all Pok\u00e9mon\u2019s Abilities will be nullified or will not be triggered.",
@@ -2834,7 +2984,8 @@
     "B.Diamond": "If the Pok\u00e9mon with Neutralizing Gas is in the battle, the effects of all Pok\u00e9mon\u2019s Abilities will be nullified or will not be triggered.",
     "S.Pearl": "If the Pok\u00e9mon with Neutralizing Gas is in the battle, the effects of all Pok\u00e9mon\u2019s Abilities will be nullified or will not be triggered.",
     "Scarlet": "While the Pok\u00e9mon is in the battle, the effects of all other Pok\u00e9mon\u2019s Abilities will be nullified or will not be triggered.",
-    "Violet": "While the Pok\u00e9mon is in the battle, the effects of all other Pok\u00e9mon\u2019s Abilities will be nullified or will not be triggered."
+    "Violet": "While the Pok\u00e9mon is in the battle, the effects of all other Pok\u00e9mon\u2019s Abilities will be nullified or will not be triggered.",
+    "generationIntroduced": "8"
   },
   "No Guard": {
     "Diamond": "Ensures the Pok\u00e9mon and its foe\u2019s attacks land.",
@@ -2859,7 +3010,8 @@
     "B.Diamond": "The Pok\u00e9mon employs no-guard tactics to ensure incoming and outgoing attacks always land.",
     "S.Pearl": "The Pok\u00e9mon employs no-guard tactics to ensure incoming and outgoing attacks always land.",
     "Scarlet": "The Pok\u00e9mon employs no-guard tactics to ensure incoming and outgoing attacks always land.",
-    "Violet": "The Pok\u00e9mon employs no-guard tactics to ensure incoming and outgoing attacks always land."
+    "Violet": "The Pok\u00e9mon employs no-guard tactics to ensure incoming and outgoing attacks always land.",
+    "generationIntroduced": "4"
   },
   "Normalize": {
     "Diamond": "All the Pok\u00e9mon\u2019s moves become the Normal type.",
@@ -2884,7 +3036,8 @@
     "B.Diamond": "All the Pok\u00e9mon\u2019s moves become Normal type. The power of those moves is boosted a little.",
     "S.Pearl": "All the Pok\u00e9mon\u2019s moves become Normal type. The power of those moves is boosted a little.",
     "Scarlet": "All the Pok\u00e9mon\u2019s moves become Normal type. The power of those moves is boosted a little.",
-    "Violet": "All the Pok\u00e9mon\u2019s moves become Normal type. The power of those moves is boosted a little."
+    "Violet": "All the Pok\u00e9mon\u2019s moves become Normal type. The power of those moves is boosted a little.",
+    "generationIntroduced": "4"
   },
   "Oblivious": {
     "Ruby": "Prevents attraction.",
@@ -2914,15 +3067,18 @@
     "B.Diamond": "The Pok\u00e9mon is oblivious, and that keeps it from being infatuated or falling for taunts.",
     "S.Pearl": "The Pok\u00e9mon is oblivious, and that keeps it from being infatuated or falling for taunts.",
     "Scarlet": "The Pok\u00e9mon is oblivious, keeping it from being infatuated, falling for taunts, or being affected by Intimidate.",
-    "Violet": "The Pok\u00e9mon is oblivious, keeping it from being infatuated, falling for taunts, or being affected by Intimidate."
+    "Violet": "The Pok\u00e9mon is oblivious, keeping it from being infatuated, falling for taunts, or being affected by Intimidate.",
+    "generationIntroduced": "3"
   },
   "Opportunist": {
     "Scarlet": "If an opponent\u2019s stat is boosted, the Pok\u00e9mon seizes the opportunity to boost the same stat for itself.",
-    "Violet": "If an opponent\u2019s stat is boosted, the Pok\u00e9mon seizes the opportunity to boost the same stat for itself."
+    "Violet": "If an opponent\u2019s stat is boosted, the Pok\u00e9mon seizes the opportunity to boost the same stat for itself.",
+    "generationIntroduced": "9"
   },
   "Orichalcum Pulse": {
     "Scarlet": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle. The ancient pulse thrumming through the Pok\u00e9mon also boosts its Attack stat in harsh sunlight.",
-    "Violet": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle. The ancient pulse thrumming through the Pok\u00e9mon also boosts its Attack stat in harsh sunlight."
+    "Violet": "Turns the sunlight harsh when the Pok\u00e9mon enters a battle. The ancient pulse thrumming through the Pok\u00e9mon also boosts its Attack stat in harsh sunlight.",
+    "generationIntroduced": "9"
   },
   "Overcoat": {
     "Black": "Protects the Pok\u00e9mon from damage from weather.",
@@ -2942,7 +3098,8 @@
     "B.Diamond": "Protects the Pok\u00e9mon from things like sand, hail, and powder.",
     "S.Pearl": "Protects the Pok\u00e9mon from things like sand, hail, and powder.",
     "Scarlet": "The Pok\u00e9mon takes no damage from sandstorms. It is also protected from the effects of powders and spores.",
-    "Violet": "The Pok\u00e9mon takes no damage from sandstorms. It is also protected from the effects of powders and spores."
+    "Violet": "The Pok\u00e9mon takes no damage from sandstorms. It is also protected from the effects of powders and spores.",
+    "generationIntroduced": "5"
   },
   "Overgrow": {
     "Ruby": "Ups GRASS moves in a pinch.",
@@ -2972,7 +3129,8 @@
     "B.Diamond": "Powers up Grass-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "S.Pearl": "Powers up Grass-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "Scarlet": "Powers up Grass-type moves when the Pok\u00e9mon\u2019s HP is low.",
-    "Violet": "Powers up Grass-type moves when the Pok\u00e9mon\u2019s HP is low."
+    "Violet": "Powers up Grass-type moves when the Pok\u00e9mon\u2019s HP is low.",
+    "generationIntroduced": "3"
   },
   "Own Tempo": {
     "Ruby": "Prevents confusion.",
@@ -3002,7 +3160,8 @@
     "B.Diamond": "This Pok\u00e9mon has its own tempo, and that prevents it from becoming confused.",
     "S.Pearl": "This Pok\u00e9mon has its own tempo, and that prevents it from becoming confused.",
     "Scarlet": "The Pok\u00e9mon sticks to its own tempo, preventing it from becoming confused or being affected by Intimidate.",
-    "Violet": "The Pok\u00e9mon sticks to its own tempo, preventing it from becoming confused or being affected by Intimidate."
+    "Violet": "The Pok\u00e9mon sticks to its own tempo, preventing it from becoming confused or being affected by Intimidate.",
+    "generationIntroduced": "3"
   },
   "Parental Bond": {
     "X": "Parent and child attack together.",
@@ -3018,7 +3177,8 @@
     "B.Diamond": "Parent and child each attacks.",
     "S.Pearl": "Parent and child each attacks.",
     "Scarlet": "The parent and child attack one after the other.",
-    "Violet": "The parent and child attack one after the other."
+    "Violet": "The parent and child attack one after the other.",
+    "generationIntroduced": "6"
   },
   "Pastel Veil": {
     "Sword": "Protects the Pok\u00e9mon and its ally Pok\u00e9mon from being poisoned.",
@@ -3026,7 +3186,8 @@
     "B.Diamond": "Protects the Pok\u00e9mon and its ally Pok\u00e9mon from being poisoned.",
     "S.Pearl": "Protects the Pok\u00e9mon and its ally Pok\u00e9mon from being poisoned.",
     "Scarlet": "Prevents the Pok\u00e9mon and its allies from being poisoned.",
-    "Violet": "Prevents the Pok\u00e9mon and its allies from being poisoned."
+    "Violet": "Prevents the Pok\u00e9mon and its allies from being poisoned.",
+    "generationIntroduced": "8"
   },
   "Perish Body": {
     "Sword": "When hit by a move that makes direct contact, the Pok\u00e9mon and the attacker will faint after three turns unless they switch out of battle.",
@@ -3034,7 +3195,8 @@
     "B.Diamond": "When hit by a move that makes direct contact, the Pok\u00e9mon and the attacker will faint after three turns unless they switch out of battle.",
     "S.Pearl": "When hit by a move that makes direct contact, the Pok\u00e9mon and the attacker will faint after three turns unless they switch out of battle.",
     "Scarlet": "When hit by a move that makes direct contact, the Pok\u00e9mon and the attacker will faint after three turns unless they switch out of battle.",
-    "Violet": "When hit by a move that makes direct contact, the Pok\u00e9mon and the attacker will faint after three turns unless they switch out of battle."
+    "Violet": "When hit by a move that makes direct contact, the Pok\u00e9mon and the attacker will faint after three turns unless they switch out of battle.",
+    "generationIntroduced": "8"
   },
   "Pickpocket": {
     "Black": "Steals an item when hit by another Pok\u00e9mon.",
@@ -3054,7 +3216,8 @@
     "B.Diamond": "Steals an item from an attacker that made direct contact.",
     "S.Pearl": "Steals an item from an attacker that made direct contact.",
     "Scarlet": "The Pok\u00e9mon steals the held item from attackers that make direct contact with it.",
-    "Violet": "The Pok\u00e9mon steals the held item from attackers that make direct contact with it."
+    "Violet": "The Pok\u00e9mon steals the held item from attackers that make direct contact with it.",
+    "generationIntroduced": "5"
   },
   "Pickup": {
     "Ruby": "May pick up items.",
@@ -3084,7 +3247,8 @@
     "B.Diamond": "The Pok\u00e9mon may pick up the item an opposing Pok\u00e9mon used during a battle. It may pick up items outside of battle, too.",
     "S.Pearl": "The Pok\u00e9mon may pick up the item an opposing Pok\u00e9mon used during a battle. It may pick up items outside of battle, too.",
     "Scarlet": "The Pok\u00e9mon may pick up an item another Pok\u00e9mon used during a battle. It may pick up items outside of battle, too.",
-    "Violet": "The Pok\u00e9mon may pick up an item another Pok\u00e9mon used during a battle. It may pick up items outside of battle, too."
+    "Violet": "The Pok\u00e9mon may pick up an item another Pok\u00e9mon used during a battle. It may pick up items outside of battle, too.",
+    "generationIntroduced": "3"
   },
   "Pixilate": {
     "X": "Normal-type moves become Fairy-type moves.",
@@ -3100,7 +3264,8 @@
     "B.Diamond": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.",
     "S.Pearl": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.",
     "Scarlet": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.",
-    "Violet": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little."
+    "Violet": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.",
+    "generationIntroduced": "6"
   },
   "Plus": {
     "Ruby": "Powers up with MINUS.",
@@ -3130,7 +3295,8 @@
     "B.Diamond": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
     "S.Pearl": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
     "Scarlet": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
-    "Violet": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle."
+    "Violet": "Boosts the Sp. Atk stat of the Pok\u00e9mon if an ally with the Plus or Minus Ability is also in battle.",
+    "generationIntroduced": "3"
   },
   "Poison Heal": {
     "Diamond": "Restores HP if the Pok\u00e9mon is poisoned.",
@@ -3155,7 +3321,8 @@
     "B.Diamond": "Restores HP if the Pok\u00e9mon is poisoned instead of losing HP.",
     "S.Pearl": "Restores HP if the Pok\u00e9mon is poisoned instead of losing HP.",
     "Scarlet": "If poisoned, the Pok\u00e9mon has its HP restored instead of taking damage.",
-    "Violet": "If poisoned, the Pok\u00e9mon has its HP restored instead of taking damage."
+    "Violet": "If poisoned, the Pok\u00e9mon has its HP restored instead of taking damage.",
+    "generationIntroduced": "4"
   },
   "Poison Point": {
     "Ruby": "Poisons foe on contact.",
@@ -3185,7 +3352,8 @@
     "B.Diamond": "Contact with the Pok\u00e9mon may poison the attacker.",
     "S.Pearl": "Contact with the Pok\u00e9mon may poison the attacker.",
     "Scarlet": "Contact with the Pok\u00e9mon may poison the attacker.",
-    "Violet": "Contact with the Pok\u00e9mon may poison the attacker."
+    "Violet": "Contact with the Pok\u00e9mon may poison the attacker.",
+    "generationIntroduced": "3"
   },
   "Poison Touch": {
     "Black": "May poison targets when a Pok\u00e9mon makes contact.",
@@ -3205,7 +3373,8 @@
     "B.Diamond": "May poison a target when the Pok\u00e9mon makes contact.",
     "S.Pearl": "May poison a target when the Pok\u00e9mon makes contact.",
     "Scarlet": "May poison a target when the Pok\u00e9mon makes contact.",
-    "Violet": "May poison a target when the Pok\u00e9mon makes contact."
+    "Violet": "May poison a target when the Pok\u00e9mon makes contact.",
+    "generationIntroduced": "5"
   },
   "Power Construct": {
     "Sun": "Other Cells gather to aid when its HP becomes half or less. Then the Pok\u00e9mon changes its form to Complete Forme.",
@@ -3217,7 +3386,8 @@
     "B.Diamond": "Other Cells gather to aid when its HP becomes half or less. Then the Pok\u00e9mon changes its form to Complete Forme.",
     "S.Pearl": "Other Cells gather to aid when its HP becomes half or less. Then the Pok\u00e9mon changes its form to Complete Forme.",
     "Scarlet": "Cells gather to aid the Pok\u00e9mon when its HP drops to half or less, causing it to change into its Complete Forme.",
-    "Violet": "Cells gather to aid the Pok\u00e9mon when its HP drops to half or less, causing it to change into its Complete Forme."
+    "Violet": "Cells gather to aid the Pok\u00e9mon when its HP drops to half or less, causing it to change into its Complete Forme.",
+    "generationIntroduced": "7"
   },
   "Power of Alchemy": {
     "Sun": "The Pok\u00e9mon copies the Ability of a defeated ally.",
@@ -3229,7 +3399,8 @@
     "B.Diamond": "The Pok\u00e9mon copies the Ability of a defeated ally.",
     "S.Pearl": "The Pok\u00e9mon copies the Ability of a defeated ally.",
     "Scarlet": "The Pok\u00e9mon copies the Ability of a defeated ally.",
-    "Violet": "The Pok\u00e9mon copies the Ability of a defeated ally."
+    "Violet": "The Pok\u00e9mon copies the Ability of a defeated ally.",
+    "generationIntroduced": "7"
   },
   "Power Spot": {
     "Sword": "Just being next to the Pok\u00e9mon powers up moves.",
@@ -3237,7 +3408,8 @@
     "B.Diamond": "Just being next to the Pok\u00e9mon powers up moves.",
     "S.Pearl": "Just being next to the Pok\u00e9mon powers up moves.",
     "Scarlet": "Just being next to the Pok\u00e9mon powers up moves.",
-    "Violet": "Just being next to the Pok\u00e9mon powers up moves."
+    "Violet": "Just being next to the Pok\u00e9mon powers up moves.",
+    "generationIntroduced": "8"
   },
   "Prankster": {
     "Black": "Gives priority to a status move.",
@@ -3257,7 +3429,8 @@
     "B.Diamond": "Gives priority to a status move.",
     "S.Pearl": "Gives priority to a status move.",
     "Scarlet": "Gives priority to the Pok\u00e9mon\u2019s status moves.",
-    "Violet": "Gives priority to the Pok\u00e9mon\u2019s status moves."
+    "Violet": "Gives priority to the Pok\u00e9mon\u2019s status moves.",
+    "generationIntroduced": "5"
   },
   "Pressure": {
     "Ruby": "Raises foe\u2019s PP usage.",
@@ -3287,7 +3460,8 @@
     "B.Diamond": "By putting pressure on the opposing Pok\u00e9mon, it raises their PP usage.",
     "S.Pearl": "By putting pressure on the opposing Pok\u00e9mon, it raises their PP usage.",
     "Scarlet": "Puts other Pok\u00e9mon under pressure, causing them to expend more PP to use their moves.",
-    "Violet": "Puts other Pok\u00e9mon under pressure, causing them to expend more PP to use their moves."
+    "Violet": "Puts other Pok\u00e9mon under pressure, causing them to expend more PP to use their moves.",
+    "generationIntroduced": "3"
   },
   "Primordial Sea": {
     "O.Ruby": "Affects weather and nullifies any Fire-type attacks.",
@@ -3301,7 +3475,8 @@
     "B.Diamond": "The Pok\u00e9mon changes the weather to nullify Fire-type attacks.",
     "S.Pearl": "The Pok\u00e9mon changes the weather to nullify Fire-type attacks.",
     "Scarlet": "The Pok\u00e9mon changes the weather to nullify Fire-type attacks.",
-    "Violet": "The Pok\u00e9mon changes the weather to nullify Fire-type attacks."
+    "Violet": "The Pok\u00e9mon changes the weather to nullify Fire-type attacks.",
+    "generationIntroduced": "6"
   },
   "Prism Armor": {
     "Sun": "Reduces the power of supereffective attacks taken.",
@@ -3313,7 +3488,8 @@
     "B.Diamond": "Reduces the power of supereffective attacks taken.",
     "S.Pearl": "Reduces the power of supereffective attacks taken.",
     "Scarlet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon.",
-    "Violet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon."
+    "Violet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon.",
+    "generationIntroduced": "7"
   },
   "Propeller Tail": {
     "Sword": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
@@ -3321,7 +3497,8 @@
     "B.Diamond": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
     "S.Pearl": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
     "Scarlet": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
-    "Violet": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves."
+    "Violet": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
+    "generationIntroduced": "8"
   },
   "Protean": {
     "X": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s using.",
@@ -3337,11 +3514,13 @@
     "B.Diamond": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use.",
     "S.Pearl": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use.",
     "Scarlet": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use. This works only once each time the Pok\u00e9mon enters battle.",
-    "Violet": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use. This works only once each time the Pok\u00e9mon enters battle."
+    "Violet": "Changes the Pok\u00e9mon\u2019s type to the type of the move it\u2019s about to use. This works only once each time the Pok\u00e9mon enters battle.",
+    "generationIntroduced": "6"
   },
   "Protosynthesis": {
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s most proficient stat in harsh sunlight or if the Pok\u00e9mon is holding Booster Energy.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s most proficient stat in harsh sunlight or if the Pok\u00e9mon is holding Booster Energy."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s most proficient stat in harsh sunlight or if the Pok\u00e9mon is holding Booster Energy.",
+    "generationIntroduced": "9"
   },
   "Psychic Surge": {
     "Sun": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle.",
@@ -3353,7 +3532,8 @@
     "B.Diamond": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle.",
     "S.Pearl": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle.",
     "Scarlet": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle.",
-    "Violet": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle."
+    "Violet": "Turns the ground into Psychic Terrain when the Pok\u00e9mon enters a battle.",
+    "generationIntroduced": "7"
   },
   "Punk Rock": {
     "Sword": "Boosts the power of sound-based moves. The Pok\u00e9mon also takes half the damage from these kinds of moves.",
@@ -3361,7 +3541,8 @@
     "B.Diamond": "Boosts the power of sound-based moves. The Pok\u00e9mon also takes half the damage from these kinds of moves.",
     "S.Pearl": "Boosts the power of sound-based moves. The Pok\u00e9mon also takes half the damage from these kinds of moves.",
     "Scarlet": "Boosts the power of sound-based moves. The Pok\u00e9mon also takes half the damage from these kinds of moves.",
-    "Violet": "Boosts the power of sound-based moves. The Pok\u00e9mon also takes half the damage from these kinds of moves."
+    "Violet": "Boosts the power of sound-based moves. The Pok\u00e9mon also takes half the damage from these kinds of moves.",
+    "generationIntroduced": "8"
   },
   "Pure Power": {
     "Ruby": "Raises ATTACK.",
@@ -3391,15 +3572,18 @@
     "B.Diamond": "Using its pure power, the Pok\u00e9mon doubles its Attack stat.",
     "S.Pearl": "Using its pure power, the Pok\u00e9mon doubles its Attack stat.",
     "Scarlet": "Using its pure power, the Pok\u00e9mon doubles its Attack stat.",
-    "Violet": "Using its pure power, the Pok\u00e9mon doubles its Attack stat."
+    "Violet": "Using its pure power, the Pok\u00e9mon doubles its Attack stat.",
+    "generationIntroduced": "3"
   },
   "Purifying Salt": {
     "Scarlet": "The Pok\u00e9mon\u2019s pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
-    "Violet": "The Pok\u00e9mon\u2019s pure salt protects it from status conditions and halves the damage taken from Ghost-type moves."
+    "Violet": "The Pok\u00e9mon\u2019s pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
+    "generationIntroduced": "9"
   },
   "Quark Drive": {
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s most proficient stat on Electric Terrain or if the Pok\u00e9mon is holding Booster Energy.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s most proficient stat on Electric Terrain or if the Pok\u00e9mon is holding Booster Energy."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s most proficient stat on Electric Terrain or if the Pok\u00e9mon is holding Booster Energy.",
+    "generationIntroduced": "9"
   },
   "Queenly Majesty": {
     "Sun": "Its majesty pressures the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
@@ -3411,13 +3595,15 @@
     "B.Diamond": "Its majesty pressures the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
     "S.Pearl": "Its majesty pressures the opposing Pok\u00e9mon, making it unable to attack using priority moves.",
     "Scarlet": "The Pok\u00e9mon\u2019s majesty pressures opponents and makes them unable to use priority moves against the Pok\u00e9mon or its allies.",
-    "Violet": "The Pok\u00e9mon\u2019s majesty pressures opponents and makes them unable to use priority moves against the Pok\u00e9mon or its allies."
+    "Violet": "The Pok\u00e9mon\u2019s majesty pressures opponents and makes them unable to use priority moves against the Pok\u00e9mon or its allies.",
+    "generationIntroduced": "7"
   },
   "Quick Draw": {
     "B.Diamond": "Enables the Pok\u00e9mon to move first occasionally.",
     "S.Pearl": "Enables the Pok\u00e9mon to move first occasionally.",
     "Scarlet": "Enables the Pok\u00e9mon to move first occasionally.",
-    "Violet": "Enables the Pok\u00e9mon to move first occasionally."
+    "Violet": "Enables the Pok\u00e9mon to move first occasionally.",
+    "generationIntroduced": "8"
   },
   "Quick Feet": {
     "Diamond": "Boosts Speed if there is a status problem.",
@@ -3442,7 +3628,8 @@
     "B.Diamond": "Boosts the Speed stat if the Pok\u00e9mon has a status condition.",
     "S.Pearl": "Boosts the Speed stat if the Pok\u00e9mon has a status condition.",
     "Scarlet": "Boosts the Speed stat if the Pok\u00e9mon has a status condition.",
-    "Violet": "Boosts the Speed stat if the Pok\u00e9mon has a status condition."
+    "Violet": "Boosts the Speed stat if the Pok\u00e9mon has a status condition.",
+    "generationIntroduced": "4"
   },
   "Rain Dish": {
     "Ruby": "Slight HP recovery in rain.",
@@ -3472,7 +3659,8 @@
     "B.Diamond": "The Pok\u00e9mon gradually regains HP in rain.",
     "S.Pearl": "The Pok\u00e9mon gradually regains HP in rain.",
     "Scarlet": "The Pok\u00e9mon gradually regains HP in rain.",
-    "Violet": "The Pok\u00e9mon gradually regains HP in rain."
+    "Violet": "The Pok\u00e9mon gradually regains HP in rain.",
+    "generationIntroduced": "3"
   },
   "Rattled": {
     "Black": "Some move types scare it and boost its Speed.",
@@ -3492,7 +3680,8 @@
     "B.Diamond": "Dark-, Ghost-, and Bug-type moves scare the Pok\u00e9mon and boost its Speed stat.",
     "S.Pearl": "Dark-, Ghost-, and Bug-type moves scare the Pok\u00e9mon and boost its Speed stat.",
     "Scarlet": "The Pok\u00e9mon gets scared when hit by a Dark-, Ghost-, or Bug-type attack or if intimidated, which boosts its Speed stat.",
-    "Violet": "The Pok\u00e9mon gets scared when hit by a Dark-, Ghost-, or Bug-type attack or if intimidated, which boosts its Speed stat."
+    "Violet": "The Pok\u00e9mon gets scared when hit by a Dark-, Ghost-, or Bug-type attack or if intimidated, which boosts its Speed stat.",
+    "generationIntroduced": "5"
   },
   "Receiver": {
     "Sun": "The Pok\u00e9mon copies the Ability of a defeated ally.",
@@ -3504,7 +3693,8 @@
     "B.Diamond": "The Pok\u00e9mon copies the Ability of a defeated ally.",
     "S.Pearl": "The Pok\u00e9mon copies the Ability of a defeated ally.",
     "Scarlet": "The Pok\u00e9mon copies the Ability of a defeated ally.",
-    "Violet": "The Pok\u00e9mon copies the Ability of a defeated ally."
+    "Violet": "The Pok\u00e9mon copies the Ability of a defeated ally.",
+    "generationIntroduced": "7"
   },
   "Reckless": {
     "Diamond": "Powers up moves that have recoil damage.",
@@ -3529,7 +3719,8 @@
     "B.Diamond": "Powers up moves that have recoil damage.",
     "S.Pearl": "Powers up moves that have recoil damage.",
     "Scarlet": "Powers up moves that have recoil damage.",
-    "Violet": "Powers up moves that have recoil damage."
+    "Violet": "Powers up moves that have recoil damage.",
+    "generationIntroduced": "4"
   },
   "Refrigerate": {
     "X": "Normal-type moves become Ice-type moves.",
@@ -3545,7 +3736,8 @@
     "B.Diamond": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little.",
     "S.Pearl": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little.",
     "Scarlet": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little.",
-    "Violet": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little."
+    "Violet": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little.",
+    "generationIntroduced": "6"
   },
   "Regenerator": {
     "Black": "Restores a little HP when withdrawn from battle.",
@@ -3565,7 +3757,8 @@
     "B.Diamond": "Restores a little HP when withdrawn from battle.",
     "S.Pearl": "Restores a little HP when withdrawn from battle.",
     "Scarlet": "The Pok\u00e9mon has a little of its HP restored when withdrawn from battle.",
-    "Violet": "The Pok\u00e9mon has a little of its HP restored when withdrawn from battle."
+    "Violet": "The Pok\u00e9mon has a little of its HP restored when withdrawn from battle.",
+    "generationIntroduced": "5"
   },
   "Ripen": {
     "Sword": "Ripens Berries and doubles their effect.",
@@ -3573,7 +3766,8 @@
     "B.Diamond": "Ripens Berries and doubles their effect.",
     "S.Pearl": "Ripens Berries and doubles their effect.",
     "Scarlet": "Ripens Berries and doubles their effect.",
-    "Violet": "Ripens Berries and doubles their effect."
+    "Violet": "Ripens Berries and doubles their effect.",
+    "generationIntroduced": "8"
   },
   "Rivalry": {
     "Diamond": "Raises Attack if the foe is of the same gender.",
@@ -3598,7 +3792,8 @@
     "B.Diamond": "Becomes competitive and deals more damage to Pok\u00e9mon of the same gender, but deals less to Pok\u00e9mon of the opposite gender.",
     "S.Pearl": "Becomes competitive and deals more damage to Pok\u00e9mon of the same gender, but deals less to Pok\u00e9mon of the opposite gender.",
     "Scarlet": "The Pok\u00e9mon\u2019s competitive spirit makes it deal more damage to Pok\u00e9mon of the same gender, but less damage to Pok\u00e9mon of the opposite gender.",
-    "Violet": "The Pok\u00e9mon\u2019s competitive spirit makes it deal more damage to Pok\u00e9mon of the same gender, but less damage to Pok\u00e9mon of the opposite gender."
+    "Violet": "The Pok\u00e9mon\u2019s competitive spirit makes it deal more damage to Pok\u00e9mon of the same gender, but less damage to Pok\u00e9mon of the opposite gender.",
+    "generationIntroduced": "4"
   },
   "RKS System": {
     "Sun": "Changes the Pok\u00e9mon\u2019s type to match the memory disc it holds.",
@@ -3610,7 +3805,8 @@
     "B.Diamond": "Changes the Pok\u00e9mon\u2019s type to match the memory disc it holds.",
     "S.Pearl": "Changes the Pok\u00e9mon\u2019s type to match the memory disc it holds.",
     "Scarlet": "Changes the Pok\u00e9mon\u2019s type to match the memory disc it holds.",
-    "Violet": "Changes the Pok\u00e9mon\u2019s type to match the memory disc it holds."
+    "Violet": "Changes the Pok\u00e9mon\u2019s type to match the memory disc it holds.",
+    "generationIntroduced": "7"
   },
   "Rock Head": {
     "Ruby": "Prevents recoil damage.",
@@ -3640,11 +3836,13 @@
     "B.Diamond": "Protects the Pok\u00e9mon from recoil damage.",
     "S.Pearl": "Protects the Pok\u00e9mon from recoil damage.",
     "Scarlet": "Protects the Pok\u00e9mon from recoil damage.",
-    "Violet": "Protects the Pok\u00e9mon from recoil damage."
+    "Violet": "Protects the Pok\u00e9mon from recoil damage.",
+    "generationIntroduced": "3"
   },
   "Rocky Payload": {
     "Scarlet": "Powers up Rock-type moves.",
-    "Violet": "Powers up Rock-type moves."
+    "Violet": "Powers up Rock-type moves.",
+    "generationIntroduced": "9"
   },
   "Rough Skin": {
     "Ruby": "Hurts to touch.",
@@ -3674,7 +3872,8 @@
     "B.Diamond": "This Pok\u00e9mon inflicts damage with its rough skin to the attacker on contact.",
     "S.Pearl": "This Pok\u00e9mon inflicts damage with its rough skin to the attacker on contact.",
     "Scarlet": "The Pok\u00e9mon\u2019s rough skin damages attackers that make direct contact with it.",
-    "Violet": "The Pok\u00e9mon\u2019s rough skin damages attackers that make direct contact with it."
+    "Violet": "The Pok\u00e9mon\u2019s rough skin damages attackers that make direct contact with it.",
+    "generationIntroduced": "3"
   },
   "Run Away": {
     "Ruby": "Makes escaping easier.",
@@ -3704,7 +3903,8 @@
     "B.Diamond": "Enables a sure getaway from wild Pok\u00e9mon.",
     "S.Pearl": "Enables a sure getaway from wild Pok\u00e9mon.",
     "Scarlet": "Enables a sure getaway from wild Pok\u00e9mon.",
-    "Violet": "Enables a sure getaway from wild Pok\u00e9mon."
+    "Violet": "Enables a sure getaway from wild Pok\u00e9mon.",
+    "generationIntroduced": "3"
   },
   "Sand Force": {
     "Black": "Boosts certain moves\u2019 power in a sandstorm.",
@@ -3724,7 +3924,8 @@
     "B.Diamond": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.",
     "S.Pearl": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.",
     "Scarlet": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.",
-    "Violet": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm."
+    "Violet": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.",
+    "generationIntroduced": "5"
   },
   "Sand Rush": {
     "Black": "Boosts the Pok\u00e9mon\u2019s Speed in a sandstorm.",
@@ -3744,7 +3945,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Speed stat in a sandstorm.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Speed stat in a sandstorm.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Speed stat in a sandstorm.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in a sandstorm."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in a sandstorm.",
+    "generationIntroduced": "5"
   },
   "Sand Spit": {
     "Sword": "The Pok\u00e9mon creates a sandstorm when it\u2019s hit by an attack.",
@@ -3752,7 +3954,8 @@
     "B.Diamond": "The Pok\u00e9mon creates a sandstorm when it\u2019s hit by an attack.",
     "S.Pearl": "The Pok\u00e9mon creates a sandstorm when it\u2019s hit by an attack.",
     "Scarlet": "The Pok\u00e9mon creates a sandstorm when it\u2019s hit by an attack.",
-    "Violet": "The Pok\u00e9mon creates a sandstorm when it\u2019s hit by an attack."
+    "Violet": "The Pok\u00e9mon creates a sandstorm when it\u2019s hit by an attack.",
+    "generationIntroduced": "8"
   },
   "Sand Stream": {
     "Ruby": "Summons a sandstorm.",
@@ -3782,7 +3985,8 @@
     "B.Diamond": "The Pok\u00e9mon summons a sandstorm when it enters a battle.",
     "S.Pearl": "The Pok\u00e9mon summons a sandstorm when it enters a battle.",
     "Scarlet": "The Pok\u00e9mon summons a sandstorm when it enters a battle.",
-    "Violet": "The Pok\u00e9mon summons a sandstorm when it enters a battle."
+    "Violet": "The Pok\u00e9mon summons a sandstorm when it enters a battle.",
+    "generationIntroduced": "3"
   },
   "Sand Veil": {
     "Ruby": "Ups evasion in a sandstorm.",
@@ -3812,7 +4016,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s evasiveness in a sandstorm.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s evasiveness in a sandstorm.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s evasiveness in a sandstorm.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s evasiveness in a sandstorm."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s evasiveness in a sandstorm.",
+    "generationIntroduced": "3"
   },
   "Sap Sipper": {
     "Black": "Boosts Attack when hit by a Grass-type move.",
@@ -3832,7 +4037,8 @@
     "B.Diamond": "Boosts the Attack stat if hit by a Grass-type move instead of taking damage.",
     "S.Pearl": "Boosts the Attack stat if hit by a Grass-type move instead of taking damage.",
     "Scarlet": "The Pok\u00e9mon takes no damage when hit by Grass-type moves. Instead, its Attack stat is boosted.",
-    "Violet": "The Pok\u00e9mon takes no damage when hit by Grass-type moves. Instead, its Attack stat is boosted."
+    "Violet": "The Pok\u00e9mon takes no damage when hit by Grass-type moves. Instead, its Attack stat is boosted.",
+    "generationIntroduced": "5"
   },
   "Schooling": {
     "Sun": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low.",
@@ -3844,7 +4050,8 @@
     "B.Diamond": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low.",
     "S.Pearl": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low.",
     "Scarlet": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low.",
-    "Violet": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low."
+    "Violet": "When it has a lot of HP, the Pok\u00e9mon forms a powerful school. It stops schooling when its HP is low.",
+    "generationIntroduced": "7"
   },
   "Scrappy": {
     "Diamond": "Enables moves to hit Ghost-type foes.",
@@ -3869,7 +4076,8 @@
     "B.Diamond": "The Pok\u00e9mon can hit Ghost-type Pok\u00e9mon with Normal- and Fighting-type moves.",
     "S.Pearl": "The Pok\u00e9mon can hit Ghost-type Pok\u00e9mon with Normal- and Fighting-type moves.",
     "Scarlet": "The Pok\u00e9mon can hit Ghost-type Pok\u00e9mon with Normal- and Fighting-type moves. It is also unaffected by Intimidate.",
-    "Violet": "The Pok\u00e9mon can hit Ghost-type Pok\u00e9mon with Normal- and Fighting-type moves. It is also unaffected by Intimidate."
+    "Violet": "The Pok\u00e9mon can hit Ghost-type Pok\u00e9mon with Normal- and Fighting-type moves. It is also unaffected by Intimidate.",
+    "generationIntroduced": "4"
   },
   "Screen Cleaner": {
     "Sword": "When the Pok\u00e9mon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pok\u00e9mon.",
@@ -3877,11 +4085,13 @@
     "B.Diamond": "When the Pok\u00e9mon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pok\u00e9mon.",
     "S.Pearl": "When the Pok\u00e9mon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pok\u00e9mon.",
     "Scarlet": "When the Pok\u00e9mon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pok\u00e9mon.",
-    "Violet": "When the Pok\u00e9mon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pok\u00e9mon."
+    "Violet": "When the Pok\u00e9mon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pok\u00e9mon.",
+    "generationIntroduced": "8"
   },
   "Seed Sower": {
     "Scarlet": "Turns the ground into Grassy Terrain when the Pok\u00e9mon is hit by an attack.",
-    "Violet": "Turns the ground into Grassy Terrain when the Pok\u00e9mon is hit by an attack."
+    "Violet": "Turns the ground into Grassy Terrain when the Pok\u00e9mon is hit by an attack.",
+    "generationIntroduced": "9"
   },
   "Serene Grace": {
     "Ruby": "Promotes added effects.",
@@ -3911,7 +4121,8 @@
     "B.Diamond": "Boosts the likelihood of additional effects occurring when attacking.",
     "S.Pearl": "Boosts the likelihood of additional effects occurring when attacking.",
     "Scarlet": "Raises the likelihood of additional effects occurring when the Pok\u00e9mon uses its moves.",
-    "Violet": "Raises the likelihood of additional effects occurring when the Pok\u00e9mon uses its moves."
+    "Violet": "Raises the likelihood of additional effects occurring when the Pok\u00e9mon uses its moves.",
+    "generationIntroduced": "3"
   },
   "Shadow Shield": {
     "Sun": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
@@ -3923,7 +4134,8 @@
     "B.Diamond": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
     "S.Pearl": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
     "Scarlet": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
-    "Violet": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full."
+    "Violet": "Reduces the amount of damage the Pok\u00e9mon takes while its HP is full.",
+    "generationIntroduced": "7"
   },
   "Shadow Tag": {
     "Ruby": "Prevents the foe\u2019s escape.",
@@ -3953,11 +4165,13 @@
     "B.Diamond": "This Pok\u00e9mon steps on the opposing Pok\u00e9mon\u2019s shadow to prevent it from escaping.",
     "S.Pearl": "This Pok\u00e9mon steps on the opposing Pok\u00e9mon\u2019s shadow to prevent it from escaping.",
     "Scarlet": "The Pok\u00e9mon steps on the opposing Pok\u00e9mon\u2019s shadows to prevent them from fleeing or switching out.",
-    "Violet": "The Pok\u00e9mon steps on the opposing Pok\u00e9mon\u2019s shadows to prevent them from fleeing or switching out."
+    "Violet": "The Pok\u00e9mon steps on the opposing Pok\u00e9mon\u2019s shadows to prevent them from fleeing or switching out.",
+    "generationIntroduced": "3"
   },
   "Sharpness": {
     "Scarlet": "Powers up slicing moves.",
-    "Violet": "Powers up slicing moves."
+    "Violet": "Powers up slicing moves.",
+    "generationIntroduced": "9"
   },
   "Shed Skin": {
     "Ruby": "Heals the body by shedding.",
@@ -3987,7 +4201,8 @@
     "B.Diamond": "The Pok\u00e9mon may heal its own status conditions by shedding its skin.",
     "S.Pearl": "The Pok\u00e9mon may heal its own status conditions by shedding its skin.",
     "Scarlet": "The Pok\u00e9mon may cure its own status conditions by shedding its skin.",
-    "Violet": "The Pok\u00e9mon may cure its own status conditions by shedding its skin."
+    "Violet": "The Pok\u00e9mon may cure its own status conditions by shedding its skin.",
+    "generationIntroduced": "3"
   },
   "Sheer Force": {
     "Black": "Removes added effects to increase move damage.",
@@ -4007,7 +4222,8 @@
     "B.Diamond": "Removes additional effects to increase the power of moves when attacking.",
     "S.Pearl": "Removes additional effects to increase the power of moves when attacking.",
     "Scarlet": "Removes any additional effects from the Pok\u00e9mon\u2019s moves, but increases the moves\u2019 power.",
-    "Violet": "Removes any additional effects from the Pok\u00e9mon\u2019s moves, but increases the moves\u2019 power."
+    "Violet": "Removes any additional effects from the Pok\u00e9mon\u2019s moves, but increases the moves\u2019 power.",
+    "generationIntroduced": "5"
   },
   "Shell Armor": {
     "Ruby": "Blocks critical hits.",
@@ -4037,7 +4253,8 @@
     "B.Diamond": "A hard shell protects the Pok\u00e9mon from critical hits.",
     "S.Pearl": "A hard shell protects the Pok\u00e9mon from critical hits.",
     "Scarlet": "A hard shell protects the Pok\u00e9mon from critical hits.",
-    "Violet": "A hard shell protects the Pok\u00e9mon from critical hits."
+    "Violet": "A hard shell protects the Pok\u00e9mon from critical hits.",
+    "generationIntroduced": "3"
   },
   "Shield Dust": {
     "Ruby": "Prevents added effects.",
@@ -4067,7 +4284,8 @@
     "B.Diamond": "This Pok\u00e9mon\u2019s dust blocks the additional effects of attacks taken.",
     "S.Pearl": "This Pok\u00e9mon\u2019s dust blocks the additional effects of attacks taken.",
     "Scarlet": "Protective dust shields the Pok\u00e9mon from the additional effects of moves.",
-    "Violet": "Protective dust shields the Pok\u00e9mon from the additional effects of moves."
+    "Violet": "Protective dust shields the Pok\u00e9mon from the additional effects of moves.",
+    "generationIntroduced": "3"
   },
   "Shields Down": {
     "Sun": "When its HP becomes half or less, the Pok\u00e9mon\u2019s shell breaks and it becomes aggressive.",
@@ -4079,7 +4297,8 @@
     "B.Diamond": "When its HP becomes half or less, the Pok\u00e9mon\u2019s shell breaks and it becomes aggressive.",
     "S.Pearl": "When its HP becomes half or less, the Pok\u00e9mon\u2019s shell breaks and it becomes aggressive.",
     "Scarlet": "When its HP drops to half or less, the Pok\u00e9mon\u2019s shell breaks and it becomes aggressive.",
-    "Violet": "When its HP drops to half or less, the Pok\u00e9mon\u2019s shell breaks and it becomes aggressive."
+    "Violet": "When its HP drops to half or less, the Pok\u00e9mon\u2019s shell breaks and it becomes aggressive.",
+    "generationIntroduced": "7"
   },
   "Simple": {
     "Diamond": "The Pok\u00e9mon is prone to wild stat changes.",
@@ -4104,7 +4323,8 @@
     "B.Diamond": "The stat changes the Pok\u00e9mon receives are doubled.",
     "S.Pearl": "The stat changes the Pok\u00e9mon receives are doubled.",
     "Scarlet": "Doubles the effects of the Pok\u00e9mon\u2019s stat changes.",
-    "Violet": "Doubles the effects of the Pok\u00e9mon\u2019s stat changes."
+    "Violet": "Doubles the effects of the Pok\u00e9mon\u2019s stat changes.",
+    "generationIntroduced": "4"
   },
   "Skill Link": {
     "Diamond": "Increases the frequency of multi-strike moves.",
@@ -4129,7 +4349,8 @@
     "B.Diamond": "Maximizes the number of times multistrike moves hit.",
     "S.Pearl": "Maximizes the number of times multistrike moves hit.",
     "Scarlet": "Maximizes the number of times multistrike moves hit.",
-    "Violet": "Maximizes the number of times multistrike moves hit."
+    "Violet": "Maximizes the number of times multistrike moves hit.",
+    "generationIntroduced": "4"
   },
   "Slow Start": {
     "Diamond": "Temporarily halves Attack and Speed.",
@@ -4154,7 +4375,8 @@
     "B.Diamond": "For five turns, the Pok\u00e9mon\u2019s Attack and Speed stats are halved.",
     "S.Pearl": "For five turns, the Pok\u00e9mon\u2019s Attack and Speed stats are halved.",
     "Scarlet": "For five turns, the Pok\u00e9mon\u2019s Attack and Speed stats are halved.",
-    "Violet": "For five turns, the Pok\u00e9mon\u2019s Attack and Speed stats are halved."
+    "Violet": "For five turns, the Pok\u00e9mon\u2019s Attack and Speed stats are halved.",
+    "generationIntroduced": "4"
   },
   "Slush Rush": {
     "Sun": "Boosts the Pok\u00e9mon\u2019s Speed stat in a hailstorm.",
@@ -4166,7 +4388,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Speed stat in a hailstorm.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Speed stat in a hailstorm.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Speed stat in snow.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in snow."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in snow.",
+    "generationIntroduced": "7"
   },
   "Sniper": {
     "Diamond": "Powers up moves if they become critical hits.",
@@ -4191,7 +4414,8 @@
     "B.Diamond": "Powers up moves if they become critical hits when attacking.",
     "S.Pearl": "Powers up moves if they become critical hits when attacking.",
     "Scarlet": "If the Pok\u00e9mon\u2019s attack lands a critical hit, the attack is powered up even further.",
-    "Violet": "If the Pok\u00e9mon\u2019s attack lands a critical hit, the attack is powered up even further."
+    "Violet": "If the Pok\u00e9mon\u2019s attack lands a critical hit, the attack is powered up even further.",
+    "generationIntroduced": "4"
   },
   "Snow Cloak": {
     "Diamond": "Raises evasion in a hailstorm.",
@@ -4216,7 +4440,8 @@
     "B.Diamond": "Boosts evasiveness in a hailstorm.",
     "S.Pearl": "Boosts evasiveness in a hailstorm.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s evasiveness in snow.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s evasiveness in snow."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s evasiveness in snow.",
+    "generationIntroduced": "4"
   },
   "Snow Warning": {
     "Diamond": "The Pok\u00e9mon summons a hailstorm in battle.",
@@ -4241,7 +4466,8 @@
     "B.Diamond": "The Pok\u00e9mon summons a hailstorm when it enters a battle.",
     "S.Pearl": "The Pok\u00e9mon summons a hailstorm when it enters a battle.",
     "Scarlet": "The Pok\u00e9mon makes it snow when it enters a battle.",
-    "Violet": "The Pok\u00e9mon makes it snow when it enters a battle."
+    "Violet": "The Pok\u00e9mon makes it snow when it enters a battle.",
+    "generationIntroduced": "4"
   },
   "Solar Power": {
     "Diamond": "Boosts Sp. Atk, but lowers HP in sunshine.",
@@ -4266,7 +4492,8 @@
     "B.Diamond": "Boosts the Sp. Atk stat in harsh sunlight, but HP decreases every turn.",
     "S.Pearl": "Boosts the Sp. Atk stat in harsh sunlight, but HP decreases every turn.",
     "Scarlet": "In harsh sunlight, the Pok\u00e9mon\u2019s Sp. Atk stat is boosted, but its HP decreases every turn.",
-    "Violet": "In harsh sunlight, the Pok\u00e9mon\u2019s Sp. Atk stat is boosted, but its HP decreases every turn."
+    "Violet": "In harsh sunlight, the Pok\u00e9mon\u2019s Sp. Atk stat is boosted, but its HP decreases every turn.",
+    "generationIntroduced": "4"
   },
   "Solid Rock": {
     "Diamond": "Powers down supereffective moves.",
@@ -4291,7 +4518,8 @@
     "B.Diamond": "Reduces the power of supereffective attacks taken.",
     "S.Pearl": "Reduces the power of supereffective attacks taken.",
     "Scarlet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon.",
-    "Violet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon."
+    "Violet": "Reduces the power of supereffective attacks that hit the Pok\u00e9mon.",
+    "generationIntroduced": "4"
   },
   "Soul-Heart": {
     "Sun": "Boosts its Sp. Atk stat every time a Pok\u00e9mon faints.",
@@ -4303,7 +4531,8 @@
     "B.Diamond": "Boosts its Sp. Atk stat every time a Pok\u00e9mon faints.",
     "S.Pearl": "Boosts its Sp. Atk stat every time a Pok\u00e9mon faints.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat every time another Pok\u00e9mon faints.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat every time another Pok\u00e9mon faints."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Sp. Atk stat every time another Pok\u00e9mon faints.",
+    "generationIntroduced": "7"
   },
   "Soundproof": {
     "Ruby": "Avoids sound-based moves.",
@@ -4333,7 +4562,8 @@
     "B.Diamond": "Soundproofing gives the Pok\u00e9mon full immunity to all sound-based moves.",
     "S.Pearl": "Soundproofing gives the Pok\u00e9mon full immunity to all sound-based moves.",
     "Scarlet": "Soundproofing gives the Pok\u00e9mon full immunity to all sound-based moves.",
-    "Violet": "Soundproofing gives the Pok\u00e9mon full immunity to all sound-based moves."
+    "Violet": "Soundproofing gives the Pok\u00e9mon full immunity to all sound-based moves.",
+    "generationIntroduced": "3"
   },
   "Speed Boost": {
     "Ruby": "Gradually boosts SPEED.",
@@ -4363,7 +4593,8 @@
     "B.Diamond": "Its Speed stat is boosted every turn.",
     "S.Pearl": "Its Speed stat is boosted every turn.",
     "Scarlet": "The Pok\u00e9mon\u2019s Speed stat is boosted every turn.",
-    "Violet": "The Pok\u00e9mon\u2019s Speed stat is boosted every turn."
+    "Violet": "The Pok\u00e9mon\u2019s Speed stat is boosted every turn.",
+    "generationIntroduced": "3"
   },
   "Stakeout": {
     "Sun": "Doubles the damage dealt to the target\u2019s replacement if the target switches out.",
@@ -4375,7 +4606,8 @@
     "B.Diamond": "Doubles the damage dealt to the target\u2019s replacement if the target switches out.",
     "S.Pearl": "Doubles the damage dealt to the target\u2019s replacement if the target switches out.",
     "Scarlet": "Doubles the damage dealt to a target that has just switched into battle.",
-    "Violet": "Doubles the damage dealt to a target that has just switched into battle."
+    "Violet": "Doubles the damage dealt to a target that has just switched into battle.",
+    "generationIntroduced": "7"
   },
   "Stall": {
     "Diamond": "The Pok\u00e9mon moves after even slower foes.",
@@ -4400,7 +4632,8 @@
     "B.Diamond": "The Pok\u00e9mon moves after all other Pok\u00e9mon do.",
     "S.Pearl": "The Pok\u00e9mon moves after all other Pok\u00e9mon do.",
     "Scarlet": "The Pok\u00e9mon is always the last to use its moves.",
-    "Violet": "The Pok\u00e9mon is always the last to use its moves."
+    "Violet": "The Pok\u00e9mon is always the last to use its moves.",
+    "generationIntroduced": "4"
   },
   "Stalwart": {
     "Sword": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
@@ -4408,7 +4641,8 @@
     "B.Diamond": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
     "S.Pearl": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
     "Scarlet": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
-    "Violet": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves."
+    "Violet": "Ignores the effects of opposing Pok\u00e9mon\u2019s Abilities and moves that draw in moves.",
+    "generationIntroduced": "8"
   },
   "Stamina": {
     "Sun": "Boosts the Defense stat when hit by an attack.",
@@ -4420,7 +4654,8 @@
     "B.Diamond": "Boosts the Defense stat when hit by an attack.",
     "S.Pearl": "Boosts the Defense stat when hit by an attack.",
     "Scarlet": "Boosts the Defense stat when the Pok\u00e9mon is hit by an attack.",
-    "Violet": "Boosts the Defense stat when the Pok\u00e9mon is hit by an attack."
+    "Violet": "Boosts the Defense stat when the Pok\u00e9mon is hit by an attack.",
+    "generationIntroduced": "7"
   },
   "Stance Change": {
     "X": "The Pok\u00e9mon changes form depending on how it battles.",
@@ -4436,7 +4671,8 @@
     "B.Diamond": "The Pok\u00e9mon changes its form to Blade Forme when it uses an attack move and changes to Shield Forme when it uses King\u2019s Shield.",
     "S.Pearl": "The Pok\u00e9mon changes its form to Blade Forme when it uses an attack move and changes to Shield Forme when it uses King\u2019s Shield.",
     "Scarlet": "The Pok\u00e9mon changes its form to Blade Forme when it uses an attack move and changes to Shield Forme when it uses King\u2019s Shield.",
-    "Violet": "The Pok\u00e9mon changes its form to Blade Forme when it uses an attack move and changes to Shield Forme when it uses King\u2019s Shield."
+    "Violet": "The Pok\u00e9mon changes its form to Blade Forme when it uses an attack move and changes to Shield Forme when it uses King\u2019s Shield.",
+    "generationIntroduced": "6"
   },
   "Static": {
     "Ruby": "Paralyzes on contact.",
@@ -4466,7 +4702,8 @@
     "B.Diamond": "The Pok\u00e9mon is charged with static electricity, so contact with it may cause paralysis.",
     "S.Pearl": "The Pok\u00e9mon is charged with static electricity, so contact with it may cause paralysis.",
     "Scarlet": "The Pok\u00e9mon is charged with static electricity and may paralyze attackers that make direct contact with it.",
-    "Violet": "The Pok\u00e9mon is charged with static electricity and may paralyze attackers that make direct contact with it."
+    "Violet": "The Pok\u00e9mon is charged with static electricity and may paralyze attackers that make direct contact with it.",
+    "generationIntroduced": "3"
   },
   "Steadfast": {
     "Diamond": "Raises Speed each time the Pok\u00e9mon flinches.",
@@ -4491,7 +4728,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s determination boosts the Speed stat each time the Pok\u00e9mon flinches.",
     "S.Pearl": "The Pok\u00e9mon\u2019s determination boosts the Speed stat each time the Pok\u00e9mon flinches.",
     "Scarlet": "The Pok\u00e9mon\u2019s determination boosts its Speed stat every time it flinches.",
-    "Violet": "The Pok\u00e9mon\u2019s determination boosts its Speed stat every time it flinches."
+    "Violet": "The Pok\u00e9mon\u2019s determination boosts its Speed stat every time it flinches.",
+    "generationIntroduced": "4"
   },
   "Steam Engine": {
     "Sword": "Boosts the Pok\u00e9mon\u2019s Speed stat drastically if hit by a Fire- or Water-type move.",
@@ -4499,7 +4737,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Speed stat drastically if hit by a Fire- or Water-type move.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Speed stat drastically if hit by a Fire- or Water-type move.",
     "Scarlet": "Boosts the Speed stat drastically when the Pok\u00e9mon is hit by a Fire- or Water-type move.",
-    "Violet": "Boosts the Speed stat drastically when the Pok\u00e9mon is hit by a Fire- or Water-type move."
+    "Violet": "Boosts the Speed stat drastically when the Pok\u00e9mon is hit by a Fire- or Water-type move.",
+    "generationIntroduced": "8"
   },
   "Steelworker": {
     "Sun": "Powers up Steel-type moves.",
@@ -4511,7 +4750,8 @@
     "B.Diamond": "Powers up Steel-type moves.",
     "S.Pearl": "Powers up Steel-type moves.",
     "Scarlet": "Powers up Steel-type moves.",
-    "Violet": "Powers up Steel-type moves."
+    "Violet": "Powers up Steel-type moves.",
+    "generationIntroduced": "7"
   },
   "Steely Spirit": {
     "Sword": "Powers up ally Pok\u00e9mon\u2019s Steel-type moves.",
@@ -4519,7 +4759,8 @@
     "B.Diamond": "Powers up ally Pok\u00e9mon\u2019s Steel-type moves.",
     "S.Pearl": "Powers up ally Pok\u00e9mon\u2019s Steel-type moves.",
     "Scarlet": "Powers up the Steel-type moves of the Pok\u00e9mon and its allies.",
-    "Violet": "Powers up the Steel-type moves of the Pok\u00e9mon and its allies."
+    "Violet": "Powers up the Steel-type moves of the Pok\u00e9mon and its allies.",
+    "generationIntroduced": "8"
   },
   "Stench": {
     "Ruby": "Helps repel wild POK\u00e9MON.",
@@ -4549,7 +4790,8 @@
     "B.Diamond": "By releasing stench when attacking, this Pok\u00e9mon may cause the target to flinch.",
     "S.Pearl": "By releasing stench when attacking, this Pok\u00e9mon may cause the target to flinch.",
     "Scarlet": "By releasing a stench when attacking, the Pok\u00e9mon may cause the target to flinch.",
-    "Violet": "By releasing a stench when attacking, the Pok\u00e9mon may cause the target to flinch."
+    "Violet": "By releasing a stench when attacking, the Pok\u00e9mon may cause the target to flinch.",
+    "generationIntroduced": "3"
   },
   "Sticky Hold": {
     "Ruby": "Prevents item theft.",
@@ -4579,7 +4821,8 @@
     "B.Diamond": "Items held by the Pok\u00e9mon are stuck fast and cannot be removed by other Pok\u00e9mon.",
     "S.Pearl": "Items held by the Pok\u00e9mon are stuck fast and cannot be removed by other Pok\u00e9mon.",
     "Scarlet": "The Pok\u00e9mon\u2019s held items cling to its sticky body and cannot be removed by other Pok\u00e9mon.",
-    "Violet": "The Pok\u00e9mon\u2019s held items cling to its sticky body and cannot be removed by other Pok\u00e9mon."
+    "Violet": "The Pok\u00e9mon\u2019s held items cling to its sticky body and cannot be removed by other Pok\u00e9mon.",
+    "generationIntroduced": "3"
   },
   "Storm Drain": {
     "Diamond": "The Pok\u00e9mon draws in all Water-type moves.",
@@ -4604,7 +4847,8 @@
     "B.Diamond": "Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.",
     "S.Pearl": "Draws in all Water-type moves. Instead of being hit by Water-type moves, it boosts its Sp. Atk.",
     "Scarlet": "The Pok\u00e9mon draws in all Water-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted.",
-    "Violet": "The Pok\u00e9mon draws in all Water-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted."
+    "Violet": "The Pok\u00e9mon draws in all Water-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted.",
+    "generationIntroduced": "4"
   },
   "Strong Jaw": {
     "X": "The Pok\u00e9mon\u2019s strong jaw gives it tremendous biting power.",
@@ -4620,7 +4864,8 @@
     "B.Diamond": "The Pok\u00e9mon\u2019s strong jaw boosts the power of its biting moves.",
     "S.Pearl": "The Pok\u00e9mon\u2019s strong jaw boosts the power of its biting moves.",
     "Scarlet": "The Pok\u00e9mon\u2019s strong jaw boosts the power of its biting moves.",
-    "Violet": "The Pok\u00e9mon\u2019s strong jaw boosts the power of its biting moves."
+    "Violet": "The Pok\u00e9mon\u2019s strong jaw boosts the power of its biting moves.",
+    "generationIntroduced": "6"
   },
   "Sturdy": {
     "Ruby": "Negates 1-hit KO attacks.",
@@ -4650,7 +4895,8 @@
     "B.Diamond": "It cannot be knocked out with one hit. One-hit KO moves cannot knock it out, either.",
     "S.Pearl": "It cannot be knocked out with one hit. One-hit KO moves cannot knock it out, either.",
     "Scarlet": "The Pok\u00e9mon cannot be knocked out by a single hit as long as its HP is full. One-hit KO moves will also fail to knock it out.",
-    "Violet": "The Pok\u00e9mon cannot be knocked out by a single hit as long as its HP is full. One-hit KO moves will also fail to knock it out."
+    "Violet": "The Pok\u00e9mon cannot be knocked out by a single hit as long as its HP is full. One-hit KO moves will also fail to knock it out.",
+    "generationIntroduced": "3"
   },
   "Suction Cups": {
     "Ruby": "Firmly anchors the body.",
@@ -4680,7 +4926,8 @@
     "B.Diamond": "This Pok\u00e9mon uses suction cups to stay in one spot to negate all moves and items that force switching out.",
     "S.Pearl": "This Pok\u00e9mon uses suction cups to stay in one spot to negate all moves and items that force switching out.",
     "Scarlet": "The Pok\u00e9mon uses suction cups to stay in one spot. This protects it from moves and items that would force it to switch out.",
-    "Violet": "The Pok\u00e9mon uses suction cups to stay in one spot. This protects it from moves and items that would force it to switch out."
+    "Violet": "The Pok\u00e9mon uses suction cups to stay in one spot. This protects it from moves and items that would force it to switch out.",
+    "generationIntroduced": "3"
   },
   "Super Luck": {
     "Diamond": "Heightens the critical-hit ratios of moves.",
@@ -4705,11 +4952,13 @@
     "B.Diamond": "The Pok\u00e9mon is so lucky that the critical-hit ratios of its moves are boosted.",
     "S.Pearl": "The Pok\u00e9mon is so lucky that the critical-hit ratios of its moves are boosted.",
     "Scarlet": "The Pok\u00e9mon is so lucky that the critical-hit ratios of its moves are boosted.",
-    "Violet": "The Pok\u00e9mon is so lucky that the critical-hit ratios of its moves are boosted."
+    "Violet": "The Pok\u00e9mon is so lucky that the critical-hit ratios of its moves are boosted.",
+    "generationIntroduced": "4"
   },
   "Supreme Overlord": {
     "Scarlet": "When the Pok\u00e9mon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated.",
-    "Violet": "When the Pok\u00e9mon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated."
+    "Violet": "When the Pok\u00e9mon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated.",
+    "generationIntroduced": "9"
   },
   "Surge Surfer": {
     "Sun": "Doubles the Pok\u00e9mon\u2019s Speed stat on Electric Terrain.",
@@ -4721,7 +4970,8 @@
     "B.Diamond": "Doubles the Pok\u00e9mon\u2019s Speed stat on Electric Terrain.",
     "S.Pearl": "Doubles the Pok\u00e9mon\u2019s Speed stat on Electric Terrain.",
     "Scarlet": "Doubles the Pok\u00e9mon\u2019s Speed stat on Electric Terrain.",
-    "Violet": "Doubles the Pok\u00e9mon\u2019s Speed stat on Electric Terrain."
+    "Violet": "Doubles the Pok\u00e9mon\u2019s Speed stat on Electric Terrain.",
+    "generationIntroduced": "7"
   },
   "Swarm": {
     "Ruby": "Ups BUG moves in a pinch.",
@@ -4751,7 +5001,8 @@
     "B.Diamond": "Powers up Bug-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "S.Pearl": "Powers up Bug-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "Scarlet": "Powers up Bug-type moves when the Pok\u00e9mon\u2019s HP is low.",
-    "Violet": "Powers up Bug-type moves when the Pok\u00e9mon\u2019s HP is low."
+    "Violet": "Powers up Bug-type moves when the Pok\u00e9mon\u2019s HP is low.",
+    "generationIntroduced": "3"
   },
   "Sweet Veil": {
     "X": "Prevents itself and ally Pok\u00e9mon from falling asleep.",
@@ -4767,7 +5018,8 @@
     "B.Diamond": "Prevents itself and ally Pok\u00e9mon from falling asleep.",
     "S.Pearl": "Prevents itself and ally Pok\u00e9mon from falling asleep.",
     "Scarlet": "Prevents the Pok\u00e9mon and its allies from falling asleep.",
-    "Violet": "Prevents the Pok\u00e9mon and its allies from falling asleep."
+    "Violet": "Prevents the Pok\u00e9mon and its allies from falling asleep.",
+    "generationIntroduced": "6"
   },
   "Swift Swim": {
     "Ruby": "Raises SPEED in rain.",
@@ -4797,11 +5049,13 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Speed stat in rain.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Speed stat in rain.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Speed stat in rain.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in rain."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Speed stat in rain.",
+    "generationIntroduced": "3"
   },
   "Sword of Ruin": {
     "Scarlet": "The power of the Pok\u00e9mon\u2019s ruinous sword lowers the Defense stats of all Pok\u00e9mon except itself.",
-    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous sword lowers the Defense stats of all Pok\u00e9mon except itself."
+    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous sword lowers the Defense stats of all Pok\u00e9mon except itself.",
+    "generationIntroduced": "9"
   },
   "Symbiosis": {
     "X": "The Pok\u00e9mon can pass an item to an ally.",
@@ -4817,7 +5071,8 @@
     "B.Diamond": "The Pok\u00e9mon passes its item to an ally that has used up an item.",
     "S.Pearl": "The Pok\u00e9mon passes its item to an ally that has used up an item.",
     "Scarlet": "The Pok\u00e9mon passes its held item to an ally that has used up an item.",
-    "Violet": "The Pok\u00e9mon passes its held item to an ally that has used up an item."
+    "Violet": "The Pok\u00e9mon passes its held item to an ally that has used up an item.",
+    "generationIntroduced": "6"
   },
   "Synchronize": {
     "Ruby": "Passes on status problems.",
@@ -4847,11 +5102,13 @@
     "B.Diamond": "The attacker will receive the same status condition if it inflicts a burn, poison, or paralysis to the Pok\u00e9mon.",
     "S.Pearl": "The attacker will receive the same status condition if it inflicts a burn, poison, or paralysis to the Pok\u00e9mon.",
     "Scarlet": "If the Pok\u00e9mon is burned, paralyzed, or poisoned by another Pok\u00e9mon, that Pok\u00e9mon will be inflicted with the same status condition.",
-    "Violet": "If the Pok\u00e9mon is burned, paralyzed, or poisoned by another Pok\u00e9mon, that Pok\u00e9mon will be inflicted with the same status condition."
+    "Violet": "If the Pok\u00e9mon is burned, paralyzed, or poisoned by another Pok\u00e9mon, that Pok\u00e9mon will be inflicted with the same status condition.",
+    "generationIntroduced": "3"
   },
   "Tablets of Ruin": {
     "Scarlet": "The power of the Pok\u00e9mon\u2019s ruinous wooden tablets lowers the Attack stats of all Pok\u00e9mon except itself.",
-    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous wooden tablets lowers the Attack stats of all Pok\u00e9mon except itself."
+    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous wooden tablets lowers the Attack stats of all Pok\u00e9mon except itself.",
+    "generationIntroduced": "9"
   },
   "Tangled Feet": {
     "Diamond": "Raises evasion if the Pok\u00e9mon is confused.",
@@ -4876,7 +5133,8 @@
     "B.Diamond": "Raises evasiveness if the Pok\u00e9mon is confused.",
     "S.Pearl": "Raises evasiveness if the Pok\u00e9mon is confused.",
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s evasiveness if it is confused.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s evasiveness if it is confused."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s evasiveness if it is confused.",
+    "generationIntroduced": "4"
   },
   "Tangling Hair": {
     "Sun": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
@@ -4888,7 +5146,8 @@
     "B.Diamond": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
     "S.Pearl": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
     "Scarlet": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
-    "Violet": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat."
+    "Violet": "Contact with the Pok\u00e9mon lowers the attacker\u2019s Speed stat.",
+    "generationIntroduced": "7"
   },
   "Technician": {
     "Diamond": "Powers up the Pok\u00e9mon\u2019s weaker moves.",
@@ -4913,7 +5172,8 @@
     "B.Diamond": "Powers up the Pok\u00e9mon\u2019s weaker moves.",
     "S.Pearl": "Powers up the Pok\u00e9mon\u2019s weaker moves.",
     "Scarlet": "Powers up weak moves so the Pok\u00e9mon can deal more damage with them.",
-    "Violet": "Powers up weak moves so the Pok\u00e9mon can deal more damage with them."
+    "Violet": "Powers up weak moves so the Pok\u00e9mon can deal more damage with them.",
+    "generationIntroduced": "4"
   },
   "Telepathy": {
     "Black": "Anticipates an ally\u2019s attack and dodges it.",
@@ -4933,7 +5193,8 @@
     "B.Diamond": "Anticipates an ally\u2019s attack and dodges it.",
     "S.Pearl": "Anticipates an ally\u2019s attack and dodges it.",
     "Scarlet": "The Pok\u00e9mon anticipates and dodges the attacks of its allies.",
-    "Violet": "The Pok\u00e9mon anticipates and dodges the attacks of its allies."
+    "Violet": "The Pok\u00e9mon anticipates and dodges the attacks of its allies.",
+    "generationIntroduced": "5"
   },
   "Teravolt": {
     "Black": "Moves can be used regardless of Abilities.",
@@ -4953,11 +5214,13 @@
     "B.Diamond": "Moves can be used on the target regardless of its Abilities.",
     "S.Pearl": "Moves can be used on the target regardless of its Abilities.",
     "Scarlet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target.",
-    "Violet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target."
+    "Violet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target.",
+    "generationIntroduced": "5"
   },
   "Thermal Exchange": {
     "Scarlet": "Boosts the Attack stat when the Pok\u00e9mon is hit by a Fire-type move. The Pok\u00e9mon also cannot be burned.",
-    "Violet": "Boosts the Attack stat when the Pok\u00e9mon is hit by a Fire-type move. The Pok\u00e9mon also cannot be burned."
+    "Violet": "Boosts the Attack stat when the Pok\u00e9mon is hit by a Fire-type move. The Pok\u00e9mon also cannot be burned.",
+    "generationIntroduced": "9"
   },
   "Thick Fat": {
     "Ruby": "Heat-and-cold protection.",
@@ -4987,7 +5250,8 @@
     "B.Diamond": "The Pok\u00e9mon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves.",
     "S.Pearl": "The Pok\u00e9mon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves.",
     "Scarlet": "The Pok\u00e9mon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves.",
-    "Violet": "The Pok\u00e9mon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves."
+    "Violet": "The Pok\u00e9mon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves.",
+    "generationIntroduced": "3"
   },
   "Tinted Lens": {
     "Diamond": "Powers up \u201cnot very effective\u201d moves.",
@@ -5012,7 +5276,8 @@
     "B.Diamond": "The Pok\u00e9mon can use \u201cnot very effective\u201d moves to deal regular damage.",
     "S.Pearl": "The Pok\u00e9mon can use \u201cnot very effective\u201d moves to deal regular damage.",
     "Scarlet": "The Pok\u00e9mon can use \u201cnot very effective\u201d moves to deal regular damage.",
-    "Violet": "The Pok\u00e9mon can use \u201cnot very effective\u201d moves to deal regular damage."
+    "Violet": "The Pok\u00e9mon can use \u201cnot very effective\u201d moves to deal regular damage.",
+    "generationIntroduced": "4"
   },
   "Torrent": {
     "Ruby": "Ups WATER moves in a pinch.",
@@ -5042,7 +5307,8 @@
     "B.Diamond": "Powers up Water-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "S.Pearl": "Powers up Water-type moves when the Pok\u00e9mon\u2019s HP is low.",
     "Scarlet": "Powers up Water-type moves when the Pok\u00e9mon\u2019s HP is low.",
-    "Violet": "Powers up Water-type moves when the Pok\u00e9mon\u2019s HP is low."
+    "Violet": "Powers up Water-type moves when the Pok\u00e9mon\u2019s HP is low.",
+    "generationIntroduced": "3"
   },
   "Tough Claws": {
     "X": "Powers up moves that make direct contact.",
@@ -5058,7 +5324,8 @@
     "B.Diamond": "Powers up moves that make direct contact.",
     "S.Pearl": "Powers up moves that make direct contact.",
     "Scarlet": "Powers up moves that make direct contact.",
-    "Violet": "Powers up moves that make direct contact."
+    "Violet": "Powers up moves that make direct contact.",
+    "generationIntroduced": "6"
   },
   "Toxic Boost": {
     "Black": "Powers up physical attacks when poisoned.",
@@ -5078,11 +5345,13 @@
     "B.Diamond": "Powers up physical attacks when the Pok\u00e9mon is poisoned.",
     "S.Pearl": "Powers up physical attacks when the Pok\u00e9mon is poisoned.",
     "Scarlet": "Powers up physical moves when the Pok\u00e9mon is poisoned.",
-    "Violet": "Powers up physical moves when the Pok\u00e9mon is poisoned."
+    "Violet": "Powers up physical moves when the Pok\u00e9mon is poisoned.",
+    "generationIntroduced": "5"
   },
   "Toxic Debris": {
     "Scarlet": "Scatters poison spikes at the feet of the opposing team when the Pok\u00e9mon takes damage from physical moves.",
-    "Violet": "Scatters poison spikes at the feet of the opposing team when the Pok\u00e9mon takes damage from physical moves."
+    "Violet": "Scatters poison spikes at the feet of the opposing team when the Pok\u00e9mon takes damage from physical moves.",
+    "generationIntroduced": "9"
   },
   "Trace": {
     "Ruby": "Copies special ability.",
@@ -5112,7 +5381,8 @@
     "B.Diamond": "When it enters a battle, the Pok\u00e9mon copies an opposing Pok\u00e9mon\u2019s Ability.",
     "S.Pearl": "When it enters a battle, the Pok\u00e9mon copies an opposing Pok\u00e9mon\u2019s Ability.",
     "Scarlet": "When it enters a battle, the Pok\u00e9mon copies an opposing Pok\u00e9mon\u2019s Ability.",
-    "Violet": "When it enters a battle, the Pok\u00e9mon copies an opposing Pok\u00e9mon\u2019s Ability."
+    "Violet": "When it enters a battle, the Pok\u00e9mon copies an opposing Pok\u00e9mon\u2019s Ability.",
+    "generationIntroduced": "3"
   },
   "Transistor": {
     "Sword": "Powers up Electric-type moves.",
@@ -5120,7 +5390,8 @@
     "B.Diamond": "Powers up Electric-type moves.",
     "S.Pearl": "Powers up Electric-type moves.",
     "Scarlet": "Powers up Electric-type moves.",
-    "Violet": "Powers up Electric-type moves."
+    "Violet": "Powers up Electric-type moves.",
+    "generationIntroduced": "8"
   },
   "Triage": {
     "Sun": "Gives priority to a healing move.",
@@ -5132,7 +5403,8 @@
     "B.Diamond": "Gives priority to a healing move.",
     "S.Pearl": "Gives priority to a healing move.",
     "Scarlet": "Gives priority to the Pok\u00e9mon\u2019s healing moves.",
-    "Violet": "Gives priority to the Pok\u00e9mon\u2019s healing moves."
+    "Violet": "Gives priority to the Pok\u00e9mon\u2019s healing moves.",
+    "generationIntroduced": "7"
   },
   "Truant": {
     "Ruby": "Moves only every two turns.",
@@ -5162,7 +5434,8 @@
     "B.Diamond": "The Pok\u00e9mon can\u2019t use a move if it had used a move on the previous turn.",
     "S.Pearl": "The Pok\u00e9mon can\u2019t use a move if it had used a move on the previous turn.",
     "Scarlet": "Each time the Pok\u00e9mon uses a move, it spends the next turn loafing around.",
-    "Violet": "Each time the Pok\u00e9mon uses a move, it spends the next turn loafing around."
+    "Violet": "Each time the Pok\u00e9mon uses a move, it spends the next turn loafing around.",
+    "generationIntroduced": "3"
   },
   "Turboblaze": {
     "Black": "Moves can be used regardless of Abilities.",
@@ -5182,7 +5455,8 @@
     "B.Diamond": "Moves can be used on the target regardless of its Abilities.",
     "S.Pearl": "Moves can be used on the target regardless of its Abilities.",
     "Scarlet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target.",
-    "Violet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target."
+    "Violet": "The Pok\u00e9mon\u2019s moves are unimpeded by the Ability of the target.",
+    "generationIntroduced": "5"
   },
   "Unaware": {
     "Diamond": "Ignores any change in ability by the foe.",
@@ -5207,7 +5481,8 @@
     "B.Diamond": "When attacking, the Pok\u00e9mon ignores the target Pok\u00e9mon\u2019s stat changes.",
     "S.Pearl": "When attacking, the Pok\u00e9mon ignores the target Pok\u00e9mon\u2019s stat changes.",
     "Scarlet": "When attacking, the Pok\u00e9mon ignores the target\u2019s stat changes.",
-    "Violet": "When attacking, the Pok\u00e9mon ignores the target\u2019s stat changes."
+    "Violet": "When attacking, the Pok\u00e9mon ignores the target\u2019s stat changes.",
+    "generationIntroduced": "4"
   },
   "Unburden": {
     "Diamond": "Raises Speed if a held item is used.",
@@ -5232,7 +5507,8 @@
     "B.Diamond": "Boosts the Speed stat if the Pok\u00e9mon\u2019s held item is used or lost.",
     "S.Pearl": "Boosts the Speed stat if the Pok\u00e9mon\u2019s held item is used or lost.",
     "Scarlet": "Boosts the Speed stat if the Pok\u00e9mon\u2019s held item is used or lost.",
-    "Violet": "Boosts the Speed stat if the Pok\u00e9mon\u2019s held item is used or lost."
+    "Violet": "Boosts the Speed stat if the Pok\u00e9mon\u2019s held item is used or lost.",
+    "generationIntroduced": "4"
   },
   "Unnerve": {
     "Black": "Makes the foe nervous and unable to eat Berries.",
@@ -5252,17 +5528,20 @@
     "B.Diamond": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries.",
     "S.Pearl": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries.",
     "Scarlet": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries.",
-    "Violet": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries."
+    "Violet": "Unnerves opposing Pok\u00e9mon and makes them unable to eat Berries.",
+    "generationIntroduced": "5"
   },
   "Unseen Fist": {
     "B.Diamond": "If the Pok\u00e9mon uses moves that make direct contact, it can attack the target even if the target protects itself.",
     "S.Pearl": "If the Pok\u00e9mon uses moves that make direct contact, it can attack the target even if the target protects itself.",
     "Scarlet": "If the Pok\u00e9mon uses moves that make direct contact, it can attack the target even if the target protects itself.",
-    "Violet": "If the Pok\u00e9mon uses moves that make direct contact, it can attack the target even if the target protects itself."
+    "Violet": "If the Pok\u00e9mon uses moves that make direct contact, it can attack the target even if the target protects itself.",
+    "generationIntroduced": "8"
   },
   "Vessel of Ruin": {
     "Scarlet": "The power of the Pok\u00e9mon\u2019s ruinous vessel lowers the Sp. Atk stats of all Pok\u00e9mon except itself.",
-    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous vessel lowers the Sp. Atk stats of all Pok\u00e9mon except itself."
+    "Violet": "The power of the Pok\u00e9mon\u2019s ruinous vessel lowers the Sp. Atk stats of all Pok\u00e9mon except itself.",
+    "generationIntroduced": "9"
   },
   "Victory Star": {
     "Black": "Boosts the accuracy of its allies and itself.",
@@ -5282,7 +5561,8 @@
     "B.Diamond": "Boosts the accuracy of its allies and itself.",
     "S.Pearl": "Boosts the accuracy of its allies and itself.",
     "Scarlet": "Boosts the accuracy of the Pok\u00e9mon and its allies.",
-    "Violet": "Boosts the accuracy of the Pok\u00e9mon and its allies."
+    "Violet": "Boosts the accuracy of the Pok\u00e9mon and its allies.",
+    "generationIntroduced": "5"
   },
   "Vital Spirit": {
     "Ruby": "Prevents sleep.",
@@ -5312,7 +5592,8 @@
     "B.Diamond": "The Pok\u00e9mon is full of vitality, and that prevents it from falling asleep.",
     "S.Pearl": "The Pok\u00e9mon is full of vitality, and that prevents it from falling asleep.",
     "Scarlet": "The Pok\u00e9mon is full of vitality, and that prevents it from falling asleep.",
-    "Violet": "The Pok\u00e9mon is full of vitality, and that prevents it from falling asleep."
+    "Violet": "The Pok\u00e9mon is full of vitality, and that prevents it from falling asleep.",
+    "generationIntroduced": "3"
   },
   "Volt Absorb": {
     "Ruby": "Turns electricity into HP.",
@@ -5342,7 +5623,8 @@
     "B.Diamond": "Restores HP if hit by an Electric-type move instead of taking damage.",
     "S.Pearl": "Restores HP if hit by an Electric-type move instead of taking damage.",
     "Scarlet": "If hit by an Electric-type move, the Pok\u00e9mon has its HP restored instead of taking damage.",
-    "Violet": "If hit by an Electric-type move, the Pok\u00e9mon has its HP restored instead of taking damage."
+    "Violet": "If hit by an Electric-type move, the Pok\u00e9mon has its HP restored instead of taking damage.",
+    "generationIntroduced": "3"
   },
   "Wandering Spirit": {
     "Sword": "The Pok\u00e9mon exchanges Abilities with a Pok\u00e9mon that hits it with a move that makes direct contact.",
@@ -5350,7 +5632,8 @@
     "B.Diamond": "The Pok\u00e9mon exchanges Abilities with a Pok\u00e9mon that hits it with a move that makes direct contact.",
     "S.Pearl": "The Pok\u00e9mon exchanges Abilities with a Pok\u00e9mon that hits it with a move that makes direct contact.",
     "Scarlet": "The Pok\u00e9mon exchanges Abilities with a Pok\u00e9mon that hits it with a move that makes direct contact.",
-    "Violet": "The Pok\u00e9mon exchanges Abilities with a Pok\u00e9mon that hits it with a move that makes direct contact."
+    "Violet": "The Pok\u00e9mon exchanges Abilities with a Pok\u00e9mon that hits it with a move that makes direct contact.",
+    "generationIntroduced": "8"
   },
   "Water Absorb": {
     "Ruby": "Changes water into HP.",
@@ -5380,7 +5663,8 @@
     "B.Diamond": "Restores HP if hit by a Water-type move instead of taking damage.",
     "S.Pearl": "Restores HP if hit by a Water-type move instead of taking damage.",
     "Scarlet": "If hit by a Water-type move, the Pok\u00e9mon has its HP restored instead of taking damage.",
-    "Violet": "If hit by a Water-type move, the Pok\u00e9mon has its HP restored instead of taking damage."
+    "Violet": "If hit by a Water-type move, the Pok\u00e9mon has its HP restored instead of taking damage.",
+    "generationIntroduced": "3"
   },
   "Water Bubble": {
     "Sun": "Lowers the power of Fire-type moves done to the Pok\u00e9mon and prevents the Pok\u00e9mon from getting a burn.",
@@ -5392,7 +5676,8 @@
     "B.Diamond": "Lowers the power of Fire-type moves done to the Pok\u00e9mon and prevents the Pok\u00e9mon from getting a burn.",
     "S.Pearl": "Lowers the power of Fire-type moves done to the Pok\u00e9mon and prevents the Pok\u00e9mon from getting a burn.",
     "Scarlet": "Lowers the power of Fire-type moves that hit the Pok\u00e9mon and prevents it from being burned.",
-    "Violet": "Lowers the power of Fire-type moves that hit the Pok\u00e9mon and prevents it from being burned."
+    "Violet": "Lowers the power of Fire-type moves that hit the Pok\u00e9mon and prevents it from being burned.",
+    "generationIntroduced": "7"
   },
   "Water Compaction": {
     "Sun": "Boosts the Pok\u00e9mon\u2019s Defense stat sharply when hit by a Water-type move.",
@@ -5404,7 +5689,8 @@
     "B.Diamond": "Boosts the Pok\u00e9mon\u2019s Defense stat sharply when hit by a Water-type move.",
     "S.Pearl": "Boosts the Pok\u00e9mon\u2019s Defense stat sharply when hit by a Water-type move.",
     "Scarlet": "Boosts the Defense stat sharply when the Pok\u00e9mon is hit by a Water-type move.",
-    "Violet": "Boosts the Defense stat sharply when the Pok\u00e9mon is hit by a Water-type move."
+    "Violet": "Boosts the Defense stat sharply when the Pok\u00e9mon is hit by a Water-type move.",
+    "generationIntroduced": "7"
   },
   "Water Veil": {
     "Ruby": "Prevents burns.",
@@ -5434,7 +5720,8 @@
     "B.Diamond": "The Pok\u00e9mon is covered with a water veil, which prevents the Pok\u00e9mon from getting a burn.",
     "S.Pearl": "The Pok\u00e9mon is covered with a water veil, which prevents the Pok\u00e9mon from getting a burn.",
     "Scarlet": "The Pok\u00e9mon\u2019s water veil prevents it from being burned.",
-    "Violet": "The Pok\u00e9mon\u2019s water veil prevents it from being burned."
+    "Violet": "The Pok\u00e9mon\u2019s water veil prevents it from being burned.",
+    "generationIntroduced": "3"
   },
   "Weak Armor": {
     "Black": "Physical attacks lower Defense and raise Speed.",
@@ -5454,11 +5741,13 @@
     "B.Diamond": "Physical attacks to the Pok\u00e9mon lower its Defense stat but sharply raise its Speed stat.",
     "S.Pearl": "Physical attacks to the Pok\u00e9mon lower its Defense stat but sharply raise its Speed stat.",
     "Scarlet": "The Pok\u00e9mon\u2019s Defense stat is lowered when it takes damage from physical moves, but its Speed stat is sharply boosted.",
-    "Violet": "The Pok\u00e9mon\u2019s Defense stat is lowered when it takes damage from physical moves, but its Speed stat is sharply boosted."
+    "Violet": "The Pok\u00e9mon\u2019s Defense stat is lowered when it takes damage from physical moves, but its Speed stat is sharply boosted.",
+    "generationIntroduced": "5"
   },
   "Well-Baked Body": {
     "Scarlet": "The Pok\u00e9mon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.",
-    "Violet": "The Pok\u00e9mon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted."
+    "Violet": "The Pok\u00e9mon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.",
+    "generationIntroduced": "9"
   },
   "White Smoke": {
     "Ruby": "Prevents ability reduction.",
@@ -5488,7 +5777,8 @@
     "B.Diamond": "The Pok\u00e9mon is protected by its white smoke, which prevents other Pok\u00e9mon from lowering its stats.",
     "S.Pearl": "The Pok\u00e9mon is protected by its white smoke, which prevents other Pok\u00e9mon from lowering its stats.",
     "Scarlet": "The Pok\u00e9mon is protected by its white smoke, which prevents other Pok\u00e9mon from lowering its stats.",
-    "Violet": "The Pok\u00e9mon is protected by its white smoke, which prevents other Pok\u00e9mon from lowering its stats."
+    "Violet": "The Pok\u00e9mon is protected by its white smoke, which prevents other Pok\u00e9mon from lowering its stats.",
+    "generationIntroduced": "3"
   },
   "Wimp Out": {
     "Sun": "The Pok\u00e9mon cowardly switches out when its HP becomes half or less.",
@@ -5500,15 +5790,18 @@
     "B.Diamond": "The Pok\u00e9mon cowardly switches out when its HP becomes half or less.",
     "S.Pearl": "The Pok\u00e9mon cowardly switches out when its HP becomes half or less.",
     "Scarlet": "The Pok\u00e9mon cowardly switches out when its HP drops to half or less.",
-    "Violet": "The Pok\u00e9mon cowardly switches out when its HP drops to half or less."
+    "Violet": "The Pok\u00e9mon cowardly switches out when its HP drops to half or less.",
+    "generationIntroduced": "7"
   },
   "Wind Power": {
     "Scarlet": "The Pok\u00e9mon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pok\u00e9mon uses.",
-    "Violet": "The Pok\u00e9mon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pok\u00e9mon uses."
+    "Violet": "The Pok\u00e9mon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pok\u00e9mon uses.",
+    "generationIntroduced": "9"
   },
   "Wind Rider": {
     "Scarlet": "Boosts the Pok\u00e9mon\u2019s Attack stat if Tailwind takes effect or if the Pok\u00e9mon is hit by a wind move. The Pok\u00e9mon also takes no damage from wind moves.",
-    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat if Tailwind takes effect or if the Pok\u00e9mon is hit by a wind move. The Pok\u00e9mon also takes no damage from wind moves."
+    "Violet": "Boosts the Pok\u00e9mon\u2019s Attack stat if Tailwind takes effect or if the Pok\u00e9mon is hit by a wind move. The Pok\u00e9mon also takes no damage from wind moves.",
+    "generationIntroduced": "9"
   },
   "Wonder Guard": {
     "Ruby": "\u201cSuper effective\u201d hits.",
@@ -5538,7 +5831,8 @@
     "B.Diamond": "Its mysterious power only lets supereffective moves hit the Pok\u00e9mon.",
     "S.Pearl": "Its mysterious power only lets supereffective moves hit the Pok\u00e9mon.",
     "Scarlet": "Its mysterious power only lets supereffective moves hit the Pok\u00e9mon.",
-    "Violet": "Its mysterious power only lets supereffective moves hit the Pok\u00e9mon."
+    "Violet": "Its mysterious power only lets supereffective moves hit the Pok\u00e9mon.",
+    "generationIntroduced": "3"
   },
   "Wonder Skin": {
     "Black": "Makes status-changing moves more likely to miss.",
@@ -5558,7 +5852,8 @@
     "B.Diamond": "Makes status moves more likely to miss.",
     "S.Pearl": "Makes status moves more likely to miss.",
     "Scarlet": "Makes status moves more likely to miss the Pok\u00e9mon.",
-    "Violet": "Makes status moves more likely to miss the Pok\u00e9mon."
+    "Violet": "Makes status moves more likely to miss the Pok\u00e9mon.",
+    "generationIntroduced": "5"
   },
   "Zen Mode": {
     "Black": "Changes the Pok\u00e9mon\u2019s shape when HP is halved.",
@@ -5578,10 +5873,12 @@
     "B.Diamond": "Changes the Pok\u00e9mon\u2019s shape when HP is half or less.",
     "S.Pearl": "Changes the Pok\u00e9mon\u2019s shape when HP is half or less.",
     "Scarlet": "Changes the Pok\u00e9mon\u2019s shape when its HP drops to half or less.",
-    "Violet": "Changes the Pok\u00e9mon\u2019s shape when its HP drops to half or less."
+    "Violet": "Changes the Pok\u00e9mon\u2019s shape when its HP drops to half or less.",
+    "generationIntroduced": "5"
   },
   "Zero to Hero": {
     "Scarlet": "The Pok\u00e9mon transforms into its Hero Form when it switches out.",
-    "Violet": "The Pok\u00e9mon transforms into its Hero Form when it switches out."
+    "Violet": "The Pok\u00e9mon transforms into its Hero Form when it switches out.",
+    "generationIntroduced": "9"
   }
 }

@@ -58,6 +58,8 @@ public extension StoredPokedexNumbers {
             retVal.append(("Hisui", hisui ?? -1))
         case .scarlet, .violet:
             retVal.append(("Paldea", paldea ?? -1))
+            retVal.append(("Kitakami", kitakami ?? -1))
+            retVal.append(("Blueberry", blueberry ?? -1))
         case .national:
             retVal.append(("Kanto", kanto ?? -1))
             retVal.append(("Johto", johto ?? -1))
@@ -82,6 +84,9 @@ public extension StoredPokedexNumbers {
             retVal.append(("Isle of Armor", isleOfArmor ?? -1))
             retVal.append(("Crown Tundra", crownTundra ?? -1))
             retVal.append(("Hisui", hisui ?? -1))
+            retVal.append(("Paldea", paldea ?? -1))
+            retVal.append(("Kitakami", kitakami ?? -1))
+            retVal.append(("Blueberry", blueberry ?? -1))
         }
 
         retVal.removeAll { $0.1 == -1 }
@@ -100,6 +105,10 @@ public extension StoredPokedexNumbers {
     var alola: Int? {
         get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_alola)) as? Int16)?.toInt() }
         set { z_alola = newValue?.toInt16() ?? 0 }
+    }
+    var blueberry: Int? {
+        get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_blueberry)) as? Int16)?.toInt() }
+        set { z_blueberry = newValue?.toInt16() ?? 0 }
     }
     var centralKalos: Int? {
         get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_centralKalos)) as? Int16)?.toInt() }
@@ -136,6 +145,10 @@ public extension StoredPokedexNumbers {
     var kanto: Int? {
         get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_kanto)) as? Int16)?.toInt() }
         set { z_kanto = newValue?.toInt16() ?? 0 }
+    }
+    var kitakami: Int? {
+        get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_kitakami)) as? Int16)?.toInt() }
+        set { z_kitakami = newValue?.toInt16() ?? 0 }
     }
     var letsGoKanto: Int? {
         get { (value(forKeyPath: #keyPath(StoredPokedexNumbers.z_letsGoKanto)) as? Int16)?.toInt() }

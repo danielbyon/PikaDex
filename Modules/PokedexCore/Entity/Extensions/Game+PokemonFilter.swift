@@ -57,6 +57,8 @@ extension Game {
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Hisui)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)))
         case .scarlet, .violet:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Paldea)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_paldea)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Kitakami)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_kitakami)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Blueberry)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_blueberry)))
         case .national:
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Kanto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_kanto)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Johto)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_johto)))
@@ -75,7 +77,9 @@ extension Game {
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Isle of Armor)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_isleOfArmor)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (The Crown Tundra)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_crownTundra)))
             filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Hisui)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)))
-            break
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Paldea)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_paldea)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Kitakami)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_kitakami)))
+            filters.append(StoredPokemon.Filter.FilterBy(title: "Regional (Blueberry)", keyPath: #keyPath(StoredPokemon.z_pokedexNumbers.z_blueberry)))
         }
         return filters
     }

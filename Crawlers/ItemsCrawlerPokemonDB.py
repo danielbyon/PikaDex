@@ -82,6 +82,7 @@ def main():
         contents = crawler.fetch_or_download(filename, url)
         entries = process_file(contents)
         if entries:
+            entries['pokemonDBURL'] = url
             all_entries[name] = entries
         
     crawler.write_data_to_file(all_entries, "Data/PokemonDBItems")

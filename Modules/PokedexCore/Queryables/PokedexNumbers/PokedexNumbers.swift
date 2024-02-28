@@ -37,6 +37,8 @@ public struct PokedexNumbers {
     public let crownTundra: Int?
     public let hisui: Int?
     public let paldea: Int?
+    public let kitakami: Int?
+    public let blueberry: Int?
 
     public init(
         national: Int,
@@ -66,7 +68,9 @@ public struct PokedexNumbers {
         isleOfArmor: Int? = nil,
         crownTundra: Int? = nil,
         hisui: Int? = nil,
-        paldea: Int? = nil
+        paldea: Int? = nil,
+        kitakami: Int? = nil,
+        blueberry: Int? = nil
     ) {
         self.national = national
         self.kanto = kanto
@@ -96,6 +100,8 @@ public struct PokedexNumbers {
         self.crownTundra = crownTundra
         self.hisui = hisui
         self.paldea = paldea
+        self.kitakami = kitakami
+        self.blueberry = blueberry
     }
 
     public init(pokedexNumbers: StoredPokedexNumbers) {
@@ -127,6 +133,8 @@ public struct PokedexNumbers {
         self.crownTundra = pokedexNumbers.crownTundra
         self.hisui = pokedexNumbers.hisui
         self.paldea = pokedexNumbers.paldea
+        self.kitakami = pokedexNumbers.kitakami
+        self.blueberry = pokedexNumbers.blueberry
     }
 
 }
@@ -171,6 +179,8 @@ extension PokedexNumbers {
         case .crownTundra: return crownTundra ?? 0
         case .hisui: return hisui ?? 0
         case .paldea: return paldea ?? 0
+        case .kitakami: return kitakami ?? 0
+        case .blueberry: return blueberry ?? 0
         }
     }
 

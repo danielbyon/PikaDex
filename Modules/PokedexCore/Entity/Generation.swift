@@ -51,6 +51,14 @@ extension Generation {
 
     public static var latest: Generation { Generation.allCases.filter { $0 != .all }.last! }
 
+    public static var allCasesWithoutAll: [Generation] {
+        Array(allCases.dropLast())
+    }
+
+    public static var allCasesLatestFirst: [Generation] {
+        Array(allCases.reversed().dropFirst())
+    }
+
     public var title: String {
         if self == .all {
             return "National"

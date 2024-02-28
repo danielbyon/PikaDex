@@ -1,0 +1,47 @@
+{
+  "Embody Aspect": {
+    "Scarlet": "The Pokémon's heart fills with memories, causing the Teal Mask to shine and the Pokémon's Speed stat to be boosted.",
+    "Violet": "The Pokémon's heart fills with memories, causing the Teal Mask to shine and the Pokémon's Speed stat to be boosted.",
+    "generationIntroduced": "9"
+  },
+  "Hospitality": {
+    "Scarlet": "When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP.",
+    "Violet": "When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP.",
+    "generationIntroduced": "9"
+  },
+  "Mind's Eye": {
+    "Scarlet": "The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal- and Fighting-type moves.",
+    "Violet": "The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal- and Fighting-type moves.",
+    "generationIntroduced": "9"
+  },
+  "Poison Puppeteer": {
+    "Scarlet": "Pokémon poisoned by Pecharunt's moves will also become confused.",
+    "Violet": "Pokémon poisoned by Pecharunt's moves will also become confused.",
+    "generationIntroduced": "9"
+  },
+  "Supersweet Syrup": {
+    "Scarlet": "A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, lowering the evasiveness of opposing Pokémon.",
+    "Violet": "A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, lowering the evasiveness of opposing Pokémon.",
+    "generationIntroduced": "9"
+  },
+  "Tera Shell": {
+    "Scarlet": "The Pokémon's shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective.",
+    "Violet": "The Pokémon's shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective.",
+    "generationIntroduced": "9"
+  },
+  "Tera Shift": {
+    "Scarlet": "When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.",
+    "Violet": "When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.",
+    "generationIntroduced": "9"
+  },
+  "Teraform Zero": {
+    "Scarlet": "When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.",
+    "Violet": "When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.",
+    "generationIntroduced": "9"
+  },
+  "Toxic Chain": {
+    "Scarlet": "When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.",
+    "Violet": "When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form.",
+    "generationIntroduced": "9"
+  }
+}
