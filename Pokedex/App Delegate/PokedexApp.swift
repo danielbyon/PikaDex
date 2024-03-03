@@ -6,6 +6,7 @@
 //  Copyright © 2019 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import PokedexCore
 import SwiftUI
 import UIKit
@@ -15,12 +16,14 @@ struct PokedexApp: App {
 
     @Environment(\.scenePhase) private var scenePhase
     @State private var isShowingUpdateMessage = false
+    @StateObject private var appSettings = AppSettings()
     @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
 
     private var hasDisplayedUpdateMessage: Bool {
         get { UserDefaults.standard.bool(forKey: hasDisplayedUpdateMessageKey) }
         nonmutating set { UserDefaults.standard.set(newValue, forKey: hasDisplayedUpdateMessageKey) }
     }
+
     private var hasDisplayedUpdateMessageKey: String {
         if let appVersion = AppConstants.appVersion {
             return "hasDisplayedUpdateMessageForVersion-\(appVersion)"
@@ -33,10 +36,12 @@ struct PokedexApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .colorSchemeModifier()
                 .sheet(isPresented: $isShowingUpdateMessage) {
                     hasDisplayedUpdateMessage = true
                 } content: {
                     UpdateMessageView()
+                        .colorSchemeModifier()
                 }
                 .onAppear {
                     if !hasDisplayedUpdateMessage {

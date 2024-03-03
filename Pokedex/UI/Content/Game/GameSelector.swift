@@ -47,6 +47,7 @@ struct GameSelector: View {
             NavigationStack {
                 Store()
             }
+            .colorSchemeModifier()
         }
     }
 

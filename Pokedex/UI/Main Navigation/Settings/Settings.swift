@@ -12,9 +12,10 @@ import AppSupport
 
 struct Settings: View {
 
+    @AppStorage("preferredColorScheme") public var preferredColorScheme = 0
     @Environment(\.presentationMode) var presentationMode
-    @Dependency(\.appSettings) var appSettings
     @State private var isShowingUpdateMessage = false
+    @StateObject private var appSettings = AppSettings()
 
     private var spacing: CGFloat { 16.0 }
     private var aboutText: String {
@@ -42,11 +43,24 @@ struct Settings: View {
 
     var body: some View {
         List {
-            Toggle("Show weight in kilograms", isOn: appSettings.$shouldUseKilogramsForWeight)
+            Toggle("Show weight in kilograms", isOn: $appSettings.shouldUseKilogramsForWeight)
+                .monospacedBody()
 
-            Toggle("Show height in meters", isOn: appSettings.$shouldUseMetersForHeight)
+            Toggle("Show height in meters", isOn: $appSettings.shouldUseMetersForHeight)
+                .monospacedBody()
+
+            Picker("Light/Dark Mode", selection: $preferredColorScheme) {
+                Text("System")
+                    .tag(0)
+                Text("Light")
+                    .tag(1)
+                Text("Dark")
+                    .tag(2)
+            }
+            .monospacedBody()
 
             NavigationLink("Pokémon detail ordering", destination: PokemonDetailOrderSettings())
+                .monospacedBody()
 
             Card {
                 Text(aboutText)
@@ -65,6 +79,7 @@ struct Settings: View {
             }
             .sheet(isPresented: $isShowingUpdateMessage, onDismiss: nil) {
                 UpdateMessageView()
+                    .colorSchemeModifier()
             }
 
 

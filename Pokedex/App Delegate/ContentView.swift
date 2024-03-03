@@ -139,7 +139,10 @@ struct ContentView: View {
                     SafariView(url: url)
                 }
             }
-            .sheet(isPresented: $sheetState.isShowing, content: sheetDestination)
+            .sheet(isPresented: $sheetState.isShowing) {
+                sheetDestination()
+                    .colorSchemeModifier()
+            }
             .onOpenURL(perform: handleURL)
         }
         .navigationStore(navigationStore)

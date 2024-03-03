@@ -41,6 +41,7 @@ public struct PokemonList: View {
         .navigationTitle("Pokémon")
         .sheet(isPresented: $isShowingFilter) {
             PokemonFilterView(game: game, filter: $pokemons)
+                .colorSchemeModifier()
         }
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {
