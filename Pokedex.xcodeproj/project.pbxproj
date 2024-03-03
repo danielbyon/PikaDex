@@ -29,7 +29,6 @@
 		654022312978ECA9005BF4DC /* MoveCategory+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021772978EC90005BF4DC /* MoveCategory+Strings.swift */; };
 		654022322978ECA9005BF4DC /* Flavor+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021782978EC90005BF4DC /* Flavor+Strings.swift */; };
 		654022332978ECA9005BF4DC /* LearnsetType+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021792978EC90005BF4DC /* LearnsetType+Strings.swift */; };
-		654022342978ECA9005BF4DC /* View+NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540217A2978EC90005BF4DC /* View+NSPersistentContainer.swift */; };
 		654022352978ECA9005BF4DC /* PokemonType+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540217B2978EC90005BF4DC /* PokemonType+Strings.swift */; };
 		654022362978ECA9005BF4DC /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540217C2978EC90005BF4DC /* NumberFormatter+Extension.swift */; };
 		654022372978ECA9005BF4DC /* Array+SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540217D2978EC90005BF4DC /* Array+SafeSubscript.swift */; };
@@ -690,7 +689,6 @@
 		654021772978EC90005BF4DC /* MoveCategory+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoveCategory+Strings.swift"; sourceTree = "<group>"; };
 		654021782978EC90005BF4DC /* Flavor+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Flavor+Strings.swift"; sourceTree = "<group>"; };
 		654021792978EC90005BF4DC /* LearnsetType+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LearnsetType+Strings.swift"; sourceTree = "<group>"; };
-		6540217A2978EC90005BF4DC /* View+NSPersistentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+NSPersistentContainer.swift"; sourceTree = "<group>"; };
 		6540217B2978EC90005BF4DC /* PokemonType+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PokemonType+Strings.swift"; sourceTree = "<group>"; };
 		6540217C2978EC90005BF4DC /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
 		6540217D2978EC90005BF4DC /* Array+SafeSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SafeSubscript.swift"; sourceTree = "<group>"; };
@@ -1318,30 +1316,29 @@
 		654021732978EC90005BF4DC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				654021742978EC90005BF4DC /* EncounterRate+Strings.swift */,
 				654021752978EC90005BF4DC /* AnyScheduler+AppQueues.swift */,
-				654021762978EC90005BF4DC /* DispatchQueue+AppQueues.swift */,
-				654021772978EC90005BF4DC /* MoveCategory+Strings.swift */,
-				654021782978EC90005BF4DC /* Flavor+Strings.swift */,
-				654021792978EC90005BF4DC /* LearnsetType+Strings.swift */,
-				6540217A2978EC90005BF4DC /* View+NSPersistentContainer.swift */,
-				6540217B2978EC90005BF4DC /* PokemonType+Strings.swift */,
-				6540217C2978EC90005BF4DC /* NumberFormatter+Extension.swift */,
-				6540217D2978EC90005BF4DC /* Array+SafeSubscript.swift */,
 				6540217E2978EC90005BF4DC /* AppStorage+AppSetting.swift */,
-				6540217F2978EC90005BF4DC /* StoredPokemonForm+Image.swift */,
+				6540217D2978EC90005BF4DC /* Array+SafeSubscript.swift */,
+				654021762978EC90005BF4DC /* DispatchQueue+AppQueues.swift */,
 				654021802978EC90005BF4DC /* EggGroup+Strings.swift */,
+				654021742978EC90005BF4DC /* EncounterRate+Strings.swift */,
+				654021782978EC90005BF4DC /* Flavor+Strings.swift */,
 				654021812978EC90005BF4DC /* Int+EvenOdd.swift */,
-				654021822978EC90005BF4DC /* LocationPokemon+Strings.swift */,
-				654021832978EC90005BF4DC /* Team+PokePaste.swift */,
-				654021842978EC90005BF4DC /* MassFormatter+Extension.swift */,
-				654021852978EC90005BF4DC /* LevelingRate+Strings.swift */,
-				654021862978EC90005BF4DC /* Pocket+Strings.swift */,
+				654021792978EC90005BF4DC /* LearnsetType+Strings.swift */,
 				654021872978EC90005BF4DC /* LengthFormatter+Extension.swift */,
-				654021882978EC90005BF4DC /* StatType+String.swift */,
-				654021892978EC90005BF4DC /* String+Search.swift */,
-				6540218A2978EC90005BF4DC /* UserDefaults+AppGroup.swift */,
+				654021852978EC90005BF4DC /* LevelingRate+Strings.swift */,
+				654021822978EC90005BF4DC /* LocationPokemon+Strings.swift */,
+				654021842978EC90005BF4DC /* MassFormatter+Extension.swift */,
+				654021772978EC90005BF4DC /* MoveCategory+Strings.swift */,
+				6540217C2978EC90005BF4DC /* NumberFormatter+Extension.swift */,
+				654021862978EC90005BF4DC /* Pocket+Strings.swift */,
+				6540217B2978EC90005BF4DC /* PokemonType+Strings.swift */,
 				6540218B2978EC90005BF4DC /* Region+Strings.swift */,
+				654021882978EC90005BF4DC /* StatType+String.swift */,
+				6540217F2978EC90005BF4DC /* StoredPokemonForm+Image.swift */,
+				654021892978EC90005BF4DC /* String+Search.swift */,
+				654021832978EC90005BF4DC /* Team+PokePaste.swift */,
+				6540218A2978EC90005BF4DC /* UserDefaults+AppGroup.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -3177,7 +3174,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = "Daniel Byon";
 				TargetAttributes = {
 					6518ACB023BED1D7004B7C58 = {
@@ -3607,7 +3604,6 @@
 				654022742978ECA9005BF4DC /* LearnsetEntry.swift in Sources */,
 				654022BF2978ECA9005BF4DC /* QueryFilter.swift in Sources */,
 				654022652978ECA9005BF4DC /* LearnsetBreedingEntry.swift in Sources */,
-				654022342978ECA9005BF4DC /* View+NSPersistentContainer.swift in Sources */,
 				654022572978ECA9005BF4DC /* Pokemon+Stub.swift in Sources */,
 				654022612978ECA9005BF4DC /* Machine.swift in Sources */,
 				654022892978ECA9005BF4DC /* Pokemon.Filter.swift in Sources */,
@@ -4423,6 +4419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -4486,6 +4483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

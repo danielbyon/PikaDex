@@ -13,7 +13,6 @@ import SwiftUI
 @propertyWrapper
 public struct Query<T: Queryable>: DynamicProperty {
 
-//    @Environment(\.dataStore) var dataStore: DataStore
     @StateObject private var core = Core()
     @State private var baseFilter: T.Filter
 
@@ -27,15 +26,12 @@ public struct Query<T: Queryable>: DynamicProperty {
 
         private(set) var results: QueryResults<T> = QueryResults()
 
-        var dataStore: DataStore?
+        var dataStore: DataStore!
         var filter: T.Filter?
 
         private var controller: NSFetchedResultsController<T.Filter.ResultType>?
 
         func fetchIfNecessary() {
-            guard let dataStore = dataStore else {
-                fatalError("Attempting to execute a query but the DataStore is not in the environment")
-            }
             guard let filter = filter else {
                 fatalError("Attempting to execute a query without a filter")
             }
@@ -43,6 +39,8 @@ public struct Query<T: Queryable>: DynamicProperty {
             var shouldFetch = false
 
             let request = filter.makeFetchRequest(dataStore)
+            request.returnsObjectsAsFaults = false
+            request.fetchBatchSize = DatabaseConstants.fetchBatchSize
             if let controller = controller {
                 if controller.fetchRequest.predicate != request.predicate {
                     controller.fetchRequest.predicate = request.predicate
@@ -52,6 +50,8 @@ public struct Query<T: Queryable>: DynamicProperty {
                     controller.fetchRequest.sortDescriptors = request.sortDescriptors
                     shouldFetch = true
                 }
+                controller.fetchRequest.returnsObjectsAsFaults = false
+                controller.fetchRequest.fetchBatchSize = DatabaseConstants.fetchBatchSize
             } else {
                 let controller = NSFetchedResultsController(
                     fetchRequest: request,
@@ -65,7 +65,11 @@ public struct Query<T: Queryable>: DynamicProperty {
             }
 
             if shouldFetch {
+                let start = Date()
                 try? controller?.performFetch()
+                let end = Date()
+                let duration = end.timeIntervalSince(start)
+                print("Took \(duration) to fetch")
                 updateResults()
             }
         }
@@ -97,6 +101,7 @@ public struct Query<T: Queryable>: DynamicProperty {
     }
 
     public func update() {
+        debugPrint("Query property wrapper update() called")
         if core.dataStore == nil {
             core.dataStore = dataStore
         }

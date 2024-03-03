@@ -13,7 +13,6 @@ public struct PreviewContainer<Content: View>: View {
 
     public var body: some View {
         content
-            .injectPersistentContainer()
     }
 
     public init(@ViewBuilder _ content: () -> Content) {

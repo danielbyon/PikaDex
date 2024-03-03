@@ -26,9 +26,9 @@ public struct Pokemon: Queryable {
         self.generationIntroduced = result.generationIntroduced
         self.index = result.index
         self.name = result.name
-        self.primaryType = result.defaultForm.primaryType
-        self.secondaryType = result.defaultForm.secondaryType
-        self.spriteName = result.defaultForm.spriteName
+        self.primaryType = result.primaryType
+        self.secondaryType = result.secondaryType
+        self.spriteName = result.spriteName
         self.pokedexNumbers = PokedexNumbers(pokedexNumbers: result.pokedexNumbers)
     }
 

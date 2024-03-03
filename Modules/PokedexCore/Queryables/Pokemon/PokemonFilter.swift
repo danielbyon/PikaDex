@@ -106,7 +106,7 @@ public struct PokemonFilter: SearchableFilter {
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(StoredPokemon.z_name), ascending: ascending)]
         }
 
-        fetchRequest.fetchBatchSize = 20
+        fetchRequest.fetchBatchSize = DatabaseConstants.fetchBatchSize
         fetchRequest.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredPokemon.z_pokedexNumbers)
         ]

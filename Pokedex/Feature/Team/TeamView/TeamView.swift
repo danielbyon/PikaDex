@@ -5,6 +5,7 @@
 //  Created by Daniel Byon on 10/26/22.
 //
 
+import Dependencies
 import PokedexUI
 import SwiftUI
 
@@ -12,7 +13,7 @@ public struct TeamView: View {
 
     // MARK: Properties
 
-    @Environment(\.pokedexDataStore) var dataStore
+    @Dependency(\.pokedexDataStore) var dataStore
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @ObservedObject var viewModel: TeamViewModel
     @State private var currentDeletingMember: TeamMember?

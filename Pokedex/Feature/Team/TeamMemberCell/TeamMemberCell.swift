@@ -5,6 +5,7 @@
 //  Created by Daniel Byon on 10/30/22.
 //
 
+import Dependencies
 import PokedexUI
 import SwiftUI
 
@@ -12,7 +13,7 @@ struct TeamMemberCell: View {
 
     @ObservedObject var viewModel: TeamMemberViewModel
 
-    @Environment(\.pokedexDataStore) private var dataStore
+    @Dependency(\.pokedexDataStore) private var dataStore
 
     private var pokemonForm: PokemonDetailForm? {
         try? dataStore.fetch(PokemonDetailForm.self, filter: PokemonDetailFormFilter(
@@ -102,7 +103,7 @@ private struct TeamMemberMoves: View {
 
     @ObservedObject var viewModel: TeamMemberViewModel
 
-    @Environment(\.pokedexDataStore) private var dataStore
+    @Dependency(\.pokedexDataStore) private var dataStore
 
     private let emptyMove = "\u{2014}"
 

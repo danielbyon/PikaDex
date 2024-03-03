@@ -5,6 +5,7 @@
 //  Created by Daniel Byon on 11/4/22.
 //
 
+import Dependencies
 import PokedexUI
 import SwiftUI
 
@@ -14,7 +15,7 @@ struct PokemonContentView: View {
     @AppStorage(.pokemonDetailOrdering, store: .appGroup) private var storedOrdering: Data?
     @Binding var currentFormIndex: Int
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    @Environment(\.userDataDataStore) var dataStore
+    @Dependency(\.userDataDataStore) var dataStore
     @ObservedObject var viewModel: PokemonContentViewModel
 
     private var pokemon: PokemonDetail { viewModel.pokemon }

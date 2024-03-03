@@ -5,13 +5,14 @@
 //  Created by Daniel Byon on 9/19/22.
 //
 
-import SwiftUI
+import Dependencies
 import PokedexCore
 import PokedexUI
+import SwiftUI
 
 public struct PokemonList: View {
 
-    @Environment(\.userDataDataStore) private var dataStore
+    @Dependency(\.userDataDataStore) private var dataStore
     @Query(dataStore: .userData) private var caughtPokemons: QueryResults<CaughtPokemon>
     @Query private var pokemons: QueryResults<Pokemon>
     @State private var currentTab: Tab = .all
@@ -27,16 +28,14 @@ public struct PokemonList: View {
     }
 
     public var body: some View {
-        Group {
-            SearchableList(
-                items: pokemons,
-                query: $pokemons.query.toString(),
-                searchPrompt: "Search for a Pokémon",
-                id: \.index
-            ) { pokemon in
-                if shouldDisplayPokemon(pokemon, caughtPokemons: caughtPokemons) {
-                    makePokemonCell(pokemon: pokemon, pokedex: viewModel.pokedex)
-                }
+        SearchableList(
+            items: pokemons,
+            query: $pokemons.query.toString(),
+            searchPrompt: "Search for a Pokémon",
+            id: \.index
+        ) { pokemon in
+            if shouldDisplayPokemon(pokemon, caughtPokemons: caughtPokemons) {
+                makePokemonCell(pokemon: pokemon, pokedex: viewModel.pokedex)
             }
         }
         .navigationTitle("Pokémon")
@@ -73,13 +72,20 @@ public struct PokemonList: View {
             }
         }
         .onAppear {
-            viewModel.dataStore = dataStore
-            viewModel.game = game
-            $caughtPokemons.wrappedValue = .init(game: game)
-            $pokemons.wrappedValue = viewModel.filter
+            if viewModel.game != game {
+                viewModel.game = game
+            }
+            if $caughtPokemons.wrappedValue != .init(game: game) {
+                $caughtPokemons.wrappedValue = .init(game: game)
+            }
+            if $pokemons.wrappedValue != viewModel.filter {
+                $pokemons.wrappedValue = viewModel.filter
+            }
         }
         .onChange(of: $pokemons.wrappedValue) { _, newValue in
-            viewModel.filter = newValue
+            if viewModel.filter != newValue {
+                viewModel.filter = newValue
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23C5030f" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23C5030f" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="StoredAbility" representedClassName="StoredAbility" syncable="YES" codeGenerationType="class">
         <attribute name="z_alphaSapphire" optional="YES" attributeType="String"/>
         <attribute name="z_black" optional="YES" attributeType="String"/>
@@ -270,6 +270,9 @@
         <attribute name="z_ultraUlaula" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="z_unova" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
         <relationship name="z_pokemon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoredPokemon" inverseName="z_pokedexNumbers" inverseEntity="StoredPokemon"/>
+        <fetchIndex name="byPokemon">
+            <fetchIndexElement property="z_pokemon" type="Binary" order="ascending"/>
+        </fetchIndex>
     </entity>
     <entity name="StoredPokemon" representedClassName="StoredPokemon" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="Pokemon">
         <attribute name="i_gameIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -284,7 +287,10 @@
         <attribute name="z_levelingRate" optional="YES" attributeType="String"/>
         <attribute name="z_maleRatio" optional="YES" attributeType="Double" usesScalarValueType="NO"/>
         <attribute name="z_name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="z_overallPrimaryType" optional="YES" attributeType="String"/>
+        <attribute name="z_overallSecondaryType" optional="YES" attributeType="String"/>
         <attribute name="z_pokemonDBURL" optional="YES" attributeType="String"/>
+        <attribute name="z_spriteName" optional="YES" attributeType="String"/>
         <relationship name="z_forms" toMany="YES" minCount="1" deletionRule="Cascade" destinationEntity="StoredPokemonForm" inverseName="z_pokemon" inverseEntity="StoredPokemonForm"/>
         <relationship name="z_locationPokemons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoredLocationPokemon" inverseName="z_pokemon" inverseEntity="StoredLocationPokemon"/>
         <relationship name="z_pokedexNumbers" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="StoredPokedexNumbers" inverseName="z_pokemon" inverseEntity="StoredPokedexNumbers"/>

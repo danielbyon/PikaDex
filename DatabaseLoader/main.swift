@@ -338,6 +338,10 @@ for dict in Helper.loadTSV(from: "Research/Pokemon.tsv") {
         pokemon.index = index
         pokemon.name = name
         pokemon.game = game
+        pokemon.primaryType = PokemonType(rawValue: dict["primaryType"]!)!
+        if let secondaryTypeString = dict["secondaryType"], !secondaryTypeString.isEmpty {
+            pokemon.secondaryType = PokemonType(rawValue: secondaryTypeString)!
+        }
         pokemon.generationIntroduced = Generation(rawValue: Int(dict["introduced"]!)!)!
         pokemon.catchRate = Int(dict["catchRate"]!)!
         pokemon.levelingRate = LevelingRate(dictValue: dict["levelingRate"]!)!
@@ -523,7 +527,6 @@ func latestPokemon(_ pokemons: [Game: StoredPokemon]) -> StoredPokemon {
 
     fatalError("Should never get here")
 }
-
 
 // MARK: - Pokemon Moves
 print("--- Pokemon Moves ---")
@@ -1560,6 +1563,14 @@ allPokemon.values
         form.evolutions = allEvolutions[form.familyName]?[form.game]
     }
 
+
+// Compute sprite name and save to Pokemon
+for (_, gameToPokemon) in allPokemon {
+    for (_, pokemon) in gameToPokemon {
+        guard !pokemon.forms.isEmpty else { continue }
+        pokemon.spriteName = PokemonImageNameFormatter.menuSpriteName(forPokemonName: pokemon.name, formName: pokemon.defaultForm.name, index: pokemon.index)
+    }
+}
 
 
 // MARK: - Cleanup
