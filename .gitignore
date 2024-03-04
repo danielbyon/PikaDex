@@ -108,3 +108,6 @@ iOSInjectionProject/
 .DS_Store
 
 Crawlers/Cached/*
+Modules/PokedexCore/Resources/Database/Pokedex.sqlite
+Modules/PokedexCore/Resources/Database/Pokedex.sqlite-shm
+Modules/PokedexCore/Resources/Database/Pokedex.sqlite-wal
