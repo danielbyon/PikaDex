@@ -4,10 +4,20 @@
 <dict>
 	<key>bugFixes</key>
 	<array>
-		<string>Fix images for Scarlet/Violet Pokemon</string>
+		<string>Fixed issue on the Pokemon list where a customized filter would revert to the default filter when coming back from a Pokemon detail page</string>
+		<string>Fixed issue where Pokemon detail page ordering settings were not being respected</string>
+		<string>Fixed Finizen to Palafin evolution entry</string>
+		<string>Fixed Girafarig to Farigarif evolution entry</string>
+		<string>Fixed Primeape to Annihilape evolution entry</string>
+		<string>Fixed Pansear to Simisear evolution entry for National Pokedex</string>
+		<string>Fixed types for Mega Gyarados</string>
 	</array>
 	<key>newFeatures</key>
-	<array/>
+	<array>
+		<string>Added Scarlet/Violet DLC Pokemon</string>
+		<string>Added light/dark toggle</string>
+		<string>Slightly improved performance of Pokemon list</string>
+	</array>
 	<key>upcoming</key>
 	<array/>
 </dict>
