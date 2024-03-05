@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Dependencies
 import SwiftUI
 
 public final class TeamViewModel: ObservableObject {
@@ -27,17 +28,15 @@ public final class TeamViewModel: ObservableObject {
         members.count < 6
     }
 
-    private let teamStore: TeamStore
+    @Dependency(\.teamStore) var teamStore
     private var cancellables: Set<AnyCancellable> = []
 
     public init(
         team: Team,
-        game: Game,
-        teamStore: TeamStore = DefaultTeamStore.shared
+        game: Game
     ) {
         self.team = team
         self.game = game
-        self.teamStore = teamStore
 
         $team
             .handleEvents(receiveOutput: { [unowned self] team in

@@ -23,7 +23,7 @@ struct SelectTeamMemberMove: View {
     @State private var showMovesByPokemon = true
 
     private var query: Binding<String> {
-        .init {
+        Binding<SearchQuery> {
             $levelEntries.query.wrappedValue
         } set: { newValue in
             $allMoves.query.wrappedValue = newValue
@@ -32,7 +32,7 @@ struct SelectTeamMemberMove: View {
             $breedingEntries.query.wrappedValue = newValue
             $tutoringEntries.query.wrappedValue = newValue
         }
-
+        .toString()
     }
 
     var body: some View {

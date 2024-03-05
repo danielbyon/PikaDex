@@ -57,6 +57,7 @@ public struct LocationView: View {
             NavigationStack {
                 LocationMapView(map: map)
             }
+            .colorSchemeModifier()
         }
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {

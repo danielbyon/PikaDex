@@ -10,6 +10,6 @@ import Foundation
 
 public enum DatabaseConstants {
 
-    public static let fetchBatchSize = 20
+    public static let fetchBatchSize = 0
 
 }

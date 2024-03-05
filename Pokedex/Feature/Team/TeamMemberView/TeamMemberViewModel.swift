@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Dependencies
 import PokedexUI
 import SwiftUI
 
@@ -26,7 +27,7 @@ public final class TeamMemberViewModel: ObservableObject {
             guard let abilityName = teamMember.ability else { return nil }
             return try? dataStore.fetch(Ability.self, filter: AbilityFilter(
                 game: teamMember.game,
-                query: abilityName
+                query: .exact(abilityName)
             )).first
         }
         set { teamMember.ability = newValue?.name }
@@ -39,7 +40,7 @@ public final class TeamMemberViewModel: ObservableObject {
             guard let itemName = teamMember.heldItem else { return nil }
             return try? dataStore.fetch(Item.self, filter: ItemFilter(
                 game: teamMember.game,
-                query: itemName
+                query: .exact(itemName)
             )).first
         }
         set { teamMember.heldItem = newValue?.name }
@@ -89,7 +90,7 @@ public final class TeamMemberViewModel: ObservableObject {
 
     private let team: Team
     private let dataStore: DataStore = .pokedex
-    private let teamStore: TeamStore = DefaultTeamStore.shared
+    @Dependency(\.teamStore) var teamStore
 
     private var cancellables: Set<AnyCancellable> = []
 
@@ -155,7 +156,13 @@ public final class TeamMemberViewModel: ObservableObject {
 
     private func fetchMove(forName name: String?) -> Move? {
         guard let name else { return nil }
-        return try? dataStore.fetch(Move.self, filter: MoveFilter(game: teamMember.game, query: name)).first
+        return try? dataStore.fetch(
+            Move.self,
+            filter: MoveFilter(
+                game: teamMember.game,
+                query: .exact(name)
+            )
+        ).first
     }
 
 }

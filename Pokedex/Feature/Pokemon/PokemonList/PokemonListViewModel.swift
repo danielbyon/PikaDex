@@ -17,7 +17,9 @@ final class PokemonListViewModel: ObservableObject {
 
     var game: Game {
         didSet {
-            filter = Self.readSerializedFilter(for: game, userDefaults: userDefaults) ?? .default(for: game)
+            if game != oldValue {
+                filter = Self.readSerializedFilter(for: game, userDefaults: userDefaults) ?? .default(for: game)
+            }
         }
     }
     var dataStore: DataStore?
@@ -43,8 +45,9 @@ final class PokemonListViewModel: ObservableObject {
         }
 
         $filter
+            .dropFirst()
             .sink { filter in
-                Self.saveFilter(filter, game: game, userDefaults: userDefaults)
+                Self.saveFilter(filter, userDefaults: userDefaults)
             }
             .store(in: &subscriptions)
     }
@@ -78,8 +81,12 @@ final class PokemonListViewModel: ObservableObject {
 
     // MARK: Private
 
+    private static func filterKey(forGame game: Game) -> String {
+        return "pokemonlistfilter.filter-\(game.rawValue)"
+    }
+
     private static func readSerializedFilter(for game: Game, userDefaults: UserDefaults) -> PokemonFilter? {
-        guard let data = userDefaults.data(forKey: "pokemonlistfilter.filter-\(game.rawValue)"),
+        guard let data = userDefaults.data(forKey: filterKey(forGame: game)),
               let filter = try? JSONDecoder().decode(PokemonFilter.self, from: data),
               filter.game == game else {
             return nil
@@ -87,18 +94,18 @@ final class PokemonListViewModel: ObservableObject {
         return filter
     }
 
-    private static func writeSerializedFilter(_ filter: PokemonFilter, for game: Game, userDefaults: UserDefaults) {
+    private static func writeSerializedFilter(_ filter: PokemonFilter, userDefaults: UserDefaults) {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(filter)
-            userDefaults.set(data, forKey: "pokemonlistfilter.filter-\(game.rawValue)")
+            userDefaults.set(data, forKey: filterKey(forGame: filter.game))
         } catch {
             assertionFailure("Failed to serialize filter: \(error)")
         }
     }
 
-    private static func saveFilter(_ filter: PokemonFilter, game: Game, userDefaults: UserDefaults) {
-        writeSerializedFilter(filter, for: game, userDefaults: userDefaults)
+    private static func saveFilter(_ filter: PokemonFilter, userDefaults: UserDefaults) {
+        writeSerializedFilter(filter, userDefaults: userDefaults)
     }
 
 }

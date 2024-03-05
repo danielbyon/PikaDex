@@ -55,6 +55,8 @@ extension Game {
             retVal.append(.hisui)
         case .scarlet, .violet:
             retVal.append(.paldea)
+            retVal.append(.kitakami)
+            retVal.append(.blueberry)
         case .national:
             retVal.append(.kanto)
             retVal.append(.johto)
@@ -74,6 +76,8 @@ extension Game {
             retVal.append(.crownTundra)
             retVal.append(.hisui)
             retVal.append(.paldea)
+            retVal.append(.kitakami)
+            retVal.append(.blueberry)
         }
         return retVal
     }

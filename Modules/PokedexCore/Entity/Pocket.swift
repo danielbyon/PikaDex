@@ -22,6 +22,7 @@ public enum Pocket: String {
     case medicine = "medicine"
     case none = "none"
     case otherItems = "other items"
+    case picnic = "picnic items"
     case pokeBalls = "poké balls"
     case treasures = "treasures"
     case zCrystals = "z-crystals"

@@ -6,6 +6,7 @@
 //  Copyright © 2021 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import Foundation
 import CoreData
 import SwiftUI
@@ -44,40 +45,24 @@ public final class DataStore: NSObject, ObservableObject {
 
 }
 
-private struct PokedexDataStoreEnvironmentKey: EnvironmentKey {
-
-    public static var defaultValue: DataStore { .init(container: .pokedexContainer) }
-
+private enum PokedexDataStoreKey: DependencyKey {
+    static var liveValue: DataStore = .init(container: .pokedexContainer)
 }
 
-private struct UserDataDataStoreEnvironmentKey: EnvironmentKey {
-
-    public static var defaultValue: DataStore { .init(container: .userDataContainer) }
-
+private enum UserDataDataStoreKey: DependencyKey {
+    static var liveValue: DataStore = .init(container: .userDataContainer)
 }
 
-public extension EnvironmentValues {
+public extension DependencyValues {
 
     var pokedexDataStore: DataStore {
-        get { self[PokedexDataStoreEnvironmentKey.self] }
-        set { self[PokedexDataStoreEnvironmentKey.self] = newValue }
+        get { self[PokedexDataStoreKey.self] }
+        set { self[PokedexDataStoreKey.self] = newValue }
     }
 
     var userDataDataStore: DataStore {
-        get { self[UserDataDataStoreEnvironmentKey.self] }
-        set { self[UserDataDataStoreEnvironmentKey.self] = newValue }
-    }
-
-}
-
-public extension View {
-
-    func pokedexDataStore(_ dataStore: DataStore) -> some View {
-        environment(\.pokedexDataStore, dataStore)
-    }
-
-    func userDataDataStore(_ dataStore: DataStore) -> some View {
-        environment(\.userDataDataStore, dataStore)
+        get { self[UserDataDataStoreKey.self] }
+        set { self[UserDataDataStoreKey.self] = newValue }
     }
 
 }

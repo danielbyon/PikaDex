@@ -5,7 +5,7 @@
 //  Created by Daniel Byon on 10/5/22.
 //
 
-import PokedexCore
+import PokedexUI
 import SwiftUI
 
 struct MoveLearnsetViewModel {
@@ -21,7 +21,7 @@ struct MoveLearnsetViewModel {
         subtext = learnsetEntry.subtext
         detailText = learnsetEntry.detailText
         if let imageName = learnsetEntry.imageName {
-            image = UIImage(named: imageName)
+            image = UIImage(named: imageName, in: .resources, with: nil)
         } else {
             image = nil
         }

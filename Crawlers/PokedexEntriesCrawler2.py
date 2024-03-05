@@ -28,6 +28,7 @@ def process_file(contents, pokemon_name):
 	soup = BeautifulSoup(contents, 'lxml').html.body
 	entries = {}
 	
+	entries_table = None
 	has_multiple_forms = False
 	form_name = pokemon_name
 	for node in soup.find_all('h2'):
@@ -41,7 +42,7 @@ def process_file(contents, pokemon_name):
 
 	if entries_table is None:
 		print('Could not find entries table')
-		sys.exit(1)
+		return None
 	
 	form_entries = process_table(entries_table)
 	entries[form_name] = form_entries
@@ -91,9 +92,9 @@ def main():
 		soup = BeautifulSoup(contents, 'lxml').html.body
 		entries = process_file(contents, name)
 		
-		entries[u'number'] = number
-		
-		all_entries[name] = entries
+		if entries:
+			entries[u'number'] = number
+			all_entries[name] = entries
 				
 	crawler.write_data_to_file(all_entries, "Data/PokedexEntries2")
 	

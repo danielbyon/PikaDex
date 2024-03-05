@@ -20,7 +20,7 @@ public struct PokemonCell: View {
     public var body: some View {
         HStack(spacing: 0) {
             HStack(spacing: 4) {
-                Sprite(spriteName, width: 40.0)
+                Sprite(spriteName, bundle: .resources, width: 40.0)
                 Text(number)
                     .monospacedBody()
                     .frame(alignment: .trailing)

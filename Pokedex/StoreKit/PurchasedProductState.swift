@@ -6,6 +6,7 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import Foundation
 import Combine
 import StoreKit
@@ -98,4 +99,16 @@ final class PurchasedProductState: ObservableObject {
         NSUbiquitousKeyValueStore.default.synchronize()
     }
 
+}
+
+private enum PurchasedProductStateKey: DependencyKey {
+    static var liveValue: PurchasedProductState = PurchasedProductState()
+    static var testValue: PurchasedProductState = PurchasedProductState()
+}
+
+extension DependencyValues {
+    var purchasedProductState: PurchasedProductState {
+        get { self[PurchasedProductStateKey.self] }
+        set { self[PurchasedProductStateKey.self] = newValue }
+    }
 }

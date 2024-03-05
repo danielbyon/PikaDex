@@ -32,6 +32,7 @@ where Data: RandomAccessCollection,
         }
         .listStyle(.plain)
         .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: searchPrompt)
+        .autocorrectionDisabled(true)
     }
 
     public init(

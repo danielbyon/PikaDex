@@ -6,6 +6,7 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import SwiftUI
 import Combine
 import AppSupport
@@ -31,4 +32,16 @@ public final class AppSettings: ObservableObject {
         }
     }
 
+}
+
+private enum AppSettingsKey: DependencyKey {
+    static var liveValue: AppSettings = AppSettings()
+    static var testValue: AppSettings = AppSettings()
+}
+
+extension DependencyValues {
+    var appSettings: AppSettings {
+        get { self[AppSettingsKey.self] }
+        set { self[AppSettingsKey.self] = newValue }
+    }
 }

@@ -32,11 +32,11 @@ struct BulbapediaItem: Decodable {
     }
 
     struct ItemInfo {
-        let description: String?
         let pocket: Pocket?
         let price: Price?
     }
 
+    let bulbapediaURL: URL
     let descriptions: [String: String]
     let generationIntroduced: String
     let imageName: String
@@ -60,10 +60,9 @@ struct BulbapediaItem: Decodable {
     }
 
     func itemInfo(for game: Game) -> ItemInfo {
-        let description = descriptions[game.rawValue]
         let pocket = pocket(for: game)
         let price = prices?[game.rawValue]
-        return ItemInfo(description: description, pocket: pocket, price: price)
+        return ItemInfo(pocket: pocket, price: price)
     }
 
     func pocket(for game: Game) -> Pocket? {

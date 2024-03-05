@@ -56,7 +56,9 @@ struct PokemonPokedexNumbers_Previews: PreviewProvider {
                 galar: 24,
                 isleOfArmor: 25,
                 crownTundra: 26,
-                hisui: 27
+                hisui: 27,
+                kitakami: 28,
+                blueberry: 29
             ),
             game: .national
         )
@@ -128,6 +130,8 @@ private extension PokedexNumbers {
             retVal.append(("Hisui", hisui ?? -1))
         case .scarlet, .violet:
             retVal.append(("Paldea", paldea ?? -1))
+            retVal.append(("Kitakami", kitakami ?? -1))
+            retVal.append(("Blueberry", blueberry ?? -1))
         case .national:
             retVal.append(("Kanto", kanto ?? -1))
             retVal.append(("Johto", johto ?? -1))
@@ -153,6 +157,8 @@ private extension PokedexNumbers {
             retVal.append(("Crown Tundra", crownTundra ?? -1))
             retVal.append(("Hisui", hisui ?? -1))
             retVal.append(("Paldea", paldea ?? -1))
+            retVal.append(("Kitakami", kitakami ?? -1))
+            retVal.append(("Blueberry", blueberry ?? -1))
         }
 
         retVal.removeAll { $0.1 == -1 }

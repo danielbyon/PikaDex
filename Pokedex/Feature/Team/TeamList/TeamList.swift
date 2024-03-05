@@ -69,7 +69,7 @@ public struct TeamList: View {
             .onAppear {
                 viewModel.game = game
             }
-            .onChange(of: game) { newValue in
+            .onChange(of: game) { _, newValue in
                 viewModel.game = newValue
             }
             .onOpenURL(perform: handleURL)

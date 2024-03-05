@@ -159,7 +159,7 @@ private struct EvolutionSprite: View {
     let borderColor: Color
 
     var body: some View {
-        Sprite(spriteName)
+        Sprite(spriteName, bundle: .resources)
             .background(
                 RoundedRectangle(cornerRadius: 4.0)
                     .stroke()
@@ -240,17 +240,17 @@ private extension Evolution {
                 .other:
             return nil
         case .friendship:
-            return Image("friend-ball")
+            return Image("friend-ball", bundle: .resources)
         case .levelUp,
                 .levelUpInArea,
                 .levelUpWithStats,
                 .levelUpKnowingMove,
                 .levelUpWithPartyMember:
-            return Image("rare-candy")
+            return Image("rare-candy", bundle: .resources)
         case .levelUpHoldingItem(_, let spriteName),
                 .tradeHoldingItem(_, let spriteName),
                 .useItem(_, let spriteName):
-            return Image(spriteName)
+            return Image(spriteName, bundle: .resources)
         case .trade,
                 .tradeForPokemon:
             return Image(systemName: "arrow.right.arrow.left.circle")
@@ -276,17 +276,17 @@ private extension StoredEvolution {
 //                .other:
 //            return nil
 //        case .friendship:
-//            return Image("friend-ball")
+//            return Image("friend-ball", bundle: .resources)
 //        case .levelUp,
 //                .levelUpInArea,
 //                .levelUpWithStats,
 //                .levelUpKnowingMove,
 //                .levelUpWithPartyMember:
-//            return Image("rare-candy")
+//            return Image("rare-candy", bundle: .resources)
 //        case .levelUpHoldingItem(let item),
 //                .tradeHoldingItem(let item),
 //                .useItem(let item):
-//            return Image(item.spriteName)
+//            return Image(item.spriteName, bundle: .resources)
 //        case .trade,
 //                .tradeForPokemon:
 //            return Image(systemName: "arrow.right.arrow.left.circle")

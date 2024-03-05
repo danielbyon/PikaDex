@@ -50,7 +50,7 @@ public extension StoredPokemonForm {
     static func allFetchRequest(for game: Game) -> NSFetchRequest<StoredPokemonForm> {
         let predicate = NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index)
         let request = makeFetchRequest(with: predicate)
-        request.fetchBatchSize = 0
+        request.fetchBatchSize = DatabaseConstants.fetchBatchSize
         return request
     }
 

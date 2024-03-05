@@ -47,7 +47,7 @@ struct ItemPriceCell_Previews: PreviewProvider {
 private extension Generation {
 
     var priceSprite: Image {
-        Image("Price/generation\(rawValue)")
+        Image("Price/generation\(rawValue)", bundle: .resources)
     }
 
 }

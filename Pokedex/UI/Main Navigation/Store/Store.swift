@@ -12,7 +12,7 @@ import StoreKit
 struct Store: View {
 
     @Environment(\.presentationMode) var presentation
-    @EnvironmentObject var storeViewModel: StoreViewModel
+    @StateObject private var storeViewModel = StoreViewModel()
     @State private var thanksMessage: String?
 
     var body: some View {

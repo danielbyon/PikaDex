@@ -10,6 +10,20 @@ import Foundation
 
 public protocol SearchableFilter: QueryFilter {
 
-    var query: String { get set }
+    var query: SearchQuery { get set }
 
+}
+
+public enum SearchQuery: Hashable {
+    case contains(String)
+    case exact(String)
+
+    public static var empty: Self { .contains("") }
+
+    public var isEmpty: Bool {
+        switch self {
+        case .contains(let string), .exact(let string):
+            return string.isEmpty
+        }
+    }
 }

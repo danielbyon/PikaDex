@@ -17,11 +17,11 @@ public struct PokemonDetailFormFilter: SearchableFilter {
     }
 
     private let predicate: NSPredicate
-    public var query: String
+    public var query: SearchQuery
 
     public init(
         predicate: NSPredicate,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.predicate = predicate
         self.query = query
@@ -31,9 +31,16 @@ public struct PokemonDetailFormFilter: SearchableFilter {
         let fetchRequest: NSFetchRequest<StoredPokemonForm> = StoredPokemonForm.fetchRequest()
         fetchRequest.fetchBatchSize = DatabaseConstants.fetchBatchSize
         var predicates = [predicate]
+
         if !query.isEmpty {
-            predicates.append(.init(format: "\(#keyPath(StoredPokemonForm.z_pokemon.z_canonicalName)) CONTAINS[cd] %@", query))
+            switch query {
+            case .contains(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredPokemonForm.z_pokemon.z_canonicalName)) CONTAINS %@", string.normalizedForSearch))
+            case .exact(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredPokemonForm.z_pokemon.z_canonicalName)) == %@", string.normalizedForSearch))
+            }
         }
+
         fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         fetchRequest.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredPokemonForm.z_pokemon)

@@ -38,7 +38,7 @@ public struct PokemonFilter: SearchableFilter {
     public var pokedex: Pokedex
     public var sortBy: SortBy
     public var sortOrder: SortOrder
-    public var query: String
+    public var query: SearchQuery
 
     // MARK: Init
 
@@ -47,7 +47,7 @@ public struct PokemonFilter: SearchableFilter {
         pokedex: Pokedex,
         sortBy: SortBy = .number,
         sortOrder: SortOrder = .ascending,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.game = game
         self.pokedex = pokedex
@@ -62,7 +62,7 @@ public struct PokemonFilter: SearchableFilter {
         pokedex = try container.decode(Pokedex.self, forKey: .pokedex)
         sortBy = try container.decode(SortBy.self, forKey: .sortBy)
         sortOrder = try container.decode(SortOrder.self, forKey: .sortOrder)
-        query = ""
+        query = .empty
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -86,9 +86,16 @@ public struct PokemonFilter: SearchableFilter {
             NSPredicate(format: "\(#keyPath(StoredPokemon.i_gameIndex)) == %d", game.index),
             NSPredicate(format: "\(pokedex.keyPath) != -1")
         ]
+
         if !query.isEmpty {
-            predicates.append(.init(format: "\(#keyPath(StoredPokemon.z_canonicalName)) CONTAINS[cd] %@", query))
+            switch query {
+            case .contains(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredPokemon.z_canonicalName)) CONTAINS %@", string.normalizedForSearch))
+            case .exact(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredPokemon.z_canonicalName)) == %@", string.normalizedForSearch))
+            }
         }
+
         fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
 
         let ascending = sortOrder == .ascending
@@ -99,7 +106,7 @@ public struct PokemonFilter: SearchableFilter {
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(StoredPokemon.z_name), ascending: ascending)]
         }
 
-        fetchRequest.fetchBatchSize = 20
+        fetchRequest.fetchBatchSize = DatabaseConstants.fetchBatchSize
         fetchRequest.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredPokemon.z_pokedexNumbers)
         ]
@@ -172,6 +179,10 @@ private extension Pokedex {
             return #keyPath(StoredPokemon.z_pokedexNumbers.z_hisui)
         case .paldea:
             return #keyPath(StoredPokemon.z_pokedexNumbers.z_paldea)
+        case .kitakami:
+            return #keyPath(StoredPokemon.z_pokedexNumbers.z_kitakami)
+        case .blueberry:
+            return #keyPath(StoredPokemon.z_pokedexNumbers.z_blueberry)
         }
     }
 

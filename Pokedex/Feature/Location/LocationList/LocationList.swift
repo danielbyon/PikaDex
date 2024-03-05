@@ -17,7 +17,7 @@ public struct LocationList: View {
     public var body: some View {
         SearchableList(
             items: locations,
-            query: $locations.query,
+            query: $locations.query.toString(),
             searchPrompt: "Search for a location",
             id: \.name
         ) { location in

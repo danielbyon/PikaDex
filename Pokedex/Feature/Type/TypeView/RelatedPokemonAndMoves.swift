@@ -53,7 +53,9 @@ struct RelatedPokemonAndMoves: View {
         .onAppear {
             updateQuery(forSelectedSegment: selectedSegment)
         }
-        .onChange(of: selectedSegment, perform: updateQuery)
+        .onChange(of: selectedSegment) { _, newSegment in
+            updateQuery(forSelectedSegment: newSegment)
+        }
     }
 
     private func updateQuery(forSelectedSegment selectedSegment: Segment) {

@@ -32,6 +32,14 @@ public struct AppGroupStorage<Value>: DynamicProperty where Value: UserDefaultPe
         }
     }
 
+    public var projectedValue: Binding<Value> {
+        return Binding {
+            wrappedValue
+        } set: { newValue in
+            wrappedValue = newValue
+        }
+    }
+
     public init(key: String, defaultValue: Value) {
         self.key = key
         self.defaultValue = defaultValue

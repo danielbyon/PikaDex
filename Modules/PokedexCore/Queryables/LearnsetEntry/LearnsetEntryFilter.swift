@@ -21,12 +21,12 @@ public struct LearnsetEntryFilter: SearchableFilter {
 
     private let predicate: NSPredicate
     private let sortDescriptors: [NSSortDescriptor]
-    public var query: String
+    public var query: SearchQuery
 
     init(
         predicate: NSPredicate,
         sortDescriptors: [NSSortDescriptor],
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.predicate = predicate
         self.sortDescriptors = sortDescriptors
@@ -36,9 +36,16 @@ public struct LearnsetEntryFilter: SearchableFilter {
     public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredLearnsetEntry> {
         let fetchRequest: NSFetchRequest<StoredLearnsetEntry> = StoredLearnsetEntry.fetchRequest()
         var predicates = [predicate]
+
         if !query.isEmpty {
-            predicates.append(NSPredicate(format: "\(#keyPath(StoredLearnsetEntry.z_move.z_canonicalName)) CONTAINS[cd] %@", query))
+            switch query {
+            case .contains(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredLearnsetEntry.z_move.z_canonicalName)) CONTAINS %@", string.normalizedForSearch))
+            case .exact(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredLearnsetEntry.z_move.z_canonicalName)) == %@", string.normalizedForSearch))
+            }
         }
+
         fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         fetchRequest.sortDescriptors = sortDescriptors
         fetchRequest.relationshipKeyPathsForPrefetching = [

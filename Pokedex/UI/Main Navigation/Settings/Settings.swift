@@ -6,14 +6,16 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import SwiftUI
 import AppSupport
 
 struct Settings: View {
 
+    @AppStorage("preferredColorScheme") public var preferredColorScheme = 0
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var appSettings: AppSettings
     @State private var isShowingUpdateMessage = false
+    @StateObject private var appSettings = AppSettings()
 
     private var spacing: CGFloat { 16.0 }
     private var aboutText: String {
@@ -42,10 +44,23 @@ struct Settings: View {
     var body: some View {
         List {
             Toggle("Show weight in kilograms", isOn: $appSettings.shouldUseKilogramsForWeight)
+                .monospacedBody()
 
             Toggle("Show height in meters", isOn: $appSettings.shouldUseMetersForHeight)
+                .monospacedBody()
+
+            Picker("Light/Dark Mode", selection: $preferredColorScheme) {
+                Text("System")
+                    .tag(0)
+                Text("Light")
+                    .tag(1)
+                Text("Dark")
+                    .tag(2)
+            }
+            .monospacedBody()
 
             NavigationLink("Pokémon detail ordering", destination: PokemonDetailOrderSettings())
+                .monospacedBody()
 
             Card {
                 Text(aboutText)
@@ -64,6 +79,7 @@ struct Settings: View {
             }
             .sheet(isPresented: $isShowingUpdateMessage, onDismiss: nil) {
                 UpdateMessageView()
+                    .colorSchemeModifier()
             }
 
 
@@ -107,6 +123,5 @@ struct Settings: View {
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
-            .injectDependencies()
     }
 }

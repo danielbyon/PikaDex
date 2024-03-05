@@ -14,7 +14,7 @@ public struct ItemCell: View {
 
     public var body: some View {
         HStack {
-            Sprite(item.spriteName, width: 24.0)
+            Sprite(item.spriteName, bundle: .resources, width: 24.0)
             Text(item.name)
                 .monospacedBody()
                 .multilineTextAlignment(.leading)

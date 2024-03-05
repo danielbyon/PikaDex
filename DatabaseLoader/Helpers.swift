@@ -45,7 +45,7 @@ private class PersistentContainer: NSPersistentContainer {
 
 }
 
-extension Helper {
+enum Helper {
 
     static func loadContainer(removeExistingContainer: Bool = true) -> NSPersistentContainer {
         let model = NSManagedObjectModel(contentsOf: Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "momd")!)!
@@ -129,7 +129,8 @@ extension Helper {
     }
 
     static func sanitizedURL(from string: String) -> URL? {
-        let components = URLComponents(string: string)
+        let sanitized = string.replacingOccurrences(of: "\"", with: "")
+        let components = URLComponents(string: sanitized)
         return components?.url
     }
 
@@ -149,11 +150,4 @@ extension String {
         folding(options: .diacriticInsensitive, locale: .current)
     }
 
-}
-
-// MARK: - Struct Declaration
-struct Helper {
-    
-    private init() { }
-    
 }

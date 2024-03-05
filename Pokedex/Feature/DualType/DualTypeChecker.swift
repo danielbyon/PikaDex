@@ -60,8 +60,12 @@ public struct DualTypeChecker: View {
                 game: game
             )
         }
-        .onChange(of: firstType, perform: updateFilter)
-        .onChange(of: secondType, perform: updateFilter)
+        .onChange(of: firstType) { _, newType in
+            updateFilter(forType: newType)
+        }
+        .onChange(of: secondType) { _, newType in
+            updateFilter(forType: newType)
+        }
     }
 
     private func updateFilter(forType type: PokemonType) {

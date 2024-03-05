@@ -17,11 +17,11 @@ public struct ItemFilter: SearchableFilter {
     }
 
     public let game: Game
-    public var query: String
+    public var query: SearchQuery
 
     public init(
         game: Game,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.game = game
         self.query = query
@@ -31,9 +31,16 @@ public struct ItemFilter: SearchableFilter {
         let request: NSFetchRequest<StoredItem> = StoredItem.fetchRequest()
 
         var predicates = [NSPredicate(format: "\(#keyPath(StoredItem.i_gameIndex)) == %d", game.index)]
+        
         if !query.isEmpty {
-            predicates.append(NSPredicate(format: "\(#keyPath(StoredItem.z_canonicalName)) CONTAINS[cd] %@", query))
+            switch query {
+            case .contains(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredItem.z_canonicalName)) CONTAINS %@", string.normalizedForSearch))
+            case .exact(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredItem.z_canonicalName)) == %@", string.normalizedForSearch))
+            }
         }
+
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         request.sortDescriptors = [
             NSSortDescriptor(key: #keyPath(StoredItem.i_nameIndex), ascending: true),

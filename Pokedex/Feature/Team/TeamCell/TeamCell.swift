@@ -64,7 +64,7 @@ struct TeamCell: View {
     @ViewBuilder
     private func sprite(spriteName: String?) -> some View {
         if let spriteName {
-            Sprite(spriteName)
+            Sprite(spriteName, bundle: .resources)
         } else {
             Rectangle()
                 .fill(Color.clear)

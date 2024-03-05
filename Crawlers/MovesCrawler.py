@@ -66,64 +66,6 @@ def process_file(name, contents):
     if generationIntroduced is not None:
         entries['generationIntroduced'] = generationIntroduced.text.strip()
 
-    ### Contests
-    contestNode = soup.find('a', title='Pokémon Contest')
-    if contestNode is not None and contestNode.find_parent().find_parent().find_parent().find_parent()['style'] != 'display: none;':
-        contestBodyNode = contestNode.find_parent().find_parent().find_next_sibling()
-        contestCondition = contestBodyNode.find('a', title=re.compile('[(]condition[)]'))
-        if contestCondition is not None:
-            entries['contestCondition'] = contestCondition.text.strip()
-        
-        contestAppealNode = contestBodyNode.find('a', title='Appeal').find_parent().find_next_sibling().small
-        if contestAppealNode is not None:
-            entries['contestAppeal'] = contestAppealNode.text.strip()
-            contestDescriptionBaseNode = contestAppealNode.find_parent().find_parent()
-
-        contestJammingNode = contestBodyNode.find('a', title="Jamming").find_parent().find_next_sibling().small
-        if contestJammingNode is not None:
-            entries['contestJamming'] = contestJammingNode.text.strip()
-            contestDescriptionBaseNode = contestJammingNode.find_parent().find_parent()
-        
-        if contestDescriptionBaseNode is not None:
-            entries['contestDescription'] = contestDescriptionBaseNode.find_next_sibling().text.strip()
-    
-    ### Super Contests
-    contestNode = soup.find('a', title='Pokémon Super Contest')
-    if contestNode is not None and contestNode.find_parent().find_parent().find_parent().find_parent()['style'] != 'display: none;':
-        contestBodyNode = contestNode.find_parent().find_parent().find_next_sibling()
-        contestCondition = contestBodyNode.find('a', title=re.compile('[(]condition[)]'))
-        if contestCondition is not None:
-            entries['superContestCondition'] = contestCondition.text.strip()
-        
-        contestAppealNode = contestBodyNode.find('a', title='Appeal').find_parent().find_next_sibling().small
-        if contestAppealNode is not None:
-            entries['superContestAppeal'] = contestAppealNode.text.strip()
-            contestDescriptionBaseNode = contestAppealNode.find_parent().find_parent()
-
-        if contestDescriptionBaseNode is not None:
-            entries['superContestDescription'] = contestDescriptionBaseNode.find_next_sibling().text.strip()
-    
-    ### Contest Spectaculars
-    contestNode = soup.find('a', title='Pokémon Contest', text="Contest Spectaculars")
-    if contestNode is not None and contestNode.find_parent().find_parent().find_parent().find_parent()['style'] != 'display: none;':
-        contestBodyNode = contestNode.find_parent().find_parent().find_next_sibling()
-        contestCondition = contestBodyNode.find('a', title=re.compile('[(]condition[)]'))
-        if contestCondition is not None:
-            entries['contestSpectacularCondition'] = contestCondition.text.strip()
-        
-        contestAppealNode = contestBodyNode.find('a', title='Appeal').find_parent().find_next_sibling().small
-        if contestAppealNode is not None:
-            entries['contestSpectacularAppeal'] = contestAppealNode.text.strip()
-            contestDescriptionBaseNode = contestAppealNode.find_parent().find_parent()
-
-        contestJammingNode = contestBodyNode.find('a', title="Jamming").find_parent().find_next_sibling().small
-        if contestJammingNode is not None:
-            entries['contestSpectacularJamming'] = contestJammingNode.text.strip()
-            contestDescriptionBaseNode = contestJammingNode.find_parent().find_parent()
-        
-        if contestDescriptionBaseNode is not None:
-            entries['contestSpectacularDescription'] = contestDescriptionBaseNode.find_next_sibling().text.strip()
-    
     ### Target
     targetNode = soup.find('b', text="Target")
     if targetNode is not None:
@@ -154,6 +96,9 @@ def process_file(name, contents):
         table = descriptionNode.find_parent().find_next_sibling()
         if "This section is incomplete" in table.text:
             table = table.find_next_sibling()
+        if table.text == 'Non-Stellar type':
+            table = table.find_next_sibling()
+        
         trs = table.tr.td.table.find_all('tr')
         for tr in trs[1:]:
             description = tr.find_all('td')[1].text.strip()
@@ -209,6 +154,9 @@ def process_file(name, contents):
                     entries['shiningPearl'] = description
                 elif title == u'Pokémon Legends: Arceus':
                     entries['legendsArceus'] = description
+                elif title == u'Pokémon Scarlet and Violet':
+                    entries['scarlet'] = description
+                    entries['violet'] = description
                 else:
 #                   print('Unsupported game: {}'.format(title))
                     pass
@@ -218,31 +166,60 @@ def process_file(name, contents):
 def main():
     print("This is the Pokepedia Moves Crawler")
 
-    all_entries = {}
-    
+    all_entries = {}    
     i = 0
-    with codecs.open("MovesList.txt", 'r', encoding='utf8') as f:
-        for line in f:
-            move = line.strip().replace(' ', '_').rstrip('.')
-
-            print("Processing " + move)
-
-            filename = "Cached/Moves/" + move + ".html"
-
-            url = "http://bulbapedia.bulbagarden.net/wiki/" + move + "_(move)"
-            contents = crawler.fetch_or_download(filename, url)
-            if contents is None:
-                continue
-
-            entries = process_file(move, contents)
-            if entries is not None:
-                entries["number"] = "{}".format(i)
-            all_entries[line.strip()] = entries
-            
-            i += 1
+    
+    filename = "Cached/PokemonDBMoves/_AllMoves.html"
+    url = "https://pokemondb.net/move/all"
+    contents = crawler.fetch_or_download(filename, url)
+    soup = BeautifulSoup(contents, 'lxml').html.body
+    table = soup.find('table', id='moves')
+    
+    for row in table.tbody.find_all('tr'):
+        cells = row.find_all('td')
+        name = cells[0].text.strip()
+        
+        move = name.strip().replace(' ', '_').rstrip('.')
+        
+        print("Processing " + move)
+        
+        filename = "Cached/Moves/" + move + ".html"
+        
+        url = "http://bulbapedia.bulbagarden.net/wiki/" + move + "_(move)"
+        contents = crawler.fetch_or_download(filename, url)
+        if contents is None:
+            continue
+        
+        entries = process_file(move, contents)
+        if entries is not None:
+            entries["number"] = "{}".format(i)
+        all_entries[name.strip()] = entries
+        
+        i += 1
+    
+#   with codecs.open("MovesList.txt", 'r', encoding='utf8') as f:
+#       for line in f:
+#           move = line.strip().replace(' ', '_').rstrip('.')
+#
+#           print("Processing " + move)
+#
+#           filename = "Cached/Moves/" + move + ".html"
+#
+#           url = "http://bulbapedia.bulbagarden.net/wiki/" + move + "_(move)"
+#           contents = crawler.fetch_or_download(filename, url)
+#           if contents is None:
+#               continue
+#
+#           entries = process_file(move, contents)
+#           if entries is not None:
+#               entries["number"] = "{}".format(i)
+#           all_entries[line.strip()] = entries
+#           
+#           i += 1
 
     crawler.write_data_to_file(all_entries, "Data/Moves")
     pass
 
 if __name__ == '__main__':
     main()
+    

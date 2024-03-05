@@ -151,7 +151,9 @@ public struct MoveView: View {
         .onAppear {
             updateFilter(forLearnsetType: selectedLearnsetType)
         }
-        .onChange(of: selectedLearnsetType, perform: updateFilter)
+        .onChange(of: selectedLearnsetType) { _, newLearnsetType in
+            updateFilter(forLearnsetType: newLearnsetType)
+        }
     }
 
     private func updateFilter(forLearnsetType learnsetType: LearnsetType) {

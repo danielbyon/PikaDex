@@ -139,9 +139,24 @@ public extension StoredPokemon {
         get { z_name! }
         set { z_name = newValue; z_canonicalName = newValue.normalizedForSearch }
     }
+    var primaryType: PokemonType {
+        get { PokemonType(rawValue: z_overallPrimaryType!)! }
+        set { z_overallPrimaryType = newValue.rawValue }
+    }
     var pokemonDBURL: URL {
         get { URL(string: z_pokemonDBURL!)! }
         set { z_pokemonDBURL = newValue.absoluteString }
+    }
+    var secondaryType: PokemonType? {
+        get {
+            guard let z_overallSecondaryType else { return nil }
+            return PokemonType(rawValue: z_overallSecondaryType)
+        }
+        set { z_overallSecondaryType = newValue?.rawValue }
+    }
+    var spriteName: String {
+        get { z_spriteName! }
+        set { z_spriteName = newValue }
     }
 
     var forms: [StoredPokemonForm] {

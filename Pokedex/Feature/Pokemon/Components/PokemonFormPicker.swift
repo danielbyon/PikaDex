@@ -21,7 +21,7 @@ struct PokemonFormPicker: View {
                     Button {
                         currentIndex = i
                     } label: {
-                        Image(forms[i].spriteName)
+                        Image(forms[i].spriteName, bundle: .resources)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 40, height: 40)

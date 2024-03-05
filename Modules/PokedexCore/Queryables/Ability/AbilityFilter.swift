@@ -17,11 +17,11 @@ public struct AbilityFilter: SearchableFilter {
     }
 
     public let game: Game
-    public var query: String
+    public var query: SearchQuery
 
     public init(
         game: Game,
-        query: String = ""
+        query: SearchQuery = .empty
     ) {
         self.game = game
         self.query = query
@@ -30,9 +30,16 @@ public struct AbilityFilter: SearchableFilter {
     public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredAbility> {
         let request: NSFetchRequest<StoredAbility> = StoredAbility.fetchRequest()
         var predicates = [NSPredicate(format: "\(#keyPath(StoredAbility.z_generationIntroduced)) <= %d", game.generation.rawValue)]
+
         if !query.isEmpty {
-            predicates.append(.init(format: "\(#keyPath(StoredAbility.z_canonicalName)) CONTAINS[cd] %@", query))
+            switch query {
+            case .contains(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredAbility.z_canonicalName)) CONTAINS %@", string.normalizedForSearch))
+            case .exact(let string):
+                predicates.append(.init(format: "\(#keyPath(StoredAbility.z_canonicalName)) == %@", string.normalizedForSearch))
+            }
         }
+
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         request.returnsObjectsAsFaults = false
         request.sortDescriptors = [NSSortDescriptor(key: #keyPath(StoredAbility.z_name), ascending: true)]

@@ -17,7 +17,7 @@ public struct AbilityList: View {
     public var body: some View {
         SearchableList(
             items: abilities,
-            query: $abilities.query,
+            query: $abilities.query.toString(),
             searchPrompt: "Search for an ability",
             id: \.name
         ) { ability in

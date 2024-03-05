@@ -77,7 +77,7 @@ public struct PokemonView: View {
         .onAppear {
             $pokemonDetailQuery.wrappedValue = pokemonDetailFilter
         }
-        .onChange(of: pokemonDetail) { newValue in
+        .onChange(of: pokemonDetail) { _, newValue in
             updateCurrentFormIndexIfNecessary()
         }
     }

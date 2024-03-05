@@ -19,7 +19,7 @@ public struct MoveList: View {
     public var body: some View {
         SearchableList(
             items: moves,
-            query: $moves.query,
+            query: $moves.query.toString(),
             searchPrompt: "Search for a move",
             id: \.index
         ) { move in

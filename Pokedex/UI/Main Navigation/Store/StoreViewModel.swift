@@ -6,6 +6,7 @@
 //  Copyright © 2020 Daniel Byon. All rights reserved.
 //
 
+import Dependencies
 import SwiftUI
 import Combine
 import StoreKit
@@ -39,7 +40,7 @@ final class StoreViewModel: ObservableObject {
     }
 
     private var storeClient = PokepediaProduct.store
-    private var purchasedProductState = Dependencies.purchasedProductState
+    @Dependency(\.purchasedProductState) var purchasedProductState
     private var cancellables = Set<AnyCancellable>()
     private var observers = [NSObjectProtocol]()
 

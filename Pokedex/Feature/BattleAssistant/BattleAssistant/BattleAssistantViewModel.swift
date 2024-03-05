@@ -49,10 +49,6 @@ final class BattleAssistantViewModel: ObservableObject {
         }
     }
 
-    // TODO: Why are these not being resolved?
-//    @Environment(\.dataStore) private var dataStore
-//    @Environment(\.managedObjectContext) private var managedObjectContext
-
     init() {
 
     }
