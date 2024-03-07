@@ -4535,7 +4535,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -4544,7 +4544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia;
 				PRODUCT_NAME = PikaDex;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -4562,7 +4562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Pokedex/Pokedex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_PREVIEWS = YES;
@@ -4571,7 +4571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				OTHER_LDFLAGS = "-Wl,-exported_symbols_list,/dev/null";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia;
 				PRODUCT_NAME = PikaDex;
@@ -4673,7 +4673,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4681,7 +4681,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.TeamIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -4696,7 +4696,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TeamIntentHandler/TeamIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = TeamIntentHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4704,7 +4704,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.TeamIntentHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5024,7 +5024,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5032,7 +5032,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.PokedexWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5049,7 +5049,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PokedexWidget/PokedexWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				INFOPLIST_FILE = PokedexWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5057,7 +5057,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.pokepedia.PokedexWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Dependencies
 import PokedexCore
 import SwiftUI
 
@@ -22,7 +23,7 @@ final class PokemonListViewModel: ObservableObject {
             }
         }
     }
-    var dataStore: DataStore?
+    @Dependency(\.userDataDataStore) private var dataStore
 
     var pokedex: Pokedex { filter.pokedex }
 
@@ -64,7 +65,7 @@ final class PokemonListViewModel: ObservableObject {
     func markPokemonCaught(_ pokemon: Pokemon) {
         let caughtPokemon = CaughtPokemon(pokemon: pokemon)
         do {
-            try dataStore?.save(caughtPokemon)
+            try dataStore.save(caughtPokemon)
         } catch {
             debugPrint(error)
         }
@@ -73,7 +74,7 @@ final class PokemonListViewModel: ObservableObject {
     func markPokemonUncaught(_ pokemon: Pokemon) {
         let caughtPokemon = CaughtPokemon(pokemon: pokemon)
         do {
-            try dataStore?.remove(CaughtPokemon.self, filter: .init(caughtPokemon: caughtPokemon))
+            try dataStore.remove(CaughtPokemon.self, filter: .init(caughtPokemon: caughtPokemon))
         } catch {
             debugPrint(error)
         }
