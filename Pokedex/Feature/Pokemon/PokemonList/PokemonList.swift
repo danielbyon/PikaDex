@@ -12,14 +12,28 @@ import SwiftUI
 
 public struct PokemonList: View {
 
-    @Dependency(\.userDataDataStore) private var dataStore
-    @Query(dataStore: .userData) private var caughtPokemons: QueryResults<CaughtPokemon>
+    @Query private var caughtPokemons: QueryResults<CaughtPokemon>
     @Query private var pokemons: QueryResults<Pokemon>
     @State private var currentTab: Tab = .all
     @State private var isShowingFilter = false
     @StateObject private var viewModel = PokemonListViewModel()
 
     private let game: Game
+
+    private var pokemonsToShow: [Pokemon] {
+        /// We use caughtPokemons.lazy here because for some reason if we try to use map directly,
+        /// it resolves to the map method that creates a MappedQueryResults object, which fails the
+        /// force cast to Base.
+        lazy var caughtPokemonIDs = Set(caughtPokemons.lazy.map(\.index))
+        switch currentTab {
+        case .all:
+            return Array(pokemons)
+        case .caught:
+            return Array(pokemons.filter { caughtPokemonIDs.contains($0.index) })
+        case .uncaught:
+            return Array(pokemons.filter { !caughtPokemonIDs.contains($0.index) })
+        }
+    }
 
     private enum Tab: Hashable {
         case all
@@ -29,7 +43,7 @@ public struct PokemonList: View {
 
     public var body: some View {
         SearchableList(
-            items: pokemons,
+            items: pokemonsToShow,
             query: $pokemons.query.toString(),
             searchPrompt: "Search for a Pokémon",
             id: \.index
@@ -92,6 +106,9 @@ public struct PokemonList: View {
 
     public init(game: Game) {
         self.game = game
+
+        @Dependency(\.userDataDataStore) var dataStore
+        _caughtPokemons = Query<CaughtPokemon>(.init(game: game), dataStore: dataStore)
     }
 
     private func shouldDisplayPokemon(_ pokemon: Pokemon, caughtPokemons: some RandomAccessCollection<CaughtPokemon>) -> Bool {
