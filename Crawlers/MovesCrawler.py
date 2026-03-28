@@ -67,7 +67,7 @@ def process_file(name, contents):
         entries['generationIntroduced'] = generationIntroduced.text.strip()
 
     ### Target
-    targetNode = soup.find('b', text="Target")
+    targetNode = soup.find('b', text="Range")
     if targetNode is not None:
         tds = targetNode.find_next_sibling().find_all('td')
         if len(tds) != 7:
@@ -179,7 +179,7 @@ def main():
         cells = row.find_all('td')
         name = cells[0].text.strip()
         
-        move = name.strip().replace(' ', '_').rstrip('.')
+        move = name.strip().replace(' ', '_').replace('\'', '').rstrip('.')
         
         print("Processing " + move)
         

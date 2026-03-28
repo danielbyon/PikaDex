@@ -121,7 +121,7 @@ def main():
 				
 		print('Processing {}'.format(name))
 		url = 'https://pokemondb.net' + urlPath
-		filename = 'Cached/PokemonDBPokemon/{}.html'.format(name)
+		filename = 'Cached/PokemonDBMoves/{}.html'.format(name)
 		
 		contents = crawler.fetch_or_download(filename, url)
 		entries = process_move(contents)
