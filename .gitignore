@@ -109,3 +109,13 @@ iOSInjectionProject/
 
 Crawlers/Cached/*
 .venv
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
+*.db-shm
+*.db-wal
+*.db-journal
