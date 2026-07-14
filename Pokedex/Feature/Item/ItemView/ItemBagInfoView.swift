@@ -27,10 +27,10 @@ struct ItemBagInfoView: View {
         if info.cost != nil || info.sell != nil {
             Section {
                 if let cost = info.cost {
-                    ItemPriceCell(title: "Cost", price: cost, generation: game.generation)
+                    ItemPriceCell(title: "Cost", price: cost, generation: game.metadata?.generation)
                 }
                 if let sell = info.sell {
-                    ItemPriceCell(title: "Sell Price", price: sell, generation: game.generation)
+                    ItemPriceCell(title: "Sell Price", price: sell, generation: game.metadata?.generation)
                 }
             }
         }

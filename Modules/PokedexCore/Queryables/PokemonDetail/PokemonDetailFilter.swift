@@ -43,7 +43,7 @@ public struct PokemonDetailFilter: QueryFilter {
     public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<ResultType> {
         let request: NSFetchRequest<StoredPokemon> = StoredPokemon.fetchRequest()
         request.fetchLimit = 1
-        request.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.z_name)) LIKE[cd] %@ AND \(#keyPath(StoredPokemon.i_gameIndex)) == %d", name, game.index)
+        request.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.z_name)) LIKE[cd] %@ AND \(#keyPath(StoredPokemon.i_gameIndex)) == %d", name, game.databaseIndex)
         request.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredPokemon.z_pokedexNumbers),
             #keyPath(StoredPokemon.z_forms),

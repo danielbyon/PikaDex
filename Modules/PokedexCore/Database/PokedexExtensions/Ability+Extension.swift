@@ -14,7 +14,12 @@ public extension StoredAbility {
 
     static func allFetchRequest(for game: Game) -> NSFetchRequest<StoredAbility> {
         let request: NSFetchRequest<StoredAbility> = StoredAbility.fetchRequest()
-        request.predicate = NSPredicate(format: "\(#keyPath(StoredAbility.z_generationIntroduced)) <= %d", game.generation.rawValue)
+        if let generation = game.metadata?.generation {
+            request.predicate = NSPredicate(format: "\(#keyPath(StoredAbility.z_generationIntroduced)) <= %d", generation.rawValue)
+        } else {
+            assert(game.isNational)
+            request.predicate = nil
+        }
         request.returnsObjectsAsFaults = false
         request.sortDescriptors = [NSSortDescriptor(key: #keyPath(StoredAbility.z_name), ascending: true)]
         return request
@@ -55,14 +60,18 @@ public extension StoredAbility {
     private var fallbackDescriptionLatestFirst: String? {
         // If this fails, something is wrong in the data pipeline. We should not
         // have an Ability without at least one description.
-        Game.allGamesNewestFirst
+        Game.selectableGames
             .lazy
             .compactMap { self.description(forGame: $0) }
             .first
     }
 
     func resolvedDescription(forGame game: Game) -> String? {
-        guard game.generation >= generationIntroduced else {
+        if game.isNational {
+            return description(forGame: game)
+        }
+        guard let generation = game.metadata?.generation,
+              generation >= generationIntroduced else {
             return fallbackDescriptionLatestFirst
         }
         return description(forGame: game)
@@ -95,12 +104,12 @@ public extension StoredAbility {
     }
 
     func description(forGame game: Game) -> String? {
-        guard game.generation.hasAbilities else { return nil }
+        guard game.isNational || game.metadata?.mechanics.hasAbilities == true else { return nil }
         return value(forKeyPath: descriptionKeyPath(forGame: game)) as? String
     }
 
     func setDescription(_ description: String?, forGame game: Game) {
-        guard game.generation.hasAbilities else { return }
+        guard game.isNational || game.metadata?.mechanics.hasAbilities == true else { return }
         setValue(description, forKeyPath: descriptionKeyPath(forGame: game))
     }
 
@@ -118,7 +127,7 @@ private extension StoredAbility {
              .silver,
              .crystal:
             assertionFailure()
-            return descriptionKeyPath(forGame: Generation.latest.defaultGame)
+            return descriptionKeyPath(forGame: Game.defaultReleasedGame)
         case .ruby: return "z_ruby"
         case .sapphire: return "z_sapphire"
         case .emerald: return "z_emerald"

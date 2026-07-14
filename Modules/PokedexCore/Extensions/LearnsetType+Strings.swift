@@ -12,10 +12,10 @@ extension LearnsetType {
 
     public static func allCases(for game: Game) -> [LearnsetType] {
         var types: [LearnsetType] = [.level, .machine]
-        if game.hasBreeding {
+        if game.datasetFeatures.showsBreedingLearnsets {
             types.append(.breeding)
         }
-        if game.hasTutoring {
+        if game.datasetFeatures.showsTutoringLearnsets {
             types.append(.tutoring)
         }
         return types

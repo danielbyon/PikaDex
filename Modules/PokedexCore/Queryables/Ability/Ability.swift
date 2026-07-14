@@ -22,7 +22,7 @@ public struct Ability: Queryable {
         generationIntroduced = result.generationIntroduced
         index = result.index
         name = result.name
-        descriptions = Game.allCases.reduce(into: [:]) { partialResult, game in
+        descriptions = Game.allDatasets.reduce(into: [:]) { partialResult, game in
             partialResult[game] = result.description(forGame: game)
         }
         bulbapediaURL = result.bulbapediaURL

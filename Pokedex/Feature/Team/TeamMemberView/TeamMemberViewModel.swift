@@ -47,7 +47,7 @@ public final class TeamMemberViewModel: ObservableObject {
     }
 
     var ivRange: Range<Int> {
-        if game.generation < 3 {
+        if game.teamBuildingRulesGeneration < 3 {
             return 0..<16
         } else {
             return 0..<32
@@ -120,7 +120,7 @@ public final class TeamMemberViewModel: ObservableObject {
     }
 
     func remainingEVRange(forStatType statType: StatType) -> Range<Int> {
-        if game.generation < 3 {
+        if game.teamBuildingRulesGeneration < 3 {
             return 0..<32
         } else {
             var endValue = 510
@@ -144,7 +144,7 @@ public final class TeamMemberViewModel: ObservableObject {
             }
 
             let minimumEndValue: Int
-            if game.generation < 6 {
+            if game.teamBuildingRulesGeneration < 6 {
                 minimumEndValue = 255
             } else {
                 minimumEndValue = 252

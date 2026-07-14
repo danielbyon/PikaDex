@@ -66,7 +66,7 @@ final class TeamListViewModel: ObservableObject {
     private func reloadSections() {
         let gamesToLoad: [Game]
         if game == .national {
-            gamesToLoad = Game.allGamesNewestFirst
+            gamesToLoad = Game.selectableGames
         } else {
             gamesToLoad = [game]
         }

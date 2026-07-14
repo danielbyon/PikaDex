@@ -27,7 +27,7 @@ final class Validator {
         validateStats()
 
         // Game-specific objects
-        for game in Game.allCases {
+        for game in Game.allDatasets {
             validateEvolutions(game: game)
             validateItems(game: game)
             validateLearnsetEntries(game: game)
@@ -56,7 +56,7 @@ final class Validator {
             let _ = ability.pokemonDBURL
             let _ = ability.generationIntroduced
             let _ = ability.name
-            let _ = Game.allCases.compactMap { ability.resolvedDescription(forGame: $0) }.first!
+            let _ = Game.allDatasets.compactMap { ability.resolvedDescription(forGame: $0) }.first!
         }
     }
 
@@ -122,7 +122,7 @@ final class Validator {
             let _ = item.itemDescription
             let _ = item.name
             let _ = item.pokemonDBURL
-            assert(item.game.index == item.i_gameIndex)
+            assert(item.game.databaseIndex == item.i_gameIndex)
 
             if let bag = item.bagInfo {
                 let _ = bag.itemDescription
@@ -204,7 +204,7 @@ final class Validator {
             let _ = machine.number
             let _ = machine.type
             let _ = machine.move
-            assert(machine.game.index == machine.i_gameIndex)
+            assert(machine.game.databaseIndex == machine.i_gameIndex)
         }
     }
 
@@ -237,7 +237,7 @@ final class Validator {
             let _ = move.targetEnemy3
             let _ = move.targetSelf
             let _ = move.type
-            assert(move.game.index == move.i_gameIndex)
+            assert(move.game.databaseIndex == move.i_gameIndex)
         }
     }
 
@@ -276,7 +276,7 @@ final class Validator {
             let _ = pokemon.pokemonDBURL
             let _ = pokemon.forms
             let _ = pokemon.pokedexNumbers
-            assert(pokemon.game.index == pokemon.i_gameIndex)
+            assert(pokemon.game.databaseIndex == pokemon.i_gameIndex)
         }
     }
 

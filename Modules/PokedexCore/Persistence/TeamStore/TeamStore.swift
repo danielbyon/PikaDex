@@ -98,7 +98,7 @@ public final class DefaultTeamStore: TeamStore {
     }
 
     static func loadCache(from storage: TeamStorage) -> Teams {
-        return Game.allCases.reduce(into: [:]) { teamMap, game in
+        return Game.allDatasets.reduce(into: [:]) { teamMap, game in
             guard let teams = storage.loadTeams(forGame: game) else {
                 return
             }

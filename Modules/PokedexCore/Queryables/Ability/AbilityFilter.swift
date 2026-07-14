@@ -29,7 +29,12 @@ public struct AbilityFilter: SearchableFilter {
 
     public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredAbility> {
         let request: NSFetchRequest<StoredAbility> = StoredAbility.fetchRequest()
-        var predicates = [NSPredicate(format: "\(#keyPath(StoredAbility.z_generationIntroduced)) <= %d", game.generation.rawValue)]
+        var predicates: [NSPredicate] = []
+        if let generation = game.metadata?.generation {
+            predicates.append(NSPredicate(format: "\(#keyPath(StoredAbility.z_generationIntroduced)) <= %d", generation.rawValue))
+        } else {
+            assert(game.isNational)
+        }
 
         if !query.isEmpty {
             switch query {

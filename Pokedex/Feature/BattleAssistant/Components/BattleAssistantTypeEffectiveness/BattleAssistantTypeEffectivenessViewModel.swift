@@ -32,7 +32,10 @@ final class BattleAssistantTypeEffectivenessViewModel {
         PokemonType.allCases
             .sorted()
             .forEach { type in
-                let effectiveness = typeEffectiveness.defense(for: type, generation: game.generation)
+                let effectiveness = typeEffectiveness.defense(
+                    for: type,
+                    generation: game.typeEffectivenessRulesGeneration
+                )
                 if effectiveness > 1 {
                     recommended.append(.init(type: type, value: effectiveness))
                 } else if effectiveness == 0 {

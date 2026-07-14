@@ -19,7 +19,7 @@ struct TeamMemberEditor: View {
                     .monospacedBody()
                 TeamMemberLevel(level: $viewModel.level)
 
-                if viewModel.game.hasAbilities {
+                if viewModel.game.datasetFeatures.showsAbilities {
                     NavigationLink {
                         SelectAbility(
                             pokemonForm: viewModel.pokemonForm,
@@ -204,7 +204,7 @@ struct TeamMemberEditor: View {
                         manualValue: $viewModel.teamMember.specialAttack.value
                     )
 
-                if viewModel.game.generation > 2 {
+                if viewModel.game.teamBuildingRulesGeneration > 2 {
                     makeStatSection(
                         title: "Special Defense",
                         value: viewModel.teamMember.specialDefense.baseValue,
@@ -228,7 +228,7 @@ struct TeamMemberEditor: View {
                     manualValue: $viewModel.teamMember.speed.value
                 )
 
-                if viewModel.game.generation < 3 {
+                if viewModel.game.teamBuildingRulesGeneration < 3 {
                     makeStatSection(
                         title: "Special",
                         value: viewModel.teamMember.specialAttack.baseValue,

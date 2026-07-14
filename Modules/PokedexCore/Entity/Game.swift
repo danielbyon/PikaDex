@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// A stable database dataset identifier.
+///
+/// Released games and the aggregate National dataset share this identifier type
+/// because the generated database stores explicit rows for every value. Release
+/// metadata is available separately through ``metadata``.
 public enum Game: String, CaseIterable {
 
     case red
@@ -47,167 +52,115 @@ public enum Game: String, CaseIterable {
     case scarlet
     case violet
 
-    /// Technically not a game
+    /// The aggregate database dataset. National is not a released game.
     case national
 
 }
 
 extension Game {
 
-    public static var allGamesNewestFirstExceptNational: [Game] { allGamesNewestFirst.filter { $0 != .national } }
-
-    public static let allGamesNewestFirst: [Game] = [
-        .national,
-        .scarlet,
-        .violet,
-        .legendsArceus,
-        .brilliantDiamond,
-        .shiningPearl,
-        .sword,
-        .shield,
-        .letsGoPikachu,
-        .letsGoEevee,
-        .ultraSun,
-        .ultraMoon,
-        .sun,
-        .moon,
-        .omegaRuby,
-        .alphaSapphire,
-        .x,
-        .y,
-        .black2,
-        .white2,
-        .black,
-        .white,
-        .heartGold,
-        .soulSilver,
-        .diamond,
-        .pearl,
-        .platinum,
-        .fireRed,
-        .leafGreen,
-        .ruby,
-        .sapphire,
-        .emerald,
-        .gold,
-        .silver,
-        .crystal,
-        .red,
-        .blue,
-        .yellow
-    ]
-
-    public var generation: Generation {
+    /// The stable integer stored in generated database rows.
+    ///
+    /// These values are an explicit persistence contract. They are independent
+    /// of enum declaration order, selector order, and release recency.
+    public var databaseIndex: Int {
         switch self {
-        case .red, .blue, .yellow:
-            return .i
-        case .gold, .silver, .crystal:
-            return .ii
-        case .ruby, .sapphire, .emerald, .fireRed, .leafGreen:
-            return .iii
-        case .diamond, .pearl, .platinum, .heartGold, .soulSilver:
-            return .iv
-        case .black, .white, .black2, .white2:
-            return .v
-        case .x, .y, .omegaRuby, .alphaSapphire:
-            return .vi
-        case .sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee:
-            return .vii
-        case .sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus:
-            return .viii
-        case .scarlet, .violet:
-            return .ix
-        case .national:
-            return .all
+        case .red: return 0
+        case .blue: return 1
+        case .yellow: return 2
+        case .gold: return 3
+        case .silver: return 4
+        case .crystal: return 5
+        case .ruby: return 6
+        case .sapphire: return 7
+        case .emerald: return 8
+        case .fireRed: return 9
+        case .leafGreen: return 10
+        case .diamond: return 11
+        case .pearl: return 12
+        case .platinum: return 13
+        case .heartGold: return 14
+        case .soulSilver: return 15
+        case .black: return 16
+        case .white: return 17
+        case .black2: return 18
+        case .white2: return 19
+        case .x: return 20
+        case .y: return 21
+        case .omegaRuby: return 22
+        case .alphaSapphire: return 23
+        case .sun: return 24
+        case .moon: return 25
+        case .ultraSun: return 26
+        case .ultraMoon: return 27
+        case .letsGoPikachu: return 28
+        case .letsGoEevee: return 29
+        case .sword: return 30
+        case .shield: return 31
+        case .brilliantDiamond: return 32
+        case .shiningPearl: return 33
+        case .legendsArceus: return 34
+        case .scarlet: return 35
+        case .violet: return 36
+        case .national: return 37
         }
     }
+
+    /// Compatibility alias for the stable generated-database index.
+    @available(*, deprecated, renamed: "databaseIndex")
+    public var index: Int { databaseIndex }
 
     public var key: String { rawValue }
-    
+
+    /// The user-facing dataset title.
     public var title: String {
-        switch self {
-        case .red: return "Red"
-        case .blue: return "Blue"
-        case .yellow: return "Yellow"
-        case .gold: return "Gold"
-        case .silver: return "Silver"
-        case .crystal: return "Crystal"
-        case .ruby: return "Ruby"
-        case .sapphire: return "Sapphire"
-        case .emerald: return "Emerald"
-        case .fireRed: return "FireRed"
-        case .leafGreen: return "LeafGreen"
-        case .diamond: return "Diamond"
-        case .pearl: return "Pearl"
-        case .platinum: return "Platinum"
-        case .heartGold: return "HeartGold"
-        case .soulSilver: return "SoulSilver"
-        case .black: return "Black"
-        case .white: return "White"
-        case .black2: return "Black 2"
-        case .white2: return "White 2"
-        case .x: return "X"
-        case .y: return "Y"
-        case .omegaRuby: return "Omega Ruby"
-        case .alphaSapphire: return "Alpha Sapphire"
-        case .sun: return "Sun"
-        case .moon: return "Moon"
-        case .ultraSun: return "Ultra Sun"
-        case .ultraMoon: return "Ultra Moon"
-        case .letsGoPikachu: return "Let's Go, Pikachu!"
-        case .letsGoEevee: return "Let's Go, Eevee!"
-        case .sword: return "Sword"
-        case .shield: return "Shield"
-        case .brilliantDiamond: return "Brilliant Diamond"
-        case .shiningPearl: return "Shining Pearl"
-        case .legendsArceus: return "Legends: Arceus"
-        case .scarlet: return "Scarlet"
-        case .violet: return "Violet"
-        case .national: return "National"
+        if isNational {
+            return "National"
         }
+        guard let metadata else {
+            preconditionFailure("Released game \(rawValue) is missing metadata")
+        }
+        return metadata.title
     }
 
-    public var index: Int { Self.allCases.firstIndex(of: self)! }
+    /// Compatibility access to released-game generation metadata.
+    ///
+    /// National returns `nil` because it is an aggregate dataset rather than a
+    /// released game. New code should read ``metadata`` explicitly.
+    @available(*, deprecated, message: "Use metadata?.generation; National has no released-game generation")
+    public var generation: Generation? { metadata?.generation }
 
-    public var hasBreeding: Bool { generation >= .ii && self != .legendsArceus }
-
-    public var hasTutoring: Bool { generation >= .ii }
-
-    public var hasTransfer: Bool { generation >= .ii }
-
-    public var hasAbilities: Bool {
-        generation >= .iii
-        && self != .letsGoPikachu
-        && self != .letsGoEevee
-        && self != .legendsArceus
-    }
-
-    public var hasTMs: Bool { self != .legendsArceus }
-
-    public var hasHMs: Bool { generation < 7 && self != .legendsArceus }
-
-    public var hasTRs: Bool { self == .sword || self == .shield || self == .national }
-    
-    public var hasMachines: Bool { hasTMs || hasHMs || hasTRs }
+    public var hasBreeding: Bool { metadata?.mechanics.hasBreeding ?? false }
+    public var hasTutoring: Bool { metadata?.mechanics.hasTutoring ?? false }
+    public var hasTransfer: Bool { metadata?.mechanics.hasTransfer ?? false }
+    public var hasAbilities: Bool { metadata?.mechanics.hasAbilities ?? false }
+    public var hasTMs: Bool { metadata?.mechanics.hasTMs ?? false }
+    public var hasHMs: Bool { metadata?.mechanics.hasHMs ?? false }
+    public var hasTRs: Bool { metadata?.mechanics.hasTRs ?? false }
+    public var hasMachines: Bool { metadata?.mechanics.hasMachines ?? false }
 
 }
 
 extension Game: Codable { }
 
 extension Game: Comparable {
-    
+
+    /// Compares stable database identity order only.
+    ///
+    /// Use ``releasedGames`` for selector display order and
+    /// ``latestReleasedGames`` for release recency.
     public static func < (lhs: Game, rhs: Game) -> Bool {
-        Game.allCases.firstIndex(of: lhs) ?? 0 < Game.allCases.firstIndex(of: rhs) ?? 0
+        lhs.databaseIndex < rhs.databaseIndex
     }
-    
+
 }
 
 extension Game: Hashable { }
 
 extension Game: Identifiable {
-    
+
     public var id: String { rawValue }
-    
+
 }
 
 extension Notification.Name {

@@ -15,7 +15,7 @@ public extension StoredPokemon {
     static func allFetchRequest(for game: Game, filter: Filter) -> NSFetchRequest<StoredPokemon> {
         let request: NSFetchRequest<StoredPokemon> = StoredPokemon.fetchRequest()
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
-            NSPredicate(format: "\(#keyPath(StoredPokemon.i_gameIndex)) == %d", game.index),
+            NSPredicate(format: "\(#keyPath(StoredPokemon.i_gameIndex)) == %d", game.databaseIndex),
             filter.predicate
         ])
         request.relationshipKeyPathsForPrefetching = [
@@ -30,7 +30,7 @@ public extension StoredPokemon {
     static func fetchRequest(forName name: String, game: Game) -> NSFetchRequest<StoredPokemon> {
         let request: NSFetchRequest<StoredPokemon> = StoredPokemon.fetchRequest()
         request.fetchLimit = 1
-        request.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.z_name)) LIKE[cd] %@ AND \(#keyPath(StoredPokemon.i_gameIndex)) == %d", name, game.index)
+        request.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.z_name)) LIKE[cd] %@ AND \(#keyPath(StoredPokemon.i_gameIndex)) == %d", name, game.databaseIndex)
         request.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredPokemon.z_pokedexNumbers),
             #keyPath(StoredPokemon.z_forms)
@@ -42,7 +42,7 @@ public extension StoredPokemon {
 
     static func fetchRequest(forType type: PokemonType, game: Game) -> NSFetchRequest<StoredPokemon> {
         let request: NSFetchRequest<StoredPokemon> = StoredPokemon.fetchRequest()
-        request.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.i_gameIndex)) == %d AND (ANY \(#keyPath(StoredPokemon.z_forms.z_primaryType)) == %@ OR ANY \(#keyPath(StoredPokemon.z_forms.z_secondaryType)) == %@)", game.index, type.rawValue, type.rawValue)
+        request.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.i_gameIndex)) == %d AND (ANY \(#keyPath(StoredPokemon.z_forms.z_primaryType)) == %@ OR ANY \(#keyPath(StoredPokemon.z_forms.z_secondaryType)) == %@)", game.databaseIndex, type.rawValue, type.rawValue)
         request.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredPokemon.z_pokedexNumbers),
             #keyPath(StoredPokemon.z_forms)
@@ -55,7 +55,7 @@ public extension StoredPokemon {
     static func fetchRequest(for pokemon: StoredPokemon, game: Game) -> NSFetchRequest<StoredPokemon> {
         let request: NSFetchRequest<StoredPokemon> = StoredPokemon.fetchRequest()
         request.fetchLimit = 1
-        request.predicate = NSPredicate(format: "self == %@ AND \(#keyPath(StoredPokemon.i_gameIndex)) == %d", pokemon.objectID, game.index)
+        request.predicate = NSPredicate(format: "self == %@ AND \(#keyPath(StoredPokemon.i_gameIndex)) == %d", pokemon.objectID, game.databaseIndex)
         request.returnsObjectsAsFaults = false
         request.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredPokemon.z_pokedexNumbers),
@@ -117,7 +117,7 @@ public extension StoredPokemon {
     }
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.databaseIndex) }
     }
     var generationIntroduced: Generation {
         get { Generation(rawValue: Int(z_generationIntroduced))! }

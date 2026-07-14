@@ -117,6 +117,7 @@
 		6540228B2978ECA9005BF4DC /* LevelingRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021EC2978ECA0005BF4DC /* LevelingRate.swift */; };
 		6540228C2978ECA9005BF4DC /* EvolutionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021ED2978ECA0005BF4DC /* EvolutionMethod.swift */; };
 		6540228D2978ECA9005BF4DC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021EE2978ECA0005BF4DC /* Game.swift */; };
+		D20000012978ECA9005BF4DC /* Game+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000022978ECA0005BF4DC /* Game+Metadata.swift */; };
 		6540228E2978ECA9005BF4DC /* EggGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021EF2978ECA0005BF4DC /* EggGroup.swift */; };
 		6540228F2978ECA9005BF4DC /* CaptureMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021F02978ECA0005BF4DC /* CaptureMethod.swift */; };
 		654022902978ECA9005BF4DC /* Nature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021F12978ECA0005BF4DC /* Nature.swift */; };
@@ -746,6 +747,7 @@
 		654021EC2978ECA0005BF4DC /* LevelingRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelingRate.swift; sourceTree = "<group>"; };
 		654021ED2978ECA0005BF4DC /* EvolutionMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvolutionMethod.swift; sourceTree = "<group>"; };
 		654021EE2978ECA0005BF4DC /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D20000022978ECA0005BF4DC /* Game+Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Game+Metadata.swift"; sourceTree = "<group>"; };
 		654021EF2978ECA0005BF4DC /* EggGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EggGroup.swift; sourceTree = "<group>"; };
 		654021F02978ECA0005BF4DC /* CaptureMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureMethod.swift; sourceTree = "<group>"; };
 		654021F12978ECA0005BF4DC /* Nature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nature.swift; sourceTree = "<group>"; };
@@ -1553,6 +1555,7 @@
 				654021F52978ECA0005BF4DC /* Extensions */,
 				654021E72978ECA0005BF4DC /* Flavor.swift */,
 				654021EE2978ECA0005BF4DC /* Game.swift */,
+				D20000022978ECA0005BF4DC /* Game+Metadata.swift */,
 				654021E32978ECA0005BF4DC /* Gender.swift */,
 				654022042978ECA0005BF4DC /* Generation.swift */,
 				654021F22978ECA0005BF4DC /* ItemType.swift */,
@@ -3372,6 +3375,7 @@
 				654022A12978ECA9005BF4DC /* TypeEffectivenessGroup.swift in Sources */,
 				654022AD2978ECA9005BF4DC /* StoredPokemon+Extension.swift in Sources */,
 				6540228D2978ECA9005BF4DC /* Game.swift in Sources */,
+				D20000012978ECA9005BF4DC /* Game+Metadata.swift in Sources */,
 				654022452978ECA9005BF4DC /* Region+Strings.swift in Sources */,
 				6540225C2978ECA9005BF4DC /* PokemonDetail.swift in Sources */,
 				6540222E2978ECA9005BF4DC /* EncounterRate+Strings.swift in Sources */,

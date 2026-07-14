@@ -51,7 +51,7 @@ public struct CaughtPokemonFilter: QueryFilter {
 
     public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredCaughtPokemon> {
         let request: NSFetchRequest<StoredCaughtPokemon> = StoredCaughtPokemon.fetchRequest()
-        var predicates = [NSPredicate(format: "\(#keyPath(StoredCaughtPokemon.i_gameIndex)) == %d", game.index)]
+        var predicates = [NSPredicate(format: "\(#keyPath(StoredCaughtPokemon.i_gameIndex)) == %d", game.databaseIndex)]
 
         if let pokemonName {
             predicates.append(.init(format: "\(#keyPath(StoredCaughtPokemon.z_pokemonName)) == %@", pokemonName))
