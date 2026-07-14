@@ -437,14 +437,6 @@
 		65EE7E03297A516000CBA045 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE7DA5297A515F00CBA045 /* TeamViewModel.swift */; };
 		65EE7E04297A516000CBA045 /* TeamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE7DA7297A515F00CBA045 /* TeamList.swift */; };
 		65EE7E05297A516000CBA045 /* TeamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE7DA8297A515F00CBA045 /* TeamListViewModel.swift */; };
-		65F2AFFD28BB4F3900218C89 /* PikadexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2AFFC28BB4F3900218C89 /* PikadexApp.swift */; };
-		65F2B00228BB4F3900218C89 /* Pikadex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65F2B00028BB4F3900218C89 /* Pikadex.xcdatamodeld */; };
-		65F2B00428BB4F3900218C89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2B00328BB4F3900218C89 /* ContentView.swift */; };
-		65F2B00628BB4F3A00218C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B00528BB4F3A00218C89 /* Assets.xcassets */; };
-		65F2B00A28BB4F3A00218C89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F2B00928BB4F3A00218C89 /* Preview Assets.xcassets */; };
-		65F2B01428BB4F3A00218C89 /* PikadexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2B01328BB4F3A00218C89 /* PikadexTests.swift */; };
-		65F2B01E28BB4F3B00218C89 /* PikadexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2B01D28BB4F3B00218C89 /* PikadexUITests.swift */; };
-		65F2B02028BB4F3B00218C89 /* PikadexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2B01F28BB4F3B00218C89 /* PikadexUITestsLaunchTests.swift */; };
 		65F7694D245570F700AEB57D /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F7694C245570F700AEB57D /* Entities.swift */; };
 		65FC40862574636700E64BD0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC40852574636700E64BD0 /* WidgetKit.framework */; };
 		65FC40882574636700E64BD0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FC40872574636700E64BD0 /* SwiftUI.framework */; };
@@ -573,20 +565,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 65401F412978EA91005BF4DC;
 			remoteInfo = PokedexCore;
-		};
-		65F2B01028BB4F3A00218C89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65F2AFF928BB4F3900218C89;
-			remoteInfo = Pikadex;
-		};
-		65F2B01A28BB4F3A00218C89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65F2AFF928BB4F3900218C89;
-			remoteInfo = Pikadex;
 		};
 		65FC40922574636800E64BD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1055,18 +1033,6 @@
 		65EE7DA5297A515F00CBA045 /* TeamViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		65EE7DA7297A515F00CBA045 /* TeamList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamList.swift; sourceTree = "<group>"; };
 		65EE7DA8297A515F00CBA045 /* TeamListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewModel.swift; sourceTree = "<group>"; };
-		65F2AFFA28BB4F3900218C89 /* Pikadex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikadex.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F2AFFC28BB4F3900218C89 /* PikadexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PikadexApp.swift; sourceTree = "<group>"; };
-		65F2B00128BB4F3900218C89 /* Pikadex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pikadex.xcdatamodel; sourceTree = "<group>"; };
-		65F2B00328BB4F3900218C89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		65F2B00528BB4F3A00218C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		65F2B00728BB4F3A00218C89 /* Pikadex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pikadex.entitlements; sourceTree = "<group>"; };
-		65F2B00928BB4F3A00218C89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		65F2B00F28BB4F3A00218C89 /* PikadexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PikadexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F2B01328BB4F3A00218C89 /* PikadexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PikadexTests.swift; sourceTree = "<group>"; };
-		65F2B01928BB4F3A00218C89 /* PikadexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PikadexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F2B01D28BB4F3B00218C89 /* PikadexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PikadexUITests.swift; sourceTree = "<group>"; };
-		65F2B01F28BB4F3B00218C89 /* PikadexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PikadexUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		65F7694C245570F700AEB57D /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		65FC40842574636700E64BD0 /* PokedexWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PokedexWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FC40852574636700E64BD0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -1175,27 +1141,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		65992A1929C74D7A001ECD43 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2AFF728BB4F3900218C89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2B00C28BB4F3A00218C89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2B01628BB4F3A00218C89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1945,9 +1890,6 @@
 				6547F846237975190091A083 /* Frameworks */,
 				6540238729791239005BF4DC /* Modules */,
 				654023882979125B005BF4DC /* ModuleTests */,
-				65F2AFFB28BB4F3900218C89 /* Pikadex */,
-				65F2B01228BB4F3A00218C89 /* PikadexTests */,
-				65F2B01C28BB4F3B00218C89 /* PikadexUITests */,
 				6547F7F4237968D20091A083 /* Pokedex */,
 				6547F80E237968D50091A083 /* PokedexTests */,
 				654022D42979068B005BF4DC /* PokedexUITests */,
@@ -1966,9 +1908,6 @@
 				6547F816237968D50091A083 /* PokedexUITests.xctest */,
 				65FC40842574636700E64BD0 /* PokedexWidgetExtension.appex */,
 				65721CDC257E2CEB00DA8F7C /* TeamIntentHandler.appex */,
-				65F2AFFA28BB4F3900218C89 /* Pikadex.app */,
-				65F2B00F28BB4F3A00218C89 /* PikadexTests.xctest */,
-				65F2B01928BB4F3A00218C89 /* PikadexUITests.xctest */,
 				6584844F293D0A8300BF985C /* DatabaseValidator */,
 				65401F422978EA91005BF4DC /* PokedexCore.framework */,
 				65401F4B2978EA91005BF4DC /* PokedexCoreTests.xctest */,
@@ -2754,44 +2693,6 @@
 			path = TeamList;
 			sourceTree = "<group>";
 		};
-		65F2AFFB28BB4F3900218C89 /* Pikadex */ = {
-			isa = PBXGroup;
-			children = (
-				65F2AFFC28BB4F3900218C89 /* PikadexApp.swift */,
-				65F2B00328BB4F3900218C89 /* ContentView.swift */,
-				65F2B00528BB4F3A00218C89 /* Assets.xcassets */,
-				65F2B00728BB4F3A00218C89 /* Pikadex.entitlements */,
-				65F2B00028BB4F3900218C89 /* Pikadex.xcdatamodeld */,
-				65F2B00828BB4F3A00218C89 /* Preview Content */,
-			);
-			path = Pikadex;
-			sourceTree = "<group>";
-		};
-		65F2B00828BB4F3A00218C89 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				65F2B00928BB4F3A00218C89 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		65F2B01228BB4F3A00218C89 /* PikadexTests */ = {
-			isa = PBXGroup;
-			children = (
-				65F2B01328BB4F3A00218C89 /* PikadexTests.swift */,
-			);
-			path = PikadexTests;
-			sourceTree = "<group>";
-		};
-		65F2B01C28BB4F3B00218C89 /* PikadexUITests */ = {
-			isa = PBXGroup;
-			children = (
-				65F2B01D28BB4F3B00218C89 /* PikadexUITests.swift */,
-				65F2B01F28BB4F3B00218C89 /* PikadexUITestsLaunchTests.swift */,
-			);
-			path = PikadexUITests;
-			sourceTree = "<group>";
-		};
 		65FC40892574636700E64BD0 /* PokedexWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -3080,59 +2981,6 @@
 			productReference = 65992A1C29C74D7A001ECD43 /* PokedexResources.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		65F2AFF928BB4F3900218C89 /* Pikadex */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 65F2B02728BB4F3B00218C89 /* Build configuration list for PBXNativeTarget "Pikadex" */;
-			buildPhases = (
-				65F2AFF628BB4F3900218C89 /* Sources */,
-				65F2AFF728BB4F3900218C89 /* Frameworks */,
-				65F2AFF828BB4F3900218C89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Pikadex;
-			productName = Pikadex;
-			productReference = 65F2AFFA28BB4F3900218C89 /* Pikadex.app */;
-			productType = "com.apple.product-type.application";
-		};
-		65F2B00E28BB4F3A00218C89 /* PikadexTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 65F2B02828BB4F3B00218C89 /* Build configuration list for PBXNativeTarget "PikadexTests" */;
-			buildPhases = (
-				65F2B00B28BB4F3A00218C89 /* Sources */,
-				65F2B00C28BB4F3A00218C89 /* Frameworks */,
-				65F2B00D28BB4F3A00218C89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				65F2B01128BB4F3A00218C89 /* PBXTargetDependency */,
-			);
-			name = PikadexTests;
-			productName = PikadexTests;
-			productReference = 65F2B00F28BB4F3A00218C89 /* PikadexTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		65F2B01828BB4F3A00218C89 /* PikadexUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 65F2B02928BB4F3B00218C89 /* Build configuration list for PBXNativeTarget "PikadexUITests" */;
-			buildPhases = (
-				65F2B01528BB4F3A00218C89 /* Sources */,
-				65F2B01628BB4F3A00218C89 /* Frameworks */,
-				65F2B01728BB4F3A00218C89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				65F2B01B28BB4F3A00218C89 /* PBXTargetDependency */,
-			);
-			name = PikadexUITests;
-			productName = PikadexUITests;
-			productReference = 65F2B01928BB4F3A00218C89 /* PikadexUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		65FC40832574636700E64BD0 /* PokedexWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65FC40992574636800E64BD0 /* Build configuration list for PBXNativeTarget "PokedexWidgetExtension" */;
@@ -3207,17 +3055,6 @@
 						CreatedOnToolsVersion = 14.3;
 						LastSwiftMigration = 1430;
 					};
-					65F2AFF928BB4F3900218C89 = {
-						CreatedOnToolsVersion = 14.0;
-					};
-					65F2B00E28BB4F3A00218C89 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 65F2AFF928BB4F3900218C89;
-					};
-					65F2B01828BB4F3A00218C89 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 65F2AFF928BB4F3900218C89;
-					};
 					65FC40832574636700E64BD0 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -3251,9 +3088,6 @@
 				6584844E293D0A8300BF985C /* DatabaseValidator */,
 				65FC40832574636700E64BD0 /* PokedexWidgetExtension */,
 				65721CDB257E2CEB00DA8F7C /* TeamIntentHandler */,
-				65F2AFF928BB4F3900218C89 /* Pikadex */,
-				65F2B00E28BB4F3A00218C89 /* PikadexTests */,
-				65F2B01828BB4F3A00218C89 /* PikadexUITests */,
 				65401F412978EA91005BF4DC /* PokedexCore */,
 				65401F4A2978EA91005BF4DC /* PokedexCoreTests */,
 				654022C62979068A005BF4DC /* PokedexUI */,
@@ -3337,29 +3171,6 @@
 				65992A3029C75361001ECD43 /* Items.xcassets in Resources */,
 				65992A2F29C7535B001ECD43 /* Images.xcassets in Resources */,
 				65992A3129C75365001ECD43 /* Menusprites.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2AFF828BB4F3900218C89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65F2B00A28BB4F3A00218C89 /* Preview Assets.xcassets in Resources */,
-				65F2B00628BB4F3A00218C89 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2B00D28BB4F3A00218C89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2B01728BB4F3A00218C89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3878,33 +3689,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65F2AFF628BB4F3900218C89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65F2AFFD28BB4F3900218C89 /* PikadexApp.swift in Sources */,
-				65F2B00428BB4F3900218C89 /* ContentView.swift in Sources */,
-				65F2B00228BB4F3900218C89 /* Pikadex.xcdatamodeld in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2B00B28BB4F3A00218C89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65F2B01428BB4F3A00218C89 /* PikadexTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65F2B01528BB4F3A00218C89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65F2B01E28BB4F3B00218C89 /* PikadexUITests.swift in Sources */,
-				65F2B02028BB4F3B00218C89 /* PikadexUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		65FC40802574636700E64BD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4021,16 +3805,6 @@
 		65DB72E123F3F3A900F1DCF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 65DB72E023F3F3A900F1DCF1 /* Convert */;
-		};
-		65F2B01128BB4F3A00218C89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 65F2AFF928BB4F3900218C89 /* Pikadex */;
-			targetProxy = 65F2B01028BB4F3A00218C89 /* PBXContainerItemProxy */;
-		};
-		65F2B01B28BB4F3A00218C89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 65F2AFF928BB4F3900218C89 /* Pikadex */;
-			targetProxy = 65F2B01A28BB4F3A00218C89 /* PBXContainerItemProxy */;
 		};
 		65FC40932574636800E64BD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4837,186 +4611,6 @@
 			};
 			name = Release;
 		};
-		65F2B02128BB4F3B00218C89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = Pikadex/Pikadex.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Pikadex/Preview Content\"";
-				DEVELOPMENT_TEAM = HSX7X97PF8;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.Pikadex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		65F2B02228BB4F3B00218C89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = Pikadex/Pikadex.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Pikadex/Preview Content\"";
-				DEVELOPMENT_TEAM = HSX7X97PF8;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.Pikadex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		65F2B02328BB4F3B00218C89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = HSX7X97PF8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.PikadexTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pikadex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pikadex";
-			};
-			name = Debug;
-		};
-		65F2B02428BB4F3B00218C89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = HSX7X97PF8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.PikadexTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pikadex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pikadex";
-			};
-			name = Release;
-		};
-		65F2B02528BB4F3B00218C89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = HSX7X97PF8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.PikadexUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Pikadex;
-			};
-			name = Debug;
-		};
-		65F2B02628BB4F3B00218C89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = HSX7X97PF8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.PikadexUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Pikadex;
-			};
-			name = Release;
-		};
 		65FC40972574636800E64BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5174,33 +4768,6 @@
 			buildConfigurations = (
 				65992A2429C74D7A001ECD43 /* Debug */,
 				65992A2529C74D7A001ECD43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		65F2B02728BB4F3B00218C89 /* Build configuration list for PBXNativeTarget "Pikadex" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				65F2B02128BB4F3B00218C89 /* Debug */,
-				65F2B02228BB4F3B00218C89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		65F2B02828BB4F3B00218C89 /* Build configuration list for PBXNativeTarget "PikadexTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				65F2B02328BB4F3B00218C89 /* Debug */,
-				65F2B02428BB4F3B00218C89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		65F2B02928BB4F3B00218C89 /* Build configuration list for PBXNativeTarget "PikadexUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				65F2B02528BB4F3B00218C89 /* Debug */,
-				65F2B02628BB4F3B00218C89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -5372,16 +4939,6 @@
 			);
 			currentVersion = 654022092978ECA2005BF4DC /* Pokedex.xcdatamodel */;
 			path = Pokedex.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		65F2B00028BB4F3900218C89 /* Pikadex.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				65F2B00128BB4F3900218C89 /* Pikadex.xcdatamodel */,
-			);
-			currentVersion = 65F2B00128BB4F3900218C89 /* Pikadex.xcdatamodel */;
-			path = Pikadex.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

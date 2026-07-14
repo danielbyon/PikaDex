@@ -106,6 +106,8 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift
 
 .DS_Store
+__pycache__/
+*.pyc
 
 Crawlers/Cached/*
 .venv
