@@ -24,6 +24,7 @@
 		65401F4C2978EA91005BF4DC /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
 		65401F602978EABD005BF4DC /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 65401F5F2978EABD005BF4DC /* AppSupport */; };
 		6540222D2978ECA9005BF4DC /* PokedexCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021722978EC8E005BF4DC /* PokedexCore.swift */; };
+		D30000022978ECA9005BF4DC /* PersistenceBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30000012978ECA9005BF4DC /* PersistenceBootstrap.swift */; };
 		6540222E2978ECA9005BF4DC /* EncounterRate+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021742978EC90005BF4DC /* EncounterRate+Strings.swift */; };
 		6540222F2978ECA9005BF4DC /* AnyScheduler+AppQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021752978EC90005BF4DC /* AnyScheduler+AppQueues.swift */; };
 		654022302978ECA9005BF4DC /* DispatchQueue+AppQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021762978EC90005BF4DC /* DispatchQueue+AppQueues.swift */; };
@@ -215,6 +216,7 @@
 		6540236129790FA4005BF4DC /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540233D29790FA4005BF4DC /* LocationCell.swift */; };
 		6540236229790FA4005BF4DC /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540233E29790FA4005BF4DC /* HomeButton.swift */; };
 		654023682979101A005BF4DC /* PokedexCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540236429791018005BF4DC /* PokedexCoreTests.swift */; };
+		D30000042979101A005BF4DC /* PersistenceBootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300000329791018005BF4DC /* PersistenceBootstrapTests.swift */; };
 		654023692979101A005BF4DC /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540236529791019005BF4DC /* GameTests.swift */; };
 		6540236A2979101A005BF4DC /* TeamListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654023662979101A005BF4DC /* TeamListViewModelTests.swift */; };
 		654023792979114C005BF4DC /* Value3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6540236D29791149005BF4DC /* Value3Cell.swift */; };
@@ -775,6 +777,7 @@
 		6540220C2978ECA2005BF4DC /* TeamStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStore.swift; sourceTree = "<group>"; };
 		6540220E2978ECA2005BF4DC /* TeamStorage+Dependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TeamStorage+Dependency.swift"; sourceTree = "<group>"; };
 		6540220F2978ECA2005BF4DC /* TeamStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStorage.swift; sourceTree = "<group>"; };
+		D30000012978ECA9005BF4DC /* PersistenceBootstrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceBootstrap.swift; sourceTree = "<group>"; };
 		654022112978ECA7005BF4DC /* Int64+Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int64+Int.swift"; sourceTree = "<group>"; };
 		654022122978ECA7005BF4DC /* Int32+Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int32+Int.swift"; sourceTree = "<group>"; };
 		654022142978ECA7005BF4DC /* Machine+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Machine+Extensions.swift"; sourceTree = "<group>"; };
@@ -840,6 +843,7 @@
 		6540233D29790FA4005BF4DC /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		6540233E29790FA4005BF4DC /* HomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		6540236429791018005BF4DC /* PokedexCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexCoreTests.swift; sourceTree = "<group>"; };
+		D300000329791018005BF4DC /* PersistenceBootstrapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceBootstrapTests.swift; sourceTree = "<group>"; };
 		6540236529791019005BF4DC /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		654023662979101A005BF4DC /* TeamListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListViewModelTests.swift; sourceTree = "<group>"; };
 		6540236D29791149005BF4DC /* Value3Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value3Cell.swift; sourceTree = "<group>"; };
@@ -1245,6 +1249,7 @@
 			children = (
 				6540236529791019005BF4DC /* GameTests.swift */,
 				6540236429791018005BF4DC /* PokedexCoreTests.swift */,
+				D300000329791018005BF4DC /* PersistenceBootstrapTests.swift */,
 				654023662979101A005BF4DC /* TeamListViewModelTests.swift */,
 			);
 			path = PokedexCoreTests;
@@ -1596,6 +1601,7 @@
 		654022052978ECA2005BF4DC /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				D30000012978ECA9005BF4DC /* PersistenceBootstrap.swift */,
 				654022062978ECA2005BF4DC /* UserData.xcdatamodeld */,
 				654022082978ECA2005BF4DC /* Pokedex.xcdatamodeld */,
 				6540220A2978ECA2005BF4DC /* TeamStore */,
@@ -3267,6 +3273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30000022978ECA9005BF4DC /* PersistenceBootstrap.swift in Sources */,
 				654022AA2978ECA9005BF4DC /* Int32+Int.swift in Sources */,
 				654022A32978ECA9005BF4DC /* UserData.xcdatamodeld in Sources */,
 				654022B52978ECA9005BF4DC /* PokedexNumbers+Extension.swift in Sources */,
@@ -3421,6 +3428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30000042979101A005BF4DC /* PersistenceBootstrapTests.swift in Sources */,
 				6540236A2979101A005BF4DC /* TeamListViewModelTests.swift in Sources */,
 				654023692979101A005BF4DC /* GameTests.swift in Sources */,
 				654023682979101A005BF4DC /* PokedexCoreTests.swift in Sources */,

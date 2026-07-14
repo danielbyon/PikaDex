@@ -7,18 +7,14 @@
 //
 
 import Foundation
-import CoreData
 import PokedexCore
 
-extension StoredMachine {
+extension Machine {
 
-    static func generateTM1(for game: Game) -> StoredMachine {
-        let fetchRequest: NSFetchRequest<StoredMachine> = StoredMachine.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "\(#keyPath(StoredMachine.z_number)) == 1 && \(#keyPath(StoredMachine.z_game)) == %@", game.rawValue)
-        fetchRequest.fetchLimit = 1
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(StoredMachine.z_number), ascending: true)]
-        let machine = try! NSPersistentContainer.pokedexContainer.viewContext.fetch(fetchRequest).first!
-        return machine
+    /// Returns the first machine from an isolated preview bootstrap.
+    static func generateTM1(for game: Game) throws -> Machine? {
+        let stores = try PersistenceBootstrap.preview()
+        return try stores.pokedex.fetch(Machine.self, filter: MachineFilter(game: game)).first
     }
 
 }

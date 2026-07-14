@@ -7,8 +7,6 @@
 
 @_exported import Foundation
 
-import CoreData
-
 extension Bundle {
 
     public static var pokedexCore: Bundle { Bundle(for: PokedexCoreMarker.self) }
@@ -16,41 +14,3 @@ extension Bundle {
 }
 
 private final class PokedexCoreMarker { }
-
-public let pokedexDatabaseURL = Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "sqlite")!
-
-extension NSPersistentContainer {
-
-    public static let pokedexContainer: NSPersistentContainer = {
-        let modelURL = Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "momd")!
-        let model = NSManagedObjectModel(contentsOf: modelURL)!
-        let container = NSPersistentContainer(name: "Pokedex", managedObjectModel: model)
-        let url = Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "sqlite")!
-        let storeDescription = NSPersistentStoreDescription(url: url)
-        storeDescription.isReadOnly = true
-        container.persistentStoreDescriptions = [storeDescription]
-
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error {
-                debugPrint("Unresolved error \(error)")
-                fatalError(error.localizedDescription)
-            }
-        })
-        return container
-    }()
-
-    public static let userDataContainer: NSPersistentContainer = {
-        let modelURL = Bundle.pokedexCore.url(forResource: "UserData", withExtension: "momd")!
-        let model = NSManagedObjectModel(contentsOf: modelURL)!
-        let container = NSPersistentContainer(name: "UserData", managedObjectModel: model)
-
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error {
-                debugPrint("Unresolved error \(error)")
-                fatalError(error.localizedDescription)
-            }
-        })
-        return container
-    }()
-
-}

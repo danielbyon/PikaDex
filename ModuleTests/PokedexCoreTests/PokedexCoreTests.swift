@@ -25,12 +25,21 @@ private enum CurrentGeneratedDatabaseSnapshot {
 
 final class PokedexCoreTests: XCTestCase {
 
-    private let dataStore = DataStore.pokedex
+    private static let storesResult: Result<PersistenceStores, Error> = Result {
+        try PersistenceBootstrap.makeBundledCatalogForTesting()
+    }
+
+    private var dataStore: DataStore!
+
+    override func setUpWithError() throws {
+        dataStore = try Self.storesResult.get().pokedex
+    }
 
     func testBundledDatabaseLoads() {
         XCTAssertNotNil(Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "momd"))
         XCTAssertNotNil(Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "sqlite"))
-        _ = NSPersistentContainer.pokedexContainer
+        let stores = try? Self.storesResult.get()
+        XCTAssertEqual(stores?.pokedexContainer.persistentStoreCoordinator.persistentStores.count, 1)
     }
 
     // MARK: Durable integrity tests

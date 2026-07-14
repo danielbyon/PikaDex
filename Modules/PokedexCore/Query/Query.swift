@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import Dependencies
 import SwiftUI
 
 @propertyWrapper
@@ -38,6 +39,11 @@ public struct Query<T: Queryable>: DynamicProperty {
 
             var shouldFetch = false
 
+            guard case .success(let viewContext) = dataStore.contextResult else {
+                debugPrint("Core Data query could not start because persistence is unavailable.")
+                return
+            }
+
             let request = filter.makeFetchRequest(dataStore)
             request.returnsObjectsAsFaults = false
             request.fetchBatchSize = DatabaseConstants.fetchBatchSize
@@ -55,7 +61,7 @@ public struct Query<T: Queryable>: DynamicProperty {
             } else {
                 let controller = NSFetchedResultsController(
                     fetchRequest: request,
-                    managedObjectContext: dataStore.viewContext,
+                    managedObjectContext: viewContext,
                     sectionNameKeyPath: nil,
                     cacheName: nil
                 )
@@ -91,10 +97,11 @@ public struct Query<T: Queryable>: DynamicProperty {
 
     public init(
         _ filter: T.Filter = .default,
-        dataStore: DataStore = .pokedex
+        dataStore: DataStore? = nil
     ) {
+        @Dependency(\.pokedexDataStore) var defaultDataStore
         self._baseFilter = .init(initialValue: filter)
-        self.dataStore = dataStore
+        self.dataStore = dataStore ?? defaultDataStore
         if self.baseFilter != filter {
             self.baseFilter = filter
         }

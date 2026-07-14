@@ -18,6 +18,18 @@ struct PokedexApp: App {
     @State private var isShowingUpdateMessage = false
     @StateObject private var appSettings = AppSettings()
     @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
+    private let persistenceStores: PersistenceStores
+
+    init() {
+        do {
+            persistenceStores = try PersistenceBootstrap.production()
+        } catch {
+            let message = (error as? LocalizedError)?.errorDescription
+                ?? "PikaDex could not initialize its data stores."
+            debugPrint(message)
+            fatalError(message)
+        }
+    }
 
     private var hasDisplayedUpdateMessage: Bool {
         get { UserDefaults.standard.bool(forKey: hasDisplayedUpdateMessageKey) }
