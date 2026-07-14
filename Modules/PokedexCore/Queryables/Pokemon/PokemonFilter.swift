@@ -79,7 +79,7 @@ public struct PokemonFilter: SearchableFilter {
         .init(game: game, pokedex: game.defaultPokedex)
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredPokemon> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredPokemon> {
         let fetchRequest = StoredPokemon.fetchRequest() as NSFetchRequest<StoredPokemon>
 
         var predicates = [

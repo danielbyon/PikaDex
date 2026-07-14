@@ -30,7 +30,7 @@ public struct MoveFilter: SearchableFilter {
         self.query = query
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredMove> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredMove> {
         let fetchRequest: NSFetchRequest<StoredMove> = StoredMove.fetchRequest()
 
         var predicates = [

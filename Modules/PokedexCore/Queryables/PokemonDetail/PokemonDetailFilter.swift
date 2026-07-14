@@ -40,7 +40,7 @@ public struct PokemonDetailFilter: QueryFilter {
 
     // MARK: Functions
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<ResultType> {
+    public func makeFetchRequest() -> NSFetchRequest<ResultType> {
         let request: NSFetchRequest<StoredPokemon> = StoredPokemon.fetchRequest()
         request.fetchLimit = 1
         request.predicate = NSPredicate(format: "\(#keyPath(StoredPokemon.z_name)) LIKE[cd] %@ AND \(#keyPath(StoredPokemon.i_gameIndex)) == %d", name, game.databaseIndex)

@@ -90,8 +90,8 @@ final class PokedexCoreTests: XCTestCase {
     }
 
     func testNationalAbilityFilterDoesNotApplyReleasedGenerationCutoff() {
-        let nationalRequest = AbilityFilter(game: .national).makeFetchRequest(dataStore)
-        let scarletRequest = AbilityFilter(game: .scarlet).makeFetchRequest(dataStore)
+        let nationalRequest = AbilityFilter(game: .national).makeFetchRequest()
+        let scarletRequest = AbilityFilter(game: .scarlet).makeFetchRequest()
 
         XCTAssertEqual((nationalRequest.predicate as? NSCompoundPredicate)?.subpredicates.count, 0)
         XCTAssertEqual((scarletRequest.predicate as? NSCompoundPredicate)?.subpredicates.count, 1)

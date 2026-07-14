@@ -27,7 +27,7 @@ public struct PokemonDetailFormFilter: SearchableFilter {
         self.query = query
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredPokemonForm> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredPokemonForm> {
         let fetchRequest: NSFetchRequest<StoredPokemonForm> = StoredPokemonForm.fetchRequest()
         fetchRequest.fetchBatchSize = DatabaseConstants.fetchBatchSize
         var predicates = [predicate]

@@ -37,7 +37,7 @@ public struct LocationPokemonFilter: QueryFilter {
         self.predicate = predicate
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredLocationPokemon> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredLocationPokemon> {
         let request: NSFetchRequest<StoredLocationPokemon> = StoredLocationPokemon.fetchRequest()
         request.predicate = predicate
         request.relationshipKeyPathsForPrefetching = [

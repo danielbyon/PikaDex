@@ -60,7 +60,7 @@ public struct LearnsetLevelEntryFilter: QueryFilter {
         self.sortDescriptors = sortDescriptors
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredLearnsetEntry> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredLearnsetEntry> {
         let fetchRequest: NSFetchRequest<StoredLearnsetEntry> = StoredLearnsetEntry.fetchRequest()
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sortDescriptors

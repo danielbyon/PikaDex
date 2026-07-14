@@ -27,7 +27,7 @@ public struct AbilityFilter: SearchableFilter {
         self.query = query
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredAbility> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredAbility> {
         let request: NSFetchRequest<StoredAbility> = StoredAbility.fetchRequest()
         var predicates: [NSPredicate] = []
         if let generation = game.metadata?.generation {

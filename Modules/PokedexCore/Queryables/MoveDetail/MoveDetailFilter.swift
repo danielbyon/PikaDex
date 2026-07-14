@@ -20,8 +20,8 @@ public struct MoveDetailFilter: QueryFilter {
 
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredMove> {
-        fatalError()
+    public func makeFetchRequest() throws -> NSFetchRequest<StoredMove> {
+        throw QueryError.unsupportedFilter("MoveDetailFilter has no concrete query definition")
     }
 
 }

@@ -85,3 +85,25 @@ isolated from bundled production data. Catalog integration tests use the
 uncached internal bundled-catalog factory, which opens the catalog read-only
 and keeps user data in memory. Previews follow the same read-only catalog rule
 and use in-memory user data.
+
+## Core Data queries
+
+`QueryFilter` implementations construct deterministic `NSFetchRequest` values
+without accessing persistence or executing a fetch. `DataStore` is the single
+execution boundary for one-shot fetches, saves, removals, and observed queries.
+It performs Core Data work on the managed-object context queue and does not
+resolve `PersistenceBootstrap` during ordinary query execution.
+
+SwiftUI features use `@Query` as a thin wrapper around a fetched-results
+controller. Its wrapped `QueryResults` value remains a random-access collection,
+and its projected value remains a binding to the filter. `QueryResults.state`
+reports `idle`, `loading`, `loaded`, or a stable `QueryFailure`. Loading and
+failure retain the last successfully loaded rows; underlying persistence errors
+remain diagnostic details rather than public view state.
+
+An unchanged filter and managed-object context reuse the existing controller.
+Changing the filter or context detaches the old delegate and creates a new
+controller on the appropriate context queue. A new `DataStore` wrapper around
+the same context therefore does not trigger a redundant fetch. Observed-query
+batching and fault defaults are applied separately from one-shot requests so a
+filter's explicit request settings remain authoritative.
