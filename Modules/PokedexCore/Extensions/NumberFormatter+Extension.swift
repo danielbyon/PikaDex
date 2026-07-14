@@ -19,7 +19,7 @@ public enum PokedexNumberFormat {
 
     public static let pokemonIndex = IntegerFormatStyle<Int>.number
         .grouping(.never)
-        .precision(.integerLength(3))
+        .precision(.integerLength(3...))
 
     public static let oneDecimal = FloatingPointFormatStyle<Double>.number
         .grouping(.never)

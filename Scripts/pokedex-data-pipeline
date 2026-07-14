@@ -1,0 +1,60 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+SCRIPT_DIR="${0:A:h}"
+REPOSITORY_ROOT="${SCRIPT_DIR:h}"
+BUILD_ROOT="${PIKADEX_PIPELINE_BUILD_ROOT:-${REPOSITORY_ROOT}/build/data-pipeline-tooling}"
+DERIVED_DATA="${BUILD_ROOT}/DerivedData"
+CONFIGURATION="${PIKADEX_PIPELINE_CONFIGURATION:-Debug}"
+COMMAND="${1:-verify}"
+SANDBOX_EXEC="/usr/bin/sandbox-exec"
+OFFLINE_PROFILE='(version 1)(allow default)(deny network*)'
+XCODE_OFFLINE_FLAGS=(
+  -disableAutomaticPackageResolution
+  -onlyUsePackageVersionsFromResolvedFile
+  -skipPackageUpdates
+)
+
+if [[ ! -x "${SANDBOX_EXEC}" ]]; then
+  print -u2 "error: sandbox-exec is required to enforce offline pipeline execution"
+  exit 2
+fi
+
+# Building is deliberately separate because Xcode may need to materialize
+# resolved Swift packages. Verification itself never performs that operation.
+if [[ "${COMMAND}" == "prepare-tools" ]]; then
+  for scheme in DatabaseLoader DatabaseValidator DatabasePipeline; do
+    /usr/bin/xcodebuild build \
+      -project "${REPOSITORY_ROOT}/Pokedex.xcodeproj" \
+      -scheme "${scheme}" \
+      -configuration "${CONFIGURATION}" \
+      "${XCODE_OFFLINE_FLAGS[@]}" \
+      -derivedDataPath "${DERIVED_DATA}"
+  done
+  print "Prepared tooling products in ${DERIVED_DATA}/Build/Products/${CONFIGURATION}"
+  exit 0
+fi
+
+PRODUCT_DIRECTORY="${DERIVED_DATA}/Build/Products/${CONFIGURATION}"
+for tool in DatabaseLoader DatabaseValidator DatabasePipeline; do
+  if [[ ! -x "${PRODUCT_DIRECTORY}/${tool}" ]]; then
+    print -u2 "error: ${tool} is missing; run Scripts/pokedex-data-pipeline prepare-tools first"
+    exit 2
+  fi
+done
+
+if (( $# == 0 )); then
+  set -- verify
+fi
+
+if [[ "${COMMAND}" == "acquire" ]]; then
+  exec "${DERIVED_DATA}/Build/Products/${CONFIGURATION}/DatabasePipeline" \
+    "$@" \
+    --repository-root "${REPOSITORY_ROOT}"
+fi
+
+exec "${SANDBOX_EXEC}" -p "${OFFLINE_PROFILE}" \
+  "${DERIVED_DATA}/Build/Products/${CONFIGURATION}/DatabasePipeline" \
+    "$@" \
+    --repository-root "${REPOSITORY_ROOT}"

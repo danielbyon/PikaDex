@@ -1,0 +1,1941 @@
+{
+  "acquisitionSteps": [
+    {
+      "allowedHosts": [
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "abilities",
+      "outputs": [
+        "Data/Abilities.json"
+      ],
+      "script": "AbilitiesCrawler2.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "bulbapedia.bulbagarden.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "bulbapedia-items",
+      "outputs": [
+        "Data/BulbapediaItems.json"
+      ],
+      "script": "ItemsCrawlerBulbapedia.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "pokemon-db-items",
+      "outputs": [
+        "Data/PokemonDBItems.json"
+      ],
+      "script": "ItemsCrawlerPokemonDB.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "bulbapedia.bulbagarden.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "breeding-learnsets",
+      "outputs": [
+        "Data/LearnsetBreeding.json"
+      ],
+      "script": "LearnsetBreedingCrawler.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "level-learnsets",
+      "outputs": [
+        "Data/LearnsetLevel3.json"
+      ],
+      "script": "LearnsetLevelCrawler3.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "machine-learnsets",
+      "outputs": [
+        "Data/LearnsetMachines3.json"
+      ],
+      "script": "LearnsetMachinesCrawler3.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "tutor-learnsets",
+      "outputs": [
+        "Data/LearnsetTutoring3.json"
+      ],
+      "script": "LearnsetTutoringCrawler3.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "move-descriptions",
+      "outputs": [
+        "Data/MoveDescriptions.json"
+      ],
+      "script": "MoveDescriptionCrawler.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "bulbapedia.bulbagarden.net",
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "moves",
+      "outputs": [
+        "Data/Moves.json"
+      ],
+      "script": "MovesCrawler.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "pokemondb.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "locations",
+      "outputs": [
+        "Data/PokemonLocations.json"
+      ],
+      "script": "PokemonLocationCrawler.py",
+      "verified": false
+    },
+    {
+      "allowedHosts": [
+        "bulbapedia.bulbagarden.net"
+      ],
+      "blocker": "Legacy crawler is inventoried but not individually verified against a staged output and pinned dependency environment.",
+      "identifier": "wild-dens",
+      "outputs": [
+        "Data/PokemonWildDen.json"
+      ],
+      "script": "PokemonWildDenCrawler.py",
+      "verified": false
+    }
+  ],
+  "canonicalSnapshotSchemaVersion": 2,
+  "committedArtifacts": [
+    {
+      "path": "Modules/PokedexCore/Resources/Database/Pokedex.sqlite",
+      "sha256": "ea88293e22e15a25cfe67be05abd9e0a4e13e1d30b142882951e28608a6e4a5e"
+    },
+    {
+      "path": "Modules/PokedexCore/Resources/Database/Pokedex.sqlite-shm",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "Modules/PokedexCore/Resources/Database/Pokedex.sqlite-wal",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "modelInputs": [
+    {
+      "path": "Modules/PokedexCore/Persistence/Pokedex.xcdatamodeld/Pokedex.xcdatamodel/contents",
+      "sha256": "e0ef85c50de0c3d100005b20365c65b1d67829e50d7475cca0b26129999da3e8"
+    }
+  ],
+  "schemaVersion": 3,
+  "sourceInputs": [
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/Abilities.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/Abilities.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "eaff92958993ff97beef2c1b5932ca52645c946b8bd4f564076f1b298de41ec8",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/AbilitiesCrawler2.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/BulbapediaItems.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/BulbapediaItems.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "7b8d564fa3cb779fe048291a99a1cb376b078aa6cf186f5b6c0d1e016a530780",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/ItemsCrawlerBulbapedia.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/LearnsetBreeding.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/LearnsetBreeding.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "3f1b72d6d7a6b30fd9e799ce57a55fc697020088e89e243e49085128c2145c2b",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/LearnsetBreedingCrawler.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/LearnsetLevel3.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/LearnsetLevel3.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "459b60015737f6eb5aa2a5467d759e53a8cb199c1dcdcd7d24639d524ddb7e76",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/LearnsetLevelCrawler3.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/LearnsetMachines3.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/LearnsetMachines3.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "c482cb3f6f3412ebddc95c6f05c02e1457d37dd2fd67898ddedecfdeaa41c20c",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/LearnsetMachinesCrawler3.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/LearnsetTutoring3.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/LearnsetTutoring3.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "92faa177a5754b1681a7ba04344383385726538252f308c03ad882e71a4b2ebd",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/LearnsetTutoringCrawler3.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/MoveDescriptions.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/MoveDescriptions.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "22f46ba9021f1ccc10c01a32604fbc97483c37f78671fce39e4f7264b71b6bf9",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/MoveDescriptionCrawler.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/Moves.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/Moves.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "efa45039ba7b5c3e537b1ca7ab942dc0e7b97920377b6c04c7992bcdf07fa148",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/MovesCrawler.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/PokemonDBItems.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/PokemonDBItems.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/ItemsCrawlerPokemonDB.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/PokemonLocations.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/PokemonLocations.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "67caa1c0a5de2f531c84a174f8da51bf9d46fab422d1318f37bf57c62cec5a67",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/PokemonLocationCrawler.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Crawlers/Data/PokemonWildDen.json",
+      "provenance": "Reviewed legacy loader input with undocumented manual reconciliation; it is not treated as raw crawler output.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Crawlers/Data/PokemonWildDen.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "8e7562ecb75f06d6faea48ccd6386391dddf408e9fcd0f27824fa7c9164b110f",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": [
+        "Crawlers/PokemonWildDenCrawler.py"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Research/AbilitiesGeneration9.json",
+      "provenance": "Reviewed manually maintained loader input with undocumented upstream transformation.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Research/AbilitiesGeneration9.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "cc7e34b2fd8cc0e5de5c485d2c06b5699e0f77feeb2bb217fa12c530232978c9",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": []
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/AbilityExternalLinks.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/AbilityExternalLinks.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/AbilityExternalLinks.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "name",
+        "bulbapediaURL",
+        "pokemonDBURL"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/AbilityExternalLinks.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "6a4591b8579774c847dc44900cd9b9d0e0034ce325cd3117b65f3583069e5946",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/AbilityExternalLinks.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/Berries.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Fixed-width positional columns and file row order are preserved; blank trailing headers and repeated rows are legacy-compatible.",
+      "path": "Research/Berries.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/Berries.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "index",
+        "name",
+        "game",
+        "generation",
+        "sizeInCm",
+        "firmness",
+        "description",
+        "spicy",
+        "dry",
+        "sweet",
+        "bitter",
+        "sour"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/Berries.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "index",
+          "name",
+          "game",
+          "generation",
+          "sizeInCm",
+          "firmness",
+          "description",
+          "spicy",
+          "dry",
+          "sweet",
+          "bitter",
+          "sour",
+          "<blank>",
+          "<blank>"
+        ],
+        "kind": "positionalTable"
+      },
+      "sha256": "991d865ca8bdd1122a8bed5457b1dbe02dacc00372bedb49b104d6ea383977af",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/Berries.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/Evolutions.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Every row is materialized; repeated rows are allowed and source order is not semantic to the unordered Core Data relationship.",
+      "path": "Research/Evolutions.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/Evolutions.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "family",
+        "gameFilter",
+        "excludeGames",
+        "baseName",
+        "baseFormName",
+        "targetName",
+        "targetFormName",
+        "methodName",
+        "methodData",
+        "requirementName",
+        "requirementData",
+        "requirementName2",
+        "requirementData2"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/Evolutions.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "unorderedMultiset"
+      },
+      "sha256": "b0c56f0316487632f3510f201f0bd05982b72facbb215df52f29bec82f746733",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/Evolutions.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "DPPt / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/DPPt-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/DPPt-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "0c48acadc427c5527099a0019ea6c51752299d32556284d95870456158ff797f",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "FRLG / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/FRLG-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/FRLG-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "20d11f0f6e44534ee4f4243cca4c58ce8d47f9a375165c260c501814de26471b",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "Gen 1 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/Gen 1-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/Gen 1-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "2d17ccbe638e14eb72c5bf94fac567f1c9fd238a3a6ab0d84ee999e1af9608c0",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "Gen 2 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/Gen 2-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/Gen 2-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "937b1fa183b1024f42ebb0a0e9ddb23af316a5c354c022ebec0e8e1d927756a1",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "Gen 5 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/Gen 5-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/Gen 5-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "1772bf43b30550cfc17196cad1189658677e5f6d24aad4c1c5b33c0fca607df3",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "HGSS / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/HGSS-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/HGSS-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "b4b556a867f7f1979ecc45b5f859492b7c1e199e19d3b55fc706cb76c84139e4",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "ORAS / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/ORAS-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/ORAS-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "bb5b7fd8757afc1b59ba720912aa2c85156e4fd763acae6dbc1ede696a4a6bb3",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "RSE / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/RSE-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/RSE-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "20d11f0f6e44534ee4f4243cca4c58ce8d47f9a375165c260c501814de26471b",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/HMs.numbers",
+      "manualWorksheet": "XY / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/HMs/XY-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/HMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/HMs/XY-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "5315b3f04f989696d5beffc0e1355fb636fb566807527921dc1ad642158f9902",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/HMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/ItemExternalLinksBulbapedia.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/ItemExternalLinksBulbapedia.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/ItemExternalLinksBulbapedia.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "name",
+        "bulbapediaURL"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/ItemExternalLinksBulbapedia.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "e5f2eceecd3eac6ad001f99198fc8e27f5fe4e3e7d9ddf145ddc428dfc9abfff",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/ItemExternalLinksBulbapedia.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/ItemExternalLinksPokemonDB.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/ItemExternalLinksPokemonDB.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/ItemExternalLinksPokemonDB.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "name",
+        "pokemonDBURL"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/ItemExternalLinksPokemonDB.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "6bac8214a8a0741505a09b641f5faa22e78e06faf7422b4b132d268cd874dd1b",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/ItemExternalLinksPokemonDB.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/LocationExternalLinks.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/LocationExternalLinks.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/LocationExternalLinks.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "region",
+        "name",
+        "bulbapediaURL",
+        "pokemonDBURL"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/LocationExternalLinks.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "5e0290f369273b57013fe6ba936ea95395a36a2ac6fe756a48790a4c03a89a00",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/LocationExternalLinks.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/LocationMaps.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Every row is materialized; repeated rows are allowed and source order is not semantic to the unordered Core Data relationship.",
+      "path": "Research/LocationMaps.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/LocationMaps.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "region",
+        "game",
+        "location",
+        "areaName",
+        "filename"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/LocationMaps.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "unorderedMultiset"
+      },
+      "sha256": "a9656c28aa0702b88f6a7bf59ee542ed6cf2f9049c1a02062aec82442b2286ea",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/LocationMaps.numbers"
+      ]
+    },
+    {
+      "delimiter": null,
+      "encoding": "utf-8",
+      "format": "json",
+      "manualDocument": null,
+      "manualWorksheet": null,
+      "orderingSemantics": "JSON object-key normalization is deterministic; array order and repeated values are preserved for loader compatibility.",
+      "path": "Research/ManualPokemonLocations.json",
+      "provenance": "Reviewed manually maintained loader input with undocumented upstream transformation.",
+      "requiredHeaders": [],
+      "responsibleManualStep": "Manually reconcile and approve Research/ManualPokemonLocations.json as a reviewed loader input before updating its checksum.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "35e3860b04dba31f29dc9db329a3ddc3b2355e734d5b0239582fcdddd42ed9d9",
+      "transformationBlocker": "The repository does not identify the Numbers document, worksheet, reconciliation rules, overrides, or review evidence that transforms the upstream material into this loader-consumed JSON.",
+      "upstreamSources": []
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/MoveExternalLinks.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/MoveExternalLinks.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/MoveExternalLinks.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "name",
+        "bulbapediaURL",
+        "pokemonDBURL"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/MoveExternalLinks.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "6e8d486cf2b806bbbe9d2c758f6db639fe4f48823bb6f75cbdc94e9781624d68",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/MoveExternalLinks.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/MoveFormNameMappings.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/MoveFormNameMappings.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/MoveFormNameMappings.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "name",
+        "formFilter",
+        "formNames"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/MoveFormNameMappings.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "3ca63b55cc0d70cee896acf24c738e36a40a672aa31e3c0ae8cf13bad51d6c35",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/MoveFormNameMappings.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Alola / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Alola-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "alola",
+        "melemele",
+        "akala",
+        "ulaula",
+        "poni",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Alola-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "38a2bbe32d3eb98b4411c01b13efdc6fb65fff92aa5bde1bb0ecca6244264e5f",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Blueberry / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Blueberry-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "blueberry",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Blueberry-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "415a63f0c4d9ad2447fa45423d96118ce3e47b6a4aba9dcea422163a8837f997",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "CentralKalos / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/CentralKalos-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "centralKalos",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/CentralKalos-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "9aabfe63f0ae61b6c2ae41f6db86efc8356d4c0f190e1a86f2aaa86ec7cae145",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "CoastalKalos / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/CoastalKalos-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "coastalKalos",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/CoastalKalos-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "f5866ca2baed281583047a42a8331ce73375012991b2e4018d54d8b720444501",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "CrownTundra / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/CrownTundra-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "crownTundra",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/CrownTundra-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "e7bfd7ea0b025842355194878e047695f2d49a5812d637e064874448ab68d3a4",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Galar / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Galar-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "galar",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Galar-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "1aa29b72c0ba5b3eebe740803e18aad44fe791b4fc74a9ee6af1e3782b38b097",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Hisui / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Hisui-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "hisui",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Hisui-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "f6c5d4e18a7c55e4f4ffe513b0515fd96bed9d1a9f6cadf737dcb86694c67e44",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Hoenn / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Hoenn-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "hoenn",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Hoenn-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "b972671990665f706ff1e7ec65f071ba3aafa75bfc715e3fd6f35e3fc36d642c",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "IsleOfArmor / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/IsleOfArmor-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "isleOfArmor",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/IsleOfArmor-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "a8eec52158c5ae0f1d566e9e2d0f106e87d6e7f76c62314b83e6b2c0a7071aba",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Johto / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Johto-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "johto",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Johto-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "72c056012a8049e31e138d9398500fe6b47dddacec4989327bde6942725bce7c",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Kanto / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Kanto-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "kanto",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Kanto-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "1bfcb0fc153b9ca8e0bfd48d97c522c3f83add5bf6de7bed8c8e924afcc99de1",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Kitakami / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Kitakami-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "kitakami",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Kitakami-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "276de1cc6931dc8bbb910a89ec9e7401bd20f7c0802ec9786cc2a22bd02e090a",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "MountainKalos / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/MountainKalos-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "mountainKalos",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/MountainKalos-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "a1b8446a02de5a7725ac3632924fb279fa85e1a68d6ea00b4502e25e1406be31",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "National / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/National-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/National-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "58c10196f2b67dbefa23168ed76a92c8e1ec98c696e21faeb5f3dbd1264970fa",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "NewHoenn / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/NewHoenn-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "newHoenn",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/NewHoenn-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "759008eec908cd2319562f244cc9d8289c237f0c3bfd0bf1d819ad4abe360eb7",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "NewJohto / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/NewJohto-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "newJohto",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/NewJohto-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "66b277af4d63d7d04df1625c6af2cc9b13cd7329b7087d053581d1b671ef079e",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "NewKanto / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/NewKanto-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "kanto",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/NewKanto-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "735d02e59eaecaed0dd3e5a0219d2e353116a599f18197cc13ab95aa1ac7eb13",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "NewUnova / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/NewUnova-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "newUnova",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/NewUnova-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "2ebbbf6b02c78572750d2bfea31165e44276f07bd74c38241968d21dcba2e105",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Paldea / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Paldea-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "paldea",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Paldea-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "a7061ed54306a2f7d6a58affe34a7a84fa1ae3bd04e2446902e704bd038a40a6",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "PearlSinnoh / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/PearlSinnoh-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "sinnoh",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/PearlSinnoh-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "d9cf5ef17b00f8e0a33c0a35810de2d71981917e88faa4515002f1e1a589e149",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Sinnoh / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Sinnoh-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "sinnoh",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Sinnoh-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "0e72b8f1650dadaff750505241b6a5b7558abb0b66d8eeebc157c907153913f3",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "UltraAlola / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/UltraAlola-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "alola",
+        "melemele",
+        "akala",
+        "ulaula",
+        "poni",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/UltraAlola-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "014a2338f39430b1122173c85e53cea22c7c9837f6ec382fe40dc5ee9046a231",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokedexNumbers.numbers",
+      "manualWorksheet": "Unova / Table 1",
+      "orderingSemantics": "Rows and repeated values are preserved in file order; loader last-row-wins lookups remain part of the compatibility baseline where applicable.",
+      "path": "Research/PokedexNumbers/Unova-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokedexNumbers.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "unova",
+        "national",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokedexNumbers/Unova-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [],
+        "kind": "orderedMultiset"
+      },
+      "sha256": "b244618b2a379a9aadd6606b30825e97f02d5bcf2985cb4ddb1ecb7d07aa2130",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokedexNumbers.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/Pokemon.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "National Pokemon number is established domain identity; source row order is preserved.",
+      "path": "Research/Pokemon.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/Pokemon.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name",
+        "primaryType",
+        "secondaryType",
+        "introduced",
+        "catchRate",
+        "levelingRate",
+        "maleRatio",
+        "eggGroup1",
+        "eggGroup2",
+        "bulbapediaURL",
+        "pokemonDBURL"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/Pokemon.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "c68c5254c740207961bfa09cc0b1b1ddf0a891e012ade9e7be352988472d1fcc",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/Pokemon.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/PokemonForms.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Pokemon number, form name, and game form the loader-created domain identity; source row order is preserved.",
+      "path": "Research/PokemonForms.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/PokemonForms.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name",
+        "formName",
+        "familyName",
+        "game",
+        "pokedexEntry",
+        "abilityPrimary",
+        "abilitySecondary",
+        "abilityHidden",
+        "baseHP",
+        "baseATK",
+        "baseDEF",
+        "baseSATK",
+        "baseSDEF",
+        "baseSPD",
+        "baseXPYield",
+        "species",
+        "primaryType",
+        "secondaryType",
+        "color",
+        "height",
+        "weight",
+        "baseFriendship",
+        "evHP",
+        "evATK",
+        "evDEF",
+        "evSATK",
+        "evSDEF",
+        "evSPD"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/PokemonForms.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number",
+          "formName",
+          "game"
+        ],
+        "kind": "compositeUniqueKey"
+      },
+      "sha256": "85849d34cf345c27d515e95afa39315b5625ecbcd4fbee11d433a59e9b1aec11",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/PokemonForms.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "BDSP / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/BDSP-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/BDSP-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "b947fde7700151bef9767b93afdc931cc4e36aec0df00e12fe3da094331e0f52",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "Gen 1 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/Gen 1-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/Gen 1-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "1b638a053db609e2e108158166b454fe251842f0b6a6a427f8d2dbf45211f0f3",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "Gen 2 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/Gen 2-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/Gen 2-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "728be872404dedba3b90c2d6d63021ed09ad4878039f2336431f872130a3ee3b",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "Gen 3 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/Gen 3-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/Gen 3-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "9d2d9a74607f9224adda0b796a8d7cf366bdca5773416f36fd75e7a393de4745",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "Gen 4 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/Gen 4-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/Gen 4-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "655ccbc3fc08db41c67c469e6997cd287ad66c83087112f2856856caa51f93ee",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "Gen 5 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/Gen 5-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/Gen 5-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "b2210c0987adfcf373c872153de885618783de0aff229259200b6e1b6787d76f",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "Gen 8 / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/Gen 8-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/Gen 8-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "2b28b65671d8b032edd55587d237e5218e04c3a3b5b25cf20cbdf90ea353dc4e",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "LGPLGE / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/LGPLGE-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/LGPLGE-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "569a2e839568cb9da5cbcf19b92038ab6be7320195078738728d9ff0f18864ec",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "ORAS / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/ORAS-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/ORAS-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "453cf6c5194e4fe0da1f8d144c1ada13d3a63f153b49a4c12f002ba257f0b174",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "SMUSUM / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/SMUSUM-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/SMUSUM-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "f214b3b0385c2044b34b620dbc68662765a5393e2c88161b7ec7d687cfbe5df4",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "SV / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/SV-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/SV-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "45b3536c9f1df70399a112928f9e5aa4264f7c44b0816cca41e603d6ff5cfb28",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TMs.numbers",
+      "manualWorksheet": "XY / Table 1",
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TMs/XY-Table 1.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TMs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TMs/XY-Table 1.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "06f5eba96cb56fe0ef42a7818f0d7892a75ab1393f30f0318a40a8d4eded0dc4",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TMs.numbers"
+      ]
+    },
+    {
+      "delimiter": "\t",
+      "encoding": "utf-8",
+      "format": "tsv",
+      "manualDocument": "Research/TRs.numbers",
+      "manualWorksheet": null,
+      "orderingSemantics": "Machine number is established model identity within each manifest-declared game/table; source row order is otherwise preserved.",
+      "path": "Research/TRs.tsv",
+      "provenance": "Reviewed UTF-8 tab-delimited export from Research/TRs.numbers; not raw crawler output.",
+      "requiredHeaders": [
+        "number",
+        "name"
+      ],
+      "responsibleManualStep": "Review the Numbers table and manually export Research/TRs.tsv.",
+      "rowIdentity": {
+        "columns": [
+          "number"
+        ],
+        "kind": "uniqueKey"
+      },
+      "sha256": "9c2e48ed7e4a3b41258e701d9cca7a8d85c98c4986e2b9d6b81b3dbdcf11230f",
+      "transformationBlocker": "The repository does not precisely document all column mappings, joins, deduplication, overrides, filtering, sorting, and manually entered values used to produce this reviewed export.",
+      "upstreamSources": [
+        "Research/TRs.numbers"
+      ]
+    }
+  ],
+  "toolchain": {
+    "acquisitionRequirements": "Crawlers/requirements.txt",
+    "python": "3.14",
+    "swiftLanguageMode": "5",
+    "xcode": "26.6"
+  }
+}

@@ -9,8 +9,20 @@
 import Foundation
 import CoreData
 import PokedexCore
+import DatabasePipelineSupport
 
 // MARK: - Global Variables
+let loaderOptions: DatabaseLoaderOptions
+do {
+    loaderOptions = try DatabaseLoaderOptions.parse(Array(CommandLine.arguments.dropFirst()))
+    Helper.configure(loaderOptions)
+} catch let error as PipelineError {
+    FileHandle.standardError.write(Data("error: \(error.description)\n".utf8))
+    exit(error.exitCode)
+} catch {
+    FileHandle.standardError.write(Data("error: \(error.localizedDescription)\n".utf8))
+    exit(3)
+}
 let container = Helper.loadContainer(removeExistingContainer: true)
 let moc = container.viewContext
 var allPokemon: [Int: [Game: StoredPokemon]] = [:]
@@ -78,7 +90,6 @@ func getMachine(for machine: StoredMachine, game: Game) -> StoredMachine? {
 // MARK: - Main
 print("Pokedex Database Loader")
 print()
-let start = Date()
 
 
 // MARK: - Abilities
@@ -102,7 +113,7 @@ let abilityDicts = (Helper.loadJSON(from: "Data/Abilities.json") as! [String: [S
     Helper.loadJSON(from: "Research/AbilitiesGeneration9.json") as! [String: [String: String]],
     uniquingKeysWith: { $1 }
 )
-for (abilityName, dict) in abilityDicts {
+for (abilityName, dict) in abilityDicts.sorted(by: { $0.key < $1.key }) {
     let ability = StoredAbility(context: moc)
     allAbilities[sanitizedName(abilityName)] = ability
     ability.name = abilityName
@@ -112,7 +123,7 @@ for (abilityName, dict) in abilityDicts {
     ability.bulbapediaURL = Helper.sanitizedURL(from: externalLinks["bulbapediaURL"]!)!
     ability.pokemonDBURL = Helper.sanitizedURL(from: externalLinks["pokemonDBURL"]!)!
 
-    for (gameKey, description) in dict {
+    for (gameKey, description) in dict.sorted(by: { $0.key < $1.key }) {
         if gameKey == "generationIntroduced" { continue }
         let game = Game(pokemonDBKey: gameKey)
         ability.setDescription(description, forGame: game)
@@ -122,7 +133,7 @@ for (abilityName, dict) in abilityDicts {
 }
 
 // Copy abilities to national
-for (_, ability) in allAbilities {
+for (_, ability) in allAbilities.sorted(by: { $0.key < $1.key }) {
     for game in Game.allGamesNewestFirst {
         if let latestDescription = ability.description(forGame: game) {
             ability.setDescription(latestDescription, forGame: .national)
@@ -148,7 +159,8 @@ func latestMove(name: String, moves: [Game: StoredMove]) -> StoredMove? {
 
 let moveDescriptionsDict = Helper.loadJSON(from: "Data/MoveDescriptions.json") as! [String: [String: String]]
 let moveExternalLinkDict = Helper.loadExternalLinksTSV(from: "Research/MoveExternalLinks.tsv")
-for (moveName, dict) in Helper.loadJSON(from: "Data/Moves.json") as! [String: [String: String]] {
+for (moveName, dict) in (Helper.loadJSON(from: "Data/Moves.json") as! [String: [String: String]])
+    .sorted(by: { $0.key < $1.key }) {
     let generationIntroduced = Generation(dictValue: dict["generationIntroduced"]!)!
 
     let key = sanitizedMoveName(moveName)
@@ -159,7 +171,7 @@ for (moveName, dict) in Helper.loadJSON(from: "Data/Moves.json") as! [String: [S
         .flatMap { $0 }
         .forEach { game in
             let moveDescription: String
-            if game.generation == .i {
+            if game.metadata?.generation == .i {
                 // Moves did not have descriptions in Gen 1
                 moveDescription = "This move has no description in \(game.title)."
             } else if let description = dict[game.rawValue] {//}?? moveDescriptionsDict[key]?[Game.pokemonDBKey(for: game)] {
@@ -374,7 +386,7 @@ allPokemonByName.keys
 
 // MARK: - Pokedex Numbers
 print("--- Pokedex Numbers ---")
-let allPokedexNumbers: [Int: [Game: StoredPokedexNumbers]] = allPokemon.keys
+let allPokedexNumbers: [Int: [Game: StoredPokedexNumbers]] = allPokemon.keys.sorted()
     .reduce(into: [:]) { dict, index in
         var numbers: [Game: StoredPokedexNumbers] = [:]
         for game in Game.allCases {
@@ -382,7 +394,7 @@ let allPokedexNumbers: [Int: [Game: StoredPokedexNumbers]] = allPokemon.keys
         }
         dict[index] = numbers
     }
-for index in allPokemon.keys {
+for index in allPokemon.keys.sorted() {
     let pokemon = allPokemon[index]!
     let pokedexNumbers = allPokedexNumbers[index]!
     for game in Game.allCases {
@@ -400,7 +412,8 @@ func processPokedexNumberTSV(filename: String, dictKey: String, pokedexNumberKey
         guard !numberString.isEmpty else { continue }
         let regionalNumber = convertNumberString(numberString)
         let pokedexNumbers = allPokedexNumbers[national]!
-        pokedexNumbers.values.forEach { $0.setValue(regionalNumber, forKey: pokedexNumberKey) }
+        pokedexNumbers.sorted(by: { $0.key.databaseIndex < $1.key.databaseIndex })
+            .forEach { $0.value.setValue(regionalNumber, forKey: pokedexNumberKey) }
     }
 }
 
@@ -474,23 +487,23 @@ for dict in Helper.loadTSV(from: "Research/PokemonForms.tsv") {
     storedForm.baseFriendship = Int(dict["baseFriendship"]!)!
 
     let primaryAbility = getAbility(forName: sanitizedName(dict["abilityPrimary"]!))
-    if game.generation >= primaryAbility.generationIntroduced
-        || !game.hasAbilities {
+    if !game.hasAbilities
+        || (game.metadata?.generation)! >= primaryAbility.generationIntroduced {
         storedForm.primaryAbility = primaryAbility
     }
 
     if let ability2Name = dict["abilitySecondary"], !ability2Name.isEmpty {
         let secondaryAbility = getAbility(forName: sanitizedName(ability2Name))
-        if secondaryAbility.generationIntroduced <= game.generation
-            || !game.hasAbilities {
+        if !game.hasAbilities
+            || secondaryAbility.generationIntroduced <= (game.metadata?.generation)! {
             storedForm.secondaryAbility = secondaryAbility
         }
     }
 
     if let abilityHiddenName = dict["abilityHidden"], !abilityHiddenName.isEmpty {
         let hiddenAbility = getAbility(forName: sanitizedName(abilityHiddenName))
-        if hiddenAbility.generationIntroduced <= game.generation
-            || !game.hasAbilities {
+        if !game.hasAbilities
+            || hiddenAbility.generationIntroduced <= (game.metadata?.generation)! {
             storedForm.hiddenAbility = hiddenAbility
         }
     }
@@ -594,11 +607,12 @@ func addLearnsetLevelEntry(
     levelLearnsetEntries[debugKey] = entry
 }
 
-for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as! [String: [String: [String: [[String: String]]]]] {
+for (pokemonName, dict) in (Helper.loadJSON(from: "Data/LearnsetLevel3.json") as! [String: [String: [String: [[String: String]]]]])
+    .sorted(by: { $0.key < $1.key }) {
     guard !dict.isEmpty else { continue }
-    for (_, gameDicts) in dict {
+    for (_, gameDicts) in dict.sorted(by: { $0.key < $1.key }) {
         guard !gameDicts.isEmpty else { continue }
-        for (gameAndFormKey, moveDicts) in gameDicts {
+        for (gameAndFormKey, moveDicts) in gameDicts.sorted(by: { $0.key < $1.key }) {
             let components = gameAndFormKey.components(separatedBy: ".")
             let gameKey = components[0]
             let formFilter: String? = components.count > 1 ? components.dropFirst().joined(separator: ".") : nil
@@ -606,7 +620,7 @@ for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetLevel3.json") as!
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for \(pokemon.name) in game \(game)"); continue }
+            guard !pokemon.forms.isEmpty else { print("\(PokedexNumberFormat.pokemonIndex.format(pokemon.index)) \(pokemonName): No forms found for \(pokemon.name) in game \(game)"); continue }
             forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
             if forms.isEmpty {
                 print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game), skipping")
@@ -646,18 +660,19 @@ func addLearnsetMachineEntry(form: StoredPokemonForm, machine: StoredMachine, ga
     entry.learnsetType = .machine
 }
 
-for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetMachines3.json") as! [String: [String: [String: [String]]]] {
+for (pokemonName, dict) in (Helper.loadJSON(from: "Data/LearnsetMachines3.json") as! [String: [String: [String: [String]]]])
+    .sorted(by: { $0.key < $1.key }) {
     guard !dict.isEmpty else { continue }
-    for (_, gameDicts) in dict {
+    for (_, gameDicts) in dict.sorted(by: { $0.key < $1.key }) {
         guard !gameDicts.isEmpty else { continue }
-        for (gameAndFormKey, machines) in gameDicts {
+        for (gameAndFormKey, machines) in gameDicts.sorted(by: { $0.key < $1.key }) {
             let components = gameAndFormKey.components(separatedBy: ".")
             let gameKey = components[0]
             let formFilter: String? = components.count > 1 ? components.dropFirst().joined(separator: ".") : nil
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            guard !pokemon.forms.isEmpty else { print("\(PokedexNumberFormat.pokemonIndex.format(pokemon.index)) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
             guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             for form in forms {
@@ -709,14 +724,15 @@ func addLearnsetBreedingEntry(form: StoredPokemonForm, move: StoredMove, fathers
 }
 
 var breedingLearnsetEntries: [StoredLearnsetEntry] = []
-for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetBreeding.json") as! [String: [String: [String: [String]]]] {
-    for (generationKey, moveDicts) in dict {
+for (pokemonName, dict) in (Helper.loadJSON(from: "Data/LearnsetBreeding.json") as! [String: [String: [String: [String]]]])
+    .sorted(by: { $0.key < $1.key }) {
+    for (generationKey, moveDicts) in dict.sorted(by: { $0.key < $1.key }) {
         let games = Game.allGames(forLearnsetValue: generationKey)!
         for game in games {
             let pokemon = getPokemon(forName: pokemonName, game: game)
             let forms = pokemon.forms
             guard !forms.isEmpty else { continue }
-            for (moveName, parentNames) in moveDicts {
+            for (moveName, parentNames) in moveDicts.sorted(by: { $0.key < $1.key }) {
                 guard let move = getMove(forName: moveName, game: game) else {
                     continue
                 }
@@ -754,18 +770,19 @@ func addLearnsetTutoringEntry(form: StoredPokemonForm, move: StoredMove, game: G
     entry.learnsetType = .tutoring
 }
 
-for (pokemonName, dict) in Helper.loadJSON(from: "Data/LearnsetTutoring3.json") as! [String: [String: [String: [String]]]] {
+for (pokemonName, dict) in (Helper.loadJSON(from: "Data/LearnsetTutoring3.json") as! [String: [String: [String: [String]]]])
+    .sorted(by: { $0.key < $1.key }) {
     guard !dict.isEmpty else { continue }
-    for (_, gameDicts) in dict {
+    for (_, gameDicts) in dict.sorted(by: { $0.key < $1.key }) {
         guard !gameDicts.isEmpty else { continue }
-        for (gameAndFormKey, moveNames) in gameDicts {
+        for (gameAndFormKey, moveNames) in gameDicts.sorted(by: { $0.key < $1.key }) {
             let components = gameAndFormKey.components(separatedBy: ".")
             let gameKey = components[0]
             let formFilter: String? = components.count > 1 ? components.dropFirst().joined(separator: ".") : nil
             let game = Game(rawValue: gameKey)!
             let pokemon = getPokemon(forName: pokemonName, game: game)
             var forms = pokemon.forms
-            guard !pokemon.forms.isEmpty else { print("\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: pokemon.index))!) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
+            guard !pokemon.forms.isEmpty else { print("\(PokedexNumberFormat.pokemonIndex.format(pokemon.index)) \(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             forms = sanitizedLevelingForms(forms, pokemonName: pokemonName, formFilter: formFilter)
             guard !forms.isEmpty else { print("\(pokemonName): No forms found for form name \(formFilter ?? "") in game \(game)"); continue }
             for form in forms {
@@ -793,7 +810,9 @@ func copyLearnsetEntry(_ source: StoredLearnsetEntry, form: StoredPokemonForm, g
 }
 
 // If any forms have missing learnset data, copy them over from the main form
-for (game, pokemon) in allPokemon.flatMap({ $0.value }) {
+for (game, pokemon) in allPokemon.keys.sorted().flatMap({
+    allPokemon[$0]!.sorted(by: { $0.key.databaseIndex < $1.key.databaseIndex })
+}) {
     // We can have Pokemon with no forms, if they don't exist in the game,
     // they'll be cleaned up at the end of the script.
     guard let defaultForm = pokemon.forms.first, pokemon.forms.count > 1 else { continue }
@@ -857,7 +876,7 @@ func latestPokemonForm(
 }
 
 // Copy moves to national
-for (_, gameToPokemon) in allPokemonByName {
+for (_, gameToPokemon) in allPokemonByName.sorted(by: { $0.key < $1.key }) {
     let national = gameToPokemon[.national]!
     for nationalForm in national.forms {
         let latestForm = latestPokemonForm(forFormName: nationalForm.name, gameToPokemon: gameToPokemon)
@@ -966,12 +985,12 @@ func getOrMakeLocation(withName locationNameCandidate: String, regionName: Strin
 }
 var locationCaptureMethods: Set<CaptureMethod> = []
 func processLocationDict(locationName: String, regionName: String, locationDict: [String: [String: [String: Any]]]) {
-    for (generationNumber, areaDicts) in locationDict {
-        for (areaName, areaDict) in areaDicts {
-            for (methodName, methodAny) in areaDict {
+    for (generationNumber, areaDicts) in locationDict.sorted(by: { $0.key < $1.key }) {
+        for (areaName, areaDict) in areaDicts.sorted(by: { $0.key < $1.key }) {
+            for (methodName, methodAny) in areaDict.sorted(by: { $0.key < $1.key }) {
                 let methodDict = methodAny as! [String: Any]
                 let encounterMethodDicts = methodDict["pokemon"] as! [String: [[String: Any]]]
-                for (encounterCondition, pokemonDicts) in encounterMethodDicts {
+                for (encounterCondition, pokemonDicts) in encounterMethodDicts.sorted(by: { $0.key < $1.key }) {
                     for pokemonDict in pokemonDicts {
                         let games = (pokemonDict["games"] as! [String]).map { Game(locationAbbreviation: $0, generation: Generation(rawValue: Int(generationNumber)!)!) }
                         for game in games {
@@ -1031,14 +1050,16 @@ func processLocationDict(locationName: String, regionName: String, locationDict:
         }
     }
 }
-for (regionName, regionDict) in Helper.loadJSON(from: "Data/PokemonLocations.json") as! [String: [String: [String: [String: [String: Any]]]]] {
-    for (locationName, locationDict) in regionDict {
+for (regionName, regionDict) in (Helper.loadJSON(from: "Data/PokemonLocations.json") as! [String: [String: [String: [String: [String: Any]]]]])
+    .sorted(by: { $0.key < $1.key }) {
+    for (locationName, locationDict) in regionDict.sorted(by: { $0.key < $1.key }) {
         guard !(locationName == "Fortree City" && regionName == "hoenn") else { continue }
         processLocationDict(locationName: locationName, regionName: regionName, locationDict: locationDict)
     }
 }
-for (regionName, regionDict) in Helper.loadJSON(from: "Research/ManualPokemonLocations.json") as! [String: [String: [String: [String: [String: Any]]]]] {
-    for (locationName, locationDict) in regionDict {
+for (regionName, regionDict) in (Helper.loadJSON(from: "Research/ManualPokemonLocations.json") as! [String: [String: [String: [String: [String: Any]]]]])
+    .sorted(by: { $0.key < $1.key }) {
+    for (locationName, locationDict) in regionDict.sorted(by: { $0.key < $1.key }) {
         processLocationDict(locationName: locationName, regionName: regionName, locationDict: locationDict)
     }
 }
@@ -1059,7 +1080,7 @@ func makeLocationPokemonCopy(source: StoredLocationPokemon, pokemon: StoredPokem
 }
 
 // Copy locations to national
-for (_, gameToPokemon) in allPokemonByName {
+for (_, gameToPokemon) in allPokemonByName.sorted(by: { $0.key < $1.key }) {
     let latest = latestPokemon(gameToPokemon)
     let national = gameToPokemon[.national]!
     let locationPokemons = latest.z_locationPokemons!.allObjects as! [StoredLocationPokemon]
@@ -1087,9 +1108,10 @@ makeGrandUndergroundLocation(for: .national)
 
 // MARK: Galar Wild Dens
 let wildDenStarKeys = ["one", "two", "three", "four", "five"]
-for (locationName, locationDict) in Helper.loadJSON(from: "Data/PokemonWildDen.json") as! [String: [String: [String: [[String: Any]]]]] {
-    for (denName, denDict) in locationDict {
-        for (poolName, poolDicts) in denDict {
+for (locationName, locationDict) in (Helper.loadJSON(from: "Data/PokemonWildDen.json") as! [String: [String: [String: [[String: Any]]]]])
+    .sorted(by: { $0.key < $1.key }) {
+    for (denName, denDict) in locationDict.sorted(by: { $0.key < $1.key }) {
+        for (poolName, poolDicts) in denDict.sorted(by: { $0.key < $1.key }) {
             let area = "Den \(denName)"
 
             for poolDict in poolDicts {
@@ -1145,8 +1167,8 @@ for mapDict in Helper.loadTSV(from: "Research/LocationMaps.tsv") {
 }
 
 
-allLocations.values.forEach {
-    $0.values
+allLocations.sorted(by: { $0.key.databaseIndex < $1.key.databaseIndex }).forEach {
+    $0.value.values
         .sorted {
             if $0.name == $1.name {
                 return $0.region < $1.region
@@ -1346,7 +1368,7 @@ func makeItemCopy(source: StoredItem) -> StoredItem {
 }
 
 // Copy items to national, using latest data
-for (_, gameToItem) in allItems {
+for (_, gameToItem) in allItems.sorted(by: { $0.key < $1.key }) {
     guard let source = latestItem(gameToItem) else { continue }
 
     let copy = makeItemCopy(source: source)
@@ -1363,7 +1385,7 @@ for (_, gameToItem) in allItems {
 }
 
 // Copy items to scarlet/violet, using national
-for (_, gameToItem) in allItems where gameToItem[.scarlet] == nil {
+for (_, gameToItem) in allItems.sorted(by: { $0.key < $1.key }) where gameToItem[.scarlet] == nil {
     guard let source = gameToItem[.national] else { continue }
 
     let scarletCopy = makeItemCopy(source: source)
@@ -1392,7 +1414,8 @@ allItems.keys
     .enumerated()
     .forEach { i, key in
         let index = Int16(i)
-        allItems[key]!.values.forEach { $0.i_nameIndex = index }
+        allItems[key]!.sorted(by: { $0.key.databaseIndex < $1.key.databaseIndex })
+            .forEach { $0.value.i_nameIndex = index }
     }
 
 
@@ -1556,8 +1579,8 @@ for dict in Helper.loadTSV(from: "Research/Evolutions.tsv") {
     }
 }
 
-allPokemon.values
-    .flatMap { $0.values }
+allPokemon.keys.sorted()
+    .flatMap { allPokemon[$0]!.sorted(by: { $0.key.databaseIndex < $1.key.databaseIndex }).map(\.value) }
     .flatMap { $0.forms }
     .forEach { form in
         form.evolutions = allEvolutions[form.familyName]?[form.game]
@@ -1565,8 +1588,8 @@ allPokemon.values
 
 
 // Compute sprite name and save to Pokemon
-for (_, gameToPokemon) in allPokemon {
-    for (_, pokemon) in gameToPokemon {
+for (_, gameToPokemon) in allPokemon.sorted(by: { $0.key < $1.key }) {
+    for (_, pokemon) in gameToPokemon.sorted(by: { $0.key.databaseIndex < $1.key.databaseIndex }) {
         guard !pokemon.forms.isEmpty else { continue }
         pokemon.spriteName = PokemonImageNameFormatter.menuSpriteName(forPokemonName: pokemon.name, formName: pokemon.defaultForm.name, index: pokemon.index)
     }
@@ -1592,13 +1615,13 @@ breedingLearnsetEntries
 
 print()
 print("Done importing!")
-let date = Date()
 do {
     try moc.save()
-    print("Saved database to: \(container.persistentStoreDescriptions.first!.url!.absoluteString)")
-    print("Took \(Date().timeIntervalSince(date)) seconds to save")
+    try Helper.close(container)
+    print("Saved isolated candidate database")
 } catch {
-    print("Failed to save database: \(error)")
+    FileHandle.standardError.write(Data("error: Failed to save isolated candidate database: \(error.localizedDescription)\n".utf8))
+    exit(3)
 }
 
-print("Finished importing in \(Date().timeIntervalSince(start)) seconds!")
+print("Finished importing")

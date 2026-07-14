@@ -39,6 +39,18 @@ rtk xcodebuild build \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 ```
 
+## Reproducible database generation
+
+The database is prepared through a hybrid crawler, manual Apple Numbers, and
+tooling-only macOS workflow. The canonical automated boundary begins at
+reviewed delimited exports and other explicitly pinned legacy loader inputs.
+The offline command, versioned manifest, manual-workflow inventory, acquisition
+policy, deterministic semantic comparison, report formats, and future-game
+runbook are documented in
+[`Scripts/DataPipeline/README.md`](Scripts/DataPipeline/README.md). Running
+`Scripts/pokedex-data-pipeline verify` never invokes acquisition and never
+mutates reviewed inputs, the committed database, or model resources.
+
 The authoritative module unit tests are verified with:
 
 ```sh

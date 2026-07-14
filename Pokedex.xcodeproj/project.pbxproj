@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60000000000000000000030 /* PipelineManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000020 /* PipelineManifest.swift */; };
+		F60000000000000000000031 /* PipelinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000021 /* PipelinePath.swift */; };
+		F60000000000000000000032 /* PipelineIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000022 /* PipelineIO.swift */; };
+		F60000000000000000000033 /* CanonicalDatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000023 /* CanonicalDatabaseSnapshot.swift */; };
+		F60000000000000000000034 /* PipelineCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000024 /* PipelineCoordinator.swift */; };
+		F60000000000000000000035 /* LoaderSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000025 /* LoaderSupport.swift */; };
+		F60000000000000000000036 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000026 /* main.swift */; };
+		F60000000000000000000037 /* PipelineManifestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000027 /* PipelineManifestTests.swift */; };
+		F60000000000000000000038 /* PipelinePathAndNormalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000028 /* PipelinePathAndNormalizationTests.swift */; };
+		F60000000000000000000039 /* CanonicalSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000029 /* CanonicalSnapshotTests.swift */; };
+		F6000000000000000000003A /* PipelineCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6000000000000000000002A /* PipelineCoordinatorTests.swift */; };
+		F60000000000000000000040 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
+		F60000000000000000000041 /* DatabasePipelineSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60000000000000000000001 /* DatabasePipelineSupport.framework */; };
+		F60000000000000000000042 /* DatabasePipelineSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60000000000000000000001 /* DatabasePipelineSupport.framework */; };
+		F60000000000000000000043 /* DatabasePipelineSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60000000000000000000001 /* DatabasePipelineSupport.framework */; };
+		F60000000000000000000044 /* DatabasePipelineSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60000000000000000000001 /* DatabasePipelineSupport.framework */; };
+		F60000000000000000000045 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
+		F60000000000000000000046 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
+		F60000000000000000000047 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
+		F60000000000000000000048 /* PokedexCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		650E221823F69DD300FACCE7 /* Data in Copy Files */ = {isa = PBXBuildFile; fileRef = 650E221723F65C1700FACCE7 /* Data */; };
 		65188C092B5C7E7600CA8393 /* Binding+SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65188C082B5C7E7600CA8393 /* Binding+SearchQuery.swift */; };
 		65188C0A2B5CA23C00CA8393 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
@@ -294,7 +314,6 @@
 		65881A542477ED1900526CBD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A532477ED1900526CBD /* Settings.swift */; };
 		65881A562478091D00526CBD /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A552478091D00526CBD /* GameDetail.swift */; };
 		65881A64247A839800526CBD /* Game+UserDefaultPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A63247A839800526CBD /* Game+UserDefaultPersistable.swift */; };
-		65881A68247A8B7200526CBD /* Game+UserDefaultPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A63247A839800526CBD /* Game+UserDefaultPersistable.swift */; };
 		65881A73247CFD9000526CBD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A72247CFD9000526CBD /* Store.swift */; };
 		65881A75247D0F0700526CBD /* PurchasedProductState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A74247D0F0700526CBD /* PurchasedProductState.swift */; };
 		65881A77247D96E700526CBD /* Game+BitwiseValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65881A76247D96E700526CBD /* Game+BitwiseValue.swift */; };
@@ -351,7 +370,6 @@
 		65CD94DF23C1333B005D005E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD94DE23C1333B005D005E /* Extensions.swift */; };
 		65D6A68323DB07E200542D6C /* Convert in Frameworks */ = {isa = PBXBuildFile; productRef = 65D6A68223DB07E200542D6C /* Convert */; };
 		65D703BD28D96B95000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
-		65D703CF28D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D703E828D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D7040128D96C02000CDA55 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D703A628D96B93000CDA55 /* ErrorInfo.swift */; };
 		65D970222987883D00B3D71A /* Int16+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D970212987883D00B3D71A /* Int16+Int.swift */; };
@@ -456,6 +474,55 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F60000000000000000000050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65401F412978EA91005BF4DC;
+			remoteInfo = PokedexCore;
+		};
+		F60000000000000000000051 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60000000000000000000100;
+			remoteInfo = DatabasePipelineSupport;
+		};
+		F60000000000000000000052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60000000000000000000100;
+			remoteInfo = DatabasePipelineSupport;
+		};
+		F60000000000000000000053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60000000000000000000100;
+			remoteInfo = DatabasePipelineSupport;
+		};
+		F60000000000000000000054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60000000000000000000100;
+			remoteInfo = DatabasePipelineSupport;
+		};
+		F60000000000000000000055 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65401F412978EA91005BF4DC;
+			remoteInfo = PokedexCore;
+		};
+		F60000000000000000000056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65401F412978EA91005BF4DC;
+			remoteInfo = PokedexCore;
+		};
 		65401F4D2978EA91005BF4DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
@@ -598,9 +665,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				6597D5E323D01E270081482E /* Config.txt in Copy Files */,
-				650E221823F69DD300FACCE7 /* Data in Copy Files */,
-				659D69D123EFF8E000FF53DF /* Research in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,14 +683,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6584844D293D0A8300BF985C /* CopyFiles */ = {
+		6584844D293D0A8300BF985C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 10;
 			files = (
-				65848461293D0CCE00BF985C /* Config.txt in CopyFiles */,
+				F60000000000000000000048 /* PokedexCore.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		65D9702029875D6500B3D71A /* Embed Frameworks */ = {
@@ -655,6 +720,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F60000000000000000000001 /* DatabasePipelineSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DatabasePipelineSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60000000000000000000002 /* DatabasePipeline */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatabasePipeline; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60000000000000000000003 /* DatabasePipelineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabasePipelineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60000000000000000000020 /* PipelineManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineManifest.swift; sourceTree = "<group>"; };
+		F60000000000000000000021 /* PipelinePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelinePath.swift; sourceTree = "<group>"; };
+		F60000000000000000000022 /* PipelineIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineIO.swift; sourceTree = "<group>"; };
+		F60000000000000000000023 /* CanonicalDatabaseSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanonicalDatabaseSnapshot.swift; sourceTree = "<group>"; };
+		F60000000000000000000024 /* PipelineCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineCoordinator.swift; sourceTree = "<group>"; };
+		F60000000000000000000025 /* LoaderSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderSupport.swift; sourceTree = "<group>"; };
+		F60000000000000000000026 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F60000000000000000000027 /* PipelineManifestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineManifestTests.swift; sourceTree = "<group>"; };
+		F60000000000000000000028 /* PipelinePathAndNormalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelinePathAndNormalizationTests.swift; sourceTree = "<group>"; };
+		F60000000000000000000029 /* CanonicalSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanonicalSnapshotTests.swift; sourceTree = "<group>"; };
+		F6000000000000000000002A /* PipelineCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineCoordinatorTests.swift; sourceTree = "<group>"; };
 		650E221723F65C1700FACCE7 /* Data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Data; path = Crawlers/Data; sourceTree = SOURCE_ROOT; };
 		65188C082B5C7E7600CA8393 /* Binding+SearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+SearchQuery.swift"; sourceTree = "<group>"; };
 		6518ACB123BED1D7004B7C58 /* DatabaseLoader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatabaseLoader; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1072,6 +1151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60000000000000000000041 /* DatabasePipelineSupport.framework in Frameworks */,
 				65188C0A2B5CA23C00CA8393 /* PokedexCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1161,6 +1241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60000000000000000000042 /* DatabasePipelineSupport.framework in Frameworks */,
+				F60000000000000000000045 /* PokedexCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,18 +1275,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F60000000000000000000111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60000000000000000000040 /* PokedexCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60000000000000000000115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60000000000000000000043 /* DatabasePipelineSupport.framework in Frameworks */,
+				F60000000000000000000046 /* PokedexCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60000000000000000000117 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60000000000000000000044 /* DatabasePipelineSupport.framework in Frameworks */,
+				F60000000000000000000047 /* PokedexCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		6518ACB223BED1D7004B7C58 /* DatabaseLoader */ = {
 			isa = PBXGroup;
 			children = (
-				650E221723F65C1700FACCE7 /* Data */,
-				659D69D023EFF8A100FF53DF /* Research */,
-				6597D5E223D01E1B0081482E /* Config.txt */,
 				65F7694C245570F700AEB57D /* Entities.swift */,
 				65CD94DE23C1333B005D005E /* Extensions.swift */,
-				6518ACCC23BFCD32004B7C58 /* Helpers.swift */,
 				6518ACB323BED1D7004B7C58 /* main.swift */,
 			);
 			path = DatabaseLoader;
@@ -1922,6 +2026,8 @@
 		6547F7E9237968D20091A083 = {
 			isa = PBXGroup;
 			children = (
+				F60000000000000000000010 /* Scripts */,
+				F60000000000000000000013 /* DatabasePipelineTests */,
 				6518ACB223BED1D7004B7C58 /* DatabaseLoader */,
 				65848450293D0A8300BF985C /* DatabaseValidator */,
 				6547F846237975190091A083 /* Frameworks */,
@@ -1940,6 +2046,9 @@
 		6547F7F3237968D20091A083 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F60000000000000000000001 /* DatabasePipelineSupport.framework */,
+				F60000000000000000000002 /* DatabasePipeline */,
+				F60000000000000000000003 /* DatabasePipelineTests.xctest */,
 				6518ACB123BED1D7004B7C58 /* DatabaseLoader */,
 				6547F7F2237968D20091A083 /* PikaDex.app */,
 				6547F80B237968D50091A083 /* PokedexTests.xctest */,
@@ -2108,11 +2217,51 @@
 			isa = PBXGroup;
 			children = (
 				65848451293D0A8300BF985C /* main.swift */,
-				6584845E293D0C2000BF985C /* Config.txt */,
-				65848449293B3B6F00BF985C /* DatabaseValidator.swift */,
 			);
 			path = DatabaseValidator;
 			sourceTree = "<group>";
+		};
+		F60000000000000000000010 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				F60000000000000000000011 /* DatabasePipelineSupport */,
+				F60000000000000000000012 /* DatabasePipeline */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		F60000000000000000000011 /* DatabasePipelineSupport */ = {
+			isa = PBXGroup;
+			children = (
+				F60000000000000000000023 /* CanonicalDatabaseSnapshot.swift */,
+				F60000000000000000000025 /* LoaderSupport.swift */,
+				F60000000000000000000024 /* PipelineCoordinator.swift */,
+				F60000000000000000000022 /* PipelineIO.swift */,
+				F60000000000000000000020 /* PipelineManifest.swift */,
+				F60000000000000000000021 /* PipelinePath.swift */,
+			);
+			path = DatabasePipelineSupport;
+			sourceTree = "<group>";
+		};
+		F60000000000000000000012 /* DatabasePipeline */ = {
+			isa = PBXGroup;
+			children = (
+				F60000000000000000000026 /* main.swift */,
+			);
+			path = DatabasePipeline;
+			sourceTree = "<group>";
+		};
+		F60000000000000000000013 /* DatabasePipelineTests */ = {
+			isa = PBXGroup;
+			children = (
+				F60000000000000000000029 /* CanonicalSnapshotTests.swift */,
+				F6000000000000000000002A /* PipelineCoordinatorTests.swift */,
+				F60000000000000000000027 /* PipelineManifestTests.swift */,
+				F60000000000000000000028 /* PipelinePathAndNormalizationTests.swift */,
+			);
+			name = DatabasePipelineTests;
+			path = PokedexTests/DatabasePipeline;
+			sourceTree = SOURCE_ROOT;
 		};
 		65881A522477ECD600526CBD /* Settings */ = {
 			isa = PBXGroup;
@@ -2797,7 +2946,6 @@
 			buildPhases = (
 				6518ACAD23BED1D7004B7C58 /* Sources */,
 				6518ACAE23BED1D7004B7C58 /* Frameworks */,
-				6597D5E123CF163C0081482E /* Config Run Script */,
 				6518ACAF23BED1D7004B7C58 /* Copy Files */,
 				65D9702029875D6500B3D71A /* Embed Frameworks */,
 			);
@@ -2805,6 +2953,7 @@
 			);
 			dependencies = (
 				65D9701F29875D6400B3D71A /* PBXTargetDependency */,
+				F60000000000000000000062 /* PBXTargetDependency */,
 			);
 			name = DatabaseLoader;
 			packageProductDependencies = (
@@ -3020,12 +3169,13 @@
 			buildPhases = (
 				6584844B293D0A8300BF985C /* Sources */,
 				6584844C293D0A8300BF985C /* Frameworks */,
-				6584844D293D0A8300BF985C /* CopyFiles */,
+				6584844D293D0A8300BF985C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				65848463293D0E8100BF985C /* PBXTargetDependency */,
+				F60000000000000000000063 /* PBXTargetDependency */,
 			);
 			name = DatabaseValidator;
 			packageProductDependencies = (
@@ -3033,6 +3183,65 @@
 			productName = DatabaseValidator;
 			productReference = 6584844F293D0A8300BF985C /* DatabaseValidator */;
 			productType = "com.apple.product-type.tool";
+		};
+		F60000000000000000000100 /* DatabasePipelineSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60000000000000000000126 /* Build configuration list for PBXNativeTarget "DatabasePipelineSupport" */;
+			buildPhases = (
+				F60000000000000000000110 /* Sources */,
+				F60000000000000000000111 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F60000000000000000000060 /* PBXTargetDependency */,
+			);
+			name = DatabasePipelineSupport;
+			packageProductDependencies = (
+			);
+			productName = DatabasePipelineSupport;
+			productReference = F60000000000000000000001 /* DatabasePipelineSupport.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F60000000000000000000101 /* DatabasePipeline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60000000000000000000127 /* Build configuration list for PBXNativeTarget "DatabasePipeline" */;
+			buildPhases = (
+				F60000000000000000000114 /* Sources */,
+				F60000000000000000000115 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F60000000000000000000061 /* PBXTargetDependency */,
+				F60000000000000000000065 /* PBXTargetDependency */,
+			);
+			name = DatabasePipeline;
+			packageProductDependencies = (
+			);
+			productName = DatabasePipeline;
+			productReference = F60000000000000000000002 /* DatabasePipeline */;
+			productType = "com.apple.product-type.tool";
+		};
+		F60000000000000000000102 /* DatabasePipelineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60000000000000000000128 /* Build configuration list for PBXNativeTarget "DatabasePipelineTests" */;
+			buildPhases = (
+				F60000000000000000000116 /* Sources */,
+				F60000000000000000000117 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F60000000000000000000064 /* PBXTargetDependency */,
+				F60000000000000000000066 /* PBXTargetDependency */,
+			);
+			name = DatabasePipelineTests;
+			packageProductDependencies = (
+			);
+			productName = DatabasePipelineTests;
+			productReference = F60000000000000000000003 /* DatabasePipelineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		65992A1B29C74D7A001ECD43 /* PokedexResources */ = {
 			isa = PBXNativeTarget;
@@ -3155,13 +3364,16 @@
 			productRefGroup = 6547F7F3237968D20091A083 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
-			targets = (
+				targets = (
 				6547F7F1237968D20091A083 /* Pokedex */,
 				6547F80A237968D50091A083 /* PokedexTests */,
 				F50000000000000000000001 /* PokedexConcurrencyTests */,
 				6547F815237968D50091A083 /* PokedexUITests */,
 				6518ACB023BED1D7004B7C58 /* DatabaseLoader */,
 				6584844E293D0A8300BF985C /* DatabaseValidator */,
+				F60000000000000000000100 /* DatabasePipelineSupport */,
+				F60000000000000000000101 /* DatabasePipeline */,
+				F60000000000000000000102 /* DatabasePipelineTests */,
 				65FC40832574636700E64BD0 /* PokedexWidgetExtension */,
 				65721CDB257E2CEB00DA8F7C /* TeamIntentHandler */,
 				65401F412978EA91005BF4DC /* PokedexCore */,
@@ -3288,25 +3500,6 @@
 			shellPath = /bin/sh;
 			shellScript = "##!/bin/bash\n#set -e\n#\n#if [ \"Release\" = \"${CONFIGURATION}\" ]; then # Only do this for release builds\n#    \n#    # Path to the app directory\n#    APP_DIR_PATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\n#    # Strip main binary\n#    strip -rSTx ${APP_DIR_PATH}/${EXECUTABLE_NAME}\n#    # Path to the Frameworks directory\n#    APP_FRAMEWORKS_DIR=${APP_DIR_PATH}/\"Frameworks\"\n#    \n#    # Strip symbols from frameworks, if Frameworks/ exists at all\n#    # ... as long as the framework is NOT signed by Apple\n#    if [ -d $APP_FRAMEWORKS_DIR ]\n#    then\n#        find $APP_FRAMEWORKS_DIR -type f -perm +111 -maxdepth 2 -mindepth 2 -exec bash -c \"codesign -v -R='anchor apple' {} &> /dev/null || (echo {} && strip -rSTx {})\" \\;\n#    fi\n#fi\n#\n";
 		};
-		6597D5E123CF163C0081482E /* Config Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Config Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#pwd\n#echo $SRCROOT > DatabaseLoader/Config.txt\n";
-		};
 		659C7CDF2466C16200E92C1C /* Generate Icon Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -3336,10 +3529,7 @@
 			files = (
 				65F7694D245570F700AEB57D /* Entities.swift in Sources */,
 				65CD94DF23C1333B005D005E /* Extensions.swift in Sources */,
-				65881A68247A8B7200526CBD /* Game+UserDefaultPersistable.swift in Sources */,
-				6518ACCD23BFCD32004B7C58 /* Helpers.swift in Sources */,
 				6518ACB423BED1D7004B7C58 /* main.swift in Sources */,
-				65D703CF28D96C02000CDA55 /* ErrorInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3760,11 +3950,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6584845D293D0C0B00BF985C /* Entities.swift in Sources */,
 				65848452293D0A8300BF985C /* main.swift in Sources */,
-				65848459293D0AE600BF985C /* Helpers.swift in Sources */,
-				65848456293D0A9A00BF985C /* DatabaseValidator.swift in Sources */,
-				6584845A293D0B7400BF985C /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60000000000000000000110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60000000000000000000033 /* CanonicalDatabaseSnapshot.swift in Sources */,
+				F60000000000000000000035 /* LoaderSupport.swift in Sources */,
+				F60000000000000000000034 /* PipelineCoordinator.swift in Sources */,
+				F60000000000000000000032 /* PipelineIO.swift in Sources */,
+				F60000000000000000000030 /* PipelineManifest.swift in Sources */,
+				F60000000000000000000031 /* PipelinePath.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60000000000000000000114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60000000000000000000036 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60000000000000000000116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60000000000000000000039 /* CanonicalSnapshotTests.swift in Sources */,
+				F6000000000000000000003A /* PipelineCoordinatorTests.swift in Sources */,
+				F60000000000000000000037 /* PipelineManifestTests.swift in Sources */,
+				F60000000000000000000038 /* PipelinePathAndNormalizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3810,6 +4028,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F60000000000000000000060 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 65401F412978EA91005BF4DC /* PokedexCore */; targetProxy = F60000000000000000000050 /* PBXContainerItemProxy */; };
+		F60000000000000000000061 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = F60000000000000000000100 /* DatabasePipelineSupport */; targetProxy = F60000000000000000000051 /* PBXContainerItemProxy */; };
+		F60000000000000000000062 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = F60000000000000000000100 /* DatabasePipelineSupport */; targetProxy = F60000000000000000000052 /* PBXContainerItemProxy */; };
+		F60000000000000000000063 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = F60000000000000000000100 /* DatabasePipelineSupport */; targetProxy = F60000000000000000000053 /* PBXContainerItemProxy */; };
+		F60000000000000000000064 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = F60000000000000000000100 /* DatabasePipelineSupport */; targetProxy = F60000000000000000000054 /* PBXContainerItemProxy */; };
+		F60000000000000000000065 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 65401F412978EA91005BF4DC /* PokedexCore */; targetProxy = F60000000000000000000055 /* PBXContainerItemProxy */; };
+		F60000000000000000000066 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 65401F412978EA91005BF4DC /* PokedexCore */; targetProxy = F60000000000000000000056 /* PBXContainerItemProxy */; };
 		65401F4E2978EA91005BF4DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 65401F412978EA91005BF4DC /* PokedexCore */;
@@ -3927,6 +4152,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F60000000000000000000120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				DEFINES_MODULE = YES;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabasePipelineSupport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F60000000000000000000121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				DEFINES_MODULE = YES;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabasePipelineSupport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F60000000000000000000122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabasePipeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F60000000000000000000123 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabasePipeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F60000000000000000000124 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabasePipelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F60000000000000000000125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabasePipelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		6518ACB523BED1D7004B7C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3935,6 +4244,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabaseLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -3950,6 +4260,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielbyon.DatabaseLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -4611,6 +4922,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -4628,6 +4940,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSX7X97PF8;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -4824,6 +5137,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F60000000000000000000126 /* Build configuration list for PBXNativeTarget "DatabasePipelineSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F60000000000000000000120 /* Debug */,
+				F60000000000000000000121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F60000000000000000000127 /* Build configuration list for PBXNativeTarget "DatabasePipeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F60000000000000000000122 /* Debug */,
+				F60000000000000000000123 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F60000000000000000000128 /* Build configuration list for PBXNativeTarget "DatabasePipelineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F60000000000000000000124 /* Debug */,
+				F60000000000000000000125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6518ACB723BED1D7004B7C58 /* Build configuration list for PBXNativeTarget "DatabaseLoader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
