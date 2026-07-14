@@ -9,6 +9,8 @@ import Dependencies
 import PokedexCore
 import SwiftUI
 
+/// Main-actor observable state for the battle-assistant interface.
+@MainActor
 final class BattleAssistantViewModel: ObservableObject {
 
     @Dependency(\.pokedexDataStore) private var dataStore

@@ -10,9 +10,15 @@ import Foundation
 
 extension LengthFormatter {
 
-    public static var height: LengthFormatter = {
+    /// Shared UI formatter. All access is confined to the main actor because
+    /// `LengthFormatter` and its nested `NumberFormatter` are mutable classes.
+    @MainActor public static let height: LengthFormatter = {
         let lengthFormatter = LengthFormatter()
-        lengthFormatter.numberFormatter = .heightWeight
+        let numberFormatter = NumberFormatter()
+        numberFormatter.minimumIntegerDigits = 1
+        numberFormatter.minimumFractionDigits = 1
+        numberFormatter.maximumFractionDigits = 1
+        lengthFormatter.numberFormatter = numberFormatter
         lengthFormatter.isForPersonHeightUse = true
         lengthFormatter.unitStyle = .short
         return lengthFormatter

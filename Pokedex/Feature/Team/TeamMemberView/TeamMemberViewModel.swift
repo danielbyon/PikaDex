@@ -10,6 +10,8 @@ import Dependencies
 import PokedexUI
 import SwiftUI
 
+/// Main-actor observable editor state for one team member.
+@MainActor
 public final class TeamMemberViewModel: ObservableObject {
 
     @Published var teamMember: TeamMember
@@ -89,7 +91,7 @@ public final class TeamMemberViewModel: ObservableObject {
     }
 
     private let team: Team
-    private let dataStore: DataStore = .pokedex
+    @Dependency(\.pokedexDataStore) private var dataStore
     @Dependency(\.teamStore) var teamStore
 
     private var cancellables: Set<AnyCancellable> = []

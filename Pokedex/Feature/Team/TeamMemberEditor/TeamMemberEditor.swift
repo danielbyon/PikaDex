@@ -295,7 +295,12 @@ struct TeamMemberEditor: View {
                     StatValueCell(title: "EV", value: ev.wrappedValue)
                 }
             } else {
-                TextField("Value", value: manualValue, formatter: _valueFormatter, prompt: Text("Value"))
+                TextField(
+                    "Value",
+                    value: manualValue,
+                    format: .number.grouping(.never),
+                    prompt: Text("Value")
+                )
             }
         } header: {
             SectionHeader(title)
@@ -304,20 +309,16 @@ struct TeamMemberEditor: View {
 
 }
 
-private let _valueFormatter: Formatter = {
-    let formatter = NumberFormatter()
-    formatter.maximumFractionDigits = 0
-    return formatter
-}()
-
 struct TeamMemberEditor_Previews: PreviewProvider {
     static var previews: some View {
-        TeamMemberEditor(
-            viewModel: .init(
-                teamMember: Team.stub1.members[0],
-                team: .stub1
+        PreviewDependencyRoot {
+            TeamMemberEditor(
+                viewModel: .init(
+                    teamMember: Team.stub1.members[0],
+                    team: .stub1
+                )
             )
-        )
+        }
     }
 }
 
@@ -337,7 +338,7 @@ private struct TeamMemberLevel: View {
             Text("   ")
                 .monospacedBody()
                 .overlay(
-                    Text(NumberFormatter.twoDigit.string(from: NSNumber(value: level)) ?? "")
+                    Text(PokedexNumberFormat.twoDigit.format(Int(level)))
                         .monospacedBody())
         }
     }

@@ -9,6 +9,8 @@
 import PokedexUI
 import SwiftUI
 
+/// Main-actor observable ordering preferences used by Pokémon detail views.
+@MainActor
 public final class PokemonDetailOrdering: ObservableObject {
 
     @Published public private(set) var sections: [PokemonDetailSection] = PokemonDetailSection.allCases {

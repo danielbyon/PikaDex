@@ -75,7 +75,9 @@ struct GameSelector: View {
 
 struct GameSelector_Previews: PreviewProvider {
     static var previews: some View {
-        GameSelector()
+        PreviewDependencyRoot {
+            GameSelector()
+        }
     }
 }
 

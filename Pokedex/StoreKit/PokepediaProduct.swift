@@ -126,8 +126,6 @@ extension PokepediaProduct {
         .swordShield
     ]
 
-    static let store = StoreClient(productIdentifiers: allProducts)
-
 }
 
 // MARK: - Purchase State

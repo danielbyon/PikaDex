@@ -95,9 +95,13 @@ extension Route.Content: Equatable {
         case let (.pokemonLocations(lPokemonDetailForm), .pokemonLocations(rPokemonDetailForm)):
             return lPokemonDetailForm == rPokemonDetailForm
         case let (.team(lTeam), .team(rTeam)):
-            return lTeam.team == rTeam.team
+            return MainActor.assumeIsolated {
+                lTeam.team == rTeam.team
+            }
         case let (.teamMember(lMember), .teamMember(rMember)):
-            return lMember.teamMember == rMember.teamMember
+            return MainActor.assumeIsolated {
+                lMember.teamMember == rMember.teamMember
+            }
         case let (.type(lType, lGame), .type(rType, rGame)):
             return lType == rType
             && lGame == rGame
@@ -154,10 +158,14 @@ extension Route.Content: Hashable {
             hasher.combine("pokemonLocations")
             hasher.combine(pokemonDetailForm)
         case let .team(team):
-            hasher.combine(team.team.internalID)
-            hasher.combine(team.team.members.count)
+            MainActor.assumeIsolated {
+                hasher.combine(team.team.internalID)
+                hasher.combine(team.team.members.count)
+            }
         case let .teamMember(member):
-            hasher.combine(member.teamMember.internalID)
+            MainActor.assumeIsolated {
+                hasher.combine(member.teamMember.internalID)
+            }
         case let .type(type, game):
             hasher.combine("type")
             hasher.combine(type)

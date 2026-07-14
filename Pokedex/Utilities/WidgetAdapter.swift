@@ -10,6 +10,8 @@ import UIKit
 import Combine
 import WidgetKit
 
+/// Main-actor coordinator that bridges app lifecycle events to WidgetKit.
+@MainActor
 final class WidgetAdapter {
 
     private let notificationCenter: NotificationCenter

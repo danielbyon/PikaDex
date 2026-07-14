@@ -15,7 +15,7 @@ struct MachineCell: View {
     var body: some View {
         HStack {
             MoveCell(move: machine.move)
-            Text("\(machine.type.rawValue) \(NumberFormatter.twoDigit.string(from: NSNumber(value: machine.number)) ?? "")")
+            Text("\(machine.type.rawValue) \(PokedexNumberFormat.twoDigit.format(machine.number))")
                 .monospacedBody()
         }
         .contentShape(Rectangle())

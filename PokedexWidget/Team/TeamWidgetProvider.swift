@@ -7,19 +7,31 @@
 //
 
 import Dependencies
+import AppSupport
+import Foundation
 import WidgetKit
 import Intents
 import PokedexCore
 
 struct TeamProvider: IntentTimelineProvider {
 
-    @Dependency(\.appSettings) var settings
     @Dependency(\.teamStorage) var storage
 
-    private var allTeams: [Team]? { storage.loadTeams(forGame: settings.currentGame) }
+    /// Resolves the persisted game once for each WidgetKit callback.
+    ///
+    /// WidgetKit may invoke callbacks on arbitrary threads and may retain a
+    /// provider for multiple callbacks. Injected loaders must therefore be
+    /// synchronous and thread-safe. The resulting `Game` is an immutable
+    /// snapshot used for the complete callback.
+    private let loadCurrentGame: () -> Game
+
+    init(loadCurrentGame: @escaping () -> Game = Self.loadPersistedCurrentGame) {
+        self.loadCurrentGame = loadCurrentGame
+    }
 
     func placeholder(in context: Context) -> TeamEntry {
-        if let allTeams = allTeams,
+        let game = loadCurrentGame()
+        if let allTeams = storage.loadTeams(forGame: game),
               let firstTeam = allTeams.first {
             return TeamEntry(team: firstTeam, game: nil)
         } else {
@@ -28,17 +40,17 @@ struct TeamProvider: IntentTimelineProvider {
     }
 
     func getSnapshot(for configuration: TeamConfigurationIntent, in context: Context, completion: @escaping (TeamEntry) -> ()) {
-        let entry = getTeamEntry(for: configuration)
+        let entry = getTeamEntry(for: configuration, fallbackGame: loadCurrentGame())
         completion(entry)
     }
 
     func getTimeline(for configuration: TeamConfigurationIntent, in context: Context, completion: @escaping (Timeline<TeamEntry>) -> ()) {
-        let entry = getTeamEntry(for: configuration)
+        let entry = getTeamEntry(for: configuration, fallbackGame: loadCurrentGame())
         let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
     }
 
-    private func getTeamEntry(for configuration: TeamConfigurationIntent) -> TeamEntry {
+    private func getTeamEntry(for configuration: TeamConfigurationIntent, fallbackGame: Game) -> TeamEntry {
         let entry: TeamEntry
 
         if let dynamicTeam = configuration.team,
@@ -49,7 +61,7 @@ struct TeamProvider: IntentTimelineProvider {
            let team = allTeams.first(where: { $0.internalID.uuidString == identifier }) {
             entry = TeamEntry(team: team, game: dynamicTeam.game)
         } else {
-            let allTeams = storage.loadTeams(forGame: settings.currentGame)
+            let allTeams = storage.loadTeams(forGame: fallbackGame)
             if let firstTeam = allTeams?.first {
                 entry = TeamEntry(team: firstTeam, game: nil)
             } else {
@@ -58,6 +70,15 @@ struct TeamProvider: IntentTimelineProvider {
         }
 
         return entry
+    }
+
+    private static func loadPersistedCurrentGame() -> Game {
+        let key = "com.danielbyon.pokedex.currentGame"
+        guard let data = UserDefaults.appGroup.data(forKey: key),
+              let game = try? JSONDecoder().decode(Game.self, from: data) else {
+            return .sword
+        }
+        return game
     }
 
 }

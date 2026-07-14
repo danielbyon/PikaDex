@@ -100,8 +100,7 @@ struct ListPokemonCell_Previews: PreviewProvider {
 private extension Pokemon {
 
     func formattedPokedexNumber(for pokedex: Pokedex) -> String {
-        let number = NSNumber(value: number(for: pokedex))
-        return NumberFormatter.pokemonIndex.string(from: number)!
+        PokedexNumberFormat.pokemonIndex.format(number(for: pokedex))
     }
 
 }

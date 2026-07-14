@@ -8,7 +8,9 @@
 
 import SwiftUI
 
-class SheetState<State>: ObservableObject {
+/// Main-actor observable presentation state for a SwiftUI sheet.
+@MainActor
+final class SheetState<State>: ObservableObject {
 
     @Published var isShowing = false
 

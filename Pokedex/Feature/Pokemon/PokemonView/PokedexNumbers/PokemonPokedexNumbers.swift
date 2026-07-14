@@ -70,9 +70,8 @@ private struct PokedexNumberViewModel {
     let number: String
 
     init?(name: String, number: Int) {
-        guard let numberString = NumberFormatter.pokemonIndex.string(from: NSNumber(value: number)) else { return nil }
         self.name = name
-        self.number = numberString
+        self.number = PokedexNumberFormat.pokemonIndex.format(number)
     }
 }
 

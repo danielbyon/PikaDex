@@ -25,10 +25,10 @@ public struct LearnsetEntry: Queryable {
             let level = result.level
             let form = LearnsetPokemonForm(result: result.form)
 //            let move = Move(result: result.move)
-            let detailText = level >= 0 ? "Lv.\(NumberFormatter.twoDigit.string(from: NSNumber(value: level))!)" : "Evo."
+            let detailText = level >= 0 ? "Lv.\(PokedexNumberFormat.twoDigit.format(level))" : "Evo."
 
             self.init(
-                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(PokedexNumberFormat.pokemonIndex.format(form.index)) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: detailText,
                 imageName: form.spriteName,
@@ -42,10 +42,10 @@ public struct LearnsetEntry: Queryable {
             let number = machine.number
             let type = machine.type
 //            let move = Move(result: machine.move)
-            let detailText = "\(type.rawValue) \(NumberFormatter.twoDigit.string(from: NSNumber(value: number))!)"
+            let detailText = "\(type.rawValue) \(PokedexNumberFormat.twoDigit.format(number))"
 
             self.init(
-                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(PokedexNumberFormat.pokemonIndex.format(form.index)) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: detailText,
                 imageName: form.spriteName,
@@ -59,7 +59,7 @@ public struct LearnsetEntry: Queryable {
 //            let fathers = result.fathers.map(LearnsetBreedingFather.init)
 
             self.init(
-                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(PokedexNumberFormat.pokemonIndex.format(form.index)) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: result.fathers
                     .compactMap { $0.name }
@@ -75,7 +75,7 @@ public struct LearnsetEntry: Queryable {
 //            let move = Move(result: result.move)
 
             self.init(
-                text: "\(NumberFormatter.pokemonIndex.string(from: NSNumber(value: form.index))!) \(form.name)",
+                text: "\(PokedexNumberFormat.pokemonIndex.format(form.index)) \(form.name)",
                 subtext: form.name == form.formName ? nil : form.formName,
                 detailText: nil,
                 imageName: form.spriteName,

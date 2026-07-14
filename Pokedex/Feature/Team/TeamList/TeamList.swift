@@ -166,6 +166,8 @@ public struct TeamList: View {
 
 struct TeamList_Previews: PreviewProvider {
     static var previews: some View {
-        TeamList(game: .sword)
+        PreviewDependencyRoot {
+            TeamList(game: .sword)
+        }
     }
 }

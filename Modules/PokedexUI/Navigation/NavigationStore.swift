@@ -8,7 +8,9 @@
 
 import SwiftUI
 
-public class NavigationStore: ObservableObject {
+/// Main-actor owner of the mutable navigation path consumed by SwiftUI.
+@MainActor
+public final class NavigationStore: ObservableObject {
 
     @Published public var path = NavigationPath()
 

@@ -115,8 +115,10 @@ public struct TeamView: View {
 
 struct TeamView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamView(
-            viewModel: .init(team: .stub1, game: .sword)
-        )
+        PreviewDependencyRoot {
+            TeamView(
+                viewModel: .init(team: .stub1, game: .sword)
+            )
+        }
     }
 }

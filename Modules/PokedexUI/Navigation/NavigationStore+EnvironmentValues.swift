@@ -9,7 +9,12 @@ import SwiftUI
 
 private struct NavigationStoreKey: EnvironmentKey {
 
-    static var defaultValue: NavigationStore { .init() }
+    static var defaultValue: NavigationStore {
+        // SwiftUI evaluates environment defaults while building the main-actor
+        // view hierarchy. The protocol requirement itself is nonisolated, so
+        // make that framework contract explicit at this boundary.
+        MainActor.assumeIsolated { NavigationStore() }
+    }
 
 }
 

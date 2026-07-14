@@ -26,17 +26,9 @@ public struct PokemonTypeEffectivenessCell: View {
         } else if value == 0.5 {
             return halfFractionCharacter + "x"
         } else {
-            return value > 0 ? "\(Self.numberFormatter.string(from: NSNumber(value: value))!)x" : "0x"
+            return value > 0 ? "\(PokedexNumberFormat.wholeNumber.format(value))x" : "0x"
         }
     }
-
-    private static let numberFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.minimumIntegerDigits = 1
-        formatter.maximumIntegerDigits = 1
-        formatter.maximumFractionDigits = 0
-        return formatter
-    }()
 
     public var body: some View {
         HStack(spacing: 2.0) {

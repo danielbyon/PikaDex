@@ -9,8 +9,13 @@ import Dependencies
 import SwiftUI
 
 private struct TeamStoreKey: DependencyKey {
-    static var liveValue: TeamStore = DefaultTeamStore.shared
-    static var testValue: TeamStore = DefaultTeamStore.shared
+    static var liveValue: TeamStore {
+        fatalError("TeamStore must be supplied by the application composition root.")
+    }
+
+    static var testValue: TeamStore {
+        fatalError("Tests must inject an isolated TeamStore instance.")
+    }
 }
 
 extension DependencyValues {

@@ -8,6 +8,8 @@
 import PokedexUI
 import SwiftUI
 
+/// Main-actor observable state for the Pokémon detail interface.
+@MainActor
 final class PokemonContentViewModel: ObservableObject {
 
     let pokemon: PokemonDetail

@@ -13,7 +13,6 @@ import PokedexCore
 
 class IntentHandler: INExtension, TeamConfigurationIntentHandling {
 
-    @Dependency(\.appSettings) var settings
     @Dependency(\.teamStorage) var storage
 
     func provideTeamOptionsCollection(for intent: TeamConfigurationIntent, with completion: @escaping (INObjectCollection<DynamicTeam>?, Error?) -> Void) {
