@@ -16,6 +16,10 @@ from declaration order. `Game.national` is an aggregate dataset with its own
 generated rows; queries pass `.national` directly instead of combining rows at
 runtime.
 
+`Game.bitwiseValue` is also a stable persisted StoreKit and domain identifier.
+Its implementation belongs to `PokedexCore` so the application, widgets,
+intents, StoreKit code, and tests consume one shared contract.
+
 Released-game titles, generations, release groups, selector order, and
 mechanics live in the `Game.releasedGameMetadata` catalog. National has no
 released-game metadata. Dataset section availability is a separate policy so
@@ -39,6 +43,39 @@ rtk xcodebuild build \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 ```
 
+## Release verification
+
+The canonical Phase 7 release command is:
+
+```sh
+rtk Scripts/pokedex-release-verification
+```
+
+The runner validates the simulator during its named `preflight` gate before
+any build. It then fails fast in this order: `Pokedex` build, `Modules`,
+`PokedexTests`, `PokedexConcurrencyTests`, `DatabasePipelineTests`, data-pipeline
+`prepare-tools`, and offline data-pipeline `verify`. The pipeline gates reuse
+`Scripts/pokedex-data-pipeline`; the release runner does not duplicate crawler
+or generation logic.
+
+`PIKADEX_SIMULATOR_DESTINATION` overrides the default
+`platform=iOS Simulator,name=iPhone 17 Pro`. `PIKADEX_RELEASE_BUILD_ROOT`
+overrides the default isolated root at `build/release-verification`. The root is
+validated before cleanup, and only these owned children are recreated:
+
+1. `DerivedData/`
+2. `ResultBundles/`
+3. `Profiles/`
+4. `PipelineTooling/`
+5. `PipelineOutput/`
+
+Unsafe roots that overlap the repository, production source or resource
+directories, or escape the repository build directory through a symbolic link
+are rejected. Progress output names the current gate and completed gates. A
+failure names the failed gate and exit status; success ends with
+`Release verification succeeded.`, the complete gate list, and the isolated
+output root.
+
 ## Reproducible database generation
 
 The database is prepared through a hybrid crawler, manual Apple Numbers, and
@@ -60,17 +97,21 @@ rtk xcodebuild test \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 ```
 
-The legacy `PokedexTests` application test target is not included in the verified command because its model-object tests reference types that are no longer present in the production code. The target requires a separate test-modernization pass.
+Reusable stat calculation, Team/PokéPaste formatting, and `Game` persisted-value
+tests belong to `PokedexCoreTests` and run through `Modules`. `PokedexTests` is
+a deliberately small hosted app test target containing only pure deep-link
+tests. Its `PikaDex.app` host provides access to the app-owned URL seam without
+launching the application or involving navigation, preferences, or production
+database resources. Exact legacy-test dispositions are documented in
+[`PokedexTests/README.md`](PokedexTests/README.md).
 
 ## Concurrency and dependency ownership
 
 PikaDex uses targeted strict-concurrency checking while remaining on Swift 5.
 It is enabled for `PokedexCore`, `PokedexUI`, `DesignSystem`,
-`PokedexResources`, `PokedexConcurrencyTests`, `Pokedex`,
-`PokedexWidgetExtension`, and `TeamIntentHandler`. The legacy `PokedexTests`
-target is intentionally unchanged until its existing removed-type failures are
-modernized. Complete strict concurrency, default actor isolation, and Swift 6
-language mode are not enabled.
+`PokedexResources`, `PokedexTests`, `PokedexConcurrencyTests`, `Pokedex`,
+`PokedexWidgetExtension`, and `TeamIntentHandler`. Complete strict concurrency,
+default actor isolation, and Swift 6 language mode are not enabled.
 
 Main-actor isolation is limited to mutable UI owners:
 

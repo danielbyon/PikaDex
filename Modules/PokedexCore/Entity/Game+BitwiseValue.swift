@@ -10,7 +10,8 @@ import Foundation
 
 extension Game {
 
-    var bitwiseValue: Int64 {
+    /// A stable persisted StoreKit and domain identifier for this game.
+    public var bitwiseValue: Int64 {
         var value: Int64 = 0
         switch self {
         case .red:
