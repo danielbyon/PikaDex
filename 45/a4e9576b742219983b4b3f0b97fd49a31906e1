@@ -1,0 +1,25 @@
+AGENTS.md
+  s_98951b02e70754::t_4e9519d8d11c09 1-13
+docs/agents/issue-tracker.md
+  s_98951b02e70754::t_4e9519d8d11c09 1-46
+docs/agents/domain.md
+  s_98951b02e70754::t_4e9519d8d11c09 1-27
+docs/agents/triage-labels.md
+  s_98951b02e70754::t_4e9519d8d11c09 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "45a4e9576b742219983b4b3f0b97fd49a31906e1",
+  "prompts": {},
+  "sessions": {
+    "s_98951b02e70754": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b84-a6b7-78f3-9f56-0e128519def4",
+        "model": "gpt-6-luna"
+      },
+      "human_author": null
+    }
+  }
+}
