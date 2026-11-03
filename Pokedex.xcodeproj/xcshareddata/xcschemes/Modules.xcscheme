@@ -14,34 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654023D129791365005BF4DC"
-               BuildableName = "LocationFeature.framework"
-               BlueprintName = "LocationFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654022C62979068A005BF4DC"
-               BuildableName = "PokedexUI.framework"
-               BlueprintName = "PokedexUI"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "65401F412978EA91005BF4DC"
                BuildableName = "PokedexCore.framework"
                BlueprintName = "PokedexCore"
@@ -56,23 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654023B129791357005BF4DC"
-               BuildableName = "DualTypeFeature.framework"
-               BlueprintName = "DualTypeFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654023A12979134C005BF4DC"
-               BuildableName = "BattleAssistantFeature.framework"
-               BlueprintName = "BattleAssistantFeature"
+               BlueprintIdentifier = "65992A1B29C74D7A001ECD43"
+               BuildableName = "PokedexResources.framework"
+               BlueprintName = "PokedexResources"
                ReferencedContainer = "container:Pokedex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -98,107 +56,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6540243129791390005BF4DC"
-               BuildableName = "TypeFeature.framework"
-               BlueprintName = "TypeFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654024212979138B005BF4DC"
-               BuildableName = "TeamFeature.framework"
-               BlueprintName = "TeamFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654023C12979135E005BF4DC"
-               BuildableName = "ItemFeature.framework"
-               BlueprintName = "ItemFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6540238D297912C3005BF4DC"
-               BuildableName = "AbilityFeature.framework"
-               BlueprintName = "AbilityFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654023E12979136B005BF4DC"
-               BuildableName = "MachineFeature.framework"
-               BlueprintName = "MachineFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6540240129791377005BF4DC"
-               BuildableName = "NatureFeature.framework"
-               BlueprintName = "NatureFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6540241129791384005BF4DC"
-               BuildableName = "PokemonFeature.framework"
-               BlueprintName = "PokemonFeature"
-               ReferencedContainer = "container:Pokedex.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "654023F129791371005BF4DC"
-               BuildableName = "MoveFeature.framework"
-               BlueprintName = "MoveFeature"
+               BlueprintIdentifier = "654022C62979068A005BF4DC"
+               BuildableName = "PokedexUI.framework"
+               BlueprintName = "PokedexUI"
                ReferencedContainer = "container:Pokedex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -211,7 +71,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "65401F4A2978EA91005BF4DC"
@@ -242,9 +103,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "654023D129791365005BF4DC"
-            BuildableName = "LocationFeature.framework"
-            BlueprintName = "LocationFeature"
+            BlueprintIdentifier = "65401F412978EA91005BF4DC"
+            BuildableName = "PokedexCore.framework"
+            BlueprintName = "PokedexCore"
             ReferencedContainer = "container:Pokedex.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

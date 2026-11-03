@@ -126,8 +126,6 @@ extension PokepediaProduct {
         .swordShield
     ]
 
-    static let store = StoreClient(productIdentifiers: allProducts)
-
 }
 
 // MARK: - Purchase State
@@ -186,7 +184,7 @@ extension PokepediaProduct {
                 .violet
             ].forEach { value |= $0.bitwiseValue }
         case .allGames:
-            Game.allCases.forEach { value |= $0.bitwiseValue }
+            Game.allDatasets.forEach { value |= $0.bitwiseValue }
         case .generation1:
             Generation.i.games.forEach { value |= $0.bitwiseValue }
         case .generation2:

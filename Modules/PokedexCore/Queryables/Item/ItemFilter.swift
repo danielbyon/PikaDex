@@ -27,10 +27,10 @@ public struct ItemFilter: SearchableFilter {
         self.query = query
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredItem> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredItem> {
         let request: NSFetchRequest<StoredItem> = StoredItem.fetchRequest()
 
-        var predicates = [NSPredicate(format: "\(#keyPath(StoredItem.i_gameIndex)) == %d", game.index)]
+        var predicates = [NSPredicate(format: "\(#keyPath(StoredItem.i_gameIndex)) == %d", game.databaseIndex)]
         
         if !query.isEmpty {
             switch query {

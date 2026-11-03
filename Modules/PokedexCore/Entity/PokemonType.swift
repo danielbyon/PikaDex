@@ -32,7 +32,10 @@ public enum PokemonType: String, CaseIterable {
     // The tables only contain non-1x values, if it's missing it's assumed to be 1x
     public static let missingValue = 1.0
 
-    public static func allTypes(for game: Game) -> [PokemonType] { allTypes(for: game.generation) }
+    /// Types available under the released game's rules or the explicit National type policy.
+    public static func allTypes(for game: Game) -> [PokemonType] {
+        allTypes(for: game.typeEffectivenessRulesGeneration)
+    }
 
     public static func allTypes(for generation: Generation) -> [PokemonType] {
         switch generation {

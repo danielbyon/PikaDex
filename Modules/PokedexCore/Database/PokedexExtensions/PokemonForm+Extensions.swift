@@ -15,7 +15,7 @@ public extension StoredPokemonForm {
     static func fetchRequest(for ability: StoredAbility, game: Game) -> NSFetchRequest<StoredPokemonForm> {
         let abilityIndex = Int16(ability.index)
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
-            NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),
+            NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.databaseIndex),
             NSCompoundPredicate(orPredicateWithSubpredicates: [
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_primaryAbilityIndex)) == %d", abilityIndex),
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_secondaryAbilityIndex)) == %d", abilityIndex),
@@ -48,7 +48,7 @@ public extension StoredPokemonForm {
     }
 
     static func allFetchRequest(for game: Game) -> NSFetchRequest<StoredPokemonForm> {
-        let predicate = NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index)
+        let predicate = NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.databaseIndex)
         let request = makeFetchRequest(with: predicate)
         request.fetchBatchSize = DatabaseConstants.fetchBatchSize
         return request
@@ -120,7 +120,7 @@ public extension StoredPokemonForm {
     }
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.databaseIndex) }
     }
     var heightInMeters: Double {
         get { z_heightInMeters }

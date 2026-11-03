@@ -26,7 +26,7 @@ public struct PokemonTypeEffectiveness: View {
 
     public init(primaryType: PokemonType, secondaryType: PokemonType?, kind: TypeEffectiveness.Kind, game: Game) {
         typeViewModels = TypeEffectiveness(primary: primaryType, secondary: secondaryType)
-            .orderedTypeValues(for: kind, generation: game.generation)
+            .orderedTypeValues(for: kind, generation: game.typeEffectivenessRulesGeneration)
     }
 
 }

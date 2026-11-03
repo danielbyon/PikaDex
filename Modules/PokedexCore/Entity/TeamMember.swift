@@ -227,7 +227,7 @@ public struct TeamMember: Codable {
             move3: nil,
             move4: nil,
             nature: nil,
-            ability: pokemonForm.game.hasAbilities ? pokemonForm.primaryAbility?.name : nil,
+            ability: pokemonForm.hasAbilities ? pokemonForm.primaryAbility?.name : nil,
             heldItem: nil,
             game: pokemonForm.game,
             internalID: .init()

@@ -25,6 +25,8 @@ extension AlertInfo: Identifiable {
 
 }
 
+/// Main-actor observable state and refresh lifecycle for the store interface.
+@MainActor
 final class StoreViewModel: ObservableObject {
 
     @Published var allConsoleProducts: [ProductViewModel] = []
@@ -39,67 +41,79 @@ final class StoreViewModel: ObservableObject {
             || !allTipProducts.isEmpty
     }
 
-    private var storeClient = PokepediaProduct.store
+    @Dependency(\.storeClient) private var storeClient
     @Dependency(\.purchasedProductState) var purchasedProductState
+    private let notificationCenter: NotificationCenter
     private var cancellables = Set<AnyCancellable>()
-    private var observers = [NSObjectProtocol]()
+    private var refreshTask: Task<Void, Never>?
+    private var refreshGeneration = 0
 
-    init() {
-        cancellables.insert(NotificationCenter.default
+    init(notificationCenter: NotificationCenter = .default) {
+        self.notificationCenter = notificationCenter
+        cancellables.insert(notificationCenter
             .publisher(for: StoreClient.purchasedNotification)
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] _ in
-                self.isPurchasing = false
+            .sink { [weak self] _ in
+                self?.isPurchasing = false
         })
-        cancellables.insert(NotificationCenter.default
+        cancellables.insert(notificationCenter
             .publisher(for: StoreClient.cancelledNotification)
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] _ in
-                self.isPurchasing = false
+            .sink { [weak self] _ in
+                self?.isPurchasing = false
         })
-        cancellables.insert(NotificationCenter.default
+        cancellables.insert(notificationCenter
             .publisher(for: StoreClient.deferredNotification)
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] _ in
-                self.isPurchasing = false
+            .sink { [weak self] _ in
+                self?.isPurchasing = false
         })
-        cancellables.insert(NotificationCenter.default
+        cancellables.insert(notificationCenter
             .publisher(for: StoreClient.failedNotification)
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] _ in
-                self.isPurchasing = false
-                self.alertInfo = .init(
+            .sink { [weak self] _ in
+                self?.isPurchasing = false
+                self?.alertInfo = .init(
                     title: "Unable to purchase",
                     message: "Check your network settings and try again.")
         })
-        cancellables.insert(NotificationCenter.default
+        cancellables.insert(notificationCenter
             .publisher(for: StoreClient.purchasedNotification)
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] notification in
-                DispatchQueue.main.async {
+            .sink { [weak self] notification in
                 debugPrint("Purchase notification received")
-                    let message: String
-                    if StoreClient.isTipPurchaseNotification(notification) {
-                        message = "Thanks for the tip! ♥️"
-                    } else {
-                        message = "Use \"Choose Game\" on the main screen to select the purchased game(s)."
-                    }
-                    self.alertInfo = .init(
-                        title: "Thank You!",
-                        message: message)
+                let message: String
+                if StoreClient.isTipPurchaseNotification(notification) {
+                    message = "Thanks for the tip! ♥️"
+                } else {
+                    message = "Use \"Choose Game\" on the main screen to select the purchased game(s)."
                 }
+                self?.alertInfo = .init(title: "Thank You!", message: message)
         })
+    }
+
+    deinit {
+        refreshTask?.cancel()
     }
 
     func requestProducts() {
         alertInfo = nil
         error = nil
-        storeClient.requestProducts { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let products):
+        refreshTask?.cancel()
+        refreshGeneration &+= 1
+
+        let client = storeClient
+        let generation = refreshGeneration
+        refreshTask = Task { [weak self, client, generation] in
+            do {
+                let products = try await client.requestProducts()
+                try Task.checkCancellation()
+                guard let self, self.refreshGeneration == generation else { return }
                 self.updateProducts(with: products)
-            case .failure(let error):
+            } catch is CancellationError {
+                return
+            } catch {
+                guard let self, self.refreshGeneration == generation else { return }
                 self.handleProductsError(error)
             }
         }
@@ -127,26 +141,22 @@ final class StoreViewModel: ObservableObject {
             .compactMap { productsByidentifier[$0.productIdentifier] }
             .compactMap { ProductViewModel(product: $0, discountPercent: nil, showDescription: false) }
 
-        DispatchQueue.main.async {
-            self.hasLoadedProducts = true
-            if allConsoleProducts != self.allConsoleProducts {
-                self.allConsoleProducts = allConsoleProducts
-            }
-            if allTipProducts != self.allTipProducts {
-                self.allTipProducts = allTipProducts
-            }
+        hasLoadedProducts = true
+        if allConsoleProducts != self.allConsoleProducts {
+            self.allConsoleProducts = allConsoleProducts
+        }
+        if allTipProducts != self.allTipProducts {
+            self.allTipProducts = allTipProducts
         }
     }
 
     private func handleProductsError(_ error: Error?) {
         guard !hasLoadedProducts else { return } // Ignore errors on reload
         debugPrint(String(describing: error))
-        DispatchQueue.main.async {
-            self.alertInfo = .init(
-                title: "Failed to fetch products",
-                message: "Check your network settings and try again.")
-            self.error = .init(error: error)
-        }
+        alertInfo = .init(
+            title: "Failed to fetch products",
+            message: "Check your network settings and try again.")
+        self.error = .init(error: error)
     }
 
 }

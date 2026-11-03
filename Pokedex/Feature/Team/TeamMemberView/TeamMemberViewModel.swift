@@ -10,6 +10,8 @@ import Dependencies
 import PokedexUI
 import SwiftUI
 
+/// Main-actor observable editor state for one team member.
+@MainActor
 public final class TeamMemberViewModel: ObservableObject {
 
     @Published var teamMember: TeamMember
@@ -47,7 +49,7 @@ public final class TeamMemberViewModel: ObservableObject {
     }
 
     var ivRange: Range<Int> {
-        if game.generation < 3 {
+        if game.teamBuildingRulesGeneration < 3 {
             return 0..<16
         } else {
             return 0..<32
@@ -89,7 +91,7 @@ public final class TeamMemberViewModel: ObservableObject {
     }
 
     private let team: Team
-    private let dataStore: DataStore = .pokedex
+    @Dependency(\.pokedexDataStore) private var dataStore
     @Dependency(\.teamStore) var teamStore
 
     private var cancellables: Set<AnyCancellable> = []
@@ -120,7 +122,7 @@ public final class TeamMemberViewModel: ObservableObject {
     }
 
     func remainingEVRange(forStatType statType: StatType) -> Range<Int> {
-        if game.generation < 3 {
+        if game.teamBuildingRulesGeneration < 3 {
             return 0..<32
         } else {
             var endValue = 510
@@ -144,7 +146,7 @@ public final class TeamMemberViewModel: ObservableObject {
             }
 
             let minimumEndValue: Int
-            if game.generation < 6 {
+            if game.teamBuildingRulesGeneration < 6 {
                 minimumEndValue = 255
             } else {
                 minimumEndValue = 252

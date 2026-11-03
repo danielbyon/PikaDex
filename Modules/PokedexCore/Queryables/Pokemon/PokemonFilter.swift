@@ -79,11 +79,11 @@ public struct PokemonFilter: SearchableFilter {
         .init(game: game, pokedex: game.defaultPokedex)
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredPokemon> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredPokemon> {
         let fetchRequest = StoredPokemon.fetchRequest() as NSFetchRequest<StoredPokemon>
 
         var predicates = [
-            NSPredicate(format: "\(#keyPath(StoredPokemon.i_gameIndex)) == %d", game.index),
+            NSPredicate(format: "\(#keyPath(StoredPokemon.i_gameIndex)) == %d", game.databaseIndex),
             NSPredicate(format: "\(pokedex.keyPath) != -1")
         ]
 

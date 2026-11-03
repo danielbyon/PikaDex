@@ -22,9 +22,9 @@ public struct MachineFilter: QueryFilter {
         self.game = game
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredMachine> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredMachine> {
         let request: NSFetchRequest<StoredMachine> = StoredMachine.fetchRequest()
-        request.predicate = NSPredicate(format: "\(#keyPath(StoredMachine.i_gameIndex)) == %d", game.index)
+        request.predicate = NSPredicate(format: "\(#keyPath(StoredMachine.i_gameIndex)) == %d", game.databaseIndex)
         request.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredMachine.z_move)
         ]

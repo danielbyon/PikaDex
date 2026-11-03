@@ -24,13 +24,13 @@ struct ContentView: View {
     private var normalItemColor: Color { AppColor.gray.color }
     private var machineListTitle: String {
         var titleComponents: [String] = []
-        if settings.currentGame.hasTMs {
+        if settings.currentGame.datasetFeatures.showsTMs {
             titleComponents.append("TMs")
         }
-        if settings.currentGame.hasHMs {
+        if settings.currentGame.datasetFeatures.showsHMs {
             titleComponents.append("HMs")
         }
-        if settings.currentGame.hasTRs {
+        if settings.currentGame.datasetFeatures.showsTRs {
             titleComponents.append("TRs")
         }
         guard !titleComponents.isEmpty else { return "Machines" }
@@ -172,7 +172,7 @@ struct ContentView: View {
             .frame(minHeight: mediumButtonHeight)
         }
 
-        if settings.currentGame.hasAbilities {
+        if settings.currentGame.datasetFeatures.showsAbilities {
             NavigationLink(value: Route.tab(.abilities)) {
                 BigColoredButton(title: "Abilities", textColor: .black, fillColor: normalItemColor)
             }
@@ -186,7 +186,7 @@ struct ContentView: View {
             BigColoredButton(title: "Types", textColor: .black, fillColor: normalItemColor)
         }
 
-        if settings.currentGame.hasMachines {
+        if settings.currentGame.datasetFeatures.showsMachines {
             NavigationLink(value: Route.tab(.machines)) {
                 BigColoredButton(title: machineListTitle, textColor: .black, fillColor: normalItemColor)
             }
@@ -281,10 +281,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
-                .environment(\.colorScheme, .dark)
+        PreviewDependencyRoot {
+            Group {
+                ContentView()
+                ContentView()
+                    .environment(\.colorScheme, .dark)
+            }
         }
     }
 }

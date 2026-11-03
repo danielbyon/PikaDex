@@ -17,11 +17,11 @@ struct GenderRatioCell: View {
 
     private var genderRatioString: String? {
         guard let maleRatio = maleRatio,
-            let femaleRatio = femaleRatio,
-            let maleString = NumberFormatter.percent.string(from: NSNumber(value: maleRatio)),
-            let femaleString = NumberFormatter.percent.string(from: NSNumber(value: femaleRatio)) else {
+              let femaleRatio = femaleRatio else {
                 return nil
         }
+        let maleString = PokedexNumberFormat.oneDecimal.format(maleRatio) + "%"
+        let femaleString = PokedexNumberFormat.oneDecimal.format(femaleRatio) + "%"
         return "\(maleString) M, \(femaleString) F"
     }
 

@@ -10,6 +10,8 @@ import Foundation
 import StoreKit
 import AppSupport
 
+/// Main-actor coordinator for UIKit review-prompt lifecycle state.
+@MainActor
 struct InAppReviewManager {
 
     @AppGroupStorage(key: "appLaunchCount", defaultValue: 0)

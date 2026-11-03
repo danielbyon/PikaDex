@@ -10,6 +10,8 @@ import Dependencies
 import PokedexCore
 import SwiftUI
 
+/// Main-actor observable state for the team list interface.
+@MainActor
 final class TeamListViewModel: ObservableObject {
 
     // MARK: Properties
@@ -66,7 +68,7 @@ final class TeamListViewModel: ObservableObject {
     private func reloadSections() {
         let gamesToLoad: [Game]
         if game == .national {
-            gamesToLoad = Game.allGamesNewestFirst
+            gamesToLoad = Game.selectableGames
         } else {
             gamesToLoad = [game]
         }
@@ -88,6 +90,8 @@ final class TeamListViewModel: ObservableObject {
 
 extension TeamListViewModel {
 
+    /// Main-actor observable state for one rendered team-list section.
+    @MainActor
     final class Section: ObservableObject {
         let game: Game
         @Published var teams: [TeamViewModel]

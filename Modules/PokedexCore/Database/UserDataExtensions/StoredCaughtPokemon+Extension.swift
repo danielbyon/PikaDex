@@ -16,7 +16,7 @@ extension StoredCaughtPokemon {
 
     public var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int32(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int32(newValue.databaseIndex) }
     }
 
     public var index: Int {

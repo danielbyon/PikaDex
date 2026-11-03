@@ -19,17 +19,16 @@ struct GameSelector: View {
 
     var body: some View {
         List {
-            ForEach(Generation.allCases.reversed()) { generation in
+            Section {
+                gameRow(.national)
+            } header: {
+                SectionHeader(Game.national.title)
+            }
+
+            ForEach(Generation.releasedCasesLatestFirst) { generation in
                 Section {
                     ForEach(generation.games) { game in
-                        GameSelectorCell(game: game, currentGame: self.settings.currentGame).onTapGesture {
-                            if self.allowsSelection(for: game) {
-                                self.settings.currentGame = game
-                                self.presentationMode.wrappedValue.dismiss()
-                            } else {
-                                self.isShowingStore.toggle()
-                            }
-                        }
+                        gameRow(game)
                     }
                 } header: {
                     SectionHeader(generation.title)
@@ -55,6 +54,18 @@ struct GameSelector: View {
         presentationMode.wrappedValue.dismiss()
     }
 
+    private func gameRow(_ game: Game) -> some View {
+        GameSelectorCell(game: game, currentGame: settings.currentGame)
+            .onTapGesture {
+                if allowsSelection(for: game) {
+                    settings.currentGame = game
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    isShowingStore.toggle()
+                }
+            }
+    }
+
     private func allowsSelection(for game: Game) -> Bool {
         // Sword/Shield are always free
         [Game.sword, .shield].contains(game) || purchasedProductState.hasPurchasedGame(game)
@@ -64,7 +75,9 @@ struct GameSelector: View {
 
 struct GameSelector_Previews: PreviewProvider {
     static var previews: some View {
-        GameSelector()
+        PreviewDependencyRoot {
+            GameSelector()
+        }
     }
 }
 

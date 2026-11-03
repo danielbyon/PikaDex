@@ -173,12 +173,12 @@ struct PokemonContentView: View {
                 NavigationLink(value: Route.content(.learnset(currentForm, game: currentForm.game, learnsetType: .machine))) {
                     Value1Cell(text: "By Machine")
                 }
-                if currentForm.game.hasBreeding {
+                if currentForm.game.datasetFeatures.showsBreedingLearnsets {
                     NavigationLink(value: Route.content(.learnset(currentForm, game: currentForm.game, learnsetType: .breeding))) {
                         Value1Cell(text: "By Breeding")
                     }
                 }
-                if currentForm.game.hasTutoring {
+                if currentForm.game.datasetFeatures.showsTutoringLearnsets {
                     NavigationLink(value: Route.content(.learnset(currentForm, game: currentForm.game, learnsetType: .tutoring))) {
                         Value1Cell(text: "By Tutoring")
                     }

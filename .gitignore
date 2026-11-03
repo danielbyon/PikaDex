@@ -106,5 +106,18 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift
 
 .DS_Store
+__pycache__/
+*.pyc
 
 Crawlers/Cached/*
+.venv
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
+*.db-shm
+*.db-wal
+*.db-journal

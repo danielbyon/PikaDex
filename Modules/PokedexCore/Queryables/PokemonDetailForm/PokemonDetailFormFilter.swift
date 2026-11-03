@@ -27,7 +27,7 @@ public struct PokemonDetailFormFilter: SearchableFilter {
         self.query = query
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredPokemonForm> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredPokemonForm> {
         let fetchRequest: NSFetchRequest<StoredPokemonForm> = StoredPokemonForm.fetchRequest()
         fetchRequest.fetchBatchSize = DatabaseConstants.fetchBatchSize
         var predicates = [predicate]
@@ -58,14 +58,14 @@ public struct PokemonDetailFormFilter: SearchableFilter {
 extension PokemonDetailFormFilter {
 
     public init(game: Game) {
-        self.init(predicate: NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index))
+        self.init(predicate: NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.databaseIndex))
     }
 
     public init(ability: Ability, game: Game) {
         let abilityIndex = Int16(ability.index)
         self.init(
             predicate: NSCompoundPredicate(andPredicateWithSubpredicates: [
-                NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),
+                NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.databaseIndex),
                 NSCompoundPredicate(orPredicateWithSubpredicates: [
                     NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_primaryAbilityIndex)) == %d", abilityIndex),
                     NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_secondaryAbilityIndex)) == %d", abilityIndex),
@@ -108,7 +108,7 @@ extension PokemonDetailFormFilter {
     ) {
         self.init(
             predicate: NSCompoundPredicate(andPredicateWithSubpredicates: [
-                NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),
+                NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.databaseIndex),
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.z_pokemon.z_name)) == %@", pokemonName),
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_formIndex)) == %d", formIndex)
             ])
@@ -122,7 +122,7 @@ extension PokemonDetailFormFilter {
     ) {
         self.init(
             predicate: NSCompoundPredicate(andPredicateWithSubpredicates: [
-                NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),
+                NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.databaseIndex),
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.z_pokemon.z_name)) == %@", pokemonName),
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.z_name)) == %@", formName)
             ])

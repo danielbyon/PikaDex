@@ -8,6 +8,7 @@
 
 import Foundation
 import PokedexCore
+import DatabasePipelineSupport
 
 struct BulbapediaItem: Decodable {
 
@@ -68,7 +69,8 @@ struct BulbapediaItem: Decodable {
     func pocket(for game: Game) -> Pocket? {
         if let pocket = pocket[game.rawValue] {
             return pocket
-        } else if let pocket = pocket[game.generation.dictValue] {
+        } else if let generation = game.metadata?.generation,
+                  let pocket = pocket[generation.dictValue] {
             return pocket
         } else {
             return nil

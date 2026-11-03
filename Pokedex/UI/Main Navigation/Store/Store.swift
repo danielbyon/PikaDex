@@ -85,21 +85,12 @@ struct Store: View {
 
 struct Store_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = StoreViewModel()
-        viewModel.hasLoadedProducts = true
-        viewModel.allConsoleProducts = [
-            ProductViewModel(description: "Test product Test product Test product Test product Test product Test product Test product Test product ", pokepediaProduct: .allGames, price: "$4.99", product: SKProduct(), title: "All Games"),
-            ProductViewModel(description: "Test product", pokepediaProduct: .all3DSGames, price: "$1.99", product: SKProduct(), title: "All 3DS Games")
-        ]
-        viewModel.allTipProducts = [
-            ProductViewModel(description: nil, pokepediaProduct: .smallTip, price: "$0.99", product: SKProduct(), title: "Small Tip")
-        ]
-        return Group {
-            Store()
-                .environmentObject(viewModel)
-            Store()
-                .environmentObject(viewModel)
-                .colorScheme(.dark)
+        PreviewDependencyRoot {
+            Group {
+                Store()
+                Store()
+                    .colorScheme(.dark)
+            }
         }
     }
 }

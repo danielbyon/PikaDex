@@ -14,7 +14,7 @@ public extension StoredMachine {
 
     static func allFetchRequest(for game: Game) -> NSFetchRequest<StoredMachine> {
         let request: NSFetchRequest<StoredMachine> = StoredMachine.fetchRequest()
-        request.predicate = NSPredicate(format: "\(#keyPath(StoredMachine.i_gameIndex)) == %d", game.index)
+        request.predicate = NSPredicate(format: "\(#keyPath(StoredMachine.i_gameIndex)) == %d", game.databaseIndex)
         request.relationshipKeyPathsForPrefetching = [
             #keyPath(StoredMachine.z_move)
         ]
@@ -40,7 +40,7 @@ public extension StoredMachine {
 
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.databaseIndex) }
     }
 
     var number: Int {

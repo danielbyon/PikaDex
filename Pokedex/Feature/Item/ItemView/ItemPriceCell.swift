@@ -12,7 +12,8 @@ struct ItemPriceCell: View {
 
     let title: String
     let price: Int
-    let generation: Generation
+    /// Currency artwork is release-specific. Aggregate datasets omit it.
+    let generation: Generation?
 
     @Environment(\.sizeCategory) var sizeCategory
 
@@ -21,12 +22,14 @@ struct ItemPriceCell: View {
             Text(title)
             Spacer()
             HStack(spacing: 4) {
-                generation.priceSprite
-                    .interpolation(.low)
-                    .resizable()
-                    .renderingMode(.template)
-                    .scaledToFit()
-                    .frame(height: UIFont.preferredFont(forTextStyle: .body).pointSize)
+                if let generation {
+                    generation.priceSprite
+                        .interpolation(.low)
+                        .resizable()
+                        .renderingMode(.template)
+                        .scaledToFit()
+                        .frame(height: UIFont.preferredFont(forTextStyle: .body).pointSize)
+                }
                 Text("\(price)")
                     .fixedSize(horizontal: true, vertical: true)
             }

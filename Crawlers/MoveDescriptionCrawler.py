@@ -39,20 +39,28 @@ def main():
     
     file_path = 'Cached/PokemonDBMoves/'
     
-    with codecs.open("MovesList.txt", 'r', encoding='utf8') as f:
-        for line in f:
-            raw_name = line.strip()
-            name = raw_name.replace(' ', '-').replace('\'', '')
-            print('Processing {}'.format(name))
-            
-            filename = file_path + '{}.html'.format(name)
-            url = 'https://pokemondb.net/move/' + name
-            
-            contents = crawler.fetch_or_download(filename, url)
-            entries = process_move(contents)
-            
-            dict_name = re.sub(r'[^a-zA-Z0-9]', '', raw_name).lower()
-            all_entries[dict_name] = entries
+    filename = "Cached/PokemonDBMoves/_AllMoves.html"
+    url = "https://pokemondb.net/move/all"
+    contents = crawler.fetch_or_download(filename, url)
+    soup = BeautifulSoup(contents, 'lxml').html.body
+    table = soup.find('table', id='moves')
+    
+    for row in table.tbody.find_all('tr'):
+        cells = row.find_all('td')
+        name = cells[0].text.strip()
+        
+        move = name.strip().replace(' ', '-').replace('\'', '').replace(',', '')
+        
+        print("Processing " + move)
+    
+        filename = file_path + '{}.html'.format(move)
+        url = 'https://pokemondb.net/move/' + move
+        
+        contents = crawler.fetch_or_download(filename, url)
+        entries = process_move(contents)
+        
+        dict_name = re.sub(r'[^a-zA-Z0-9]', '', name).lower()
+        all_entries[dict_name] = entries
 
     crawler.write_data_to_file(all_entries, "Data/MoveDescriptions")
 #   print(all_entries)

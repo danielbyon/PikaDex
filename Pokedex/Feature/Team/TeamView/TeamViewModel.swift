@@ -9,6 +9,8 @@ import Combine
 import Dependencies
 import SwiftUI
 
+/// Main-actor observable state for one team detail interface.
+@MainActor
 public final class TeamViewModel: ObservableObject {
 
     var name: Binding<String> {

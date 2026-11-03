@@ -8,18 +8,53 @@
 
 import Foundation
 
+/// A stable, UI-safe description of why a query could not produce new rows.
+///
+/// The value deliberately excludes localized error text and underlying error
+/// objects so views and tests can compare failures deterministically.
+public enum QueryFailure: Equatable {
+    case missingFilter
+    case unsupportedFilter
+    case requestConstruction
+    case unavailableStore
+    case fetch
+}
+
+/// The observable lifecycle of a SwiftUI query.
+public enum QueryState: Equatable {
+    case idle
+    case loading
+    case loaded
+    case failed(QueryFailure)
+}
+
 public struct QueryResults<T: Queryable>: RandomAccessCollection {
 
     public var count: Int { results.count }
     public var startIndex: Int { 0 }
     public var endIndex: Int { count }
 
+    /// The state associated with this result snapshot.
+    ///
+    /// Loading and failed snapshots retain the last successfully fetched rows.
+    public private(set) var state: QueryState
+
     private let results: NSArray
     private var cache: NSMutableDictionary
 
-    init(results: NSArray = NSArray()) {
+    init(
+        results: NSArray = NSArray(),
+        state: QueryState = .idle
+    ) {
         self.results = results
+        self.state = state
         self.cache = .init(capacity: results.count)
+    }
+
+    func updating(state: QueryState) -> Self {
+        var copy = self
+        copy.state = state
+        return copy
     }
 
     public subscript(position: Int) -> T {

@@ -15,7 +15,14 @@ struct Settings: View {
     @AppStorage("preferredColorScheme") public var preferredColorScheme = 0
     @Environment(\.presentationMode) var presentationMode
     @State private var isShowingUpdateMessage = false
-    @StateObject private var appSettings = AppSettings()
+    @ObservedObject private var appSettings: AppSettings
+
+    init() {
+        // Observe the exact app-owned dependency instance without taking over
+        // its lifecycle or constructing a second settings model.
+        @Dependency(\.appSettings) var dependencyAppSettings
+        _appSettings = ObservedObject(wrappedValue: dependencyAppSettings)
+    }
 
     private var spacing: CGFloat { 16.0 }
     private var aboutText: String {
@@ -122,6 +129,8 @@ struct Settings: View {
 
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
-        Settings()
+        PreviewDependencyRoot {
+            Settings()
+        }
     }
 }

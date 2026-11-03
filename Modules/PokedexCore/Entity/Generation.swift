@@ -20,131 +20,91 @@ public enum Generation: Int, CaseIterable {
     case ix
     case all = 1000
 
-    public init(game: Game) {
-        switch game {
-        case .red, .blue, .yellow:
-            self = .i
-        case .gold, .silver, .crystal:
-            self = .ii
-        case .ruby, .sapphire, .emerald, .fireRed, .leafGreen:
-            self = .iii
-        case .diamond, .pearl, .platinum, .heartGold, .soulSilver:
-            self = .iv
-        case .black, .white, .black2, .white2:
-            self = .v
-        case .x, .y, .omegaRuby, .alphaSapphire:
-            self = .vi
-        case .sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee:
-            self = .vii
-        case .sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus:
-            self = .viii
-        case .scarlet, .violet:
-            self = .ix
-        case .national:
-            self = .all
+    /// Creates a released generation for a real game.
+    ///
+    /// Returns `nil` for National because National is a database dataset, not a
+    /// released game.
+    public init?(game: Game) {
+        guard let generation = game.metadata?.generation else {
+            return nil
         }
+        self = generation
     }
-
 }
 
 extension Generation {
 
-    public static var latest: Generation { Generation.allCases.filter { $0 != .all }.last! }
-
-    public static var allCasesWithoutAll: [Generation] {
-        Array(allCases.dropLast())
+    public static var latest: Generation {
+        guard let latest = Game.releasedGameMetadata.map(\.generation).max() else {
+            preconditionFailure("Released-game metadata catalog must not be empty")
+        }
+        return latest
     }
 
-    public static var allCasesLatestFirst: [Generation] {
-        Array(allCases.reversed().dropFirst())
+    public static var releasedCases: [Generation] {
+        allCases.filter { $0 != .all }
     }
+
+    public static var releasedCasesLatestFirst: [Generation] {
+        Array(releasedCases.reversed())
+    }
+
+    @available(*, deprecated, renamed: "releasedCases")
+    public static var allCasesWithoutAll: [Generation] { releasedCases }
+
+    @available(*, deprecated, renamed: "releasedCasesLatestFirst")
+    public static var allCasesLatestFirst: [Generation] { releasedCasesLatestFirst }
 
     public var title: String {
-        if self == .all {
-            return "National"
-        } else {
-            return "Generation \(rawValue)"
-        }
+        self == .all ? "All Generations" : "Generation \(rawValue)"
     }
 
     public var shortTitle: String {
-        if self == .all {
-            return "Ntnl"
-        } else {
-            return "Gen. \(rawValue)"
-        }
+        self == .all ? "All" : "Gen. \(rawValue)"
     }
 
+    /// Released games in the generation, in the selector's existing order.
     public var games: [Game] {
-        switch self {
-        case .i:
-            return [.red, .blue, .yellow]
-        case .ii:
-            return [.gold, .silver, .crystal]
-        case .iii:
-            return [.ruby, .sapphire, .emerald, .fireRed, .leafGreen]
-        case .iv:
-            return [.diamond, .pearl, .platinum, .heartGold, .soulSilver]
-        case .v:
-            return [.black, .white, .black2, .white2]
-        case .vi:
-            return [.x, .y, .omegaRuby, .alphaSapphire]
-        case .vii:
-            return [.sun, .moon, .ultraSun, .ultraMoon, .letsGoPikachu, .letsGoEevee]
-        case .viii:
-            return [.sword, .shield, .brilliantDiamond, .shiningPearl, .legendsArceus]
-        case .ix:
-            return [.scarlet, .violet]
-        case .all:
-            return [.national]
-        }
+        guard self != .all else { return [] }
+        return Game.releasedGameMetadata
+            .filter { $0.generation == self }
+            .map(\.game)
+            .sorted { $0.databaseIndex < $1.databaseIndex }
     }
 
-    public var defaultGame: Game {
+    /// Explicit product default for this generation, independent of recency.
+    public var defaultGame: Game? {
         switch self {
-        case .i:
-            return .red
-        case .ii:
-            return .gold
-        case .iii:
-            return .ruby
-        case .iv:
-            return .diamond
-        case .v:
-            return .black
-        case .vi:
-            return .x
-        case .vii:
-            return .sun
-        case .viii:
-            return .sword
-        case .ix:
-            return .scarlet
-        case .all:
-            return .national
+        case .i: return .red
+        case .ii: return .gold
+        case .iii: return .ruby
+        case .iv: return .diamond
+        case .v: return .black
+        case .vi: return .x
+        case .vii: return .sun
+        case .viii: return .sword
+        case .ix: return .scarlet
+        case .all: return nil
         }
     }
 
     public var hasAbilities: Bool { self >= .iii }
-
 }
 
 extension Generation: Codable { }
 
 extension Generation: Comparable {
-    
+
     public static func < (lhs: Generation, rhs: Generation) -> Bool {
         lhs.rawValue < rhs.rawValue
     }
-    
 }
 
 extension Generation: Hashable { }
 
 extension Generation: Identifiable {
-    
+
     public var id: Int { rawValue }
-    
 }
 
 extension Generation: ExpressibleByIntegerLiteral {
@@ -163,9 +123,7 @@ extension Generation: ExpressibleByIntegerLiteral {
         case 8: self = .viii
         case 9: self = .ix
         case 1000: self = .all
-        default:
-            fatalError()
+        default: preconditionFailure("Unsupported generation raw value: \(value)")
         }
     }
-
 }

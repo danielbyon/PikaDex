@@ -148,7 +148,7 @@ public struct TeamList: View {
 
     @ViewBuilder
     private func selectGame() -> some View {
-        ForEach(Game.allGamesNewestFirst) { game in
+        ForEach(Game.selectableGames) { game in
             Button(game.title) {
                 withAnimation {
                     viewModel.addNewTeam(for: game)
@@ -166,6 +166,8 @@ public struct TeamList: View {
 
 struct TeamList_Previews: PreviewProvider {
     static var previews: some View {
-        TeamList(game: .sword)
+        PreviewDependencyRoot {
+            TeamList(game: .sword)
+        }
     }
 }

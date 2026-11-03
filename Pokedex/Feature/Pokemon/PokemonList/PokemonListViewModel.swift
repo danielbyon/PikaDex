@@ -10,6 +10,8 @@ import Dependencies
 import PokedexCore
 import SwiftUI
 
+/// Main-actor observable state for Pokémon list filtering and presentation.
+@MainActor
 final class PokemonListViewModel: ObservableObject {
 
     // MARK: Properties

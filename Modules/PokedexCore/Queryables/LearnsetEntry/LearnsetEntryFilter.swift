@@ -33,7 +33,7 @@ public struct LearnsetEntryFilter: SearchableFilter {
         self.query = query
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredLearnsetEntry> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredLearnsetEntry> {
         let fetchRequest: NSFetchRequest<StoredLearnsetEntry> = StoredLearnsetEntry.fetchRequest()
         var predicates = [predicate]
 

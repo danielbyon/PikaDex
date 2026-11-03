@@ -78,7 +78,7 @@ public extension StoredMove {
     }
     var game: Game {
         get { Game(rawValue: z_game!)! }
-        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.index) }
+        set { z_game = newValue.rawValue; i_gameIndex = Int16(newValue.databaseIndex) }
     }
     var generationIntroduced: Generation {
         get { Generation(rawValue: Int(z_generationIntroduced))! }

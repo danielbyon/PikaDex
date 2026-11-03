@@ -53,7 +53,7 @@ public struct LocationFilter: SearchableFilter {
         self.query = query
     }
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredLocation> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredLocation> {
         let request: NSFetchRequest<StoredLocation> = StoredLocation.fetchRequest() as NSFetchRequest<StoredLocation>
         var predicates = [predicate]
 

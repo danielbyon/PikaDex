@@ -14,7 +14,7 @@ public extension StoredItem {
 
     static func allFetchRequest(for game: Game) -> NSFetchRequest<StoredItem> {
         let request: NSFetchRequest<StoredItem> = StoredItem.fetchRequest()
-        request.predicate = NSPredicate(format: "\(#keyPath(StoredItem.i_gameIndex)) == %d", game.index)
+        request.predicate = NSPredicate(format: "\(#keyPath(StoredItem.i_gameIndex)) == %d", game.databaseIndex)
         request.sortDescriptors = [
             NSSortDescriptor(key: #keyPath(StoredItem.i_nameIndex), ascending: true),
             NSSortDescriptor(key: #keyPath(StoredItem.z_generationIntroduced), ascending: true)

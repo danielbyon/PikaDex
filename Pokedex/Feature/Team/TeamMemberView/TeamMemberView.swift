@@ -69,11 +69,13 @@ public struct TeamMemberView: View {
 
 struct TeamMemberView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamMemberView(
-            viewModel: .init(
-                teamMember: Team.stub1.members[0],
-                team: .stub1
+        PreviewDependencyRoot {
+            TeamMemberView(
+                viewModel: .init(
+                    teamMember: Team.stub1.members[0],
+                    team: .stub1
+                )
             )
-        )
+        }
     }
 }

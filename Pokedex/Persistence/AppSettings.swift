@@ -12,6 +12,8 @@ import Combine
 import AppSupport
 import PokedexCore
 
+/// App-owned main-actor settings published to the SwiftUI hierarchy.
+@MainActor
 public final class AppSettings: ObservableObject {
 
     @AppGroupStorage(key: "com.danielbyon.pokedex.currentGame") public var currentGame: Game = .sword {
@@ -35,8 +37,13 @@ public final class AppSettings: ObservableObject {
 }
 
 private enum AppSettingsKey: DependencyKey {
-    static var liveValue: AppSettings = AppSettings()
-    static var testValue: AppSettings = AppSettings()
+    static var liveValue: AppSettings {
+        fatalError("AppSettings must be supplied by the application composition root.")
+    }
+
+    static var testValue: AppSettings {
+        fatalError("Tests must inject an isolated AppSettings instance.")
+    }
 }
 
 extension DependencyValues {

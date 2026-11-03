@@ -29,10 +29,10 @@ public struct AbilityPokemonFormFilter: QueryFilter {
     public var ability: Ability
     public var game: Game
 
-    public func makeFetchRequest(_ dataStore: DataStore) -> NSFetchRequest<StoredPokemonForm> {
+    public func makeFetchRequest() -> NSFetchRequest<StoredPokemonForm> {
         let abilityIndex = Int16(ability.index)
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
-            NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.index),
+            NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_gameIndex)) == %d", game.databaseIndex),
             NSCompoundPredicate(orPredicateWithSubpredicates: [
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_primaryAbilityIndex)) == %d", abilityIndex),
                 NSPredicate(format: "\(#keyPath(StoredPokemonForm.i_secondaryAbilityIndex)) == %d", abilityIndex),

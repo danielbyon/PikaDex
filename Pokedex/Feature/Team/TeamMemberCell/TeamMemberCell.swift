@@ -48,12 +48,14 @@ struct TeamMemberCell: View {
 
 struct TeamMemberCell_Previews: PreviewProvider {
     static var previews: some View {
-        TeamMemberCell(
-            viewModel: .init(
-                teamMember: Team.stub1.members[0],
-                team: .stub1
+        PreviewDependencyRoot {
+            TeamMemberCell(
+                viewModel: .init(
+                    teamMember: Team.stub1.members[0],
+                    team: .stub1
+                )
             )
-        )
+        }
     }
 }
 

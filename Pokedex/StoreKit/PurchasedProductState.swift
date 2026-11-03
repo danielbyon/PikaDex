@@ -14,6 +14,8 @@ import AppSupport
 
 private let purchasedKey = "PurchasedProductState.purchasedKey"
 
+/// App-owned main-actor purchase state published to SwiftUI.
+@MainActor
 final class PurchasedProductState: ObservableObject {
 
     // MARK: Properties
@@ -102,8 +104,13 @@ final class PurchasedProductState: ObservableObject {
 }
 
 private enum PurchasedProductStateKey: DependencyKey {
-    static var liveValue: PurchasedProductState = PurchasedProductState()
-    static var testValue: PurchasedProductState = PurchasedProductState()
+    static var liveValue: PurchasedProductState {
+        fatalError("PurchasedProductState must be supplied by the application composition root.")
+    }
+
+    static var testValue: PurchasedProductState {
+        fatalError("Tests must inject an isolated PurchasedProductState instance.")
+    }
 }
 
 extension DependencyValues {

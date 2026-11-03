@@ -185,8 +185,7 @@ extension PokedexNumbers {
     }
 
     public func formattedNumber(for pokedex: Pokedex) -> String {
-        let number = NSNumber(value: number(for: pokedex))
-        return NumberFormatter.pokemonIndex.string(from: number)!
+        PokedexNumberFormat.pokemonIndex.format(number(for: pokedex))
     }
 
 }

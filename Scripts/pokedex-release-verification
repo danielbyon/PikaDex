@@ -1,0 +1,237 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+SCRIPT_DIR="${0:A:h}"
+REPOSITORY_ROOT="${SCRIPT_DIR:h}"
+SIMULATOR_DESTINATION="${PIKADEX_SIMULATOR_DESTINATION:-platform=iOS Simulator,name=iPhone 17 Pro}"
+RELEASE_ROOT_INPUT="${PIKADEX_RELEASE_BUILD_ROOT:-${REPOSITORY_ROOT}/build/release-verification}"
+RELEASE_ROOT="${RELEASE_ROOT_INPUT:A}"
+DERIVED_DATA="${RELEASE_ROOT}/DerivedData"
+RESULT_BUNDLES="${RELEASE_ROOT}/ResultBundles"
+PROFILES="${RELEASE_ROOT}/Profiles"
+PIPELINE_TOOLING="${RELEASE_ROOT}/PipelineTooling"
+PIPELINE_OUTPUT="${RELEASE_ROOT}/PipelineOutput"
+PROJECT="${REPOSITORY_ROOT}/Pokedex.xcodeproj"
+NETWORK_DENIED_RUNNER="${SCRIPT_DIR}/run-with-network-denied"
+PIPELINE_WRAPPER="${SCRIPT_DIR}/pokedex-data-pipeline"
+NETWORK_DENIED_XCTEST_RUNNER="${SCRIPT_DIR}/run-xctest-bundle-with-network-denied"
+COMPLETED_GATES=()
+CURRENT_GATE=""
+XCODE_OFFLINE_FLAGS=(
+  -quiet
+  -disableAutomaticPackageResolution
+  -onlyUsePackageVersionsFromResolvedFile
+  -skipPackageUpdates
+)
+
+print_completed_gates() {
+  if (( ${#COMPLETED_GATES[@]} == 0 )); then
+    print "Completed gates: none"
+  else
+    print "Completed gates: ${(j:, :)COMPLETED_GATES}"
+  fi
+}
+
+fail_preflight() {
+  local exit_status="${1}"
+  shift
+  print -u2 "Failed gate: preflight (exit ${exit_status})"
+  print -u2 "$*"
+  print_completed_gates >&2
+  exit "${exit_status}"
+}
+
+is_within() {
+  local candidate="${1}"
+  local parent="${2}"
+  [[ "${candidate}" == "${parent}" || "${candidate}" == "${parent}/"* ]]
+}
+
+validate_release_root() {
+  local lexical_root="${RELEASE_ROOT_INPUT:a}"
+  local repository_build_root="${REPOSITORY_ROOT}/build"
+  local protected_path path_component inspected_path="/"
+
+  for path_component in ${(s:/:)lexical_root}; do
+    [[ -z "${path_component}" ]] && continue
+    inspected_path="${inspected_path%/}/${path_component}"
+    if [[ -L "${inspected_path}" ]]; then
+      fail_preflight 2 "Unsafe release root contains a symbolic-link component: ${inspected_path}"
+    fi
+  done
+
+  for protected_path in \
+    "/" \
+    "${HOME:A}" \
+    "${REPOSITORY_ROOT}" \
+    "${REPOSITORY_ROOT}/Pokedex" \
+    "${REPOSITORY_ROOT}/Modules" \
+    "${REPOSITORY_ROOT}/Resources"; do
+    if [[ "${RELEASE_ROOT}" == "${protected_path}" ]] || is_within "${protected_path}" "${RELEASE_ROOT}"; then
+      fail_preflight 2 "Unsafe release root overlaps a protected path: ${RELEASE_ROOT}"
+    fi
+  done
+
+  if is_within "${lexical_root}" "${REPOSITORY_ROOT}" && ! is_within "${lexical_root}" "${repository_build_root}"; then
+    fail_preflight 2 "Unsafe release root inside the repository must be beneath ${repository_build_root}"
+  fi
+
+  if is_within "${lexical_root}" "${repository_build_root}" && ! is_within "${RELEASE_ROOT}" "${repository_build_root}"; then
+    fail_preflight 2 "Unsafe release root escapes the repository build directory through a symbolic link"
+  fi
+}
+
+validate_simulator_destination() {
+  local destination_part key value simulator_id="" simulator_name=""
+  local devices
+
+  if [[ "${SIMULATOR_DESTINATION}" != platform=iOS\ Simulator* ]]; then
+    fail_preflight 2 "Simulator destination must use platform=iOS Simulator: ${SIMULATOR_DESTINATION}"
+  fi
+
+  for destination_part in ${(s:,:)SIMULATOR_DESTINATION}; do
+    key="${destination_part%%=*}"
+    value="${destination_part#*=}"
+    key="${key## }"
+    value="${value## }"
+    case "${key}" in
+      id) simulator_id="${value}" ;;
+      name) simulator_name="${value}" ;;
+    esac
+  done
+
+  if [[ -z "${simulator_id}" && -z "${simulator_name}" ]]; then
+    fail_preflight 2 "Simulator destination must include an id or name: ${SIMULATOR_DESTINATION}"
+  fi
+
+  if ! devices="$(/usr/bin/xcrun simctl list devices available 2>&1)"; then
+    fail_preflight 2 "Unable to list available simulators: ${devices}"
+  fi
+
+  if [[ -n "${simulator_id}" ]]; then
+    if ! print -r -- "${devices}" | /usr/bin/grep -Fq "(${simulator_id})"; then
+      fail_preflight 2 "Simulator destination is unavailable: ${SIMULATOR_DESTINATION}"
+    fi
+  elif ! print -r -- "${devices}" | /usr/bin/grep -Fq "${simulator_name} ("; then
+    fail_preflight 2 "Simulator destination is unavailable: ${SIMULATOR_DESTINATION}"
+  fi
+}
+
+prepare_owned_directories() {
+  local owned_directory
+
+  /bin/mkdir -p "${RELEASE_ROOT}"
+  for owned_directory in \
+    "${DERIVED_DATA}" \
+    "${RESULT_BUNDLES}" \
+    "${PROFILES}" \
+    "${PIPELINE_TOOLING}" \
+    "${PIPELINE_OUTPUT}"; do
+    if [[ -L "${owned_directory}" ]]; then
+      fail_preflight 2 "Unsafe owned directory is a symbolic link: ${owned_directory}"
+    fi
+    /bin/rm -rf -- "${owned_directory}"
+    /bin/mkdir -p "${owned_directory}"
+  done
+}
+
+preflight() {
+  print "Current gate: preflight"
+
+  [[ -x "${NETWORK_DENIED_RUNNER}" ]] || fail_preflight 2 "Missing network-denial helper: ${NETWORK_DENIED_RUNNER}"
+  [[ -x "${NETWORK_DENIED_XCTEST_RUNNER}" ]] || fail_preflight 2 "Missing network-isolated XCTest helper: ${NETWORK_DENIED_XCTEST_RUNNER}"
+  [[ -x "${PIPELINE_WRAPPER}" ]] || fail_preflight 2 "Missing data-pipeline wrapper: ${PIPELINE_WRAPPER}"
+  [[ -x "/usr/bin/xcodebuild" ]] || fail_preflight 2 "xcodebuild is unavailable"
+  [[ -x "/usr/bin/xcrun" ]] || fail_preflight 2 "xcrun is unavailable"
+
+  validate_simulator_destination
+  validate_release_root
+  prepare_owned_directories
+  COMPLETED_GATES+=(preflight)
+  print_completed_gates
+}
+
+run_gate() {
+  local gate="${1}"
+  shift
+  local exit_status
+
+  CURRENT_GATE="${gate}"
+  print "Current gate: ${gate}"
+  if "$@"; then
+    COMPLETED_GATES+=("${gate}")
+    print_completed_gates
+  else
+    exit_status=$?
+    print -u2 "Failed gate: ${gate} (exit ${exit_status})"
+    print_completed_gates >&2
+    exit "${exit_status}"
+  fi
+}
+
+run_database_pipeline_tests() {
+  /usr/bin/xcodebuild test \
+    -project "${PROJECT}" \
+    -scheme DatabasePipelineTests \
+    -destination "platform=macOS,arch=arm64" \
+    "${XCODE_OFFLINE_FLAGS[@]}" \
+    -derivedDataPath "${DERIVED_DATA}/DatabasePipelineTests" \
+    -resultBundlePath "${RESULT_BUNDLES}/DatabasePipelineTests.xcresult" || return $?
+
+  /usr/bin/env LLVM_PROFILE_FILE="${PROFILES}/DatabasePipelineTests-deny-network-%p.profraw" \
+    "${NETWORK_DENIED_XCTEST_RUNNER}" \
+    "${DERIVED_DATA}/DatabasePipelineTests/Build/Products/Debug/DatabasePipelineTests.xctest"
+}
+
+preflight
+
+run_gate "Pokedex build" \
+  /usr/bin/xcodebuild build \
+    -project "${PROJECT}" \
+    -scheme Pokedex \
+    -destination "${SIMULATOR_DESTINATION}" \
+    "${XCODE_OFFLINE_FLAGS[@]}" \
+    -derivedDataPath "${DERIVED_DATA}/Pokedex"
+
+run_gate "Modules" \
+  /usr/bin/xcodebuild test \
+    -project "${PROJECT}" \
+    -scheme Modules \
+    -destination "${SIMULATOR_DESTINATION}" \
+    "${XCODE_OFFLINE_FLAGS[@]}" \
+    -derivedDataPath "${DERIVED_DATA}/Modules" \
+    -resultBundlePath "${RESULT_BUNDLES}/Modules.xcresult"
+
+run_gate "PokedexTests" \
+  /usr/bin/xcodebuild test \
+    -project "${PROJECT}" \
+    -scheme PokedexTests \
+    -destination "${SIMULATOR_DESTINATION}" \
+    "${XCODE_OFFLINE_FLAGS[@]}" \
+    -derivedDataPath "${DERIVED_DATA}/PokedexTests" \
+    -resultBundlePath "${RESULT_BUNDLES}/PokedexTests.xcresult"
+
+run_gate "PokedexConcurrencyTests" \
+  /usr/bin/xcodebuild test \
+    -project "${PROJECT}" \
+    -scheme PokedexConcurrencyTests \
+    -destination "${SIMULATOR_DESTINATION}" \
+    "${XCODE_OFFLINE_FLAGS[@]}" \
+    -derivedDataPath "${DERIVED_DATA}/PokedexConcurrencyTests" \
+    -resultBundlePath "${RESULT_BUNDLES}/PokedexConcurrencyTests.xcresult"
+
+run_gate "DatabasePipelineTests" \
+  run_database_pipeline_tests
+
+run_gate "data pipeline prepare-tools" \
+  /usr/bin/env PIKADEX_PIPELINE_BUILD_ROOT="${PIPELINE_TOOLING}" \
+    "${PIPELINE_WRAPPER}" prepare-tools
+
+run_gate "data pipeline verify" \
+  /usr/bin/env PIKADEX_PIPELINE_BUILD_ROOT="${PIPELINE_TOOLING}" \
+    "${PIPELINE_WRAPPER}" verify --output-dir "${PIPELINE_OUTPUT}"
+
+print "Release verification succeeded."
+print_completed_gates
+print "Isolated output root: ${RELEASE_ROOT}"

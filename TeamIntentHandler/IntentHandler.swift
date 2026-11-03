@@ -13,12 +13,11 @@ import PokedexCore
 
 class IntentHandler: INExtension, TeamConfigurationIntentHandling {
 
-    @Dependency(\.appSettings) var settings
     @Dependency(\.teamStorage) var storage
 
     func provideTeamOptionsCollection(for intent: TeamConfigurationIntent, with completion: @escaping (INObjectCollection<DynamicTeam>?, Error?) -> Void) {
         var sections: [INObjectSection<DynamicTeam>] = []
-        for game in Game.allGamesNewestFirst {
+        for game in Game.selectableGames {
             guard let teams = getTeams(forGame: game) else { continue }
             let section = INObjectSection(title: "Pokémon \(game.title)", items: teams)
             sections.append(section)

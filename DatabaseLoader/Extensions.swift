@@ -8,6 +8,7 @@
 
 import Foundation
 import PokedexCore
+import DatabasePipelineSupport
 
 // MARK: - Extensions
 extension LevelingRate {

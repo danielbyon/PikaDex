@@ -5,11 +5,15 @@
 //  Created by Daniel Byon on 10/23/22.
 //
 
-import CoreData
+import Dependencies
 import PokedexCore
 import SwiftUI
 
+/// Main-actor observable state for the battle-assistant interface.
+@MainActor
 final class BattleAssistantViewModel: ObservableObject {
+
+    @Dependency(\.pokedexDataStore) private var dataStore
 
     @Published var pokemonForm: PokemonDetailForm? {
         didSet {
@@ -79,11 +83,8 @@ final class BattleAssistantViewModel: ObservableObject {
             formIndex: formIndex,
             game: game
         )
-        let container = NSPersistentContainer.pokedexContainer
-        let request = filter.makeFetchRequest(DataStore(container: container))
         do {
-            guard let storedPokemonForm = try container.viewContext.fetch(request).first else { return }
-            self.pokemonForm = .init(result: storedPokemonForm)
+            self.pokemonForm = try dataStore.fetch(PokemonDetailForm.self, filter: filter).first
         } catch {
             debugPrint(error)
         }

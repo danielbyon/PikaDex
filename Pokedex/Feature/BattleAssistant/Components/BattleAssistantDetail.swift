@@ -59,7 +59,7 @@ struct BattleAssistantDetail: View {
             SectionHeader("Move Type Recommendations")
         }
 
-        if pokemonForm.game.hasAbilities {
+        if pokemonForm.hasAbilities {
             Section {
                 PokemonAbilities(form: pokemonForm, pokedex: .national)
             } header: {
@@ -86,4 +86,3 @@ struct BattleAssistantDetail: View {
     }
 
 }
-
