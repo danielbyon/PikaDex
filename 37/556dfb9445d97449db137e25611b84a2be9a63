@@ -1,0 +1,23 @@
+docs/crawler-extraction-evidence.md
+  s_c4c26be2fc295a::t_0f6854c980ae2c 31-32
+  s_c4c26be2fc295a::t_086f5806645a04 30,33-36
+  s_c4c26be2fc295a::t_93f1b9c670f726 119-121
+  s_c4c26be2fc295a::t_7763294e8d84fe 38-82,106-108,150-155
+  s_c4c26be2fc295a::t_8bf98965048340 1-29,37,83-105,109-118,122-149,156-172
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "37556dfb9445d97449db137e25611b84a2be9a63",
+  "prompts": {},
+  "sessions": {
+    "s_c4c26be2fc295a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a04c-f768-77a2-b0d8-9e14583300b0",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    }
+  }
+}
