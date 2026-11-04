@@ -1,0 +1,19 @@
+docs/adr/0003-external-crawler-source.md
+  s_c4c26be2fc295a::t_9e6d086672006f 39-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4cc37f0ee5b3650adfcb4f21b36d22ed4c833e99",
+  "prompts": {},
+  "sessions": {
+    "s_c4c26be2fc295a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a04c-f768-77a2-b0d8-9e14583300b0",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    }
+  }
+}
