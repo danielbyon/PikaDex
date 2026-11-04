@@ -13,6 +13,12 @@ The automated trust boundary begins at the reviewed inputs declared in
 until a maintainer completes the manual Numbers work and reviews a fresh
 export. No crawler output is copied directly into a loader input path.
 
+Crawler sources now live in the separately pinned `PikaDexCrawlers` checkout.
+The `Crawlers/Data/...` paths in the manifest remain the logical source names
+and map to `PikaDexCrawlers/Data/...` during preflight and normalization.
+Updating the pinned source revision does not approve changed loader data;
+changed inputs still require source review and matching manifest checksums.
+
 ## 2. Crawler inventory
 
 The durable outputs below are taken from output calls or path constants in the

@@ -3,11 +3,13 @@ import XCTest
 
 final class PipelineManifestTests: XCTestCase {
     private var temporaryDirectory: URL!
+    private var crawlersRoot: URL!
 
     override func setUpWithError() throws {
         temporaryDirectory = FileManager.default.temporaryDirectory
             .appendingPathComponent("PikaDexPipelineManifestTests-\(UUID().uuidString)", isDirectory: true)
         try FileManager.default.createDirectory(at: temporaryDirectory, withIntermediateDirectories: true)
+        crawlersRoot = temporaryDirectory.appendingPathComponent("PikaDexCrawlers", isDirectory: true)
     }
 
     override func tearDownWithError() throws {
@@ -30,7 +32,11 @@ final class PipelineManifestTests: XCTestCase {
         try PipelineIO.writeJSON(manifest, to: manifestURL)
 
         XCTAssertEqual(try PipelineManifestLoader.load(from: manifestURL), manifest)
-        XCTAssertNoThrow(try PipelineIO.verify(inputs: [input], repositoryRoot: temporaryDirectory))
+        XCTAssertNoThrow(try PipelineIO.verify(
+            inputs: [input],
+            repositoryRoot: temporaryDirectory,
+            crawlersRoot: crawlersRoot
+        ))
     }
 
     func testManifestRejectsUnsupportedVersionDuplicateAndUnsortedPaths() throws {
@@ -57,7 +63,9 @@ final class PipelineManifestTests: XCTestCase {
 
     func testChecksumMismatchAndMissingFileAreActionable() throws {
         let drift = PipelineManifest.SourceInput(path: "drift.json", sha256: "00", format: .json, provenance: "fixture")
-        XCTAssertThrowsError(try PipelineIO.verify(inputs: [drift], repositoryRoot: temporaryDirectory)) {
+        XCTAssertThrowsError(try PipelineIO.verify(
+            inputs: [drift], repositoryRoot: temporaryDirectory, crawlersRoot: crawlersRoot
+        )) {
             XCTAssertTrue(String(describing: $0).contains("missing"))
         }
 
@@ -66,7 +74,9 @@ final class PipelineManifestTests: XCTestCase {
             atomically: true,
             encoding: .utf8
         )
-        XCTAssertThrowsError(try PipelineIO.verify(inputs: [drift], repositoryRoot: temporaryDirectory)) {
+        XCTAssertThrowsError(try PipelineIO.verify(
+            inputs: [drift], repositoryRoot: temporaryDirectory, crawlersRoot: crawlersRoot
+        )) {
             XCTAssertTrue(String(describing: $0).contains("Checksum mismatch"))
         }
     }
@@ -85,7 +95,9 @@ final class PipelineManifestTests: XCTestCase {
         try PipelineIO.writeJSON(makeManifest(inputs: [pinned]), to: manifestURL)
         try "{\"value\":2}".write(to: inputURL, atomically: true, encoding: .utf8)
 
-        XCTAssertThrowsError(try PipelineIO.preflightReviewedInputs([pinned], repositoryRoot: temporaryDirectory))
+        XCTAssertThrowsError(try PipelineIO.preflightReviewedInputs(
+            [pinned], repositoryRoot: temporaryDirectory, crawlersRoot: crawlersRoot
+        ))
         let reviewedUpdate = PipelineManifest.SourceInput(
             path: "input.json",
             sha256: try PipelineIO.sha256(of: inputURL),
@@ -96,7 +108,9 @@ final class PipelineManifestTests: XCTestCase {
         try PipelineIO.writeJSON(makeManifest(inputs: [reviewedUpdate]), to: manifestURL)
 
         XCTAssertNoThrow(try PipelineManifestLoader.load(from: manifestURL))
-        XCTAssertNoThrow(try PipelineIO.preflightReviewedInputs([reviewedUpdate], repositoryRoot: temporaryDirectory))
+        XCTAssertNoThrow(try PipelineIO.preflightReviewedInputs(
+            [reviewedUpdate], repositoryRoot: temporaryDirectory, crawlersRoot: crawlersRoot
+        ))
     }
 
     func testReviewedDelimitedInputPreflightValidatesHeadersAndStableKeys() throws {
@@ -122,7 +136,9 @@ final class PipelineManifestTests: XCTestCase {
         )
 
         XCTAssertFalse(
-            try PipelineIO.preflightReviewedInputs([input], repositoryRoot: temporaryDirectory)
+            try PipelineIO.preflightReviewedInputs(
+                [input], repositoryRoot: temporaryDirectory, crawlersRoot: crawlersRoot
+            )
                 .contains(where: { $0.severity == .error })
         )
 
@@ -144,7 +160,8 @@ final class PipelineManifestTests: XCTestCase {
         )
         let duplicateFindings = try PipelineIO.preflightReviewedInputs(
             [duplicate],
-            repositoryRoot: temporaryDirectory
+            repositoryRoot: temporaryDirectory,
+            crawlersRoot: crawlersRoot
         )
         XCTAssertTrue(duplicateFindings.contains(where: { $0.code == "duplicate_unique_identity" }))
     }
@@ -165,7 +182,8 @@ final class PipelineManifestTests: XCTestCase {
         )
         let positionalFindings = try PipelineIO.preflightReviewedInputs(
             [positional],
-            repositoryRoot: temporaryDirectory
+            repositoryRoot: temporaryDirectory,
+            crawlersRoot: crawlersRoot
         )
         XCTAssertFalse(positionalFindings.contains(where: { $0.severity == .error }))
         XCTAssertTrue(positionalFindings.contains(where: { $0.code == "legacy_blank_header" }))
@@ -182,7 +200,9 @@ final class PipelineManifestTests: XCTestCase {
             responsibleManualStep: "Review and export the Pokemon table"
         )
         XCTAssertTrue(
-            try PipelineIO.preflightReviewedInputs([missing], repositoryRoot: temporaryDirectory)
+            try PipelineIO.preflightReviewedInputs(
+                [missing], repositoryRoot: temporaryDirectory, crawlersRoot: crawlersRoot
+            )
                 .contains(where: { $0.code == "missing_required_field" && $0.severity == .error })
         )
     }

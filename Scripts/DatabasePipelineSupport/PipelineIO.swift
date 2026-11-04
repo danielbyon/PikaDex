@@ -45,12 +45,25 @@ public enum PipelineIO {
 
     public static func verify(
         inputs: [PipelineManifest.SourceInput],
-        repositoryRoot: URL
+        repositoryRoot: URL,
+        crawlersRoot: URL
     ) throws {
-        try verify(
-            artifacts: inputs.map { .init(path: $0.path, sha256: $0.sha256) },
-            repositoryRoot: repositoryRoot
-        )
+        for input in inputs.sorted(by: { $0.path < $1.path }) {
+            let url = try PipelinePath.resolveSourceInput(
+                input.path,
+                repositoryRoot: repositoryRoot,
+                crawlersRoot: crawlersRoot
+            )
+            guard FileManager.default.fileExists(atPath: url.path) else {
+                throw PipelineError.missingPrerequisite("Manifest-declared file is missing: \(input.path)")
+            }
+            let actual = try sha256(of: url)
+            guard actual == input.sha256 else {
+                throw PipelineError.inputDrift(
+                    "Checksum mismatch for \(input.path): expected \(input.sha256), found \(actual)"
+                )
+            }
+        }
     }
 
     /// Verifies the reviewed loader-input boundary before normalization.
@@ -61,12 +74,17 @@ public enum PipelineIO {
     /// contracts. The checked-in files are never rewritten by preflight.
     public static func preflightReviewedInputs(
         _ inputs: [PipelineManifest.SourceInput],
-        repositoryRoot: URL
+        repositoryRoot: URL,
+        crawlersRoot: URL
     ) throws -> [ValidationIssue] {
-        try verify(inputs: inputs, repositoryRoot: repositoryRoot)
+        try verify(inputs: inputs, repositoryRoot: repositoryRoot, crawlersRoot: crawlersRoot)
         var findings = [ValidationIssue]()
         for input in inputs.sorted(by: { $0.path < $1.path }) {
-            let url = try PipelinePath.resolve(input.path, under: repositoryRoot)
+            let url = try PipelinePath.resolveSourceInput(
+                input.path,
+                repositoryRoot: repositoryRoot,
+                crawlersRoot: crawlersRoot
+            )
             let data = try Data(contentsOf: url)
             guard String(data: data, encoding: .utf8) != nil else {
                 findings.append(.init(
@@ -278,11 +296,16 @@ public enum PipelineIO {
     public static func normalize(
         inputs: [PipelineManifest.SourceInput],
         repositoryRoot: URL,
+        crawlersRoot: URL,
         destinationRoot: URL
     ) throws {
         try FileManager.default.createDirectory(at: destinationRoot, withIntermediateDirectories: true)
         for input in inputs.sorted(by: { $0.path < $1.path }) {
-            let source = try PipelinePath.resolve(input.path, under: repositoryRoot)
+            let source = try PipelinePath.resolveSourceInput(
+                input.path,
+                repositoryRoot: repositoryRoot,
+                crawlersRoot: crawlersRoot
+            )
             let destination = destinationRoot.appendingPathComponent(input.path)
             try FileManager.default.createDirectory(
                 at: destination.deletingLastPathComponent(),

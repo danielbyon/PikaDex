@@ -20,6 +20,12 @@ and does not fetch artwork.
 
 ## 2. Crawler preparation (optional network stage)
 
+The crawler scripts and their support files come from the pinned
+`PikaDexCrawlers` checkout. Set `PIKADEX_CRAWLERS_ROOT` or pass
+`--crawlers-root` when it is not beside PikaDex. Acquisition copies only the
+staged crawler files into its isolated output directory; it does not promote
+their results into reviewed loader inputs.
+
 1. Inventory each required upstream source. Identify the crawler, durable
    staging output, allowed hosts, rate limits, dependency versions, and
    redistribution constraints.

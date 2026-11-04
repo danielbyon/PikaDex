@@ -8,6 +8,8 @@ BUILD_ROOT="${PIKADEX_PIPELINE_BUILD_ROOT:-${REPOSITORY_ROOT}/build/data-pipelin
 DERIVED_DATA="${BUILD_ROOT}/DerivedData"
 CONFIGURATION="${PIKADEX_PIPELINE_CONFIGURATION:-Debug}"
 COMMAND="${1:-verify}"
+ORIGINAL_ARGS=("$@")
+CRAWLERS_ROOT="${PIKADEX_CRAWLERS_ROOT:-${REPOSITORY_ROOT:h}/PikaDexCrawlers}"
 NETWORK_DENIED_RUNNER="${SCRIPT_DIR}/run-with-network-denied"
 PINNED_PACKAGE_RESOLVED="${SCRIPT_DIR}/DataPipeline/Package.resolved"
 PROJECT_PACKAGE_RESOLVED="${REPOSITORY_ROOT}/Pokedex.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved"
@@ -16,6 +18,27 @@ XCODE_OFFLINE_FLAGS=(
   -onlyUsePackageVersionsFromResolvedFile
   -skipPackageUpdates
 )
+
+if [[ "${COMMAND}" != "prepare-tools" && "${COMMAND}" != "validate" && "${COMMAND}" != "compare" ]]; then
+  argument_index=1
+  while (( argument_index <= ${#ORIGINAL_ARGS} )); do
+    if [[ "${ORIGINAL_ARGS[$argument_index]}" == "--crawlers-root" ]]; then
+      (( argument_index += 1 ))
+      if (( argument_index > ${#ORIGINAL_ARGS} )); then
+        print -u2 "error: --crawlers-root requires a path"
+        exit 2
+      fi
+      CRAWLERS_ROOT="${ORIGINAL_ARGS[$argument_index]}"
+    fi
+    (( argument_index += 1 ))
+  done
+
+  if [[ ! -d "${CRAWLERS_ROOT}" || ! -d "${CRAWLERS_ROOT}/Data" ]]; then
+    print -u2 "error: PikaDexCrawlers source checkout is missing or incomplete at ${CRAWLERS_ROOT}"
+    print -u2 "Clone https://github.com/danielbyon/PikaDexCrawlers beside PikaDex, set PIKADEX_CRAWLERS_ROOT, or pass --crawlers-root."
+    exit 2
+  fi
+fi
 
 if [[ ! -x "${NETWORK_DENIED_RUNNER}" ]]; then
   print -u2 "error: ${NETWORK_DENIED_RUNNER} is required to enforce offline pipeline execution"
@@ -186,10 +209,12 @@ fi
 if [[ "${COMMAND}" == "acquire" ]]; then
   exec "${DERIVED_DATA}/Build/Products/${CONFIGURATION}/DatabasePipeline" \
     "$@" \
+    --crawlers-root "${CRAWLERS_ROOT}" \
     --repository-root "${REPOSITORY_ROOT}"
 fi
 
 exec "${NETWORK_DENIED_RUNNER}" \
   "${DERIVED_DATA}/Build/Products/${CONFIGURATION}/DatabasePipeline" \
     "$@" \
+    --crawlers-root "${CRAWLERS_ROOT}" \
     --repository-root "${REPOSITORY_ROOT}"

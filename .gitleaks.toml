@@ -1,0 +1,10 @@
+title = "PikaDex security scan"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Exclude local cached third-party web pages"
+paths = [
+  '''(^|/)Crawlers/Cached/''',
+]
