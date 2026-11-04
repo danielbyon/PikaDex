@@ -1,0 +1,67 @@
+Scripts/DataPipeline/crawler-source.json
+  s_c4c26be2fc295a::t_a0ece1d06a0225 13-14
+  s_c4c26be2fc295a::t_8d41c61ddf9a65 1-12,15-16
+Scripts/DatabasePipelineSupport/PipelineCoordinator.swift
+  s_c4c26be2fc295a::t_fffd7811c5b46b 17,20-24,30,43-46,74-78,99-115,159-163,172,208-212,226,309-318,383-387,390-394
+Scripts/DataPipeline/README.md
+  s_c4c26be2fc295a::t_4de5e9b0b54299 38-39,291-293
+  s_c4c26be2fc295a::t_56a13096e16beb 41-54
+  s_572fff539c3fed::t_eb96372c70cd72 40,294
+.gitleaks.toml
+  s_c4c26be2fc295a::t_56a13096e16beb 1-10
+.github/workflows/ci.yml
+  s_c4c26be2fc295a::t_0d328e4535db1a 23-25,31,34-38,40-41,43-44,46-48,57
+  s_c4c26be2fc295a::t_56a13096e16beb 26-28,42,45
+  s_c4c26be2fc295a::t_8d41c61ddf9a65 29-30,32-33,39
+Scripts/DataPipeline/MANUAL_WORKFLOW.md
+  s_c4c26be2fc295a::t_56a13096e16beb 16-21
+PokedexTests/DatabasePipeline/PipelineCoordinatorTests.swift
+  s_c4c26be2fc295a::t_70e02bc0eb3eaa 108-118
+  s_c4c26be2fc295a::t_98dcc74c0cfeae 31,33,36,38-39,42,72,454
+  s_c4c26be2fc295a::t_cbdedba91f3e58 493
+  s_c4c26be2fc295a::t_941b1b9cd105fa 172,184,200,212,241,268,297,367,403,446,502
+docs/adr/0003-external-crawler-source.md
+  s_c4c26be2fc295a::t_5eec31e3ab744b 1-38
+Scripts/DatabasePipelineSupport/PipelineIO.swift
+  s_c4c26be2fc295a::t_fffd7811c5b46b 48-49,51-66,77-78,80,83-87,299,304-308
+Scripts/pokedex-data-pipeline
+  s_c4c26be2fc295a::t_0d328e4535db1a 11-12,22-42,212,219
+README.md
+  s_c4c26be2fc295a::t_56a13096e16beb 105-112
+PokedexTests/DatabasePipeline/PipelinePathAndNormalizationTests.swift
+  s_c4c26be2fc295a::t_bfdce43486e680 61-65,88-97
+  s_c4c26be2fc295a::t_3a5e397ca4de35 157-184
+  s_c4c26be2fc295a::t_2635e01401c23c 78-82,84
+  s_c4c26be2fc295a::t_98dcc74c0cfeae 5,7,10,12-13,15-18,22,42-60,66-77,83,85-87,98-124,126,141
+Scripts/DataPipeline/NEW_GAME.md
+  s_c4c26be2fc295a::t_56a13096e16beb 23-28
+PokedexTests/DatabasePipeline/PipelineManifestTests.swift
+  s_c4c26be2fc295a::t_3e94b709292cef 6,12,35-39,66-68,77-79,98-100,111-113,139-141,163-164,185-186,203-205
+Scripts/DatabasePipelineSupport/PipelinePath.swift
+  s_c4c26be2fc295a::t_fffd7811c5b46b 7,27-92
+  s_c4c26be2fc295a::t_2e3507c3b42a94 93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "41f884288ab2a613971446af2b3bfe5b13fa7601",
+  "prompts": {},
+  "sessions": {
+    "s_572fff539c3fed": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a188a8-3280-7891-9d5c-5b2049a8842a",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    },
+    "s_c4c26be2fc295a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a04c-f768-77a2-b0d8-9e14583300b0",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    }
+  }
+}
