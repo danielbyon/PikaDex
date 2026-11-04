@@ -45,6 +45,17 @@ final class CanonicalSnapshotTests: XCTestCase {
         XCTAssertTrue(invalidButEqual.semanticEntityChanges.isEmpty)
     }
 
+    func testSnapshotBuilderRejectsCorruptSQLiteBeforeCoreDataCompatibilityChecks() throws {
+        let database = FileManager.default.temporaryDirectory
+            .appendingPathComponent("PikaDex-corrupt-candidate-\(UUID().uuidString).sqlite")
+        defer { try? FileManager.default.removeItem(at: database) }
+        try Data("not a SQLite database".utf8).write(to: database)
+
+        XCTAssertThrowsError(try CanonicalSnapshotBuilder.build(databaseURL: database)) {
+            XCTAssertTrue(String(describing: $0).contains("SQLite integrity_check"))
+        }
+    }
+
     func testValidationIssuesHaveStableOrdering() throws {
         let snapshot = CanonicalDatabaseSnapshot(modelFingerprint: "model", datasets: [], entities: [])
         let report = try DatabaseValidationReport(

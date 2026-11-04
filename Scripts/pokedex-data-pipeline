@@ -9,6 +9,8 @@ DERIVED_DATA="${BUILD_ROOT}/DerivedData"
 CONFIGURATION="${PIKADEX_PIPELINE_CONFIGURATION:-Debug}"
 COMMAND="${1:-verify}"
 NETWORK_DENIED_RUNNER="${SCRIPT_DIR}/run-with-network-denied"
+PINNED_PACKAGE_RESOLVED="${SCRIPT_DIR}/DataPipeline/Package.resolved"
+PROJECT_PACKAGE_RESOLVED="${REPOSITORY_ROOT}/Pokedex.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved"
 XCODE_OFFLINE_FLAGS=(
   -disableAutomaticPackageResolution
   -onlyUsePackageVersionsFromResolvedFile
@@ -20,25 +22,159 @@ if [[ ! -x "${NETWORK_DENIED_RUNNER}" ]]; then
   exit 2
 fi
 
-# Building is deliberately separate because Xcode may need to materialize
-# resolved Swift packages. Verification itself never performs that operation.
-if [[ "${COMMAND}" == "prepare-tools" ]]; then
+PRODUCT_DIRECTORY="${DERIVED_DATA}/Build/Products/${CONFIGURATION}"
+
+# Accept a GitHub SSH lock only when its package graph, pins, and lock metadata match the canonical file.
+package_resolution_files_compatible() {
+  /usr/bin/python3 - "${PINNED_PACKAGE_RESOLVED}" "${PROJECT_PACKAGE_RESOLVED}" <<'PY'
+import json
+import sys
+from urllib.parse import urlsplit
+
+
+def normalized_github_location(location):
+    if location.startswith("git@github.com:"):
+        path = location.removeprefix("git@github.com:")
+        if path and "?" not in path and "#" not in path:
+            return "https://github.com/" + path
+
+    parsed = urlsplit(location)
+    if (
+        parsed.hostname == "github.com"
+        and parsed.port is None
+        and not parsed.query
+        and not parsed.fragment
+        and parsed.path.strip("/")
+    ):
+        if parsed.scheme == "https" and parsed.username is None and parsed.password is None:
+            return "https://github.com/" + parsed.path.lstrip("/")
+        if parsed.scheme == "ssh" and parsed.username == "git" and parsed.password is None:
+            return "https://github.com/" + parsed.path.lstrip("/")
+
+    return location
+
+
+def package_map(document):
+    pins = document.get("pins")
+    if not isinstance(pins, list):
+        raise ValueError("pins must be an array")
+
+    result = {}
+    for pin in pins:
+        if not isinstance(pin, dict) or not isinstance(pin.get("identity"), str):
+            raise ValueError("each pin must have a string identity")
+        identity = pin["identity"]
+        if identity in result:
+            raise ValueError(f"duplicate package identity: {identity}")
+        normalized = dict(pin)
+        location = pin.get("location")
+        if not isinstance(location, str):
+            raise ValueError(f"package {identity} has no string location")
+        normalized["location"] = normalized_github_location(location)
+        result[identity] = normalized
+    return result
+
+
+def main():
+    with open(sys.argv[1], encoding="utf-8") as source:
+        pinned = json.load(source)
+    with open(sys.argv[2], encoding="utf-8") as source:
+        workspace = json.load(source)
+
+    if not isinstance(pinned, dict) or not isinstance(workspace, dict):
+        return False
+    if package_map(pinned) != package_map(workspace):
+        return False
+
+    pinned_metadata = {key: value for key, value in pinned.items() if key != "pins"}
+    workspace_metadata = {key: value for key, value in workspace.items() if key != "pins"}
+    return pinned_metadata == workspace_metadata
+
+
+try:
+    compatible = main()
+except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError):
+    compatible = False
+sys.exit(0 if compatible else 1)
+PY
+}
+
+ensure_package_resolution_file() {
+  if [[ ! -f "${PINNED_PACKAGE_RESOLVED}" ]]; then
+    print -u2 "error: pinned Swift package versions are missing at Scripts/DataPipeline/Package.resolved"
+    return 2
+  fi
+
+  if [[ -e "${PROJECT_PACKAGE_RESOLVED}" || -L "${PROJECT_PACKAGE_RESOLVED}" ]]; then
+    if [[ ! -f "${PROJECT_PACKAGE_RESOLVED}" || -L "${PROJECT_PACKAGE_RESOLVED}" ]]; then
+      print -u2 "error: existing Xcode package lock is not a regular file: ${PROJECT_PACKAGE_RESOLVED}"
+      return 2
+    fi
+    if ! package_resolution_files_compatible; then
+      print -u2 "error: existing Xcode package lock differs from Scripts/DataPipeline/Package.resolved; it was left unchanged for review"
+      return 2
+    fi
+    if ! /usr/bin/cmp -s "${PINNED_PACKAGE_RESOLVED}" "${PROJECT_PACKAGE_RESOLVED}"; then
+      local replacement="${PROJECT_PACKAGE_RESOLVED}.tmp.$$"
+      if ! /bin/cp "${PINNED_PACKAGE_RESOLVED}" "${replacement}"; then
+        /bin/rm -f "${replacement}"
+        print -u2 "error: could not prepare the canonical Xcode package lock"
+        return 2
+      fi
+      if ! /bin/mv -f "${replacement}" "${PROJECT_PACKAGE_RESOLVED}"; then
+        /bin/rm -f "${replacement}"
+        print -u2 "error: could not install the canonical Xcode package lock"
+        return 2
+      fi
+      print "Updated the existing Xcode package lock from the canonical file after confirming all package pins match"
+    fi
+    return 0
+  fi
+
+  /bin/mkdir -p "${PROJECT_PACKAGE_RESOLVED:h}"
+  /bin/cp "${PINNED_PACKAGE_RESOLVED}" "${PROJECT_PACKAGE_RESOLVED}"
+  print "Seeded the ignored Xcode package lock from Scripts/DataPipeline/Package.resolved"
+}
+
+resolve_package_dependencies() {
+  /usr/bin/xcodebuild -resolvePackageDependencies \
+    -project "${REPOSITORY_ROOT}/Pokedex.xcodeproj" \
+    -scheme DatabaseLoader \
+    -configuration "${CONFIGURATION}" \
+    -derivedDataPath "${DERIVED_DATA}" \
+    -onlyUsePackageVersionsFromResolvedFile \
+    -skipPackageUpdates
+}
+
+prepare_tools() {
+  ensure_package_resolution_file
+  resolve_package_dependencies
   for scheme in DatabaseLoader DatabaseValidator DatabasePipeline; do
     /usr/bin/xcodebuild build -quiet \
       -project "${REPOSITORY_ROOT}/Pokedex.xcodeproj" \
       -scheme "${scheme}" \
       -configuration "${CONFIGURATION}" \
       "${XCODE_OFFLINE_FLAGS[@]}" \
-      -derivedDataPath "${DERIVED_DATA}"
+      -derivedDataPath "${DERIVED_DATA}" \
+      PIKADEX_SKIP_GENERATED_DATABASE_CHECK=YES \
+      CODE_SIGNING_ALLOWED=NO
   done
-  print "Prepared tooling products in ${DERIVED_DATA}/Build/Products/${CONFIGURATION}"
+  print "Prepared tooling products in ${PRODUCT_DIRECTORY}"
+}
+
+if [[ "${COMMAND}" == "prepare-tools" ]]; then
+  prepare_tools
   exit 0
 fi
 
-PRODUCT_DIRECTORY="${DERIVED_DATA}/Build/Products/${CONFIGURATION}"
+if [[ "${COMMAND}" == "generate" ]]; then
+  # Build incrementally on every generation so existing products cannot go stale.
+  prepare_tools
+fi
+
 for tool in DatabaseLoader DatabaseValidator DatabasePipeline; do
   if [[ ! -x "${PRODUCT_DIRECTORY}/${tool}" ]]; then
-    print -u2 "error: ${tool} is missing; run Scripts/pokedex-data-pipeline prepare-tools first"
+    print -u2 "error: ${tool} is missing; run Scripts/pokedex-data-pipeline prepare-tools"
     exit 2
   fi
 done

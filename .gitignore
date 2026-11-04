@@ -118,6 +118,12 @@ Crawlers/Cached/*
 *.sqlite-shm
 *.sqlite-wal
 *.sqlite-journal
+*.sqlite3-shm
+*.sqlite3-wal
+*.sqlite3-journal
 *.db-shm
 *.db-wal
 *.db-journal
+*.db3-shm
+*.db3-wal
+*.db3-journal

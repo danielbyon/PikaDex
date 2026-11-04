@@ -123,37 +123,58 @@ final class PersistenceBootstrapTests: XCTestCase {
         assertBootstrapError(try PersistenceBootstrap.make(configuration: configuration)) {
             XCTAssertEqual($0.stage, .locatingStore)
             XCTAssertEqual($0.resourceName, "Pokedex.sqlite")
+            XCTAssertEqual(
+                $0.generatedDatabaseSetupInstruction,
+                "Run Scripts/pokedex-data-pipeline generate, then rebuild the app."
+            )
         }
     }
 
-    func testMissingSidecarsDeferToStoreLoadWhenNoWalDependencyIsProven() throws {
+    func testGeneratedCatalogResolvesFromPokedexCoreAndOpens() throws {
+        let databaseURL = try XCTUnwrap(Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "sqlite"))
+        XCTAssertTrue(FileManager.default.fileExists(atPath: databaseURL.path))
+        _ = try PersistenceBootstrap.makeBundledCatalogForTesting()
+    }
+
+    func testStandaloneGeneratedCatalogOpensReadOnlyWithoutSidecars() throws {
         let directory = try makeTemporaryDirectory()
         let resolver = PersistenceBootstrap.ResourceResolver.bundle(.pokedexCore)
         guard let bundledDatabaseURL = resolver.resourceURL("Pokedex", "sqlite") else {
             return XCTFail("The test bundle must contain Pokedex.sqlite")
         }
-        let linkedDatabaseURL = directory.appendingPathComponent("Pokedex.sqlite")
-        try FileManager.default.linkItem(at: bundledDatabaseURL, to: linkedDatabaseURL)
+        let copiedDatabaseURL = directory.appendingPathComponent("Pokedex.sqlite")
+
+        // Generated catalogs are checkpointed into DELETE mode, so they are self-contained without WAL/SHM files.
+        try FileManager.default.copyItem(at: bundledDatabaseURL, to: copiedDatabaseURL)
+        XCTAssertTrue(FileManager.default.fileExists(atPath: copiedDatabaseURL.path))
+        for suffix in ["-wal", "-shm"] {
+            XCTAssertFalse(FileManager.default.fileExists(atPath: copiedDatabaseURL.path + suffix))
+        }
 
         let configuration = PersistenceBootstrap.Configuration(
             resolver: .init(
                 modelURL: resolver.modelURL,
                 resourceURL: { _, extensionName in
-                    extensionName == "sqlite" ? linkedDatabaseURL : nil
+                    extensionName == "sqlite" ? copiedDatabaseURL : nil
                 }
             ),
             pokedexStore: .bundledCatalog,
             userDataStore: .inMemory,
             validatesBundledCatalog: true
         )
-        assertBootstrapError(try PersistenceBootstrap.make(configuration: configuration)) {
-            // Core Data cannot open this WAL-mode store without the sidecars,
-            // even though the WAL has no pending frames. Bootstrap discovery
-            // does not misreport that platform limitation as proof of missing
-            // uncheckpointed data.
-            XCTAssertEqual($0.stage, .loadingStore)
-            XCTAssertEqual($0.resourceURL, linkedDatabaseURL)
-            XCTAssertNotNil($0.underlyingError)
+        let stores = try PersistenceBootstrap.make(configuration: configuration)
+        let description = try XCTUnwrap(stores.pokedexContainer.persistentStoreDescriptions.first)
+
+        XCTAssertTrue(description.isReadOnly)
+        XCTAssertEqual(
+            try stores.pokedex.fetch(Pokemon.self, filter: .default(for: .national)).first?.name,
+            "Bulbasaur"
+        )
+        XCTAssertFalse(
+            try stores.pokedex.fetch(Pokemon.self, filter: .default(for: .scarlet)).isEmpty
+        )
+        for suffix in ["-wal", "-shm"] {
+            XCTAssertFalse(FileManager.default.fileExists(atPath: copiedDatabaseURL.path + suffix))
         }
     }
 

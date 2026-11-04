@@ -2,7 +2,7 @@ import Foundation
 
 /// Repository-root-safe path resolution for offline pipeline tools.
 public enum PipelinePath {
-    public static let committedDatabaseDirectory = "Modules/PokedexCore/Resources/Database"
+    public static let databaseResourceDirectory = "Modules/PokedexCore/Resources/Database"
     public static let manifest = "Scripts/DataPipeline/pipeline-manifest.json"
 
     public static func isRepositoryRelative(_ path: String) -> Bool {
@@ -25,10 +25,10 @@ public enum PipelinePath {
 
     public static func validateCandidateOutput(_ output: URL, repositoryRoot: URL) throws {
         let canonicalOutput = output.standardizedFileURL.resolvingSymlinksInPath()
-        let committedDirectory = try resolve(committedDatabaseDirectory, under: repositoryRoot)
-        guard canonicalOutput.path != committedDirectory.path,
-              !canonicalOutput.path.hasPrefix(committedDirectory.path + "/") else {
-            throw PipelineError.unsafePath("Candidate output cannot resolve inside the committed database resource directory")
+        let databaseDirectory = try resolve(databaseResourceDirectory, under: repositoryRoot)
+        guard canonicalOutput.path != databaseDirectory.path,
+              !canonicalOutput.path.hasPrefix(databaseDirectory.path + "/") else {
+            throw PipelineError.unsafePath("Candidate output cannot resolve inside the generated database resource directory")
         }
 
         let resources = try resolve("Modules/PokedexCore/Resources", under: repositoryRoot)
