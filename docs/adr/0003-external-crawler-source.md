@@ -36,3 +36,9 @@ Developers need a `PikaDexCrawlers` checkout beside PikaDex or must set
 checkouts fail before generation with setup instructions. Xcode builds continue
 to consume the generated database from `PokedexCore` and do not fetch or
 regenerate it during ordinary incremental builds.
+
+Local pipeline commands use the selected checkout as it stands. They do not
+fetch it, switch branches, or update the recorded revision. To reproduce CI,
+check out the SHA in `crawler-source.json`; the manifest checksums guard the
+reviewed database inputs. `acquire` runs scripts from the selected checkout
+only when invoked with `--network` and a verified acquisition entry.
