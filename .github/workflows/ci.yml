@@ -20,6 +20,32 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Check out pinned crawler source data anonymously
+        run: |
+          set -euo pipefail
+          export GIT_CONFIG_NOSYSTEM=1
+          export GIT_CONFIG_GLOBAL=/dev/null
+          export GIT_TERMINAL_PROMPT=0
+          reference="Scripts/DataPipeline/crawler-source.json"
+          repository="$(python3 -c 'import json; print(json.load(open("Scripts/DataPipeline/crawler-source.json", encoding="utf-8"))["repository"])')"
+          revision="$(python3 -c 'import json; print(json.load(open("Scripts/DataPipeline/crawler-source.json", encoding="utf-8"))["revision"])')"
+          if [[ "${repository}" != "danielbyon/PikaDexCrawlers" || ! "${revision}" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "Invalid PikaDexCrawlers repository or revision in ${reference}" >&2
+            exit 2
+          fi
+          checkout="${RUNNER_TEMP}/PikaDexCrawlers"
+          mkdir -p "${checkout}"
+          git -C "${checkout}" init
+          git -C "${checkout}" remote add origin "https://github.com/${repository}.git"
+          git -C "${checkout}" config remote.origin.promisor true
+          git -C "${checkout}" config remote.origin.partialclonefilter blob:none
+          git -C "${checkout}" config credential.helper ""
+          git -C "${checkout}" sparse-checkout init --cone
+          git -C "${checkout}" sparse-checkout set Data
+          git -C "${checkout}" fetch --no-tags --filter=blob:none --depth=1 origin "${revision}"
+          git -C "${checkout}" checkout --detach "${revision}"
+          test "$(git -C "${checkout}" rev-parse HEAD)" = "${revision}"
+
       - name: Record Xcode and available simulator inventory
         run: |
           xcodebuild -version
@@ -28,7 +54,7 @@ jobs:
       - name: Generate and validate the catalog
         env:
           PIKADEX_PIPELINE_BUILD_ROOT: ${{ runner.temp }}/PikaDex-DerivedData
-        run: Scripts/pokedex-data-pipeline generate --output-dir "$RUNNER_TEMP/PikaDex-PipelineOutput"
+        run: Scripts/pokedex-data-pipeline generate --crawlers-root "$RUNNER_TEMP/PikaDexCrawlers" --output-dir "$RUNNER_TEMP/PikaDex-PipelineOutput"
 
       - name: Build the app with the generated PokedexCore resource
         run: >-

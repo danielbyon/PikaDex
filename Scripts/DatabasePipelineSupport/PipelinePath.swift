@@ -4,6 +4,7 @@ import Foundation
 public enum PipelinePath {
     public static let databaseResourceDirectory = "Modules/PokedexCore/Resources/Database"
     public static let manifest = "Scripts/DataPipeline/pipeline-manifest.json"
+    public static let crawlerSourcePrefix = "Crawlers/"
 
     public static func isRepositoryRelative(_ path: String) -> Bool {
         guard !path.isEmpty, !path.hasPrefix("/"), !path.hasPrefix("~") else { return false }
@@ -21,6 +22,73 @@ public enum PipelinePath {
             throw PipelineError.unsafePath("Path escapes repository root: \(path)")
         }
         return candidate
+    }
+
+    /// Resolves a reviewed manifest path from the repository that owns its source.
+    /// Paths under the legacy `Crawlers/` namespace map to the root of the
+    /// separately checked out `PikaDexCrawlers` repository; other paths remain
+    /// relative to PikaDex.
+    public static func resolveSourceInput(
+        _ path: String,
+        repositoryRoot: URL,
+        crawlersRoot: URL
+    ) throws -> URL {
+        guard isRepositoryRelative(path) else {
+            throw PipelineError.unsafePath("Expected a repository-relative source path, received: \(path)")
+        }
+        guard path != "Crawlers/Cached", !path.hasPrefix("Crawlers/Cached/") else {
+            throw PipelineError.unsafePath("Cached crawler data cannot be used as a reviewed loader input")
+        }
+        if path.hasPrefix(crawlerSourcePrefix) {
+            let packagePath = String(path.dropFirst(crawlerSourcePrefix.count))
+            guard !packagePath.isEmpty else {
+                throw PipelineError.unsafePath("Crawler source path must name a file below Crawlers/")
+            }
+            return try resolve(packagePath, under: crawlersRoot)
+        }
+        return try resolve(path, under: repositoryRoot)
+    }
+
+    /// Confirms that the external crawler checkout is complete and isolated
+    /// from both PikaDex and the pipeline's generated output.
+    @discardableResult
+    public static func validateCrawlerRoot(
+        _ crawlersRoot: URL,
+        repositoryRoot: URL,
+        outputRoot: URL
+    ) throws -> URL {
+        let fileManager = FileManager.default
+        let canonicalRepository = repositoryRoot.standardizedFileURL.resolvingSymlinksInPath()
+        let canonicalCrawlers = crawlersRoot.standardizedFileURL.resolvingSymlinksInPath()
+        var isDirectory = ObjCBool(false)
+        guard fileManager.fileExists(atPath: canonicalCrawlers.path, isDirectory: &isDirectory),
+              isDirectory.boolValue else {
+            throw PipelineError.missingPrerequisite(
+                "PikaDexCrawlers checkout is missing at \(canonicalCrawlers.path). Clone https://github.com/danielbyon/PikaDexCrawlers beside PikaDex, set PIKADEX_CRAWLERS_ROOT, or pass --crawlers-root."
+            )
+        }
+        guard !pathsOverlap(canonicalRepository.path, canonicalCrawlers.path) else {
+            throw PipelineError.unsafePath("PikaDex and PikaDexCrawlers must be separate, non-overlapping checkouts")
+        }
+
+        let dataDirectory = try resolve("Data", under: canonicalCrawlers)
+        var hasDataDirectory = ObjCBool(false)
+        guard fileManager.fileExists(atPath: dataDirectory.path, isDirectory: &hasDataDirectory),
+              hasDataDirectory.boolValue else {
+            throw PipelineError.missingPrerequisite(
+                "PikaDexCrawlers checkout at \(canonicalCrawlers.path) is incomplete: Data/ is missing. Check out the pinned source listed in Scripts/DataPipeline/crawler-source.json."
+            )
+        }
+
+        let canonicalOutput = outputRoot.standardizedFileURL.resolvingSymlinksInPath()
+        guard !pathsOverlap(canonicalCrawlers.path, canonicalOutput.path) else {
+            throw PipelineError.unsafePath("Pipeline output cannot overlap the PikaDexCrawlers source checkout")
+        }
+        return canonicalCrawlers
+    }
+
+    private static func pathsOverlap(_ lhs: String, _ rhs: String) -> Bool {
+        lhs == rhs || lhs.hasPrefix(rhs + "/") || rhs.hasPrefix(lhs + "/")
     }
 
     public static func validateCandidateOutput(_ output: URL, repositoryRoot: URL) throws {

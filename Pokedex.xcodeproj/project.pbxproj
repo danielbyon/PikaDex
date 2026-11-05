@@ -27,7 +27,6 @@
 		F60000000000000000000046 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
 		F60000000000000000000047 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
 		F60000000000000000000048 /* PokedexCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		650E221823F69DD300FACCE7 /* Data in Copy Files */ = {isa = PBXBuildFile; fileRef = 650E221723F65C1700FACCE7 /* Data */; };
 		65188C092B5C7E7600CA8393 /* Binding+SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65188C082B5C7E7600CA8393 /* Binding+SearchQuery.swift */; };
 		65188C0A2B5CA23C00CA8393 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
 		65188C0B2B5CA23C00CA8393 /* PokedexCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -717,7 +716,6 @@
 		F60000000000000000000028 /* PipelinePathAndNormalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelinePathAndNormalizationTests.swift; sourceTree = "<group>"; };
 		F60000000000000000000029 /* CanonicalSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanonicalSnapshotTests.swift; sourceTree = "<group>"; };
 		F6000000000000000000002A /* PipelineCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineCoordinatorTests.swift; sourceTree = "<group>"; };
-		650E221723F65C1700FACCE7 /* Data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Data; path = Crawlers/Data; sourceTree = SOURCE_ROOT; };
 		65188C082B5C7E7600CA8393 /* Binding+SearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+SearchQuery.swift"; sourceTree = "<group>"; };
 		6518ACB123BED1D7004B7C58 /* DatabaseLoader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatabaseLoader; sourceTree = BUILT_PRODUCTS_DIR; };
 		6518ACB323BED1D7004B7C58 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };

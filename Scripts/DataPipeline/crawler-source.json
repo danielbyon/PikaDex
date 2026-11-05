@@ -1,0 +1,16 @@
+{
+  "repository": "danielbyon/PikaDexCrawlers",
+  "revision": "0e5672b16e66c78140a699ef32812cdc2f0d4a15",
+  "sourceMapping": {
+    "pokedexRoot": "Crawlers/",
+    "repositoryRoot": ".",
+    "reviewedInputPrefix": "Crawlers/Data/",
+    "repositoryInputPrefix": "Data/"
+  },
+  "updateProcedure": [
+    "Review crawler changes and commit them in PikaDexCrawlers.",
+    "Update revision to the reviewed full commit SHA in this file.",
+    "For approved source-input changes, update the reviewed manifest checksums.",
+    "Run preflight, generate and validate SQLite, and run the native test suites."
+  ]
+}

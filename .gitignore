@@ -109,7 +109,6 @@ iOSInjectionProject/
 __pycache__/
 *.pyc
 
-Crawlers/Cached/*
 .venv
 *.sqlite
 *.sqlite3

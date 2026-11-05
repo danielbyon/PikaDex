@@ -35,8 +35,23 @@ update their hashes automatically.
 
 Artwork is checked out as ordinary Git content. No Git LFS installation or
 separate artwork hydration is required. To create the local catalog, run the
-`generate` command below; it reads reviewed inputs from the checkout and does
-not fetch artwork or a precompiled database.
+`generate` command below; it reads reviewed inputs from PikaDex and its pinned
+PikaDexCrawlers checkout and does not fetch artwork or a precompiled database.
+
+Crawler scripts, artwork, and the eleven reviewed JSON inputs live in the
+public `danielbyon/PikaDexCrawlers` repository. Check out the revision pinned in
+[`crawler-source.json`](crawler-source.json), normally beside the PikaDex
+checkout. Set `PIKADEX_CRAWLERS_ROOT` or pass `--crawlers-root` when it lives
+elsewhere. The manifest retains its reviewed `Crawlers/Data/...` names; the
+pipeline reads those files from `PikaDexCrawlers/Data/...` and normalizes them
+under the same logical paths for `DatabaseLoader`.
+
+If the source checkout or its `Data/` directory is missing, the command stops
+with setup instructions before generating a database. CI checks out the pinned
+public revision with a blobless partial clone and a `Data/` sparse checkout.
+Updating the source revision requires review of the external repository
+change. Changed loader inputs also require checksum review and a matching
+manifest update.
 
 ### Generate
 
@@ -272,6 +287,10 @@ Run the release verification command in a disposable checkout. It runs
 `generate`, which installs the generated catalog into that checkout, then
 builds the app and runs the native test gates. Set its build root to a
 temporary path outside the checkout:
+
+The command also needs the pinned `PikaDexCrawlers` checkout described above.
+It can replace the generated database in the checkout, so use a disposable
+PikaDex checkout when preserving a local catalog.
 
 ```sh
 PIKADEX_RELEASE_BUILD_ROOT="$TMPDIR/pokedex-release-verification" \

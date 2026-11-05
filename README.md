@@ -102,8 +102,14 @@ Scripts/pokedex-data-pipeline generate
 ```
 
 Artwork is checked out as ordinary Git content. No Git LFS setup or separate
-hydration step is required. The generated database and its SQLite sidecars are
-local files ignored by Git.
+hydration step is required. Crawler scripts, artwork, and reviewed source data
+are maintained in the public `danielbyon/PikaDexCrawlers` repository. Clone it
+beside PikaDex at the revision recorded in
+[`Scripts/DataPipeline/crawler-source.json`](Scripts/DataPipeline/crawler-source.json),
+or set `PIKADEX_CRAWLERS_ROOT` to its checkout path. Generation maps the
+manifest's existing `Crawlers/...` paths to that package while keeping the
+normalized loader inputs unchanged. The generated database and its SQLite
+sidecars are local files ignored by Git.
 
 It prepares the pipeline tools as needed, preflights the reviewed sources,
 generates and validates the database, and safely installs the output.

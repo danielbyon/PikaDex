@@ -14,14 +14,20 @@ public enum PipelineCommand: Equatable, Sendable {
 public struct DatabasePipelineOptions: Equatable, Sendable {
     public let command: PipelineCommand
     public let repositoryRoot: URL
+    public let crawlersRoot: URL
     public let outputRoot: URL
 
-    public static func parse(_ arguments: [String], currentDirectory: URL) throws -> Self {
+    public static func parse(
+        _ arguments: [String],
+        currentDirectory: URL,
+        environment: [String: String] = ProcessInfo.processInfo.environment
+    ) throws -> Self {
         var arguments = arguments
         let commandName = arguments.first ?? "verify"
         if !arguments.isEmpty { arguments.removeFirst() }
 
         var repositoryRoot: URL?
+        var crawlersRoot: URL?
         var outputRoot: URL?
         var database: URL?
         var baseline: URL?
@@ -33,6 +39,10 @@ public struct DatabasePipelineOptions: Equatable, Sendable {
             case "--repository-root":
                 guard index + 1 < arguments.count else { throw PipelineError.usage("--repository-root requires a path") }
                 repositoryRoot = URL(fileURLWithPath: arguments[index + 1], isDirectory: true)
+                index += 2
+            case "--crawlers-root":
+                guard index + 1 < arguments.count else { throw PipelineError.usage("--crawlers-root requires a path") }
+                crawlersRoot = URL(fileURLWithPath: arguments[index + 1], isDirectory: true)
                 index += 2
             case "--output-dir":
                 guard index + 1 < arguments.count else { throw PipelineError.usage("--output-dir requires a path") }
@@ -61,6 +71,11 @@ public struct DatabasePipelineOptions: Equatable, Sendable {
         let root = try repositoryRoot ?? PipelinePath.repositoryRoot(startingAt: currentDirectory)
         let output = outputRoot ?? root.appendingPathComponent("build/data-pipeline-artifacts", isDirectory: true)
         try PipelinePath.validateDerivedOutputRoot(output, repositoryRoot: root)
+        let crawlerRoot = crawlersRoot
+            ?? environment["PIKADEX_CRAWLERS_ROOT"].map { URL(fileURLWithPath: $0, isDirectory: true) }
+            ?? root.standardizedFileURL.resolvingSymlinksInPath()
+                .deletingLastPathComponent()
+                .appendingPathComponent("PikaDexCrawlers", isDirectory: true)
 
         let command: PipelineCommand
         switch commandName {
@@ -81,7 +96,23 @@ public struct DatabasePipelineOptions: Equatable, Sendable {
         default:
             throw PipelineError.usage("Unknown command \(commandName). Expected generate, verify, normalize, validate, compare, or acquire")
         }
-        return .init(command: command, repositoryRoot: root, outputRoot: output)
+        let validatedCrawlerRoot: URL
+        switch command {
+        case .generate, .verify, .normalize, .acquire:
+            validatedCrawlerRoot = try PipelinePath.validateCrawlerRoot(
+                crawlerRoot,
+                repositoryRoot: root,
+                outputRoot: output
+            )
+        case .validate, .compare:
+            validatedCrawlerRoot = crawlerRoot.standardizedFileURL
+        }
+        return .init(
+            command: command,
+            repositoryRoot: root,
+            crawlersRoot: validatedCrawlerRoot,
+            outputRoot: output
+        )
     }
 }
 
@@ -125,7 +156,11 @@ public struct PipelineCoordinator {
         case .verify:
             try executePipeline(options: options, manifest: manifest, installGeneratedDatabase: false)
         case .normalize:
-            let findings = try preflight(manifest: manifest, repositoryRoot: options.repositoryRoot)
+            let findings = try preflight(
+                manifest: manifest,
+                repositoryRoot: options.repositoryRoot,
+                crawlersRoot: options.crawlersRoot
+            )
             guard !findings.contains(where: { $0.severity == .error }) else {
                 throw PipelineError.inputDrift("Reviewed loader-input preflight failed")
             }
@@ -134,6 +169,7 @@ public struct PipelineCoordinator {
             try PipelineIO.normalize(
                 inputs: manifest.sourceInputs,
                 repositoryRoot: options.repositoryRoot,
+                crawlersRoot: options.crawlersRoot,
                 destinationRoot: destination
             )
         case let .validate(database):
@@ -169,7 +205,11 @@ public struct PipelineCoordinator {
         let candidateDirectory = options.outputRoot.appendingPathComponent("candidate", isDirectory: true)
         let reports = options.outputRoot.appendingPathComponent("reports", isDirectory: true)
         try replaceDerivedDirectory(reports, repositoryRoot: options.repositoryRoot)
-        let findings = try preflight(manifest: manifest, repositoryRoot: options.repositoryRoot)
+        let findings = try preflight(
+            manifest: manifest,
+            repositoryRoot: options.repositoryRoot,
+            crawlersRoot: options.crawlersRoot
+        )
         let preflightReport = ReviewedInputPreflightReport(findings: findings)
         try PipelineIO.writeJSON(preflightReport, to: reports.appendingPathComponent("preflight.json"))
         try PipelineIO.writePreflightSummary(preflightReport, to: reports.appendingPathComponent("preflight.txt"))
@@ -183,6 +223,7 @@ public struct PipelineCoordinator {
         try PipelineIO.normalize(
             inputs: manifest.sourceInputs,
             repositoryRoot: options.repositoryRoot,
+            crawlersRoot: options.crawlersRoot,
             destinationRoot: normalized
         )
 
@@ -265,8 +306,16 @@ public struct PipelineCoordinator {
         try writeSummary(.init(status: "passed", phases: phases), outputRoot: options.outputRoot)
     }
 
-    private func preflight(manifest: PipelineManifest, repositoryRoot: URL) throws -> [ValidationIssue] {
-        let findings = try PipelineIO.preflightReviewedInputs(manifest.sourceInputs, repositoryRoot: repositoryRoot)
+    private func preflight(
+        manifest: PipelineManifest,
+        repositoryRoot: URL,
+        crawlersRoot: URL
+    ) throws -> [ValidationIssue] {
+        let findings = try PipelineIO.preflightReviewedInputs(
+            manifest.sourceInputs,
+            repositoryRoot: repositoryRoot,
+            crawlersRoot: crawlersRoot
+        )
         try PipelineIO.verify(artifacts: manifest.modelInputs, repositoryRoot: repositoryRoot)
         guard Game.allDatasets.map(\.rawValue).count == Set(Game.allDatasets.map(\.rawValue)).count,
               Game.allDatasets.contains(.national),
@@ -331,10 +380,18 @@ public struct PipelineCoordinator {
         try replaceDerivedDirectory(stage, repositoryRoot: options.repositoryRoot)
         let crawlerDirectory = stage.appendingPathComponent("Crawlers", isDirectory: true)
         try FileManager.default.createDirectory(at: crawlerDirectory, withIntermediateDirectories: true)
-        let sourceDirectory = try PipelinePath.resolve("Crawlers", under: options.repositoryRoot)
+        let sourceDirectory = options.crawlersRoot
+        let scriptURL = try PipelinePath.resolve(step.script, under: sourceDirectory)
+        guard FileManager.default.fileExists(atPath: scriptURL.path) else {
+            throw PipelineError.missingPrerequisite("Manifest-declared crawler script is missing: \(step.script)")
+        }
         for url in try FileManager.default.contentsOfDirectory(at: sourceDirectory, includingPropertiesForKeys: nil)
             where ["py", "txt"].contains(url.pathExtension) {
-            try FileManager.default.copyItem(at: url, to: crawlerDirectory.appendingPathComponent(url.lastPathComponent))
+            let source = try PipelinePath.resolve(url.lastPathComponent, under: sourceDirectory)
+            try FileManager.default.copyItem(
+                at: source,
+                to: crawlerDirectory.appendingPathComponent(url.lastPathComponent)
+            )
         }
 
         let python = URL(fileURLWithPath: "/usr/bin/env")

@@ -28,13 +28,18 @@ final class PipelineCoordinatorTests: XCTestCase {
         }
     }
 
+    private var fixtureRoot: URL!
     private var root: URL!
+    private var crawlersRoot: URL!
 
     override func setUpWithError() throws {
-        root = FileManager.default.temporaryDirectory
+        fixtureRoot = FileManager.default.temporaryDirectory
             .appendingPathComponent("PikaDex Pipeline Coordinator Tests-\(UUID().uuidString)", isDirectory: true)
+        root = fixtureRoot.appendingPathComponent("PikaDex", isDirectory: true)
+        crawlersRoot = fixtureRoot.appendingPathComponent("PikaDexCrawlers", isDirectory: true)
         try FileManager.default.createDirectory(at: root.appendingPathComponent("Scripts/DataPipeline"), withIntermediateDirectories: true)
         try FileManager.default.createDirectory(at: root.appendingPathComponent("Pokedex.xcodeproj"), withIntermediateDirectories: true)
+        try FileManager.default.createDirectory(at: crawlersRoot.appendingPathComponent("Data"), withIntermediateDirectories: true)
         try "{}".write(to: root.appendingPathComponent("input.json"), atomically: true, encoding: .utf8)
         let manifest = PipelineManifest(
             schemaVersion: 4,
@@ -64,7 +69,7 @@ final class PipelineCoordinatorTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        try? FileManager.default.removeItem(at: root)
+        try? FileManager.default.removeItem(at: fixtureRoot)
     }
 
     private func makeTools() throws -> URL {
@@ -98,6 +103,17 @@ final class PipelineCoordinatorTests: XCTestCase {
                 )
             }
         }
+    }
+
+    private func parseOptions(
+        _ arguments: [String],
+        currentDirectory: URL
+    ) throws -> DatabasePipelineOptions {
+        try DatabasePipelineOptions.parse(
+            arguments + ["--crawlers-root", crawlersRoot.path],
+            currentDirectory: currentDirectory,
+            environment: [:]
+        )
     }
 
     private static func value(after flag: String, in arguments: [String]) -> String? {
@@ -153,7 +169,7 @@ final class PipelineCoordinatorTests: XCTestCase {
             )
         }
         let runner = ProcessRunner(statuses: [3])
-        let options = try DatabasePipelineOptions.parse(
+        let options = try parseOptions(
             ["verify", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -165,7 +181,7 @@ final class PipelineCoordinatorTests: XCTestCase {
     }
 
     func testVerifyDoesNotNeedOrInstallAnExistingDatabase() throws {
-        let options = try DatabasePipelineOptions.parse(
+        let options = try parseOptions(
             ["verify", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -181,7 +197,7 @@ final class PipelineCoordinatorTests: XCTestCase {
     }
 
     func testVerifyRejectsNonzeroValidatorStatusEvenWhenReportsExist() throws {
-        let options = try DatabasePipelineOptions.parse(
+        let options = try parseOptions(
             ["verify", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -193,7 +209,7 @@ final class PipelineCoordinatorTests: XCTestCase {
     }
 
     func testGenerateBuildsAndInstallsAValidatedDatabase() throws {
-        let options = try? DatabasePipelineOptions.parse(
+        let options = try? parseOptions(
             ["generate", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -222,7 +238,7 @@ final class PipelineCoordinatorTests: XCTestCase {
         let originalDatabase = try Data(contentsOf: database)
         let originalWAL = try Data(contentsOf: wal)
         let originalSHM = try Data(contentsOf: shm)
-        let options = try? DatabasePipelineOptions.parse(
+        let options = try? parseOptions(
             ["generate", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -249,7 +265,7 @@ final class PipelineCoordinatorTests: XCTestCase {
         let originalDatabase = try Data(contentsOf: database)
         let originalWAL = try Data(contentsOf: wal)
         let originalSHM = try Data(contentsOf: shm)
-        let options = try? DatabasePipelineOptions.parse(
+        let options = try? parseOptions(
             ["generate", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -278,7 +294,7 @@ final class PipelineCoordinatorTests: XCTestCase {
         let originalDatabase = try Data(contentsOf: database)
         let originalWAL = try Data(contentsOf: wal)
         let originalSHM = try Data(contentsOf: shm)
-        let options = try? DatabasePipelineOptions.parse(
+        let options = try? parseOptions(
             ["generate", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -348,7 +364,7 @@ final class PipelineCoordinatorTests: XCTestCase {
     }
 
     func testGenerateRejectsInvalidSQLiteBeforeValidationOrInstall() throws {
-        let options = try DatabasePipelineOptions.parse(
+        let options = try parseOptions(
             ["generate", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -384,7 +400,7 @@ final class PipelineCoordinatorTests: XCTestCase {
         XCTAssertEqual(sqlite3_open_v2(database.path, &handle, SQLITE_OPEN_READONLY | SQLITE_OPEN_FULLMUTEX, nil), SQLITE_OK)
         defer { if let handle { sqlite3_close(handle) } }
 
-        let options = try DatabasePipelineOptions.parse(
+        let options = try parseOptions(
             ["generate", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             currentDirectory: root
         )
@@ -427,7 +443,7 @@ final class PipelineCoordinatorTests: XCTestCase {
             ["acquire", "--crawler", "blocked", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path],
             ["acquire", "--crawler", "blocked", "--network", "--repository-root", root.path, "--output-dir", root.appendingPathComponent("build/output").path]
         ] {
-            let options = try DatabasePipelineOptions.parse(arguments, currentDirectory: root)
+            let options = try parseOptions(arguments, currentDirectory: root)
             XCTAssertThrowsError(try coordinator.run(options)) {
                 XCTAssertEqual(($0 as? PipelineError)?.exitCode, 2)
             }
@@ -435,7 +451,7 @@ final class PipelineCoordinatorTests: XCTestCase {
     }
 
     func testVerifiedAcquisitionRemainsStagedAndReportsManualNumbersRequirement() throws {
-        let crawlerSource = root.appendingPathComponent("Crawlers/Allowed.py")
+        let crawlerSource = crawlersRoot.appendingPathComponent("Allowed.py")
         try FileManager.default.createDirectory(
             at: crawlerSource.deletingLastPathComponent(),
             withIntermediateDirectories: true
@@ -474,6 +490,7 @@ final class PipelineCoordinatorTests: XCTestCase {
         try PipelineIO.writeJSON(manifest, to: root.appendingPathComponent(PipelinePath.manifest))
 
         let runner = ProcessRunner(statuses: [0]) { _, _, workingDirectory, _ in
+            XCTAssertTrue(FileManager.default.fileExists(atPath: workingDirectory!.appendingPathComponent("Allowed.py").path))
             let stagedOutput = workingDirectory!.appendingPathComponent("Data/output.json")
             try FileManager.default.createDirectory(
                 at: stagedOutput.deletingLastPathComponent(),
@@ -482,7 +499,7 @@ final class PipelineCoordinatorTests: XCTestCase {
             try "{}".write(to: stagedOutput, atomically: true, encoding: .utf8)
         }
         let output = root.appendingPathComponent("build/output")
-        let options = try DatabasePipelineOptions.parse(
+        let options = try parseOptions(
             [
                 "acquire", "--crawler", "allowed", "--network",
                 "--repository-root", root.path,
