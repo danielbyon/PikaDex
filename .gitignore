@@ -126,3 +126,4 @@ __pycache__/
 *.db3-shm
 *.db3-wal
 *.db3-journal
+.chatgpt
