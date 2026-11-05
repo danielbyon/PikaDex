@@ -1,0 +1,19 @@
+.gitignore
+  s_a9443de43ad0db::t_db24a4778ff13b 129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0a27f68228aaeb6515bc64b7e2646732289594f3",
+  "prompts": {},
+  "sessions": {
+    "s_a9443de43ad0db": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ad36-3c21-7883-b04f-4152c2e9d467",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    }
+  }
+}
