@@ -116,9 +116,6 @@
 		654022732978ECA9005BF4DC /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021CE2978EC94005BF4DC /* Stats.swift */; };
 		654022742978ECA9005BF4DC /* LearnsetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021D02978EC94005BF4DC /* LearnsetEntry.swift */; };
 		654022752978ECA9005BF4DC /* LearnsetEntryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021D12978EC94005BF4DC /* LearnsetEntryFilter.swift */; };
-		654022762978ECA9005BF4DC /* Pokedex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 654021D42978EC9A005BF4DC /* Pokedex.sqlite-wal */; };
-		654022772978ECA9005BF4DC /* Pokedex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 654021D52978EC9A005BF4DC /* Pokedex.sqlite-shm */; };
-		654022782978ECA9005BF4DC /* Pokedex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 654021D62978EC9A005BF4DC /* Pokedex.sqlite */; };
 		654022792978ECA9005BF4DC /* PokemonImageNameFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021D82978EC9C005BF4DC /* PokemonImageNameFormatter.swift */; };
 		6540227A2978ECA9005BF4DC /* CanonicallyNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021D92978EC9C005BF4DC /* CanonicallyNamed.swift */; };
 		6540227B2978ECA9005BF4DC /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654021DA2978EC9C005BF4DC /* AppSetting.swift */; };
@@ -803,8 +800,6 @@
 		654021CE2978EC94005BF4DC /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		654021D02978EC94005BF4DC /* LearnsetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnsetEntry.swift; sourceTree = "<group>"; };
 		654021D12978EC94005BF4DC /* LearnsetEntryFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnsetEntryFilter.swift; sourceTree = "<group>"; };
-		654021D42978EC9A005BF4DC /* Pokedex.sqlite-wal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pokedex.sqlite-wal"; sourceTree = "<group>"; };
-		654021D52978EC9A005BF4DC /* Pokedex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokedex.sqlite-shm"; sourceTree = "<group>"; };
 		654021D62978EC9A005BF4DC /* Pokedex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pokedex.sqlite; sourceTree = "<group>"; };
 		654021D82978EC9C005BF4DC /* PokemonImageNameFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonImageNameFormatter.swift; sourceTree = "<group>"; };
 		654021D92978EC9C005BF4DC /* CanonicallyNamed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanonicallyNamed.swift; sourceTree = "<group>"; };
@@ -1626,8 +1621,6 @@
 		654021D32978EC9A005BF4DC /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				654021D42978EC9A005BF4DC /* Pokedex.sqlite-wal */,
-				654021D52978EC9A005BF4DC /* Pokedex.sqlite-shm */,
 				654021D62978EC9A005BF4DC /* Pokedex.sqlite */,
 			);
 			path = Database;
@@ -2911,6 +2904,7 @@
 				65401F3D2978EA91005BF4DC /* Headers */,
 				65401F3E2978EA91005BF4DC /* Sources */,
 				65401F3F2978EA91005BF4DC /* Frameworks */,
+				A11E5C000000000000000001 /* Check Generated Pokedex Database */,
 				65401F402978EA91005BF4DC /* Resources */,
 			);
 			buildRules = (
@@ -3332,9 +3326,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654022762978ECA9005BF4DC /* Pokedex.sqlite-wal in Resources */,
-				654022772978ECA9005BF4DC /* Pokedex.sqlite-shm in Resources */,
-				654022782978ECA9005BF4DC /* Pokedex.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3461,6 +3452,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#bash $PROJECT_DIR/Scripts/GenerateIcon.sh\n";
+		};
+		A11E5C000000000000000001 /* Check Generated Pokedex Database */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/check-generated-pokedex-database.sh",
+				"$(SRCROOT)/Modules/PokedexCore/Resources/Database/Pokedex.sqlite",
+			);
+			name = "Check Generated Pokedex Database";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Pokedex.sqlite",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$SRCROOT/Scripts/check-generated-pokedex-database.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -5241,7 +5254,7 @@
 		};
 		659C7CEE24695FF100E92C1C /* XCRemoteSwiftPackageReference "AppSupport" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:danielbyon/AppSupport.git";
+			repositoryURL = "https://github.com/danielbyon/AppSupport.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -5249,7 +5262,7 @@
 		};
 		65B83115258229A00035B0B5 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:danielbyon/SwiftUIExtensions.git";
+			repositoryURL = "https://github.com/danielbyon/SwiftUIExtensions.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -5257,7 +5270,7 @@
 		};
 		65B8311C258229DF0035B0B5 /* XCRemoteSwiftPackageReference "CombineExtensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:danielbyon/CombineExtensions.git";
+			repositoryURL = "https://github.com/danielbyon/CombineExtensions.git";
 			requirement = {
 				branch = master;
 				kind = branch;

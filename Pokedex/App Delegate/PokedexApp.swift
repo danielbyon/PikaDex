@@ -39,8 +39,13 @@ struct PokedexApp: App {
             teamStore = DefaultTeamStore(storage: UserDefaults.appGroup)
             storeClient = StoreClient(productIdentifiers: PokepediaProduct.allProducts)
         } catch {
-            let message = (error as? LocalizedError)?.errorDescription
-                ?? "PikaDex could not initialize its data stores."
+            let message = [
+                (error as? LocalizedError)?.errorDescription
+                    ?? "PikaDex could not initialize its data stores.",
+                (error as? PersistenceBootstrapError)?.generatedDatabaseSetupInstruction
+            ]
+            .compactMap { $0 }
+            .joined(separator: "\n")
             debugPrint(message)
             fatalError(message)
         }

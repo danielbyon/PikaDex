@@ -51,15 +51,32 @@ The canonical Phase 7 release command is:
 rtk Scripts/pokedex-release-verification
 ```
 
-The runner validates the simulator during its named `preflight` gate before
-any build. It then fails fast in this order: `Pokedex` build, `Modules`,
-`PokedexTests`, `PokedexConcurrencyTests`, `DatabasePipelineTests`, data-pipeline
-`prepare-tools`, and offline data-pipeline `verify`. The pipeline gates reuse
-`Scripts/pokedex-data-pipeline`; the release runner does not duplicate crawler
-or generation logic.
+Release verification starts with `Scripts/pokedex-data-pipeline generate`.
+Generation prepares its tools, checks the reviewed inputs, builds and validates
+the database, and safely installs the result. It can replace the generated
+database in this checkout. Run release verification from a disposable checkout
+when you need to preserve the owner's local database.
+
+After its `preflight` gate, the runner executes these gates in order:
+
+1. Source database generation with `Scripts/pokedex-data-pipeline generate`.
+2. The `Pokedex` build.
+3. The `Modules` simulator tests.
+4. The `PokedexTests` suite.
+5. The `PokedexConcurrencyTests` suite.
+6. `DatabasePipelineTests`, built with `xcodebuild build-for-testing` and run
+   with `xcrun xctest`.
+
+CI uses GitHub's `xcode-27` runner and logs the selected Xcode version and
+available simulator inventory. The current image defaults to Xcode 27.1 and
+provides an iPhone 17 simulator on iOS 27.0. The workflow uses that exact
+destination; see the [runner image inventory](https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md).
+
+The pipeline gates reuse `Scripts/pokedex-data-pipeline`; the release runner
+does not duplicate crawler or generation logic.
 
 `PIKADEX_SIMULATOR_DESTINATION` overrides the default
-`platform=iOS Simulator,name=iPhone 17 Pro`. `PIKADEX_RELEASE_BUILD_ROOT`
+`platform=iOS Simulator,name=iPhone 17,OS=27.0`. `PIKADEX_RELEASE_BUILD_ROOT`
 overrides the default isolated root at `build/release-verification`. The root is
 validated before cleanup, and only these owned children are recreated:
 
@@ -78,6 +95,19 @@ output root.
 
 ## Reproducible database generation
 
+The canonical developer and CI entry point is:
+
+```sh
+Scripts/pokedex-data-pipeline generate
+```
+
+Artwork is checked out as ordinary Git content. No Git LFS setup or separate
+hydration step is required. The generated database and its SQLite sidecars are
+local files ignored by Git.
+
+It prepares the pipeline tools as needed, preflights the reviewed sources,
+generates and validates the database, and safely installs the output.
+
 The database is prepared through a hybrid crawler, manual Apple Numbers, and
 tooling-only macOS workflow. The canonical automated boundary begins at
 reviewed delimited exports and other explicitly pinned legacy loader inputs.
@@ -85,8 +115,8 @@ The offline command, versioned manifest, manual-workflow inventory, acquisition
 policy, deterministic semantic comparison, report formats, and future-game
 runbook are documented in
 [`Scripts/DataPipeline/README.md`](Scripts/DataPipeline/README.md). Running
-`Scripts/pokedex-data-pipeline verify` never invokes acquisition and never
-mutates reviewed inputs, the committed database, or model resources.
+`Scripts/pokedex-data-pipeline verify` never invokes acquisition or installs a
+database. It leaves reviewed inputs and model resources unchanged.
 
 The authoritative module unit tests are verified with:
 

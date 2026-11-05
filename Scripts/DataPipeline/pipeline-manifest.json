@@ -135,27 +135,13 @@
     }
   ],
   "canonicalSnapshotSchemaVersion": 2,
-  "committedArtifacts": [
-    {
-      "path": "Modules/PokedexCore/Resources/Database/Pokedex.sqlite",
-      "sha256": "ea88293e22e15a25cfe67be05abd9e0a4e13e1d30b142882951e28608a6e4a5e"
-    },
-    {
-      "path": "Modules/PokedexCore/Resources/Database/Pokedex.sqlite-shm",
-      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
-    },
-    {
-      "path": "Modules/PokedexCore/Resources/Database/Pokedex.sqlite-wal",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    }
-  ],
   "modelInputs": [
     {
       "path": "Modules/PokedexCore/Persistence/Pokedex.xcdatamodeld/Pokedex.xcdatamodel/contents",
       "sha256": "e0ef85c50de0c3d100005b20365c65b1d67829e50d7475cca0b26129999da3e8"
     }
   ],
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "sourceInputs": [
     {
       "delimiter": null,

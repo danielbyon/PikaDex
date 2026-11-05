@@ -1,6 +1,7 @@
 import CoreData
 import CryptoKit
 import Foundation
+import SQLite3
 import PokedexCore
 
 /// A versioned, deterministic representation of the generated Core Data catalog.
@@ -369,7 +370,118 @@ public struct SemanticComparisonReport: Codable, Equatable, Sendable {
     }
 }
 
+enum SQLiteDatabase {
+    static func prepareForInstallation(at url: URL) throws {
+        do {
+            guard try SQLiteFileAccess.itemType(at: url) == S_IFREG else {
+                throw PipelineError.generation("SQLite candidate is missing or is not a regular file: \(url.path)")
+            }
+            try SQLiteFileAccess.requireClosed(at: url)
+            try withDatabase(at: url, flags: SQLITE_OPEN_READWRITE | SQLITE_OPEN_FULLMUTEX) { database in
+                let checkpoint = try rows("PRAGMA wal_checkpoint(TRUNCATE)", database: database)
+                guard let result = checkpoint.first, result.count == 3,
+                      Int(result[0]) == 0,
+                      let logFrames = Int(result[1]),
+                      let checkpointedFrames = Int(result[2]),
+                      logFrames < 0 || logFrames == checkpointedFrames else {
+                    throw PipelineError.generation("SQLite WAL checkpoint was busy or incomplete")
+                }
+
+                let journalMode = try rows("PRAGMA journal_mode=DELETE", database: database)
+                guard journalMode.first?.first?.lowercased() == "delete" else {
+                    throw PipelineError.generation("SQLite could not switch the candidate to DELETE journal mode")
+                }
+            }
+            try SQLiteFileAccess.requireClosed(at: url)
+        } catch {
+            throw PipelineError.generation("Could not checkpoint and close the SQLite candidate: \(error)")
+        }
+
+        for suffix in ["-wal", "-journal"] {
+            let sidecar = URL(fileURLWithPath: url.path + suffix)
+            guard try SQLiteFileAccess.itemType(at: sidecar) == nil else {
+                throw PipelineError.generation("SQLite candidate is not self-contained; sidecar remains: \(sidecar.lastPathComponent)")
+            }
+        }
+
+        let sharedMemory = URL(fileURLWithPath: url.path + "-shm")
+        if let sidecarType = try SQLiteFileAccess.itemType(at: sharedMemory) {
+            guard sidecarType == S_IFREG else {
+                throw PipelineError.generation("SQLite candidate has an unsafe shared-memory sidecar: \(sharedMemory.path)")
+            }
+            try SQLiteFileAccess.requireClosed(at: url)
+            try SQLiteFileAccess.requireClosed(at: sharedMemory)
+            do {
+                try FileManager.default.removeItem(at: sharedMemory)
+            } catch {
+                throw PipelineError.generation("Could not remove the closed orphaned SQLite shared-memory sidecar: \(error.localizedDescription)")
+            }
+        }
+
+        for suffix in ["-wal", "-shm", "-journal"] {
+            let sidecar = URL(fileURLWithPath: url.path + suffix)
+            guard try SQLiteFileAccess.itemType(at: sidecar) == nil else {
+                throw PipelineError.generation("SQLite candidate is not self-contained; sidecar remains: \(sidecar.lastPathComponent)")
+            }
+        }
+    }
+
+    static func verifyIntegrity(at url: URL) throws {
+        try withDatabase(at: url, flags: SQLITE_OPEN_READONLY | SQLITE_OPEN_FULLMUTEX) { database in
+            let results: [[String]]
+            do {
+                results = try rows("PRAGMA integrity_check", database: database)
+            } catch {
+                throw PipelineError.validation("SQLite integrity_check could not read the candidate: \(error)")
+            }
+            guard results == [["ok"]] else {
+                let findings = results.flatMap { $0 }.joined(separator: "; ")
+                throw PipelineError.validation("SQLite integrity_check failed: \(findings)")
+            }
+        }
+    }
+
+    private static func withDatabase<T>(
+        at url: URL,
+        flags: Int32,
+        operation: (OpaquePointer) throws -> T
+    ) throws -> T {
+        var database: OpaquePointer?
+        let status = sqlite3_open_v2(url.path, &database, flags, nil)
+        guard status == SQLITE_OK, let database else {
+            let detail = database.map { String(cString: sqlite3_errmsg($0)) } ?? String(cString: sqlite3_errstr(status))
+            if let database { sqlite3_close_v2(database) }
+            throw PipelineError.validation("SQLite open failed: \(detail)")
+        }
+        defer { sqlite3_close_v2(database) }
+        return try operation(database)
+    }
+
+    private static func rows(_ sql: String, database: OpaquePointer) throws -> [[String]] {
+        var statement: OpaquePointer?
+        let prepareStatus = sqlite3_prepare_v2(database, sql, -1, &statement, nil)
+        guard prepareStatus == SQLITE_OK, let statement else {
+            throw PipelineError.validation("\(sql) could not be prepared: \(String(cString: sqlite3_errmsg(database)))")
+        }
+        defer { sqlite3_finalize(statement) }
+
+        var result = [[String]]()
+        while true {
+            let stepStatus = sqlite3_step(statement)
+            if stepStatus == SQLITE_DONE { return result }
+            guard stepStatus == SQLITE_ROW else {
+                throw PipelineError.validation("\(sql) failed: \(String(cString: sqlite3_errmsg(database)))")
+            }
+            result.append((0..<sqlite3_column_count(statement)).map { column in
+                guard let value = sqlite3_column_text(statement, column) else { return "" }
+                return String(cString: value)
+            })
+        }
+    }
+}
+
 public enum CanonicalSnapshotBuilder {
+
     /// Attribute and relationship components defining stable record identity.
     /// Relationship components begin with `@` and resolve to the destination's
     /// own stable key. The map is part of snapshot schema version 2.
@@ -418,6 +530,7 @@ public enum CanonicalSnapshotBuilder {
         guard FileManager.default.fileExists(atPath: databaseURL.path) else {
             throw PipelineError.missingPrerequisite("Database is missing: \(databaseURL.path)")
         }
+        try SQLiteDatabase.verifyIntegrity(at: databaseURL)
         guard let modelURL = Bundle.pokedexCore.url(forResource: "Pokedex", withExtension: "momd"),
               let model = NSManagedObjectModel(contentsOf: modelURL) else {
             throw PipelineError.missingPrerequisite("Compiled Pokedex Core Data model is unavailable")

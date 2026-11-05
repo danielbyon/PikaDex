@@ -7,12 +7,11 @@ import Foundation
 /// consumed without a manifest entry; it never repairs the reviewed input set
 /// by downloading data or inferring a manual spreadsheet transformation.
 public struct PipelineManifest: Codable, Equatable, Sendable {
-    public static let supportedSchemaVersion = 3
+    public static let supportedSchemaVersion = 4
 
     public let schemaVersion: Int
     public let canonicalSnapshotSchemaVersion: Int
     public let sourceInputs: [SourceInput]
-    public let committedArtifacts: [Artifact]
     public let modelInputs: [Artifact]
     public let acquisitionSteps: [AcquisitionStep]
     public let toolchain: Toolchain
@@ -21,7 +20,6 @@ public struct PipelineManifest: Codable, Equatable, Sendable {
         schemaVersion: Int,
         canonicalSnapshotSchemaVersion: Int,
         sourceInputs: [SourceInput],
-        committedArtifacts: [Artifact],
         modelInputs: [Artifact],
         acquisitionSteps: [AcquisitionStep],
         toolchain: Toolchain
@@ -29,7 +27,6 @@ public struct PipelineManifest: Codable, Equatable, Sendable {
         self.schemaVersion = schemaVersion
         self.canonicalSnapshotSchemaVersion = canonicalSnapshotSchemaVersion
         self.sourceInputs = sourceInputs
-        self.committedArtifacts = committedArtifacts
         self.modelInputs = modelInputs
         self.acquisitionSteps = acquisitionSteps
         self.toolchain = toolchain

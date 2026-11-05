@@ -4,7 +4,7 @@ set -euo pipefail
 
 SCRIPT_DIR="${0:A:h}"
 REPOSITORY_ROOT="${SCRIPT_DIR:h}"
-SIMULATOR_DESTINATION="${PIKADEX_SIMULATOR_DESTINATION:-platform=iOS Simulator,name=iPhone 17 Pro}"
+SIMULATOR_DESTINATION="${PIKADEX_SIMULATOR_DESTINATION:-platform=iOS Simulator,name=iPhone 17,OS=27.0}"
 RELEASE_ROOT_INPUT="${PIKADEX_RELEASE_BUILD_ROOT:-${REPOSITORY_ROOT}/build/release-verification}"
 RELEASE_ROOT="${RELEASE_ROOT_INPUT:A}"
 DERIVED_DATA="${RELEASE_ROOT}/DerivedData"
@@ -171,13 +171,12 @@ run_gate() {
 }
 
 run_database_pipeline_tests() {
-  /usr/bin/xcodebuild test \
+  /usr/bin/xcodebuild build-for-testing \
     -project "${PROJECT}" \
     -scheme DatabasePipelineTests \
     -destination "platform=macOS,arch=arm64" \
     "${XCODE_OFFLINE_FLAGS[@]}" \
-    -derivedDataPath "${DERIVED_DATA}/DatabasePipelineTests" \
-    -resultBundlePath "${RESULT_BUNDLES}/DatabasePipelineTests.xcresult" || return $?
+    -derivedDataPath "${DERIVED_DATA}/DatabasePipelineTests" || return $?
 
   /usr/bin/env LLVM_PROFILE_FILE="${PROFILES}/DatabasePipelineTests-deny-network-%p.profraw" \
     "${NETWORK_DENIED_XCTEST_RUNNER}" \
@@ -185,6 +184,10 @@ run_database_pipeline_tests() {
 }
 
 preflight
+
+run_gate "data pipeline generate" \
+  /usr/bin/env PIKADEX_PIPELINE_BUILD_ROOT="${PIPELINE_TOOLING}" \
+    "${PIPELINE_WRAPPER}" generate --output-dir "${PIPELINE_OUTPUT}"
 
 run_gate "Pokedex build" \
   /usr/bin/xcodebuild build \
@@ -223,14 +226,6 @@ run_gate "PokedexConcurrencyTests" \
 
 run_gate "DatabasePipelineTests" \
   run_database_pipeline_tests
-
-run_gate "data pipeline prepare-tools" \
-  /usr/bin/env PIKADEX_PIPELINE_BUILD_ROOT="${PIPELINE_TOOLING}" \
-    "${PIPELINE_WRAPPER}" prepare-tools
-
-run_gate "data pipeline verify" \
-  /usr/bin/env PIKADEX_PIPELINE_BUILD_ROOT="${PIPELINE_TOOLING}" \
-    "${PIPELINE_WRAPPER}" verify --output-dir "${PIPELINE_OUTPUT}"
 
 print "Release verification succeeded."
 print_completed_gates

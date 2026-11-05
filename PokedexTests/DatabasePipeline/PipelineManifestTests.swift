@@ -42,7 +42,6 @@ final class PipelineManifestTests: XCTestCase {
                 schemaVersion: 999,
                 canonicalSnapshotSchemaVersion: 2,
                 sourceInputs: [],
-                committedArtifacts: [],
                 modelInputs: [],
                 acquisitionSteps: [],
                 toolchain: makeManifest(inputs: []).toolchain
@@ -70,6 +69,34 @@ final class PipelineManifestTests: XCTestCase {
         XCTAssertThrowsError(try PipelineIO.verify(inputs: [drift], repositoryRoot: temporaryDirectory)) {
             XCTAssertTrue(String(describing: $0).contains("Checksum mismatch"))
         }
+    }
+
+    func testReviewedSourceChangeIsAcceptedAfterManifestChecksumUpdate() throws {
+        let inputURL = temporaryDirectory.appendingPathComponent("input.json")
+        try "{\"value\":1}".write(to: inputURL, atomically: true, encoding: .utf8)
+        let pinned = PipelineManifest.SourceInput(
+            path: "input.json",
+            sha256: try PipelineIO.sha256(of: inputURL),
+            format: .json,
+            provenance: "reviewed fixture",
+            responsibleManualStep: "Review updated input"
+        )
+        let manifestURL = temporaryDirectory.appendingPathComponent("manifest.json")
+        try PipelineIO.writeJSON(makeManifest(inputs: [pinned]), to: manifestURL)
+        try "{\"value\":2}".write(to: inputURL, atomically: true, encoding: .utf8)
+
+        XCTAssertThrowsError(try PipelineIO.preflightReviewedInputs([pinned], repositoryRoot: temporaryDirectory))
+        let reviewedUpdate = PipelineManifest.SourceInput(
+            path: "input.json",
+            sha256: try PipelineIO.sha256(of: inputURL),
+            format: .json,
+            provenance: "reviewed fixture with approved value change",
+            responsibleManualStep: "Review updated input"
+        )
+        try PipelineIO.writeJSON(makeManifest(inputs: [reviewedUpdate]), to: manifestURL)
+
+        XCTAssertNoThrow(try PipelineManifestLoader.load(from: manifestURL))
+        XCTAssertNoThrow(try PipelineIO.preflightReviewedInputs([reviewedUpdate], repositoryRoot: temporaryDirectory))
     }
 
     func testReviewedDelimitedInputPreflightValidatesHeadersAndStableKeys() throws {
@@ -162,10 +189,9 @@ final class PipelineManifestTests: XCTestCase {
 
     private func makeManifest(inputs: [PipelineManifest.SourceInput]) -> PipelineManifest {
         .init(
-            schemaVersion: 3,
+            schemaVersion: 4,
             canonicalSnapshotSchemaVersion: 2,
             sourceInputs: inputs,
-            committedArtifacts: [],
             modelInputs: [],
             acquisitionSteps: [],
             toolchain: .init(
