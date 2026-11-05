@@ -1,0 +1,21 @@
+.serena/.gitignore
+  s_572fff539c3fed::t_bb873a1a3e8f5c 1-2
+.serena/project.yml
+  s_572fff539c3fed::t_37414df5f2c25b 1-187
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e48a9dab2ca82edbf7b268c3b242799fcf90e1fe",
+  "prompts": {},
+  "sessions": {
+    "s_572fff539c3fed": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a188a8-3280-7891-9d5c-5b2049a8842a",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    }
+  }
+}
