@@ -1,0 +1,51 @@
+GLOSSARY.md
+  s_4baad43b796cbe::t_d685b9eca005aa 1-74
+docs/adr/0004-curated-game-datasets-and-user-data-migration.md
+  s_572fff539c3fed::t_a5fc9d9c2e457b 1-33
+docs/adr/0005-stable-game-identities-and-materialized-datasets.md
+  s_c7322073c3be8f::t_371d7b72f0cbb1 1-34
+docs/adr/0006-reviewed-content-intermediate-model-and-conflict-reporting.md
+  s_ce5a4681e7ca91::t_b9ebc834f53468 1-40
+docs/product-direction.md
+  s_c7322073c3be8f::t_aa56adc81a8e66 1-140
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "21df33f44a6818522bdb54544a07415a8efb6d13",
+  "prompts": {},
+  "sessions": {
+    "s_4baad43b796cbe": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1b614-52ee-78b2-980b-91af2078e4ce",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    },
+    "s_572fff539c3fed": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a188a8-3280-7891-9d5c-5b2049a8842a",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    },
+    "s_c7322073c3be8f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ba0c-52c4-7f73-a566-c996b89fea2d",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    },
+    "s_ce5a4681e7ca91": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bbae-2a41-7881-897c-4327bd62231b",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    }
+  }
+}
