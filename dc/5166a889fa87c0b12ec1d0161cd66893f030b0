@@ -1,0 +1,30 @@
+docs/release-baseline/manifest.json
+  s_58a29dcaf32ddf::t_eafbf8a87fa2ed 74-78
+  s_58a29dcaf32ddf::t_be93edf65fbf6e 257-262
+  s_58a29dcaf32ddf::t_c695262dc52569 1-73,79-208,263-847
+  s_58a29dcaf32ddf::t_5cf7ab1c59ba28 209-256
+  s_58a29dcaf32ddf::t_82656610e36119 848
+docs/release-baseline/report.md
+  s_58a29dcaf32ddf::t_7f6b66130e2828 50
+  s_58a29dcaf32ddf::t_98bb04cd92b8d5 60,71-75,79-93,119-120,122-125
+  s_58a29dcaf32ddf::t_da977d3d057393 1-14,16-49,51-59,61-70,126-133
+  s_58a29dcaf32ddf::t_1c2a61dd0a17d9 76-78,94-95,97-118,121
+  s_58a29dcaf32ddf::t_0c2b271e515bb6 96
+  s_58a29dcaf32ddf::t_f70594f9fd83e8 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dc5166a889fa87c0b12ec1d0161cd66893f030b0",
+  "prompts": {},
+  "sessions": {
+    "s_58a29dcaf32ddf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1c257-9206-7951-8716-f725f7a8d73b",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Daniel Byon <327737+danielbyon@users.noreply.github.com>"
+    }
+  }
+}
