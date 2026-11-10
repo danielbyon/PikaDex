@@ -1,0 +1,848 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline",
+  "issue": "danielbyon/PikaDex#9 \u2014 A1",
+  "baselineStatus": "completed",
+  "source": {
+    "repository": "danielbyon/PikaDex",
+    "commit": "21df33f44a6818522bdb54544a07415a8efb6d13",
+    "branch": "main",
+    "executionCheckout": "/private/tmp/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/PikaDex",
+    "executionCheckoutCommit": "21df33f44a6818522bdb54544a07415a8efb6d13",
+    "executionTrackedTree": "clean before execution",
+    "sourceHashes": {
+      "pipelineManifest": {
+        "path": "/Users/daniel/Projects/PikaDex/Scripts/DataPipeline/pipeline-manifest.json",
+        "sha256": "994c2e9b6bcf567e7233fc6a3cb0d1796e60325fb113ec5fe754afa7839ae1ec"
+      },
+      "crawlerSourcePin": {
+        "path": "/Users/daniel/Projects/PikaDex/Scripts/DataPipeline/crawler-source.json",
+        "sha256": "439df1b899496f77ecb80ad4a990a09deedd1f4e835abac2e1de2cf0bcefa916"
+      },
+      "pipelinePackageResolved": {
+        "path": "/Users/daniel/Projects/PikaDex/Scripts/DataPipeline/Package.resolved",
+        "sha256": "ba22f1e90cce4db96e415710ff67beefd5d0b0ee2f8923e1f6cc76ef7c8454e5"
+      }
+    },
+    "reviewedSourceInputs": {
+      "manifestPath": "/Users/daniel/Projects/PikaDex/Scripts/DataPipeline/pipeline-manifest.json",
+      "manifestSHA256": "994c2e9b6bcf567e7233fc6a3cb0d1796e60325fb113ec5fe754afa7839ae1ec",
+      "inputCount": 69,
+      "matchedCount": 69,
+      "mismatchCount": 0,
+      "verificationArtifact": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/source-input-hash-check.json"
+    },
+    "crawler": {
+      "repository": "danielbyon/PikaDexCrawlers",
+      "revision": "0e5672b16e66c78140a699ef32812cdc2f0d4a15",
+      "executionCheckout": "/private/tmp/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/PikaDexCrawlers",
+      "crawlerSourceJSONSHA256": "439df1b899496f77ecb80ad4a990a09deedd1f4e835abac2e1de2cf0bcefa916"
+    },
+    "primaryCheckoutIntegrity": {
+      "executionPreflightArtifact": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/execution-preflight.json",
+      "headAtExecutionStart": "21df33f44a6818522bdb54544a07415a8efb6d13",
+      "headAtFinalCheck": "21df33f44a6818522bdb54544a07415a8efb6d13",
+      "trackedTreeAtExecutionStart": "clean",
+      "trackedSourceAndConfigurationChangesDuringExecution": [],
+      "ignoredSwiftPMLock": {
+        "path": "/Users/daniel/Projects/PikaDex/Pokedex.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved",
+        "sha256AtExecutionStart": "96cc4f8a5a08cf0a1e64dd56072d66b1af32a464145dbd371343b3e4faefcaa8",
+        "sha256AtFinalCheck": "96cc4f8a5a08cf0a1e64dd56072d66b1af32a464145dbd371343b3e4faefcaa8",
+        "unchangedDuringExecution": true,
+        "mtimeAtExecutionStart": "2026-11-09T14:25:56-08:00",
+        "note": "A planning-time xcodebuild -list refreshed this ignored file before the execution snapshot; its earlier bytes are unknown and were not restored."
+      }
+    }
+  },
+  "environment": {
+    "xcode": "Xcode 27.2 (27B52)",
+    "swift": "Apple Swift version 6.4.2; swift-driver 1.168.6",
+    "iphoneosSDK": "27.2",
+    "iphonesimulatorSDK": "27.2",
+    "installedSimulatorRuntimes": [
+      "iOS 27.0 (24A434)",
+      "iOS 27.1 (24A94425)",
+      "iOS 27.2 (24B91016s)",
+      "iOS 27.2 (24B8117)"
+    ],
+    "selectedSimulator": {
+      "name": "iPhone 17",
+      "runtime": "iOS 27.0",
+      "udid": "AA0281A0-B2BF-4A39-A095-724F98DA3EFF",
+      "destination": "platform=iOS Simulator,id=AA0281A0-B2BF-4A39-A095-724F98DA3EFF"
+    },
+    "simulatorInventoryPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/simulator-devices.json",
+    "unavailableOrUnsupported": [
+      "iOS 26.5 runtime was not listed as installed",
+      "No available simulator device was listed on iOS 27.1"
+    ]
+  },
+  "targetInventory": {
+    "nativeTargetCount": 16,
+    "sharedSchemeCount": 11,
+    "xcodebuildSchemeCount": 12,
+    "testPlans": 0,
+    "testActionConfiguration": "Debug",
+    "swiftVersion": "5.0 for all 16 targets",
+    "deploymentTargets": "iOS 17.0; macOS 14.0",
+    "strictConcurrency": {
+      "debugTargeted": [
+        "Pokedex",
+        "PokedexTests",
+        "PokedexConcurrencyTests",
+        "PokedexCore",
+        "PokedexUI",
+        "DesignSystem",
+        "PokedexResources",
+        "PokedexWidgetExtension",
+        "TeamIntentHandler"
+      ],
+      "releaseTargeted": [
+        "PokedexTests",
+        "PokedexConcurrencyTests"
+      ],
+      "otherwise": "unset, not represented as stricter checking"
+    },
+    "fullTargetSchemeDependencyAndSettingsEvidence": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/target-scheme-settings-inventory.json"
+  },
+  "canonicalRunner": {
+    "command": "Scripts/pokedex-release-verification",
+    "workingDirectory": "/private/tmp/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/PikaDex",
+    "environment": {
+      "PIKADEX_RELEASE_BUILD_ROOT": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner",
+      "PIKADEX_CRAWLERS_ROOT": "/private/tmp/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/PikaDexCrawlers",
+      "PIKADEX_SIMULATOR_DESTINATION": "platform=iOS Simulator,id=AA0281A0-B2BF-4A39-A095-724F98DA3EFF"
+    },
+    "exitCode": 65,
+    "exitCodeSource": "Canonical log reports Failed gate: DatabasePipelineTests (exit 65); runner source run_gate exits with the failed gate code.",
+    "outerWrapperExitCode": 1,
+    "outerWrapperIssue": "zsh read-only status variable prevented status-file write; see runner-status-reconciliation.json.",
+    "logPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/canonical-runner.log",
+    "gates": [
+      {
+        "name": "preflight",
+        "disposition": "pass"
+      },
+      {
+        "name": "data pipeline generate",
+        "disposition": "pass",
+        "summary": "preflight, normalize, generate, validate, install all passed"
+      },
+      {
+        "name": "Pokedex build",
+        "disposition": "pass"
+      },
+      {
+        "name": "Modules",
+        "disposition": "pass",
+        "expectedCases": 61,
+        "executedCases": 61,
+        "passed": 61,
+        "failed": 0,
+        "skipped": 0,
+        "xcresult": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/ResultBundles/Modules.xcresult"
+      },
+      {
+        "name": "PokedexTests",
+        "disposition": "pass",
+        "expectedCases": 6,
+        "executedCases": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "xcresult": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/ResultBundles/PokedexTests.xcresult"
+      },
+      {
+        "name": "PokedexConcurrencyTests",
+        "disposition": "pass",
+        "expectedCases": 16,
+        "executedCases": 16,
+        "passed": 16,
+        "failed": 0,
+        "skipped": 0,
+        "xcresult": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/ResultBundles/PokedexConcurrencyTests.xcresult"
+      },
+      {
+        "name": "DatabasePipelineTests build-for-testing",
+        "disposition": "fail",
+        "exitCode": 65,
+        "expectedCases": 37,
+        "executedCases": 0,
+        "failure": "No space left on device writing Foundation.pcm and Xcode activity log."
+      },
+      {
+        "name": "DatabasePipelineTests XCTest",
+        "disposition": "not_run",
+        "expectedCases": 37,
+        "executedCases": 0,
+        "skipped": "not_reported",
+        "reason": "build-for-testing failed before XCTest launch; no xcresult was produced."
+      },
+      {
+        "name": "PokedexUITests",
+        "disposition": "not_run",
+        "expectedCases": 2,
+        "executedCases": 0,
+        "skipped": "not_reported",
+        "reason": "Not invoked by canonical runner."
+      },
+      {
+        "name": "Release device archive size",
+        "disposition": "not_run",
+        "reason": "Canonical runner stopped at DatabasePipelineTests; no independent Release archive attempt was made."
+      }
+    ],
+    "testReconciliationArtifact": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/reconciliation.json"
+  },
+  "networkPolicy": {
+    "packageProvisioning": "Pinned resolved versions; the runner log reports package fetches as cached.",
+    "catalogGeneration": "Local reviewed inputs; network-denied generation path; acquisition was not invoked.",
+    "xcodebuildSimulatorSuites": "Automatic resolution and package updates disabled; app XCTest gates are not run inside the network-denial helper.",
+    "databasePipelineTests": "Network-denied XCTest helper was not reached because build-for-testing failed."
+  },
+  "releaseSize": {
+    "uncompressedReleaseDeviceAppBundleBytes": null,
+    "uncompressedReleaseDeviceAppBundleStatus": "not_run",
+    "distributableIPABytes": null,
+    "distributableIPAStatus": "not_run",
+    "debugSimulatorAppsAreNotReleaseSizeEvidence": true,
+    "followUp": "Issue #8/D: run this procedure with adequate free space and report the uncompressed Release device .app logical bytes and any separately exported IPA bytes.",
+    "procedureStatus": "not_run",
+    "procedureSourceCommit": "21df33f44a6818522bdb54544a07415a8efb6d13",
+    "procedureCrawlerRevision": "0e5672b16e66c78140a699ef32812cdc2f0d4a15",
+    "procedureWorkingDirectory": "Fresh disposable PikaDex checkout at procedureSourceCommit",
+    "procedureEvidenceRoot": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size",
+    "catalogPreparation": {
+      "command": "PIKADEX_CRAWLERS_ROOT=\"$CRAWLER_CHECKOUT\" PIKADEX_PIPELINE_BUILD_ROOT=\"$EVIDENCE_ROOT/PipelineTooling\" Scripts/pokedex-data-pipeline generate --output-dir \"$EVIDENCE_ROOT/PipelineOutput\"",
+      "requirement": "Run in the disposable checkout with PIKADEX_CRAWLERS_ROOT set to the isolated pinned crawler checkout; generation validates and installs the reviewed local catalog. Do not invoke acquisition.",
+      "buildProductsPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/PipelineTooling",
+      "outputPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/PipelineOutput"
+    },
+    "archiveCommand": [
+      "PIKADEX_RELEASE_BUILD_ROOT=\"$EVIDENCE_ROOT/runner\"",
+      "xcodebuild archive",
+      "-project Pokedex.xcodeproj",
+      "-scheme Pokedex",
+      "-configuration Release",
+      "-destination generic/platform=iOS",
+      "-archivePath \"$EVIDENCE_ROOT/PikaDex-Release.xcarchive\"",
+      "-derivedDataPath \"$EVIDENCE_ROOT/ArchiveDerivedData\"",
+      "-disableAutomaticPackageResolution",
+      "-onlyUsePackageVersionsFromResolvedFile",
+      "-skipPackageUpdates"
+    ],
+    "archivePath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/PikaDex-Release.xcarchive",
+    "archiveDerivedDataPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/ArchiveDerivedData",
+    "appBundlePath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/PikaDex-Release.xcarchive/Products/Applications/PikaDex.app",
+    "signing": "Use the project Release signing settings; the intended procedure does not override signing.",
+    "appBundleMeasurement": {
+      "status": "not_run",
+      "method": "Sum st_size for regular files recursively beneath the archived PikaDex.app, using lstat and not following symlinks.",
+      "units": "logical bytes",
+      "reports": [
+        "logical byte count",
+        "regular-file count",
+        "app bundle path",
+        "source commit"
+      ],
+      "excludes": "Archive metadata outside the .app bundle and filesystem allocation overhead."
+    },
+    "ipaMeasurement": {
+      "status": "not_run",
+      "separateFromAppBundle": true,
+      "exportCommandTemplate": "xcodebuild -exportArchive -archivePath \"$ARCHIVE_PATH\" -exportPath \"$EVIDENCE_ROOT/ipa\" -exportOptionsPlist \"$EXPORT_OPTIONS_PLIST\"",
+      "measurementCommand": "stat -f %z \"$IPA_PATH\"",
+      "requirements": "Record the export options plist and the IPA file byte length separately; do not infer IPA size from the uncompressed .app byte count."
+    },
+    "notExecutedReason": "No Release archive attempt was made after the canonical run stopped at DatabasePipelineTests with ENOSPC. The compiler could not write Foundation.pcm and Xcode could not save its activity log; the last observed free-space reading at the failure was 121 MiB.",
+    "archiveLogPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/archive.log",
+    "archiveExitPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/archive.exit",
+    "appBundleMeasurementRecordPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/release-app-size.json",
+    "ipaExportPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/ipa",
+    "ipaMeasurementRecordPath": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/release-size/ipa-size.json"
+  },
+  "evidenceRetention": {
+    "externalRoot": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline",
+    "outsideRepository": true,
+    "requirements": "Retain through Issue #9 A1 maintainer review and completion of Issues #7/C and #8/D; no automatic deletion.",
+    "privateTmpCleanup": "Not performed; isolated source checkouts remain under /private/tmp/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline"
+  },
+  "externalEvidenceFileCount": 50933,
+  "externalArtifacts": [
+    {
+      "label": "inventory/build-settings-debug-default.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-default.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 687304,
+      "sha256": "b6ceda1319e603ebe8f2e429c77ac8a58737b437f86206385778607f2af5472c"
+    },
+    {
+      "label": "inventory/build-settings-debug-default.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-default.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/build-settings-debug-iphonesimulator.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-iphonesimulator.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 729525,
+      "sha256": "93aed1683c25affd44ea367e959ac0bad99fc67e25bb27741ba65e79e0edd266"
+    },
+    {
+      "label": "inventory/build-settings-debug-iphonesimulator.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-iphonesimulator.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/build-settings-debug-macos.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-macos.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 726821,
+      "sha256": "6cd392473aa7172cacc86f56de6fc7cfab2967b2412550dab3c53e28a07427fd"
+    },
+    {
+      "label": "inventory/build-settings-debug-macos.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-macos.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/build-settings-debug-simulator.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-simulator.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 729525,
+      "sha256": "93aed1683c25affd44ea367e959ac0bad99fc67e25bb27741ba65e79e0edd266"
+    },
+    {
+      "label": "inventory/build-settings-debug-simulator.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-debug-simulator.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/build-settings-release-default.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-release-default.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 684852,
+      "sha256": "0280656fc6e6c6e2800edae7175ef7f27308958770a1c87aa2007a53027fa203"
+    },
+    {
+      "label": "inventory/build-settings-release-default.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-release-default.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/build-settings-release-device.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-release-device.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 720307,
+      "sha256": "fd05d6898d4a75f16385bf9fb049b0c149c7fd8d9527e682c17a30528367286d"
+    },
+    {
+      "label": "inventory/build-settings-release-device.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-release-device.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/build-settings-release-macos.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-release-macos.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 724501,
+      "sha256": "64a5b46fa99c9b016ab2d15dc2e221c68a2f6f2c3c3d892b4f5e10f6cc0a0f6b"
+    },
+    {
+      "label": "inventory/build-settings-release-macos.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/build-settings-release-macos.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/expected-test-cases.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/expected-test-cases.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 22281,
+      "sha256": "43a8e5b7589c6854fe449b4ae2f8e506fd8cb5d0f3bfdb7c2ee99e5b1bdcbc31"
+    },
+    {
+      "label": "inventory/iphoneos-sdk-version.txt",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/iphoneos-sdk-version.txt",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 5,
+      "sha256": "53e1ae253beb3b8a3b99dd2d4ec1eb641d392378329fcdccb560779fdf46de0b"
+    },
+    {
+      "label": "inventory/iphonesimulator-sdk-version.txt",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/iphonesimulator-sdk-version.txt",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 5,
+      "sha256": "53e1ae253beb3b8a3b99dd2d4ec1eb641d392378329fcdccb560779fdf46de0b"
+    },
+    {
+      "label": "inventory/project-list.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/project-list.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 879,
+      "sha256": "8026eeead08a57fbfad1ec67532868a70ef12440442dea8f87726f1fc3f9a33d"
+    },
+    {
+      "label": "inventory/project-list.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/project-list.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/project.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/project.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 213516,
+      "sha256": "bb664296c8f012120a70434d9d0dc9f181dce90d7a6a7b597cc5b622afd52263"
+    },
+    {
+      "label": "inventory/scheme-concurrency-tests.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-concurrency-tests.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 43759,
+      "sha256": "c742a075a17dc3d3df424f7c7f74da865309c88ec966578ee9a08c3e10267d01"
+    },
+    {
+      "label": "inventory/scheme-concurrency-tests.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-concurrency-tests.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/scheme-database-pipeline-tests.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-database-pipeline-tests.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/scheme-database-pipeline-tests.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-database-pipeline-tests.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 499,
+      "sha256": "996ff0ce8ae6d924558b4d0127edf1bc24a58a9857e78a1c8ccce0132d4cb1fc"
+    },
+    {
+      "label": "inventory/scheme-modules.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-modules.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 177323,
+      "sha256": "8d62b5eb7288b02a0a7edca57afc576632c102d751dcd8b9fb543f944a8e3caf"
+    },
+    {
+      "label": "inventory/scheme-modules.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-modules.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/scheme-pokedex-retry.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-pokedex-retry.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 43931,
+      "sha256": "a758f849cce5250bfdafc62f508bf9ab991d6b57deb508a784f958b4c9e7cf74"
+    },
+    {
+      "label": "inventory/scheme-pokedex-retry.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-pokedex-retry.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/scheme-pokedex-tests.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-pokedex-tests.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 43759,
+      "sha256": "c742a075a17dc3d3df424f7c7f74da865309c88ec966578ee9a08c3e10267d01"
+    },
+    {
+      "label": "inventory/scheme-pokedex-tests.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-pokedex-tests.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/scheme-pokedex.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-pokedex.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/scheme-pokedex.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/scheme-pokedex.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 4446,
+      "sha256": "1b45bb1e2497d8b76e25310add8f1c3095a4e7c0812843c03f94b6337ab02f0e"
+    },
+    {
+      "label": "inventory/simulator-devices.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/simulator-devices.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 16484,
+      "sha256": "489f354116eda12626a894761e38ad2509eba37e010681df009ccdecbae69697"
+    },
+    {
+      "label": "inventory/simulator-runtimes.txt",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/simulator-runtimes.txt",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 316,
+      "sha256": "0c44fbc0d0c7f99737ef40e1ad6f78c72048d5f02fe4178a3d5129168c27c190"
+    },
+    {
+      "label": "inventory/source-input-hash-check.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/source-input-hash-check.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 29305,
+      "sha256": "4cfc10557e13f640c7ea04e5e970ca211de894095ab7161d222b200359f73583"
+    },
+    {
+      "label": "inventory/swiftc-version.txt",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/swiftc-version.txt",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 128,
+      "sha256": "448e3f9c46706640fe62ea0140ecfccbb330baba2076b2916c0423af9642ee06"
+    },
+    {
+      "label": "inventory/target-database-pipeline-tests-retry.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/target-database-pipeline-tests-retry.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 44250,
+      "sha256": "25bbe05a162b2ec948612db9f03c883ba63602e8e9d245a8f5d60dc1c0415d3e"
+    },
+    {
+      "label": "inventory/target-database-pipeline-tests-retry.stderr",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/target-database-pipeline-tests-retry.stderr",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "inventory/target-scheme-inventory.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/target-scheme-inventory.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 9548,
+      "sha256": "4785cf5b439744fab0d72c843837d79b671d7b86cbc84f17ad4d9787c796924b"
+    },
+    {
+      "label": "inventory/target-scheme-settings-inventory.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/target-scheme-settings-inventory.json",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 27961,
+      "sha256": "03cda8f8183750df631607c96e72b89ee630251a8795929d4ecf0128517ae941"
+    },
+    {
+      "label": "inventory/xcodebuild-version.txt",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory/xcodebuild-version.txt",
+      "role": "toolchain/project/target/scheme inventory",
+      "bytes": 31,
+      "sha256": "67c5b47bcf0e788aecae2f9b3af345813bdf7fe736faefb9666a7f4b2bf27ba7"
+    },
+    {
+      "label": "inventory-tree",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/inventory",
+      "role": "raw inventory outputs",
+      "logicalBytes": 5681261,
+      "fileCount": 41,
+      "treeSHA256": "a3ed14176fef3c37e35f765fa1864ae6339bf8173d6c49be05be768817ae61ed",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "execution-preflight",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/execution-preflight.json",
+      "role": "primary checkout and isolated execution provenance",
+      "bytes": 1757,
+      "sha256": "1026d0b63f1d42f4490a4956753f02e33084c8409cf1a70e7d917dde822ac704"
+    },
+    {
+      "label": "canonical-runner-log",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/canonical-runner.log",
+      "role": "complete ordered canonical run log",
+      "bytes": 101316,
+      "sha256": "222d843c865198d50b5bc30696c7a55bfc96c43caaafd0325fa3183903629f63"
+    },
+    {
+      "label": "runner-status-reconciliation",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner-status-reconciliation.json",
+      "role": "runner exit and wrapper capture reconciliation",
+      "bytes": 816,
+      "sha256": "8418440452e62c98c14fa0cd4be2b6cfb0fb0473c19c0364f19f50591c637661"
+    },
+    {
+      "label": "separate diagnostic process sample",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/diagnostic-modules-xcodebuild-sample.txt",
+      "role": "non-canonical diagnostic only",
+      "bytes": 213251,
+      "sha256": "cc3c8904a90e49cf07006f695c807187f5f49af3e753b18f1f914ca7671debe7"
+    },
+    {
+      "label": "observed-tests/Modules.summary.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/Modules.summary.json",
+      "role": "expected-versus-executed XCTest evidence",
+      "bytes": 874,
+      "sha256": "55e2e8c2041272aa487e228d55402b3a3721a0cfbdfaee7e5d6f474d393a3ccd"
+    },
+    {
+      "label": "observed-tests/Modules.tests.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/Modules.tests.json",
+      "role": "expected-versus-executed XCTest evidence",
+      "bytes": 24879,
+      "sha256": "53835eef78d34e5a56732d2fd6ba77582cb4a136dc9a111749a06a625aed102c"
+    },
+    {
+      "label": "observed-tests/PokedexConcurrencyTests.summary.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/PokedexConcurrencyTests.summary.json",
+      "role": "expected-versus-executed XCTest evidence",
+      "bytes": 752,
+      "sha256": "87b21f84c8b9cba32c09bf9d29e05af6f76552b9d29d7b5538f0510f0107cbf3"
+    },
+    {
+      "label": "observed-tests/PokedexConcurrencyTests.tests.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/PokedexConcurrencyTests.tests.json",
+      "role": "expected-versus-executed XCTest evidence",
+      "bytes": 8011,
+      "sha256": "9585a890ab0d65dcdd12e63884e9dc35903ac391cf3b643be0e56b44d5ccb770"
+    },
+    {
+      "label": "observed-tests/PokedexTests.summary.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/PokedexTests.summary.json",
+      "role": "expected-versus-executed XCTest evidence",
+      "bytes": 726,
+      "sha256": "9f53b5acbee3cf58e897a019ed643b13aeecd51de87b913d619f9296d9669cbb"
+    },
+    {
+      "label": "observed-tests/PokedexTests.tests.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/PokedexTests.tests.json",
+      "role": "expected-versus-executed XCTest evidence",
+      "bytes": 2893,
+      "sha256": "21cd146f1348418227c9ba1031c7b74fa91e327dad1989cb4dda90ef693bcccb"
+    },
+    {
+      "label": "observed-tests/reconciliation.json",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests/reconciliation.json",
+      "role": "expected-versus-executed XCTest evidence",
+      "bytes": 19125,
+      "sha256": "7a488857b52f24b6aea2a5c1302e51fe42a67cbe277269760af12230dac4167e"
+    },
+    {
+      "label": "observed-tests-tree",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/observed-tests",
+      "role": "extracted XCTest summaries and case lists",
+      "logicalBytes": 57260,
+      "fileCount": 7,
+      "treeSHA256": "d000a990eaeb2c1b204dabd37ccdcf8492b99e46ef693ac87469ac54c318c4f4",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "generated-catalog",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/PipelineOutput/candidate/Pokedex.sqlite",
+      "role": "generated SQLite candidate from isolated checkout",
+      "bytes": 405860352,
+      "sha256": "a1a4eae9a2bb94aaa186c9c9d32225c8f7b80edd6a3b14c78e394d11aa79ad82"
+    },
+    {
+      "label": "pipeline-reports",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/PipelineOutput/reports",
+      "role": "preflight/generation/validation/install reports",
+      "logicalBytes": 291607,
+      "fileCount": 6,
+      "treeSHA256": "89cd8a3c9ec42e23b4a7ab905599b8c64956044898c5a4ebd6096220064a22cb",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "normalized-input-copies",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/PipelineOutput/normalized-inputs",
+      "role": "source-only derived input copies",
+      "logicalBytes": 64758570,
+      "fileCount": 69,
+      "treeSHA256": "1b650204e9f9be9fd7fea61e8a716b5b6862f295a2c27c73d5f9db8aa0a191a9",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "pipeline-tool-products",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/PipelineTooling/DerivedData/Build/Products/Debug",
+      "role": "compiled offline pipeline tools",
+      "logicalBytes": 16880305,
+      "fileCount": 65,
+      "treeSHA256": "5796bc0f8c63967b4cc4e65970decfa438132f585c26dc919891e6fc59a8de60",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "Modules.xcresult",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/ResultBundles/Modules.xcresult",
+      "role": "XCTest result bundle",
+      "logicalBytes": 537143,
+      "fileCount": 190,
+      "treeSHA256": "3625641ba4478ebf843f40e02e1c3967068fc7f5777efce79d34e027b40dd001",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "PokedexTests.xcresult",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/ResultBundles/PokedexTests.xcresult",
+      "role": "XCTest result bundle",
+      "logicalBytes": 484314,
+      "fileCount": 42,
+      "treeSHA256": "258fc92605cba384428521e0ca5cebe39e21993447541f773a28cd1d068b5f80",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "PokedexConcurrencyTests.xcresult",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/ResultBundles/PokedexConcurrencyTests.xcresult",
+      "role": "XCTest result bundle",
+      "logicalBytes": 504906,
+      "fileCount": 62,
+      "treeSHA256": "ebf3cf191d5e801221d91e807b119553cd1cc5d12233b9275a1f888822ea7b43",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "Pokedex Debug simulator app",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/Pokedex/Build/Products/Debug-iphonesimulator/PikaDex.app",
+      "role": "compiled product; Debug simulator products are not Release size evidence",
+      "logicalBytes": 692850740,
+      "fileCount": 73,
+      "treeSHA256": "1a4ace39f29192294bec0e43198023d25f5ecb11e114900c158afc5e47417d8b",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "PokedexTests Debug simulator app",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/PokedexTests/Build/Products/Debug-iphonesimulator/PikaDex.app",
+      "role": "compiled product; Debug simulator products are not Release size evidence",
+      "logicalBytes": 655936313,
+      "fileCount": 70,
+      "treeSHA256": "bba1c657bcb11c6ea1b5391416b570a45326c2bee734f34b765ec54fdf72f57a",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "PokedexConcurrencyTests Debug simulator app",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/PokedexConcurrencyTests/Build/Products/Debug-iphonesimulator/PikaDex.app",
+      "role": "compiled product; Debug simulator products are not Release size evidence",
+      "logicalBytes": 657899929,
+      "fileCount": 85,
+      "treeSHA256": "3e21a2a14be630bf296d2fa3124e7fc58501ff5999db789a1d4f10ac7269bc8a",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "Modules XCTest product",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/Modules/Build/Products/Debug-iphonesimulator/PokedexCoreTests.xctest",
+      "role": "compiled product; Debug simulator products are not Release size evidence",
+      "logicalBytes": 694583,
+      "fileCount": 3,
+      "treeSHA256": "c154668e5a2c2b6be903717244239cf1542dd12f7cc800acad1bc4450e91d1ac",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "DatabasePipelineTests partial XCTest product",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/DatabasePipelineTests/Build/Products/Debug/DatabasePipelineTests.xctest",
+      "role": "compiled product; Debug simulator products are not Release size evidence",
+      "logicalBytes": 0,
+      "fileCount": 0,
+      "treeSHA256": "c1ef670c7d968e09e06127f5c35faebc0db723fa97808ac3b329b89a80790ca4",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "Pokedex Xcode logs",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/Pokedex/Logs",
+      "role": "Xcode activity and test logs",
+      "logicalBytes": 348652,
+      "fileCount": 4,
+      "treeSHA256": "d1b198f839191970dce48055b76b98029482fe0470b146d0a02b4020c87edaf7",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "Modules Xcode logs",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/Modules/Logs",
+      "role": "Xcode activity and test logs",
+      "logicalBytes": 208499,
+      "fileCount": 4,
+      "treeSHA256": "c1f630ddefc5be496bad6934c123a96f7606acc533296a6141fafb3755a26239",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "PokedexTests Xcode logs",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/PokedexTests/Logs",
+      "role": "Xcode activity and test logs",
+      "logicalBytes": 347049,
+      "fileCount": 4,
+      "treeSHA256": "8b47aef6c7cec828d4f6181e576432b06a75d97e68326bd10bf14a3d648c44fc",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "PokedexConcurrencyTests Xcode logs",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/PokedexConcurrencyTests/Logs",
+      "role": "Xcode activity and test logs",
+      "logicalBytes": 357132,
+      "fileCount": 4,
+      "treeSHA256": "abdd04f09c2e80ec0d64acd18c6c601afc67e50a9b912b3b15b558686ca0900a",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "DatabasePipelineTests Xcode logs",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/DatabasePipelineTests/Logs",
+      "role": "Xcode activity and test logs",
+      "logicalBytes": 4195,
+      "fileCount": 2,
+      "treeSHA256": "4ebe2b900e5cdf1a7122f72b53ca2fe6ff7d36dc96ef79e110120eb22f1198f3",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    },
+    {
+      "label": "DatabasePipelineTests partial DerivedData",
+      "path": "/Users/daniel/.codex/artifacts/pikadex/issue-9-a1/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/runner/DerivedData/DatabasePipelineTests",
+      "role": "failed build output retained for diagnosis",
+      "logicalBytes": 272659018,
+      "fileCount": 4866,
+      "treeSHA256": "39bdbfac864a61a73ceb2c5a05051f0aa976cf6c39de7fde957679d56e767c96",
+      "treeHashAlgorithm": "SHA-256 over sorted relative path/type/size/content-hash records"
+    }
+  ],
+  "scope": {
+    "changedPaths": [
+      "docs/release-baseline/manifest.json",
+      "docs/release-baseline/report.md",
+      ".chatgpt/codex-runs/2026-11-09T220316Z-issue-9-a1-pikadex-build-and-test-baseline/RESULT.json"
+    ],
+    "productionTestsBuildSettingsCIAndDependenciesChanged": false,
+    "catalogContentChanged": false,
+    "issueOrReleaseStatusChanged": false,
+    "commitsOrPushes": false
+  },
+  "followUps": [
+    {
+      "owner": "Issue #10",
+      "item": "CI parity for the local app build and PokedexTests/PokedexConcurrencyTests suites."
+    },
+    {
+      "owner": "Issue #11",
+      "item": "Duo native test destination feasibility; no Duo pose was tested here."
+    },
+    {
+      "owner": "Issue #7/C",
+      "item": "Feature journey evidence for later C scope."
+    },
+    {
+      "owner": "Issue #8/D",
+      "item": "Prior-install fixture and Release device app/IPA size evidence."
+    },
+    {
+      "owner": "Issue #9 A1 review",
+      "item": "If desired, rerun DatabasePipelineTests with adequate free storage; this run records build failure and XCTest not_run."
+    }
+  ]
+}
