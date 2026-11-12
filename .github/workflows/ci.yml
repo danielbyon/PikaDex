@@ -20,71 +20,18 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Check out pinned crawler source data anonymously
-        run: |
-          set -euo pipefail
-          export GIT_CONFIG_NOSYSTEM=1
-          export GIT_CONFIG_GLOBAL=/dev/null
-          export GIT_TERMINAL_PROMPT=0
-          reference="Scripts/DataPipeline/crawler-source.json"
-          repository="$(python3 -c 'import json; print(json.load(open("Scripts/DataPipeline/crawler-source.json", encoding="utf-8"))["repository"])')"
-          revision="$(python3 -c 'import json; print(json.load(open("Scripts/DataPipeline/crawler-source.json", encoding="utf-8"))["revision"])')"
-          if [[ "${repository}" != "danielbyon/PikaDexCrawlers" || ! "${revision}" =~ ^[0-9a-f]{40}$ ]]; then
-            echo "Invalid PikaDexCrawlers repository or revision in ${reference}" >&2
-            exit 2
-          fi
-          checkout="${RUNNER_TEMP}/PikaDexCrawlers"
-          mkdir -p "${checkout}"
-          git -C "${checkout}" init
-          git -C "${checkout}" remote add origin "https://github.com/${repository}.git"
-          git -C "${checkout}" config remote.origin.promisor true
-          git -C "${checkout}" config remote.origin.partialclonefilter blob:none
-          git -C "${checkout}" config credential.helper ""
-          git -C "${checkout}" sparse-checkout init --cone
-          git -C "${checkout}" sparse-checkout set Data
-          git -C "${checkout}" fetch --no-tags --filter=blob:none --depth=1 origin "${revision}"
-          git -C "${checkout}" checkout --detach "${revision}"
-          test "$(git -C "${checkout}" rev-parse HEAD)" = "${revision}"
-
-      - name: Record Xcode and available simulator inventory
-        run: |
-          xcodebuild -version
-          xcrun simctl list devices available
-
-      - name: Generate and validate the catalog
+      - name: Run canonical release verification
+        id: verification
         env:
-          PIKADEX_PIPELINE_BUILD_ROOT: ${{ runner.temp }}/PikaDex-DerivedData
-        run: Scripts/pokedex-data-pipeline generate --crawlers-root "$RUNNER_TEMP/PikaDexCrawlers" --output-dir "$RUNNER_TEMP/PikaDex-PipelineOutput"
+          PIKADEX_RELEASE_BUILD_ROOT: ${{ runner.temp }}/PikaDex-A2
+          PIKADEX_SIMULATOR_DESTINATION: platform=iOS Simulator,name=iPhone 17,OS=27.0
+        run: Scripts/pokedex-release-verification
 
-      - name: Build the app with the generated PokedexCore resource
-        run: >-
-          xcodebuild build
-          -project Pokedex.xcodeproj
-          -scheme Pokedex
-          -destination 'generic/platform=iOS Simulator'
-          -derivedDataPath "$RUNNER_TEMP/PikaDex-DerivedData"
-          CODE_SIGNING_ALLOWED=NO
-
-      - name: Test bundled catalog lookup
-        run: >-
-          xcodebuild test
-          -project Pokedex.xcodeproj
-          -scheme Modules
-          -destination 'platform=iOS Simulator,name=iPhone 17,OS=27.0'
-          -derivedDataPath "$RUNNER_TEMP/PikaDex-DerivedData"
-          -resultBundlePath "$RUNNER_TEMP/PikaDex-Modules.xcresult"
-          CODE_SIGNING_ALLOWED=NO
-
-      - name: Build the source database pipeline tests
-        run: >-
-          xcodebuild build-for-testing
-          -project Pokedex.xcodeproj
-          -scheme DatabasePipelineTests
-          -destination 'platform=macOS'
-          -derivedDataPath "$RUNNER_TEMP/PikaDex-DerivedData"
-          CODE_SIGNING_ALLOWED=NO
-
-      - name: Run the source database pipeline tests
-        run: >-
-          xcrun xctest
-          "$RUNNER_TEMP/PikaDex-DerivedData/Build/Products/Debug/DatabasePipelineTests.xctest"
+      - name: Upload verification evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pikadex-a2-verification
+          path: ${{ runner.temp }}/PikaDex-A2/evidence/
+          if-no-files-found: error
+          retention-days: 14

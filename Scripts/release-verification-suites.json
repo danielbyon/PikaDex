@@ -1,0 +1,42 @@
+{
+  "requiredSuites": [
+    "Modules",
+    "PokedexTests",
+    "PokedexConcurrencyTests",
+    "DatabasePipelineTests"
+  ],
+  "suites": [
+    {
+      "name": "Modules",
+      "scheme": "Modules",
+      "targetName": "PokedexCoreTests",
+      "targetIdentifier": "65401F4A2978EA91005BF4DC",
+      "platform": "ios-simulator",
+      "sourceGlobs": ["ModuleTests/PokedexCoreTests/**/*.swift"]
+    },
+    {
+      "name": "PokedexTests",
+      "scheme": "PokedexTests",
+      "targetName": "PokedexTests",
+      "targetIdentifier": "6547F80A237968D50091A083",
+      "platform": "ios-simulator",
+      "sourceGlobs": ["PokedexTests/DeepLinkTests.swift"]
+    },
+    {
+      "name": "PokedexConcurrencyTests",
+      "scheme": "PokedexConcurrencyTests",
+      "targetName": "PokedexConcurrencyTests",
+      "targetIdentifier": "F50000000000000000000001",
+      "platform": "ios-simulator",
+      "sourceGlobs": ["PokedexTests/Concurrency/**/*.swift"]
+    },
+    {
+      "name": "DatabasePipelineTests",
+      "scheme": "DatabasePipelineTests",
+      "targetName": "DatabasePipelineTests",
+      "targetIdentifier": "F60000000000000000000102",
+      "platform": "macos",
+      "sourceGlobs": ["PokedexTests/DatabasePipeline/**/*.swift"]
+    }
+  ]
+}
