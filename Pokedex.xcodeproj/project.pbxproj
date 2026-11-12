@@ -3461,7 +3461,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Scripts/check-generated-pokedex-database.sh",
-				"$(SRCROOT)/Modules/PokedexCore/Resources/Database/Pokedex.sqlite",
 			);
 			name = "Check Generated Pokedex Database";
 			outputFileListPaths = (

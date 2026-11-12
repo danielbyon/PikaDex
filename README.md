@@ -45,53 +45,56 @@ rtk xcodebuild build \
 
 ## Release verification
 
-The canonical Phase 7 release command is:
+CI and local verification use the same command:
 
 ```sh
 rtk Scripts/pokedex-release-verification
 ```
 
-Release verification starts with `Scripts/pokedex-data-pipeline generate`.
-Generation prepares its tools, checks the reviewed inputs, builds and validates
-the database, and safely installs the result. It can replace the generated
-database in this checkout. Run release verification from a disposable checkout
-when you need to preserve the owner's local database.
+The runner checks out the crawler revision recorded in
+`Scripts/DataPipeline/crawler-source.json`, verifies all 69 reviewed inputs,
+and prepares Swift packages from `Scripts/DataPipeline/Package.resolved`.
+Crawler and package provisioning may use the network. Catalog generation and
+validation run through `Scripts/run-with-network-denied` and write a candidate
+under the build root without installing it in the checkout.
 
-After its `preflight` gate, the runner executes these gates in order:
+Build phases select that candidate through
+`PIKADEX_GENERATED_DATABASE_PATH`. An explicit path that is missing or invalid
+stops the build. Ordinary app builds leave the variable unset and continue using
+`Modules/PokedexCore/Resources/Database/Pokedex.sqlite`.
 
-1. Source database generation with `Scripts/pokedex-data-pipeline generate`.
-2. The `Pokedex` build.
-3. The `Modules` simulator tests.
-4. The `PokedexTests` suite.
-5. The `PokedexConcurrencyTests` suite.
-6. `DatabasePipelineTests`, built with `xcodebuild build-for-testing` and run
-   with `xcrun xctest`.
+The runner checks scheme and target membership, then asks Xcode for the
+compiled test inventory with `-enumerate-tests` in JSON format. Source
+declarations are reconciled against that inventory; Xcode's compiled list
+defines the executable tests. Simulator results use each suite's xcresult when
+it contains a complete case list and count. Otherwise, the runner reconciles
+the full `xcodebuild` log. The runner first enumerates the compiled
+`DatabasePipelineTests` cases, then builds the bundle with
+`xcodebuild build-for-testing` and executes it through
+`Scripts/run-xctest-bundle-with-network-denied`. The runner retains the full
+XCTest log, checks every case and the final count, and preserves the XCTest
+exit status. Xcode enumeration and build steps use the pinned package lock
+with automatic package resolution disabled; they do not run test methods.
 
-CI uses GitHub's `xcode-27` runner and logs the selected Xcode version and
-available simulator inventory. The current image defaults to Xcode 27.1 and
-provides an iPhone 17 simulator on iOS 27.0. The workflow uses that exact
-destination; see the [runner image inventory](https://github.com/actions/runner-images/blob/main/images/macos/xcode-27-arm64-Readme.md).
-
-The pipeline gates reuse `Scripts/pokedex-data-pipeline`; the release runner
-does not duplicate crawler or generation logic.
+Each run records gate logs and statuses, suite inventories and results,
+toolchain and simulator identities, source and package revisions, reviewed
+input hashes, and candidate and packaged-catalog hashes. CI uploads the
+verification evidence and available xcresult bundles. It excludes DerivedData,
+compiled products, source copies, and the candidate SQLite file. The runner
+reports disk exhaustion and unavailable Xcode or simulator infrastructure
+separately from test failures and incomplete runs.
 
 `PIKADEX_SIMULATOR_DESTINATION` overrides the default
 `platform=iOS Simulator,name=iPhone 17,OS=27.0`. `PIKADEX_RELEASE_BUILD_ROOT`
-overrides the default isolated root at `build/release-verification`. The root is
-validated before cleanup, and only these owned children are recreated:
+sets the isolated output root; the default is `build/release-verification`.
+The runner records the initial and final source database and sidecar hashes and
+fails if they change during verification.
 
-1. `DerivedData/`
-2. `ResultBundles/`
-3. `Profiles/`
-4. `PipelineTooling/`
-5. `PipelineOutput/`
-
-Unsafe roots that overlap the repository, production source or resource
-directories, or escape the repository build directory through a symbolic link
-are rejected. Progress output names the current gate and completed gates. A
-failure names the failed gate and exit status; success ends with
-`Release verification succeeded.`, the complete gate list, and the isolated
-output root.
+To add a C-slice UI or integration suite, add a separate entry to
+`Scripts/release-verification-suites.json` with its shared scheme, test target,
+platform, and test-source globs. Keep the four existing entries in
+`requiredSuites`. Xcode enumeration and the same result checks then apply to
+the added suite; this task does not add those tests.
 
 ## Reproducible database generation
 

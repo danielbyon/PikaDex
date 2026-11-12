@@ -283,29 +283,32 @@ rollback directories until the restored database is confirmed.
 
 ## 9. Release verification
 
-Run the release verification command in a disposable checkout. It runs
-`generate`, which installs the generated catalog into that checkout, then
-builds the app and runs the native test gates. Set its build root to a
-temporary path outside the checkout:
-
-The command also needs the pinned `PikaDexCrawlers` checkout described above.
-It can replace the generated database in the checkout, so use a disposable
-PikaDex checkout when preserving a local catalog.
+Run release verification from a PikaDex checkout. The runner provisions the
+exact `PikaDexCrawlers` revision recorded in `crawler-source.json` and prepares
+packages from the checked-in lock file. Set the build root to a temporary path
+outside the checkout:
 
 ```sh
 PIKADEX_RELEASE_BUILD_ROOT="$TMPDIR/pokedex-release-verification" \
   Scripts/pokedex-release-verification
 ```
 
-The `DatabasePipelineTests` gate uses `xcodebuild build-for-testing` with the
-`platform=macOS,arch=arm64` destination, then runs the bundle through
-`Scripts/run-xctest-bundle-with-network-denied`, which executes
-`/usr/bin/xcrun xctest`. DerivedData is stored at
-`$PIKADEX_RELEASE_BUILD_ROOT/DerivedData/DatabasePipelineTests`, and the test
-bundle is at
-`$PIKADEX_RELEASE_BUILD_ROOT/DerivedData/DatabasePipelineTests/Build/Products/Debug/DatabasePipelineTests.xctest`.
+The runner calls `verify` with
+`$PIKADEX_RELEASE_BUILD_ROOT/work/PipelineOutput` as its output directory.
+Catalog generation and validation run offline. Builds select the candidate at
+`$PIKADEX_RELEASE_BUILD_ROOT/work/PipelineOutput/candidate/Pokedex.sqlite`.
+The runner leaves the checkout's generated database and SQLite sidecars
+unchanged. DerivedData is stored under
+`$PIKADEX_RELEASE_BUILD_ROOT/work/DerivedData`.
 
-The `Modules` tests open the catalog through the `PokedexCore` bundle.
-Pipeline tests use temporary SQLite fixtures and fake process runners; they do
-not invoke live crawlers or require Numbers. See `NEW_GAME.md` for the full
-released-game workflow.
+The `DatabasePipelineTests` gate records Xcode's compiled test inventory, then
+uses `xcodebuild build-for-testing` with the `platform=macOS,arch=arm64`
+destination. The bundle runs through
+`Scripts/run-xctest-bundle-with-network-denied`, which invokes
+`/usr/bin/xcrun xctest` with network access denied. The test bundle is at
+`$PIKADEX_RELEASE_BUILD_ROOT/work/DerivedData/Build/Products/Debug/DatabasePipelineTests.xctest`.
+
+The `Modules` tests open the catalog through the `PokedexCore` bundle. Pipeline
+tests use temporary SQLite fixtures and fake process runners; they do not
+invoke live crawlers or require Numbers. See `NEW_GAME.md` for the released-game
+workflow.
