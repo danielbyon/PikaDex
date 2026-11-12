@@ -66,10 +66,12 @@ stops the build. Ordinary app builds leave the variable unset and continue using
 The runner checks scheme and target membership, then asks Xcode for the
 compiled test inventory with `-enumerate-tests` in JSON format. Source
 declarations are reconciled against that inventory; Xcode's compiled list
-defines the executable tests. Simulator results use each suite's xcresult when
-it contains a complete case list and count. Otherwise, the runner reconciles
-the full `xcodebuild` log. The runner first enumerates the compiled
-`DatabasePipelineTests` cases, then builds the bundle with
+defines the executable tests. Simulator suites pass only when each `.xcresult`
+bundle, test-tree export, and summary export is present, valid, and reconciles
+with the compiled inventory and observed case count. The full `xcodebuild` log
+remains diagnostic evidence and preserves partial results after failures; it
+cannot replace structured xcresult evidence for a passing suite. The runner
+first enumerates the compiled `DatabasePipelineTests` cases, then builds the bundle with
 `xcodebuild build-for-testing` and executes it through
 `Scripts/run-xctest-bundle-with-network-denied`. The runner retains the full
 XCTest log, checks every case and the final count, and preserves the XCTest
@@ -79,8 +81,9 @@ with automatic package resolution disabled; they do not run test methods.
 Each run records gate logs and statuses, suite inventories and results,
 toolchain and simulator identities, source and package revisions, reviewed
 input hashes, and candidate and packaged-catalog hashes. CI uploads the
-verification evidence and available xcresult bundles. It excludes DerivedData,
-compiled products, source copies, and the candidate SQLite file. The runner
+verification evidence and xcresult bundles and exports, retaining available
+partial evidence after failures. It excludes DerivedData, compiled products,
+source copies, and the candidate SQLite file. The runner
 reports disk exhaustion and unavailable Xcode or simulator infrastructure
 separately from test failures and incomplete runs.
 

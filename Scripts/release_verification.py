@@ -387,53 +387,181 @@ def reconcile_results(
 
 
 def _result_nodes(document: object) -> list[dict]:
+    if not isinstance(document, dict) or not isinstance(document.get("testNodes"), list):
+        raise VerificationError("xcresult test results must contain a top-level testNodes array")
+    if not document["testNodes"]:
+        raise VerificationError("xcresult testNodes array is empty")
     cases: list[dict] = []
 
     def walk(node: object, ancestors: tuple[str, ...] = ()) -> None:
         if isinstance(node, list):
+            if not node:
+                raise VerificationError("xcresult test tree contains an empty wrapper array")
             for child in node:
                 walk(child, ancestors)
             return
         if not isinstance(node, dict):
-            return
+            raise VerificationError("xcresult test tree contains a non-object node")
         node_type = node.get("nodeType")
         name = node.get("name")
         path = ancestors + ((name,) if isinstance(name, str) and name else ())
+        if node_type is None:
+            children = node.get("children")
+            if not isinstance(children, list) or not children:
+                raise VerificationError("xcresult grouping node without nodeType must contain children")
+            for child in children:
+                walk(child, path)
+            return
+        if not isinstance(node_type, str) or not node_type:
+            raise VerificationError("xcresult test tree node has an invalid nodeType")
         if node_type in {"Test Case", "Test Method", "Test"}:
-            identity = node.get("nodeIdentifier") or node.get("testIdentifier") or node.get("identifier")
-            if not isinstance(identity, str) or not identity:
+            identity_key = next(
+                (key for key in ("nodeIdentifier", "testIdentifier", "identifier") if key in node),
+                None,
+            )
+            if identity_key is not None:
+                identity = node[identity_key]
+                if not isinstance(identity, str) or not identity.strip():
+                    raise VerificationError("Test result contains a malformed stable identity")
+            else:
                 if len(path) < 2:
                     raise VerificationError("Test result contains a case without a stable identity")
                 identity = "/".join(path[-2:])
             result = node.get("result")
-            if not isinstance(result, str):
-                result = "unknown"
+            if result is None:
+                result = "Not Run"
+            elif not isinstance(result, str) or not result:
+                raise VerificationError("xcresult test case has no result")
             cases.append({"identifier": normalize_test_identifier(identity), "result": result})
             return
-        for value in node.values():
-            if isinstance(value, (dict, list)):
-                walk(value, path)
+        children = node.get("children", [])
+        if not isinstance(children, list):
+            raise VerificationError("xcresult test tree node children must be an array")
+        if not children:
+            raise VerificationError(f"xcresult grouping node has no child results: {node_type}")
+        for child in children:
+            walk(child, path)
 
-    walk(document)
+    for node in document["testNodes"]:
+        walk(node)
+    if not cases:
+        raise VerificationError("xcresult test tree contains no executed test cases")
     return cases
 
 
-def _summary_count(document: object, keys: set[str]) -> int | None:
-    matches: list[int] = []
+def _summary_count(document: object) -> int | None:
+    if not isinstance(document, dict):
+        return None
+    count = document.get("totalTestCount")
+    if not isinstance(count, int) or isinstance(count, bool) or count < 0:
+        return None
+    return count
 
-    def walk(node: object) -> None:
-        if isinstance(node, dict):
-            for key, value in node.items():
-                if key in keys and isinstance(value, int) and not isinstance(value, bool):
-                    matches.append(value)
-                if isinstance(value, (dict, list)):
-                    walk(value)
-        elif isinstance(node, list):
-            for value in node:
-                walk(value)
 
-    walk(document)
-    return matches[0] if matches else None
+def _validate_xcresult_evidence(
+    tests_document: object | None,
+    summary_document: object | None,
+    expected: list[str],
+) -> dict:
+    issues = []
+    parse_issues = []
+    cases = None
+    if tests_document is None:
+        issues.append("The xcresult test tree export is unavailable.")
+    else:
+        try:
+            cases = _result_nodes(tests_document)
+        except VerificationError as error:
+            parse_issues.append(f"xcresult tests: {error}")
+            issues.append("The xcresult test tree is not structurally valid.")
+
+    summary_count = None
+    if summary_document is None:
+        issues.append("The xcresult summary export is unavailable.")
+    else:
+        summary_count = _summary_count(summary_document)
+        if summary_count is None:
+            issues.append("The xcresult summary has no valid executed-test count.")
+        elif cases is not None and summary_count != len(cases):
+            issues.append(
+                f"The xcresult summary count {summary_count} does not match the test tree count {len(cases)}."
+            )
+
+    valid = (
+        not issues
+        and not parse_issues
+        and bool(cases)
+        and summary_count is not None
+        and summary_count == len(cases)
+    )
+    verification = reconcile_results(expected, cases or [], summary_count)
+    if not valid:
+        verification["issues"] = sorted(set(verification["issues"] + ["evidence_invalid"]))
+        verification["passed"] = False
+    return {
+        "cases": cases,
+        "summaryCount": summary_count,
+        "issues": issues,
+        "parseIssues": parse_issues,
+        "testsExported": tests_document is not None,
+        "summaryExported": summary_document is not None,
+        "valid": valid,
+        "verification": verification,
+    }
+
+
+def _xcresult_record_state(
+    validation: dict,
+    bundle_available: bool,
+    stored_record: object = None,
+    require_success: bool = False,
+) -> tuple[dict, list[str]]:
+    issues = list(validation["issues"])
+    if not bundle_available:
+        issues.append("The expected xcresult bundle is missing.")
+    fields = {
+        "xcresultBundleAvailable": bundle_available,
+        "xcresultTestsExported": validation["testsExported"],
+        "xcresultSummaryExported": validation["summaryExported"],
+        "xcresultEvidenceValid": bundle_available and validation["valid"],
+        "xcresultEvidenceIssues": issues,
+        "xcresultSummaryCount": validation["summaryCount"],
+        "xcresultObservedCount": (
+            len(validation["cases"]) if validation["cases"] else None
+        ),
+    }
+    record_issues = []
+    if require_success:
+        if not isinstance(stored_record, dict):
+            record_issues.append("Structured xcresult result record is not an object.")
+        else:
+            if bundle_available and any(
+                stored_record.get(key) != value for key, value in fields.items()
+            ):
+                record_issues.append("Structured xcresult metadata does not match its artifacts.")
+            if not validation["valid"] or not validation["verification"]["passed"]:
+                record_issues.append("Structured xcresult evidence does not pass validation.")
+            if stored_record.get("resultSource") != "xcresult" or stored_record.get("xcodebuildExitCode") != 0:
+                record_issues.append("Structured xcresult result source or xcodebuild exit status is invalid.")
+            stored_verification = stored_record.get("verification")
+            verification = validation["verification"]
+            verification_keys = (
+                "passed",
+                "issues",
+                "expectedCount",
+                "reportedTotal",
+                "observedCount",
+                "counts",
+                "missing",
+                "extra",
+                "duplicates",
+                "cases",
+            )
+            if not isinstance(stored_verification, dict) or any(
+                stored_verification.get(key) != verification.get(key) for key in verification_keys
+            ):
+                record_issues.append("Structured test identities are not reconciled with xcresult exports.")
+    return fields, record_issues
 
 
 def parse_xctest_log(log_text: str) -> tuple[list[dict], int | None, list[str]]:
@@ -1519,26 +1647,20 @@ class VerificationRunner:
             self._write_manifest()
             code = self._run_process(args, log)
             log_text = log.read_text(encoding="utf-8", errors="replace")
+            bundle_available = result_bundle.is_dir()
             tests_json = self._export_xcresult(result_bundle, "tests", name, log)
             summary_json = self._export_xcresult(result_bundle, "summary", name, log)
-            parse_issues = []
+            xcresult = _validate_xcresult_evidence(tests_json, summary_json, expected)
+            xcresult_fields, _ = _xcresult_record_state(xcresult, bundle_available)
+            parse_issues = xcresult["parseIssues"]
             fallback_notes = []
-            cases = None
-            if tests_json is not None:
-                try:
-                    cases = _result_nodes(tests_json)
-                except VerificationError as error:
-                    parse_issues.append(f"xcresult tests: {error}")
+            xcresult_evidence_issues = xcresult_fields["xcresultEvidenceIssues"]
+            cases = xcresult["cases"]
             cases_from_xcresult = bool(cases)
-            reported_total = (
-                _summary_count(
-                    summary_json,
-                    {"totalTestCount", "totalTests", "testCount", "executedTests"},
-                )
-                if summary_json is not None
-                else None
-            )
-            total_from_xcresult = reported_total is not None
+            xcresult_summary_count = xcresult["summaryCount"]
+            reported_total = xcresult_summary_count
+            total_from_xcresult = xcresult_summary_count is not None
+            xcresult_evidence_valid = xcresult_fields["xcresultEvidenceValid"]
             log_cases, log_total, log_parse_issues = parse_xctest_log(log_text)
             if not cases:
                 cases = log_cases
@@ -1550,29 +1672,41 @@ class VerificationRunner:
                 fallback_notes.append("The executed test count was read from the full xcodebuild log.")
                 if log_total is None:
                     parse_issues.extend(log_parse_issues)
-            report = reconcile_results(expected, cases, reported_total)
+            if cases_from_xcresult and total_from_xcresult:
+                report = xcresult["verification"]
+            else:
+                report = reconcile_results(expected, cases, reported_total)
+                if not xcresult_evidence_valid:
+                    report["issues"] = sorted(set(report["issues"] + ["evidence_invalid"]))
+                    report["passed"] = False
             report["logParseIssues"] = parse_issues
+            results_reconciled = report["passed"]
             structured = {
                 "suite": name,
                 "resultSource": "xcresult" if cases_from_xcresult and total_from_xcresult else "mixed" if cases_from_xcresult or total_from_xcresult else "xcodebuild-log",
                 "caseIdentitySource": "xcresult" if cases_from_xcresult else "xcodebuild-log",
                 "reportedTotalSource": "xcresult" if total_from_xcresult else "xcodebuild-log",
                 "xcodebuildExitCode": code,
-                "xcresultBundleAvailable": result_bundle.is_dir(),
-                "xcresultTestsExported": tests_json is not None,
-                "xcresultSummaryExported": summary_json is not None,
                 "fallbackNotes": fallback_notes,
                 "verification": report,
+                **xcresult_fields,
             }
             atomic_json(self.evidence / "results" / f"{name}-structured-results.json", structured)
             inventory["resultVerification"] = structured
             self._write_manifest()
-            if code or not report["passed"]:
+            if code or not report["passed"] or not xcresult_evidence_valid:
                 issue_kind = classify_test_result_failure(log_text, report, parse_issues)
-                if code and report["passed"] and issue_kind == "inventory_mismatch":
+                if not code and xcresult_evidence_issues and issue_kind not in {
+                    "disk_exhaustion",
+                    "infrastructure_unavailable",
+                    "test_failure",
+                    "unexpected_skip",
+                }:
+                    issue_kind = "evidence_invalid"
+                elif code and results_reconciled and issue_kind == "inventory_mismatch":
                     issue_kind = "incomplete"
                 raise GateFailure(
-                    f"{name} results do not reconcile with its compiled inventory: {report['issues'] + parse_issues}",
+                    f"{name} results or required xcresult evidence are incomplete: {report['issues'] + parse_issues + xcresult_evidence_issues}",
                     code or 1,
                     issue_kind,
                 )
@@ -1617,9 +1751,17 @@ class VerificationRunner:
         self._write_manifest()
 
     def _export_xcresult(self, bundle: Path, kind: str, suite_name: str, log: Path) -> object | None:
+        destination = self.evidence / "results" / f"{suite_name}-{kind}.json"
+        try:
+            destination.unlink()
+        except FileNotFoundError:
+            pass
+        except OSError as error:
+            with log.open("a", encoding="utf-8") as output:
+                output.write(f"Could not remove stale xcresult export {destination}: {error}\n")
+            return None
         if not bundle.is_dir():
             return None
-        destination = self.evidence / "results" / f"{suite_name}-{kind}.json"
         args = ["/usr/bin/xcrun", "xcresulttool", "get", "test-results", kind, "--path", str(bundle), "--compact"]
         try:
             result = subprocess.run(args, capture_output=True, text=True, check=False)
@@ -1667,8 +1809,45 @@ class VerificationRunner:
         ):
             raise GateFailure("Xcode changed the workspace package lock after pinned provisioning", 2)
 
+    def _validate_simulator_xcresult_artifacts(self, name: str) -> tuple[list[str], list[str]]:
+        bundle_path = self.evidence / "results" / f"{name}.xcresult"
+        result_path = self.evidence / "results" / f"{name}-structured-results.json"
+        tests_path = self.evidence / "results" / f"{name}-tests.json"
+        summary_path = self.evidence / "results" / f"{name}-summary.json"
+        missing = []
+        if not bundle_path.is_dir():
+            missing.append(f"results/{name}.xcresult")
+        for path in (result_path, tests_path, summary_path):
+            if not path.is_file():
+                missing.append(path.relative_to(self.evidence).as_posix())
+
+        invalid = []
+        if not all(path.is_file() for path in (result_path, tests_path, summary_path)):
+            return missing, invalid
+        try:
+            structured = json.loads(result_path.read_text(encoding="utf-8"))
+            tests_document = json.loads(tests_path.read_text(encoding="utf-8"))
+            summary_document = json.loads(summary_path.read_text(encoding="utf-8"))
+            xcresult = _validate_xcresult_evidence(
+                tests_document,
+                summary_document,
+                self.suite_records.get(name, {}).get("compiledExecutableTests", []),
+            )
+            _, record_issues = _xcresult_record_state(
+                xcresult,
+                bundle_path.is_dir(),
+                structured,
+                require_success=True,
+            )
+            invalid.extend(f"results/{name}: {issue}" for issue in record_issues)
+            return missing, invalid
+        except (OSError, json.JSONDecodeError, VerificationError) as error:
+            invalid.append(f"results/{name}: structured xcresult evidence is invalid: {error}")
+            return missing, invalid
+
     def _evidence_completeness(self, log: Path) -> None:
         missing = []
+        invalid = []
         for required in ("manifest.json", "provenance.json"):
             if not (self.evidence / required).is_file():
                 missing.append(required)
@@ -1692,28 +1871,38 @@ class VerificationRunner:
                 missing.append(f"inventory/{name}.json")
             if self.suite_records.get(name, {}).get("executionStarted"):
                 result_path = self.evidence / "results" / f"{name}-structured-results.json"
-                if not result_path.is_file():
-                    missing.append(f"results/{name}-structured-results.json")
                 if suite["platform"] == "macos":
+                    if not result_path.is_file():
+                        missing.append(f"results/{name}-structured-results.json")
                     xctest_log = self.evidence / "logs" / f"{name}-xctest.log"
                     if not xctest_log.is_file():
                         missing.append(f"logs/{name}-xctest.log")
+                elif suite["platform"] == "ios-simulator":
+                    suite_missing, suite_invalid = self._validate_simulator_xcresult_artifacts(name)
+                    missing.extend(suite_missing)
+                    invalid.extend(suite_invalid)
         forbidden = []
         for path in self.evidence.rglob("*"):
             if path.is_file() and path.suffix.lower() in {".sqlite", ".db", ".profraw", ".o", ".swiftmodule"}:
                 forbidden.append(path.relative_to(self.evidence).as_posix())
         report = {
             "checkedAt": utc_now(),
-            "passed": not missing and not forbidden,
+            "passed": not missing and not invalid and not forbidden,
             "missingRequiredEvidence": missing,
+            "invalidRequiredEvidence": invalid,
             "forbiddenArtifactFiles": forbidden,
             "excluded": ["DerivedData", "compiled products", "source copies", "candidate SQLite database"],
         }
         atomic_json(self.evidence / "evidence-completeness.json", report)
         with log.open("a", encoding="utf-8") as output:
             output.write(json.dumps(report, indent=2) + "\n")
-        if missing or forbidden:
-            raise GateFailure(f"Required evidence is missing or contains excluded artifacts: {report}", 2)
+        if missing or invalid or forbidden:
+            failure_kind = "evidence_invalid" if invalid else "incomplete" if missing else None
+            raise GateFailure(
+                f"Required evidence is missing, invalid, or contains excluded artifacts: {report}",
+                2,
+                failure_kind,
+            )
 
     def _plan(self) -> list[tuple[str, object]]:
         plan: list[tuple[str, object]] = [

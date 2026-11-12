@@ -216,11 +216,144 @@ class ResultReconciliationTests(unittest.TestCase):
             [{"identifier": "PipelineCoordinatorTests/testVerify", "result": "Passed"}],
         )
 
+    def test_malformed_explicit_identity_cannot_fall_back_to_tree_names(self):
+        for malformed in (None, "", 42):
+            document = {
+                "testNodes": [
+                    {
+                        "nodeType": "Test Suite",
+                        "name": "ExampleTests",
+                        "children": [
+                            {
+                                "nodeType": "Test Case",
+                                "name": "testOne()",
+                                "nodeIdentifier": malformed,
+                                "result": "Passed",
+                            }
+                        ],
+                    }
+                ]
+            }
+            with self.subTest(identity=malformed):
+                with self.assertRaisesRegex(
+                    verification.VerificationError,
+                    "malformed stable identity",
+                ):
+                    verification._result_nodes(document)
+
+    def test_xcresult_tree_traverses_untyped_grouping_nodes_with_children(self):
+        document = {
+            "testNodes": [
+                [
+                    {
+                        "name": "Grouping Wrapper",
+                        "children": [
+                            {
+                                "nodeType": "Test Case",
+                                "nodeIdentifier": "ExampleTests/testOne",
+                                "result": "Passed",
+                            }
+                        ],
+                    }
+                ]
+            ]
+        }
+
+        self.assertEqual(
+            verification._result_nodes(document),
+            [{"identifier": "ExampleTests/testOne", "result": "Passed"}],
+        )
+
+    def test_xcresult_tree_rejects_untyped_nodes_with_unrelated_payloads(self):
+        document = {
+            "testNodes": [
+                {
+                    "payload": [
+                        {
+                            "nodeType": "Test Case",
+                            "nodeIdentifier": "ExampleTests/testOne",
+                            "result": "Passed",
+                        }
+                    ]
+                }
+            ]
+        }
+
+        with self.assertRaisesRegex(verification.VerificationError, "must contain children"):
+            verification._result_nodes(document)
+
+    def test_xcresult_tree_rejects_unknown_leaf_nodes(self):
+        document = {
+            "testNodes": [
+                {
+                    "nodeType": "Test Plan",
+                    "children": [
+                        {
+                            "nodeType": "Future Test Case",
+                            "nodeIdentifier": "ExampleTests/testExtra",
+                        }
+                    ],
+                }
+            ]
+        }
+
+        with self.assertRaisesRegex(verification.VerificationError, "no child results"):
+            verification._result_nodes(document)
+
+    def test_xcresult_tree_retains_unexecuted_cases_as_not_run(self):
+        document = {
+            "testNodes": [
+                {
+                    "nodeType": "Test Suite",
+                    "name": "ExampleTests",
+                    "children": [
+                        {"nodeType": "Test Case", "nodeIdentifier": "ExampleTests/testOne"},
+                        {
+                            "nodeType": "Test Case",
+                            "nodeIdentifier": "ExampleTests/testTwo",
+                            "result": "Passed",
+                        },
+                    ],
+                }
+            ]
+        }
+
+        result = verification._validate_xcresult_evidence(
+            document,
+            {"totalTestCount": 2},
+            self.expected,
+        )
+
+        self.assertTrue(result["valid"])
+        self.assertFalse(result["verification"]["passed"])
+        self.assertIn("unknown_result", result["verification"]["issues"])
+        self.assertEqual(
+            result["cases"],
+            [
+                {"identifier": "ExampleTests/testOne", "result": "Not Run"},
+                {"identifier": "ExampleTests/testTwo", "result": "Passed"},
+            ],
+        )
+
     def test_xcresult_summary_count_is_read_from_structured_summary(self):
         self.assertEqual(
-            verification._summary_count({"totalTestCount": 17, "passedTests": 17}, {"totalTestCount", "totalTests"}),
+            verification._summary_count({"totalTestCount": 17, "passedTests": 17}),
             17,
         )
+        self.assertIsNone(
+            verification._summary_count(
+                {"statistics": {"totalTestCount": 17}}
+            )
+        )
+        self.assertEqual(
+            verification._summary_count(
+                {"totalTestCount": 17, "statistics": {"totalTests": 16}}
+            ),
+            17,
+        )
+        for invalid in (True, -1, "17"):
+            with self.subTest(invalid=invalid):
+                self.assertIsNone(verification._summary_count({"totalTestCount": invalid}))
 
     def test_missing_extra_duplicate_skipped_failed_and_empty_are_rejected(self):
         scenarios = [
@@ -351,7 +484,29 @@ Executed 3 tests, with 1 failure (1 unexpected) in 0.003 (0.004) seconds
 
 
 class SimulatorResultFallbackTests(unittest.TestCase):
-    def make_runner(self, evidence, log_text, exit_code):
+    passing_log = """\
+Test Case '-[ExampleTests testOne]' passed (0.001 seconds).
+Test Case '-[ExampleTests testTwo]' passed (0.001 seconds).
+Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+"""
+    valid_tests = {
+        "testNodes": [
+            {"nodeType": "Test Case", "nodeIdentifier": "ExampleTests/testOne", "result": "Passed"},
+            {"nodeType": "Test Case", "nodeIdentifier": "ExampleTests/testTwo", "result": "Passed"},
+        ]
+    }
+
+    def make_runner(
+        self,
+        evidence,
+        log_text,
+        exit_code,
+        *,
+        bundle_available=False,
+        tests_document=None,
+        summary_document=None,
+        unavailable_exports=(),
+    ):
         runner = verification.VerificationRunner.__new__(verification.VerificationRunner)
         runner.evidence = evidence
         runner.simulator_destination = "platform=iOS Simulator,id=simulator-id"
@@ -370,31 +525,155 @@ class SimulatorResultFallbackTests(unittest.TestCase):
         def write_fake_process_output(args, log, env=None):
             log.parent.mkdir(parents=True, exist_ok=True)
             log.write_text(log_text, encoding="utf-8")
+            if bundle_available:
+                (evidence / "results/Modules.xcresult").mkdir(parents=True, exist_ok=True)
             return exit_code
 
         runner._run_process = write_fake_process_output
-        runner._export_xcresult = lambda bundle, kind, name, log: None
+
+        documents = {"tests": tests_document, "summary": summary_document}
+
+        def export_result(bundle, kind, name, log):
+            if bundle_available:
+                bundle.mkdir(parents=True, exist_ok=True)
+            if not bundle_available or kind in unavailable_exports:
+                return None
+            document = documents[kind]
+            if document is not None:
+                verification.atomic_json(evidence / "results" / f"{name}-{kind}.json", document)
+            return document
+
+        runner._export_xcresult = export_result
         return runner
 
-    def test_complete_xcodebuild_log_can_verify_when_no_xcresult_is_available(self):
-        output = """\
-Test Case '-[ExampleTests testOne]' passed (0.001 seconds).
-Test Case '-[ExampleTests testTwo]' passed (0.001 seconds).
-Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
-"""
+    def execute(self, runner, evidence):
+        runner._execute_suite(
+            {"name": "Modules", "scheme": "Modules", "platform": "ios-simulator"},
+            evidence / "logs/execute_Modules.log",
+        )
+
+    def assert_incomplete_result(self, runner, evidence):
+        with self.assertRaises(verification.GateFailure) as raised:
+            self.execute(runner, evidence)
+
+        result = json.loads((evidence / "results/Modules-structured-results.json").read_text())
+        self.assertNotEqual(raised.exception.exit_code, 0)
+        self.assertFalse(result["xcresultEvidenceValid"])
+        self.assertTrue(result["xcresultEvidenceIssues"])
+        self.assertFalse(result["verification"]["passed"])
+        return raised.exception, result
+
+    def test_passing_console_log_cannot_pass_without_result_bundle(self):
         with tempfile.TemporaryDirectory() as directory:
             evidence = Path(directory)
-            runner = self.make_runner(evidence, output, 0)
+            runner = self.make_runner(evidence, self.passing_log, 0)
+            error, result = self.assert_incomplete_result(runner, evidence)
 
-            runner._execute_suite(
-                {"name": "Modules", "scheme": "Modules", "platform": "ios-simulator"},
-                evidence / "logs/execute_Modules.log",
+            self.assertIn(error.failure_kind, {"evidence_invalid", "incomplete"})
+            self.assertEqual(result["xcodebuildExitCode"], 0)
+            self.assertEqual(result["verification"]["counts"]["passed"], 2)
+            self.assertTrue((evidence / "logs/execute_Modules.log").is_file())
+            self.assertTrue(any("bundle" in issue.lower() for issue in result["xcresultEvidenceIssues"]))
+
+    def test_successful_structured_xcresult_reconciles_with_compiled_inventory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            evidence = Path(directory)
+            runner = self.make_runner(
+                evidence,
+                self.passing_log,
+                0,
+                bundle_available=True,
+                tests_document=self.valid_tests,
+                summary_document={"totalTestCount": 2},
             )
 
+            self.execute(runner, evidence)
+
             result = json.loads((evidence / "results/Modules-structured-results.json").read_text())
-            self.assertEqual(result["resultSource"], "xcodebuild-log")
+            self.assertEqual(result["resultSource"], "xcresult")
+            self.assertTrue(result["xcresultEvidenceValid"])
             self.assertEqual(result["verification"]["counts"]["passed"], 2)
             self.assertTrue(result["verification"]["passed"])
+            for name in ("Modules.xcresult", "Modules-tests.json", "Modules-summary.json"):
+                self.assertTrue((evidence / "results" / name).exists())
+
+    def test_missing_or_invalid_structured_exports_never_use_log_as_success_evidence(self):
+        cases = (
+            (
+                "missing tests export",
+                {"tests_document": self.valid_tests, "summary_document": {"totalTestCount": 2}, "unavailable_exports": ("tests",)},
+            ),
+            (
+                "malformed test tree",
+                {
+                    "tests_document": {
+                        "unexpected": {
+                            "nodeType": "Test Plan",
+                            "children": [
+                                {
+                                    "nodeType": "Test Case",
+                                    "nodeIdentifier": "ExampleTests/testOne",
+                                    "result": "Passed",
+                                },
+                                {
+                                    "nodeType": "Test Case",
+                                    "nodeIdentifier": "ExampleTests/testTwo",
+                                    "result": "Passed",
+                                },
+                            ],
+                        }
+                    },
+                    "summary_document": {"totalTestCount": 2},
+                },
+            ),
+            (
+                "empty test tree",
+                {"tests_document": {"testNodes": []}, "summary_document": {"totalTestCount": 0}},
+            ),
+            (
+                "missing summary export",
+                {"tests_document": self.valid_tests, "summary_document": {"totalTestCount": 2}, "unavailable_exports": ("summary",)},
+            ),
+            (
+                "malformed summary",
+                {"tests_document": self.valid_tests, "summary_document": {"totalTestCount": "2"}},
+            ),
+            (
+                "inconsistent summary count",
+                {"tests_document": self.valid_tests, "summary_document": {"totalTestCount": 1}},
+            ),
+        )
+        for label, options in cases:
+            with self.subTest(case=label), tempfile.TemporaryDirectory() as directory:
+                evidence = Path(directory)
+                runner = self.make_runner(
+                    evidence,
+                    self.passing_log,
+                    0,
+                    bundle_available=True,
+                    **options,
+                )
+                error, result = self.assert_incomplete_result(runner, evidence)
+                self.assertIn(error.failure_kind, {"evidence_invalid", "incomplete"})
+                self.assertEqual(result["xcodebuildExitCode"], 0)
+
+    def test_missing_summary_document_is_nonpassing_even_with_passing_console_log(self):
+        with tempfile.TemporaryDirectory() as directory:
+            evidence = Path(directory)
+            runner = self.make_runner(
+                evidence,
+                self.passing_log,
+                0,
+                bundle_available=True,
+                tests_document=self.valid_tests,
+            )
+
+            _, result = self.assert_incomplete_result(runner, evidence)
+
+            self.assertTrue(any("summary" in issue.lower() for issue in result["xcresultEvidenceIssues"]))
+            self.assertFalse(result["xcresultEvidenceValid"])
+            self.assertIsNone(result["xcresultSummaryCount"])
+            self.assertEqual(result["reportedTotalSource"], "xcodebuild-log")
 
     def test_disk_failure_retains_partial_counts_and_disk_disposition_without_xcresult(self):
         output = """\
@@ -416,10 +695,13 @@ xcodebuild: error: No space left on device
             self.assertEqual(raised.exception.failure_kind, "disk_exhaustion")
             self.assertEqual(result["verification"]["observedCount"], 1)
             self.assertIn("incomplete", result["verification"]["issues"])
+            self.assertEqual(result["xcodebuildExitCode"], 65)
+            self.assertFalse(result["xcresultEvidenceValid"])
+            self.assertIn("No space left on device", (evidence / "logs/execute_Modules.log").read_text())
 
 
 class XCResultExportTests(unittest.TestCase):
-    def test_export_launch_failure_is_logged_and_allows_log_fallback(self):
+    def test_export_launch_failure_is_logged_and_returns_no_structured_evidence(self):
         with tempfile.TemporaryDirectory() as directory:
             evidence = Path(directory)
             bundle = evidence / "results/Modules.xcresult"
@@ -438,6 +720,47 @@ class XCResultExportTests(unittest.TestCase):
 
             self.assertIsNone(result)
             self.assertIn("xcresult export could not start", log.read_text(encoding="utf-8"))
+
+    def test_export_failure_and_malformed_json_are_logged_and_not_exported(self):
+        for label, kind, completed, expected_log in (
+            ("failed export", "tests", Mock(returncode=65, stdout="partial output", stderr="export failed"), "export failed"),
+            ("malformed tests JSON", "tests", Mock(returncode=0, stdout="{malformed", stderr=""), "{malformed"),
+            ("malformed summary JSON", "summary", Mock(returncode=0, stdout="{malformed", stderr=""), "{malformed"),
+        ):
+            with self.subTest(case=label), tempfile.TemporaryDirectory() as directory:
+                evidence = Path(directory)
+                bundle = evidence / "results/Modules.xcresult"
+                bundle.mkdir(parents=True)
+                log = evidence / "logs/execute_Modules.log"
+                log.parent.mkdir()
+                runner = verification.VerificationRunner.__new__(verification.VerificationRunner)
+                runner.evidence = evidence
+                destination = evidence / "results" / f"Modules-{kind}.json"
+                destination.write_text('{"totalTestCount": 2}', encoding="utf-8")
+
+                with patch.object(verification.subprocess, "run", return_value=completed):
+                    result = runner._export_xcresult(bundle, kind, "Modules", log)
+
+                self.assertIsNone(result)
+                self.assertIn(expected_log, log.read_text(encoding="utf-8"))
+                self.assertFalse(destination.exists())
+
+    def test_missing_bundle_clears_stale_export(self):
+        with tempfile.TemporaryDirectory() as directory:
+            evidence = Path(directory)
+            results = evidence / "results"
+            results.mkdir()
+            destination = results / "Modules-tests.json"
+            destination.write_text('{"testNodes": []}', encoding="utf-8")
+            log = evidence / "logs/execute_Modules.log"
+            log.parent.mkdir()
+            runner = verification.VerificationRunner.__new__(verification.VerificationRunner)
+            runner.evidence = evidence
+
+            result = runner._export_xcresult(results / "Modules.xcresult", "tests", "Modules", log)
+
+            self.assertIsNone(result)
+            self.assertFalse(destination.exists())
 
 
 class MacSuiteIsolationTests(unittest.TestCase):
@@ -943,7 +1266,83 @@ class ArtifactScopeTests(unittest.TestCase):
             self.assertFalse((runner.evidence / "reports/pipeline/Data.json").exists())
             self.assertFalse((runner.evidence / "reports/pipeline/Pokedex.sqlite").exists())
 
-    def test_started_suite_requires_structured_results_even_when_execution_failed(self):
+    def test_passed_simulator_suite_requires_all_structured_xcresult_artifacts(self):
+        required_artifacts = (
+            "results/Modules.xcresult",
+            "results/Modules-tests.json",
+            "results/Modules-summary.json",
+            "results/Modules-structured-results.json",
+        )
+        for missing_artifact in required_artifacts:
+            with self.subTest(missing=missing_artifact), tempfile.TemporaryDirectory() as directory:
+                evidence = Path(directory)
+                runner = verification.VerificationRunner.__new__(verification.VerificationRunner)
+                runner.evidence = evidence
+                runner.configuration = {"suites": [{"name": "Modules", "platform": "ios-simulator"}]}
+                runner.gate_names = ["enumerate_Modules", "execute_Modules"]
+                runner.gates = {
+                    "enumerate_Modules": {"status": "passed"},
+                    "execute_Modules": {"status": "passed"},
+                }
+                expected = ["ExampleTests/testOne", "ExampleTests/testTwo"]
+                runner.suite_records = {
+                    "Modules": {"executionStarted": True, "compiledExecutableTests": expected}
+                }
+                for name in ("manifest.json", "provenance.json", "toolchain.json"):
+                    (evidence / name).write_text("{}", encoding="utf-8")
+                for name in runner.gate_names:
+                    path = evidence / "logs" / f"{name}.log"
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text("", encoding="utf-8")
+                    path.with_suffix(".exit").write_text("0\n", encoding="utf-8")
+                inventory = evidence / "inventory/Modules.json"
+                inventory.parent.mkdir()
+                inventory.write_text("{}", encoding="utf-8")
+                results = evidence / "results"
+                results.mkdir()
+                (results / "Modules.xcresult").mkdir()
+                tests_document = {
+                    "testNodes": [
+                        {"nodeType": "Test Case", "nodeIdentifier": identity, "result": "Passed"}
+                        for identity in expected
+                    ]
+                }
+                cases = verification._result_nodes(tests_document)
+                result_report = verification.reconcile_results(expected, cases, 2)
+                (results / "Modules-tests.json").write_text(json.dumps(tests_document), encoding="utf-8")
+                (results / "Modules-summary.json").write_text('{"totalTestCount": 2}', encoding="utf-8")
+                (results / "Modules-structured-results.json").write_text(
+                    json.dumps(
+                        {
+                            "resultSource": "xcresult",
+                            "xcodebuildExitCode": 0,
+                            "xcresultBundleAvailable": True,
+                            "xcresultTestsExported": True,
+                            "xcresultSummaryExported": True,
+                            "xcresultEvidenceValid": True,
+                            "xcresultEvidenceIssues": [],
+                            "xcresultObservedCount": 2,
+                            "xcresultSummaryCount": 2,
+                            "verification": result_report,
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+                target = evidence / missing_artifact
+                if target.is_dir():
+                    target.rmdir()
+                else:
+                    target.unlink()
+
+                with self.assertRaises(verification.GateFailure) as raised:
+                    runner._evidence_completeness(evidence / "completeness.log")
+
+                report = json.loads((evidence / "evidence-completeness.json").read_text())
+                self.assertEqual(raised.exception.failure_kind, "incomplete")
+                self.assertFalse(report["passed"])
+                self.assertIn(missing_artifact, report["missingRequiredEvidence"])
+
+    def test_complete_reconciled_simulator_evidence_passes_finalization(self):
         with tempfile.TemporaryDirectory() as directory:
             evidence = Path(directory)
             runner = verification.VerificationRunner.__new__(verification.VerificationRunner)
@@ -952,8 +1351,78 @@ class ArtifactScopeTests(unittest.TestCase):
             runner.gate_names = ["enumerate_Modules", "execute_Modules"]
             runner.gates = {
                 "enumerate_Modules": {"status": "passed"},
-                "execute_Modules": {"status": "failed"},
+                "execute_Modules": {"status": "passed"},
             }
+            expected = ["ExampleTests/testOne", "ExampleTests/testTwo"]
+            runner.suite_records = {
+                "Modules": {"executionStarted": True, "compiledExecutableTests": expected}
+            }
+            for name in ("manifest.json", "provenance.json", "toolchain.json"):
+                (evidence / name).write_text("{}", encoding="utf-8")
+            for name in runner.gate_names:
+                path = evidence / "logs" / f"{name}.log"
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("", encoding="utf-8")
+                path.with_suffix(".exit").write_text("0\n", encoding="utf-8")
+            inventory = evidence / "inventory/Modules.json"
+            inventory.parent.mkdir()
+            inventory.write_text("{}", encoding="utf-8")
+            results = evidence / "results"
+            results.mkdir()
+            (results / "Modules.xcresult").mkdir()
+            tests_document = {
+                "testNodes": [
+                    {"nodeType": "Test Case", "nodeIdentifier": identity, "result": "Passed"}
+                    for identity in expected
+                ]
+            }
+            cases = verification._result_nodes(tests_document)
+            result_report = verification.reconcile_results(expected, cases, 2)
+            (results / "Modules-tests.json").write_text(json.dumps(tests_document), encoding="utf-8")
+            (results / "Modules-summary.json").write_text('{"totalTestCount": 2}', encoding="utf-8")
+            (results / "Modules-structured-results.json").write_text(
+                json.dumps(
+                    {
+                        "resultSource": "xcresult",
+                            "xcodebuildExitCode": 0,
+                        "xcresultBundleAvailable": True,
+                        "xcresultTestsExported": True,
+                        "xcresultSummaryExported": True,
+                        "xcresultEvidenceValid": True,
+                            "xcresultEvidenceIssues": [],
+                        "xcresultObservedCount": 2,
+                        "xcresultSummaryCount": 2,
+                        "verification": result_report,
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            runner._evidence_completeness(evidence / "completeness.log")
+
+            report = json.loads((evidence / "evidence-completeness.json").read_text())
+            self.assertTrue(report["passed"], report)
+
+    def test_started_suite_records_missing_results_without_overwriting_first_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            evidence = Path(directory)
+            runner = verification.VerificationRunner.__new__(verification.VerificationRunner)
+            runner.evidence = evidence
+            runner.configuration = {"suites": [{"name": "Modules", "platform": "ios-simulator"}]}
+            runner.gate_names = ["enumerate_Modules", "execute_Modules", "evidence_completeness"]
+            runner.gates = {
+                "enumerate_Modules": {"status": "passed"},
+                "execute_Modules": {"status": "failed"},
+                "evidence_completeness": {"status": "not_run", "exitCode": None, "failureKind": None},
+            }
+            runner.first_failure = {
+                "gate": "execute_Modules",
+                "exitCode": 65,
+                "failureKind": "disk_exhaustion",
+                "message": "No space left on device",
+            }
+            first_failure = runner.first_failure.copy()
+            runner._write_manifest = lambda: None
             runner.suite_records = {"Modules": {"executionStarted": True}}
             for name in ("manifest.json", "provenance.json", "toolchain.json"):
                 (evidence / name).write_text("{}", encoding="utf-8")
@@ -966,10 +1435,13 @@ class ArtifactScopeTests(unittest.TestCase):
             inventory.parent.mkdir()
             inventory.write_text("{}", encoding="utf-8")
 
-            with self.assertRaises(verification.GateFailure):
-                runner._evidence_completeness(evidence / "completeness.log")
+            self.assertFalse(runner._gate("evidence_completeness", runner._evidence_completeness))
             report = json.loads((evidence / "evidence-completeness.json").read_text())
+            self.assertEqual(runner.first_failure, first_failure)
             self.assertIn("results/Modules-structured-results.json", report["missingRequiredEvidence"])
+            self.assertIn("results/Modules.xcresult", report["missingRequiredEvidence"])
+            self.assertIn("results/Modules-tests.json", report["missingRequiredEvidence"])
+            self.assertIn("results/Modules-summary.json", report["missingRequiredEvidence"])
 
 
 class RootSafetyTests(unittest.TestCase):
