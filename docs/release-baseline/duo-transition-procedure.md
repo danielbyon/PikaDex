@@ -231,16 +231,40 @@ Issue #11 provides five acceptance criteria but no separate PAC/TAC identifiers.
 | AC4: separate deterministic state/persistence assertions from native pose smoke | **PASS** for scope separation. | No state, persistence, navigation, or app-correctness assertion is made here; C1/C2 own deterministic claims. |
 | AC5: provide a lightweight matrix and limitations to C/D; physical Duo is not required for development unless policy says otherwise | **PASS** for the documented handoff. | C4 still owns native feature smoke/continuity; D2 still owns final device/hardware qualification. No physical Duo sign-off is claimed. |
 
-### Minimum owner-operated completion steps (conditional on storage disposition)
+### Owner-operated completion steps (status at the earlier handoff)
 
-The 2 GiB cap treatment of retained build scratch is unresolved. The owner approval covered only the completed 2026-11-13 continuation; further evidence capture is currently **BLOCKED**. The steps below are a technical handoff for a later run, not authorization to capture. Execute them only after the owner records how the cumulative total complies with the cap or explicitly approves a bounded disposition.
+At the earlier handoff, the 2 GiB cap treatment of build scratch was unresolved, so further capture was **BLOCKED** pending owner disposition. The later storage update at the end of this document resolves that condition. The steps below cover the remaining technical work.
+
+Additional captures may proceed while the retained evidence root stays below 2 GiB and new build scratch remains in the separate scratch folder. Stop and report any measured overage. Do not delete or relocate retained evidence without a new owner disposition.
 
 1. Use Xcode 27.2 build 27B52 and the iOS 27.2 runtime. Open Device Hub, select the booted Duo recorded in the private manifest, and confirm **View Screen**. Running PikaDex is not required to repeat native hinge-preset or orientation observations.
 2. For the two intermediate cases, hold Option and drag the Device Hub hinge slider to two distinct positions inside its travel, away from **Closed**, **Partially Open**, and **Open**. Capture the complete Device Hub window after each action so both chassis and slider are visible. Record the requested slider fraction; record degrees only if Device Hub displays them. If the slider cannot be manipulated, retain a screenshot of the control and classify both cases **BLOCKED**.
 3. To complete landscape coverage, capture the partial and open presets in landscape as well as the already retained closed landscape observation. Keep the orientation action separate from the hinge preset.
 4. For Split View and app safe-area observations, use the `Pokedex` scheme in Xcode 27.2 on the verified Duo destination `platform=iOS Simulator,id=<verified-Duo-UDID-from-private-manifest>`. The recorded `SIGTRAP` followed the stable Xcode 27.2 launch attempt. Proceed with these app-dependent cases only if PikaDex remains running; if it exits again, record the exact outcome and leave those rows **BLOCKED** for C4 follow-up. Do not substitute another app or claim an app layout result.
-5. Save original screenshots or recordings and a SHA-256 for each in the owner-managed external evidence folder. Record the exact Xcode/runtime/UDID, operation, expected and observed state, outcome, and artifact hash. Preserve older evidence and keep build scratch separate; report any cap overage without cleanup.
+5. Save original screenshots or recordings and a SHA-256 for each in the owner-managed external evidence folder. Record the exact Xcode/runtime/UDID, operation, expected and observed state, outcome, and artifact hash. Keep build scratch in its separate folder and check the evidence-root total after capture. If the total exceeds 2 GiB, stop and report the measured overage.
 
 ### Handoff limits
 
 This continuation verifies several native Device Hub pose transitions and their chassis appearance. It does not qualify the Beta API, app feature correctness, Split View layout, persistence, safe-area values, or hardware behavior. C1/C2 retain deterministic state and persistence claims. C4 can use the stable procedure after the remaining native observations and app launch are available. D2 still requires candidate-bound device and hardware sign-off. The Beta experiment remains feasibility work, not a release gate.
+
+## 2026-11-13 follow-up: environment and evidence storage revalidation
+
+Earlier test outcomes remain unchanged. This follow-up supersedes the earlier statement that the evidence-storage disposition was unresolved.
+
+### Current environment
+
+The host reported macOS 27.0.1 build 26A434. Internal free space was about 139 GiB and the external evidence volume had about 701 GiB free. The internal volume remains above the 10 GiB floor. Stable Xcode 27.2 build 27B52 and iOS Simulator SDK 27.2 remain installed. The Duo simulator is available and booted on the iOS 27.2 runtime, build 24B91016s. Its UDID and full simulator record remain in the private evidence manifest.
+
+Device Hub displayed the booted Duo and rendered its screen. The Closed, Partially Open, and Open controls were available. This revalidation invoked Closed → Partially Open → Open → Closed, leaving the device closed in portrait. No new external screenshot or recording was retained for this brief control check, so it adds no new acceptance result. The hashed captures listed in the earlier addendum remain the evidence for the recorded transitions.
+
+Xcode 27.3 Beta build 27C5020n is present as an installed application bundle, which occupies 3,883,152 KiB. It includes iOS Simulator SDK 27.3. The host meets the macOS Tahoe 26.6 minimum in Apple's [Xcode 27.3 Beta release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes). The installed simulator inventory has iOS 27.0, 27.1, and 27.2 runtimes; it has no iOS 27.3 runtime. No runtime download or installation was started. Apple's [component installation guide](https://developer.apple.com/documentation/Xcode/downloading-and-installing-additional-xcode-components) describes runtime installation through Xcode Settings → Components, but the published pages do not give the iOS 27.3 runtime's download size. Check the size shown in Components before an owner-authorized installation.
+
+The Beta public headers were rechecked. `XCUIDevice.h` exposes a nullable hinge property; `XCUIHinge.h` exposes a readable and writable `CGFloat` angle in radians. The declarations provide no availability annotation or valid angle range. The public header warns that opening a closed physical device programmatically is unsupported and fails the test. The release notes establish API presence, but do not establish successful native pose control. No new API test ran: the iOS 27.3 Duo runtime is absent, no runtime installation was authorized, and the existing UI-test target still has the previously documented Info.plist packaging blocker. The four earlier attempts remain four zero-test results (zero passed, failed, or skipped; each xcodebuild invocation exited 65). The Beta probe remains **BLOCKED**.
+
+### Evidence-storage disposition
+
+The evidence root measured 5,508,932 KiB, above the 2 GiB budget. Inventory identified 5,480,648 KiB of reproducible DerivedData, Swift Package caches, and temporary build directories. All eight directories had zero open file handles and were moved by same-volume rename to a separate task-specific build-scratch folder. No files were deleted. The evidence root measured 28,292 KiB after the disposition manifest was added, well below the cap. Both prior manifests and all ten retained Device Hub screenshots still match their recorded SHA-256 hashes.
+
+The 2 GiB budget applies to every file and subdirectory under the `evidence_root` recorded in the storage disposition manifest. The separately named `build_scratch_root` contains the eight moved caches and is outside that evidence total. Keep these roots separate; do not move other contents between them without an owner disposition.
+
+The external `storage-disposition-manifest.json` records the moved directories, paths, sizes, file counts, preserved manifest hashes, screenshot-hash verification, and budget boundary. Its SHA-256 is `8bf77b8239125783b446536f83a46b285166fb1fc31f4f2fff7abd38ba3856b2`. The move resolves the storage-cap blocker for additional bounded evidence capture; intermediate angles, landscape partial/open, app Split View, and app safe-area/window observations remain outstanding for the reasons recorded above.
