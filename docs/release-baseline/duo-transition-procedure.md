@@ -410,3 +410,38 @@ The exact temporary setter-first source SHA-256 is `5122c3d3bd6b18d8420ae6225259
 | AC5 | **PASS** for handoff | C4 retains PikaDex smoke/continuity and its existing catalog prerequisite; D2 retains hardware qualification. Beta feasibility is not a release gate. |
 
 Issue #11 has no separate PAC/TAC identifiers; these rows map its five actual acceptance criteria. The draft PR must remain blocked on the missing native angle evidence and unverified headless support. No release status changes follow from this run.
+
+## 2026-11-13 owner angle evidence completion
+
+The owner supplied four full Device Hub window captures at 15:43–15:44 Pacific. This continuation began clean at PR/worktree HEAD `105bebbda1069d7efef069f961920c07b0285cf4`. It supersedes the preceding pending-owner status for the two native intermediate cases. All earlier failed and blocked runs remain retained.
+
+The same available, booted iOS 27.2 Duo was re-inventoried: runtime `com.apple.CoreSimulator.SimRuntime.iOS-27-2-iPhone19-4`, build 24B91016s, with stable Xcode 27.2 build 27B52 globally selected. `environment.json` records the exact UDID and developer directory. No build, simulator boot, installation, production-source change, or new XCTest execution occurred in this continuation.
+
+### Verified native angles
+
+The owner operated the documented native Option-drag gesture with A3 Hinge Observer visible. Each selected capture shows the full chassis and the public `UIHingeInteraction` angle, status, and update number. Those update numbers match the retained diagnostic log. This establishes native hinge observations independently of slider position or a generic geometry change.
+
+After retaining the owner captures and the 111-update log snapshot, the agent selected Device Hub's **Partially Open** preset to obtain an independent reference. Its delivered reading was 130.410416° (2.276091 radians), status 2, update 117. Both owner intermediate readings differ from that preset and from the fully open reference. They are also reported as partially open, distinct from the observer's Closed status. The agent then selected **Open** and verified 180° at update 125, restoring the owner's final open state. These values are observations for this run, not guaranteed preset constants or angle-precision requirements.
+
+| Native case | Expected result | Observed result | Outcome and retained screenshot SHA-256 |
+| --- | --- | --- | --- |
+| Intermediate A | A native pose distinct from the preset references. | 104.094933° / 1.816799 radians, status 2 (partially open), update 75; visibly bent inner-display chassis. | **PASS**: `owner/angle-02.png`, `b369ec7a2da94cfeb39d53453d58ad9bb1af2fae4e0abbb00fce3441a58e11fd`. |
+| Intermediate B | A second native pose distinct from A and the preset references. | 157.508896° / 2.749049 radians, status 2, update 99; visibly more open inner-display chassis. | **PASS**: `owner/angle-03.png`, `0f00edc9f022f0c51528b3a1373207e132107899c85bc8f7a47fad0e79a56336`. |
+| Partially Open reference | Observe the delivered native preset state. | 130.410416° / 2.276091 radians, status 2, update 117. | **PASS**: `partial-preset-settled.png`, `df1a91059c575db2dba0b719ad54cdd5b801cdb852d47a3dc8a676475df35ceb`. |
+| Open reference / restoration | Observe the open native state and restore it after reference collection. | 180° / π radians, status 3 (fully open), update 125. The owner's earlier capture independently shows 180° at update 111. | **PASS**: `restored-open-reference.png`, `345a5f8ee0db7aa0695151f7a2912eeb3a890bddd4aecd5e9916e58ce3675371`; owner reference `owner/angle-04.png`, `e839c9ed95b9a0a7ec9fd4278da31147f36f694b8c5b77c8fa19fde05f5e7e63`. |
+
+The additional `owner/angle-01.png` shows an outer-display observation at 30.190247°, status 1 (Closed), update 45. It is retained without relabeling that state as partially open. No status threshold is inferred from it. The two qualifying intermediate cases are updates 75 and 99.
+
+Raw records are under the external `2026-11-13-owner-angle-completion` folder. `owner/provenance.json` binds the untouched Desktop originals to retained copies and hashes; `owner/hinge-updates-before-reference.jsonl` preserves the supplied 111-update snapshot; `hinge-updates-with-reference.jsonl` retains 125 updates including the preset check and restoration. `observations.json` maps each case to its exact update and screenshot. `evidence-manifest.json` binds this continuation's artifacts and references the previous immutable manifest. Larger raw captures remain external; only this runbook is tracked. Retained evidence remains below the established 2 GiB cap, with no deletion or relocation of prior evidence, databases, or scratch directories.
+
+### Acceptance after owner evidence verification
+
+| Criterion | Latest outcome | Evidence and remaining limitation |
+| --- | --- | --- |
+| AC1 | **PASS for the bounded native mechanism coverage** | Stable environment, Closed/Partial/Open, two distinct non-preset poses, relevant orientations, outer/inner displays, narrow system-app windows, and both Files/Safari Split View arrangements have retained native observations. PikaDex startup, layout, and safe-area smoke remain C4 and are not qualified by these captures. |
+| AC2 | **BLOCKED overall; tested setter-first probe FAIL** | No new headless execution occurred. The preserved Beta/iOS 27.2 result remains 1 executed / 0 passed / 1 failed / 0 skipped, rejecting the first setter. An iOS 27.3 Duo comparison remains unverified and requires owner-approved runtime installation and verified storage prerequisites. Manual native pose success does not change that failure. |
+| AC3 | **PASS** | The documented owner gesture, public observer, native reference check, exact private environment, expected/observed states, and hashed captures form a repeatable procedure. Historical unavailable cases remain reported. |
+| AC4 | **PASS** | No deterministic state, persistence, feature-correctness, or pending-write claim is made; C1/C2 retain those assertions. |
+| AC5 | **PASS for handoff** | C4 retains the catalog/startup prerequisite and app smoke/continuity; D2 retains final hardware qualification. Beta feasibility remains separate from release qualification. |
+
+Supported interactive native pose control is now demonstrated, including the two non-preset cases. Headless XCUIHinge control remains unsupported in the tested configuration; newer-runtime and physical-device configurations remain unverified. Keep the PR in draft pending AC2 disposition and review. No issue closure, merge, or release-qualification change is implied.
