@@ -1,6 +1,6 @@
 # iPhone Duo native transition procedure
 
-Issue #11 A3 records a repeatable way to observe native iPhone Duo transitions and separates that work from app correctness and release qualification. This runbook describes the supported controls, the probe needed to assess the newer XCTest interface, and the cases that this execution could not observe.
+Issue #11 A3 records a repeatable way to observe native iPhone Duo transitions and separates that work from app correctness and release qualification. This runbook preserves each dated result. The 2026-11-13 continuation at the end records the latest observations; earlier blocked reports remain part of the history.
 
 ## Execution status
 
@@ -26,7 +26,9 @@ This runbook covers A3 mechanism feasibility only:
 
 No production code, test framework, test target, or project configuration changed. The temporary beta test was not created. The original `PokedexUITests.swift` SHA-256 is `4fd3ce30b22e279b17d5e6f88cd94e4be57c76f3d71241abea7ad62a8e0c5537` and remains the source-restoration reference.
 
-## Verified environment
+## Verified environment (2026-11-12 inventory)
+
+This is the environment snapshot from the earlier follow-up. The later 2026-11-13 inventory is recorded in the continuation at the end of this runbook.
 
 | Item | Observed value |
 | --- | --- |
@@ -41,7 +43,9 @@ No production code, test framework, test target, or project configuration change
 
 The original and continuation inventories, UI-access records, and manifests remain in owner-managed external evidence storage. Each manifest lists retained artifacts and SHA-256 values. The simulator UDID is kept in that local evidence. No A1 report or manifest was changed; the A1 evidence root named in its manifest was absent on this host and was not recreated or altered.
 
-## Automation findings
+## Automation findings (2026-11-12 status)
+
+These findings record the state before the 2026-11-13 Device Hub captures and Beta header inspection. For the later observations and current outcomes, see the dated continuation below.
 
 | Mechanism | Finding | A3 result |
 | --- | --- | --- |
@@ -52,7 +56,7 @@ The original and continuation inventories, UI-access records, and manifests rema
 | Xcode 27.3 beta `XCUIHinge` | Apple’s beta release notes say `XCUIAutomation` can set an iPhone Duo hinge angle using `XCUIHinge`. The beta and iOS 27.3 runtime were not installed; the actual public declarations and availability were not inspected, and no test was built or executed. | Documented candidate only; executable feasibility is BLOCKED. This is not a stable release gate. |
 | Generic resizing | `simctl` can change screen geometry and UI tests can exercise app UI. Neither action proves a native fold or hinge transition. | Not accepted as native pose coverage. |
 
-Apple’s Xcode 27.3 beta notes require macOS Tahoe 26.6 or later; this host’s macOS 27.0.1 meets that version requirement. The initial A3 checks reported 12–16 GiB free on the internal data volume. The continuation check reported 6.8 GiB internal and 727 GiB external free. During the latest follow-up, internal free space was above 10 GiB before the stable build and app install, then measured 9.6 GiB at 21:45 PST. Read-only checks measured 6.05 GiB at 22:13 PST and 3.76 GiB at 22:35 PST, both below the 10 GiB minimum; no build, simulator boot, installation, or cleanup followed. The beta app and iOS 27.3 simulator runtime remain absent. Apple’s [Xcode components guide](https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components) describes runtime installation but does not state the footprint for this beta/runtime. The earlier A1 disk-capacity failure, current below-floor readings, and unverified package footprint leave no safe installation plan. No beta download, installation, or runtime mutation was attempted; no credentials were entered. Owner disposition requires a verified storage plan for the official beta, Duo runtime, build products, and a safety margin before installation.
+Apple’s Xcode 27.3 Beta notes require macOS Tahoe 26.6 or later; this host’s macOS 27.0.1 meets that version requirement. The initial A3 checks reported 12–16 GiB free on the internal data volume. The continuation check reported 6.8 GiB internal and 727 GiB external free. In the 2026-11-12 follow-up, internal free space was above 10 GiB before the stable build and app install, then measured 9.6 GiB at 21:45 PST. Read-only checks measured 6.05 GiB at 22:13 PST and 3.76 GiB at 22:35 PST, both below the 10 GiB minimum; no build, simulator boot, installation, or cleanup followed those readings. At that point, the Beta app and iOS 27.3 simulator runtime were not installed. Apple’s [Xcode components guide](https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components) describes runtime installation but does not state the footprint for this Beta/runtime. The earlier A1 disk-capacity failure, those below-floor readings, and the unverified package footprint left no safe installation plan. No Beta download, installation, or runtime mutation was attempted in that run; no credentials were entered. Owner disposition required a verified storage plan for the official Beta, Duo runtime, build products, and a safety margin before installation.
 
 ## Stable manual procedure
 
@@ -60,8 +64,8 @@ Apple’s Xcode 27.3 beta notes require macOS Tahoe 26.6 or later; this host’s
 
 1. Use Xcode 27.2 build 27B52 and the `iPhone Duo` simulator on the iOS 27.2 runtime listed above. Re-run `xcodebuild -version`, `xcrun swift --version`, `xcrun --sdk iphonesimulator --show-sdk-version`, `xcrun simctl list runtimes`, and `xcrun simctl list devices available`; record the output with the run.
 2. Check free space before building, booting, or installing. Keep at least 10 GiB free on the internal volume. Keep DerivedData and retained evidence on a task-specific directory on the external evidence volume. Stop if the internal volume falls below the minimum. Do not erase the simulator, remove runtimes, or clear app data to make space.
-3. Open `Pokedex.xcodeproj` in Xcode 27.2, select the `Pokedex` scheme and the iPhone Duo destination on the verified iOS 27.2 runtime, then Run. Open Device Hub, select that running Duo, and click **View Screen**. If the Duo is not listed, record the Device Hub state and stop with **BLOCKED**; do not substitute another simulator or generic resizing. A successful build or launch is not a transition result.
-4. Create a new run directory under an owner-selected external evidence root, using a unique UTC timestamp. The approved total cap remains 2 GiB; this procedure does not grant an exception. Record the exact simulator and runtime identity in the private manifest before capturing. This follow-up's evidence directory currently occupies about 3.6 GiB, primarily because it contains the retained build's DerivedData. The proposed cleanup of this run's DerivedData, cloned package directory, and temp directory was rejected before execution. Do not add captures or start another A3 run until the owner documents whether DerivedData counts against the 2 GiB cap and how cumulative retained evidence will remain within the cap while preserving existing artifacts. If no compliant disposition is available, mark additional evidence capture **BLOCKED**. Do not retry cleanup or delete, move, or overwrite retained baseline or unrelated evidence.
+3. Select the booted iPhone Duo in Device Hub and click **View Screen**. The native hinge controls do not require PikaDex to be running. Run the `Pokedex` scheme on the Duo only when observing app-specific Split View or window behavior; a build or process launch alone is not a transition result. If the Duo is not listed, record the Device Hub state and stop with **BLOCKED**; do not substitute another simulator or generic resizing.
+4. Create a new run directory under an owner-selected external evidence root, using a unique UTC timestamp. The approved cap remains 2 GiB. At the 2026-11-12 review, the task root occupied about 3.6 GiB, mainly because it included retained build DerivedData; the proposed cleanup was rejected before execution. The owner's later 2026-11-13 instruction authorized this single continuation and required a separate inventory of evidence and scratch. It did not resolve the earlier cap question: the new evidence folders total about 24.9 MiB, while the complete task root is about 5.25 GiB. Because the instruction did not say whether scratch is excluded from the cap, aggregate compliance is unresolved and is not claimed. This task-specific authorization ends with this run; further captures remain **BLOCKED** until the owner records how the cumulative total will comply with the cap while preserving existing artifacts. Do not retry cleanup or delete, move, or overwrite retained baseline or unrelated evidence.
 
 ### Transition observations
 
@@ -77,7 +81,9 @@ For each case, capture a Device Hub screenshot after the screen settles. A singl
 
 The Device Hub controls are described in [Apple’s Device Hub guide](https://developer.apple.com/documentation/xcode/interacting-with-your-app-in-device-hub). Apple describes iPhone Duo Split View as a 50/50 system layout created by dragging an app to a side in [Design for iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111466/). Device Hub screenshot and recording behavior is documented in [Capturing screenshots and videos from devices](https://developer.apple.com/documentation/xcode/capturing-screenshots-and-videos-from-devices).
 
-### Stable coverage matrix
+### Stable coverage matrix (2026-11-12 status)
+
+This matrix preserves the earlier blocked results. It is superseded for current status by the 2026-11-13 matrix below, which records the later screenshots and remaining blocked cases.
 
 | Case | Operation | Success evidence | This run |
 | --- | --- | --- | --- |
@@ -96,12 +102,12 @@ The Device Hub controls are described in [Apple’s Device Hub guide](https://de
 
 Apple’s [Xcode 27.3 beta release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes) identify `XCUIHinge`. The [Xcode system requirements](https://developer.apple.com/xcode/system-requirements/) and release notes specify macOS Tahoe 26.6 or later. The owner must establish a safe storage plan and use only Apple’s official Xcode beta download. Do not change global `xcode-select`; set `DEVELOPER_DIR` on each command to the beta’s `Contents/Developer` path. Stop before download if Apple credentials, a new permission, or additional storage approval is required.
 
-After the beta and its iOS 27.3 Duo runtime are installed safely:
+After the Beta and a Duo simulator runtime supported by that Xcode are available safely. Do not install an additional runtime solely to run this probe when the verified Duo runtime is already supported.
 
 1. Record Xcode build, macOS version, Swift version, iOS SDK/runtime build, simulator device type and UDID, and free space. Inspect the installed public `XCUIHinge` declarations and availability. Record the declaration file, accepted angle type and units, supported range, set/get behavior, and any simulator or OS availability annotation. Do not implement against a release-note mention alone or use private APIs.
 2. Add one temporary test method to the existing `PokedexUITests` source and use the existing `PokedexUITests` target in the `Pokedex` scheme. Save the exact temporary source and its SHA-256 outside the repository before running. Do not add a target or framework.
 3. Request closed, partially open, open, and two documented intermediate angles. Record the requested value and units. Where the public API exposes an observable native state, capture that state; compare requested and observed angles. A setter returning successfully or a changed app frame alone is not proof that the simulator folded.
-4. Use a unique external DerivedData path and result bundle. After the API declaration and test method are verified, run only that method, with an exact iOS 27.3 Duo destination and beta selected per command. Example command shape (fill paths and UDID from the verified install; this command was **not run**):
+4. Use a unique external DerivedData path and result bundle. After the API declaration and test method are verified, run only that method, with the exact verified Duo destination and runtime, and select the Beta per command. Example command shape (fill paths and UDID from the verified install; this command was **not run**):
 
    ```sh
    DEVELOPER_DIR="/path/to/Xcode-27.3-beta.app/Contents/Developer" \
@@ -111,14 +117,14 @@ After the beta and its iOS 27.3 Duo runtime are installed safely:
      -destination 'platform=iOS Simulator,id=<verified-ios-27.3-duo-udid>' \
      -derivedDataPath '<external-run-directory>/DerivedData' \
      -resultBundlePath '<external-run-directory>/DuoHingeProbe.xcresult' \
-     -only-testing:PokedexUITests/PokedexUITests/testNativeDuoHingeAngleProbe \
+     -only-testing:PokedexUITests/PokedexUITests/testXCUHingeNativeAngleProbe \
      -parallel-testing-enabled NO
    ```
 
 5. Retain the exact source and hash, command, stdout/stderr log, `.xcresult`, screenshots or recording, environment inventory, requested/observed values and units, deviations, and executed/passed/failed/skipped counts. Report a setter-only result as inconclusive. Restore `PokedexUITests.swift` and verify the original SHA-256 before review.
 6. Do not delete runtimes, databases, A1 evidence, or unrelated checkout state. Remove exact A3-owned temporary products only after verifying the retained evidence copy and obtaining owner authorization. If a proposed cleanup is rejected, do not retry it; stop capture and record the overage until the owner documents a safe disposition.
 
-No beta probe source or executed test invocation exists for this run; the command above is an unexecuted template. Probe tests executed: 0; passed: 0; failed: 0; skipped: 0. These are execution counts, not a passing result. The beta probe outcome is **BLOCKED before API inspection** and is not a stable release gate. `XCUIDevice.orientation` is documented separately as a device orientation control and does not replace the hinge API ([Apple documentation](https://developer.apple.com/documentation/xcuiautomation/xcuidevice/orientation)).
+The 2026-11-12 execution had no beta probe source or executed test invocation; the command above was an unexecuted template. Probe tests executed: 0; passed: 0; failed: 0; skipped: 0. These are execution counts, not a passing result. That run's beta probe outcome was **BLOCKED before API inspection** and was not a stable release gate. `XCUIDevice.orientation` is documented separately as a device orientation control and does not replace the hinge API ([Apple documentation](https://developer.apple.com/documentation/xcuiautomation/xcuidevice/orientation)). The later Beta probe attempts are recorded in the 2026-11-13 continuation below.
 
 ## Evidence handling and result classification
 
@@ -133,7 +139,9 @@ For every matrix row, use one outcome:
 
 Do not classify a build, generic resize, successful setter call, or app screenshot without visible device pose as a native transition pass. Do not claim app feature correctness or persistence from this procedure.
 
-## Issue #11 acceptance mapping
+## Issue #11 acceptance mapping (2026-11-12 status)
+
+This table preserves the earlier acceptance status. The current mapping is the dated table at the end of this runbook.
 
 Issue #11 does not assign separate PAC/TAC identifiers. This table maps its five acceptance criteria directly:
 
@@ -149,8 +157,90 @@ The original run and the 19:39 continuation produced no screenshots, recordings,
 
 The original evidence archive is preserved and its file hashes were rechecked. The continuation archive records the earlier UI observation, simulator inventory, beta reassessment, owner-operated steps, review, and CI results. The UI observation summary is `device-hub-followup.txt` (SHA-256 `fdb38cd5a2a0466c5887d2191d37d6c35217529fed04967e618c39ffcd9392d9`); the raw simulator record is `duo-simctl-record.json` (SHA-256 `244deaf9b761fce4328ff2361aa9e13c54d7fb5479144f81c69c5b842c029114`). The private owner procedure, which contains the exact local project path and simulator destination, is `owner-operator-steps.txt` (SHA-256 `106f4906726ddb67a74fcdac1e2c9d33608aeb7f656a5a8ae48aef745cb51dc5`). The exact simulator identifier and local paths are kept in owner-managed external evidence, not in this runbook or the PR summary.
 
-The latest follow-up confirms that Device Hub can select the booted Duo and render its screen. It records the existing closed state and the successful PikaDex install and launch. The sanitized summary is `public-summary.txt` (SHA-256 `1f4527a9bae8d49bfdda45e4eaaaa058f91f880d0b0aee8fe3ae0d0e6d175930`). The private inventory and evidence manifest record the exact simulator identity, local paths, command lines, and raw log hashes. No hashed chassis-pose screenshot or recording exists for the latest run. The external evidence directory currently exceeds the 2 GiB budget because it contains the successful build’s DerivedData; its size and disposition are recorded in the private manifest.
+The earlier follow-up confirms that Device Hub could select the booted Duo and render its screen. `simctl launch` returned a process ID after the successful install, but a later observation recorded that process terminating with `SIGTRAP` (signal 5). The launch result therefore does not establish that PikaDex remained available for Split View or other app observations. The sanitized summary is `public-summary.txt` (SHA-256 `1f4527a9bae8d49bfdda45e4eaaaa058f91f880d0b0aee8fe3ae0d0e6d175930`). The private inventory and evidence manifest record the exact simulator identity, local paths, command lines, and raw log hashes. No hashed chassis-pose screenshot or recording existed for the earlier run; the later pose captures are listed in the 2026-11-13 addendum. The external task root remains above the 2 GiB cap when its retained build scratch is included; its size and unresolved disposition are recorded in the private manifests.
 
-## Handoff limits
+## Handoff limits recorded 2026-11-12
 
 This A3 result does not establish app layout correctness, navigation continuity, deterministic state, persistence, or device qualification. C1/C2 should continue to use deterministic tests for state and write-order assertions. C4 can use this procedure for native feature smoke after the owner runs the blocked Device Hub observations and establishes the beta probe safely. D2 still requires candidate-bound final device/hardware sign-off under the project’s release policy.
+
+## 2026-11-13 continuation: observed native transitions and Beta probe
+
+This dated addendum supplements the earlier results without replacing them. It records a later Device Hub session, the bounded Xcode 27.3 Beta probe attempts, and the remaining limits. The older statements that no retained pose screenshots or Beta source existed describe the earlier runs.
+
+### Environment and storage
+
+| Item | Verified value |
+| --- | --- |
+| Repository at start of this continuation | `codex/issue-11-native-duo-test-mechanism`, HEAD `f76e93d872d306966d175548c93e2a450cd32eef`; approved baseline is an ancestor; worktree was clean before the temporary probe source was added. |
+| Host | macOS 27.0.1, build 26A434 |
+| Stable toolchain | Xcode 27.2, build 27B52; Swift 6.4.2; iOS Simulator SDK 27.2 |
+| Stable destination | iPhone Duo, type `com.apple.CoreSimulator.SimDeviceType.iPhone-Duo`, iOS 27.2 runtime `com.apple.CoreSimulator.SimRuntime.iOS-27-2-iPhone19-4`, build 24B91016s; available and Booted at inventory. The exact UDID is in the private evidence manifest. |
+| Beta toolchain | Xcode 27.3 Beta, build 27C5020n; iOS Simulator SDK 27.3. The installed destination remained the iOS 27.2 Duo above; no iOS 27.3 runtime was installed. |
+| Internal free space | 153,686,052 KiB (about 146.5 GiB) before the final Beta attempt, above the 10 GiB floor. |
+| External free space | 735,389,976 KiB (about 701 GiB) at the same check. |
+| External task-root usage | 5,508,932 KiB (about 5.25 GiB). The native evidence folder measured 21,792 KiB and the Beta evidence folder 3,708 KiB. The isolated Beta DerivedData and package scratch measured 1,700,304 KiB. Older DerivedData and package caches remain in place. |
+
+The two new evidence folders contain about 24.9 MiB combined. The full task root remains above 2 GiB when all contents are counted. Earlier records leave unresolved whether retained DerivedData counts toward the evidence cap, so this addendum does not claim aggregate cap compliance. It does not relabel, move, or delete any older build products, databases, simulator runtimes, or evidence. A private external manifest named `2026-11-13-followup-evidence-manifest.json` records the exact artifact paths and hashes.
+
+### Device Hub observations
+
+Device Hub listed the booted iPhone Duo, **View Screen** worked, and its native chassis controls showed **Closed**, **Partially Open**, **Open**, and **Rotate Right**. The following screenshots show the Device Hub chassis, rather than only the simulated display. Hashes are SHA-256.
+
+| Case | Native operation and expected state | Observed state | Outcome and retained evidence |
+| --- | --- | --- | --- |
+| Closed / outer display | Select **Closed**; expect the Duo closed with its outer display visible. | Closed chassis and outer display visible. | **PASS** — `closed-before-transition.png`, `7d1766e449852cb214e626e788805e96bfa0db8661a41a52e3b6b6856c1c85a0`. |
+| Closed → Partially Open | Select **Partially Open**; expect an intermediate chassis pose and inner display. | Device Hub showed the partial pose and inner display. | **PASS** — `partially-open.png`, `a948e098121e8186012f0d028240e8fe788e7a8e73328ac96f1bfa7c9a50b8a4`. |
+| Partially Open → Open | Select **Open**; expect the open chassis and inner display. | Device Hub showed the open pose and inner display. | **PASS** — `open.png`, `c7801a6e6a07b089708dfdc1d9660619c6389abd43e996c8ae9df797704306ff`. |
+| Open → Closed | Select **Closed** after the open pose; expect the closed chassis and outer display. | Device Hub returned to the closed pose. | **PASS** — `closed-after-open.png`, `8b7818ec2139ad3da9ca7eea3081457766a2062b60002d17ba2e0af5b48a3e0c`. |
+| Portrait | Observe closed, partial, and open presets in portrait. | The three pose captures above show the Duo in portrait. | **PASS** for these three portrait presets; see the four pose captures above. |
+| Landscape | Choose **Device > Orientation > Landscape Left**, then use **Rotate Right**; expect a landscape device orientation. | The Device Hub chassis was visibly rotated and the selected accessibility state was `v68_Closed`; no hinge angle was measured. | **PASS** for landscape orientation only — `landscape-after-rotate-right.png`, `ce2fb5c396704f2a382038d7ad33b2908b9705821c45ba4f030c8b282dcf5c20`. Landscape partial/open cases were **NOT RUN**. |
+| Intermediate A | Hold Option and drag the native hinge slider to about one-third travel; expect a distinct angle between presets. | The retained attempt shows the device still Closed; no intermediate angle or slider value was verified. | **BLOCKED** — diagnostic `intermediate-one-third.png`, `c4713b645b0cbea04f7ebc3df177d9116395e40d9feae9df26f69e72d6d3bb37`. |
+| Intermediate B | Hold Option and drag to about two-thirds travel; expect a second distinct intermediate angle. | The retained attempt shows the Open preset, not an intermediate angle. | **BLOCKED** — diagnostic `intermediate-two-thirds.png`, `d8b2944f8de20aa2efd2e2ec0f87bd0b648473fcdc3154bf6f64c377c3896ebdb`. |
+| Slider interaction | Reveal the slider while holding Option and verify a non-endpoint position. | A slider was visible at the Open endpoint; later pointer/Option attempts did not produce a verified interior position. | **BLOCKED** — `slider-visible-open.png`, `95dbbd263fbb3ec23d6b5b8c0541b9238ac79674a761fbbfdf4841755ea8aea8`; pointer diagnostics `option-hover-for-slider.png` (`4197c2362b2f17fdbf50ce2da56c91dcc6028898b925939c4b33cc5cabd5e06d`) and `option-hover-slider-attempt.png` (`45ce26369c8051c8f7d0ad02f08a50528ace3e2c20ca92d355b2a47b58900c8d`). |
+| PikaDex launch for app-specific cases | With stable Xcode 27.2 build 27B52 and the iOS 27.2 Duo runtime, run the Pokedex scheme; expect PikaDex to remain available for Split View observations. | PikaDex 2.1.2 (51) installed and `simctl launch` returned a process ID; that process later terminated with `SIGTRAP` (signal 5). No cause was diagnosed in A3. | **FAIL** for this stable-toolchain launch attempt only; it is not a hinge-mechanism result. |
+| System Split View, PikaDex left/right | Place PikaDex on each side using the system Split View controls; expect the Duo to show both apps in each arrangement. | Not observable because PikaDex crashed. | **BLOCKED** for both sides; no app or split-screen capture is claimed. |
+| Narrow window and app safe area | Observe PikaDex on the outer/inner display and in each narrow Split View window. | The native outer and inner displays are visible in the pose captures, but no PikaDex window, numeric safe-area inset, or narrow-window layout was observed. | **BLOCKED** for app window and safe-area behavior. |
+| Generic geometry change | Change simulator screen geometry. | Not attempted. | **NOT RUN**; geometry changes do not establish folding. |
+
+The two intermediate-angle attempts do not prove distinct hinge angles. They remain blocked even though diagnostic screenshots exist. The stable Device Hub GUI is interactive native pose control; this run did not establish a reliable unattended slider action. No `simctl` folding command or generic resize was used.
+
+### Xcode 27.3 Beta `XCUIHinge` probe
+
+The Beta installation passed the macOS compatibility and disk-space checks and came from the official Apple Xcode distribution. The stable Xcode selection was not changed. The installed public headers expose `XCUIDevice.shared.hinge` and `XCUIHinge.angle` as a `CGFloat` in radians. `hinge` is nullable on devices without a hinge. The header has no declared angle range or availability annotation; its documentation says programmatic closed-to-open transitions are unsupported on physical devices and fail the test. Apple’s [Xcode 27.3 Beta release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes) and the [public `XCUIDevice.hinge` documentation](https://developer.apple.com/documentation/xctest/xcuidevice/hinge) establish that the API exists; they do not prove that it drives a native Duo pose in this simulator.
+
+The temporary test method `testXCUHingeNativeAngleProbe` requested `[0, π/3, π/2, 2π/3, π]` radians (0°, 60°, 90°, 120°, 180°), with a getter read after each setter. No request/readback pair was observed because the test method never ran. The original UI test source was restored and verified at SHA-256 `4fd3ce30b22e279b17d5e6f88cd94e4be57c76f3d71241abea7ad62a8e0c5537`; the exact temporary source is retained externally with SHA-256 `eda9dd4e420de14e4b8a0c57a9d01e0b4f370ff7a9081817fd8c63e807a4fa0e`.
+
+| Attempt | Result before test execution | Test counts |
+| --- | --- | --- |
+| 1 | Build stopped because the worktree lacked the generated `Pokedex.sqlite` input. | 0 executed, 0 passed, 0 failed, 0 skipped. |
+| 2 | The temporary database copy inside the worktree was rejected by the build script sandbox (`Operation not permitted`). The copy was removed and the primary-checkout database was left unchanged. | 0 executed, 0 passed, 0 failed, 0 skipped. |
+| 3 | With the documented generated-database check bypassed for this no-app-launch probe, Xcode reached test-runner packaging but failed because `PokedexUITests/Info.plist` is absent while the project build setting points to that path. | 0 executed, 0 passed, 0 failed, 0 skipped. |
+| 4 | A command-line empty `INFOPLIST_FILE` override applied to every scheme target and caused additional targets to fail Info.plist generation. No project files were changed. | 0 executed, 0 passed, 0 failed, 0 skipped. |
+
+All four result bundles report `totalTestCount: 0`; each xcodebuild invocation exited 65. The probe is **BLOCKED**, not PASS or FAIL: there is no setter-only, getter, visual, or test-run evidence. The Beta build used Xcode 27.3 with the installed iOS 27.2 Duo runtime; it did not test an iOS 27.3 runtime. Do not infer feasibility from the public declaration, compilation, or the recorded requested values. A further probe requires an owner-approved disposition for the missing UI-test Info.plist input and a valid target-specific way to build the existing test target.
+
+### Updated Issue #11 acceptance mapping
+
+Issue #11 provides five acceptance criteria but no separate PAC/TAC identifiers. The table maps each criterion directly to the evidence above.
+
+| Criterion | Current outcome | Evidence and remaining work |
+| --- | --- | --- |
+| AC1: verify installed toolchain, runtime, Duo device support, poses, orientations, Split View, safe area, and window behavior | **BLOCKED overall** — stable toolchain/device and Closed/Partial/Open plus portrait and closed-landscape observations are verified. | Intermediate angles, landscape partial/open, Split View, and app window/safe-area observations remain unavailable. |
+| AC2: identify supported headless native folding automation and execute a probe where supported | **BLOCKED** — stable `simctl`/`devicectl` expose no native fold operation. Local public-header inspection confirms the Beta API declaration only; the test method did not execute, so no setter, getter, angle readback, or native pose was observed. | All four Beta result bundles report zero tests. Resolve the existing UI-test Info.plist input before a later isolated probe. |
+| AC3: define repeatable Device Hub actions and retain pose evidence or report unavailable cases | **BLOCKED** — the procedure and four preset pose captures are retained, but two distinct intermediate angles and app-specific cases remain unverified. | Owner-operated steps below complete the missing Device Hub evidence. |
+| AC4: separate deterministic state/persistence assertions from native pose smoke | **PASS** for scope separation. | No state, persistence, navigation, or app-correctness assertion is made here; C1/C2 own deterministic claims. |
+| AC5: provide a lightweight matrix and limitations to C/D; physical Duo is not required for development unless policy says otherwise | **PASS** for the documented handoff. | C4 still owns native feature smoke/continuity; D2 still owns final device/hardware qualification. No physical Duo sign-off is claimed. |
+
+### Minimum owner-operated completion steps (conditional on storage disposition)
+
+The 2 GiB cap treatment of retained build scratch is unresolved. The owner approval covered only the completed 2026-11-13 continuation; further evidence capture is currently **BLOCKED**. The steps below are a technical handoff for a later run, not authorization to capture. Execute them only after the owner records how the cumulative total complies with the cap or explicitly approves a bounded disposition.
+
+1. Use Xcode 27.2 build 27B52 and the iOS 27.2 runtime. Open Device Hub, select the booted Duo recorded in the private manifest, and confirm **View Screen**. Running PikaDex is not required to repeat native hinge-preset or orientation observations.
+2. For the two intermediate cases, hold Option and drag the Device Hub hinge slider to two distinct positions inside its travel, away from **Closed**, **Partially Open**, and **Open**. Capture the complete Device Hub window after each action so both chassis and slider are visible. Record the requested slider fraction; record degrees only if Device Hub displays them. If the slider cannot be manipulated, retain a screenshot of the control and classify both cases **BLOCKED**.
+3. To complete landscape coverage, capture the partial and open presets in landscape as well as the already retained closed landscape observation. Keep the orientation action separate from the hinge preset.
+4. For Split View and app safe-area observations, use the `Pokedex` scheme in Xcode 27.2 on the verified Duo destination `platform=iOS Simulator,id=<verified-Duo-UDID-from-private-manifest>`. The recorded `SIGTRAP` followed the stable Xcode 27.2 launch attempt. Proceed with these app-dependent cases only if PikaDex remains running; if it exits again, record the exact outcome and leave those rows **BLOCKED** for C4 follow-up. Do not substitute another app or claim an app layout result.
+5. Save original screenshots or recordings and a SHA-256 for each in the owner-managed external evidence folder. Record the exact Xcode/runtime/UDID, operation, expected and observed state, outcome, and artifact hash. Preserve older evidence and keep build scratch separate; report any cap overage without cleanup.
+
+### Handoff limits
+
+This continuation verifies several native Device Hub pose transitions and their chassis appearance. It does not qualify the Beta API, app feature correctness, Split View layout, persistence, safe-area values, or hardware behavior. C1/C2 retain deterministic state and persistence claims. C4 can use the stable procedure after the remaining native observations and app launch are available. D2 still requires candidate-bound device and hardware sign-off. The Beta experiment remains feasibility work, not a release gate.
