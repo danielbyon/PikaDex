@@ -4,7 +4,9 @@ Issue #11 A3 records a repeatable way to observe native iPhone Duo transitions a
 
 ## Execution status
 
-Captured on 2026-11-12 in America/Los_Angeles. The environment inventory passed. Native Device Hub transitions and the Xcode 27.3 beta probe are **BLOCKED** for this run. This run produced no transition screenshots, recordings, test result bundle, or beta probe source. Device Hub appeared in the running-app inventory, but both attempts to inspect it through the UI bridge timed out. That is a tooling blocker; it does not show that Device Hub or the simulator lacks the feature.
+The initial A3 execution on 2026-11-12 in America/Los_Angeles verified the environment but could not access Device Hub; both UI bridge attempts timed out. It produced no transition screenshots, recordings, test result bundle, or beta probe source. That result remains in the initial evidence record.
+
+A continuation UI check at 2026-11-12 19:39 Pacific opened Device Hub. Its visible device list did not include the iPhone Duo, and searching for “iPhone Duo” returned no results. Clearing the search restored the list without the Duo. One subsequent scroll request failed with `-10005: noWindowsAvailable`; no further UI attempts were made. A fresh `simctl` inventory still reported the Duo simulator as available and shut down. No native pose action was performed, and no pose screenshot or recording exists. Stable native transitions remain **BLOCKED** because the intended simulator was not selectable in Device Hub.
 
 This runbook covers A3 mechanism feasibility only:
 
@@ -23,11 +25,11 @@ No production code, test framework, test target, or project configuration change
 | Swift compiler | Swift 6.4.2, swift-driver 1.168.6 |
 | iOS Simulator SDK | 27.2 |
 | Duo runtime | iOS 27.2, build 24B91016s, runtime identifier `com.apple.CoreSimulator.SimRuntime.iOS-27-2-iPhone19-4` |
-| Duo simulator | `iPhone Duo`, device type `com.apple.CoreSimulator.SimDeviceType.iPhone-Duo`, UDID `0FA9C191-E5D2-452F-855B-479DCA678E4E`, state `Shutdown` |
+| Duo simulator | `iPhone Duo`, device type `com.apple.CoreSimulator.SimDeviceType.iPhone-Duo`, iOS 27.2 runtime build 24B91016s, available and `Shutdown` in `simctl` |
 | Connected physical Duo | None observed; `devicectl` listed an iPhone 17 Pro Max and no Duo |
 | UI test target | `PokedexUITests` in the `Pokedex` scheme; current file has `testExample` and `testLaunchPerformance` |
 
-The revalidated raw inventory is under `/Volumes/Qwizlab/pikadex-issue-11-a3/2026-11-13T023838Z/`. That directory is external to the repository. Its manifest identifies each retained file and hash. No A1 report or manifest was changed. The A1 evidence path recorded by that manifest was absent on this host and was left untouched.
+The original and continuation inventories, UI-access records, and manifests remain in owner-managed external evidence storage. Each manifest lists retained artifacts and SHA-256 values. The simulator UDID is kept in that local evidence. No A1 report or manifest was changed; the A1 evidence root named in its manifest was absent on this host and was not recreated or altered.
 
 ## Automation findings
 
@@ -36,11 +38,11 @@ The revalidated raw inventory is under `/Volumes/Qwizlab/pikadex-issue-11-a3/202
 | Stable headless hinge control | The installed Xcode 27.2 `simctl` help exposes generic screen geometry and simulator I/O, but no fold, hinge, or pose operation. `screenConfig geometry` changes screen geometry; it does not demonstrate a fold transition. | No stable headless pose command identified. |
 | XCTest orientation | `XCUIDevice.shared.orientation` simulates device orientation. It does not set a Duo hinge angle. | Orientation automation is separate from folding. |
 | `devicectl` | Its installed help contains no fold, hinge, or pose operation. The attached-device inventory contains no physical Duo. | No Duo transition mechanism identified. |
-| Stable Device Hub | Apple documents Closed, Partially Open, and Open controls, plus Option-drag on the slider to set other angles. The Device Hub app was listed as running, but the UI bridge timed out twice before controls could be observed. | Interactive mechanism documented; this run's transitions are BLOCKED and unobserved. |
+| Stable Device Hub | Apple documents Closed, Partially Open, and Open controls, plus Option-drag on the slider to set other angles. The initial UI bridge timed out twice. In the continuation check, Device Hub opened but the Duo was absent from the visible list and search results; a later scroll request failed with `-10005: noWindowsAvailable`. | Interactive mechanism documented; native transitions remain BLOCKED and unobserved. |
 | Xcode 27.3 beta `XCUIHinge` | Apple’s beta release notes say `XCUIAutomation` can set an iPhone Duo hinge angle using `XCUIHinge`. The beta and iOS 27.3 runtime were not installed; the actual public declarations and availability were not inspected, and no test was built or executed. | Documented candidate only; executable feasibility is BLOCKED. This is not a stable release gate. |
 | Generic resizing | `simctl` can change screen geometry and UI tests can exercise app UI. Neither action proves a native fold or hinge transition. | Not accepted as native pose coverage. |
 
-Apple’s Xcode 27.3 beta notes require macOS Tahoe 26.6 or later; this host’s macOS 27.0.1 meets that version requirement. Read-only checks reported between 12 and 16 GiB free on the internal data volume; the external Qwizlab volume had 727 GiB free. The beta app and iOS 27.3 simulator runtime were absent. Apple’s [Xcode components guide](https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components) describes runtime installation but does not state the footprint for this beta/runtime. With the earlier A1 disk-capacity failure and no verified storage requirement, no beta download, installation, or runtime mutation was attempted. No credentials were entered.
+Apple’s Xcode 27.3 beta notes require macOS Tahoe 26.6 or later; this host’s macOS 27.0.1 meets that version requirement. The initial A3 checks reported 12–16 GiB free on the internal data volume. The continuation check reported 6.8 GiB internal and 727 GiB external free. The beta app and iOS 27.3 simulator runtime remain absent. Apple’s [Xcode components guide](https://developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components) describes runtime installation but does not state the footprint for this beta/runtime. The earlier A1 disk-capacity failure, current 6.8 GiB internal free space, and unverified package footprint leave no safe installation plan. No beta download, installation, or runtime mutation was attempted; no credentials were entered. Owner disposition requires a verified storage plan for the official beta, Duo runtime, build products, and a safety margin before installation.
 
 ## Stable manual procedure
 
@@ -48,8 +50,8 @@ Apple’s Xcode 27.3 beta notes require macOS Tahoe 26.6 or later; this host’s
 
 1. Use Xcode 27.2 build 27B52 and the `iPhone Duo` simulator on the iOS 27.2 runtime listed above. Re-run `xcodebuild -version`, `xcrun swift --version`, `xcrun --sdk iphonesimulator --show-sdk-version`, `xcrun simctl list runtimes`, and `xcrun simctl list devices available`; record the output with the run.
 2. Check free space before building or booting the simulator. Keep DerivedData and retained evidence on a task-specific directory on the external evidence volume. Do not erase the simulator, remove runtimes, or clear app data to make space.
-3. Open `Pokedex.xcodeproj` in Xcode 27.2, select the `Pokedex` scheme and the exact iPhone Duo destination, then Run. Select the Duo in Device Hub and click **View Screen**. Do not treat a successful build or launch as a transition result.
-4. Create a new run directory under `/Volumes/Qwizlab/pikadex-issue-11-a3/` with a unique UTC timestamp. Keep total A3-retained evidence at or below 2 GiB. Record the exact simulator and runtime identity in the manifest before capturing.
+3. Open `Pokedex.xcodeproj` in Xcode 27.2, select the `Pokedex` scheme and the iPhone Duo destination on the verified iOS 27.2 runtime, then Run. Open Device Hub, select that running Duo, and click **View Screen**. If the Duo is not listed, record the Device Hub state and stop with **BLOCKED**; do not substitute another simulator or generic resizing. A successful build or launch is not a transition result.
+4. Create a new run directory under an owner-selected external evidence root, using a unique UTC timestamp. Keep total A3-retained evidence at or below 2 GiB. Record the exact simulator and runtime identity in the private manifest before capturing.
 
 ### Transition observations
 
@@ -69,15 +71,15 @@ The Device Hub controls are described in [Apple’s Device Hub guide](https://de
 
 | Case | Operation | Success evidence | This run |
 | --- | --- | --- | --- |
-| Closed / outer display | Device Hub **Closed** control | Device Hub frame shows closed Duo; screenshot records the outer display | BLOCKED: UI bridge timeout |
-| Partially open | Device Hub **Partially Open** control | Device Hub frame shows partial pose and hinge | BLOCKED: UI bridge timeout |
-| Open / inner display | Device Hub **Open** control | Device Hub frame shows open Duo and inner display | BLOCKED: UI bridge timeout |
-| Intermediate A | Option-drag to about 1/3 slider travel | Screenshot or short recording shows a changed native Duo pose; store the fraction, not an assumed angle | BLOCKED: UI bridge timeout |
-| Intermediate B | Option-drag to about 2/3 slider travel | Same evidence as A, at a distinct slider position | BLOCKED: UI bridge timeout |
-| Portrait and landscape | Device > Orientation or rotate controls | Record orientation and a Device Hub capture for the selected pose | BLOCKED: UI bridge timeout |
-| Split View, left | Place PikaDex on left in system Split View | Device Hub capture shows PikaDex on the left and the other app on the right | BLOCKED: UI bridge timeout |
-| Split View, right | Place PikaDex on right in system Split View | Device Hub capture shows PikaDex on the right and the other app on the left | BLOCKED: UI bridge timeout |
-| Safe area and narrow window | Observe outer/inner display and each Split View side | Record visible boundaries; numeric insets remain unavailable without instrumentation | BLOCKED: UI bridge timeout |
+| Closed / outer display | Device Hub **Closed** control | Device Hub frame shows closed Duo; screenshot records the outer display | BLOCKED: Duo absent from Device Hub; action not executed |
+| Partially open | Device Hub **Partially Open** control | Device Hub frame shows partial pose and hinge | BLOCKED: Duo absent from Device Hub; action not executed |
+| Open / inner display | Device Hub **Open** control | Device Hub frame shows open Duo and inner display | BLOCKED: Duo absent from Device Hub; action not executed |
+| Intermediate A | Option-drag to about 1/3 slider travel | Screenshot or short recording shows a changed native Duo pose; store the fraction, not an assumed angle | BLOCKED: Duo absent from Device Hub; action not executed |
+| Intermediate B | Option-drag to about 2/3 slider travel | Same evidence as A, at a distinct slider position | BLOCKED: Duo absent from Device Hub; action not executed |
+| Portrait and landscape | Device > Orientation or rotate controls | Record orientation and a Device Hub capture for the selected pose | BLOCKED: Duo absent from Device Hub; action not executed |
+| Split View, left | Place PikaDex on left in system Split View | Device Hub capture shows PikaDex on the left and the other app on the right | BLOCKED: Duo absent from Device Hub; action not executed |
+| Split View, right | Place PikaDex on right in system Split View | Device Hub capture shows PikaDex on the right and the other app on the left | BLOCKED: Duo absent from Device Hub; action not executed |
+| Safe area and narrow window | Observe outer/inner display and each Split View side | Record visible boundaries; numeric insets remain unavailable without instrumentation | BLOCKED: Duo absent from Device Hub; action not executed |
 | Generic geometry change | `simctl screenConfig geometry` | Geometry may change; this is not evidence of folding | NOT RUN; excluded from native pose coverage |
 
 ## Xcode 27.3 beta probe procedure
@@ -110,7 +112,7 @@ No beta probe source or executed test invocation exists for this run; the comman
 
 ## Evidence handling and result classification
 
-Use `/Volumes/Qwizlab/pikadex-issue-11-a3/<UTC-run-id>/` for each run. Keep its evidence manifest, command logs, screenshots, recordings, source hashes, and `.xcresult` together. Record a SHA-256 for every retained artifact. Store DerivedData in a distinct A3-owned subdirectory. Keep evidence below 2 GiB; do not prune older baseline evidence or unrelated files to meet the limit.
+Use `<owner-selected-external-evidence-root>/<UTC-run-id>/` for each run. Keep its evidence manifest, command logs, screenshots, recordings, source hashes, and `.xcresult` together. Record a SHA-256 for every retained artifact. Store DerivedData in a distinct A3-owned subdirectory. Keep evidence below 2 GiB; do not prune older baseline evidence or unrelated files to meet the limit.
 
 For every matrix row, use one outcome:
 
@@ -127,13 +129,13 @@ Issue #11 does not assign separate PAC/TAC identifiers. This table maps its five
 
 | Issue #11 criterion | Outcome | Evidence or remaining work |
 | --- | --- | --- |
-| AC1: actual toolchain/runtime/device and requested display/pose/orientation/Split View/safe-area coverage | BLOCKED overall. Toolchain, runtime, device type, and UDID inventory passed; native behavior cases were not observed. | External environment inventory; stable matrix above; owner must execute Device Hub cases. |
+| AC1: actual toolchain/runtime/device and requested display/pose/orientation/Split View/safe-area coverage | BLOCKED overall. Toolchain, runtime, device type, and simulator availability were verified; native behavior cases were not observed. | Initial and continuation inventories; owner must make the Duo selectable in Device Hub and execute the matrix. |
 | AC2: documented headless native-fold interface, executable probe if available, no invented `simctl` API | BLOCKED. Stable `simctl` has no pose operation; beta release notes document an `XCUIHinge` candidate, but public declarations and an executable test were unavailable. | External CLI help; Apple beta notes; safe beta installation and probe remain. |
-| AC3: repeatable Device Hub procedure and native captures or explicit unavailable disposition | BLOCKED for observed captures. Procedure and capture/retention steps are documented; this run captured no transition because the UI bridge timed out. | Device Hub timeout record; no transition screenshot or recording. |
+| AC3: repeatable Device Hub procedure and native captures or explicit unavailable disposition | BLOCKED for observed captures. Procedure and capture/retention steps are documented; the initial UI bridge timed out, and the continuation Device Hub list did not contain the Duo. | Initial timeout record and continuation inventory/UI summary are retained externally; no native case executed, screenshot, or recording exists. |
 | AC4: keep state/persistence races separate from native pose smoke | PASS for scope documentation only. No C1/C2 assertions or persistence claim was made. | Scope and classification sections above. |
 | AC5: lightweight matrix and limitations handed to C/D; physical Duo not required for development absent owner exception | PASS for documented handoff. No physical Duo or D2 sign-off was performed. | Matrix above; C4 and D2 boundaries remain. |
 
-The external evidence directory records the task identity, blocked native and beta attempts, original UI-test source hash, inventories, command-help output, and artifact hashes. It contains no screenshot, recording, beta source, or `.xcresult` because those actions did not execute.
+The original evidence archive is preserved and its file hashes were rechecked. The continuation archive records the UI observation, current simulator inventory, beta reassessment, owner-operated steps, review, and CI results. The UI observation summary is `device-hub-followup.txt` (SHA-256 `fdb38cd5a2a0466c5887d2191d37d6c35217529fed04967e618c39ffcd9392d9`); the raw simulator record is `duo-simctl-record.json` (SHA-256 `244deaf9b761fce4328ff2361aa9e13c54d7fb5479144f81c69c5b842c029114`). The private owner procedure, which contains the exact local project path and simulator destination, is `owner-operator-steps.txt` (SHA-256 `106f4906726ddb67a74fcdac1e2c9d33608aeb7f656a5a8ae48aef745cb51dc5`). The exact simulator identifier and local paths are kept in owner-managed external evidence, not in this runbook or the PR summary. No screenshot, recording, beta source, or `.xcresult` exists because no corresponding action executed.
 
 ## Handoff limits
 
