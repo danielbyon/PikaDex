@@ -364,7 +364,7 @@ The owner supplied three original Device Hub screenshots. Copies and their origi
 
 The previously retained Partial/Open landscape captures remain PASS. The two new Split View observations establish native system window placement and narrow system-app windows. They do not establish PikaDex layout, safe-area insets, startup, or state continuity. Those app-specific observations remain with C4.
 
-A post-probe Device Hub screenshot request timed out after 30 seconds and reset the GUI bridge session. It produced no retained post-probe capture. No retry, server management, or authorization change followed.
+A post-test Device Hub screenshot saved successfully as `native/after-setter-first.png`, SHA-256 `5ddf5e44a5c17ca2db5abe1648745103b0d99e4d894c8eca8f5db1023ab76244`. It shows the open landscape chassis with Safari left and Files right while result collection was still in progress. This later state does not establish a setter-induced transition. The subsequent accessibility-state request timed out after 30 seconds and reset the GUI bridge session. No retry, server management, or authorization change followed.
 
 ### Disposable public hinge observer
 
@@ -389,7 +389,7 @@ The existing reversible infrastructure was reused with a unique result bundle un
 | --- | --- | --- |
 | Xcode 27.3 Beta 27C5020n, SDK 27.3, existing iOS 27.2 Duo 24B91016s | **1 / 0 / 1 / 0** | First request, 0 radians: `Failed to set hinge angle: Setting hinge angle is unsupported on this device, ignoring.` `xcodebuild` exited 65. |
 
-The exact test method is `PokedexUITests/PokedexUITests/testXCUHingeNativeAngleProbe`. The result bundle confirms execution; this is not a compile-only result. The later three requests, per-angle screen attachments, and intermediate deviations were **NOT RUN** because the first setter failed. No native pose change was independently verified. The attempt to capture the post-test chassis encountered the GUI timeout recorded above.
+The exact test method is `PokedexUITests/PokedexUITests/testXCUHingeNativeAngleProbe`. The result bundle confirms execution; this is not a compile-only result. The later three requests, per-angle screen attachments, and intermediate deviations were **NOT RUN** because the first setter failed. No setter-induced native pose change was independently verified. The later post-test chassis capture shows the open Split View arrangement; it was not synchronized with the failed setter. The subsequent accessibility request encountered the GUI timeout recorded above.
 
 The temporary target-specific plist and database-check script inputs were the same as the prior sandbox-enabled run. `ENABLE_USER_SCRIPT_SANDBOXING=YES` and `PIKADEX_SKIP_GENERATED_DATABASE_CHECK=NO` remained set. The preserved WAL-format database was only an existence-check build input for a test that does not launch PikaDex. Canonical release verification was unchanged. To reproduce, use this pass's retained `PokedexUITests.swift`, `Info.plist`, `project-inputs.diff`, and `command.json`, select a fresh external result path, then restore the original files. The command shape is the sandbox-enabled invocation above; the private command record fixes the actual destination, scratch directories, database path, and `TMPDIR`.
 
