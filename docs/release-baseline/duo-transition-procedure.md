@@ -65,7 +65,7 @@ Apple’s Xcode 27.3 Beta notes require macOS Tahoe 26.6 or later; this host’s
 1. Use Xcode 27.2 build 27B52 and the `iPhone Duo` simulator on the iOS 27.2 runtime listed above. Re-run `xcodebuild -version`, `xcrun swift --version`, `xcrun --sdk iphonesimulator --show-sdk-version`, `xcrun simctl list runtimes`, and `xcrun simctl list devices available`; record the output with the run.
 2. Check free space before building, booting, or installing. Keep at least 10 GiB free on the internal volume. Keep DerivedData and retained evidence on a task-specific directory on the external evidence volume. Stop if the internal volume falls below the minimum. Do not erase the simulator, remove runtimes, or clear app data to make space.
 3. Select the booted iPhone Duo in Device Hub and click **View Screen**. The native hinge controls do not require PikaDex to be running. Run the `Pokedex` scheme on the Duo only when observing app-specific Split View or window behavior; a build or process launch alone is not a transition result. If the Duo is not listed, record the Device Hub state and stop with **BLOCKED**; do not substitute another simulator or generic resizing.
-4. Create a new run directory under an owner-selected external evidence root, using a unique UTC timestamp. The approved cap remains 2 GiB. At the 2026-11-12 review, the task root occupied about 3.6 GiB, mainly because it included retained build DerivedData; the proposed cleanup was rejected before execution. The owner's later 2026-11-13 instruction authorized this single continuation and required a separate inventory of evidence and scratch. It did not resolve the earlier cap question: the new evidence folders total about 24.9 MiB, while the complete task root is about 5.25 GiB. Because the instruction did not say whether scratch is excluded from the cap, aggregate compliance is unresolved and is not claimed. This task-specific authorization ends with this run; further captures remain **BLOCKED** until the owner records how the cumulative total will comply with the cap while preserving existing artifacts. Do not retry cleanup or delete, move, or overwrite retained baseline or unrelated evidence.
+4. Keep cumulative retained evidence below 2 GiB, counting the original evidence root and the targeted-correction evidence folder. Keep reproducible build scratch separate. The earlier run was blocked when its task root exceeded the cap and cleanup was rejected; the later dated storage-disposition record resolves that blocker by preserving and moving the rebuildable caches. Further bounded captures may proceed while evidence remains below the cap. Stop and report an overage; preserve baseline evidence, databases, runtimes, and unrelated state.
 
 ### Transition observations
 
@@ -268,3 +268,78 @@ The evidence root measured 5,508,932 KiB, above the 2 GiB budget. Inventory iden
 The 2 GiB budget applies to every file and subdirectory under the `evidence_root` recorded in the storage disposition manifest. The separately named `build_scratch_root` contains the eight moved caches and is outside that evidence total. Keep these roots separate; do not move other contents between them without an owner disposition.
 
 The external `storage-disposition-manifest.json` records the moved directories, paths, sizes, file counts, preserved manifest hashes, screenshot-hash verification, and budget boundary. Its SHA-256 is `8bf77b8239125783b446536f83a46b285166fb1fc31f4f2fff7abd38ba3856b2`. The move resolves the storage-cap blocker for additional bounded evidence capture; intermediate angles, landscape partial/open, app Split View, and app safe-area/window observations remain outstanding for the reasons recorded above.
+
+## 2026-11-13 targeted acceptance correction
+
+The worktree and draft PR started clean at reviewed HEAD `3d48b9748cae342a130ae0a76d4b5d75b1ca53c4`. The following results supplement the earlier runs. Their failures and blocked outcomes remain historical evidence.
+
+### Remaining stable native cases
+
+Stable Xcode 27.2 build 27B52 used the same available, booted iOS 27.2 Duo, runtime build 24B91016s. The private native manifest records the exact UDID. Screenshots were saved directly from the Device Hub window, including the chassis. No display-only screenshot or generic resize was substituted.
+
+| Case | Requested action and expected result | Observed result | Classification and SHA-256 evidence |
+| --- | --- | --- | --- |
+| Partial in landscape | Select Partially Open and use Rotate Right to place the chassis in a wide orientation. | The inner Home Screen appeared on the visibly bent, wide chassis. | **PASS**: `partial-wide-landscape.png`, `0ef0db505a5aaa0d8844d229ef75753278de1877420696cc8a56110480add551`. |
+| Open in landscape | Select Open and use Rotate Right to place the chassis in a wide orientation. | The inner Home Screen appeared on the flat, wide chassis. | **PASS**: `open-wide-landscape.png`, `6a106b41ef4fe51eb9efc5900223d65b714dba7db7eb1413da80b61899266d11`. |
+| Two non-preset angles | Hold Option while moving the native slider to two interior positions. | The GUI bridge rejected modifier names `Alt` and `option` with `keyNotFound`. Neither angle was observed. | **BLOCKED** for both; `ui-control-errors.txt` preserves the errors. Earlier tall-orientation screenshots are retained as diagnostics only. |
+| Native Split View, both sides | Use Safari and Files to observe system placement independently of PikaDex. | Safari opened; the next Home/second-app setup action returned `noWindowsAvailable`. No Split View placement executed. | **BLOCKED** for both sides. This blocker is the GUI bridge, independent of the PikaDex launch failure. |
+
+The native manifest is `native/manifest.json`, SHA-256 `923f033fbe2a8f36f313f56556361c7e476fd2791e1a3116e216cf1bb91d29b6`. It includes screenshot hashes, expected and observed states, GUI errors, and owner actions. No numeric angle is assigned to the landscape preset captures.
+
+For the remaining angle observations, hold the physical Option key in Device Hub and drag the slider below the bezel to two distinct positions away from all three presets. Capture the entire Device Hub window with the chassis and slider visible. Record fractions of slider travel, or degrees only if the control displays them. This is Apple's [documented native hinge gesture](https://developer.apple.com/documentation/xcode/interacting-with-your-app-in-device-hub).
+
+For native Split View, fully open the Duo in landscape. Touch and hold Files on the Home Screen or in App Library, choose **Open in Split View**, then select Safari. Capture the two apps and chassis. Swap sides by swiping up from the bottom of one app, pausing in the center, then continuing to drag it to the opposite side; capture the second arrangement. These are [Apple's documented system actions](https://support.apple.com/en-ph/guide/iphone/iphrj13y9uxz/27/ios/27). Keep the native mechanism result separate from PikaDex layout smoke. If no second window appears, retain that observation and leave the case blocked.
+
+### PikaDex SIGTRAP diagnosis and C4 handoff
+
+Four retained crash reports have the same main-thread stack: Swift `_assertionFailure`, `PokedexApp.init()` at `PokedexApp.swift:50`, then the SwiftUI entry point. Historical simulator messages identify the preceding error: SQLite attempts to open the absent `Pokedex.sqlite-wal`, reports `NSSQLiteErrorDomain=14` and `NSCocoaErrorDomain=256`, and the app's persistence bootstrap catch calls `fatalError`. This is an observed catalog-packaging prerequisite failure; it does not implicate the native hinge transition.
+
+The installed catalog is present, 405,344,256 bytes, and has WAL header bytes `02 02`. Its bundle has no WAL or SHM sidecars. Its SHA-256, `ea88293e22e15a25cfe67be05abd9e0a4e13e1d30b142882951e28608a6e4a5e`, matches the existing primary-checkout development resource. Core Data model hashes match. The task worktree itself lacks the generated resource. These checks distinguish an absent worktree build input from the installed app's present but unsuitable read-only catalog package. Immutable SQLite inspection can read the catalog; that does not reproduce Core Data startup.
+
+`crash/REPORT.md`, `crash-stacks.txt`, copied `.ips` reports, filtered historical logs, source excerpts, and `diagnostics.json` retain the diagnosis. The database hashes were unchanged by inspection. No production source or user database was modified. SQLite documents the [read-only WAL conditions](https://sqlite.org/wal.html#read_only_databases).
+
+C4 must generate and validate the catalog through the canonical pipeline, confirm checkpointed DELETE-mode packaging, rebuild/install the stable candidate, and verify startup before PikaDex Split View and safe-area smoke. The exact prerequisite command is retained in the private crash report. The remedy and subsequent app behavior have not been executed or qualified by this A3 diagnosis; any failure with a canonical catalog remains an application investigation for C4.
+
+### Executed Beta probe on the existing iOS 27.2 Duo
+
+The earlier claim that an absent iOS 27.3 runtime prevents probe execution is superseded. Xcode 27.3 Beta build 27C5020n built and executed the selected UI-test method on the existing iOS 27.2 Duo, build 24B91016s. No runtime was installed, and global Xcode selection was unchanged.
+
+A temporary `PokedexUITests/Info.plist` supplied the missing target input. No global `INFOPLIST_FILE` override was used. The generated-database check remained enabled with `PIKADEX_SKIP_GENERATED_DATABASE_CHECK=NO`; `PIKADEX_GENERATED_DATABASE_PATH` identified the preserved database build input. That WAL-format input is sufficient for this no-app-launch probe's existence check, but it is not a canonical catalog qualification or an app-startup remedy.
+
+Two setup invocations were rejected before execution: the one-iteration argument was invalid, and a reused result path already existed. Their commands, errors, and available zero-test result are preserved. The first executed run used a command-level `ENABLE_USER_SCRIPT_SANDBOXING=NO` override. A further run removed that override: temporary `inputPaths` on the database-check script phase declared the exact script and database inputs, and `ENABLE_USER_SCRIPT_SANDBOXING=YES` remained set. The final result reproduced the same API failure with that narrower setup. The project file was restored afterward; canonical verification and its sources were unchanged.
+
+| Executed run | Tests executed / passed / failed / skipped | Observed result |
+| --- | --- | --- |
+| First executable run, retained under `probe/attempt2` | 1 / 0 / 1 / 0 | `XCUIDevice.shared.hinge` returned an object, but its initial angle getter failed. |
+| Final run with declared inputs and sandbox enabled, under `probe/attempt3` | 1 / 0 / 1 / 0 | Same getter failure on the iOS 27.2 Duo. |
+
+Both result bundles report: `Failed to get hinge angle: Getting hinge angle is unsupported on this device, ignoring.` The method configured 0, π/3, π/2, 2π/3, and π radians (0°, 60°, 90°, 120°, 180°), but the initial getter failed before the loop. None of those setter requests, readbacks, deviations, or per-angle screenshots occurred. There is no headless native-pose PASS. The executed tests are **FAIL**; native automation feasibility remains **BLOCKED** for this combination. A newer runtime may change support, but these results do not establish that iOS 27.3 is required. Any runtime installation still needs owner authorization and a verified storage cost.
+
+To reproduce the final infrastructure, use the exact temporary source and plist retained under `probe/attempt3`, apply only its `project-inputs.diff`, and use its `command.json` environment and arguments. Set a new external result-bundle path for each run. The essential invocation is:
+
+```sh
+DEVELOPER_DIR=/Applications/Xcode-27.3.0-Beta.app/Contents/Developer \
+PIKADEX_GENERATED_DATABASE_PATH="$PROBE_DATABASE" \
+PIKADEX_SKIP_GENERATED_DATABASE_CHECK=NO \
+xcodebuild -project Pokedex.xcodeproj -scheme Pokedex -configuration Debug \
+  -destination 'platform=iOS Simulator,id=<verified-Duo-UDID>' \
+  -destination-timeout 60 -derivedDataPath "$EXTERNAL_DERIVED_DATA" \
+  -clonedSourcePackagesDirPath "$EXTERNAL_PACKAGES" \
+  -resultBundlePath "$UNIQUE_EXTERNAL_RESULT" -parallel-testing-enabled NO \
+  -test-timeouts-enabled YES -default-test-execution-time-allowance 30 \
+  -maximum-test-execution-time-allowance 60 \
+  -only-testing:PokedexUITests/PokedexUITests/testXCUHingeNativeAngleProbe \
+  ENABLE_USER_SCRIPT_SANDBOXING=YES test
+```
+
+The private command record also fixes the external `TMPDIR` and actual destination. Restore the originals after execution. The UI-test source SHA-256 is again `4fd3ce30b22e279b17d5e6f88cd94e4be57c76f3d71241abea7ad62a8e0c5537`; the project file is again `a73ab49ef2d126788394a24a5c0af3b95430d736aab125c3b751c61b5fab1041`; the temporary plist is absent. The retained temporary source hash is `1b5b780929aa1e6f6cc2024108e995248604c0181ec951ad2c38abba2f149b85`, and its plist hash is `58c5c0911cdf7c6fe4a120892acde2ae1e7298e967243284d83257554c756f4f`.
+
+### Acceptance after this correction
+
+| Criterion | Outcome | Evidence and limitation |
+| --- | --- | --- |
+| AC1 | **BLOCKED** | Partial/Open landscape now have chassis captures. Two non-preset angles and both native Split View arrangements remain unobserved; PikaDex window smoke awaits canonical catalog packaging and C4. |
+| AC2 | **BLOCKED** | The public API probe now executes, but the current combination rejects the first native angle observation. Setter support and native pose automation remain unproven. Geometry resizing supplies no native folding evidence. |
+| AC3 | **PASS** for procedure and unavailable-case reporting | Stable actions, expected results, screenshot hashes, exact owner gestures, and failure reporting are defined. This does not turn the blocked AC1 cases into passes. |
+| AC4 | **PASS** | C1/C2 retain deterministic state and persistence claims. |
+| AC5 | **PASS** for handoff | C4 retains app smoke/continuity; D2 retains hardware qualification. Beta feasibility is not a release gate. |
