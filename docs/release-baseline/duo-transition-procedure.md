@@ -343,3 +343,70 @@ The private command record also fixes the external `TMPDIR` and actual destinati
 | AC3 | **PASS** for procedure and unavailable-case reporting | Stable actions, expected results, screenshot hashes, exact owner gestures, and failure reporting are defined. This does not turn the blocked AC1 cases into passes. |
 | AC4 | **PASS** | C1/C2 retain deterministic state and persistence claims. |
 | AC5 | **PASS** for handoff | C4 retains app smoke/continuity; D2 retains hardware qualification. Beta feasibility is not a release gate. |
+
+## 2026-11-13 feasibility-completion pass
+
+This pass started from clean worktree and draft PR HEAD `0ef77009313dfe0250bcf2e9b7bfb4f088d70107` on `codex/issue-11-native-duo-test-mechanism`. The earlier attempts and their evidence remain unchanged. The observations below supersede the previous current-status statements for native Split View and the untested setter.
+
+### Environment and native evidence
+
+Stable Xcode 27.2 build 27B52 remained globally selected. Xcode 27.3 Beta build 27C5020n was selected only through `DEVELOPER_DIR` for the XCTest probe. The available, booted iPhone Duo used `com.apple.CoreSimulator.SimRuntime.iOS-27-2-iPhone19-4`, iOS 27.2 build 24B91016s, device type `com.apple.CoreSimulator.SimDeviceType.iPhone-Duo`. `environment.json` retains its exact UDID, toolchain versions, runtime inventory, and free-space measurements. Internal free space was above 120 GiB before the build and diagnostic installation, above the 10 GiB minimum. No Xcode or runtime installation occurred.
+
+The owner supplied three original Device Hub screenshots. Copies and their original Desktop provenance are retained privately under `2026-11-13-feasibility-completion/owner`; the originals were left untouched. The current native Device Hub window also rendered the opposite Split View arrangement. Its capture includes the chassis and both windows. No swap gesture was performed by the agent in this pass.
+
+| Case | Expected state / actual operation | Observed result | Outcome and artifact SHA-256 |
+| --- | --- | --- | --- |
+| Files left / Safari right | Owner-operated native Split View in Open landscape; inspect supplied full-window capture. | Files on the left, Safari on the right, native divider and chassis visible. | **PASS** for this system mechanism observation: `owner/owner-03.png`, `160659516e129634309fbf1f337229761935c25439590b99057c512fe617fd13`. |
+| Safari left / Files right | Inspect the currently displayed opposite native arrangement. | Safari on the left, Files on the right, native divider and chassis visible. | **PASS** for this system mechanism observation: `native/safari-left-files-right.png`, `a43ad296dddd0c0d55d7b69d8db0165acece42de5c43d62439b317fb7403b04b`. |
+| Owner closed capture | Inspect outer display and chassis. | Closed outer Home Screen; no arbitrary hinge angle established. | **PASS** for Closed only: `owner/owner-01.png`, `915cd633e6a813e4406439f03d85e7055bbedcbc8340dc0faa5dffd0472805ea`. |
+| Owner partial capture | Inspect bent inner display and chassis. | Partial pose visible, without a numeric angle or proof that it differs from the partial preset. | **PASS** for a partial pose only: `owner/owner-02.png`, `37dfc8d1366c7c1b65c4cf17b1777b6d6aa2a9a7e05a59aaa3f5f4eea31ae7c5`. |
+| Two non-preset intermediate angles | Observe two native hinge angles away from the three presets. | The supplied captures do not establish two such angles. The public observer described below is available for owner operation. | **BLOCKED** pending actual angle observations and chassis captures. Slider position alone is insufficient. |
+
+The previously retained Partial/Open landscape captures remain PASS. The two new Split View observations establish native system window placement and narrow system-app windows. They do not establish PikaDex layout, safe-area insets, startup, or state continuity. Those app-specific observations remain with C4.
+
+A post-probe Device Hub screenshot request timed out after 30 seconds and reset the GUI bridge session. It produced no retained post-probe capture. No retry, server management, or authorization change followed.
+
+### Disposable public hinge observer
+
+A standalone UIKit diagnostic was built with stable Xcode 27.2 outside the repository, installed on the exact Duo, and launched successfully. It adds a public `UIHingeInteraction` to its view, displays each update's angle in radians/degrees and status, and writes timestamped updates to its own Documents directory. Its first delivered update was 180 degrees, status 3 (fully open). This observation occurred after the failed XCTest request; it is not a synchronized observation of that setter.
+
+Apple documents [UIHingeInteraction](https://developer.apple.com/documentation/uikit/uihingeinteraction) as an observer for the view hierarchy. The inspected public `UIHinge.h` declares radians and warns that update granularity is system policy. The observer does not drive a hinge or replace native Device Hub controls. Exact source, headers, app bundle, build command/log, installation and launch commands are retained under `diagnostic/`. No production app source or project configuration was used or changed for it.
+
+To complete the two remaining angle cases:
+
+1. Open stable Device Hub and select the iOS 27.2 Duo whose UDID is in `environment.json`. Open **A3 Hinge Observer**, bundle ID `org.pikadex.a3.HingeDiagnostic`, if it is not already visible. The retained `diagnostic/build.sh` rebuilds it; `install-launch.json` contains the exact destination and commands.
+2. Select the three native presets and record their delivered observer values as reference points. Hold the physical Option key and drag the hinge slider below the bezel to an interior position that differs from each preset. Wait for a delivered numeric update. Save the complete Device Hub window, including the chassis and observer text.
+3. Repeat at a second distinct non-preset angle. Save a second complete window capture or a short recording spanning both poses. Compare the delivered values against the preset values; do not substitute slider fractions for angle observations or demand precision beyond the delivered updates.
+4. Retain the diagnostic's `Documents/hinge-updates.jsonl` with the captures and their hashes. If the control or observer is unavailable, record that exact result and leave both cases BLOCKED. The agent's GUI bridge cannot currently perform or verify the Option-drag gesture.
+
+No non-preset PASS is assigned until those actual observations have been checked.
+
+### Setter-first XCUIHinge execution
+
+The existing reversible infrastructure was reused with a unique result bundle under `probe/setter-first`. The temporary method performs no hinge getter and no PikaDex launch. It requests 0, π/3, 2π/3, and π radians (0°, 60°, 120°, 180°), with log markers before and after each setter. The first request reached the setter; no after-set marker appeared.
+
+| Configuration | Executed / passed / failed / skipped | Actual result |
+| --- | --- | --- |
+| Xcode 27.3 Beta 27C5020n, SDK 27.3, existing iOS 27.2 Duo 24B91016s | **1 / 0 / 1 / 0** | First request, 0 radians: `Failed to set hinge angle: Setting hinge angle is unsupported on this device, ignoring.` `xcodebuild` exited 65. |
+
+The exact test method is `PokedexUITests/PokedexUITests/testXCUHingeNativeAngleProbe`. The result bundle confirms execution; this is not a compile-only result. The later three requests, per-angle screen attachments, and intermediate deviations were **NOT RUN** because the first setter failed. No native pose change was independently verified. The attempt to capture the post-test chassis encountered the GUI timeout recorded above.
+
+The temporary target-specific plist and database-check script inputs were the same as the prior sandbox-enabled run. `ENABLE_USER_SCRIPT_SANDBOXING=YES` and `PIKADEX_SKIP_GENERATED_DATABASE_CHECK=NO` remained set. The preserved WAL-format database was only an existence-check build input for a test that does not launch PikaDex. Canonical release verification was unchanged. To reproduce, use this pass's retained `PokedexUITests.swift`, `Info.plist`, `project-inputs.diff`, and `command.json`, select a fresh external result path, then restore the original files. The command shape is the sandbox-enabled invocation above; the private command record fixes the actual destination, scratch directories, database path, and `TMPDIR`.
+
+The exact temporary setter-first source SHA-256 is `5122c3d3bd6b18d8420ae6225259070602503e91c66dfa25c5d809f17b279025`. Restoration verifies the original UI-test source at `4fd3ce30b22e279b17d5e6f88cd94e4be57c76f3d71241abea7ad62a8e0c5537`, project at `a73ab49ef2d126788394a24a5c0af3b95430d736aab125c3b751c61b5fab1041`, and the temporary plist absent. The tracked source diff remains documentation-only.
+
+### Automation finding and acceptance
+
+1. **Demonstrated:** interactive native Device Hub presets, portrait/landscape observations, and both Files/Safari Split View arrangements. `UIHingeInteraction` delivered the diagnostic's initial native angle. No headless native folding automation was demonstrated.
+2. **Unsupported in the tested configuration:** the Beta XCTest hinge getter in two earlier executed runs and the setter in this new run reject the iOS 27.2 Duo. This is a bounded configuration result, not a claim that every simulator/runtime rejects XCUIHinge. Generic geometry/resizing supplies no native fold coverage.
+3. **Unverified:** non-preset Device Hub angles pending owner evidence; XCUIHinge on an iOS 27.3 Duo runtime; physical-device behavior. A 27.3 comparison is justified as a separate compatibility probe because the API first appears in this Beta and the 27.2 runtime rejects both operations. Neither the declarations nor these failures prove that runtime 27.3 is required or sufficient. Before installation, the owner must approve it, verify Duo runtime availability, download and expanded/scratch sizes in official Xcode Components, retain the 10 GiB internal floor, and confirm external evidence capacity. No new runtime was installed.
+
+| Criterion | Latest outcome | Evidence and remaining limitation |
+| --- | --- | --- |
+| AC1 | **BLOCKED overall** | Toolchain/runtime, native presets, landscape partial/open, outer/inner displays, and both native Split View sides are observed. Two non-preset poses await checked evidence. PikaDex layout/startup and safe-area smoke stay C4. |
+| AC2 | **BLOCKED overall; tested probe FAIL** | The setter-first test executed once and rejected the first request. No supported headless pose automation was demonstrated in the tested configuration. The newer-runtime comparison remains unverified. |
+| AC3 | **PASS** for procedure and unavailable-case reporting | Native actions, exact private destination/commands, expected/observed states, artifact hashes, and remaining owner actions are recorded. |
+| AC4 | **PASS** | C1/C2 retain deterministic state and persistence assertions. |
+| AC5 | **PASS** for handoff | C4 retains PikaDex smoke/continuity and its existing catalog prerequisite; D2 retains hardware qualification. Beta feasibility is not a release gate. |
+
+Issue #11 has no separate PAC/TAC identifiers; these rows map its five actual acceptance criteria. The draft PR must remain blocked on the missing native angle evidence and unverified headless support. No release status changes follow from this run.
