@@ -6,7 +6,13 @@
 //
 
 import CoreData
+import Foundation
 import XCTest
+
+#if canImport(UIKit)
+import PokedexResources
+import UIKit
+#endif
 
 @testable import PokedexCore
 
@@ -122,3 +128,15 @@ final class PokedexCoreTests: XCTestCase {
         )
     }
 }
+
+#if canImport(UIKit)
+final class PokedexResourcesBundleTests: XCTestCase {
+
+    func testResourcesBundleLoadsRareCandyAsset() {
+        let bundle = Bundle.resources
+
+        XCTAssertEqual(bundle.bundleIdentifier, "com.danielbyon.PokedexResources")
+        XCTAssertNotNil(UIImage(named: "rare-candy", in: bundle, compatibleWith: nil))
+    }
+}
+#endif

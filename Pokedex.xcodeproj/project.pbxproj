@@ -319,6 +319,7 @@
 		65992A2229C74D7A001ECD43 /* PokedexResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65992A1C29C74D7A001ECD43 /* PokedexResources.framework */; };
 		65992A2329C74D7A001ECD43 /* PokedexResources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65992A1C29C74D7A001ECD43 /* PokedexResources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		65992A2729C74DA0001ECD43 /* PokedexResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65992A1C29C74D7A001ECD43 /* PokedexResources.framework */; };
+		3CBAF2DB5D32C866476EC191 /* PokedexResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65992A1C29C74D7A001ECD43 /* PokedexResources.framework */; };
 		65992A2D29C74DEF001ECD43 /* PokedexResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65992A2C29C74DEF001ECD43 /* PokedexResources.swift */; };
 		65992A2E29C74FF3001ECD43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6547F7FE237968D50091A083 /* Assets.xcassets */; };
 		65992A2F29C7535B001ECD43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6547B3F429015A7F0092EE2F /* Images.xcassets */; };
@@ -618,6 +619,13 @@
 			remoteInfo = PokedexResources;
 		};
 		65992A3429C755A4001ECD43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65992A1B29C74D7A001ECD43;
+			remoteInfo = PokedexResources;
+		};
+		A9BD53A5B9C38B87B56E498A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6547F7EA237968D20091A083 /* Project object */;
 			proxyType = 1;
@@ -1136,6 +1144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65401F4C2978EA91005BF4DC /* PokedexCore.framework in Frameworks */,
+				3CBAF2DB5D32C866476EC191 /* PokedexResources.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2931,6 +2940,7 @@
 			);
 			dependencies = (
 				65401F4E2978EA91005BF4DC /* PBXTargetDependency */,
+				D261310FA3BACB83563AB4D2 /* PBXTargetDependency */,
 			);
 			name = PokedexCoreTests;
 			productName = PokedexCoreTests;
@@ -3978,6 +3988,11 @@
 			target = 65401F412978EA91005BF4DC /* PokedexCore */;
 			targetProxy = 65401F4D2978EA91005BF4DC /* PBXContainerItemProxy */;
 		};
+		D261310FA3BACB83563AB4D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65992A1B29C74D7A001ECD43 /* PokedexResources */;
+			targetProxy = A9BD53A5B9C38B87B56E498A /* PBXContainerItemProxy */;
+		};
 		654022D92979068B005BF4DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 654022C62979068A005BF4DC /* PokedexUI */;
@@ -4927,7 +4942,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -4971,7 +4986,7 @@
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
