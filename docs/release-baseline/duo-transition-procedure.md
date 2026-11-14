@@ -1,6 +1,6 @@
 # iPhone Duo native transition procedure
 
-Issue #11 A3 records a repeatable way to observe native iPhone Duo transitions and separates that work from app correctness and release qualification. This runbook preserves each dated result. The 2026-11-13 continuation at the end records the latest observations; earlier blocked reports remain part of the history.
+Issue #11 A3 records a repeatable way to observe native iPhone Duo transitions and separates that work from app correctness and release qualification. The [final iOS 27.3 AC2 probe](#2026-11-13-final-ac2-compatibility-probe-ios-273-duo) records the current acceptance status. Earlier dated sections preserve their results and status at the time; their blocked and runtime-unavailable dispositions are historical.
 
 ## Execution status
 
@@ -436,6 +436,8 @@ Raw records are under the external `2026-11-13-owner-angle-completion` folder. `
 
 ### Acceptance after owner evidence verification
 
+The acceptance status in this dated handoff is historical. The final iOS 27.3 AC2 probe below supersedes its pending-runtime disposition; the manual native evidence and earlier failed test results remain unchanged.
+
 | Criterion | Latest outcome | Evidence and remaining limitation |
 | --- | --- | --- |
 | AC1 | **PASS for the bounded native mechanism coverage** | Stable environment, Closed/Partial/Open, two distinct non-preset poses, relevant orientations, outer/inner displays, narrow system-app windows, and both Files/Safari Split View arrangements have retained native observations. PikaDex startup, layout, and safe-area smoke remain C4 and are not qualified by these captures. |
@@ -444,4 +446,78 @@ Raw records are under the external `2026-11-13-owner-angle-completion` folder. `
 | AC4 | **PASS** | No deterministic state, persistence, feature-correctness, or pending-write claim is made; C1/C2 retain those assertions. |
 | AC5 | **PASS for handoff** | C4 retains the catalog/startup prerequisite and app smoke/continuity; D2 retains final hardware qualification. Beta feasibility remains separate from release qualification. |
 
-Supported interactive native pose control is now demonstrated, including the two non-preset cases. Headless XCUIHinge control remains unsupported in the tested configuration; newer-runtime and physical-device configurations remain unverified. Keep the PR in draft pending AC2 disposition and review. No issue closure, merge, or release-qualification change is implied.
+At this owner-angle handoff, interactive native pose control was demonstrated, including the two non-preset cases. Headless XCUIHinge control was unsupported in the tested iOS 27.2 configuration; newer-runtime and physical-device configurations were unverified. The PR was held in draft pending AC2 disposition and review. The final iOS 27.3 probe below supersedes that AC2 disposition. The earlier negative results and release-qualification limits remain unchanged.
+
+## 2026-11-13 final AC2 compatibility probe: iOS 27.3 Duo
+
+The final bounded compatibility run began from clean worktree and draft PR HEAD `fe5ff31972bb0ec3f71a5d76eaaa950a6ae09593`. The owner had installed the runtime and created the simulators. Inventory found two available iOS 27.3 Duos; the already booted device was selected and its exact UDID was confirmed in Device Hub's Info pane. The other iOS 27.3 Duo and the older iOS 27.2 Duo were left untouched. No runtime or device was installed, erased, reset, or booted by this continuation.
+
+### Verified environment and reversible setup
+
+The selected device type was `com.apple.CoreSimulator.SimDeviceType.iPhone-Duo`, runtime `com.apple.CoreSimulator.SimRuntime.iOS-27-3`, iOS 27.3 build 24C5037i. Xcode 27.3 Beta build 27C5020n and Simulator SDK 27.3 were verified. Beta Device Hub displayed that exact simulator. The diagnostic launched and received native updates, confirming the runtime was bootable. Internal free space was about 119 GiB before the probe and 114 GiB afterward, above the 10 GiB floor. Global `xcode-select` remained on stable Xcode 27.2; Beta was selected per command with `DEVELOPER_DIR`.
+
+The retained public UIHingeInteraction diagnostic was installed on this simulator and launched. It initially delivered 0° with Closed status. Before the test, the native Open control produced 180° / π radians, status 3, update 2; `native/verified-open-before-test.png` retains the full chassis, diagnostic, runtime label, and Info pane. This was the required test baseline, not a repeat of the completed AC1 matrix. No GUI pose, orientation, or resize input occurred during the method.
+
+The previous target-specific temporary plist, project script-input declarations, database input, and restoration runner were reused. Script sandboxing and the generated-database check stayed enabled: `ENABLE_USER_SCRIPT_SANDBOXING=YES`, `PIKADEX_SKIP_GENERATED_DATABASE_CHECK=NO`. The database input hash remained `ea88293e22e15a25cfe67be05abd9e0a4e13e1d30b142882951e28608a6e4a5e`. It supplied the existence check only; PikaDex was not launched and its catalog packaging was not qualified.
+
+The public XCUIHinge header was rechecked and retained. It declares a writable angle in radians and warns about opening a closed physical device; it does not specify a universal valid angle range. The first request was the interior 120° value, between the observed Closed and Open endpoints. The second was 150°. The single method invoked no angle getter, logged immediately before and after each setter with UTC timestamps and monotonic uptime, and held each returned request for 15 seconds. The per-method allowance was bounded to 90 seconds; the build/test wrapper retained its 900-second wall limit. No speculative test retry occurred.
+
+### Executed result and independent native correlation
+
+The designated `PokedexUITests/PokedexUITests/testXCUHingeNativeAngleProbe` executed once: **1 executed / 1 passed / 0 failed / 0 skipped**. `xcodebuild` exited 0. The method passed in 33.524 seconds. Its UTC markers span `2026-11-14T01:42:08.294Z` through `01:42:40.677Z`, corresponding to November 13 at 17:42 Pacific.
+
+Both setters returned. Independent diagnostic updates then reported two distinct native partially open poses within their respective dwell intervals. The last delivered values differed from the requested values; those deviations are retained without assigning a cause or claiming exact-angle accuracy.
+
+| Requested value | Before-set → after-set UTC | Last delivered native value within dwell | Signed deviation | Mechanism outcome |
+| --- | --- | --- | --- | --- |
+| 120° / 2.094395102 rad | 2026-11-14T01:42:08.362Z → 2026-11-14T01:42:08.442Z | 118.333344° / 2.065306459 rad; update 6 | -1.666656° | **PASS** native change; attachment at 1794620545.028 Unix seconds. |
+| 150° / 2.617993878 rad | 2026-11-14T01:42:25.047Z → 2026-11-14T01:42:25.073Z | 154.393936° / 2.694682531 rad; update 8 | +4.393936° | **PASS** native change; attachment at 1794620560.644 Unix seconds. |
+
+For the first request, diagnostic updates 3–6 arrived at `01:42:10Z`, after the 120° setter returned and before the second setter began at `01:42:25.047Z`. For the second, updates 7–8 arrived at `01:42:26Z`, after the 150° setter returned and before the method finished. Both final delivered values had status 2 (partially open). `correlation.json` binds every marker, update, request, deviation, simulator identity, and attachment.
+
+The two retained XCTest screen attachments independently display the public diagnostic's 118.33° / update 6 and 154.39° / update 8. Their xcresult metadata identifies the exact selected simulator. The first attachment timestamp is `01:42:25.028Z`, before the second request; the second is `01:42:40.644Z`, before method completion. They are exported under `probe/exported-all-attachments`, with hashes and the export command retained. These screen captures supplement the native observer log; they are not chassis screenshots.
+
+The full Device Hub chassis capture `native/post-method-correlated-pose.png` completed at `01:42:54.900Z`, after the method ended. It shows the same final 154.39° / update 8 and provides later visual corroboration. It is not the sole proof of a transition. The transition finding relies on the observer updates and test attachments independently correlated inside the setter intervals. The original capture filenames were corrected to reflect their post-method timing; `native/capture-provenance.json` preserves that naming history and image hash. No getter was tested on iOS 27.3, and its support remains **NOT RUN** rather than unsupported.
+
+### Repeatable command and retained inputs
+
+Raw evidence is in the external `2026-11-13-ios27.3-ac2` folder. `environment.json` fixes the actual simulator UDID, runtime/build, device state, toolchain, and storage readings. `probe/command.json` and `command.txt` contain the exact invocation and environment; `probe/PokedexUITests.swift`, `Info.plist`, `temporary-project.pbxproj`, `project-inputs.diff`, and the originals preserve every temporary input. The method source SHA-256 is `340990ddcbfd27a79d55e90c177b20718ebd78111ae52c7203ea3d83b107aca9`.
+
+Apply only those verified temporary inputs in the isolated task worktree, confirm an Open baseline on the exact private destination, and run the following command shape with fresh external result and temp paths:
+
+```sh
+DEVELOPER_DIR=/Applications/Xcode-27.3.0-Beta.app/Contents/Developer \
+TMPDIR="$EXTERNAL_TEMP" \
+PIKADEX_GENERATED_DATABASE_PATH="$PROBE_DATABASE" \
+PIKADEX_SKIP_GENERATED_DATABASE_CHECK=NO \
+xcodebuild -project Pokedex.xcodeproj -scheme Pokedex -configuration Debug \
+  -destination 'platform=iOS Simulator,id=<verified-iOS-27.3-Duo-UDID>' \
+  -destination-timeout 60 -derivedDataPath "$EXTERNAL_DERIVED_DATA" \
+  -clonedSourcePackagesDirPath "$EXTERNAL_PACKAGES" \
+  -resultBundlePath "$UNIQUE_EXTERNAL_RESULT" -parallel-testing-enabled NO \
+  -test-timeouts-enabled YES -default-test-execution-time-allowance 90 \
+  -maximum-test-execution-time-allowance 90 \
+  -only-testing:PokedexUITests/PokedexUITests/testXCUHingeNativeAngleProbe \
+  ENABLE_USER_SCRIPT_SANDBOXING=YES test
+```
+
+Restore the original files even if the build or test fails. This run's restoration verified UI-test source SHA-256 `4fd3ce30b22e279b17d5e6f88cd94e4be57c76f3d71241abea7ad62a8e0c5537`, project SHA-256 `a73ab49ef2d126788394a24a5c0af3b95430d736aab125c3b751c61b5fab1041`, and the temporary probe plist absent. The restored worktree was clean before this runbook update. The result bundle, full log, exact commands, independent diagnostic log, exported attachments, and restoration records remain external. Retained evidence stays below the 2 GiB cap; no older evidence, databases, or unrelated scratch was deleted or moved.
+
+### Comparison and current acceptance
+
+| Tested configuration | Actual executed operation and outcome | Native evidence |
+| --- | --- | --- |
+| Earlier iOS 27.2 Duo, build 24B91016s; same Beta toolchain | Initial angle getter rejected in two executed runs, each 1 failed test. Separate setter-first run rejected its first 0-radian request, also 1 failed test. | No setter-driven native transition observed. All three negative results remain immutable. |
+| This iOS 27.3 Duo, build 24C5037i | From verified Open, 120° then 150° setters returned; one test passed. Getter, 0-radian request, and closed-to-open setter transition were not tested. | Timestamp-correlated native values 118.333344° then 154.393936°, both partially open, with in-method diagnostic screen captures. |
+
+This demonstrates public XCTest native hinge control in the tested iOS 27.3 configuration. It does not establish runtime version as the cause of the support difference: the simulator identity, runtime component/build, first requested value, baseline observation, foreground diagnostic setup, method logging, and dwell allowances also differ. `comparison-setup.json` records the common inputs and differences. No same-angle, runtime-only control run was performed or is claimed.
+
+| Criterion | Latest outcome | Scope and remaining limitation |
+| --- | --- | --- |
+| AC1 | **PASS**, unchanged bounded native mechanism coverage | Earlier manual presets, two non-preset poses, orientations, displays, and both Split View arrangements remain preserved; none were repeated for qualification here. |
+| AC2 | **PASS — this Beta/iOS 27.3 Duo, two interior setter-driven changes only** | Requests of 120° and 150° produced independently correlated native changes to 118.333344° and 154.393936°. This passes the bounded native-mechanism gate; getter support, other requests/transitions, exact-angle fidelity, and display-less CI remain unqualified. Earlier iOS 27.2 failures remain failures. |
+| AC3 | **PASS** | Exact private commands, reversible inputs, native correlation, captures, restoration, and failure reporting are retained. Interactive Device Hub remains the documented fallback for configurations without verified automation. |
+| AC4 | **PASS** | PikaDex was not launched; no C1/C2 state or persistence qualification is inferred. |
+| AC5 | **PASS for handoff** | C4 retains catalog/startup, app layout/safe-area smoke and continuity; D2 retains physical-device/hardware qualification. |
+
+Unverified configurations include other devices, the other iOS 27.3 Duo, iOS 27.3 getter support, a 0-radian request, closed-to-open automation, other orientations/window modes under automation, exact-angle fidelity, and a fully display-less CI environment. Device Hub was open for observation during this CLI-driven test. Beta feasibility does not qualify a stable release or PikaDex application behavior. A3 is ready for final ChatGPT evidence review after affected validation and independent review; the PR remains draft and Issue #11 remains open.
