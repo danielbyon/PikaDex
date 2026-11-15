@@ -140,3 +140,54 @@ final class PokedexResourcesBundleTests: XCTestCase {
     }
 }
 #endif
+
+final class TeamPersistenceWriterTests: XCTestCase {
+
+    func testShutdownDiscardsPendingSnapshotBeforePostShutdownFlush() {
+        let storage = WriterRecordingTeamStorage()
+        let writer = TeamPersistenceWriter(
+            storage: storage,
+            notificationCenter: NotificationCenter(),
+            debounceInterval: 3_600
+        )
+        writer.submit([.sword: [Team(name: "Pending")]])
+
+        writer.shutdown()
+        writer.flushPendingWrites()
+
+        XCTAssertEqual(storage.saveCount, 0)
+        XCTAssertNil(storage.savedTeams(for: .sword))
+    }
+}
+
+/// Records storage writes so writer shutdown can be checked without waiting for its debounce timer.
+private final class WriterRecordingTeamStorage: TeamStorage {
+    private let lock = NSLock()
+    private var teamsByGame: [Game: [Team]] = [:]
+    private var saves = 0
+
+    var saveCount: Int {
+        lock.lock()
+        defer { lock.unlock() }
+        return saves
+    }
+
+    func loadTeams(forGame game: Game) -> [Team]? {
+        lock.lock()
+        defer { lock.unlock() }
+        return teamsByGame[game]
+    }
+
+    func saveTeams(_ teams: [Team], forGame game: Game) {
+        lock.lock()
+        defer { lock.unlock() }
+        teamsByGame[game] = teams
+        saves += 1
+    }
+
+    func savedTeams(for game: Game) -> [Team]? {
+        lock.lock()
+        defer { lock.unlock() }
+        return teamsByGame[game]
+    }
+}
