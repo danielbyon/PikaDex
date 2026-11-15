@@ -40,6 +40,20 @@ final class PersistenceBootstrapTests: XCTestCase {
         }
     }
 
+    func testViewContextsUseIndependentErrorMergePolicies() throws {
+        let stores = try PersistenceBootstrap.makeInMemoryForTesting()
+        let pokedexPolicy = try XCTUnwrap(
+            stores.pokedexContainer.viewContext.mergePolicy as? NSMergePolicy
+        )
+        let userDataPolicy = try XCTUnwrap(
+            stores.userDataContainer.viewContext.mergePolicy as? NSMergePolicy
+        )
+
+        XCTAssertEqual(pokedexPolicy.mergeType, .errorMergePolicyType)
+        XCTAssertEqual(userDataPolicy.mergeType, .errorMergePolicyType)
+        XCTAssertFalse(pokedexPolicy === userDataPolicy)
+    }
+
     func testInMemoryStoresAreIsolatedBetweenBootstraps() throws {
         let first = try PersistenceBootstrap.makeInMemoryForTesting()
         let second = try PersistenceBootstrap.makeInMemoryForTesting()

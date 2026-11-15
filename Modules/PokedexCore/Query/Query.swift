@@ -11,6 +11,7 @@ import CoreData
 import Dependencies
 import SwiftUI
 
+/// Exposes Core Data query results and filter bindings to SwiftUI on the main actor.
 @propertyWrapper
 public struct Query<T: Queryable>: DynamicProperty {
 
@@ -19,13 +20,13 @@ public struct Query<T: Queryable>: DynamicProperty {
 
     @Dependency(\.pokedexDataStore) private var dependencyDataStore
 
-    public var wrappedValue: QueryResults<T> { core.results }
+    @MainActor public var wrappedValue: QueryResults<T> { core.results }
 
-    public var projectedValue: Binding<T.Filter> { $baseFilter }
+    @MainActor public var projectedValue: Binding<T.Filter> { $baseFilter }
 
     private let explicitDataStore: DataStore?
 
-    public init(
+    @MainActor public init(
         _ filter: T.Filter = .default,
         dataStore: DataStore? = nil
     ) {
@@ -126,8 +127,8 @@ internal final class QueryObserver<T: Queryable>: NSObject, ObservableObject,
 
         publishOnMain { [weak self] in
             guard let self,
-                  self.generation == currentGeneration,
-                  controller === self.controller else { return }
+                self.generation == currentGeneration,
+                controller === self.controller else { return }
             self.diagnosticError = nil
             self.publish(QueryResults(results: results, state: .loaded))
         }

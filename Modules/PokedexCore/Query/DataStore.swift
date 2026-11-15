@@ -20,6 +20,7 @@ internal enum ObservedQueryError: Error {
     case unavailableStore(Error)
     case requestConstruction(Error)
     case fetch(Error)
+    case observationRequiresMainQueueContext
 
     var queryFailure: QueryFailure {
         switch self {
@@ -35,7 +36,7 @@ internal enum ObservedQueryError: Error {
             case .unsupportedFilter:
                 return .unsupportedFilter
             }
-        case .fetch:
+        case .fetch, .observationRequiresMainQueueContext:
             return .fetch
         }
     }
@@ -46,6 +47,8 @@ internal enum ObservedQueryError: Error {
              .requestConstruction(let error),
              .fetch(let error):
             return error
+        case .observationRequiresMainQueueContext:
+            return self
         }
     }
 }
@@ -55,7 +58,19 @@ internal struct QueryObservation<ResultType: NSManagedObject> {
     let results: NSArray
 }
 
-public final class DataStore: NSObject, ObservableObject {
+/// A Core Data store that runs its operations on the managed context's queue.
+///
+/// The unchecked conformance relies on this queue confinement. Filters and
+/// persistence models are used during each synchronous call and are not retained
+/// by the store. Callers must not access shared mutable reference state through
+/// those values while a call is running.
+///
+/// Calls from the main thread use a reentrant fast path for a main-queue context.
+/// Other calls use `performAndWait`.
+/// One-shot fetches convert managed objects into `Queryable` values before
+/// returning them. Observed results retain managed objects for lazy conversion
+/// and require a main-queue context, which `Query` reads on the main actor.
+public final class DataStore: NSObject, ObservableObject, @unchecked Sendable {
 
     internal typealias ObservationFetch = (_ performFetch: () throws -> Void) throws -> Void
 
@@ -141,6 +156,10 @@ public final class DataStore: NSObject, ObservableObject {
         }
     }
 
+    /// Builds observations for the main-queue context used by SwiftUI.
+    ///
+    /// `QueryResults` reads fetched managed objects lazily, so a background
+    /// context cannot safely produce rows for main-actor access.
     internal func makeObservation<Filter: QueryFilter>(
         for filter: Filter,
         delegate: NSFetchedResultsControllerDelegate
@@ -153,6 +172,10 @@ public final class DataStore: NSObject, ObservableObject {
         }
 
         return try performSynchronously(on: viewContext) {
+            guard viewContext.concurrencyType == .mainQueueConcurrencyType else {
+                throw ObservedQueryError.observationRequiresMainQueueContext
+            }
+
             let request: NSFetchRequest<Filter.ResultType>
             do {
                 request = try filter.makeFetchRequest()
@@ -236,7 +259,8 @@ private func performSynchronously<T>(
 }
 
 private enum PreviewPersistenceStores {
-    static let result: Result<PersistenceStores, Error> = Result {
+    /// The cached contexts are accessed through DataStore's queue confinement.
+    nonisolated(unsafe) static let result: Result<PersistenceStores, Error> = Result {
         try PersistenceBootstrap.preview()
     }
 

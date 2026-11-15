@@ -8,10 +8,12 @@
 
 import Foundation
 
+/// Describes a value model created from a Core Data query result.
 public protocol Queryable {
 
     associatedtype Filter: QueryFilter
 
+    /// Copies the needed values without retaining the context-bound managed object.
     init(result: Filter.ResultType)
 
 }

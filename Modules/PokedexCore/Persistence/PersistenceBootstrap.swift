@@ -43,7 +43,7 @@ public final class PersistenceStores {
 public struct PersistenceBootstrapError: Error, LocalizedError, CustomStringConvertible, CustomDebugStringConvertible {
 
     /// The bootstrap operation that failed.
-    public enum Stage: String {
+    public enum Stage: String, Sendable {
         case locatingModel
         case loadingModel
         case locatingStore
@@ -55,7 +55,7 @@ public struct PersistenceBootstrapError: Error, LocalizedError, CustomStringConv
     }
 
     /// The safe recovery guidance associated with a failure.
-    public enum RecoveryContext: String {
+    public enum RecoveryContext: String, Sendable {
         case verifyBundledResources
         case verifyStoreConfiguration
         case preserveStoreForDiagnosis
@@ -63,7 +63,7 @@ public struct PersistenceBootstrapError: Error, LocalizedError, CustomStringConv
     }
 
     /// A non-sensitive snapshot of the store being prepared.
-    public struct StoreDescription {
+    public struct StoreDescription: Sendable {
         public let name: String
         public let type: String
         public let isReadOnly: Bool
@@ -179,7 +179,8 @@ public enum PersistenceBootstrap {
     }
 
     private static let productionCacheLock = NSLock()
-    private static var productionCache = makeProductionCache()
+    /// Every read and replacement is protected by `productionCacheLock`.
+    nonisolated(unsafe) private static var productionCache = makeProductionCache()
 
     /// Loads and caches the production catalog and writable user-data store.
     ///
@@ -490,7 +491,8 @@ public enum PersistenceBootstrap {
     private static func configureViewContext(_ context: NSManagedObjectContext) {
         // These assignments preserve the effective settings of the previous
         // NSPersistentContainer implementation while making the contract clear.
-        context.mergePolicy = NSErrorMergePolicy
+        // Give each context its own policy while keeping error-only conflict handling.
+        context.mergePolicy = NSMergePolicy(merge: .errorMergePolicyType)
         context.automaticallyMergesChangesFromParent = false
         context.undoManager = nil
         context.transactionAuthor = nil

@@ -58,13 +58,25 @@ final class DependencyAndTeamStoreTests: XCTestCase {
         XCTAssertEqual(storage.saveCount, 1)
     }
 
-    func testTeardownIntentionallyDiscardsUnflushedSnapshot() async {
+    func testSubmittedSnapshotIsIndependentOfLaterCallerMutation() {
         let storage = RecordingTeamStorage()
-        var store: DefaultTeamStore? = DefaultTeamStore(storage: storage, debounceInterval: 0.01)
+        let store = DefaultTeamStore(storage: storage, debounceInterval: 60)
+        var teams = [Team(name: "Submitted")]
+        store.setTeams(teams, forGame: .sword)
+        teams[0].name = "Mutated after submission"
+
+        store.flushPendingWrites()
+
+        XCTAssertEqual(storage.savedTeams(for: .sword)?.map(\.name), ["Submitted"])
+        XCTAssertEqual(storage.saveCount, 1)
+    }
+
+    func testTeardownIntentionallyDiscardsUnflushedSnapshot() {
+        let storage = RecordingTeamStorage()
+        var store: DefaultTeamStore? = DefaultTeamStore(storage: storage, debounceInterval: 3_600)
         store?.setTeams([Team(name: "Pending")], forGame: .sword)
 
         store = nil
-        try? await Task.sleep(nanoseconds: 50_000_000)
 
         XCTAssertEqual(storage.saveCount, 0)
     }

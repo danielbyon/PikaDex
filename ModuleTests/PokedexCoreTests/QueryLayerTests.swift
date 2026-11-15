@@ -57,29 +57,55 @@ final class QueryLayerTests: XCTestCase {
         XCTAssertTrue(states.isEmpty)
     }
 
-    func testStoreReplacementRetainsRowsWhileLoadingAndDetachesOldController() throws {
+    func testStoreReplacementRetainsRowsAndIgnoresStaleControllerCallbacks() throws {
         let stores = try PersistenceBootstrap.makeInMemoryForTesting()
         try stores.userData.save(caughtPokemon(name: "Bulbasaur", index: 1, game: .national))
+        try stores.userData.save(caughtPokemon(name: "Sprigatito", index: 906, game: .scarlet))
         let replacementContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         replacementContext.persistentStoreCoordinator = stores.userDataContainer.persistentStoreCoordinator
         let replacementStore = DataStore(context: replacementContext)
         let observer = QueryObserver<CaughtPokemon>()
-
-        observer.update(filter: CaughtPokemonFilter(game: .national), dataStore: stores.userData)
-        let firstController = try XCTUnwrap(observer.controller)
+        var states: [QueryState] = []
         var loadingRows: [String] = []
         observer.stateDidChange = { state in
+            states.append(state)
             if state == .loading {
                 loadingRows = observer.results.map(\.pokemonName)
             }
         }
 
-        observer.update(filter: CaughtPokemonFilter(game: .national), dataStore: replacementStore)
+        observer.update(filter: CaughtPokemonFilter(game: .national), dataStore: stores.userData)
+        let firstController = try XCTUnwrap(observer.controller)
+        states.removeAll()
+
+        observer.update(filter: CaughtPokemonFilter(game: .scarlet), dataStore: replacementStore)
+        let replacementController = try XCTUnwrap(observer.controller)
 
         XCTAssertEqual(loadingRows, ["Bulbasaur"])
-        XCTAssertEqual(observer.results.map(\.pokemonName), ["Bulbasaur"])
+        XCTAssertEqual(observer.results.map(\.pokemonName), ["Sprigatito"])
         XCTAssertNil(firstController.delegate)
+        states.removeAll()
 
+        let callbackController = try XCTUnwrap(
+            firstController as? NSFetchedResultsController<NSFetchRequestResult>
+        )
+        observer.controllerDidChangeContent(callbackController)
+
+        XCTAssertTrue(states.isEmpty)
+        XCTAssertEqual(observer.results.map(\.pokemonName), ["Sprigatito"])
+        XCTAssertTrue(observer.controller === replacementController)
+
+    }
+
+    func testObservedQueriesRejectBackgroundContexts() throws {
+        let stores = try PersistenceBootstrap.makeInMemoryForTesting()
+        let dataStore = DataStore(context: stores.userDataContainer.newBackgroundContext())
+        let observer = QueryObserver<CaughtPokemon>()
+
+        observer.update(filter: CaughtPokemonFilter(game: .national), dataStore: dataStore)
+
+        XCTAssertEqual(observer.results.state, .failed(.fetch))
+        XCTAssertNil(observer.controller)
     }
 
     func testFetchedResultsUpdatesAfterInsertAndDelete() throws {
@@ -290,6 +316,22 @@ final class QueryLayerTests: XCTestCase {
                 1
             )
         }
+    }
+
+    func testDataStoreCanBeSharedAcrossExecutorsWithPrivateContext() async throws {
+        let stores = try PersistenceBootstrap.makeInMemoryForTesting()
+        let dataStore = DataStore(context: stores.userDataContainer.newBackgroundContext())
+        let payload = Data(
+            #"{"pokemonName":"Bulbasaur","formName":"Bulbasaur","index":1,"game":"national"}"#.utf8
+        )
+
+        let count = try await Task.detached {
+            let caughtPokemon = try JSONDecoder().decode(CaughtPokemon.self, from: payload)
+            try dataStore.save(caughtPokemon)
+            return try dataStore.fetch(CaughtPokemon.self, filter: .init(game: .national)).count
+        }.value
+
+        XCTAssertEqual(count, 1)
     }
 
     private func caughtPokemon(name: String, index: Int, game: Game) throws -> CaughtPokemon {
