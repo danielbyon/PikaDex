@@ -69,13 +69,26 @@ final class DependencyAndTeamStoreTests: XCTestCase {
         XCTAssertEqual(secondTeams?.map(\.name), ["Second"])
     }
 
-    func testTestDependencyDefaultsToVolatileStorage() {
-        let usesVolatileStorage = withDependencies({ _ in }) {
+    func testTestDependencyDefaultsToIsolatedVolatileStorage() {
+        let firstTeams = withDependencies {
+            $0 = .test
+        } operation: {
             @Dependency(\.teamStorage) var storage
-            return storage is VolatileTeamStorage
+            XCTAssertTrue(storage is VolatileTeamStorage)
+            storage.saveTeams([Team(name: "First context")], forGame: .sword)
+            return storage.loadTeams(forGame: .sword)
         }
 
-        XCTAssertTrue(usesVolatileStorage)
+        let secondTeams = withDependencies {
+            $0 = .test
+        } operation: {
+            @Dependency(\.teamStorage) var storage
+            XCTAssertTrue(storage is VolatileTeamStorage)
+            return storage.loadTeams(forGame: .sword)
+        }
+
+        XCTAssertEqual(firstTeams?.map(\.name), ["First context"])
+        XCTAssertNil(secondTeams)
     }
 
     func testVolatileStorageKeepsConcurrentSnapshotsReadable() async {
