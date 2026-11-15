@@ -89,7 +89,8 @@ final class DependencyAndTeamStoreTests: XCTestCase {
     }
 }
 
-private final class RecordingTeamStorage: TeamStorage {
+private final class RecordingTeamStorage: TeamStorage, @unchecked Sendable {
+    // The lock protects every access to the recorded teams and save count.
     private let lock = NSLock()
     private var teamsByGame: [Game: [Team]] = [:]
     private var saves = 0

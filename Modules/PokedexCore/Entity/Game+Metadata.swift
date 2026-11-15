@@ -10,7 +10,7 @@ import Foundation
 extension Game {
 
     /// Release-only facts for a real game.
-    public struct Metadata: Hashable {
+    public struct Metadata: Hashable, Sendable {
         public let game: Game
         public let title: String
         public let generation: Generation
@@ -27,7 +27,7 @@ extension Game {
     /// Mechanics belonging to a released game.
     ///
     /// Dataset visibility is modeled separately by ``DatasetFeatures``.
-    public struct Mechanics: Hashable {
+    public struct Mechanics: Hashable, Sendable {
         public let hasBreeding: Bool
         public let hasTutoring: Bool
         public let hasTransfer: Bool
@@ -43,7 +43,7 @@ extension Game {
     ///
     /// These flags are independent product policy. In particular, National's
     /// flags expose aggregate rows and do not describe game mechanics.
-    public struct DatasetFeatures: Hashable {
+    public struct DatasetFeatures: Hashable, Sendable {
         public let showsBreedingLearnsets: Bool
         public let showsTutoringLearnsets: Bool
         public let showsAbilities: Bool

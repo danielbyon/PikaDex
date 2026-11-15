@@ -505,9 +505,7 @@ public enum PersistenceBootstrap {
         description: PersistenceBootstrapError.StoreDescription,
         storeURL: URL?
     ) throws {
-        var validationError: Error?
-
-        context.performAndWait {
+        let validationError = context.performAndWait { () -> Error? in
             do {
                 let nationalRequest = NSFetchRequest<NSManagedObject>(entityName: "StoredPokemon")
                 nationalRequest.predicate = NSPredicate(format: "z_game == %@", Game.national.rawValue)
@@ -523,8 +521,9 @@ public enum PersistenceBootstrap {
                       try context.count(for: releasedRequest) > 0 else {
                     throw CocoaError(.persistentStoreIncompatibleSchema)
                 }
+                return nil
             } catch {
-                validationError = error
+                return error
             }
         }
 

@@ -36,7 +36,7 @@ struct PokedexApp: App {
         do {
             let persistenceStores = try PersistenceBootstrap.production()
             self.persistenceStores = persistenceStores
-            teamStore = DefaultTeamStore(storage: UserDefaults.appGroup)
+            teamStore = DefaultTeamStore(storage: DependencyValues().teamStorage)
             storeClient = StoreClient(productIdentifiers: PokepediaProduct.allProducts)
         } catch {
             let message = [

@@ -10,6 +10,11 @@ import Foundation
 
 extension UserDefaults {
 
-    public static let appGroup = UserDefaults(suiteName: "group.com.danielbyon.pokepedia")!
+    static let appGroupSuiteName = "group.com.danielbyon.pokepedia"
+
+    /// Creates a defaults object for the shared app-group suite.
+    public static var appGroup: UserDefaults {
+        UserDefaults(suiteName: appGroupSuiteName)!
+    }
 
 }

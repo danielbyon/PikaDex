@@ -161,7 +161,8 @@ final class TeamPersistenceWriterTests: XCTestCase {
 }
 
 /// Records storage writes so writer shutdown can be checked without waiting for its debounce timer.
-private final class WriterRecordingTeamStorage: TeamStorage {
+private final class WriterRecordingTeamStorage: TeamStorage, @unchecked Sendable {
+    // The lock protects every access to the recorded teams and save count.
     private let lock = NSLock()
     private var teamsByGame: [Game: [Team]] = [:]
     private var saves = 0
@@ -189,5 +190,122 @@ private final class WriterRecordingTeamStorage: TeamStorage {
         lock.lock()
         defer { lock.unlock() }
         return teamsByGame[game]
+    }
+}
+
+final class PokemonTypeRegressionTests: XCTestCase {
+
+    func testTypeAvailabilityMatchesGenerations() {
+        let generationI = PokemonType.allTypes(for: .i)
+        XCTAssertEqual(generationI.count, 15)
+        XCTAssertFalse(generationI.contains(.dark))
+        XCTAssertFalse(generationI.contains(.steel))
+        XCTAssertFalse(generationI.contains(.fairy))
+
+        let generationII = PokemonType.allTypes(for: .ii)
+        XCTAssertEqual(generationII.count, 17)
+        XCTAssertTrue(generationII.contains(.dark))
+        XCTAssertTrue(generationII.contains(.steel))
+        XCTAssertFalse(generationII.contains(.fairy))
+
+        let generationVI = PokemonType.allTypes(for: .vi)
+        XCTAssertEqual(generationVI.count, 18)
+        XCTAssertTrue(generationVI.contains(.fairy))
+    }
+
+    func testRepresentativeMatchupsPreserveSuperEffectiveAndImmuneValues() {
+        XCTAssertEqual(PokemonType.fire.offense(for: .grass, generation: .vi), 2)
+        XCTAssertEqual(PokemonType.normal.offense(for: .ghost, generation: .vi), 0)
+    }
+
+    func testDualTypeDefenseMultipliersCombine() {
+        let effectiveness = TypeEffectiveness(primary: .fire, secondary: .flying)
+        XCTAssertEqual(effectiveness.defense(for: .rock, generation: .vi), 4)
+    }
+}
+
+final class AppGroupTeamStorageCompatibilityTests: XCTestCase {
+
+    func testAppGroupSuiteNameRemainsStable() {
+        XCTAssertEqual(UserDefaults.appGroupSuiteName, "group.com.danielbyon.pokepedia")
+    }
+
+    func testReadsLegacyTeamsFromExistingGameKey() throws {
+        let suiteName = "com.danielbyon.pokedex.tests.team-storage.\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        let identifier = "00000000-0000-0000-0000-000000000001"
+        let legacyJSON = #"[{"name":"Legacy team","members":[],"internalID":"00000000-0000-0000-0000-000000000001"}]"#
+        defaults.set(Data(legacyJSON.utf8), forKey: "teams-sword")
+
+        let storage = AppGroupTeamStorage(suiteName: suiteName)
+        let teams = try XCTUnwrap(storage.loadTeams(forGame: .sword))
+
+        XCTAssertEqual(teams.count, 1)
+        XCTAssertEqual(teams[0].name, "Legacy team")
+        XCTAssertEqual(teams[0].internalID, UUID(uuidString: identifier))
+    }
+
+    func testWritesJSONUnderTheExistingGameKey() throws {
+        let suiteName = "com.danielbyon.pokedex.tests.team-storage.\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        let storage = AppGroupTeamStorage(suiteName: suiteName)
+        let internalID = try XCTUnwrap(UUID(uuidString: "00000000-0000-0000-0000-000000000002"))
+        let team = Team(
+            name: "Saved team",
+            members: [],
+            internalID: internalID
+        )
+
+        storage.saveTeams([team], forGame: .sword)
+
+        let data = try XCTUnwrap(defaults.data(forKey: "teams-sword"))
+        let decodedTeams = try JSONDecoder().decode([Team].self, from: data)
+        XCTAssertEqual(decodedTeams, [team])
+    }
+
+    func testConcurrentAdaptersKeepReadableSnapshots() async throws {
+        let suiteName = "com.danielbyon.pokedex.tests.team-storage.\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        let storages = [
+            AppGroupTeamStorage(suiteName: suiteName),
+            AppGroupTeamStorage(suiteName: suiteName)
+        ]
+        let validNames = Set((0..<64).flatMap { worker in
+            (0..<32).map { "Team \(worker)-\($0)" }
+        })
+        let invalidReadCount = await withTaskGroup(of: Bool.self, returning: Int.self) { group in
+            for index in 0..<64 {
+                group.addTask {
+                    let storage = storages[index % storages.count]
+                    for iteration in 0..<32 {
+                        storage.saveTeams([Team(name: "Team \(index)-\(iteration)")], forGame: .sword)
+                        let snapshot = storage.loadTeams(forGame: .sword)
+                        guard snapshot?.count == 1,
+                              let name = snapshot?.first?.name,
+                              validNames.contains(name)
+                        else { return false }
+                    }
+                    return true
+                }
+            }
+
+            var invalidReads = 0
+            for await isValid in group where !isValid {
+                invalidReads += 1
+            }
+
+            return invalidReads
+        }
+
+        XCTAssertEqual(invalidReadCount, 0)
+        let finalSnapshot = storages[0].loadTeams(forGame: .sword)
+        XCTAssertEqual(finalSnapshot?.count, 1)
+        XCTAssertTrue(finalSnapshot?.first.map { validNames.contains($0.name) } == true)
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Flavor: String, Codable, Equatable, Hashable {
+public enum Flavor: String, Codable, Equatable, Hashable, Sendable {
 
     case bitter
     case dry

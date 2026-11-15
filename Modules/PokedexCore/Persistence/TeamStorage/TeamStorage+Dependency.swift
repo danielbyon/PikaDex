@@ -9,12 +9,10 @@ import Dependencies
 import Foundation
 import SwiftUI
 
-/// Instance-isolated volatile team persistence for previews and tests.
+/// Stores preview and test teams in memory.
 ///
-/// Callers must construct a new instance for every dependency context. The
-/// internal lock permits widget-style reads and background persistence writes
-/// without introducing shared process-wide test state.
-public final class VolatileTeamStorage: TeamStorage {
+/// The lock protects the game-to-team map during every read and write.
+public final class VolatileTeamStorage: TeamStorage, @unchecked Sendable {
 
     private let lock = NSLock()
     private var teamsByGame: [Game: [Team]] = [:]
@@ -35,10 +33,8 @@ public final class VolatileTeamStorage: TeamStorage {
 }
 
 private enum TeamStorageKey: DependencyKey {
-    static let liveValue: TeamStorage = UserDefaults.appGroup
-    static var testValue: TeamStorage {
-        fatalError("Tests must inject a fresh TeamStorage instance.")
-    }
+    static let liveValue: TeamStorage = AppGroupTeamStorage()
+    static var testValue: TeamStorage { VolatileTeamStorage() }
 }
 
 extension DependencyValues {

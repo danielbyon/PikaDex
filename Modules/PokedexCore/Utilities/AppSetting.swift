@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct AppSetting<T> {
+/// Identifies a user preference by its persistence key.
+public struct AppSetting<T>: Sendable {
     public let key: String
 }
 
