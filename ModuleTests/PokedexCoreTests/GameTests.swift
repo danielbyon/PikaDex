@@ -169,8 +169,9 @@ final class GameTests: XCTestCase {
         XCTAssertEqual(defaults.string(forKey: AppSetting<Game>.currentGame.key), Game.violet.rawValue)
 
         let team = Team(name: "National Team", internalID: UUID(uuidString: "731E690B-8C1D-4E29-B0F1-2E8A90448C0E")!)
-        defaults.saveTeams([team], forGame: .national)
-        XCTAssertEqual(defaults.loadTeams(forGame: .national), [team])
+        let teamStorage = AppGroupTeamStorage(suiteName: suiteName)
+        teamStorage.saveTeams([team], forGame: .national)
+        XCTAssertEqual(teamStorage.loadTeams(forGame: .national), [team])
     }
 }
 

@@ -251,11 +251,21 @@ private func performSynchronously<T>(
         return try operation()
     }
 
-    var result: Result<T, Error>!
-    context.performAndWait {
-        result = Result(catching: operation)
+    let queueOperation = ContextQueueOperation(operation)
+    return try context.performAndWait { try queueOperation.run() }
+}
+
+/// Carries a synchronous operation to its managed object's context queue.
+///
+/// `performAndWait` finishes before the caller returns. Callers must not access
+/// captured mutable state from another thread while the operation runs. This
+/// carrier must not outlive the synchronous call or be used asynchronously.
+private final class ContextQueueOperation<Output>: @unchecked Sendable {
+    let run: () throws -> Output
+
+    init(_ run: @escaping () throws -> Output) {
+        self.run = run
     }
-    return try result.get()
 }
 
 private enum PreviewPersistenceStores {

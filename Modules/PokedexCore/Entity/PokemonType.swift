@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Type
-public enum PokemonType: String, CaseIterable {
+public enum PokemonType: String, CaseIterable, Sendable {
 
     case bug = "Bug"
     case dark = "Dark"

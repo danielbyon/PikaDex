@@ -12,7 +12,7 @@ import Foundation
 /// Released games and the aggregate National dataset share this identifier type
 /// because the generated database stores explicit rows for every value. Release
 /// metadata is available separately through ``metadata``.
-public enum Game: String, CaseIterable {
+public enum Game: String, CaseIterable, Sendable {
 
     case red
     case blue

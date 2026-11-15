@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Generation: Int, CaseIterable {
+public enum Generation: Int, CaseIterable, Sendable {
 
     case i = 1
     case ii

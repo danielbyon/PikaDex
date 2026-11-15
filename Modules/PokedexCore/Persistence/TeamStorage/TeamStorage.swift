@@ -8,7 +8,10 @@
 
 import Foundation
 
-public protocol TeamStorage {
+/// Synchronous storage for the saved teams associated with each game.
+///
+/// Implementations must be safe to pass between concurrency domains.
+public protocol TeamStorage: Sendable {
 
     func loadTeams(forGame game: Game) -> [Team]?
 
@@ -16,25 +19,39 @@ public protocol TeamStorage {
 
 }
 
-extension UserDefaults: TeamStorage {
+/// Stores teams in the shared app-group defaults suite using the existing JSON format.
+///
+/// The process-wide lock serializes defaults access made through this adapter. Direct
+/// access to the suite and access from other processes do not use this lock.
+final class AppGroupTeamStorage: TeamStorage, @unchecked Sendable {
 
-    private func teamsKey(forGame game: Game) -> String { "teams-\(game.rawValue)" }
+    // The defaults instance stays private, and every read or write uses this lock.
+    private static let defaultsLock = NSLock()
+    private let defaults: UserDefaults
 
-    public func loadTeams(forGame game: Game) -> [Team]? {
+    init(suiteName: String = UserDefaults.appGroupSuiteName) {
+        defaults = UserDefaults(suiteName: suiteName)!
+    }
+
+    private static func teamsKey(forGame game: Game) -> String { "teams-\(game.rawValue)" }
+
+    func loadTeams(forGame game: Game) -> [Team]? {
+        let key = Self.teamsKey(forGame: game)
+        guard let data = Self.defaultsLock.withLock({ defaults.data(forKey: key) }) else { return nil }
+
         do {
-            guard let data = data(forKey: teamsKey(forGame: game)) else { return nil }
-            let teams = try JSONDecoder().decode([Team].self, from: data)
-            return teams
+            return try JSONDecoder().decode([Team].self, from: data)
         } catch {
             debugPrint(error)
             return nil
         }
     }
 
-    public func saveTeams(_ teams: [Team], forGame game: Game) {
+    func saveTeams(_ teams: [Team], forGame game: Game) {
         do {
             let data = try JSONEncoder().encode(teams)
-            set(data, forKey: teamsKey(forGame: game))
+            let key = Self.teamsKey(forGame: game)
+            Self.defaultsLock.withLock { defaults.set(data, forKey: key) }
         } catch {
             debugPrint(error)
         }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Nature {
+public struct Nature: Sendable {
 
     public let name: String
     public let increasedStat: StatType?

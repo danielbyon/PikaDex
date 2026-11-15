@@ -13,7 +13,7 @@ import SwiftUI
 
 /// Exposes Core Data query results and filter bindings to SwiftUI on the main actor.
 @propertyWrapper
-public struct Query<T: Queryable>: DynamicProperty {
+public struct Query<T: Queryable>: @preconcurrency DynamicProperty {
 
     @StateObject private var core = QueryObserver<T>()
     @State private var baseFilter: T.Filter
@@ -34,7 +34,7 @@ public struct Query<T: Queryable>: DynamicProperty {
         self.explicitDataStore = dataStore
     }
 
-    public func update() {
+    @MainActor public func update() {
         core.update(
             filter: baseFilter,
             dataStore: explicitDataStore ?? dependencyDataStore
@@ -47,6 +47,8 @@ public struct Query<T: Queryable>: DynamicProperty {
 ///
 /// The observer is internal so tests can exercise lifecycle behavior directly
 /// without turning controller details into public API.
+/// Query state stays on the main queue. `update` requires main-thread use, and
+/// observed stores require a main-queue context for fetched-results callbacks.
 internal final class QueryObserver<T: Queryable>: NSObject, ObservableObject,
     NSFetchedResultsControllerDelegate {
 
@@ -66,12 +68,7 @@ internal final class QueryObserver<T: Queryable>: NSObject, ObservableObject,
     private var generation = 0
 
     func update(filter: T.Filter?, dataStore: DataStore) {
-        guard Thread.isMainThread else {
-            DispatchQueue.main.async { [weak self] in
-                self?.update(filter: filter, dataStore: dataStore)
-            }
-            return
-        }
+        precondition(Thread.isMainThread, "Query updates must run on the main thread.")
 
         let newInput = Input(
             filter: filter,
@@ -121,17 +118,11 @@ internal final class QueryObserver<T: Queryable>: NSObject, ObservableObject,
     func controllerDidChangeContent(
         _ controller: NSFetchedResultsController<NSFetchRequestResult>
     ) {
+        precondition(Thread.isMainThread, "Fetched-results callbacks must run on the main thread.")
         guard controller === self.controller else { return }
         let results = (controller.fetchedObjects as NSArray?) ?? NSArray()
-        let currentGeneration = generation
-
-        publishOnMain { [weak self] in
-            guard let self,
-                self.generation == currentGeneration,
-                controller === self.controller else { return }
-            self.diagnosticError = nil
-            self.publish(QueryResults(results: results, state: .loaded))
-        }
+        diagnosticError = nil
+        publish(QueryResults(results: results, state: .loaded))
     }
 
     private func publish(_ results: QueryResults<T>) {
@@ -141,11 +132,4 @@ internal final class QueryObserver<T: Queryable>: NSObject, ObservableObject,
         stateDidChange?(results.state)
     }
 
-    private func publishOnMain(_ operation: @escaping () -> Void) {
-        if Thread.isMainThread {
-            operation()
-        } else {
-            DispatchQueue.main.async(execute: operation)
-        }
-    }
 }
