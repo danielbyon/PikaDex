@@ -258,7 +258,8 @@ private func performSynchronously<T>(
 /// Carries a synchronous operation to its managed object's context queue.
 ///
 /// `performAndWait` finishes before the caller returns. Callers must not access
-/// captured mutable state from another thread while the operation runs.
+/// captured mutable state from another thread while the operation runs. This
+/// carrier must not outlive the synchronous call or be used asynchronously.
 private final class ContextQueueOperation<Output>: @unchecked Sendable {
     let run: () throws -> Output
 

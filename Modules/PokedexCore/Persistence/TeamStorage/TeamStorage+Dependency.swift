@@ -34,6 +34,9 @@ public final class VolatileTeamStorage: TeamStorage, @unchecked Sendable {
 
 private enum TeamStorageKey: DependencyKey {
     static let liveValue: TeamStorage = AppGroupTeamStorage()
+
+    /// Gives test dependency contexts in-memory storage without touching the app-group suite.
+    /// Tests that need a particular instance should override this dependency explicitly.
     static var testValue: TeamStorage { VolatileTeamStorage() }
 }
 

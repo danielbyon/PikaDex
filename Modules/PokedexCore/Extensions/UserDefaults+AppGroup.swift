@@ -12,9 +12,25 @@ extension UserDefaults {
 
     static let appGroupSuiteName = "group.com.danielbyon.pokepedia"
 
-    /// Creates a defaults object for the shared app-group suite.
+    /// Returns the process-wide defaults handle for the shared app-group suite.
     public static var appGroup: UserDefaults {
-        UserDefaults(suiteName: appGroupSuiteName)!
+        SharedAppGroupDefaults.shared.value
     }
 
+}
+
+/// Keeps one defaults handle for preferences observed by SwiftUI.
+///
+/// Foundation documents `UserDefaults` as thread-safe. The stored reference is
+/// immutable, so this narrow wrapper can be shared without declaring
+/// `UserDefaults` itself `Sendable`.
+private final class SharedAppGroupDefaults: @unchecked Sendable {
+
+    static let shared = SharedAppGroupDefaults()
+
+    let value: UserDefaults
+
+    private init() {
+        value = UserDefaults(suiteName: UserDefaults.appGroupSuiteName)!
+    }
 }
