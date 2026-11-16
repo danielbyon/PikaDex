@@ -52,7 +52,8 @@ public struct Badge: View {
 
 extension Badge: Equatable {
 
-    public static func == (lhs: Badge, rhs: Badge) -> Bool {
+    // Equality reads immutable stored values and remains usable outside the UI actor.
+    nonisolated public static func == (lhs: Badge, rhs: Badge) -> Bool {
         lhs.title == rhs.title
             && lhs.fillColor == rhs.fillColor
             && lhs.equalWidths == rhs.equalWidths
@@ -63,7 +64,8 @@ extension Badge: Equatable {
 
 extension Badge: Hashable {
 
-    public func hash(into hasher: inout Hasher) {
+    // Hashing uses the same immutable values as equality.
+    nonisolated public func hash(into hasher: inout Hasher) {
         hasher.combine(title)
         hasher.combine(fillColor)
         hasher.combine(equalWidths)

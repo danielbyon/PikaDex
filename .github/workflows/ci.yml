@@ -20,6 +20,9 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Run release verifier Python tests
+        run: python3 -m unittest Scripts.tests.test_release_verification_inventory
+
       - name: Run canonical release verification
         id: verification
         env:

@@ -164,6 +164,7 @@ public struct TeamList: View {
 
 }
 
+#if DEBUG
 struct TeamList_Previews: PreviewProvider {
     static var previews: some View {
         PreviewDependencyRoot {
@@ -171,3 +172,4 @@ struct TeamList_Previews: PreviewProvider {
         }
     }
 }
+#endif

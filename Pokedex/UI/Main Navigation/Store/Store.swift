@@ -83,6 +83,7 @@ struct Store: View {
 
 }
 
+#if DEBUG
 struct Store_Previews: PreviewProvider {
     static var previews: some View {
         PreviewDependencyRoot {
@@ -94,3 +95,4 @@ struct Store_Previews: PreviewProvider {
         }
     }
 }
+#endif
