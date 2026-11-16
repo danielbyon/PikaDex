@@ -12,7 +12,14 @@
       "targetName": "PokedexCoreTests",
       "targetIdentifier": "65401F4A2978EA91005BF4DC",
       "platform": "ios-simulator",
-      "sourceGlobs": ["ModuleTests/PokedexCoreTests/**/*.swift"]
+      "sourceGlobs": ["ModuleTests/PokedexCoreTests/**/*.swift"],
+      "additionalTargets": [
+        {
+          "targetName": "DesignSystemTests",
+          "targetIdentifier": "F80000000000000000000001",
+          "sourceGlobs": ["ModuleTests/DesignSystemTests/**/*.swift"]
+        }
+      ]
     },
     {
       "name": "PokedexTests",

@@ -46,6 +46,7 @@ struct TeamMemberCell: View {
 
 }
 
+#if DEBUG
 struct TeamMemberCell_Previews: PreviewProvider {
     static var previews: some View {
         PreviewDependencyRoot {
@@ -58,6 +59,7 @@ struct TeamMemberCell_Previews: PreviewProvider {
         }
     }
 }
+#endif
 
 private struct TeamMemberFormInfo: View {
 

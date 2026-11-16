@@ -127,6 +127,7 @@ struct Settings: View {
 
 }
 
+#if DEBUG
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         PreviewDependencyRoot {
@@ -134,3 +135,4 @@ struct Settings_Previews: PreviewProvider {
         }
     }
 }
+#endif

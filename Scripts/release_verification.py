@@ -338,6 +338,26 @@ def reconcile_source_and_enumeration(
     }
 
 
+def reconcile_target_enumeration(targets: list[dict], executable: list[str]) -> bool:
+    """Require compiled cases for every target using its unique source identities."""
+    passed = True
+    for target in targets:
+        owned = set(target["sourceTests"]) | set(target["conditionalSourceTestCandidates"])
+        compiled = [identity for identity in executable if identity in owned]
+        report = reconcile_source_and_enumeration(
+            target["sourceTests"], compiled, target["conditionalSourceTestCandidates"]
+        )
+        report["emptyCompiledInventory"] = not compiled
+        report["passed"] = report["passed"] and bool(compiled)
+        target.update({
+            "compiledExecutableTests": sorted(compiled),
+            "compiledExecutableCount": len(compiled),
+            "sourceReconciliation": report,
+        })
+        passed = passed and report["passed"]
+    return passed
+
+
 def reconcile_results(
     expected: list[str], actual: list[dict], reported_total: int | None
 ) -> dict:
@@ -384,6 +404,25 @@ def reconcile_results(
         ),
         "cases": actual,
     }
+
+
+def record_target_results(targets: list[dict], cases: list[dict], suite_report: dict) -> None:
+    """Retain each target's observed results alongside the suite summary check."""
+    reports = []
+    for target in targets:
+        owned = set(target["sourceTests"]) | set(target["conditionalSourceTestCandidates"])
+        observed = [case for case in cases if case.get("identifier") in owned]
+        report = reconcile_results(target.get("compiledExecutableTests", []), observed, len(observed))
+        target["resultVerification"] = report
+        reports.append({
+            "targetName": target["targetName"],
+            "targetIdentifier": target["targetIdentifier"],
+            "verification": report,
+        })
+        if not report["passed"]:
+            suite_report["passed"] = False
+            suite_report["issues"] = sorted(set(suite_report["issues"] + report["issues"]))
+    suite_report["targets"] = reports
 
 
 def _result_nodes(document: object) -> list[dict]:
@@ -680,6 +719,8 @@ def _load_config(path: Path = CONFIG_PATH) -> dict:
     missing = sorted(set(required) - set(names))
     if missing:
         raise VerificationError(f"Required test suites are missing from configuration: {missing}")
+    for suite in suites:
+        _suite_targets(suite)
     return document
 
 
@@ -733,8 +774,31 @@ def _project_file_paths(project_document: dict) -> dict[str, str]:
     return paths
 
 
+def _suite_targets(suite: dict) -> list[dict]:
+    """Read the primary target and optional additional source inventories."""
+    additional = suite.get("additionalTargets", [])
+    if not isinstance(additional, list):
+        raise VerificationError("additionalTargets must be an array")
+    targets = [suite, *additional]
+    for target in targets:
+        if (
+            not isinstance(target, dict)
+            or any(not isinstance(target.get(key), str) or not target[key]
+                   for key in ("targetName", "targetIdentifier"))
+            or not isinstance(target.get("sourceGlobs"), list)
+            or not target["sourceGlobs"]
+            or any(not isinstance(pattern, str) or not pattern for pattern in target["sourceGlobs"])
+        ):
+            raise VerificationError("Each suite target requires a name, identifier, and sourceGlobs")
+    for key in ("targetName", "targetIdentifier"):
+        if len({target[key] for target in targets}) != len(targets):
+            raise VerificationError(f"Suite contains duplicate {key} values")
+    return targets
+
+
 def verify_scheme_and_target_membership(root: Path, suite: dict) -> dict:
-    """Require each scheme to run its configured target and include its test sources."""
+    """Require exact scheme membership and a nonempty source inventory per target."""
+    targets = _suite_targets(suite)
     scheme_path = SCHEME_ROOT / f"{suite['scheme']}.xcscheme"
     if not scheme_path.is_file():
         raise VerificationError(f"Shared Xcode scheme is missing: {scheme_path.name}")
@@ -752,18 +816,44 @@ def verify_scheme_and_target_membership(root: Path, suite: dict) -> dict:
             "skipped": testable.get("skipped", "NO").upper() == "YES",
         }
         (skipped if item["skipped"] else active).append(item)
-    expected = {"identifier": suite["targetIdentifier"], "name": suite["targetName"], "skipped": False}
-    if active != [expected] or skipped:
+    expected = [
+        {"identifier": target["targetIdentifier"], "name": target["targetName"], "skipped": False}
+        for target in targets
+    ]
+    membership_key = lambda item: (item["identifier"] or "", item["name"] or "")
+    if sorted(active, key=membership_key) != sorted(expected, key=membership_key) or skipped:
         raise VerificationError(
-            f"Scheme {suite['scheme']} test membership differs from its required target: "
+            f"Scheme {suite['scheme']} test membership differs from its required targets: "
             f"active={active}, skipped={skipped}, required={expected}"
         )
 
     project = _plist_json(PROJECT_PATH / "project.pbxproj")
     objects = project.get("objects", {})
-    target = objects.get(suite["targetIdentifier"])
-    if not isinstance(target, dict) or target.get("name") != suite["targetName"]:
-        raise VerificationError(f"Project target identity mismatch for {suite['name']}")
+    file_paths = _project_file_paths(project)
+    inventories = [_target_source_inventory(root, target, objects, file_paths) for target in targets]
+    owners: dict[str, str] = {}
+    for inventory in inventories:
+        for identity in inventory["sourceTests"] + inventory["conditionalSourceTestCandidates"]:
+            if identity in owners and owners[identity] != inventory["targetIdentifier"]:
+                raise VerificationError(f"Duplicate normalized test identity across targets: {identity}")
+            owners[identity] = inventory["targetIdentifier"]
+    return {
+        "scheme": suite["scheme"],
+        "targetName": suite["targetName"],
+        "targetIdentifier": suite["targetIdentifier"],
+        "targets": inventories,
+        **{
+            key: sorted({value for inventory in inventories for value in inventory[key]})
+            for key in ("sourceFiles", "sourceTests", "conditionalSourceTestCandidates")
+        },
+    }
+
+
+def _target_source_inventory(root: Path, descriptor: dict, objects: dict, file_paths: dict) -> dict:
+    """Check one target's source membership and count its test declarations."""
+    target = objects.get(descriptor["targetIdentifier"])
+    if not isinstance(target, dict) or target.get("name") != descriptor["targetName"]:
+        raise VerificationError(f"Project target identity mismatch for {descriptor['targetName']}")
     source_file_ids: set[str] = set()
     for phase_id in target.get("buildPhases", []):
         phase = objects.get(phase_id, {})
@@ -774,21 +864,20 @@ def verify_scheme_and_target_membership(root: Path, suite: dict) -> dict:
             file_ref = build_file.get("fileRef")
             if isinstance(file_ref, str):
                 source_file_ids.add(file_ref)
-    file_paths = _project_file_paths(project)
     target_sources = {file_paths[file_ref] for file_ref in source_file_ids if file_ref in file_paths}
     expected_sources: set[str] = set()
-    for pattern in suite["sourceGlobs"]:
+    for pattern in descriptor["sourceGlobs"]:
         expected_sources.update(
             path.relative_to(root).as_posix()
             for path in root.glob(pattern)
             if path.is_file() and path.suffix == ".swift"
         )
     if not expected_sources:
-        raise VerificationError(f"No source files matched the configured test files for {suite['name']}")
+        raise VerificationError(f"No source files matched the configured test files for {descriptor['targetName']}")
     missing_membership = sorted(expected_sources - target_sources)
     if missing_membership:
         raise VerificationError(
-            f"Configured {suite['name']} test sources are missing from target membership: {missing_membership}"
+            f"Configured {descriptor['targetName']} test sources are missing from target membership: {missing_membership}"
         )
     source_tests: list[str] = []
     conditional_source_tests: list[str] = []
@@ -799,14 +888,19 @@ def verify_scheme_and_target_membership(root: Path, suite: dict) -> dict:
         source_tests.extend(required)
         conditional_source_tests.extend(conditional)
     if not source_tests and not conditional_source_tests:
-        raise VerificationError(f"No XCTest-style test declarations were found for {suite['name']}")
+        raise VerificationError(f"No XCTest-style test declarations were found for {descriptor['targetName']}")
+    required = sorted({normalize_test_identifier(test) for test in source_tests})
+    conditional = sorted({normalize_test_identifier(test) for test in conditional_source_tests} - set(required))
     return {
-        "scheme": suite["scheme"],
-        "targetName": suite["targetName"],
-        "targetIdentifier": suite["targetIdentifier"],
+        "targetName": descriptor["targetName"],
+        "targetIdentifier": descriptor["targetIdentifier"],
         "sourceFiles": sorted(expected_sources),
-        "sourceTests": sorted(set(source_tests)),
-        "conditionalSourceTestCandidates": sorted(set(conditional_source_tests)),
+        "sourceTests": required,
+        "conditionalSourceTestCandidates": conditional,
+        "sourceFileCount": len(expected_sources),
+        "sourceDeclarationCount": len(required) + len(conditional),
+        "unconditionalSourceDeclarationCount": len(required),
+        "conditionalSourceCandidateCount": len(conditional),
     }
 
 
@@ -1595,6 +1689,9 @@ class VerificationRunner:
             executable,
             self.suite_records[name].get("conditionalSourceTestCandidates", []),
         )
+        targets = self.suite_records[name].get("targets", [])
+        targets_passed = reconcile_target_enumeration(targets, executable)
+        reconciliation["passed"] = reconciliation["passed"] and targets_passed
         inventory = {
             "suite": name,
             "scheme": suite["scheme"],
@@ -1602,6 +1699,10 @@ class VerificationRunner:
             "targetIdentifier": suite["targetIdentifier"],
             "platform": suite["platform"],
             "simulator": self.simulator_info if suite["platform"] == "ios-simulator" else None,
+            "targets": targets,
+            "sourceFiles": self.suite_records[name].get("sourceFiles", []),
+            "sourceTests": declared,
+            "conditionalSourceTestCandidates": self.suite_records[name].get("conditionalSourceTestCandidates", []),
             "sourceExpectationIsReconciliationOnly": True,
             "executableIdentitySource": "xcodebuild -enumerate-tests -test-enumeration-format json",
             "sourceDeclarationCount": reconciliation["sourceDeclarationCount"],
@@ -1679,6 +1780,7 @@ class VerificationRunner:
                 if not xcresult_evidence_valid:
                     report["issues"] = sorted(set(report["issues"] + ["evidence_invalid"]))
                     report["passed"] = False
+            record_target_results(inventory.get("targets", []), cases, report)
             report["logParseIssues"] = parse_issues
             results_reconciled = report["passed"]
             structured = {
@@ -1726,6 +1828,7 @@ class VerificationRunner:
             text = test_log.read_text(encoding="utf-8", errors="replace")
             cases, reported_total, parse_issues = parse_xctest_log(text)
             report = reconcile_results(expected, cases, reported_total)
+            record_target_results(inventory.get("targets", []), cases, report)
             report["logParseIssues"] = parse_issues
             structured = {
                 "suite": name,

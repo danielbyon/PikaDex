@@ -309,6 +309,7 @@ struct TeamMemberEditor: View {
 
 }
 
+#if DEBUG
 struct TeamMemberEditor_Previews: PreviewProvider {
     static var previews: some View {
         PreviewDependencyRoot {
@@ -321,6 +322,7 @@ struct TeamMemberEditor_Previews: PreviewProvider {
         }
     }
 }
+#endif
 
 private struct TeamMemberLevel: View {
 

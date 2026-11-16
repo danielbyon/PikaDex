@@ -67,6 +67,7 @@ public struct TeamMemberView: View {
 
 }
 
+#if DEBUG
 struct TeamMemberView_Previews: PreviewProvider {
     static var previews: some View {
         PreviewDependencyRoot {
@@ -79,3 +80,4 @@ struct TeamMemberView_Previews: PreviewProvider {
         }
     }
 }
+#endif

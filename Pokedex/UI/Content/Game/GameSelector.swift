@@ -73,6 +73,7 @@ struct GameSelector: View {
 
 }
 
+#if DEBUG
 struct GameSelector_Previews: PreviewProvider {
     static var previews: some View {
         PreviewDependencyRoot {
@@ -80,6 +81,7 @@ struct GameSelector_Previews: PreviewProvider {
         }
     }
 }
+#endif
 
 struct GameSelectorCell: View {
     

@@ -5,6 +5,22 @@
 	};
 	objectVersion = 54;
 	objects = {
+F80000000000000000000002 = { isa = "PBXFileReference"; explicitFileType = "wrapper.cfbundle"; path = "DesignSystemTests.xctest"; sourceTree = "BUILT_PRODUCTS_DIR"; };
+F80000000000000000000009 = { isa = "PBXFileReference"; lastKnownFileType = "sourcecode.swift"; path = "DesignSystemComponentTests.swift"; sourceTree = "<group>"; };
+F8000000000000000000000A = { isa = "PBXBuildFile"; fileRef = "F80000000000000000000009"; };
+F8000000000000000000000B = { isa = "PBXFileReference"; lastKnownFileType = "sourcecode.swift"; path = "DesignSystemExports.swift"; sourceTree = "<group>"; };
+F8000000000000000000000C = { isa = "PBXBuildFile"; fileRef = "F8000000000000000000000B"; };
+F80000000000000000000003 = { isa = "PBXGroup"; path = "DesignSystemTests"; sourceTree = "<group>"; children = ( "F80000000000000000000009", "F8000000000000000000000B", ); };
+F80000000000000000000004 = { isa = "PBXSourcesBuildPhase"; buildActionMask = "2147483647"; files = ( "F8000000000000000000000A", "F8000000000000000000000C", ); runOnlyForDeploymentPostprocessing = "0"; };
+F8000000000000000000000D = { isa = "PBXTargetDependency"; target = "654022ED297906C1005BF4DC"; };
+F8000000000000000000000E = { isa = "PBXBuildFile"; fileRef = "654022EE297906C1005BF4DC"; };
+F8000000000000000000000F = { isa = "PBXTargetDependency"; target = "65992A1B29C74D7A001ECD43"; };
+F80000000000000000000010 = { isa = "PBXBuildFile"; fileRef = "65992A1C29C74D7A001ECD43"; };
+F80000000000000000000005 = { isa = "PBXFrameworksBuildPhase"; buildActionMask = "2147483647"; files = ( "F8000000000000000000000E", "F80000000000000000000010", ); runOnlyForDeploymentPostprocessing = "0"; };
+F80000000000000000000007 = { isa = "XCBuildConfiguration"; name = "Debug"; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = "com.danielbyon.DesignSystemTests"; GENERATE_INFOPLIST_FILE = "YES"; SDKROOT = "iphoneos"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; IPHONEOS_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks", ); CODE_SIGN_STYLE = "Automatic"; TARGETED_DEVICE_FAMILY = "1,2"; }; };
+F80000000000000000000008 = { isa = "XCBuildConfiguration"; name = "Release"; buildSettings = { PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = "com.danielbyon.DesignSystemTests"; GENERATE_INFOPLIST_FILE = "YES"; SDKROOT = "iphoneos"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; IPHONEOS_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks", ); CODE_SIGN_STYLE = "Automatic"; TARGETED_DEVICE_FAMILY = "1,2"; }; };
+F80000000000000000000006 = { isa = "XCConfigurationList"; buildConfigurations = ( "F80000000000000000000007", "F80000000000000000000008", ); defaultConfigurationIsVisible = "0"; defaultConfigurationName = "Release"; };
+F80000000000000000000001 = { isa = "PBXNativeTarget"; buildConfigurationList = "F80000000000000000000006"; buildPhases = ( "F80000000000000000000004", "F80000000000000000000005", ); buildRules = ( ); dependencies = ( "F8000000000000000000000D", "F8000000000000000000000F", ); name = "DesignSystemTests"; productName = "DesignSystemTests"; productReference = "F80000000000000000000002"; productType = "com.apple.product-type.bundle.unit-test"; };
 
 /* Begin PBXBuildFile section */
 		F60000000000000000000030 /* PipelineManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000020 /* PipelineManifest.swift */; };
@@ -1995,6 +2011,7 @@
 			isa = PBXGroup;
 			children = (
 				65401F512978EA91005BF4DC /* PokedexCoreTests */,
+				F80000000000000000000003,
 			);
 			path = ModuleTests;
 			sourceTree = "<group>";
@@ -2038,6 +2055,7 @@
 				654022C72979068A005BF4DC /* PokedexUI.framework */,
 				654022EE297906C1005BF4DC /* DesignSystem.framework */,
 				65992A1C29C74D7A001ECD43 /* PokedexResources.framework */,
+				F80000000000000000000002,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3325,6 +3343,7 @@
 				654022C62979068A005BF4DC /* PokedexUI */,
 				654022ED297906C1005BF4DC /* DesignSystem */,
 				65992A1B29C74D7A001ECD43 /* PokedexResources */,
+				F80000000000000000000001,
 			);
 		};
 /* End PBXProject section */
@@ -4508,7 +4527,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -4553,7 +4572,7 @@
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

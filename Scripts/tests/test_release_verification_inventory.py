@@ -140,6 +140,219 @@ class SourceProvenanceTests(unittest.TestCase):
         self.assertEqual(report["duplicateCompiledIdentities"], ["ExampleTests/testCase"])
 
 
+class MultiTargetMembershipTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix="pokedex-target-inventory-")
+        self.addCleanup(temporary.cleanup)
+        self.root = Path(temporary.name)
+        self.suite = {
+            "name": "Modules", "scheme": "Modules", "targetName": "CoreTests",
+            "targetIdentifier": "CORE", "sourceGlobs": ["Core/**/*.swift"],
+            "additionalTargets": [{
+                "targetName": "DesignTests", "targetIdentifier": "DESIGN",
+                "sourceGlobs": ["Design/**/*.swift"],
+            }],
+        }
+        self.objects = {}
+        for identifier, folder, name in (("CORE", "Core", "CoreTests"), ("DESIGN", "Design", "DesignTests")):
+            path = self.root / folder / "Tests.swift"
+            path.parent.mkdir()
+            path.write_text(f"final class {name}: XCTestCase {{ func testExample() {{}} }}", encoding="utf-8")
+            self.objects.update({
+                identifier: {"name": name, "buildPhases": [identifier + "PHASE"]},
+                identifier + "PHASE": {"isa": "PBXSourcesBuildPhase", "files": [identifier + "BUILD"]},
+                identifier + "BUILD": {"fileRef": identifier + "FILE"},
+                identifier + "FILE": {"isa": "PBXFileReference", "path": f"{folder}/Tests.swift"},
+            })
+        self.members = [("CORE", "CoreTests", "NO"), ("DESIGN", "DesignTests", "NO")]
+        self.addCleanup(patch.stopall)
+        patch.object(verification, "SCHEME_ROOT", self.root).start()
+        patch.object(verification, "_plist_json", return_value={"objects": self.objects}).start()
+
+    def inventory(self):
+        references = "".join(
+            f'<TestableReference skipped="{skipped}"><BuildableReference '
+            f'BlueprintIdentifier="{identifier}" BlueprintName="{name}"/></TestableReference>'
+            for identifier, name, skipped in self.members
+        )
+        (self.root / "Modules.xcscheme").write_text(
+            f"<Scheme><TestAction><Testables>{references}</Testables></TestAction></Scheme>", encoding="utf-8"
+        )
+        return verification.verify_scheme_and_target_membership(self.root, self.suite)
+
+    def test_two_targets_retain_individual_inventories_and_suite_union(self):
+        self.members.reverse()
+        inventory = self.inventory()
+        self.assertEqual(inventory["sourceTests"], ["CoreTests/testExample", "DesignTests/testExample"])
+        self.assertEqual(inventory["sourceFiles"], ["Core/Tests.swift", "Design/Tests.swift"])
+        self.assertEqual([target["targetIdentifier"] for target in inventory["targets"]], ["CORE", "DESIGN"])
+        for target in inventory["targets"]:
+            self.assertEqual(target["sourceFileCount"], 1)
+            self.assertEqual(target["sourceDeclarationCount"], 1)
+            self.assertEqual(target["unconditionalSourceDeclarationCount"], 1)
+            self.assertEqual(target["conditionalSourceCandidateCount"], 0)
+        compiled = inventory["sourceTests"]
+        self.assertTrue(verification.reconcile_source_and_enumeration(compiled, compiled)["passed"])
+        self.assertTrue(verification.reconcile_results(
+            compiled, [{"identifier": test, "result": "passed"} for test in compiled], 2
+        )["passed"])
+
+    def test_missing_skipped_unexpected_and_duplicate_targets_fail_closed(self):
+        members = self.members.copy()
+        for invalid in (
+            members[:1], members[1:],
+            [members[0], ("DESIGN", "DesignTests", "YES")],
+            members + [("EXTRA", "ExtraTests", "NO")],
+            members + [members[1]],
+            [members[0], ("OTHER", "DesignTests", "NO")],
+            [members[0], ("DESIGN", "WrongTests", "NO")],
+        ):
+            with self.subTest(members=invalid):
+                self.members = invalid
+                with self.assertRaisesRegex(verification.VerificationError, "test membership"):
+                    self.inventory()
+
+    def test_each_target_requires_project_identity(self):
+        self.objects["DESIGN"]["name"] = "WrongTests"
+        with self.assertRaisesRegex(verification.VerificationError, "identity mismatch"):
+            self.inventory()
+
+    def test_each_target_requires_all_configured_sources_in_build_phase(self):
+        for identifier in ("CORE", "DESIGN"):
+            with self.subTest(target=identifier):
+                phase = self.objects[identifier + "PHASE"]
+                files = phase["files"]
+                phase["files"] = []
+                with self.assertRaisesRegex(verification.VerificationError, "missing from target membership"):
+                    self.inventory()
+                phase["files"] = files
+
+    def test_each_target_requires_source_files(self):
+        (self.root / "Design/Tests.swift").unlink()
+        with self.assertRaisesRegex(verification.VerificationError, "No source files"):
+            self.inventory()
+
+    def test_each_target_requires_test_declarations(self):
+        (self.root / "Design/Tests.swift").write_text("final class Helpers {}", encoding="utf-8")
+        with self.assertRaisesRegex(verification.VerificationError, "No XCTest-style test declarations"):
+            self.inventory()
+
+    def test_normalized_identity_collisions_across_targets_fail_before_union(self):
+        for source in (
+            "final class CoreTests: XCTestCase { func testExample() {} }",
+            "#if DEBUG\nfinal class CoreTests: XCTestCase { func testExample() {} }\n#endif",
+        ):
+            with self.subTest(source=source):
+                (self.root / "Design/Tests.swift").write_text(source, encoding="utf-8")
+                with self.assertRaisesRegex(verification.VerificationError, "Duplicate normalized test identity"):
+                    self.inventory()
+
+    def test_omitting_additional_target_from_compiled_enumeration_fails(self):
+        inventory = self.inventory()
+        report = verification.reconcile_source_and_enumeration(inventory["sourceTests"], ["CoreTests/testExample"])
+        self.assertFalse(report["passed"])
+        self.assertEqual(report["missingFromCompiledEnumeration"], ["DesignTests/testExample"])
+
+    def test_omitting_additional_target_results_fails(self):
+        compiled = self.inventory()["sourceTests"]
+        report = verification.reconcile_results(
+            compiled, [{"identifier": "CoreTests/testExample", "result": "passed"}], 1
+        )
+        self.assertFalse(report["passed"])
+        self.assertEqual(report["missing"], ["DesignTests/testExample"])
+
+    def enumerate_inventory(self, inventory, compiled):
+        runner = verification.VerificationRunner.__new__(verification.VerificationRunner)
+        runner.evidence = self.root / "evidence"
+        runner.suite_records = {"Modules": inventory}
+        runner.provenance = {}
+        runner._xcode_build_args = Mock(return_value=["xcodebuild"])
+        runner._write_manifest = Mock()
+        runner._verify_packaged_candidate = Mock()
+        suite = {**self.suite, "platform": "macos"}
+
+        def write_enumeration(args, log):
+            output = Path(args[args.index("-test-enumeration-output-path") + 1])
+            output.write_text(json.dumps({"testNodes": [
+                {"nodeType": "Test Case", "nodeIdentifier": identity}
+                for identity in compiled
+            ]}), encoding="utf-8")
+
+        runner._require_process = write_enumeration
+        runner._enumerate_suite(suite, self.root / "enumerate.log")
+        return runner
+
+    def test_conditional_only_target_without_compiled_cases_fails_and_retains_inventories(self):
+        (self.root / "Design/Tests.swift").write_text(
+            "#if DEBUG\nfinal class DesignTests: XCTestCase { func testExample() {} }\n#endif",
+            encoding="utf-8",
+        )
+        inventory = self.inventory()
+        with self.assertRaises(verification.GateFailure) as raised:
+            self.enumerate_inventory(inventory, ["CoreTests/testExample"])
+        self.assertEqual(raised.exception.failure_kind, "inventory_mismatch")
+        retained = json.loads((self.root / "evidence/inventory/Modules.json").read_text())
+        target = retained["targets"][1]
+        self.assertEqual(target["sourceTests"], [])
+        self.assertEqual(target["conditionalSourceTestCandidates"], ["DesignTests/testExample"])
+        self.assertEqual(target["sourceDeclarationCount"], 1)
+        self.assertEqual(target["compiledExecutableTests"], [])
+        self.assertEqual(target["compiledExecutableCount"], 0)
+        self.assertTrue(target["sourceReconciliation"]["emptyCompiledInventory"])
+        self.assertFalse(retained["sourceReconciliation"]["passed"])
+
+    def test_per_target_compiled_and_result_counts_are_retained(self):
+        inventory = self.inventory()
+        self.enumerate_inventory(inventory, inventory["sourceTests"])
+        retained = json.loads((self.root / "evidence/inventory/Modules.json").read_text())
+        self.assertEqual(retained["sourceTests"], inventory["sourceTests"])
+        for target in retained["targets"]:
+            self.assertEqual(target["compiledExecutableTests"], target["sourceTests"])
+            self.assertEqual(target["compiledExecutableCount"], 1)
+            self.assertTrue(target["sourceReconciliation"]["passed"])
+        cases = [{"identifier": "CoreTests/testExample", "result": "passed"}]
+        report = verification.reconcile_results(inventory["compiledExecutableTests"], cases, 1)
+        verification.record_target_results(inventory["targets"], cases, report)
+        self.assertFalse(report["passed"])
+        self.assertEqual(inventory["targets"][0]["resultVerification"]["observedCount"], 1)
+        self.assertEqual(inventory["targets"][1]["resultVerification"]["observedCount"], 0)
+        self.assertEqual(inventory["targets"][1]["resultVerification"]["missing"], ["DesignTests/testExample"])
+        self.assertEqual(report["targets"][0]["verification"]["counts"]["passed"], 1)
+
+    def test_conditional_target_with_compiled_case_passes(self):
+        (self.root / "Design/Tests.swift").write_text(
+            "#if DEBUG\nfinal class DesignTests: XCTestCase { func testExample() {} }\n#endif",
+            encoding="utf-8",
+        )
+        inventory = self.inventory()
+        compiled = ["CoreTests/testExample", "DesignTests/testExample"]
+        self.enumerate_inventory(inventory, compiled)
+        self.assertTrue(inventory["sourceReconciliation"]["passed"])
+        self.assertEqual(inventory["targets"][1]["compiledExecutableTests"], ["DesignTests/testExample"])
+        cases = [{"identifier": identity, "result": "passed"} for identity in compiled]
+        report = verification.reconcile_results(compiled, cases, 2)
+        verification.record_target_results(inventory["targets"], cases, report)
+        self.assertTrue(report["passed"])
+        self.assertEqual([target["resultVerification"]["observedCount"] for target in inventory["targets"]], [1, 1])
+
+    def test_legacy_single_target_descriptor_still_passes(self):
+        del self.suite["additionalTargets"]
+        self.members = self.members[:1]
+        inventory = self.inventory()
+        self.assertEqual(inventory["sourceTests"], ["CoreTests/testExample"])
+        self.assertEqual(len(inventory["targets"]), 1)
+        self.enumerate_inventory(inventory, inventory["sourceTests"])
+        self.assertTrue(inventory["sourceReconciliation"]["passed"])
+        self.assertEqual(inventory["targets"][0]["compiledExecutableCount"], 1)
+
+    def test_malformed_and_duplicate_additional_descriptors_fail_closed(self):
+        for additional in ({}, [None], [{}], [self.suite.copy()]):
+            with self.subTest(additional=additional):
+                self.suite["additionalTargets"] = additional
+                with self.assertRaises(verification.VerificationError):
+                    self.inventory()
+
+
 class SourceExpectationTests(unittest.TestCase):
     def test_comments_and_helpers_are_not_test_declarations(self):
         source = """
