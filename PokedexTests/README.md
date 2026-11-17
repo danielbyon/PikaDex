@@ -10,6 +10,8 @@ Reusable domain contracts belong to `PokedexCoreTests` and run through the share
 2. `TeamTests.swift` protects deterministic Team and PokéPaste formatting.
 3. `GameBitwiseValueTests.swift` protects every persisted released-game value and the National sentinel.
 
+Reusable UI contracts belong to `PokedexUIComponentTests` in `ModuleTests/PokedexUIComponentTests`. Its tests cover navigation environment access and clearing, form-selection callbacks, string bindings for both search query modes, and the once-only appearance modifier. This target also runs through the shared `Modules` scheme.
+
 ## Legacy test disposition
 
 Every removed legacy test was inspected before deletion. The exact disposition is:
