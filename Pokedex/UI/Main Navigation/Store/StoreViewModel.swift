@@ -102,11 +102,11 @@ final class StoreViewModel: ObservableObject {
         refreshTask?.cancel()
         refreshGeneration &+= 1
 
-        let client = storeClient
+        let clientReference = storeClient
         let generation = refreshGeneration
-        refreshTask = Task { [weak self, client, generation] in
+        refreshTask = Task { [weak self, clientReference, generation] in
             do {
-                let products = try await client.requestProducts()
+                let products = try await clientReference.client.requestProducts()
                 try Task.checkCancellation()
                 guard let self, self.refreshGeneration == generation else { return }
                 self.updateProducts(with: products)
@@ -121,11 +121,11 @@ final class StoreViewModel: ObservableObject {
 
     func purchaseProduct(_ product: ProductViewModel) {
         isPurchasing = true
-        storeClient.purchaseProduct(product.product)
+        storeClient.client.purchaseProduct(product.product)
     }
 
     func restorePurchases() {
-        storeClient.restorePurchases()
+        storeClient.client.restorePurchases()
     }
 
     private func updateProducts(with products: [SKProduct]) {

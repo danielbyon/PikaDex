@@ -2,6 +2,7 @@ import StoreKit
 import XCTest
 @testable import PikaDex
 
+@MainActor
 final class StoreKitConcurrencyTests: XCTestCase {
 
     func testSuccessfulRequestCompletesOnceAndIgnoresLateCallbacks() async throws {
@@ -45,6 +46,9 @@ final class StoreKitConcurrencyTests: XCTestCase {
         XCTAssertEqual(secondRequest.cancelCount, 0)
         XCTAssertEqual(coordinator.currentTerminalReason(), .replaced)
 
+        coordinator.fail(requestHandle: firstRequest, error: TestError.failure)
+        XCTAssertEqual(coordinator.currentTerminalReason(), .replaced)
+
         coordinator.succeed(requestHandle: secondRequest, products: [])
         let products = try await secondTask.value
         XCTAssertEqual(products.count, 0)
@@ -83,6 +87,7 @@ final class StoreKitConcurrencyTests: XCTestCase {
         }
     }
 
+    @MainActor
     func testCancellingSwiftTaskCancelsUnderlyingStoreKitRequestOnce() async {
         let factory = RequestFactory()
         let client = StoreClient(
@@ -102,6 +107,7 @@ final class StoreKitConcurrencyTests: XCTestCase {
         XCTAssertEqual(request.cancelCount, 1)
     }
 
+    @MainActor
     func testStoreClientExplicitShutdownResumesActiveRequest() async {
         let factory = RequestFactory()
         let client = StoreClient(
@@ -119,6 +125,34 @@ final class StoreKitConcurrencyTests: XCTestCase {
         XCTAssertEqual(request.cancelCount, 1)
     }
 
+    func testReleasingStoreClientShutsDownItsActiveRequest() async throws {
+        let factory = RequestFactory()
+        var client: StoreClient? = StoreClient(
+            productIdentifiers: ["test.product"],
+            canMakePayments: { true },
+            observesPaymentQueue: false,
+            makeRequestHandle: factory.makeRequest
+        )
+        weak var weakClient = client
+        let coordinator = try XCTUnwrap(client?.coordinator)
+        let task = coordinatorTask(coordinator, token: UUID())
+        let request = await factory.request(at: 0)
+
+        client = nil
+
+        guard weakClient == nil else {
+            XCTFail("StoreClient must deinitialize when its last owner releases it")
+            return
+        }
+        await assertCancellation(from: task)
+        XCTAssertEqual(request.cancelCount, 1)
+        XCTAssertEqual(coordinator.currentTerminalReason(), .ownerReleased)
+
+        coordinator.fail(requestHandle: request, error: TestError.failure)
+        XCTAssertEqual(coordinator.currentTerminalReason(), .ownerReleased)
+    }
+
+    @MainActor
     func testPaymentsDisabledFailsWithoutCreatingRequest() async {
         let factory = RequestFactory()
         let client = StoreClient(
@@ -181,7 +215,8 @@ private enum TestError: Error {
     case failure
 }
 
-private final class TestProductsRequest: ProductRequestHandle {
+/// The lock protects its counters; the coordinator serializes delegate access.
+private final class TestProductsRequest: ProductRequestHandle, @unchecked Sendable {
     private let lock = NSLock()
     private var cancellations = 0
     private var starts = 0
@@ -194,7 +229,7 @@ private final class TestProductsRequest: ProductRequestHandle {
         lock.withLock { starts }
     }
 
-    var delegate: SKProductsRequestDelegate?
+    weak var delegate: SKProductsRequestDelegate?
 
     func start() {
         lock.withLock { starts += 1 }
@@ -207,7 +242,8 @@ private final class TestProductsRequest: ProductRequestHandle {
     func matches(_ request: SKProductsRequest) -> Bool { false }
 }
 
-private final class RequestFactory {
+/// The lock protects the request collection while tests and the coordinator access it.
+private final class RequestFactory: @unchecked Sendable {
     private let lock = NSLock()
     private var requests: [TestProductsRequest] = []
 

@@ -46,6 +46,12 @@ public struct AppGroupStorage<Value>: DynamicProperty where Value: UserDefaultPe
         self._storedValue = .init(key, store: .appGroup)
     }
 
+    init(key: String, defaultValue: Value, store: UserDefaults) {
+        self.key = key
+        self.defaultValue = defaultValue
+        self._storedValue = .init(key, store: store)
+    }
+
     public init(wrappedValue: Value, key: String, defaultValue: Value) {
         self.init(key: key, defaultValue: defaultValue)
     }

@@ -14,6 +14,48 @@ import AppSupport
 
 private let purchasedKey = "PurchasedProductState.purchasedKey"
 
+/// The remote purchase-state interface keeps cloud persistence separate from
+/// notification delivery and app-group storage.
+@MainActor
+protocol PurchaseStateCloudStore: AnyObject {
+    var notificationObject: AnyObject { get }
+    func longLong(forKey key: String) -> Int64
+    func set(_ value: Int64, forKey key: String)
+    func synchronize() -> Bool
+}
+
+@MainActor
+private final class UbiquitousPurchaseStateCloudStore: PurchaseStateCloudStore {
+    private let store: NSUbiquitousKeyValueStore
+
+    var notificationObject: AnyObject { store }
+
+    init(store: NSUbiquitousKeyValueStore = .default) {
+        self.store = store
+    }
+
+    func longLong(forKey key: String) -> Int64 {
+        store.longLong(forKey: key)
+    }
+
+    func set(_ value: Int64, forKey key: String) {
+        store.set(value, forKey: key)
+    }
+
+    func synchronize() -> Bool {
+        store.synchronize()
+    }
+}
+
+@MainActor
+private final class IsolatedTestHostPurchaseStateCloudStore: PurchaseStateCloudStore {
+    let notificationObject: AnyObject = NSObject()
+
+    func longLong(forKey key: String) -> Int64 { 0 }
+    func set(_ value: Int64, forKey key: String) { }
+    func synchronize() -> Bool { true }
+}
+
 /// App-owned main-actor purchase state published to SwiftUI.
 @MainActor
 final class PurchasedProductState: ObservableObject {
@@ -28,12 +70,42 @@ final class PurchasedProductState: ObservableObject {
     }
 
     private var cancellables = Set<AnyCancellable>()
+    private let cloudStore: any PurchaseStateCloudStore
+    private let notificationCenter: NotificationCenter
 
     // MARK: Init
 
-    init() {
+    init(
+        appGroupDefaults: UserDefaults = .appGroup,
+        cloudStore: (any PurchaseStateCloudStore)? = nil,
+        notificationCenter: NotificationCenter = .default
+    ) {
+        self.cloudStore = cloudStore ?? UbiquitousPurchaseStateCloudStore()
+        self.notificationCenter = notificationCenter
+        self._purchaseState = AppGroupStorage(
+            key: purchasedKey,
+            defaultValue: PokepediaProduct.defaultPurchaseValue,
+            store: appGroupDefaults
+        )
         setupObservers()
-        NSUbiquitousKeyValueStore.default.synchronize()
+        _ = self.cloudStore.synchronize()
+    }
+
+    /// Uses isolated stores when the app is launched as the host for unit tests.
+    static func applicationDefault() -> PurchasedProductState {
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            let suiteName = "com.danielbyon.pokepedia.tests.app-host"
+            guard let defaults = UserDefaults(suiteName: suiteName) else {
+                fatalError("Unable to create isolated app-host purchase defaults")
+            }
+            defaults.removePersistentDomain(forName: suiteName)
+            return PurchasedProductState(
+                appGroupDefaults: defaults,
+                cloudStore: IsolatedTestHostPurchaseStateCloudStore(),
+                notificationCenter: NotificationCenter()
+            )
+        }
+        return PurchasedProductState()
     }
 
     // MARK: Public Methods
@@ -42,24 +114,34 @@ final class PurchasedProductState: ObservableObject {
         #if DEBUG
         return true
         #else
-        return game.bitwiseValue & purchaseState == game.bitwiseValue
+        return Self.gameAccessAllowed(game: game, purchaseState: purchaseState)
         #endif
+    }
+
+    /// Evaluates the persisted bitmask rule used by non-Debug game access.
+    static func gameAccessAllowed(game: Game, purchaseState: Int64) -> Bool {
+        game.bitwiseValue & purchaseState == game.bitwiseValue
     }
 
     func hasPurchasedProduct(_ pokepediaProduct: PokepediaProduct) -> Bool {
         pokepediaProduct.bitwiseValue & purchaseState == pokepediaProduct.bitwiseValue
     }
 
+    func processPurchasedProductIdentifier(_ productIdentifier: String) {
+        updateLocalPurchaseState(fromProductIdentifier: productIdentifier)
+        pushLocalStateToRemote()
+    }
+
     // MARK: Private Methods
 
     private func setupObservers() {
-        cancellables.insert(NotificationCenter.default
-            .publisher(for: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default)
+        cancellables.insert(notificationCenter
+            .publisher(for: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: cloudStore.notificationObject)
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] _ in
                 self.updateLocalPurchaseStateFromRemote()
         })
-        cancellables.insert(NotificationCenter.default
+        cancellables.insert(notificationCenter
             .publisher(for: StoreClient.purchasedNotification)
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] notification in
@@ -70,13 +152,12 @@ final class PurchasedProductState: ObservableObject {
                 }
                 debugPrint("Processing transaction")
                 let productIdentifier = transaction.payment.productIdentifier
-                self.updateLocalPurchaseState(fromProductIdentifier: productIdentifier)
-                self.pushLocalStateToRemote()
+                self.processPurchasedProductIdentifier(productIdentifier)
         })
     }
 
     private func updateLocalPurchaseStateFromRemote() {
-        let remoteValue = NSUbiquitousKeyValueStore.default.longLong(forKey: purchasedKey)
+        let remoteValue = cloudStore.longLong(forKey: purchasedKey)
         updateLocalPurchaseState(mergingValue: remoteValue)
     }
 
@@ -97,8 +178,8 @@ final class PurchasedProductState: ObservableObject {
     }
 
     private func pushLocalStateToRemote() {
-        NSUbiquitousKeyValueStore.default.set(purchaseState, forKey: purchasedKey)
-        NSUbiquitousKeyValueStore.default.synchronize()
+        cloudStore.set(purchaseState, forKey: purchasedKey)
+        _ = cloudStore.synchronize()
     }
 
 }
