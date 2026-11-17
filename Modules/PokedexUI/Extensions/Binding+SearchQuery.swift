@@ -10,6 +10,8 @@ import PokedexCore
 import SwiftUI
 
 extension Binding where Value == SearchQuery {
+    /// Converts a search query binding to a string binding without changing its matching mode.
+    @MainActor
     public func toString() -> Binding<String> {
         return Binding<String> {
             switch wrappedValue {
