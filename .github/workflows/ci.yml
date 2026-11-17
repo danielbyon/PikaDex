@@ -14,11 +14,22 @@ jobs:
   macos:
     runs-on: xcode-27
     timeout-minutes: 90
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
     steps:
       - name: Check out source
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
+      - name: Verify Xcode 27.2
+        shell: bash
+        run: |
+          test -d "$DEVELOPER_DIR"
+          xcodebuild -version
+          test "$(xcodebuild -version | sed -n '1p')" = "Xcode 27.2"
+          test "$(xcodebuild -version | sed -n '2p')" = "Build version 27B52"
+          xcrun swift --version
 
       - name: Run release verifier Python tests
         run: python3 -m unittest Scripts.tests.test_release_verification_inventory
