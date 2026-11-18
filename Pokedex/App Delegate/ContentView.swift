@@ -103,9 +103,9 @@ struct ContentView: View {
                         PokemonView(pokemonDetailForm: pokemonDetailForm, pokedex: pokedex)
                     case .pokemonLocations(let pokemonDetailForm):
                         PokemonLocations(pokemonForm: pokemonDetailForm)
-                    case .team(let team):
+                    case .team(_, _, let team):
                         TeamView(viewModel: team)
-                    case .teamMember(let teamMember):
+                    case .teamMember(_, _, _, let teamMember):
                         TeamMemberView(viewModel: teamMember)
                     case .type(let type, let game):
                         TypeView(type: type, game: game)

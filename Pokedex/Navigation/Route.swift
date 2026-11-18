@@ -31,8 +31,12 @@ public enum Route: Hashable {
         case pokemon(_ pokemon: Pokemon, pokedex: Pokedex, previousPokemonProvider: ((Int) -> Pokemon?)?, nextPokemonProvider: ((Int) -> Pokemon?)?)
         case pokemonDetailForm(_ pokemonDetailForm: PokemonDetailForm, pokedex: Pokedex)
         case pokemonLocations(_ pokemonDetailForm: PokemonDetailForm)
-        case team(_ team: TeamViewModel)
-        case teamMember(_ member: TeamMemberViewModel)
+        /// The game and team UUID identify this saved team.
+        /// Its view model is the live destination payload.
+        case team(game: Game, teamID: UUID, viewModel: TeamViewModel)
+        /// The game, team UUID, and member UUID identify this saved member.
+        /// Its view model is the live editor payload.
+        case teamMember(game: Game, teamID: UUID, memberID: UUID, viewModel: TeamMemberViewModel)
         case type(_ type: PokemonType, game: Game)
     }
 
@@ -94,14 +98,13 @@ extension Route.Content: Equatable {
             && lPokedex == rPokedex
         case let (.pokemonLocations(lPokemonDetailForm), .pokemonLocations(rPokemonDetailForm)):
             return lPokemonDetailForm == rPokemonDetailForm
-        case let (.team(lTeam), .team(rTeam)):
-            return MainActor.assumeIsolated {
-                lTeam.team == rTeam.team
-            }
-        case let (.teamMember(lMember), .teamMember(rMember)):
-            return MainActor.assumeIsolated {
-                lMember.teamMember == rMember.teamMember
-            }
+        case let (.team(lGame, lTeamID, _), .team(rGame, rTeamID, _)):
+            return lGame == rGame
+            && lTeamID == rTeamID
+        case let (.teamMember(lGame, lTeamID, lMemberID, _), .teamMember(rGame, rTeamID, rMemberID, _)):
+            return lGame == rGame
+            && lTeamID == rTeamID
+            && lMemberID == rMemberID
         case let (.type(lType, lGame), .type(rType, rGame)):
             return lType == rType
             && lGame == rGame
@@ -157,15 +160,15 @@ extension Route.Content: Hashable {
         case let .pokemonLocations(pokemonDetailForm):
             hasher.combine("pokemonLocations")
             hasher.combine(pokemonDetailForm)
-        case let .team(team):
-            MainActor.assumeIsolated {
-                hasher.combine(team.team.internalID)
-                hasher.combine(team.team.members.count)
-            }
-        case let .teamMember(member):
-            MainActor.assumeIsolated {
-                hasher.combine(member.teamMember.internalID)
-            }
+        case let .team(game, teamID, _):
+            hasher.combine("team")
+            hasher.combine(game)
+            hasher.combine(teamID)
+        case let .teamMember(game, teamID, memberID, _):
+            hasher.combine("teamMember")
+            hasher.combine(game)
+            hasher.combine(teamID)
+            hasher.combine(memberID)
         case let .type(type, game):
             hasher.combine("type")
             hasher.combine(type)

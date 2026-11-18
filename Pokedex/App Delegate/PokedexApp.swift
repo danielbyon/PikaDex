@@ -25,7 +25,7 @@ struct PokedexApp: App {
     @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
     private let persistenceStores: PersistenceStores
     private let teamStore: DefaultTeamStore
-    private let storeClient: StoreClient
+    private let appDependencyScope: AppDependencyScope
     private let storeClientRequestLifetime: StoreClientRequestLifetime
 
     init() {
@@ -39,7 +39,9 @@ struct PokedexApp: App {
             self.persistenceStores = persistenceStores
             teamStore = DefaultTeamStore(storage: DependencyValues().teamStorage)
             let storeClient = StoreClient(productIdentifiers: PokepediaProduct.allProducts)
-            self.storeClient = storeClient
+            appDependencyScope = AppDependencyScope(
+                storeClientReference: StoreClientReference(storeClient)
+            )
             storeClientRequestLifetime = StoreClientRequestLifetime(coordinator: storeClient.coordinator)
         } catch {
             let message = [
@@ -72,14 +74,12 @@ struct PokedexApp: App {
         WindowGroup {
             // Re-entering this closure during root-view recreation reuses the
             // StateObject-backed instances instead of constructing new defaults.
-            withDependencies {
-                $0.appSettings = appSettings
-                $0.purchasedProductState = purchasedProductState
-                $0.storeClient = StoreClientReference(storeClient)
-                $0.teamStore = teamStore
-                $0.pokedexDataStore = persistenceStores.pokedex
-                $0.userDataDataStore = persistenceStores.userData
-            } operation: {
+            appDependencyScope.withValues(
+                appSettings: appSettings,
+                purchasedProductState: purchasedProductState,
+                teamStore: teamStore,
+                persistenceStores: persistenceStores
+            ) {
                 ContentView()
                     .colorSchemeModifier()
                     .sheet(isPresented: $isShowingUpdateMessage) {
@@ -102,6 +102,32 @@ struct PokedexApp: App {
         }
     }
 
+}
+
+/// Installs app-owned models and stores into each root dependency scope.
+@MainActor
+struct AppDependencyScope {
+
+    /// Reused whenever SwiftUI creates a new dependency scope for the root.
+    let storeClientReference: StoreClientReference
+
+    /// Runs root content with the app's models, StoreKit client, and cached stores.
+    func withValues<R>(
+        appSettings: AppSettings,
+        purchasedProductState: PurchasedProductState,
+        teamStore: DefaultTeamStore,
+        persistenceStores: PersistenceStores,
+        operation: () -> R
+    ) -> R {
+        return withDependencies({
+            $0.appSettings = appSettings
+            $0.purchasedProductState = purchasedProductState
+            $0.storeClient = storeClientReference
+            $0.teamStore = teamStore
+            $0.pokedexDataStore = persistenceStores.pokedex
+            $0.userDataDataStore = persistenceStores.userData
+        }, operation: operation)
+    }
 }
 
 class AppDelegate: UIResponder, UIApplicationDelegate {

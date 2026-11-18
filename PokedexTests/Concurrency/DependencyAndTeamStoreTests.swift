@@ -1,6 +1,7 @@
 import Foundation
 import Dependencies
 import PokedexCore
+import StoreKit
 import SwiftUI
 import UIKit
 import XCTest
@@ -9,25 +10,54 @@ import XCTest
 @MainActor
 final class DependencyAndTeamStoreTests: XCTestCase {
 
-    func testCompositionResolvesExactObservableInstances() {
+    func testAppDependencyScopeReusesExactInstancesAcrossRepeatedCompositions() throws {
         let settings = AppSettings()
         let purchaseHarness = PurchasedProductStateTestHarness()
         defer { purchaseHarness.cleanUp() }
         let purchasedProductState = purchaseHarness.state
+        let persistenceStores = try PersistenceBootstrap.makeInMemoryForTesting()
+        let teamStore = DefaultTeamStore(storage: VolatileTeamStorage(), debounceInterval: 60)
+        let storeClient = TestStoreClient()
+        let dependencyScope = AppDependencyScope(
+            storeClientReference: StoreClientReference(storeClient)
+        )
 
-        withDependencies {
-            $0.appSettings = settings
-            $0.purchasedProductState = purchasedProductState
-        } operation: {
-            @Dependency(\.appSettings) var firstSettings
-            @Dependency(\.purchasedProductState) var firstPurchaseState
-            XCTAssertTrue(firstSettings === settings)
-            XCTAssertTrue(firstPurchaseState === purchasedProductState)
+        let compose = {
+            dependencyScope.withValues(
+                appSettings: settings,
+                purchasedProductState: purchasedProductState,
+                teamStore: teamStore,
+                persistenceStores: persistenceStores
+            ) {
+                @Dependency(\.appSettings) var resolvedSettings
+                @Dependency(\.purchasedProductState) var resolvedPurchaseState
+                @Dependency(\.storeClient) var resolvedStoreClient
+                @Dependency(\.teamStore) var resolvedTeamStore
+                @Dependency(\.pokedexDataStore) var resolvedPokedexDataStore
+                @Dependency(\.userDataDataStore) var resolvedUserDataDataStore
 
-            @Dependency(\.appSettings) var secondSettings
-            @Dependency(\.purchasedProductState) var secondPurchaseState
-            XCTAssertTrue(secondSettings === firstSettings)
-            XCTAssertTrue(secondPurchaseState === firstPurchaseState)
+                return (
+                    appSettings: resolvedSettings,
+                    purchasedProductState: resolvedPurchaseState,
+                    storeClientReference: resolvedStoreClient,
+                    teamStore: resolvedTeamStore,
+                    pokedexDataStore: resolvedPokedexDataStore,
+                    userDataDataStore: resolvedUserDataDataStore
+                )
+            }
+        }
+
+        let first = compose()
+        let second = compose()
+
+        for resolved in [first, second] {
+            XCTAssertTrue(resolved.appSettings === settings)
+            XCTAssertTrue(resolved.purchasedProductState === purchasedProductState)
+            XCTAssertTrue(resolved.storeClientReference === dependencyScope.storeClientReference)
+            XCTAssertTrue((resolved.storeClientReference.client as AnyObject) === storeClient)
+            XCTAssertTrue((resolved.teamStore as AnyObject) === teamStore)
+            XCTAssertTrue(resolved.pokedexDataStore === persistenceStores.pokedex)
+            XCTAssertTrue(resolved.userDataDataStore === persistenceStores.userData)
         }
     }
 
@@ -309,6 +339,16 @@ final class DependencyAndTeamStoreTests: XCTestCase {
         XCTAssertEqual(PokedexNumberFormat.oneDecimal.format(87.5), "87.5")
         XCTAssertEqual(PokedexNumberFormat.wholeNumber.format(2), "2")
     }
+}
+
+private final class TestStoreClient: StoreClientProtocol {
+
+    @MainActor
+    func requestProducts() async throws -> [SKProduct] { [] }
+
+    func purchaseProduct(_ product: SKProduct) { }
+
+    func restorePurchases() { }
 }
 
 @MainActor

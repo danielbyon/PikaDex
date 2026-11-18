@@ -85,7 +85,11 @@ public struct TeamList: View {
                 ForEach(viewModel.sections, id: \.self) { section in
                     Section {
                         ForEach(section.teams, id: \.team.id) { team in
-                            NavigationLink(value: Route.content(.team(team))) {
+                            NavigationLink(value: Route.content(.team(
+                                game: team.game,
+                                teamID: team.team.internalID,
+                                viewModel: team
+                            ))) {
                                 teamCell(teamViewModel: team)
                             }
                         }
