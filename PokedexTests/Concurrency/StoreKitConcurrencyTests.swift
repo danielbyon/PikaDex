@@ -12,11 +12,11 @@ final class StoreKitConcurrencyTests: XCTestCase {
         let task = coordinatorTask(coordinator, token: token)
         let request = await factory.request(at: 0)
 
-        coordinator.succeed(requestHandle: request, products: [])
+        coordinator.succeed(request: request.storeKitRequest, products: [])
         let products = try await task.value
         XCTAssertEqual(products.count, 0)
 
-        coordinator.fail(requestHandle: request, error: TestError.failure)
+        coordinator.fail(request: request.storeKitRequest, error: TestError.failure)
         XCTAssertNil(coordinator.currentTerminalReason())
     }
 
@@ -26,11 +26,11 @@ final class StoreKitConcurrencyTests: XCTestCase {
         let task = coordinatorTask(coordinator, token: UUID())
         let request = await factory.request(at: 0)
 
-        coordinator.fail(requestHandle: request, error: TestError.failure)
+        coordinator.fail(request: request.storeKitRequest, error: TestError.failure)
         await assertThrows(TestError.self, from: task)
         XCTAssertEqual(coordinator.currentTerminalReason(), .requestFailed)
 
-        coordinator.succeed(requestHandle: request, products: [])
+        coordinator.succeed(request: request.storeKitRequest, products: [])
     }
 
     func testReplacementCancelsOnlyTheReplacedRequest() async throws {
@@ -46,10 +46,10 @@ final class StoreKitConcurrencyTests: XCTestCase {
         XCTAssertEqual(secondRequest.cancelCount, 0)
         XCTAssertEqual(coordinator.currentTerminalReason(), .replaced)
 
-        coordinator.fail(requestHandle: firstRequest, error: TestError.failure)
+        coordinator.fail(request: firstRequest.storeKitRequest, error: TestError.failure)
         XCTAssertEqual(coordinator.currentTerminalReason(), .replaced)
 
-        coordinator.succeed(requestHandle: secondRequest, products: [])
+        coordinator.succeed(request: secondRequest.storeKitRequest, products: [])
         let products = try await secondTask.value
         XCTAssertEqual(products.count, 0)
     }
@@ -125,31 +125,78 @@ final class StoreKitConcurrencyTests: XCTestCase {
         XCTAssertEqual(request.cancelCount, 1)
     }
 
-    func testReleasingStoreClientShutsDownItsActiveRequest() async throws {
+    @MainActor
+    func testCancellationRacingReplacementLeavesSuccessorUnaffectedByStaleCallback() async {
         let factory = RequestFactory()
-        var client: StoreClient? = StoreClient(
+        let client = StoreClient(
             productIdentifiers: ["test.product"],
             canMakePayments: { true },
             observesPaymentQueue: false,
             makeRequestHandle: factory.makeRequest
         )
-        weak var weakClient = client
-        let coordinator = try XCTUnwrap(client?.coordinator)
-        let task = coordinatorTask(coordinator, token: UUID())
+        let firstTask = Task { try await client.requestProducts() }
+        let firstRequest = await factory.request(at: 0)
+        let gate = TwoPartyGate()
+        let cancellationTask = Task.detached {
+            await gate.waitForBothParticipants()
+            firstTask.cancel()
+        }
+        let successorTask = Task {
+            await gate.waitForBothParticipants()
+            _ = try await client.requestProducts()
+        }
+
+        await cancellationTask.value
+        let successorRequest = await factory.request(at: 1)
+        await assertCancellation(from: firstTask)
+
+        XCTAssertEqual(firstRequest.cancelCount, 1)
+        XCTAssertEqual(successorRequest.cancelCount, 0)
+        let firstTerminalReason = client.coordinator.currentTerminalReason()
+        XCTAssertTrue(firstTerminalReason == .taskCancelled || firstTerminalReason == .replaced)
+
+        firstRequest.reportFailure(TestError.stale)
+        successorRequest.reportFailure(TestError.active)
+
+        do {
+            _ = try await successorTask.value
+            XCTFail("Expected the successor request's own failure")
+        } catch let error as TestError {
+            XCTAssertEqual(error, .active)
+        } catch {
+            XCTFail("Expected the successor error, received \(error)")
+        }
+        XCTAssertEqual(firstRequest.cancelCount, 1)
+        XCTAssertEqual(successorRequest.cancelCount, 0)
+    }
+
+    func testReleasingStoreClientLifetimeCancelsItsActiveRequest() async throws {
+        let factory = RequestFactory()
+        let client = StoreClient(
+            productIdentifiers: ["test.product"],
+            canMakePayments: { true },
+            observesPaymentQueue: false,
+            makeRequestHandle: factory.makeRequest
+        )
+        var lifetime: StoreClientRequestLifetime? = StoreClientRequestLifetime(coordinator: client.coordinator)
+        weak var weakLifetime = lifetime
+        let task = Task { try await client.requestProducts() }
         let request = await factory.request(at: 0)
 
-        client = nil
+        lifetime = nil
 
-        guard weakClient == nil else {
-            XCTFail("StoreClient must deinitialize when its last owner releases it")
+        guard weakLifetime == nil else {
+            XCTFail("The app-owned request lifetime must release during owner teardown")
             return
         }
         await assertCancellation(from: task)
         XCTAssertEqual(request.cancelCount, 1)
-        XCTAssertEqual(coordinator.currentTerminalReason(), .ownerReleased)
+        XCTAssertEqual(client.coordinator.currentTerminalReason(), .ownerReleased)
 
-        coordinator.fail(requestHandle: request, error: TestError.failure)
-        XCTAssertEqual(coordinator.currentTerminalReason(), .ownerReleased)
+        request.reportFailure(TestError.failure)
+        client.shutdown()
+        XCTAssertEqual(request.cancelCount, 1)
+        XCTAssertEqual(client.coordinator.currentTerminalReason(), .ownerReleased)
     }
 
     @MainActor
@@ -211,58 +258,119 @@ final class StoreKitConcurrencyTests: XCTestCase {
     }
 }
 
-private enum TestError: Error {
+private enum TestError: Error, Equatable {
     case failure
+    case stale
+    case active
 }
 
-/// The lock protects its counters; the coordinator serializes delegate access.
+/// The lock protects mutable state; the StoreKit request is a stable identity token.
 private final class TestProductsRequest: ProductRequestHandle, @unchecked Sendable {
     private let lock = NSLock()
     private var cancellations = 0
     private var starts = 0
+    private var startWaiters: [CheckedContinuation<Void, Never>] = []
+    private weak var storedDelegate: SKProductsRequestDelegate?
+
+    let storeKitRequest: SKProductsRequest
+
+    init(productIdentifiers: Set<ProductIdentifier>) {
+        storeKitRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
+    }
 
     var cancelCount: Int {
         lock.withLock { cancellations }
     }
 
-    var startCount: Int {
-        lock.withLock { starts }
+    var delegate: SKProductsRequestDelegate? {
+        get { lock.withLock { storedDelegate } }
+        set { lock.withLock { storedDelegate = newValue } }
     }
 
-    weak var delegate: SKProductsRequestDelegate?
-
     func start() {
-        lock.withLock { starts += 1 }
+        let waiters = lock.withLock { () -> [CheckedContinuation<Void, Never>] in
+            starts += 1
+            let waiters = startWaiters
+            startWaiters.removeAll()
+            return waiters
+        }
+        waiters.forEach { $0.resume() }
     }
 
     func cancel() {
         lock.withLock { cancellations += 1 }
     }
 
-    func matches(_ request: SKProductsRequest) -> Bool { false }
+    func matches(_ request: SKProductsRequest) -> Bool {
+        storeKitRequest === request
+    }
+
+    func reportFailure(_ error: Error) {
+        delegate?.request?(storeKitRequest, didFailWithError: error)
+    }
+
+    func waitUntilStarted() async {
+        await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
+            let alreadyStarted = lock.withLock {
+                guard starts == 0 else { return true }
+                startWaiters.append(continuation)
+                return false
+            }
+            if alreadyStarted {
+                continuation.resume()
+            }
+        }
+    }
 }
 
-/// The lock protects the request collection while tests and the coordinator access it.
+/// The lock protects requests and waiters shared by test and coordinator tasks.
 private final class RequestFactory: @unchecked Sendable {
     private let lock = NSLock()
     private var requests: [TestProductsRequest] = []
+    private var requestWaiters: [Int: [CheckedContinuation<TestProductsRequest, Never>]] = [:]
 
     var requestCount: Int {
         lock.withLock { requests.count }
     }
 
     func makeRequest(productIdentifiers: Set<ProductIdentifier>) -> ProductRequestHandle {
-        let request = TestProductsRequest()
-        lock.withLock { requests.append(request) }
+        let request = TestProductsRequest(productIdentifiers: productIdentifiers)
+        let waiters = lock.withLock { () -> [CheckedContinuation<TestProductsRequest, Never>] in
+            requests.append(request)
+            return requestWaiters.removeValue(forKey: requests.count - 1) ?? []
+        }
+        waiters.forEach { $0.resume(returning: request) }
         return request
     }
 
     func request(at index: Int) async -> TestProductsRequest {
-        while true {
-            if let request = lock.withLock({ requests.indices.contains(index) ? requests[index] : nil }) {
-                return request
+        let request: TestProductsRequest = await withCheckedContinuation { continuation in
+            let existingRequest = lock.withLock { () -> TestProductsRequest? in
+                guard requests.indices.contains(index) else {
+                    requestWaiters[index, default: []].append(continuation)
+                    return nil
+                }
+                return requests[index]
             }
-            await Task.yield()
+            if let existingRequest {
+                continuation.resume(returning: existingRequest)
+            }
+        }
+        await request.waitUntilStarted()
+        return request
+    }
+}
+
+private actor TwoPartyGate {
+    private var waiters: [CheckedContinuation<Void, Never>] = []
+
+    func waitForBothParticipants() async {
+        await withCheckedContinuation { continuation in
+            waiters.append(continuation)
+            guard waiters.count == 2 else { return }
+            let ready = waiters
+            waiters.removeAll()
+            ready.forEach { $0.resume() }
         }
     }
 }

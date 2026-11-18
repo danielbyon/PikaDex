@@ -26,6 +26,7 @@ struct PokedexApp: App {
     private let persistenceStores: PersistenceStores
     private let teamStore: DefaultTeamStore
     private let storeClient: StoreClient
+    private let storeClientRequestLifetime: StoreClientRequestLifetime
 
     init() {
         let appSettings = AppSettings()
@@ -37,7 +38,9 @@ struct PokedexApp: App {
             let persistenceStores = try PersistenceBootstrap.production()
             self.persistenceStores = persistenceStores
             teamStore = DefaultTeamStore(storage: DependencyValues().teamStorage)
-            storeClient = StoreClient(productIdentifiers: PokepediaProduct.allProducts)
+            let storeClient = StoreClient(productIdentifiers: PokepediaProduct.allProducts)
+            self.storeClient = storeClient
+            storeClientRequestLifetime = StoreClientRequestLifetime(coordinator: storeClient.coordinator)
         } catch {
             let message = [
                 (error as? LocalizedError)?.errorDescription

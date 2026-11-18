@@ -202,11 +202,12 @@ extension StoreClient: SKProductsRequestDelegate {
 ///
 /// All state transitions execute on `executor`. Active state is detached before
 /// cancelling a request or resuming its continuation, which makes re-entrant or
-/// duplicate delegate callbacks harmless. The mutable fields, including the weak
-/// delegate, are accessed only on that executor; its queue and key are immutable
-/// after initialization. Keeping the executor synchronous lets cancellation
-/// handlers record cancellation before registration. An actor hop here could let
-/// a request start before that cancellation is applied.
+/// duplicate delegate callbacks harmless. Every mutable field, including the weak
+/// delegate, is accessed only on that executor. The request factory and executor
+/// metadata are immutable after initialization, and the factory is invoked only
+/// by a serialized registration. Keeping the executor synchronous lets
+/// cancellation handlers record cancellation before registration. An actor hop
+/// here could let a request start before that cancellation is applied.
 final class ProductRequestCoordinator: @unchecked Sendable {
 
     enum TerminalReason: Equatable {
@@ -242,7 +243,7 @@ final class ProductRequestCoordinator: @unchecked Sendable {
     }
 
     func prepare(token: UUID) {
-        executeSynchronously {
+        _ = executeSynchronously {
             pendingRegistrationTokens.insert(token)
         }
     }
@@ -304,14 +305,6 @@ final class ProductRequestCoordinator: @unchecked Sendable {
         }
     }
 
-    func succeed(requestHandle: ProductRequestHandle, products: [SKProduct]) {
-        complete(requestHandle: requestHandle, result: .success(products))
-    }
-
-    func fail(requestHandle: ProductRequestHandle, error: Error) {
-        complete(requestHandle: requestHandle, result: .failure(error))
-    }
-
     func cancel(token: UUID, reason: TerminalReason) {
         executeSynchronously {
             guard activeRequest?.token == token else {
@@ -349,25 +342,27 @@ final class ProductRequestCoordinator: @unchecked Sendable {
         return active
     }
 
-    private func complete(
-        requestHandle: ProductRequestHandle,
-        result: Result<[SKProduct], Error>
-    ) {
-        executeSynchronously {
-            guard let active = activeRequest, active.request === requestHandle else { return }
-            activeRequest = nil
-            if case .failure = result {
-                lastTerminalReason = .requestFailed
-            }
-            active.continuation.resume(with: result)
-        }
-    }
-
     private func executeSynchronously<T>(_ operation: () -> T) -> T {
         if DispatchQueue.getSpecific(key: executorKey) != nil {
             return operation()
         }
         return executor.sync(execute: operation)
+    }
+}
+
+/// Cancels pending product requests when the app's owner releases its StoreKit lifetime.
+///
+/// An async instance call can retain `StoreClient` until the request finishes, so
+/// the app owner keeps this independent token to cancel work during teardown.
+final class StoreClientRequestLifetime {
+    private let coordinator: ProductRequestCoordinator
+
+    init(coordinator: ProductRequestCoordinator) {
+        self.coordinator = coordinator
+    }
+
+    deinit {
+        coordinator.shutdown(reason: .ownerReleased)
     }
 }
 
@@ -385,7 +380,7 @@ private final class StoreKitProductRequest: ProductRequestHandle {
     private let request: SKProductsRequest
 
     var delegate: SKProductsRequestDelegate? {
-        get { request.delegate as? SKProductsRequestDelegate }
+        get { request.delegate }
         set { request.delegate = newValue }
     }
 
