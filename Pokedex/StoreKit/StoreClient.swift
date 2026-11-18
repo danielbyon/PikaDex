@@ -22,6 +22,7 @@ enum StoreClientError: Error {
 /// restore operations retain StoreKit 1 behavior because their results continue
 /// to arrive through transaction notifications.
 protocol StoreClientProtocol: AnyObject {
+    @MainActor
     func requestProducts() async throws -> [SKProduct]
     func purchaseProduct(_ product: SKProduct)
     func restorePurchases()
@@ -36,7 +37,8 @@ final class StoreClient: NSObject, StoreClientProtocol {
     static let failedNotification = Notification.Name("com.danielbyon.pokepedia.StoreClient.failedNotification")
 
     private let productIdentifiers: Set<ProductIdentifier>
-    private let coordinator: ProductRequestCoordinator
+    /// Tests can retain the coordinator while releasing the owning client to verify real deinitialization behavior.
+    let coordinator: ProductRequestCoordinator
     private let canMakePayments: () -> Bool
     private let observesPaymentQueue: Bool
 
@@ -64,7 +66,7 @@ final class StoreClient: NSObject, StoreClientProtocol {
         self.observesPaymentQueue = observesPaymentQueue
         self.coordinator = ProductRequestCoordinator(makeRequest: makeRequestHandle)
         super.init()
-        coordinator.delegate = self
+        coordinator.setDelegate(self)
         if observesPaymentQueue {
             SKPaymentQueue.default().add(self)
         }
@@ -77,13 +79,29 @@ final class StoreClient: NSObject, StoreClientProtocol {
         }
     }
 
+    @MainActor
     func requestProducts() async throws -> [SKProduct] {
         try Task.checkCancellation()
         guard canMakePayments() else {
             throw StoreClientError.unableToMakePayments
         }
 
+        let coordinator = self.coordinator
+        let productIdentifiers = self.productIdentifiers
         let token = UUID()
+        return try await Self.performRequest(
+            coordinator: coordinator,
+            token: token,
+            productIdentifiers: productIdentifiers
+        )
+    }
+
+    /// Keeps cancellation delivery and coordinator transitions outside the main actor.
+    private nonisolated static func performRequest(
+        coordinator: ProductRequestCoordinator,
+        token: UUID,
+        productIdentifiers: Set<ProductIdentifier>
+    ) async throws -> [SKProduct] {
         coordinator.prepare(token: token)
         return try await withTaskCancellationHandler {
             try await withCheckedThrowingContinuation { continuation in
@@ -184,8 +202,13 @@ extension StoreClient: SKProductsRequestDelegate {
 ///
 /// All state transitions execute on `executor`. Active state is detached before
 /// cancelling a request or resuming its continuation, which makes re-entrant or
-/// duplicate delegate callbacks harmless.
-final class ProductRequestCoordinator {
+/// duplicate delegate callbacks harmless. Every mutable field, including the weak
+/// delegate, is accessed only on that executor. The request factory and executor
+/// metadata are immutable after initialization, and the factory is invoked only
+/// by a serialized registration. Keeping the executor synchronous lets
+/// cancellation handlers record cancellation before registration. An actor hop
+/// here could let a request start before that cancellation is applied.
+final class ProductRequestCoordinator: @unchecked Sendable {
 
     enum TerminalReason: Equatable {
         case taskCancelled
@@ -211,7 +234,7 @@ final class ProductRequestCoordinator {
     private var generation: UInt64 = 0
     private var isShutDown = false
 
-    weak var delegate: SKProductsRequestDelegate?
+    private weak var delegate: SKProductsRequestDelegate?
     private var lastTerminalReason: TerminalReason?
 
     init(makeRequest: @escaping (Set<ProductIdentifier>) -> ProductRequestHandle) {
@@ -220,8 +243,14 @@ final class ProductRequestCoordinator {
     }
 
     func prepare(token: UUID) {
-        executeSynchronously {
+        _ = executeSynchronously {
             pendingRegistrationTokens.insert(token)
+        }
+    }
+
+    func setDelegate(_ delegate: SKProductsRequestDelegate?) {
+        executeSynchronously {
+            self.delegate = delegate
         }
     }
 
@@ -276,14 +305,6 @@ final class ProductRequestCoordinator {
         }
     }
 
-    func succeed(requestHandle: ProductRequestHandle, products: [SKProduct]) {
-        complete(requestHandle: requestHandle, result: .success(products))
-    }
-
-    func fail(requestHandle: ProductRequestHandle, error: Error) {
-        complete(requestHandle: requestHandle, result: .failure(error))
-    }
-
     func cancel(token: UUID, reason: TerminalReason) {
         executeSynchronously {
             guard activeRequest?.token == token else {
@@ -321,25 +342,27 @@ final class ProductRequestCoordinator {
         return active
     }
 
-    private func complete(
-        requestHandle: ProductRequestHandle,
-        result: Result<[SKProduct], Error>
-    ) {
-        executeSynchronously {
-            guard let active = activeRequest, active.request === requestHandle else { return }
-            activeRequest = nil
-            if case .failure = result {
-                lastTerminalReason = .requestFailed
-            }
-            active.continuation.resume(with: result)
-        }
-    }
-
     private func executeSynchronously<T>(_ operation: () -> T) -> T {
         if DispatchQueue.getSpecific(key: executorKey) != nil {
             return operation()
         }
         return executor.sync(execute: operation)
+    }
+}
+
+/// Cancels pending product requests when the app's owner releases its StoreKit lifetime.
+///
+/// An async instance call can retain `StoreClient` until the request finishes, so
+/// the app owner keeps this independent token to cancel work during teardown.
+final class StoreClientRequestLifetime {
+    private let coordinator: ProductRequestCoordinator
+
+    init(coordinator: ProductRequestCoordinator) {
+        self.coordinator = coordinator
+    }
+
+    deinit {
+        coordinator.shutdown(reason: .ownerReleased)
     }
 }
 
@@ -357,7 +380,7 @@ private final class StoreKitProductRequest: ProductRequestHandle {
     private let request: SKProductsRequest
 
     var delegate: SKProductsRequestDelegate? {
-        get { request.delegate as? SKProductsRequestDelegate }
+        get { request.delegate }
         set { request.delegate = newValue }
     }
 
@@ -378,18 +401,31 @@ private final class StoreKitProductRequest: ProductRequestHandle {
     }
 }
 
+/// Keeps the UI-owned protocol value behind a main-actor-isolated, sendable reference.
+@MainActor
+final class StoreClientReference {
+    let client: any StoreClientProtocol
+
+    init(_ client: any StoreClientProtocol) {
+        self.client = client
+    }
+}
+
 private enum StoreClientKey: DependencyKey {
-    static var liveValue: any StoreClientProtocol {
+    typealias Value = StoreClientReference
+
+    static var liveValue: StoreClientReference {
         fatalError("StoreClient must be supplied by the application composition root.")
     }
 
-    static var testValue: any StoreClientProtocol {
+    static var testValue: StoreClientReference {
         fatalError("Tests must inject an isolated StoreClientProtocol implementation.")
     }
 }
 
 extension DependencyValues {
-    var storeClient: any StoreClientProtocol {
+    @MainActor
+    var storeClient: StoreClientReference {
         get { self[StoreClientKey.self] }
         set { self[StoreClientKey.self] = newValue }
     }

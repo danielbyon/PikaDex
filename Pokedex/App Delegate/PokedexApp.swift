@@ -26,10 +26,11 @@ struct PokedexApp: App {
     private let persistenceStores: PersistenceStores
     private let teamStore: DefaultTeamStore
     private let storeClient: StoreClient
+    private let storeClientRequestLifetime: StoreClientRequestLifetime
 
     init() {
         let appSettings = AppSettings()
-        let purchasedProductState = PurchasedProductState()
+        let purchasedProductState = PurchasedProductState.applicationDefault()
         _appSettings = StateObject(wrappedValue: appSettings)
         _purchasedProductState = StateObject(wrappedValue: purchasedProductState)
 
@@ -37,7 +38,9 @@ struct PokedexApp: App {
             let persistenceStores = try PersistenceBootstrap.production()
             self.persistenceStores = persistenceStores
             teamStore = DefaultTeamStore(storage: DependencyValues().teamStorage)
-            storeClient = StoreClient(productIdentifiers: PokepediaProduct.allProducts)
+            let storeClient = StoreClient(productIdentifiers: PokepediaProduct.allProducts)
+            self.storeClient = storeClient
+            storeClientRequestLifetime = StoreClientRequestLifetime(coordinator: storeClient.coordinator)
         } catch {
             let message = [
                 (error as? LocalizedError)?.errorDescription
@@ -72,7 +75,7 @@ struct PokedexApp: App {
             withDependencies {
                 $0.appSettings = appSettings
                 $0.purchasedProductState = purchasedProductState
-                $0.storeClient = storeClient
+                $0.storeClient = StoreClientReference(storeClient)
                 $0.teamStore = teamStore
                 $0.pokedexDataStore = persistenceStores.pokedex
                 $0.userDataDataStore = persistenceStores.userData
@@ -151,11 +154,12 @@ struct PreviewDependencyRoot<Content: View>: View {
 private final class PreviewDependencies: ObservableObject {
     let appSettings = AppSettings()
     let purchasedProductState = PurchasedProductState()
-    let storeClient: any StoreClientProtocol = PreviewStoreClient()
+    let storeClient = StoreClientReference(PreviewStoreClient())
     let teamStore = DefaultTeamStore(storage: VolatileTeamStorage())
 }
 
 private final class PreviewStoreClient: StoreClientProtocol {
+    @MainActor
     func requestProducts() async throws -> [SKProduct] { [] }
     func purchaseProduct(_ product: SKProduct) { }
     func restorePurchases() { }

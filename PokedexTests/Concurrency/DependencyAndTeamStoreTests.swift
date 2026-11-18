@@ -11,7 +11,9 @@ final class DependencyAndTeamStoreTests: XCTestCase {
 
     func testCompositionResolvesExactObservableInstances() {
         let settings = AppSettings()
-        let purchasedProductState = PurchasedProductState()
+        let purchaseHarness = PurchasedProductStateTestHarness()
+        defer { purchaseHarness.cleanUp() }
+        let purchasedProductState = purchaseHarness.state
 
         withDependencies {
             $0.appSettings = settings
@@ -27,6 +29,114 @@ final class DependencyAndTeamStoreTests: XCTestCase {
             XCTAssertTrue(secondSettings === firstSettings)
             XCTAssertTrue(secondPurchaseState === firstPurchaseState)
         }
+    }
+
+    func testProductIdentifiersAndPurchaseMasksRemainStable() {
+        let expected: [(PokepediaProduct, String, Int64)] = [
+            (.all3DSGames, "com.danielbyon.pokepedia.iap.all3dsgames", 267_386_880),
+            (.allDSGames, "com.danielbyon.pokepedia.iap.alldsgames", 1_046_528),
+            (.allGameBoyGames, "com.danielbyon.pokepedia.iap.allgameboygames", 2_047),
+            (.allSwitchGames, "com.danielbyon.pokepedia.iap.allswitchgames", 137_170_518_016),
+            (.allGames, "com.danielbyon.pokepedia.iap.allgames", 137_438_953_471),
+            (.generation1, "com.danielbyon.pokepedia.iap.generation1", 7),
+            (.generation2, "com.danielbyon.pokepedia.iap.generation2", 56),
+            (.rubySapphireEmerald, "com.danielbyon.pokepedia.iap.rubysapphireemerald", 448),
+            (.fireRedLeafGreen, "com.danielbyon.pokepedia.iap.fireredleafgreen", 1_536),
+            (.diamondPearlPlatinum, "com.danielbyon.pokepedia.iap.diamondpearlplatinum", 14_336),
+            (.heartGoldSoulSilver, "com.danielbyon.pokepedia.iap.heartgoldsoulsilver", 49_152),
+            (.blackWhite, "com.danielbyon.pokepedia.iap.blackwhite", 196_608),
+            (.black2White2, "com.danielbyon.pokepedia.iap.black2white2", 786_432),
+            (.xY, "com.danielbyon.pokepedia.iap.xy", 3_145_728),
+            (.omegaRubyAlphaSapphire, "com.danielbyon.pokepedia.iap.omegarubyalphasapphire", 12_582_912),
+            (.sunMoon, "com.danielbyon.pokepedia.iap.sunmoon", 50_331_648),
+            (.ultraSunUltraMoon, "com.danielbyon.pokepedia.iap.ultrasunultramoon", 201_326_592),
+            (.letsGoPikachuLetsGoEevee, "com.danielbyon.pokepedia.iap.letsgopikachuletsgoeevee", 805_306_368),
+            (.swordShield, "com.danielbyon.pokepedia.iap.swordshield", 3_221_225_472),
+            (.smallTip, "com.danielbyon.pokepedia.iap.tipjarsmall", 0),
+            (.mediumTip, "com.danielbyon.pokepedia.iap.tipjarmedium", 0),
+            (.largeTip, "com.danielbyon.pokepedia.iap.tipjarlarge", 0)
+        ]
+
+        for (product, identifier, mask) in expected {
+            XCTAssertEqual(product.productIdentifier, identifier)
+            XCTAssertEqual(product.bitwiseValue, mask, product.rawValue)
+        }
+    }
+
+    func testPersistedPurchaseBitsKeepJSONEncodingAndMergeByOr() throws {
+        let original = PokepediaProduct.generation1.bitwiseValue
+        let harness = PurchasedProductStateTestHarness(persistedPurchaseState: original)
+        defer { harness.cleanUp() }
+
+        XCTAssertEqual(harness.state.purchaseState, original)
+        XCTAssertTrue(harness.state.hasPurchasedProduct(.generation1))
+
+        harness.state.processPurchasedProductIdentifier(PokepediaProduct.generation2.productIdentifier)
+
+        let merged = original | PokepediaProduct.generation2.bitwiseValue
+        XCTAssertEqual(harness.state.purchaseState, merged)
+        XCTAssertEqual(harness.cloudStore.writtenValues, [merged])
+        XCTAssertEqual(harness.cloudStore.writtenKeys, [harness.purchaseStateKey])
+        XCTAssertEqual(harness.cloudStore.synchronizeCount, 2)
+
+        let persistedData = try XCTUnwrap(harness.defaults.data(forKey: harness.purchaseStateKey))
+        XCTAssertEqual(try JSONDecoder().decode(Int64.self, from: persistedData), merged)
+    }
+
+    func testTipPurchaseKeepsPurchaseMaskAtZero() {
+        let harness = PurchasedProductStateTestHarness()
+        defer { harness.cleanUp() }
+
+        harness.state.processPurchasedProductIdentifier(PokepediaProduct.smallTip.productIdentifier)
+
+        XCTAssertEqual(harness.state.purchaseState, 0)
+        XCTAssertEqual(harness.cloudStore.writtenValues, [0])
+    }
+
+    func testExternalCloudChangeNotificationMergesFromInjectedStoreAndFiltersObject() async {
+        let original = PokepediaProduct.generation1.bitwiseValue
+        let remote = PokepediaProduct.generation2.bitwiseValue
+        let harness = PurchasedProductStateTestHarness(
+            persistedPurchaseState: original,
+            remotePurchaseState: remote
+        )
+        defer { harness.cleanUp() }
+        let firstRead = expectation(description: "The matching external-change notification reads cloud state")
+        harness.cloudStore.onRead = { key in
+            XCTAssertEqual(key, harness.purchaseStateKey)
+            if harness.cloudStore.readKeys.count == 1 {
+                firstRead.fulfill()
+            }
+        }
+
+        harness.notificationCenter.post(
+            name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
+            object: NSObject()
+        )
+        harness.notificationCenter.post(
+            name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
+            object: harness.cloudStore.notificationObject
+        )
+
+        await fulfillment(of: [firstRead], timeout: 2)
+        let mainQueueDrained = expectation(description: "All queued notification deliveries have run")
+        DispatchQueue.main.async { mainQueueDrained.fulfill() }
+        await fulfillment(of: [mainQueueDrained], timeout: 2)
+
+        XCTAssertEqual(harness.cloudStore.readKeys, [harness.purchaseStateKey])
+        XCTAssertEqual(harness.state.purchaseState, original | remote)
+    }
+
+    func testGameAuthorizationCalculationUsesThePersistedPurchaseMask() {
+        XCTAssertFalse(PurchasedProductState.gameAccessAllowed(game: .red, purchaseState: 0))
+        XCTAssertTrue(PurchasedProductState.gameAccessAllowed(
+            game: .red,
+            purchaseState: Game.red.bitwiseValue
+        ))
+        XCTAssertFalse(PurchasedProductState.gameAccessAllowed(
+            game: .red,
+            purchaseState: Game.blue.bitwiseValue
+        ))
     }
 
     func testTeamStoreDependencyCarriesTheInjectedInstanceToAChildTask() async {
@@ -198,6 +308,78 @@ final class DependencyAndTeamStoreTests: XCTestCase {
         XCTAssertEqual(PokedexNumberFormat.pokemonIndex.format(25), "025")
         XCTAssertEqual(PokedexNumberFormat.oneDecimal.format(87.5), "87.5")
         XCTAssertEqual(PokedexNumberFormat.wholeNumber.format(2), "2")
+    }
+}
+
+@MainActor
+final class PurchasedProductStateTestHarness {
+
+    let purchaseStateKey = "PurchasedProductState.purchasedKey"
+    let suiteName: String
+    let defaults: UserDefaults
+    let notificationCenter: NotificationCenter
+    let cloudStore: InMemoryPurchaseStateCloudStore
+    let state: PurchasedProductState
+
+    init(persistedPurchaseState: Int64 = 0, remotePurchaseState: Int64 = 0) {
+        suiteName = "com.danielbyon.pokepedia.tests.purchase-state.\(UUID().uuidString)"
+        guard let defaults = UserDefaults(suiteName: suiteName) else {
+            fatalError("Unable to create isolated purchase-state defaults")
+        }
+        defaults.removePersistentDomain(forName: suiteName)
+        if persistedPurchaseState != 0 {
+            do {
+                defaults.set(try JSONEncoder().encode(persistedPurchaseState), forKey: purchaseStateKey)
+            } catch {
+                fatalError("Unable to encode isolated purchase-state defaults: \(error)")
+            }
+        }
+
+        self.defaults = defaults
+        notificationCenter = NotificationCenter()
+        cloudStore = InMemoryPurchaseStateCloudStore(value: remotePurchaseState)
+        state = PurchasedProductState(
+            appGroupDefaults: defaults,
+            cloudStore: cloudStore,
+            notificationCenter: notificationCenter
+        )
+    }
+
+    func cleanUp() {
+        defaults.removePersistentDomain(forName: suiteName)
+    }
+}
+
+@MainActor
+final class InMemoryPurchaseStateCloudStore: PurchaseStateCloudStore {
+
+    let notificationObject: AnyObject = NSObject()
+    private(set) var value: Int64
+    private(set) var readKeys: [String] = []
+    private(set) var writtenKeys: [String] = []
+    private(set) var writtenValues: [Int64] = []
+    private(set) var synchronizeCount = 0
+    var onRead: ((String) -> Void)?
+
+    init(value: Int64) {
+        self.value = value
+    }
+
+    func longLong(forKey key: String) -> Int64 {
+        readKeys.append(key)
+        onRead?(key)
+        return value
+    }
+
+    func set(_ value: Int64, forKey key: String) {
+        self.value = value
+        writtenKeys.append(key)
+        writtenValues.append(value)
+    }
+
+    func synchronize() -> Bool {
+        synchronizeCount += 1
+        return true
     }
 }
 
