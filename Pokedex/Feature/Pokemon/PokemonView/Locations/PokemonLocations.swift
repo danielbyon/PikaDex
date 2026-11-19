@@ -72,23 +72,25 @@ extension PokemonLocations.LocationSection: Identifiable {
 
 private struct ViewModel {
 
+    let id: String
     let title: String
     let subtitle: String?
     let badge: Badge
 
+    @MainActor
     init(locationPokemon: LocationPokemon) {
-        self.title = "\(locationPokemon.area): \(locationPokemon.encounterRateString)"
-        self.subtitle = locationPokemon.levelRangeWithDetail
-        self.badge = Badge(encounterRate: locationPokemon.encounterRate)
+        let title = "\(locationPokemon.area): \(locationPokemon.encounterRateString)"
+        let subtitle = locationPokemon.levelRangeWithDetail
+        let badge = Badge(encounterRate: locationPokemon.encounterRate)
+        self.title = title
+        self.subtitle = subtitle
+        self.badge = badge
+        self.id = title + String(describing: subtitle) + badge.title
     }
 
 }
 
-extension ViewModel: Identifiable {
-
-    var id: String { title + String(describing: subtitle) + badge.title }
-
-}
+extension ViewModel: Identifiable { }
 
 private struct PokemonLocationSectionHeader: View {
 
@@ -124,6 +126,7 @@ private extension BadgeCell {
 
 private extension Collection where Self.Element == LocationPokemon {
 
+    @MainActor
     var sections: [PokemonLocations.LocationSection] {
         var sections: [PokemonLocations.LocationSection] = .init()
         self.forEach { element in
