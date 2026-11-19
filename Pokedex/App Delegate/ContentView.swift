@@ -11,6 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @Environment(\.appDependencyContext) private var appDependencyContext
     @Dependency(\.appSettings) var settings
     @SceneStorage("navigationPath") private var navigationData: Data?
     @State private var columnVisibility: NavigationSplitViewVisibility = .doubleColumn
@@ -67,76 +68,8 @@ struct ContentView: View {
             .navigationTitle(AppConstants.appName)
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: Route.self) { route in
-                switch route {
-                case .battleAssistant(let battleAssistant):
-                    switch battleAssistant {
-                    case .selectPokemon(let game, let onSelect):
-                        SelectPokemonForm(game: game)
-                            .onSelectPokemonForm(action: onSelect)
-                    }
-                case .content(let content):
-                    switch content {
-                    case .ability(let ability, let game, let pokedex):
-                        AbilityView(ability: ability, game: game, pokedex: pokedex)
-                    case .abilityPokemonForm(let pokemonForm, let pokedex):
-                        PokemonView(abilityPokemonForm: pokemonForm, pokedex: pokedex)
-                    case .evolutionPokemonForm(let pokemonForm, pokedex: let pokedex):
-                        PokemonView(evolutionPokemonForm: pokemonForm, pokedex: pokedex)
-                    case .item(let item):
-                        ItemView(item: item)
-                    case .learnset(let pokemonForm, let game, let learnsetType):
-                        PokemonLearnsetView(form: pokemonForm, game: game, learnsetType: learnsetType)
-                    case .learnsetPokemonForm(let pokemonForm):
-                        PokemonView(learnsetPokemonForm: pokemonForm)
-                    case .location(let location):
-                        LocationView(location: location)
-                    case .move(let move):
-                        MoveView(move: move)
-                    case let .pokemon(pokemon, pokedex, previousPokemonProvider, nextPokemonProvider):
-                        PokemonView(
-                            pokemon: pokemon,
-                            pokedex: pokedex,
-                            previousPokemonProvider: previousPokemonProvider,
-                            nextPokemonProvider: nextPokemonProvider
-                        )
-                    case .pokemonDetailForm(let pokemonDetailForm, let pokedex):
-                        PokemonView(pokemonDetailForm: pokemonDetailForm, pokedex: pokedex)
-                    case .pokemonLocations(let pokemonDetailForm):
-                        PokemonLocations(pokemonForm: pokemonDetailForm)
-                    case .team(_, _, let team):
-                        TeamView(viewModel: team)
-                    case .teamMember(_, _, _, let teamMember):
-                        TeamMemberView(viewModel: teamMember)
-                    case .type(let type, let game):
-                        TypeView(type: type, game: game)
-                    }
-                case .tab(let tab):
-                    switch tab {
-                    case .abilities:
-                        AbilityList(game: settings.currentGame)
-                    case .battleAssistant:
-                        BattleAssistant(game: settings.currentGame)
-                    case .dualType:
-                        DualTypeChecker(game: settings.currentGame)
-                    case .moves:
-                        MoveList(game: settings.currentGame)
-                    case .items:
-                        ItemList(game: settings.currentGame)
-                    case .locations:
-                        LocationList(game: settings.currentGame)
-                    case .machines:
-                        MachineList(title: machineListTitle, game: settings.currentGame)
-                    case .natures:
-                        NatureList()
-                    case .pokemon:
-                        PokemonList(game: settings.currentGame)
-                    case .teams:
-                        TeamList(game: settings.currentGame)
-                    case .types:
-                        TypeList(game: settings.currentGame)
-                    }
-                case .url(let url):
-                    SafariView(url: url)
+                dependencyContext.withValues {
+                    destination(for: route)
                 }
             }
             .sheet(isPresented: $sheetState.isShowing) {
@@ -146,6 +79,81 @@ struct ContentView: View {
             .onOpenURL(perform: handleURL)
         }
         .navigationStore(navigationStore)
+    }
+
+    @ViewBuilder
+    private func destination(for route: Route) -> some View {
+        switch route {
+        case .battleAssistant(let battleAssistant):
+            switch battleAssistant {
+            case .selectPokemon(let game, let onSelect):
+                SelectPokemonForm(game: game)
+                    .onSelectPokemonForm(action: onSelect)
+            }
+        case .content(let content):
+            switch content {
+            case .ability(let ability, let game, let pokedex):
+                AbilityView(ability: ability, game: game, pokedex: pokedex)
+            case .abilityPokemonForm(let pokemonForm, let pokedex):
+                PokemonView(abilityPokemonForm: pokemonForm, pokedex: pokedex)
+            case .evolutionPokemonForm(let pokemonForm, pokedex: let pokedex):
+                PokemonView(evolutionPokemonForm: pokemonForm, pokedex: pokedex)
+            case .item(let item):
+                ItemView(item: item)
+            case .learnset(let pokemonForm, let game, let learnsetType):
+                PokemonLearnsetView(form: pokemonForm, game: game, learnsetType: learnsetType)
+            case .learnsetPokemonForm(let pokemonForm):
+                PokemonView(learnsetPokemonForm: pokemonForm)
+            case .location(let location):
+                LocationView(location: location)
+            case .move(let move):
+                MoveView(move: move)
+            case let .pokemon(pokemon, pokedex, previousPokemonProvider, nextPokemonProvider):
+                PokemonView(
+                    pokemon: pokemon,
+                    pokedex: pokedex,
+                    previousPokemonProvider: previousPokemonProvider,
+                    nextPokemonProvider: nextPokemonProvider
+                )
+            case .pokemonDetailForm(let pokemonDetailForm, let pokedex):
+                PokemonView(pokemonDetailForm: pokemonDetailForm, pokedex: pokedex)
+            case .pokemonLocations(let pokemonDetailForm):
+                PokemonLocations(pokemonForm: pokemonDetailForm)
+            case .team(_, _, let team):
+                TeamView(viewModel: team)
+            case .teamMember(_, _, _, let teamMember):
+                TeamMemberView(viewModel: teamMember)
+            case .type(let type, let game):
+                TypeView(type: type, game: game)
+            }
+        case .tab(let tab):
+            switch tab {
+            case .abilities:
+                AbilityList(game: settings.currentGame)
+            case .battleAssistant:
+                BattleAssistant(game: settings.currentGame)
+            case .dualType:
+                DualTypeChecker(game: settings.currentGame)
+            case .moves:
+                MoveList(game: settings.currentGame)
+            case .items:
+                ItemList(game: settings.currentGame)
+            case .locations:
+                LocationList(game: settings.currentGame)
+            case .machines:
+                MachineList(title: machineListTitle, game: settings.currentGame)
+            case .natures:
+                NatureList()
+            case .pokemon:
+                PokemonList(game: settings.currentGame)
+            case .teams:
+                TeamList(game: settings.currentGame, dependencyContext: dependencyContext)
+            case .types:
+                TypeList(game: settings.currentGame)
+            }
+        case .url(let url):
+            SafariView(url: url)
+        }
     }
 
     @ViewBuilder
@@ -236,20 +244,27 @@ struct ContentView: View {
         }
     }
 
+    private var dependencyContext: AppDependencyContext {
+        guard let appDependencyContext else {
+            preconditionFailure("ContentView requires app dependency context.")
+        }
+        return appDependencyContext
+    }
+
     @ViewBuilder
     private func sheetDestination() -> some View {
         switch sheetState.state {
         case .selectGame:
             NavigationStack {
-                GameSelector()
+                dependencyContext.withValues { GameSelector() }
             }
         case .settings:
             NavigationStack {
-                Settings()
+                dependencyContext.withValues { Settings() }
             }
         case .store:
             NavigationStack {
-                Store()
+                Store(dependencyContext: dependencyContext)
             }
         case .none:
             EmptyView()

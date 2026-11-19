@@ -79,7 +79,11 @@ final class TeamListViewModel: ObservableObject {
                     game: game,
                     teams: teamStore
                         .getTeams(forGame: game)
-                        .map { .init(team: $0, game: game) }
+                        .map { team in
+                            withDependencies(from: self) {
+                                TeamViewModel(team: team, game: game)
+                            }
+                        }
                 )
             }
             .filter { !$0.teams.isEmpty }

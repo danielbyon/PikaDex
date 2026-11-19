@@ -17,7 +17,15 @@ public struct TeamList: View {
     @State private var isShowingPokepasteExport = false
     @State private var isShowingSelectGame = false
     @State private var currentDeletingTeam: TeamViewModel?
-    @StateObject private var viewModel = TeamListViewModel()
+    @StateObject private var viewModel: TeamListViewModel
+
+    /// Creates the list model from the dependency instances that belong to this view.
+    init(game: Game, dependencyContext: AppDependencyContext) {
+        self.game = game
+        _viewModel = StateObject(
+            wrappedValue: dependencyContext.withValues { TeamListViewModel() }
+        )
+    }
 
     private var numberOfColumns: Int { horizontalSizeClass == .regular ? 2 : 1 }
 
@@ -171,8 +179,8 @@ public struct TeamList: View {
 #if DEBUG
 struct TeamList_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewDependencyRoot {
-            TeamList(game: .sword)
+        PreviewDependencyRoot { dependencies in
+            TeamList(game: .sword, dependencyContext: dependencies)
         }
     }
 }

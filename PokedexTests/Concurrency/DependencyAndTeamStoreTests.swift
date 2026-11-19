@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import Dependencies
 import PokedexCore
@@ -59,6 +60,139 @@ final class DependencyAndTeamStoreTests: XCTestCase {
             XCTAssertTrue(resolved.pokedexDataStore === persistenceStores.pokedex)
             XCTAssertTrue(resolved.userDataDataStore === persistenceStores.userData)
         }
+    }
+
+    func testHostedDeferredScreensUseAppOwnedDependencies() async throws {
+        let settings = AppSettings()
+        let purchaseHarness = PurchasedProductStateTestHarness()
+        defer { purchaseHarness.cleanUp() }
+        let purchasedProductState = purchaseHarness.state
+        let persistenceStores = try PersistenceBootstrap.makeInMemoryForTesting()
+        let teamStore = DefaultTeamStore(storage: VolatileTeamStorage(), debounceInterval: 60)
+        let storeClient = TestStoreClient()
+        let productRequest = expectation(description: "The hosted Store uses the injected client")
+        storeClient.productRequestObserver = { productRequest.fulfill() }
+        let dependencyScope = AppDependencyScope(
+            storeClientReference: StoreClientReference(storeClient)
+        )
+
+        for screen in HostedDependencyScreen.allCases {
+            try await assertHostedScreen(
+                screen,
+                dependencyScope: dependencyScope,
+                settings: settings,
+                purchasedProductState: purchasedProductState,
+                teamStore: teamStore,
+                persistenceStores: persistenceStores,
+                productRequest: productRequest
+            )
+        }
+
+        XCTAssertGreaterThan(storeClient.productRequestCount, 0)
+    }
+
+    func testDeferredTeamMemberEditPersistsAfterDependencyScopeEnds() async throws {
+        let settings = AppSettings()
+        let purchaseHarness = PurchasedProductStateTestHarness()
+        defer { purchaseHarness.cleanUp() }
+        let purchasedProductState = purchaseHarness.state
+        let persistenceStores = try PersistenceBootstrap.makeInMemoryForTesting()
+        let storage = RecordingTeamStorage()
+        let teamStore = DefaultTeamStore(storage: storage, debounceInterval: 60)
+        let storeClient = TestStoreClient()
+        let dependencyScope = AppDependencyScope(
+            storeClientReference: StoreClientReference(storeClient)
+        )
+        let context = AppDependencyContext(
+            appSettings: settings,
+            purchasedProductState: purchasedProductState,
+            storeClientReference: dependencyScope.storeClientReference,
+            teamStore: teamStore,
+            persistenceStores: persistenceStores
+        )
+
+        let teamID = UUID()
+        let memberID = UUID()
+        let originalLevel = 12
+        let editedLevel = 42
+        let member = TeamMember(
+            pokemon: "Synthetic Pokémon",
+            formName: "Synthetic Form",
+            nickname: "Before edit",
+            level: originalLevel,
+            hp: .init(baseValue: 39, ev: 0, iv: 0),
+            attack: .init(baseValue: 52, ev: 0, iv: 0),
+            defense: .init(baseValue: 43, ev: 0, iv: 0),
+            specialAttack: .init(baseValue: 60, ev: 0, iv: 0),
+            specialDefense: .init(baseValue: 50, ev: 0, iv: 0),
+            speed: .init(baseValue: 65, ev: 0, iv: 0),
+            move1: nil,
+            move2: nil,
+            move3: nil,
+            move4: nil,
+            nature: nil,
+            ability: nil,
+            heldItem: nil,
+            game: .sword,
+            internalID: memberID
+        )
+        teamStore.setTeams(
+            [Team(name: "Synthetic Team", members: [member], internalID: teamID)],
+            forGame: .sword
+        )
+
+        // The list reloads from the store publisher after this dependency scope has returned.
+        let listViewModel = context.withValues { TeamListViewModel() }
+        let publishedSection = expectation(description: "The team section is published")
+        let sectionObservation = listViewModel.$sections
+            .first { sections in
+                sections.contains { section in
+                    section.teams.contains { $0.team.internalID == teamID }
+                }
+            }
+            .sink { _ in publishedSection.fulfill() }
+        defer { sectionObservation.cancel() }
+        await fulfillment(of: [publishedSection], timeout: 2)
+
+        let teamViewModel = try XCTUnwrap(
+            listViewModel.sections
+                .flatMap(\.teams)
+                .first { $0.team.internalID == teamID }
+        )
+        let memberViewModel = try XCTUnwrap(
+            teamViewModel.members.first { $0.teamMember.internalID == memberID }
+        )
+        XCTAssertEqual(memberViewModel.level, Double(originalLevel))
+
+        let storedEditPublished = expectation(description: "The injected team store publishes the edited member")
+        let storeObservation = teamStore.teams
+            .dropFirst()
+            .first { teams in
+                teams[.sword]?.contains { storedTeam in
+                    storedTeam.internalID == teamID
+                        && storedTeam.members.contains { storedMember in
+                            storedMember.internalID == memberID && storedMember.level == editedLevel
+                        }
+                } == true
+            }
+            .sink { _ in storedEditPublished.fulfill() }
+        defer { storeObservation.cancel() }
+
+        memberViewModel.level = Double(editedLevel)
+        await fulfillment(of: [storedEditPublished], timeout: 2)
+
+        teamStore.flushPendingWrites()
+        let reloadedStore = DefaultTeamStore(storage: storage, debounceInterval: 60)
+        let reloadedTeam = try XCTUnwrap(
+            reloadedStore.getTeams(forGame: .sword).first { $0.internalID == teamID }
+        )
+        let reloadedMember = try XCTUnwrap(
+            reloadedTeam.members.first { $0.internalID == memberID }
+        )
+
+        XCTAssertEqual(reloadedTeam.internalID, teamID)
+        XCTAssertEqual(reloadedMember.internalID, memberID)
+        XCTAssertEqual(reloadedMember.level, editedLevel)
     }
 
     func testProductIdentifiersAndPurchaseMasksRemainStable() {
@@ -343,12 +477,113 @@ final class DependencyAndTeamStoreTests: XCTestCase {
 
 private final class TestStoreClient: StoreClientProtocol {
 
+    @MainActor private(set) var productRequestCount = 0
+    @MainActor var productRequestObserver: (() -> Void)?
+
     @MainActor
-    func requestProducts() async throws -> [SKProduct] { [] }
+    func requestProducts() async throws -> [SKProduct] {
+        productRequestCount += 1
+        let observer = productRequestObserver
+        productRequestObserver = nil
+        observer?()
+        return []
+    }
 
     func purchaseProduct(_ product: SKProduct) { }
 
     func restorePurchases() { }
+}
+
+private enum HostedDependencyScreen: CaseIterable {
+    case chooseGame
+    case settings
+    case store
+    case teams
+}
+
+@MainActor
+private struct DeferredDependencyPresentation: View {
+
+    @Environment(\.appDependencyContext) private var appDependencyContext
+    @State private var isPresented = true
+
+    let screen: HostedDependencyScreen
+
+    var body: some View {
+        Color.clear
+            .sheet(isPresented: $isPresented) {
+                let dependencies = requiredDependencies
+                switch screen {
+                case .chooseGame:
+                    NavigationStack {
+                        dependencies.withValues { GameSelector() }
+                    }
+                case .settings:
+                    NavigationStack {
+                        dependencies.withValues { Settings() }
+                    }
+                case .store:
+                    NavigationStack {
+                        Store(dependencyContext: dependencies)
+                    }
+                case .teams:
+                    NavigationStack {
+                        dependencies.withValues {
+                            TeamList(game: .sword, dependencyContext: dependencies)
+                        }
+                    }
+                }
+            }
+    }
+
+    private var requiredDependencies: AppDependencyContext {
+        guard let appDependencyContext else {
+            preconditionFailure("Hosted presentation requires app dependency context.")
+        }
+        return appDependencyContext
+    }
+}
+
+@MainActor
+private extension DependencyAndTeamStoreTests {
+
+    func assertHostedScreen(
+        _ screen: HostedDependencyScreen,
+        dependencyScope: AppDependencyScope,
+        settings: AppSettings,
+        purchasedProductState: PurchasedProductState,
+        teamStore: DefaultTeamStore,
+        persistenceStores: PersistenceStores,
+        productRequest: XCTestExpectation
+    ) async throws {
+        let rootView = dependencyScope.rootView(
+            appSettings: settings,
+            purchasedProductState: purchasedProductState,
+            teamStore: teamStore,
+            persistenceStores: persistenceStores
+        ) {
+            DeferredDependencyPresentation(screen: screen)
+        }
+        let hostingController = UIHostingController(rootView: rootView)
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = hostingController
+        window.makeKeyAndVisible()
+        defer {
+            window.isHidden = true
+            window.rootViewController = nil
+        }
+
+        hostingController.loadViewIfNeeded()
+        let presentationDeadline = Date().addingTimeInterval(2)
+        while hostingController.presentedViewController == nil, Date() < presentationDeadline {
+            RunLoop.main.run(until: Date().addingTimeInterval(0.01))
+        }
+
+        XCTAssertNotNil(hostingController.presentedViewController, "Failed to present \(screen).")
+        if case .store = screen {
+            await fulfillment(of: [productRequest], timeout: 3)
+        }
+    }
 }
 
 @MainActor

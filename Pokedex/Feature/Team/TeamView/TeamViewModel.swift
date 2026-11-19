@@ -42,7 +42,9 @@ public final class TeamViewModel: ObservableObject {
 
         $team
             .handleEvents(receiveOutput: { [unowned self] team in
-                self.members = team.members.map { .init(teamMember: $0, team: team) }
+                self.members = withDependencies(from: self) {
+                    team.members.map { .init(teamMember: $0, team: team) }
+                }
             })
             .dropFirst()
             .compactMap { $0 }
