@@ -64,7 +64,7 @@ public final class TeamViewModel: ObservableObject {
 
 }
 
-extension TeamViewModel: Equatable {
+extension TeamViewModel: @MainActor Equatable {
 
     public static func == (lhs: TeamViewModel, rhs: TeamViewModel) -> Bool {
         lhs.name.wrappedValue == rhs.name.wrappedValue
@@ -75,7 +75,7 @@ extension TeamViewModel: Equatable {
 
 }
 
-extension TeamViewModel: Hashable {
+extension TeamViewModel: @MainActor Hashable {
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(name.wrappedValue)

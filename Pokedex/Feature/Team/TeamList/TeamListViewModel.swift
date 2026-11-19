@@ -108,7 +108,7 @@ extension TeamListViewModel {
 
 }
 
-extension TeamListViewModel.Section: Equatable {
+extension TeamListViewModel.Section: @MainActor Equatable {
 
     static func == (lhs: TeamListViewModel.Section, rhs: TeamListViewModel.Section) -> Bool {
         lhs.game == rhs.game
@@ -117,7 +117,7 @@ extension TeamListViewModel.Section: Equatable {
 
 }
 
-extension TeamListViewModel.Section: Hashable {
+extension TeamListViewModel.Section: @MainActor Hashable {
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(game)

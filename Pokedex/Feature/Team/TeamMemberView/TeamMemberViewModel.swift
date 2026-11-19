@@ -169,7 +169,7 @@ public final class TeamMemberViewModel: ObservableObject {
 
 }
 
-extension TeamMemberViewModel: Equatable {
+extension TeamMemberViewModel: @MainActor Equatable {
 
     public static func == (lhs: TeamMemberViewModel, rhs: TeamMemberViewModel) -> Bool {
         lhs.teamMember == rhs.teamMember
@@ -178,7 +178,7 @@ extension TeamMemberViewModel: Equatable {
 
 }
 
-extension TeamMemberViewModel: Hashable {
+extension TeamMemberViewModel: @MainActor Hashable {
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(teamMember.internalID)

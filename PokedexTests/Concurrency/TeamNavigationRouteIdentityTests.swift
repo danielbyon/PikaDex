@@ -219,6 +219,38 @@ final class TeamNavigationRouteIdentityTests: XCTestCase {
         }
     }
 
+    func testTeamModelConformancesPreserveEqualityAndHashing() {
+        let teamID = UUID(uuidString: "00000000-0000-0000-0000-000000000021")!
+        let memberID = UUID(uuidString: "00000000-0000-0000-0000-000000000022")!
+        let member = makeTeamMember(id: memberID, game: .sword, nickname: "Pika")
+        let team = Team(name: "Party", members: [member], internalID: teamID)
+
+        withDependencies {
+            $0.teamStore = RecordingTeamStore()
+        } operation: {
+            let firstTeamViewModel = TeamViewModel(team: team, game: .sword)
+            let secondTeamViewModel = TeamViewModel(team: team, game: .sword)
+
+            XCTAssertEqual(firstTeamViewModel, secondTeamViewModel)
+            XCTAssertEqual(firstTeamViewModel.hashValue, secondTeamViewModel.hashValue)
+            XCTAssertEqual(Set([firstTeamViewModel, secondTeamViewModel]).count, 1)
+
+            let firstMemberViewModel = TeamMemberViewModel(teamMember: member, team: team)
+            let secondMemberViewModel = TeamMemberViewModel(teamMember: member, team: team)
+
+            XCTAssertEqual(firstMemberViewModel, secondMemberViewModel)
+            XCTAssertEqual(firstMemberViewModel.hashValue, secondMemberViewModel.hashValue)
+            XCTAssertEqual(Set([firstMemberViewModel, secondMemberViewModel]).count, 1)
+
+            let firstSection = TeamListViewModel.Section(game: .sword, teams: [firstTeamViewModel])
+            let secondSection = TeamListViewModel.Section(game: .sword, teams: [secondTeamViewModel])
+
+            XCTAssertEqual(firstSection, secondSection)
+            XCTAssertEqual(firstSection.hashValue, secondSection.hashValue)
+            XCTAssertEqual(Set([firstSection, secondSection]).count, 1)
+        }
+    }
+
 }
 
 private func makeTeamMember(id: UUID, game: Game, nickname: String) -> TeamMember {
