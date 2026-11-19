@@ -294,6 +294,7 @@ F90000000000000000000001 = { isa = "PBXNativeTarget"; buildConfigurationList = "
 		F50000000000000000000007 /* StoreKitConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50000000000000000000004 /* StoreKitConcurrencyTests.swift */; };
 		F50000000000000000000008 /* StoreViewModelConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50000000000000000000005 /* StoreViewModelConcurrencyTests.swift */; };
 		F50000000000000000000009 /* DependencyAndTeamStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50000000000000000000006 /* DependencyAndTeamStoreTests.swift */; };
+		F50000000000000000000014 /* TeamNavigationRouteIdentityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50000000000000000000015 /* TeamNavigationRouteIdentityTests.swift */; };
 		F50000000000000000000012 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 657AD2B02B4AD0E00038F382 /* Dependencies */; };
 		F50000000000000000000013 /* PokedexCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65401F422978EA91005BF4DC /* PokedexCore.framework */; };
 		6552DF1F255CE77C00AF6B2D /* PokemonDetailOrderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6552DF1E255CE77B00AF6B2D /* PokemonDetailOrderSettings.swift */; };
@@ -984,6 +985,7 @@ F90000000000000000000001 = { isa = "PBXNativeTarget"; buildConfigurationList = "
 		F50000000000000000000004 /* StoreKitConcurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitConcurrencyTests.swift; sourceTree = "<group>"; };
 		F50000000000000000000005 /* StoreViewModelConcurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelConcurrencyTests.swift; sourceTree = "<group>"; };
 		F50000000000000000000006 /* DependencyAndTeamStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyAndTeamStoreTests.swift; sourceTree = "<group>"; };
+		F50000000000000000000015 /* TeamNavigationRouteIdentityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNavigationRouteIdentityTests.swift; sourceTree = "<group>"; };
 		6547F811237968D50091A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6547F816237968D50091A083 /* PokedexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6547F847237975190091A083 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -2121,6 +2123,7 @@ F90000000000000000000001 = { isa = "PBXNativeTarget"; buildConfigurationList = "
 				F50000000000000000000004 /* StoreKitConcurrencyTests.swift */,
 				F50000000000000000000005 /* StoreViewModelConcurrencyTests.swift */,
 				F50000000000000000000006 /* DependencyAndTeamStoreTests.swift */,
+				F50000000000000000000015 /* TeamNavigationRouteIdentityTests.swift */,
 			);
 			name = PokedexConcurrencyTests;
 			path = PokedexTests/Concurrency;
@@ -4006,6 +4009,7 @@ F90000000000000000000001 = { isa = "PBXNativeTarget"; buildConfigurationList = "
 				F50000000000000000000007 /* StoreKitConcurrencyTests.swift in Sources */,
 				F50000000000000000000008 /* StoreViewModelConcurrencyTests.swift in Sources */,
 				F50000000000000000000009 /* DependencyAndTeamStoreTests.swift in Sources */,
+				F50000000000000000000014 /* TeamNavigationRouteIdentityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@ import SwiftUI
 struct GameSelector: View {
 
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.appDependencyContext) private var appDependencyContext
     @Dependency(\.appSettings) var settings
     @Dependency(\.purchasedProductState) var purchasedProductState
     @State private var isShowingStore = false
@@ -44,7 +45,9 @@ struct GameSelector: View {
         }
         .sheet(isPresented: $isShowingStore) {
             NavigationStack {
-                Store()
+                dependencyContext.withValues {
+                    Store(dependencyContext: dependencyContext)
+                }
             }
             .colorSchemeModifier()
         }
@@ -64,6 +67,13 @@ struct GameSelector: View {
                     isShowingStore.toggle()
                 }
             }
+    }
+
+    private var dependencyContext: AppDependencyContext {
+        guard let appDependencyContext else {
+            preconditionFailure("GameSelector requires app dependency context.")
+        }
+        return appDependencyContext
     }
 
     private func allowsSelection(for game: Game) -> Bool {

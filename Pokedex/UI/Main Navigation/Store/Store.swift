@@ -12,8 +12,14 @@ import StoreKit
 struct Store: View {
 
     @Environment(\.presentationMode) var presentation
-    @StateObject private var storeViewModel = StoreViewModel()
+    @StateObject private var storeViewModel: StoreViewModel
     @State private var thanksMessage: String?
+
+    init(dependencyContext: AppDependencyContext) {
+        _storeViewModel = StateObject(
+            wrappedValue: dependencyContext.withValues { StoreViewModel() }
+        )
+    }
 
     var body: some View {
         ScrollView {
@@ -86,10 +92,10 @@ struct Store: View {
 #if DEBUG
 struct Store_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewDependencyRoot {
+        PreviewDependencyRoot { dependencies in
             Group {
-                Store()
-                Store()
+                Store(dependencyContext: dependencies)
+                Store(dependencyContext: dependencies)
                     .colorScheme(.dark)
             }
         }

@@ -50,7 +50,12 @@ public struct TeamView: View {
 
                 Section {
                     ForEach(viewModel.members, id: \.teamMember.id) { member in
-                        NavigationLink(value: Route.content(.teamMember(member))) {
+                        NavigationLink(value: Route.content(.teamMember(
+                            game: viewModel.game,
+                            teamID: viewModel.team.internalID,
+                            memberID: member.teamMember.internalID,
+                            viewModel: member
+                        ))) {
                             teamMemberCell(member: member)
                         }
                     }
