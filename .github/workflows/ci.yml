@@ -41,6 +41,140 @@ jobs:
           PIKADEX_SIMULATOR_DESTINATION: platform=iOS Simulator,name=iPhone 17,OS=27.0
         run: Scripts/pokedex-release-verification
 
+      # Run this before any simulator restart. The canonical verifier's exit code remains the gate.
+      - name: Capture hosted simulator diagnostics
+        if: always()
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          DIAGNOSTIC_WINDOW_MINUTES: "60"
+        shell: bash
+        run: |
+          set +e
+          set -o pipefail
+          evidence_dir="${RUNNER_TEMP}/PikaDex-A2/evidence"
+          diagnostics_dir="${evidence_dir}/hosted-simulator-diagnostics"
+          mkdir -p "$diagnostics_dir"
+          status_file="${diagnostics_dir}/collection-status.txt"
+          {
+            printf 'collection_started_at_utc=%s\n' "$(/bin/date -u '+%Y-%m-%dT%H:%M:%SZ')"
+            printf 'workflow_run_id=%s\n' "${GITHUB_RUN_ID:-unknown}"
+            printf 'workflow_run_attempt=%s\n' "${GITHUB_RUN_ATTEMPT:-unknown}"
+            printf 'workflow_sha=%s\n' "${GITHUB_SHA:-unknown}"
+            printf 'checkout_commit=%s\n' "$(git rev-parse HEAD 2>/dev/null || printf unavailable)"
+            printf 'checkout_tree=%s\n' "$(git rev-parse 'HEAD^{tree}' 2>/dev/null || printf unavailable)"
+            printf 'log_window_minutes=%s\n' "$DIAGNOSTIC_WINDOW_MINUTES"
+          } > "$status_file"
+
+          capture() {
+            local label="$1"
+            local timeout_seconds="$2"
+            local max_bytes="$3"
+            shift 3
+            local output_path="${diagnostics_dir}/${label}.log"
+            local captured_at header_bytes payload_limit command_status reader_status bytes outcome
+            local -a pipeline_statuses
+
+            captured_at="$(/bin/date -u '+%Y-%m-%dT%H:%M:%SZ')"
+            printf 'captured_at_utc=%s\ntimeout_seconds=%s\n' "$captured_at" "$timeout_seconds" > "$output_path"
+            header_bytes="$(wc -c < "$output_path" | tr -d '[:space:]')"
+            payload_limit=$((max_bytes - header_bytes))
+            /usr/bin/perl -e 'alarm shift; exec @ARGV' "$timeout_seconds" "$@" 2>&1 |
+              LC_ALL=C /usr/bin/awk -v limit="$payload_limit" '
+                {
+                  record = $0 ORS
+                  available = limit - written
+                  if (available > 0) {
+                    if (length(record) > available) {
+                      printf "%s", substr(record, 1, available)
+                      written += available
+                    } else {
+                      printf "%s", record
+                      written += length(record)
+                    }
+                  }
+                }
+              ' >> "$output_path"
+            pipeline_statuses=( "${PIPESTATUS[@]}" )
+            command_status="${pipeline_statuses[0]}"
+            reader_status="${pipeline_statuses[1]}"
+            bytes="$(wc -c < "$output_path" | tr -d '[:space:]')"
+
+            if [ "$bytes" -ge "$max_bytes" ]; then
+              outcome="output_limit_reached"
+            elif [ "$command_status" -eq 142 ]; then
+              outcome="timed_out"
+            elif [ "$command_status" -ne 0 ] || [ "$reader_status" -ne 0 ]; then
+              outcome="command_failed"
+            else
+              outcome="complete"
+            fi
+
+            printf '%s\t%s\tcommand_status=%s\treader_status=%s\tbytes=%s\n' "$label" "$outcome" "$command_status" "$reader_status" "$bytes" >> "$status_file"
+            if [ "$outcome" != "complete" ]; then
+              printf '::warning::Simulator diagnostic %s: %s (command status %s, reader status %s, %s bytes)\n' "$label" "$outcome" "$command_status" "$reader_status" "$bytes"
+            fi
+          }
+
+          capture simulator-devices 20 2097152 xcrun simctl list devices --json
+          capture related-processes 15 524288 /bin/bash -c "ps -A -o pid,ppid,state,etime,%cpu,%mem,comm | /usr/bin/awk 'NR == 1 || /xctest|testmanagerd|Simulator|CoreSimulator|xcodebuild|simctl|Pokedex|Modules|DatabasePipelineTests/'"
+          capture disk-usage 15 65536 df -h "$RUNNER_TEMP" "$HOME"
+          capture memory-state 15 65536 /bin/bash -c 'vm_stat; memory_pressure'
+          capture unified-log 45 8388608 log show --last "${DIAGNOSTIC_WINDOW_MINUTES}m" --style compact --predicate 'process == "xctest" OR process == "testmanagerd" OR process == "xcodebuild" OR process == "launchd_sim" OR process CONTAINS[c] "Simulator" OR process CONTAINS[c] "Pokedex" OR process == "Modules" OR process == "DatabasePipelineTests" OR process == "PokedexConcurrencyTests"'
+
+          # Copy recent reports only for XCTest and simulator processes.
+          crash_source="${HOME}/Library/Logs/DiagnosticReports"
+          crash_dir="${diagnostics_dir}/crash-reports"
+          crash_candidates="${diagnostics_dir}/crash-report-candidates.txt"
+          mkdir -p "$crash_dir"
+          copied_reports=0
+          copied_bytes=0
+          if [ -d "$crash_source" ]; then
+            if find "$crash_source" -maxdepth 1 -type f -mmin "-${DIAGNOSTIC_WINDOW_MINUTES}" \( \
+              -iname '*xctest*.ips' -o -iname '*xctest*.crash' \
+              -o -iname '*testmanagerd*.ips' -o -iname '*testmanagerd*.crash' \
+              -o -iname '*simulator*.ips' -o -iname '*simulator*.crash' \
+              -o -iname '*coresimulator*.ips' -o -iname '*coresimulator*.crash' \
+              -o -iname '*pokedex*.ips' -o -iname '*pokedex*.crash' \
+              -o -iname '*modules*.ips' -o -iname '*modules*.crash' \
+              -o -iname '*databasepipelines*.ips' -o -iname '*databasepipelines*.crash' \
+              -o -iname '*pokedexconcurrencytests*.ips' -o -iname '*pokedexconcurrencytests*.crash' \
+            \) -print 2>/dev/null | LC_ALL=C /usr/bin/awk 'NR <= 20 { sub(/^.*\//, ""); print }' > "$crash_candidates"; then
+              while IFS= read -r report_name; do
+                [ -n "$report_name" ] || continue
+                report="${crash_source}/${report_name}"
+                if [ "$copied_reports" -ge 8 ]; then
+                  printf 'crash_report_copy_limit_reached=8\n' >> "$status_file"
+                  break
+                fi
+                report_bytes="$(wc -c < "$report" | tr -d '[:space:]')"
+                if [ "$report_bytes" -gt 2097152 ]; then
+                  printf 'crash_report_skipped=%s reason=over_2097152_bytes bytes=%s\n' "$report_name" "$report_bytes" >> "$status_file"
+                  printf '::warning::Skipping simulator crash report over 2 MiB: %s\n' "$report_name"
+                  continue
+                fi
+                if [ "$((copied_bytes + report_bytes))" -gt 8388608 ]; then
+                  printf 'crash_report_skipped=%s reason=total_copy_limit bytes=%s\n' "$report_name" "$report_bytes" >> "$status_file"
+                  continue
+                fi
+                if cp "$report" "${crash_dir}/${report_name}"; then
+                  copied_reports=$((copied_reports + 1))
+                  copied_bytes=$((copied_bytes + report_bytes))
+                  printf 'crash_report_copied=%s bytes=%s\n' "$report_name" "$report_bytes" >> "$status_file"
+                else
+                  printf 'crash_report_copy_failed=%s\n' "$report_name" >> "$status_file"
+                  printf '::warning::Could not copy simulator crash report: %s\n' "$report_name"
+                fi
+              done < "$crash_candidates"
+            else
+              printf 'crash_report_discovery=failed\n' >> "$status_file"
+              printf '::warning::Could not scan recent simulator crash reports\n'
+            fi
+          else
+            printf 'crash_report_directory=missing\n' >> "$status_file"
+          fi
+          printf 'crash_reports_copied=%s total_bytes=%s\n' "$copied_reports" "$copied_bytes" >> "$status_file"
+
       - name: Upload verification evidence
         if: always()
         uses: actions/upload-artifact@v7
