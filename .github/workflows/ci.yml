@@ -52,22 +52,40 @@ jobs:
         run: |
           set +e
           set -o pipefail
-          evidence_dir="${RUNNER_TEMP}/PikaDex-A2/evidence"
+          build_root="${RUNNER_TEMP}/PikaDex-A2"
+          evidence_dir="${build_root}/evidence"
           diagnostics_dir="${evidence_dir}/hosted-simulator-diagnostics"
-          mkdir -p "$diagnostics_dir"
           status_file="${diagnostics_dir}/collection-status.txt"
-          {
-            printf 'collection_started_at_utc=%s\n' "$(/bin/date -u '+%Y-%m-%dT%H:%M:%SZ')"
-            printf 'workflow_run_id=%s\n' "${GITHUB_RUN_ID:-unknown}"
-            printf 'workflow_run_attempt=%s\n' "${GITHUB_RUN_ATTEMPT:-unknown}"
-            printf 'workflow_sha=%s\n' "${GITHUB_SHA:-unknown}"
-            printf 'checkout_commit=%s\n' "$(git rev-parse HEAD 2>/dev/null || printf unavailable)"
-            printf 'checkout_tree=%s\n' "$(git rev-parse 'HEAD^{tree}' 2>/dev/null || printf unavailable)"
-            printf 'log_window_minutes=%s\n' "$DIAGNOSTIC_WINDOW_MINUTES"
-          } > "$status_file"
+          if [ -L "$build_root" ] || [ -L "$evidence_dir" ] || [ -L "$diagnostics_dir" ]; then
+            printf '::error::Refusing symlinked simulator diagnostic paths\n'
+            exit 1
+          fi
+          if ! mkdir -p "$diagnostics_dir"; then
+            printf '::error::Could not create simulator diagnostic directory\n'
+            exit 1
+          fi
+          if [ -L "$evidence_dir" ] || [ -L "$diagnostics_dir" ] || [ -e "$status_file" ] || [ -L "$status_file" ]; then
+            printf '::error::Refusing unsafe or pre-existing simulator diagnostic status path\n'
+            exit 1
+          fi
+          if ! (
+            set -o noclobber
+            {
+              printf 'collection_started_at_utc=%s\n' "$(/bin/date -u '+%Y-%m-%dT%H:%M:%SZ')"
+              printf 'workflow_run_id=%s\n' "${GITHUB_RUN_ID:-unknown}"
+              printf 'workflow_run_attempt=%s\n' "${GITHUB_RUN_ATTEMPT:-unknown}"
+              printf 'workflow_sha=%s\n' "${GITHUB_SHA:-unknown}"
+              printf 'checkout_commit=%s\n' "$(git rev-parse HEAD 2>/dev/null || printf unavailable)"
+              printf 'checkout_tree=%s\n' "$(git rev-parse 'HEAD^{tree}' 2>/dev/null || printf unavailable)"
+              printf 'log_window_minutes=%s\n' "$DIAGNOSTIC_WINDOW_MINUTES"
+            } > "$status_file"
+          ); then
+            printf '::error::Could not safely initialize simulator diagnostic status\n'
+            exit 1
+          fi
 
           # Preserve the Modules result before collecting other diagnostics.
-          python3 Scripts/capture_enumeration_xcresult.py "${RUNNER_TEMP}/PikaDex-A2" \
+          python3 Scripts/capture_enumeration_xcresult.py "$build_root" \
             --max-files 10000 \
             --max-bytes 536870912 \
             --copy-timeout-seconds 45

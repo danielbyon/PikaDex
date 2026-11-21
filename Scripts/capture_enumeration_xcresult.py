@@ -284,6 +284,31 @@ def prepare_diagnostics(build_root: Path) -> Path:
     return diagnostics
 
 
+def open_enumeration_directory(build_root: Path) -> int:
+    """Open the artifact directory through no-follow handles for every parent."""
+    directory_flags = getattr(os, "O_DIRECTORY", 0) | getattr(os, "O_NOFOLLOW", 0)
+    if not directory_flags or not hasattr(os, "O_DIRECTORY") or not hasattr(os, "O_NOFOLLOW"):
+        raise CaptureProblem("copy_failed reason=artifact_directory_isolation")
+    root_fd = evidence_fd = diagnostics_fd = None
+    try:
+        root_fd = os.open(build_root, os.O_RDONLY | directory_flags)
+        evidence_fd = os.open("evidence", os.O_RDONLY | directory_flags, dir_fd=root_fd)
+        diagnostics_fd = os.open(
+            "hosted-simulator-diagnostics", os.O_RDONLY | directory_flags, dir_fd=evidence_fd
+        )
+        try:
+            os.mkdir("enumeration", 0o700, dir_fd=diagnostics_fd)
+        except FileExistsError:
+            pass
+        return os.open("enumeration", os.O_RDONLY | directory_flags, dir_fd=diagnostics_fd)
+    except (OSError, ValueError) as error:
+        raise CaptureProblem("copy_failed reason=artifact_directory_isolation") from error
+    finally:
+        for descriptor in (diagnostics_fd, evidence_fd, root_fd):
+            if descriptor is not None:
+                os.close(descriptor)
+
+
 def capture_enumeration_xcresult(
     build_root: Path,
     *,
@@ -305,46 +330,61 @@ def capture_enumeration_xcresult(
         return f"enumeration_xcresult_capture={error}"
 
     staging_root = build_root / "diagnostic-staging"
-    destination = diagnostics / "enumeration" / "enumerate_Modules.xcresult"
     try:
-        destination.parent.resolve().relative_to(build_root)
-    except (OSError, ValueError):
-        return status_line("copy_failed", reason="artifact_destination_isolation")
+        destination_directory_fd = open_enumeration_directory(build_root)
+    except CaptureProblem as error:
+        return f"enumeration_xcresult_capture={error}"
     try:
-        if staging_root.is_symlink():
-            return status_line("copy_failed", reason="staging_directory_isolation")
-        staging_root.mkdir(parents=True, exist_ok=True)
-        staging_root.resolve(strict=True).relative_to(build_root)
-        with tempfile.TemporaryDirectory(prefix="enumeration-", dir=staging_root) as temporary:
-            staged_bundle = Path(temporary) / "enumerate_Modules.xcresult"
-            try:
-                copied = subprocess.run(
-                    [*copy_command, str(source), str(staged_bundle)],
-                    stdout=subprocess.DEVNULL,
-                    stderr=subprocess.DEVNULL,
-                    timeout=copy_timeout_seconds,
-                    check=False,
+        try:
+            if staging_root.is_symlink():
+                return status_line("copy_failed", reason="staging_directory_isolation")
+            staging_root.mkdir(parents=True, exist_ok=True)
+            staging_root.resolve(strict=True).relative_to(build_root)
+            with tempfile.TemporaryDirectory(prefix="enumeration-", dir=staging_root) as temporary:
+                staged_bundle = Path(temporary) / "enumerate_Modules.xcresult"
+                try:
+                    copied = subprocess.run(
+                        [*copy_command, str(source), str(staged_bundle)],
+                        stdout=subprocess.DEVNULL,
+                        stderr=subprocess.DEVNULL,
+                        timeout=copy_timeout_seconds,
+                        check=False,
+                    )
+                except subprocess.TimeoutExpired:
+                    return status_line("copy_timed_out", seconds=copy_timeout_seconds)
+                except OSError:
+                    return status_line("copy_failed", reason="copy_command")
+                if copied.returncode != 0:
+                    return status_line("copy_failed", command_status=copied.returncode)
+                if not staged_bundle.is_dir():
+                    return status_line("copy_failed", reason="copy_output_missing")
+                try:
+                    copied_files, copied_bytes = inventory_bundle(staged_bundle, max_files, max_bytes)
+                except CaptureProblem:
+                    return status_line("copy_failed", reason="copy_verification")
+                if (copied_files, copied_bytes) != (source_files, source_bytes):
+                    return status_line("copy_failed", reason="copy_verification")
+                try:
+                    os.stat(
+                        "enumerate_Modules.xcresult",
+                        dir_fd=destination_directory_fd,
+                        follow_symlinks=False,
+                    )
+                except FileNotFoundError:
+                    pass
+                else:
+                    return status_line(
+                        "copy_failed", reason="artifact_limit_reached", max_artifacts=1
+                    )
+                os.replace(
+                    staged_bundle,
+                    "enumerate_Modules.xcresult",
+                    dst_dir_fd=destination_directory_fd,
                 )
-            except subprocess.TimeoutExpired:
-                return status_line("copy_timed_out", seconds=copy_timeout_seconds)
-            except OSError:
-                return status_line("copy_failed", reason="copy_command")
-            if copied.returncode != 0:
-                return status_line("copy_failed", command_status=copied.returncode)
-            if not staged_bundle.is_dir():
-                return status_line("copy_failed", reason="copy_output_missing")
-            try:
-                copied_files, copied_bytes = inventory_bundle(staged_bundle, max_files, max_bytes)
-            except CaptureProblem:
-                return status_line("copy_failed", reason="copy_verification")
-            if (copied_files, copied_bytes) != (source_files, source_bytes):
-                return status_line("copy_failed", reason="copy_verification")
-            if destination.exists() or destination.is_symlink():
-                return status_line("copy_failed", reason="artifact_limit_reached", max_artifacts=1)
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            os.replace(staged_bundle, destination)
-    except (OSError, ValueError):
-        return status_line("copy_failed", reason="artifact_destination")
+        except (OSError, ValueError):
+            return status_line("copy_failed", reason="artifact_destination")
+    finally:
+        os.close(destination_directory_fd)
 
     return status_line(
         "captured",
