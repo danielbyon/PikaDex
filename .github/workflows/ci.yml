@@ -45,7 +45,7 @@ jobs:
       - name: Capture hosted simulator diagnostics
         if: always()
         continue-on-error: true
-        timeout-minutes: 3
+        timeout-minutes: 5
         env:
           DIAGNOSTIC_WINDOW_MINUTES: "60"
         shell: bash
@@ -65,6 +65,12 @@ jobs:
             printf 'checkout_tree=%s\n' "$(git rev-parse 'HEAD^{tree}' 2>/dev/null || printf unavailable)"
             printf 'log_window_minutes=%s\n' "$DIAGNOSTIC_WINDOW_MINUTES"
           } > "$status_file"
+
+          # Preserve the Modules result before collecting other diagnostics.
+          python3 Scripts/capture_enumeration_xcresult.py "${RUNNER_TEMP}/PikaDex-A2" \
+            --max-files 10000 \
+            --max-bytes 536870912 \
+            --copy-timeout-seconds 45
 
           capture() {
             local label="$1"
