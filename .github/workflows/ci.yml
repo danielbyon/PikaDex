@@ -32,14 +32,37 @@ jobs:
           xcrun swift --version
 
       - name: Run release verifier Python tests
-        run: python3 -m unittest Scripts.tests.test_release_verification_inventory
+        run: |
+          python3 -m unittest \
+            Scripts.tests.test_release_verification_inventory \
+            Scripts.tests.test_capture_enumeration_xcresult
 
       - name: Run canonical release verification
         id: verification
         env:
           PIKADEX_RELEASE_BUILD_ROOT: ${{ runner.temp }}/PikaDex-A2
           PIKADEX_SIMULATOR_DESTINATION: platform=iOS Simulator,name=iPhone 17,OS=27.0
-        run: Scripts/pokedex-release-verification
+        shell: bash
+        run: |
+          set +e
+          Scripts/pokedex-release-verification &
+          verifier_pid=$!
+          python3 Scripts/capture_enumeration_xcresult.py "$PIKADEX_RELEASE_BUILD_ROOT" \
+            --watch-verifier-pid "$verifier_pid" \
+            --wait-timeout-seconds 7200 \
+            --max-files 10000 \
+            --max-bytes 536870912 \
+            --copy-timeout-seconds 45 &
+          observer_pid=$!
+
+          wait "$verifier_pid"
+          verifier_status=$?
+          wait "$observer_pid"
+          observer_status=$?
+          if [ "$observer_status" -ne 0 ]; then
+            printf '::error::Enumeration result observer failed with status %s; canonical verifier status is %s\n' "$observer_status" "$verifier_status"
+          fi
+          exit "$verifier_status"
 
       # Run this before any simulator restart. The canonical verifier's exit code remains the gate.
       - name: Capture hosted simulator diagnostics
@@ -84,11 +107,9 @@ jobs:
             exit 1
           fi
 
-          # Preserve the Modules result before collecting other diagnostics.
+          # Publish the copy staged by the concurrent enumeration observer.
           python3 Scripts/capture_enumeration_xcresult.py "$build_root" \
-            --max-files 10000 \
-            --max-bytes 536870912 \
-            --copy-timeout-seconds 45
+            --publish-staged
 
           capture() {
             local label="$1"
