@@ -181,6 +181,36 @@ class EnumerationResultSelectionTests(unittest.TestCase):
         )
         self.assertIn("reason=enumeration_gate_marker_invalid", status)
 
+    def test_direct_capture_reports_persistent_malformed_marker_without_publishing(
+        self,
+    ) -> None:
+        modules = self.make_bundle(
+            "Test-Modules-corrupt-marker.xcresult", b"modules-result"
+        )
+        self.report_result(modules)
+        (self.logs / "enumerate_Modules.exit").write_text(
+            "corrupt\n", encoding="ascii"
+        )
+
+        outcome = CAPTURE.capture_enumeration_xcresult(self.build_root)
+
+        expected = (
+            "enumeration_xcresult_capture=inspection_failed "
+            "reason=enumeration_gate_marker_invalid"
+        )
+        status = (self.diagnostics / "collection-status.txt").read_text(
+            encoding="utf-8"
+        )
+        retained = (
+            self.diagnostics
+            / "enumeration"
+            / "enumerate_Modules.xcresult"
+        )
+        self.assertEqual(outcome, expected)
+        self.assertIn(expected, status)
+        self.assertNotIn("enumeration_xcresult_capture=captured", status)
+        self.assertFalse(retained.exists())
+
     def test_exact_logged_modules_path_wins_over_unexpected_summary_titles(self) -> None:
         modules = self.make_bundle("Test-Modules-fixture.xcresult", b"modules-result")
         other = self.make_bundle("Test-PokedexTests-fixture.xcresult", b"other-result")

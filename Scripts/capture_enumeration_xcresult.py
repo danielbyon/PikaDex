@@ -994,8 +994,11 @@ def capture_enumeration_xcresult(
     gate_exit_code = None
     try:
         _gate_state, gate_exit_code = _read_gate_exit(build_root)
-    except CaptureProblem:
-        pass
+    except CaptureProblem as error:
+        outcome = f"enumeration_xcresult_capture={error}"
+        if not append_status(build_root, outcome):
+            return "enumeration_xcresult_capture=inspection_failed reason=status_write"
+        return outcome
     try:
         _capture_to_staging(
             build_root,
