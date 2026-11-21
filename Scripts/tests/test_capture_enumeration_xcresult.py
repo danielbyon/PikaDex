@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import threading
 import textwrap
 import time
 import unittest
@@ -53,6 +54,132 @@ class EnumerationResultSelectionTests(unittest.TestCase):
         (self.logs / "enumerate_Modules.exit").write_text(
             f"{exit_code}\n", encoding="utf-8"
         )
+
+    def start_marker_writer(self, *steps: str) -> subprocess.Popen[bytes]:
+        marker = self.logs / "enumerate_Modules.exit"
+        marker.write_text("not_run\n", encoding="ascii")
+        writer = self.root / "write_gate_markers.py"
+        writer.write_text(
+            textwrap.dedent(
+                """
+                import sys
+                import time
+                from pathlib import Path
+
+                marker = Path(sys.argv[1])
+                for step in sys.argv[2:]:
+                    if step.startswith("sleep:"):
+                        time.sleep(float(step.split(":", 1)[1]))
+                    else:
+                        marker.write_text(step + "\\n", encoding="ascii")
+                """
+            ),
+            encoding="utf-8",
+        )
+        return subprocess.Popen([sys.executable, str(writer), str(marker), *steps])
+
+    def wait_for_gate_writer(self, writer: subprocess.Popen[bytes]) -> None:
+        try:
+            self.assertEqual(writer.wait(timeout=5), 0)
+        finally:
+            if writer.poll() is None:
+                writer.terminate()
+                writer.wait(timeout=5)
+
+    def test_not_run_in_progress_zero_marker_lifecycle(self) -> None:
+        writer = self.start_marker_writer("sleep:0.03", "in_progress", "sleep:0.03", "0")
+        try:
+            exit_code = CAPTURE._wait_for_modules_gate(
+                self.build_root, writer.pid, timeout_seconds=2, poll_seconds=0.005
+            )
+        finally:
+            self.wait_for_gate_writer(writer)
+
+        self.assertEqual(exit_code, 0)
+
+    def test_not_run_and_in_progress_are_distinct_marker_states(self) -> None:
+        marker = self.logs / "enumerate_Modules.exit"
+        marker.write_text("not_run\n", encoding="ascii")
+        self.assertEqual(CAPTURE._read_gate_exit(self.build_root), ("not_run", None))
+
+        marker.write_text("in_progress\n", encoding="ascii")
+        self.assertEqual(
+            CAPTURE._read_gate_exit(self.build_root), ("in_progress", None)
+        )
+
+    def test_not_run_in_progress_two_marker_lifecycle(self) -> None:
+        writer = self.start_marker_writer("sleep:0.03", "in_progress", "sleep:0.03", "2")
+        try:
+            exit_code = CAPTURE._wait_for_modules_gate(
+                self.build_root, writer.pid, timeout_seconds=2, poll_seconds=0.005
+            )
+        finally:
+            self.wait_for_gate_writer(writer)
+
+        self.assertEqual(exit_code, 2)
+
+    def test_verifier_exit_with_not_run_marker_is_not_reached(self) -> None:
+        marker = self.logs / "enumerate_Modules.exit"
+        marker.write_text("not_run\n", encoding="ascii")
+        verifier = subprocess.Popen([sys.executable, "-c", "pass"])
+        verifier.wait(timeout=5)
+
+        with patch.object(CAPTURE, "_process_is_running", return_value=False):
+            outcome = CAPTURE.observe_enumeration_result(
+                self.build_root, verifier.pid, timeout_seconds=1
+            )
+
+        self.assertIn("reason=enumerate_Modules_gate_not_reached", outcome)
+
+    def test_empty_or_partial_marker_reads_retry_until_terminal_status(self) -> None:
+        marker = self.logs / "enumerate_Modules.exit"
+        for transient in (b"", b"0"):
+            with self.subTest(transient=transient):
+                marker.write_bytes(transient)
+
+                def finish_marker() -> None:
+                    time.sleep(0.04)
+                    marker.write_bytes(b"0\n")
+
+                writer = threading.Thread(target=finish_marker)
+                writer.start()
+                try:
+                    state, exit_code = CAPTURE._read_gate_exit(self.build_root)
+                finally:
+                    writer.join(timeout=2)
+
+                self.assertEqual(state, "completed")
+                self.assertEqual(exit_code, 0)
+
+    def test_persistent_malformed_marker_is_an_inspection_error(self) -> None:
+        marker = self.logs / "enumerate_Modules.exit"
+        marker.write_text("corrupt\n", encoding="ascii")
+        started = time.monotonic()
+
+        with patch.object(CAPTURE, "_process_is_running", return_value=True):
+            outcome = CAPTURE.observe_enumeration_result(
+                self.build_root, os.getpid(), timeout_seconds=1
+            )
+
+        self.assertGreaterEqual(time.monotonic() - started, 0.45)
+        self.assertIn(
+            "enumeration_xcresult_capture=inspection_failed "
+            "reason=enumeration_gate_marker_invalid",
+            outcome,
+        )
+        staged_record = (
+            self.build_root
+            / "diagnostic-staging"
+            / "enumeration-capture"
+            / "capture-record.json"
+        ).read_text(encoding="utf-8")
+        self.assertIn("reason=enumeration_gate_marker_invalid", staged_record)
+        published = CAPTURE.publish_staged_capture(self.build_root)
+        self.assertIn("reason=enumeration_gate_marker_invalid", published)
+        status = (self.diagnostics / "collection-status.txt").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("reason=enumeration_gate_marker_invalid", status)
 
     def test_exact_logged_modules_path_wins_over_unexpected_summary_titles(self) -> None:
         modules = self.make_bundle("Test-Modules-fixture.xcresult", b"modules-result")

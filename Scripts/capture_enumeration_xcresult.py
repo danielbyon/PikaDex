@@ -21,6 +21,7 @@ import time
 import traceback
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal
 from urllib.parse import quote_from_bytes
 
 
@@ -35,6 +36,11 @@ MAX_LOG_TAIL_BYTES = 1024 * 1024
 MAX_CAPTURE_RECORD_BYTES = 16 * 1024
 MAX_OBSERVER_SECONDS = 2 * 60 * 60
 OBSERVER_POLL_SECONDS = 0.25
+GATE_MARKER_READ_RETRY_SECONDS = 0.5
+GATE_MARKER_READ_RETRY_INTERVAL_SECONDS = 0.025
+GATE_MARKER_MAX_BYTES = 64
+
+GateMarkerState = Literal["not_run", "in_progress", "completed"]
 
 STAGING_DIRECTORY = "diagnostic-staging"
 CAPTURE_DIRECTORY = "enumeration-capture"
@@ -987,7 +993,7 @@ def capture_enumeration_xcresult(
     """Select from the logged Modules path, stage it safely, and publish it."""
     gate_exit_code = None
     try:
-        _gate_found, gate_exit_code = _read_gate_exit(build_root)
+        _gate_state, gate_exit_code = _read_gate_exit(build_root)
     except CaptureProblem:
         pass
     try:
@@ -1005,39 +1011,68 @@ def capture_enumeration_xcresult(
     return publish_staged_capture(build_root)
 
 
-def _read_gate_exit(build_root: Path) -> tuple[bool, int | None]:
-    try:
-        logs_fd = _open_directory_chain(build_root, ("evidence", "logs"))
-    except CaptureProblem as error:
-        if str(error).startswith("missing reason="):
-            return False, None
-        raise
-    try:
+def _read_gate_exit(
+    build_root: Path,
+    *,
+    retry_seconds: float = GATE_MARKER_READ_RETRY_SECONDS,
+) -> tuple[GateMarkerState, int | None]:
+    """Read a complete gate marker, allowing briefly for its in-place rewrite."""
+    retry_seconds = min(
+        GATE_MARKER_READ_RETRY_SECONDS, max(0.0, retry_seconds)
+    )
+    deadline = time.monotonic() + retry_seconds
+    while True:
         try:
-            descriptor = os.open(
-                "enumerate_Modules.exit",
-                os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0),
-                dir_fd=logs_fd,
-            )
-        except FileNotFoundError:
-            return False, None
-        except OSError as error:
-            raise CaptureProblem("inspection_failed reason=enumeration_gate_marker_open") from error
+            logs_fd = _open_directory_chain(build_root, ("evidence", "logs"))
+        except CaptureProblem as error:
+            if str(error).startswith("missing reason="):
+                return "not_run", None
+            raise
         try:
-            info = os.fstat(descriptor)
-            if not stat.S_ISREG(info.st_mode) or info.st_size > 64:
-                raise CaptureProblem("inspection_failed reason=enumeration_gate_marker_invalid")
-            value = os.read(descriptor, 65).decode("ascii", errors="replace").strip()
+            try:
+                descriptor = os.open(
+                    "enumerate_Modules.exit",
+                    os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0),
+                    dir_fd=logs_fd,
+                )
+            except FileNotFoundError:
+                return "not_run", None
+            except OSError as error:
+                raise CaptureProblem(
+                    "inspection_failed reason=enumeration_gate_marker_open"
+                ) from error
+            try:
+                info = os.fstat(descriptor)
+                if (
+                    not stat.S_ISREG(info.st_mode)
+                    or info.st_size > GATE_MARKER_MAX_BYTES
+                ):
+                    raise CaptureProblem(
+                        "inspection_failed reason=enumeration_gate_marker_invalid"
+                    )
+                raw_value = os.read(descriptor, GATE_MARKER_MAX_BYTES + 1)
+            finally:
+                os.close(descriptor)
         finally:
-            os.close(descriptor)
-    finally:
-        os.close(logs_fd)
-    if value == "in_progress":
-        return True, None
-    try:
-        return True, int(value)
-    except ValueError as error:
-        raise CaptureProblem("inspection_failed reason=enumeration_gate_marker_invalid") from error
+            os.close(logs_fd)
+
+        if raw_value == b"not_run\n":
+            return "not_run", None
+        if raw_value == b"in_progress\n":
+            return "in_progress", None
+        if raw_value.endswith(b"\n"):
+            digits = raw_value[:-1]
+            if digits.isdigit() and (digits == b"0" or not digits.startswith(b"0")):
+                exit_code = int(digits)
+                if exit_code <= 255:
+                    return "completed", exit_code
+
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            raise CaptureProblem(
+                "inspection_failed reason=enumeration_gate_marker_invalid"
+            )
+        time.sleep(min(GATE_MARKER_READ_RETRY_INTERVAL_SECONDS, remaining))
 
 
 def _process_is_running(process_id: int) -> bool:
@@ -1061,14 +1096,18 @@ def _wait_for_modules_gate(
     if verifier_pid <= 1 or timeout_seconds <= 0:
         raise CaptureProblem("inspection_failed reason=observer_arguments_invalid")
     deadline = time.monotonic() + timeout_seconds
-    marker_in_progress = False
     while time.monotonic() < deadline:
-        found, exit_code = _read_gate_exit(build_root)
-        if found and exit_code is not None:
+        state, exit_code = _read_gate_exit(
+            build_root,
+            retry_seconds=min(
+                GATE_MARKER_READ_RETRY_SECONDS,
+                max(0.0, deadline - time.monotonic()),
+            ),
+        )
+        if state == "completed" and exit_code is not None:
             return exit_code
-        marker_in_progress = found
         if not _process_is_running(verifier_pid):
-            if marker_in_progress:
+            if state == "in_progress":
                 raise CaptureProblem("inspection_failed reason=enumerate_Modules_gate_incomplete")
             return None
         time.sleep(min(poll_seconds, max(0.0, deadline - time.monotonic())))
