@@ -39,6 +39,17 @@
                ReferencedContainer = "container:Pokedex.xcodeproj">
             </BuildableReference>
          </TestableReference>
+      <TestableReference
+         skipped = "NO"
+         parallelizable = "NO">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A20A0000000000000000000C"
+            BuildableName = "PokedexWidgetExtensionTests.xctest"
+            BlueprintName = "PokedexWidgetExtensionTests"
+            ReferencedContainer = "container:Pokedex.xcodeproj">
+         </BuildableReference>
+      </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -49,24 +49,26 @@ struct TeamWidgetEntryView : View {
 
 struct TeamWidgetEntryView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamWidgetEntryView(entry: TeamEntry(team: placeholderTeam, game: "sword"))
+        TeamWidgetEntryView(entry: TeamEntry(team: placeholderTeam(), game: "sword"))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
 //            .environment(\.sizeCategory, .extraExtraExtraLarge)
     }
 }
 
-private let placeholderTeam = Team(
-    name: "My team",
-    members: [
-        makeTeamMember(withName: "Pikachu"),
-        makeTeamMember(withName: "Bulbasaur"),
-        makeTeamMember(withName: "Charmander"),
-        makeTeamMember(withName: "Squirtle"),
-        makeTeamMember(withName: "Clefairy"),
-        makeTeamMember(withName: "Caterpie")
-    ],
-    internalID: .init()
-)
+private func placeholderTeam() -> Team {
+    Team(
+        name: "My team",
+        members: [
+            makeTeamMember(withName: "Pikachu"),
+            makeTeamMember(withName: "Bulbasaur"),
+            makeTeamMember(withName: "Charmander"),
+            makeTeamMember(withName: "Squirtle"),
+            makeTeamMember(withName: "Clefairy"),
+            makeTeamMember(withName: "Caterpie")
+        ],
+        internalID: .init()
+    )
+}
 
 private func makeTeamMember(withName name: String) -> TeamMember {
     TeamMember(

@@ -32,7 +32,14 @@
       "targetName": "PokedexTests",
       "targetIdentifier": "6547F80A237968D50091A083",
       "platform": "ios-simulator",
-      "sourceGlobs": ["PokedexTests/DeepLinkTests.swift"]
+      "sourceGlobs": ["PokedexTests/DeepLinkTests.swift"],
+      "additionalTargets": [
+        {
+          "targetName": "PokedexWidgetExtensionTests",
+          "targetIdentifier": "A20A0000000000000000000C",
+          "sourceGlobs": ["PokedexWidgetExtensionTests/**/*.swift"]
+        }
+      ]
     },
     {
       "name": "PokedexConcurrencyTests",
