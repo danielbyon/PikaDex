@@ -7,7 +7,15 @@ final class WidgetIntegrationTests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testWidgetRendersSelectedTeamAndOpensTeamsSection() {
+    func testWidgetRendersSelectedTeamAndOpensTeamsSection() throws {
+        try requireDisposableSimulator()
+
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        XCUIDevice.shared.press(.home)
+        let homeScreen = springboard.windows.firstMatch
+        XCTAssertTrue(homeScreen.waitForExistence(timeout: 10), springboard.debugDescription)
+        assertNoExistingWidgets(in: springboard)
+
         let app = XCUIApplication()
         app.launch()
 
@@ -21,11 +29,11 @@ final class WidgetIntegrationTests: XCTestCase {
             notNowButton.tap()
         }
 
-        // Stable names let the test reuse its app-group fixtures across runs.
-        let baselineTeamName = "Widget Baseline Team"
-        let selectedTeamName = "Widget Selected Team"
-        ensureTeam(named: baselineTeamName, containing: "Pikachu", in: app)
-        ensureTeam(named: selectedTeamName, containing: "Eevee", in: app)
+        let fixtureID = String(UUID().uuidString.prefix(8))
+        let baselineTeamName = "Widget Baseline \(fixtureID)"
+        let selectedTeamName = "Widget Selected \(fixtureID)"
+        createTeam(named: baselineTeamName, containing: "Pikachu", in: app)
+        createTeam(named: selectedTeamName, containing: "Eevee", in: app)
 
         let homeButton = app.buttons["Home"]
         XCTAssertTrue(homeButton.waitForExistence(timeout: 10), app.debugDescription)
@@ -33,12 +41,9 @@ final class WidgetIntegrationTests: XCTestCase {
         XCTAssertTrue(app.buttons["Pokémon"].waitForExistence(timeout: 10), app.debugDescription)
         app.terminate()
 
-        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
         XCUIDevice.shared.press(.home)
-        let homeScreen = springboard.windows.firstMatch
         XCTAssertTrue(homeScreen.waitForExistence(timeout: 10), springboard.debugDescription)
 
-        removeExistingWidgets(in: springboard)
         let widget = addWidget(
             baselineTeamName: baselineTeamName,
             on: homeScreen,
@@ -56,35 +61,33 @@ final class WidgetIntegrationTests: XCTestCase {
         XCTAssertTrue(app.staticTexts[selectedTeamName].exists, app.debugDescription)
     }
 
-    /// Removes existing PikaDex widgets so the test starts with a known Home Screen state.
-    private func removeExistingWidgets(in springboard: XCUIApplication) {
+    private func requireDisposableSimulator() throws {
+        let environment = ProcessInfo.processInfo.environment
+        let simulatorName = environment["SIMULATOR_DEVICE_NAME"] ?? ""
+        let expectedSimulatorName = environment["PIKADEX_WIDGET_TEST_SIMULATOR_NAME"]
+        let simulatorID = environment["SIMULATOR_UDID"]
+        let expectedSimulatorID = environment["PIKADEX_WIDGET_TEST_SIMULATOR_UDID"]
+        guard simulatorName.hasPrefix("PikaDex Issue 20 Disposable "),
+              simulatorName == expectedSimulatorName,
+              let simulatorID,
+              simulatorID == expectedSimulatorID,
+              UUID(uuidString: simulatorID) != nil else {
+            throw XCTSkip(
+                "Widget integration requires the exact disposable simulator name and ID "
+                    + "provided to the test launch."
+            )
+        }
+    }
+
+    private func assertNoExistingWidgets(in springboard: XCUIApplication) {
         let widgets = springboard.icons.matching(
             NSPredicate(format: "identifier == %@ AND value == %@", "PikaDex", "Widget")
         )
-        guard widgets.firstMatch.waitForExistence(timeout: 2) else { return }
-
-        let existingWidgetCount = widgets.count
-        for _ in 0..<existingWidgetCount {
-            let widget = widgets.firstMatch
-            guard widget.waitForExistence(timeout: 2) else { break }
-
-            widget.press(forDuration: 1.5)
-            let removeWidgetButton = springboard.buttons["Remove Widget"]
-            XCTAssertTrue(removeWidgetButton.waitForExistence(timeout: 10), springboard.debugDescription)
-            removeWidgetButton.tap()
-
-            let confirmRemovalButton = springboard.alerts.buttons["Remove"]
-            if confirmRemovalButton.waitForExistence(timeout: 3) {
-                confirmRemovalButton.tap()
-            }
-
-            let doneButton = springboard.buttons["Done"]
-            if doneButton.waitForExistence(timeout: 3) {
-                doneButton.tap()
-            }
-        }
-
-        XCTAssertFalse(widgets.firstMatch.exists, springboard.debugDescription)
+        XCTAssertFalse(
+            widgets.firstMatch.exists,
+            "The disposable simulator already has a PikaDex widget; create a fresh simulator.\n"
+                + springboard.debugDescription
+        )
     }
 
     private func addWidget(
@@ -169,22 +172,30 @@ final class WidgetIntegrationTests: XCTestCase {
         XCTAssertTrue(selectedTeamOption.waitForExistence(timeout: 10), springboard.debugDescription)
         selectedTeamOption.tap()
 
-        let doneButton = springboard.buttons["Done"].firstMatch
-        if doneButton.waitForExistence(timeout: 5) {
-            doneButton.tap()
-        } else {
-            springboard.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.85)).tap()
-            if !springboard.staticTexts[teamName].waitForExistence(timeout: 5) {
-                XCUIDevice.shared.press(.home)
-            }
+        let cancelTeamPicker = springboard.buttons["Cancel"].firstMatch
+        if cancelTeamPicker.waitForExistence(timeout: 1) {
+            cancelTeamPicker.tap()
         }
+
+        let widgetConfigurationDescription = springboard.staticTexts[
+            "Shows one of your teams."
+        ].firstMatch
+        XCTAssertTrue(
+            widgetConfigurationDescription.waitForExistence(timeout: 10),
+            springboard.debugDescription
+        )
+        XCTAssertTrue(springboard.buttons[teamName].exists, springboard.debugDescription)
+        springboard.windows.firstMatch
+            .coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.85))
+            .tap()
 
         let renderedTeam = springboard.staticTexts[teamName].firstMatch
         XCTAssertTrue(renderedTeam.waitForExistence(timeout: 15), springboard.debugDescription)
+        XCTAssertFalse(widgetConfigurationDescription.exists, springboard.debugDescription)
         return renderedTeam
     }
 
-    private func ensureTeam(
+    private func createTeam(
         named teamName: String,
         containing memberName: String,
         in app: XCUIApplication
@@ -195,48 +206,42 @@ final class WidgetIntegrationTests: XCTestCase {
             teamsButton.tap()
         }
 
-        let team = app.staticTexts[teamName].firstMatch
-        if team.waitForExistence(timeout: 2) {
-            team.tap()
-        } else {
-            let toolbarButtons = app.navigationBars.buttons
-            XCTAssertGreaterThan(toolbarButtons.count, 0, app.debugDescription)
-            toolbarButtons.element(boundBy: toolbarButtons.count - 1).tap()
+        XCTAssertFalse(app.staticTexts[teamName].exists, app.debugDescription)
+        let toolbarButtons = app.navigationBars.buttons
+        XCTAssertGreaterThan(toolbarButtons.count, 0, app.debugDescription)
+        toolbarButtons.element(boundBy: toolbarButtons.count - 1).tap()
 
-            let newTeams = app.staticTexts.matching(identifier: "New Team")
-            XCTAssertTrue(newTeams.firstMatch.waitForExistence(timeout: 10), app.debugDescription)
-            newTeams.element(boundBy: newTeams.count - 1).tap()
+        let newTeams = app.staticTexts.matching(identifier: "New Team")
+        XCTAssertTrue(newTeams.firstMatch.waitForExistence(timeout: 10), app.debugDescription)
+        newTeams.element(boundBy: newTeams.count - 1).tap()
 
-            let nameField = app.textFields["Name"]
-            XCTAssertTrue(nameField.waitForExistence(timeout: 10), app.debugDescription)
-            let originalName = nameField.value as? String ?? ""
-            nameField.tap()
-            nameField.typeText(
-                String(repeating: XCUIKeyboardKey.delete.rawValue, count: originalName.count)
+        let nameField = app.textFields["Name"]
+        XCTAssertTrue(nameField.waitForExistence(timeout: 10), app.debugDescription)
+        let originalName = nameField.value as? String ?? ""
+        nameField.tap()
+        nameField.typeText(
+            String(repeating: XCUIKeyboardKey.delete.rawValue, count: originalName.count)
                 + teamName
-            )
-            let keyboardDoneButton = app.keyboards.buttons["Done"]
-            if keyboardDoneButton.exists {
-                keyboardDoneButton.tap()
-            } else {
-                nameField.typeText("\n")
-            }
+        )
+        let keyboardDoneButton = app.keyboards.buttons["Done"]
+        if keyboardDoneButton.exists {
+            keyboardDoneButton.tap()
+        } else {
+            nameField.typeText("\n")
         }
 
-        if !app.staticTexts[memberName].firstMatch.waitForExistence(timeout: 2) {
-            let addMemberButton = app.buttons["Add Team Member"]
-            XCTAssertTrue(addMemberButton.waitForExistence(timeout: 10), app.debugDescription)
-            addMemberButton.tap()
+        let addMemberButton = app.buttons["Add Team Member"]
+        XCTAssertTrue(addMemberButton.waitForExistence(timeout: 10), app.debugDescription)
+        addMemberButton.tap()
 
-            let searchField = app.searchFields["Search for a Pokémon"]
-            XCTAssertTrue(searchField.waitForExistence(timeout: 10), app.debugDescription)
-            searchField.tap()
-            searchField.typeText(memberName)
+        let searchField = app.searchFields["Search for a Pokémon"]
+        XCTAssertTrue(searchField.waitForExistence(timeout: 10), app.debugDescription)
+        searchField.tap()
+        searchField.typeText(memberName)
 
-            let member = app.staticTexts[memberName].firstMatch
-            XCTAssertTrue(member.waitForExistence(timeout: 10), app.debugDescription)
-            member.tap()
-        }
+        let member = app.staticTexts[memberName].firstMatch
+        XCTAssertTrue(member.waitForExistence(timeout: 10), app.debugDescription)
+        member.tap()
 
         let homeButton = app.buttons["Home"]
         XCTAssertTrue(homeButton.waitForExistence(timeout: 10), app.debugDescription)
