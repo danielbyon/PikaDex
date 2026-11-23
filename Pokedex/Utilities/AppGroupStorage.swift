@@ -32,6 +32,8 @@ public struct AppGroupStorage<Value>: DynamicProperty where Value: UserDefaultPe
         }
     }
 
+    /// Provides a two-way binding for main-actor SwiftUI views.
+    @MainActor
     public var projectedValue: Binding<Value> {
         return Binding {
             wrappedValue
