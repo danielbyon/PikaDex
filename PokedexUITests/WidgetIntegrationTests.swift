@@ -67,7 +67,7 @@ final class WidgetIntegrationTests: XCTestCase {
         let expectedSimulatorName = environment["PIKADEX_WIDGET_TEST_SIMULATOR_NAME"]
         let simulatorID = environment["SIMULATOR_UDID"]
         let expectedSimulatorID = environment["PIKADEX_WIDGET_TEST_SIMULATOR_UDID"]
-        guard simulatorName.hasPrefix("PikaDex Issue 20 Disposable "),
+        guard simulatorName.hasPrefix("PikaDex Widget Integration Disposable "),
               simulatorName == expectedSimulatorName,
               let simulatorID,
               simulatorID == expectedSimulatorID,

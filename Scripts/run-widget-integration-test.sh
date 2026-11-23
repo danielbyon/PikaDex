@@ -24,7 +24,7 @@ script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 repo_root=$(cd "$script_dir/.." && pwd)
 cd "$repo_root"
 
-simulator_name="PikaDex Issue 20 Disposable $(uuidgen)"
+simulator_name="PikaDex Widget Integration Disposable $(uuidgen)"
 simulator_id=$(xcrun simctl create \
     "$simulator_name" \
     com.apple.CoreSimulator.SimDeviceType.iPhone-17 \
