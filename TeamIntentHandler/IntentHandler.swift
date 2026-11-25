@@ -10,11 +10,16 @@ import Dependencies
 import Intents
 import AppSupport
 import PokedexCore
+#if WIDGET_INTENT_HANDLER_TESTS
+// Hosted tests resolve generated intent classes from the app bundle.
+@testable import PikaDex
+#endif
 
 class IntentHandler: INExtension, TeamConfigurationIntentHandling {
 
     @Dependency(\.teamStorage) var storage
 
+    /// Calls completion once, synchronously on the caller's queue, with teams in selectable-game order.
     func provideTeamOptionsCollection(for intent: TeamConfigurationIntent, with completion: @escaping (INObjectCollection<DynamicTeam>?, Error?) -> Void) {
         var sections: [INObjectSection<DynamicTeam>] = []
         for game in Game.selectableGames {
