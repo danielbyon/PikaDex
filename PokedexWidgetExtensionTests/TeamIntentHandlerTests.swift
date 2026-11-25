@@ -148,6 +148,8 @@ private struct HandlerCompletionSnapshot {
     let callbackWasMainThread: Bool?
 }
 
+/// Stores the completion's collection and error references under a lock.
+/// Tests read the retained Intents objects after the handler call or detached task returns; the recorder never mutates them.
 private final class HandlerCompletionRecorder: @unchecked Sendable {
 
     private let lock = NSLock()
@@ -178,7 +180,8 @@ private final class HandlerCompletionRecorder: @unchecked Sendable {
 
 }
 
-/// A lock-protected fixture that records the games read by the handler.
+/// A `TeamStorage` fixture whose shared state is protected by a lock.
+/// After initialization, every dictionary and read-history access takes the lock. Stored `Team` structs are copied in and out.
 private final class RecordingTeamStorage: TeamStorage, @unchecked Sendable {
 
     private let lock = NSLock()

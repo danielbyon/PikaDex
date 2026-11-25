@@ -51,9 +51,35 @@ validate_external_root() {
     printf '%s' "$resolved"
 }
 
+# Validate Xcode's default package subdirectory before using it for pinned verification.
+validate_derived_source_packages_root() {
+    local path="$derived_data_root/SourcePackages"
+    local resolved
+
+    if [[ -L "$path" ]]; then
+        echo "Cloned package checkout must not be a symbolic link." >&2
+        return 73
+    fi
+
+    resolved=$(python3 -c 'from pathlib import Path; import sys; print(Path(sys.argv[1]).expanduser().resolve())' "$path")
+    if [[ "$resolved" != "$path" || "$resolved" == "/" || ( -e "$resolved" && ! -d "$resolved" ) ]]; then
+        echo "Cloned package checkout must stay within DerivedData and name a directory." >&2
+        return 73
+    fi
+    if [[ "$resolved" != "$derived_data_root/"* ]] || paths_overlap "$resolved" "$repo_root" || paths_overlap "$resolved" "$evidence_root"; then
+        echo "Cloned package checkout must not overlap the repository or evidence directory." >&2
+        return 73
+    fi
+
+    printf '%s' "$resolved"
+}
+
+# Keep one-argument calls on Xcode's default package resolution. Explicit roots select pinned verification.
 derived_data_root="$evidence_root/DerivedData"
 cloned_packages_root="$derived_data_root/SourcePackages"
+explicit_verification=0
 if [[ "$#" -ge 2 ]]; then
+    explicit_verification=1
     derived_data_root=$(validate_external_root "DerivedData" "$2")
     cloned_packages_root="$derived_data_root/SourcePackages"
 fi
@@ -63,10 +89,16 @@ if [[ "$#" -ge 3 ]]; then
         echo "DerivedData and cloned package directories must not overlap." >&2
         exit 73
     fi
+elif [[ "$explicit_verification" -eq 1 ]]; then
+    cloned_packages_root=$(validate_derived_source_packages_root)
 fi
 
 database_build_setting=
-if [[ ${PIKADEX_GENERATED_DATABASE_PATH+x} == x ]]; then
+if [[ "$explicit_verification" -eq 1 ]]; then
+    if [[ ${PIKADEX_GENERATED_DATABASE_PATH+x} != x ]]; then
+        echo "PIKADEX_GENERATED_DATABASE_PATH is required for explicit verification." >&2
+        exit 73
+    fi
     database_path=$PIKADEX_GENERATED_DATABASE_PATH
     if [[ "$database_path" == *$'\n'* || "$database_path" == *$'\r'* || "$database_path" != /* || ! -f "$database_path" || -L "$database_path" || ! -s "$database_path" ]]; then
         echo "PIKADEX_GENERATED_DATABASE_PATH must name an existing, non-empty database file by an absolute path." >&2
@@ -141,13 +173,17 @@ xcodebuild_args=(
     -destination "platform=iOS Simulator,id=$simulator_id"
     -only-testing:PokedexUITests/WidgetIntegrationTests/testWidgetRendersSelectedTeamAndOpensTeamsSection \
     -parallel-testing-enabled NO \
-    -disableAutomaticPackageResolution \
-    -onlyUsePackageVersionsFromResolvedFile \
-    -skipPackageUpdates \
     -derivedDataPath "$derived_data_root"
-    -clonedSourcePackagesDirPath "$cloned_packages_root"
     -resultBundlePath "$evidence_root/widget-integration.xcresult"
 )
+if [[ "$explicit_verification" -eq 1 ]]; then
+    xcodebuild_args+=(
+        -disableAutomaticPackageResolution
+        -onlyUsePackageVersionsFromResolvedFile
+        -skipPackageUpdates
+        -clonedSourcePackagesDirPath "$cloned_packages_root"
+    )
+fi
 if [[ -n "$database_build_setting" ]]; then
     xcodebuild_args+=("$database_build_setting")
 fi
