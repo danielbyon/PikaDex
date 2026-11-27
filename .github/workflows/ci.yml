@@ -6,6 +6,20 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      diagnostic_mode:
+        description: Run the guarded simulator lifecycle diagnostic mode
+        required: false
+        type: boolean
+        default: false
+      tested_source_sha:
+        description: Exact PikaDex source revision to test in diagnostic mode
+        required: false
+        type: string
+      expected_workflow_sha:
+        description: Exact workflow-definition revision for this dispatch
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -17,10 +31,54 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
     steps:
+      - name: Guard diagnostic dispatch identity
+        if: ${{ inputs.diagnostic_mode == true }}
+        env:
+          DIAGNOSTIC_MODE: ${{ inputs.diagnostic_mode }}
+          TESTED_SOURCE_SHA: ${{ inputs.tested_source_sha }}
+          EXPECTED_WORKFLOW_SHA: ${{ inputs.expected_workflow_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_EVENT_NAME" = workflow_dispatch
+          test "$GITHUB_REPOSITORY" = danielbyon/PikaDex
+          test "$GITHUB_REF" = refs/heads/codex/issue-45-instrumented-ci
+          test "$GITHUB_WORKFLOW_REF" = "$GITHUB_REPOSITORY/.github/workflows/ci.yml@$GITHUB_REF"
+          test "$DIAGNOSTIC_MODE" = true
+          [[ "$EXPECTED_WORKFLOW_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$GITHUB_WORKFLOW_SHA" = "$EXPECTED_WORKFLOW_SHA"
+          test "$GITHUB_SHA" = "$EXPECTED_WORKFLOW_SHA"
+          test "$TESTED_SOURCE_SHA" = c579ebb54c41deeb08dc67060d7ec675f8b05d77
+          {
+            printf 'PIKADEX_DIAGNOSTIC_MODE=true\n'
+            printf 'PIKADEX_TESTED_SOURCE_SHA=%s\n' "$TESTED_SOURCE_SHA"
+            printf 'PIKADEX_EXPECTED_SOURCE_TREE_SHA=484e25af84ffa1c8d0ac72527036f78d24f21e84\n'
+            printf 'PIKADEX_EXPECTED_WORKFLOW_SHA=%s\n' "$EXPECTED_WORKFLOW_SHA"
+            printf 'PIKADEX_WORKFLOW_SHA=%s\n' "$GITHUB_WORKFLOW_SHA"
+            printf 'PIKADEX_WORKFLOW_REF=%s\n' "$GITHUB_WORKFLOW_REF"
+            printf 'PIKADEX_EVENT_NAME=%s\n' "$GITHUB_EVENT_NAME"
+          } >> "$GITHUB_ENV"
+
       - name: Check out source
+        if: ${{ inputs.diagnostic_mode != true }}
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
+      - name: Check out guarded diagnostic source
+        if: ${{ inputs.diagnostic_mode == true }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tested_source_sha }}
+          fetch-depth: 1
+
+      - name: Verify guarded diagnostic source identity
+        if: ${{ inputs.diagnostic_mode == true }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$PIKADEX_TESTED_SOURCE_SHA"
+          test "$(git rev-parse 'HEAD^{tree}')" = 484e25af84ffa1c8d0ac72527036f78d24f21e84
 
       - name: Verify Xcode 27.2
         shell: bash
@@ -37,13 +95,1896 @@ jobs:
             Scripts.tests.test_release_verification_inventory \
             Scripts.tests.test_capture_enumeration_xcresult
 
+      - name: Prepare simulator lifecycle observer
+        if: ${{ inputs.diagnostic_mode == true }}
+        continue-on-error: true
+        timeout-minutes: 1
+        env:
+          PIKADEX_DIAGNOSTIC_MODE: ${{ inputs.diagnostic_mode }}
+        shell: bash
+        run: |
+          set +e
+          printf 'PIKADEX_LIFECYCLE_READY=false\n' >> "$GITHUB_ENV"
+          lifecycle_dir=""
+          if [ -n "${RUNNER_TEMP:-}" ] && [ -d "$RUNNER_TEMP" ] && [ ! -L "$RUNNER_TEMP" ]; then
+            lifecycle_dir="$(mktemp -d "$RUNNER_TEMP/PikaDex-Simulator-Lifecycle-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.XXXXXXXX")"
+          fi
+          if [ -z "$lifecycle_dir" ] || [ -L "$lifecycle_dir" ]; then
+            printf '::warning::Lifecycle observer setup could not create a private run directory; canonical verification will continue without it\n'
+            exit 0
+          fi
+          chmod 700 "$lifecycle_dir" || exit 0
+          printf '{"schema_version":1,"state":"incomplete","gate_outcome":"observer_not_started","incomplete_reasons":["observer has not started"]}\n' > "$lifecycle_dir/observer-status.json"
+          chmod 600 "$lifecycle_dir/observer-status.json"
+          cat > "$lifecycle_dir/capture-policy.json" <<'PIKADEX_CAPTURE_POLICY'
+          {
+            "schema_version": 1,
+            "capture_scope": "Host unified logs, process identities, and host resource samples.",
+            "simulator_side_probes": false,
+            "simulator_control_commands": false,
+            "canonical_exit_status_source": "Scripts/pokedex-release-verification",
+            "post_gate_capture_seconds": 300,
+            "tail_stops_when_verifier_completes": true,
+            "forced_cancellation_limit": "SIGKILL cannot run shell cleanup; unfinished observer state stays incomplete and finalization may be absent",
+            "process_table_interval_seconds": 1,
+            "process_identity_limit": 64,
+            "resource_sample_interval_seconds": 10,
+            "aggregate_retained_bytes": 201326592,
+            "full_attachment_export": "omitted; original xcresult bundles remain in canonical verification evidence"
+          }
+          PIKADEX_CAPTURE_POLICY
+          chmod 600 "$lifecycle_dir/capture-policy.json"
+          printf 'PIKADEX_LIFECYCLE_DIR=%s\n' "$lifecycle_dir" >> "$GITHUB_ENV"
+          lifecycle_script="$RUNNER_TEMP/capture_simulator_lifecycle.py"
+          cat > "$lifecycle_script" <<'PIKADEX_LIFECYCLE_PYTHON'
+          #!/usr/bin/env python3
+          """Collect bounded host records around the Modules test-enumeration gate.
+
+          The verifier shell starts and stops this process. Its result is diagnostic only;
+          the canonical verifier keeps control of the job's exit status.
+          """
+
+          from __future__ import annotations
+
+          import argparse
+          import collections
+          import datetime as dt
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import re
+          import selectors
+          import shutil
+          import signal
+          import subprocess
+          import sys
+          import tempfile
+          import time
+          from typing import Any
+
+          MIB = 1024 * 1024
+          LOG_LIMITS = {"prelude": 8 * MIB, "gate": 96 * MIB, "tail": 24 * MIB}
+          PROCESS_SAMPLE_LIMIT = 16 * MIB
+          RESOURCE_LIMIT = 4 * MIB
+          METADATA_LIMIT = 12 * MIB
+          EXPORT_LIMIT = 24 * MIB
+          SEGMENT_LIMIT = 16 * MIB
+          PROCESS_NAMES = (
+              "xcodebuild",
+              "xctest",
+              "testmanagerd",
+              "launchd_sim",
+              "simulatord",
+              "CoreSimulatorService",
+              "SimulatorTrampoline",
+              "Simulator",
+              "SpringBoard",
+              "runningboardd",
+              "backboardd",
+              "simctl",
+          )
+          LOG_PREDICATE = (
+              'process == "CoreSimulatorService" OR process == "SimulatorTrampoline" OR '
+              'process == "launchd_sim" OR process == "simulatord" OR process == "testmanagerd" OR '
+              'process == "xcodebuild" OR process == "xctest" OR process == "simctl" OR '
+              'process == "runningboardd" OR process == "backboardd"'
+          )
+          SECRET_PATTERNS = (
+              re.compile(r"(?i)(authorization|password|passwd|secret|cookie|api[_-]?key|access[_-]?token)(\s*[:=]\s*)([^,\s\"']+)"),
+              re.compile(r"(?i)\bBearer\s+[A-Za-z0-9._~+/=-]+"),
+              re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})\b"),
+          )
+
+
+          def utc_now() -> str:
+              return dt.datetime.now(dt.timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
+
+
+          def redact_text(value: str) -> str:
+              result = value
+              for pattern in SECRET_PATTERNS:
+                  if pattern.groups:
+                      result = pattern.sub(lambda match: match.group(1) + match.group(2) + "[REDACTED]", result)
+                  else:
+                      result = pattern.sub("[REDACTED]", result)
+              return result
+
+
+          def redact_bytes(value: bytes) -> bytes:
+              return redact_text(value.decode("utf-8", "replace")).encode("utf-8")
+
+
+          def redact_value(value: Any) -> Any:
+              if isinstance(value, str):
+                  return redact_text(value)
+              if isinstance(value, list):
+                  return [redact_value(item) for item in value]
+              if isinstance(value, dict):
+                  return {key: redact_value(item) for key, item in value.items()}
+              return value
+
+
+          def atomic_json(path: pathlib.Path, value: Any) -> None:
+              path.parent.mkdir(parents=True, exist_ok=True)
+              if path.is_symlink() or path.parent.is_symlink():
+                  raise RuntimeError(f"refusing symlinked diagnostic path: {path}")
+              fd, temporary = tempfile.mkstemp(prefix=".write-", dir=path.parent)
+              try:
+                  os.fchmod(fd, 0o600)
+                  with os.fdopen(fd, "w", encoding="utf-8") as output:
+                      json.dump(redact_value(value), output, sort_keys=True, indent=2)
+                      output.write("\n")
+                      output.flush()
+                      os.fsync(output.fileno())
+                  os.replace(temporary, path)
+              except BaseException:
+                  try:
+                      os.unlink(temporary)
+                  except FileNotFoundError:
+                      pass
+                  raise
+
+
+          def read_json(path: pathlib.Path, limit: int = MIB) -> dict[str, Any] | None:
+              try:
+                  if path.is_symlink() or path.stat().st_size > limit:
+                      return None
+                  value = json.loads(path.read_text(encoding="utf-8"))
+                  return value if isinstance(value, dict) else None
+              except (OSError, ValueError, json.JSONDecodeError):
+                  return None
+
+
+          def command_env() -> dict[str, str]:
+              allowed = (
+                  "PATH",
+                  "HOME",
+                  "TMPDIR",
+                  "DEVELOPER_DIR",
+                  "RUNNER_TEMP",
+                  "PIKADEX_RELEASE_BUILD_ROOT",
+                  "PIKADEX_SIMULATOR_DESTINATION",
+                  "PIKADEX_TESTED_SOURCE_SHA",
+                  "PIKADEX_EXPECTED_SOURCE_TREE_SHA",
+                  "PIKADEX_EXPECTED_WORKFLOW_SHA",
+                  "PIKADEX_WORKFLOW_SHA",
+                  "PIKADEX_WORKFLOW_REF",
+                  "PIKADEX_EVENT_NAME",
+                  "GITHUB_RUN_ID",
+                  "GITHUB_RUN_ATTEMPT",
+                  "GITHUB_SHA",
+                  "GITHUB_WORKFLOW_SHA",
+                  "GITHUB_REF",
+                  "RUNNER_NAME",
+                  "RUNNER_OS",
+                  "ImageOS",
+                  "ImageVersion",
+                  "LANG",
+                  "LC_ALL",
+              )
+              return {key: os.environ[key] for key in allowed if key in os.environ}
+
+
+          def process_identity(pid: int) -> dict[str, Any] | None:
+              try:
+                  result = subprocess.run(
+                      ["/bin/ps", "-p", str(pid), "-o", "pid=,ppid=,pgid=,lstart=,stat="],
+                      check=False,
+                      capture_output=True,
+                      text=True,
+                      timeout=2,
+                      env=command_env(),
+                  )
+              except (OSError, subprocess.TimeoutExpired):
+                  return None
+              line = result.stdout.strip()
+              if result.returncode != 0 or not line:
+                  return None
+              fields = line.split(None, 3)
+              if len(fields) < 4:
+                  return None
+              prefix = fields[0:3]
+              tail = fields[3].split()
+              if not tail:
+                  return None
+              try:
+                  process_group = int(prefix[2])
+                  if os.getpgid(pid) != process_group:
+                      return None
+                  process_session = os.getsid(pid)
+              except OSError:
+                  return None
+              return {
+                  "pid": int(prefix[0]),
+                  "ppid": int(prefix[1]),
+                  "pgid": process_group,
+                  "session": process_session,
+                  "start": " ".join(tail[:-1]),
+                  "state": tail[-1],
+              }
+
+
+          def process_identities(pids: list[int], timeout: float = 2) -> dict[int, dict[str, Any]]:
+              safe_pids = sorted({pid for pid in pids if 1 < pid < 2**31})
+              if not safe_pids:
+                  return {}
+              try:
+                  result = subprocess.run(
+                      ["/bin/ps", "-p", ",".join(map(str, safe_pids)), "-o", "pid=,ppid=,pgid=,lstart=,stat="],
+                      check=False,
+                      capture_output=True,
+                      text=True,
+                      timeout=timeout,
+                      env=command_env(),
+                  )
+              except (OSError, subprocess.TimeoutExpired):
+                  return {}
+              identities: dict[int, dict[str, Any]] = {}
+              for line in result.stdout.splitlines():
+                  fields = line.split(None, 3)
+                  if len(fields) < 4:
+                      continue
+                  tail = fields[3].split()
+                  if not tail:
+                      continue
+                  try:
+                      pid, parent_pid, process_group = map(int, fields[:3])
+                      if os.getpgid(pid) != process_group:
+                          continue
+                      process_session = os.getsid(pid)
+                  except (OSError, ValueError):
+                      continue
+                  identities[pid] = {
+                      "pid": pid,
+                      "ppid": parent_pid,
+                      "pgid": process_group,
+                      "session": process_session,
+                      "start": " ".join(tail[:-1]),
+                      "state": tail[-1],
+                  }
+              return identities
+
+
+          def process_trees_snapshot(
+              roots: list[dict[str, Any]], owner_pid: int
+          ) -> dict[int, list[dict[str, Any]]]:
+              """Read each owned process tree from one host process snapshot."""
+              try:
+                  result = subprocess.run(
+                      ["/bin/ps", "-axo", "pid=,ppid=,lstart=,stat="],
+                      check=False,
+                      capture_output=True,
+                      text=True,
+                      timeout=1,
+                      env=command_env(),
+                  )
+              except (OSError, subprocess.TimeoutExpired):
+                  return {}
+              if result.returncode != 0:
+                  return {}
+
+              processes: dict[int, dict[str, Any]] = {}
+              for line in result.stdout.splitlines():
+                  fields = line.split(None, 2)
+                  if len(fields) < 3:
+                      continue
+                  tail = fields[2].split()
+                  if len(tail) < 2:
+                      continue
+                  try:
+                      pid, parent_pid = map(int, fields[:2])
+                  except ValueError:
+                      continue
+                  processes[pid] = {
+                      "pid": pid,
+                      "ppid": parent_pid,
+                      "start": " ".join(tail[:-1]),
+                      "state": tail[-1],
+                  }
+
+              children: dict[int, list[int]] = collections.defaultdict(list)
+              for process in processes.values():
+                  children[process["ppid"]].append(process["pid"])
+
+              trees: dict[int, list[dict[str, Any]]] = {}
+              for root in roots:
+                  root_pid = int(root["pid"])
+                  process = processes.get(root_pid)
+                  if not process or process["ppid"] != owner_pid or process["start"] != root["start"]:
+                      continue
+                  tree = [process]
+                  pending = collections.deque([root_pid])
+                  seen = {root_pid}
+                  while pending:
+                      parent_pid = pending.popleft()
+                      for child_pid in children.get(parent_pid, []):
+                          if child_pid in seen:
+                              continue
+                          seen.add(child_pid)
+                          tree.append(processes[child_pid])
+                          if len(tree) > 4096:
+                              tree = []
+                              pending.clear()
+                              break
+                          pending.append(child_pid)
+                  if tree:
+                      trees[root_pid] = tree
+              return trees
+
+
+          def terminate_owned_process_trees(
+              roots: list[dict[str, Any]], owner_pid: int, grace_seconds: float = 0.5
+          ) -> list[dict[str, Any]]:
+              """Stop verified child trees with bounded, identity-checked signals."""
+              if not roots:
+                  return []
+              trees = process_trees_snapshot(roots, owner_pid)
+              pids = list(dict.fromkeys(int(item["pid"]) for tree in trees.values() for item in tree))
+              expected_starts = {
+                  int(item["pid"]): str(item["start"])
+                  for tree in trees.values()
+                  for item in tree
+              }
+              initial = process_identities(pids, timeout=1)
+              valid: dict[int, dict[str, Any]] = {}
+              for pid, identity in initial.items():
+                  if expected_starts.get(pid) != identity.get("start"):
+                      continue
+                  if any(root["pid"] == pid for root in roots) and identity.get("ppid") != owner_pid:
+                      continue
+                  valid[pid] = identity
+
+              root_order = [int(root["pid"]) for root in roots]
+              descendants = [pid for pid in pids if pid not in root_order]
+              signal_errors: set[int] = set()
+              for pid in [*root_order, *descendants]:
+                  identity = valid.get(pid)
+                  if not identity or str(identity.get("state", "")).startswith("Z"):
+                      continue
+                  try:
+                      os.kill(pid, signal.SIGTERM)
+                  except ProcessLookupError:
+                      pass
+                  except PermissionError:
+                      signal_errors.add(pid)
+
+              time.sleep(min(max(grace_seconds, 0.0), 0.5))
+              after_term = process_identities(pids, timeout=1)
+              survivors = {
+                  pid: identity
+                  for pid, identity in after_term.items()
+                  if expected_starts.get(pid) == identity.get("start")
+                  and not str(identity.get("state", "")).startswith("Z")
+              }
+              for pid in survivors:
+                  try:
+                      os.kill(pid, signal.SIGKILL)
+                  except ProcessLookupError:
+                      pass
+                  except PermissionError:
+                      signal_errors.add(pid)
+
+              final = process_identities(pids, timeout=1)
+              outcomes = []
+              for root in roots:
+                  root_pid = int(root["pid"])
+                  tree = trees.get(root_pid, [])
+                  still_live = any(
+                      expected_starts.get(pid) == identity.get("start")
+                      and not str(identity.get("state", "")).startswith("Z")
+                      for pid, identity in final.items()
+                  )
+                  outcomes.append(
+                      {
+                          **root,
+                          "terminated": bool(tree) and not still_live and not any(
+                              int(item["pid"]) in signal_errors for item in tree
+                          ),
+                      }
+                  )
+              return outcomes
+
+
+          def validate_invocation_record(
+              record: dict[str, Any] | None,
+              token: str,
+              expected_parent_pid: int | None = None,
+              expected_pid: int | None = None,
+              expected_start: str | None = None,
+          ) -> bool:
+              if not record or record.get("token") != token:
+                  return False
+              try:
+                  pid = int(record["verifier_pid"])
+                  parent_pid = int(record["shell_pid"])
+              except (KeyError, TypeError, ValueError):
+                  return False
+              if pid <= 1 or parent_pid <= 1:
+                  return False
+              if expected_parent_pid is not None and parent_pid != expected_parent_pid:
+                  return False
+              if expected_pid is not None and pid != expected_pid:
+                  return False
+              if expected_start is not None and record.get("process_start") != expected_start:
+                  return False
+              return isinstance(record.get("process_start"), str) and bool(record["process_start"])
+
+
+          def validate_completion_record(
+              record: dict[str, Any] | None,
+              token: str,
+              expected_shell_pid: int | None = None,
+          ) -> bool:
+              if not record or record.get("token") != token:
+                  return False
+              status = record.get("exit_status")
+              if not isinstance(status, int) or not 0 <= status <= 255:
+                  return False
+              if expected_shell_pid is not None:
+                  try:
+                      return int(record["shell_pid"]) == expected_shell_pid
+                  except (KeyError, TypeError, ValueError):
+                      return False
+              return isinstance(record.get("shell_pid"), int) and record["shell_pid"] > 1
+
+
+          def add_reason(status: dict[str, Any], reason: str) -> None:
+              reasons = status.setdefault("incomplete_reasons", [])
+              if reason not in reasons:
+                  reasons.append(reason)
+
+
+          def decide_gate_state(
+              gate_status: str | None,
+              verifier_alive: bool,
+              completion: dict[str, Any] | None,
+              token: str,
+          ) -> str:
+              if completion is not None:
+                  if not validate_completion_record(completion, token):
+                      return "invalid_completion"
+                  if gate_status in (None, "", "not_run", "pending"):
+                      return "not_reached"
+                  if gate_status == "running":
+                      return "interrupted"
+                  if gate_status in ("passed", "failed"):
+                      return "verifier_completed"
+                  return "unknown_gate_at_completion"
+              if not verifier_alive:
+                  return "await_completion_grace"
+              if gate_status == "running":
+                  return "capture_gate"
+              if gate_status in ("passed", "failed"):
+                  return "capture_tail"
+              return "watch_for_gate"
+
+
+          def tail_decision(verifier_completed: bool, elapsed_seconds: float, limit_seconds: float = 300.0) -> str:
+              if verifier_completed:
+                  return "stop_verifier_completed"
+              if elapsed_seconds >= limit_seconds:
+                  return "stop_tail_complete"
+              return "continue_tail"
+
+
+          class BoundedWriter:
+              def __init__(self, path: pathlib.Path, file_limit: int, total_limit: int):
+                  self.path = path
+                  self.file_limit = max(0, file_limit)
+                  self.total_limit = max(0, total_limit)
+                  self.written = 0
+                  self.truncated = False
+
+              def write(self, data: bytes) -> int:
+                  allowed = min(len(data), self.file_limit - self.written, self.total_limit - self.written)
+                  if allowed <= 0:
+                      self.truncated = self.truncated or bool(data)
+                      return 0
+                  self.path.parent.mkdir(parents=True, exist_ok=True)
+                  if self.path.is_symlink():
+                      self.truncated = True
+                      return 0
+                  fd = os.open(self.path, os.O_WRONLY | os.O_CREAT | os.O_APPEND | getattr(os, "O_NOFOLLOW", 0), 0o600)
+                  try:
+                      with os.fdopen(fd, "ab") as output:
+                          output.write(data[:allowed])
+                  except BaseException:
+                      raise
+                  self.written += allowed
+                  self.truncated = self.truncated or allowed < len(data)
+                  return allowed
+
+
+          class SegmentWriter:
+              def __init__(self, directory: pathlib.Path, prefix: str, limit: int, segment_limit: int = SEGMENT_LIMIT):
+                  self.directory = directory
+                  self.prefix = prefix
+                  self.limit = limit
+                  self.segment_limit = segment_limit
+                  self.total = 0
+                  self.index = 0
+                  self.current = BoundedWriter(self._path(), segment_limit, limit)
+                  self.truncated = False
+
+              def _path(self) -> pathlib.Path:
+                  return self.directory / f"{self.prefix}-{self.index:03d}.ndjson"
+
+              def write(self, data: bytes) -> None:
+                  cursor = 0
+                  while cursor < len(data) and self.total < self.limit:
+                      remaining_segment = self.segment_limit - self.current.written
+                      if remaining_segment <= 0:
+                          self.index += 1
+                          self.current = BoundedWriter(self._path(), self.segment_limit, self.limit - self.total)
+                          remaining_segment = self.segment_limit
+                      part = data[cursor : cursor + remaining_segment]
+                      amount = self.current.write(part)
+                      self.total += amount
+                      cursor += amount
+                      if amount < len(part):
+                          self.truncated = True
+                          break
+                  if cursor < len(data):
+                      self.truncated = True
+
+
+          class RingBuffer:
+              def __init__(self, limit: int):
+                  self.limit = limit
+                  self.parts: collections.deque[bytes] = collections.deque()
+                  self.size = 0
+
+              def append(self, data: bytes) -> None:
+                  if len(data) >= self.limit:
+                      self.parts.clear()
+                      self.parts.append(data[-self.limit :])
+                      self.size = self.limit
+                      return
+                  self.parts.append(data)
+                  self.size += len(data)
+                  while self.size > self.limit and self.parts:
+                      excess = self.size - self.limit
+                      first = self.parts.popleft()
+                      if len(first) > excess:
+                          self.parts.appendleft(first[excess:])
+                          self.size -= excess
+                      else:
+                          self.size -= len(first)
+
+              def flush_to(self, writer: SegmentWriter) -> None:
+                  for part in self.parts:
+                      writer.write(part)
+                  self.parts.clear()
+                  self.size = 0
+
+
+          def register_owned_child(
+              run_dir: pathlib.Path | None,
+              token: str | None,
+              process: subprocess.Popen[bytes],
+              label: str,
+          ) -> None:
+              if run_dir is None or token is None:
+                  return
+              identity = process_identity(process.pid)
+              if identity is None:
+                  return
+              path = run_dir / "owned-children.json"
+              current = read_json(path) or {"token": token, "processes": []}
+              if current.get("token") != token:
+                  return
+              processes = current.setdefault("processes", [])
+              processes.append(
+                  {
+                      "pid": identity["pid"],
+                      "process_start": identity["start"],
+                      "pgid": identity["pgid"],
+                      "session": identity["session"],
+                      "label": label[:128],
+                      "started_at_utc": utc_now(),
+                  }
+              )
+              current["processes"] = processes[-128:]
+              atomic_json(path, current)
+
+
+          def bounded_command(
+              argv: list[str],
+              timeout: float,
+              output_limit: int,
+              run_dir: pathlib.Path | None = None,
+              token: str | None = None,
+          ) -> dict[str, Any]:
+              started = time.monotonic()
+              captured = bytearray()
+              timed_out = False
+              capped = False
+              process: subprocess.Popen[bytes] | None = None
+              selector: selectors.BaseSelector | None = None
+              try:
+                  process = subprocess.Popen(
+                      argv,
+                      stdin=subprocess.DEVNULL,
+                      stdout=subprocess.PIPE,
+                      stderr=subprocess.STDOUT,
+                      env=command_env(),
+                      close_fds=True,
+                  )
+                  register_owned_child(run_dir, token, process, pathlib.Path(argv[0]).name)
+                  assert process.stdout is not None
+                  selector = selectors.DefaultSelector()
+                  selector.register(process.stdout, selectors.EVENT_READ)
+                  while True:
+                      if time.monotonic() - started > timeout:
+                          timed_out = True
+                          break
+                      if len(captured) >= output_limit:
+                          capped = True
+                          break
+                      events = selector.select(timeout=0.1)
+                      for key, _ in events:
+                          chunk = os.read(key.fileobj.fileno(), min(65536, output_limit - len(captured)))
+                          if not chunk:
+                              selector.unregister(key.fileobj)
+                              continue
+                          captured.extend(chunk)
+                      code = process.poll()
+                      if code is not None and not selector.get_map():
+                          break
+                  if timed_out or capped:
+                      process.terminate()
+                      try:
+                          process.wait(timeout=2)
+                      except subprocess.TimeoutExpired:
+                          process.kill()
+                          process.wait(timeout=2)
+                  else:
+                      process.wait(timeout=2)
+                  return {
+                      "returncode": process.returncode,
+                      "timed_out": timed_out,
+                      "capped": capped,
+                      "elapsed_seconds": round(time.monotonic() - started, 3),
+                      "output": redact_bytes(bytes(captured)),
+                  }
+              except (OSError, subprocess.TimeoutExpired) as error:
+                  if process is not None and process.poll() is None:
+                      process.kill()
+                      try:
+                          process.wait(timeout=2)
+                      except subprocess.TimeoutExpired:
+                          pass
+                  return {
+                      "returncode": None,
+                      "timed_out": False,
+                      "capped": False,
+                      "elapsed_seconds": round(time.monotonic() - started, 3),
+                      "output": redact_bytes(str(error).encode()),
+                  }
+              finally:
+                  if selector is not None:
+                      selector.close()
+                  if process is not None and process.stdout is not None:
+                      process.stdout.close()
+
+
+          def spawn_isolated_group(argv: list[str], token: str) -> tuple[subprocess.Popen[bytes], dict[str, Any]]:
+              process = subprocess.Popen(
+                  argv,
+                  stdin=subprocess.DEVNULL,
+                  stdout=subprocess.DEVNULL,
+                  stderr=subprocess.DEVNULL,
+                  env=command_env(),
+                  close_fds=True,
+                  start_new_session=True,
+              )
+              try:
+                  pgid = os.getpgid(process.pid)
+                  session = os.getsid(process.pid)
+              except OSError:
+                  process.kill()
+                  process.wait(timeout=2)
+                  raise RuntimeError("could not verify observer process group")
+              if pgid != process.pid or session != process.pid:
+                  process.terminate()
+                  try:
+                      process.wait(timeout=2)
+                  except subprocess.TimeoutExpired:
+                      process.kill()
+                      process.wait(timeout=2)
+                  raise RuntimeError("observer process group did not isolate on this host")
+              identity = process_identity(process.pid)
+              if identity is None:
+                  process.kill()
+                  process.wait(timeout=2)
+                  raise RuntimeError("observer process identity unavailable after launch")
+              return process, {
+                  "token": token,
+                  "pid": process.pid,
+                  "pgid": pgid,
+                  "session": session,
+                  "process_start": identity["start"],
+                  "parent_pid": identity["ppid"],
+                  "started_at_utc": utc_now(),
+                  "started_monotonic": time.monotonic(),
+              }
+
+
+          def terminate_isolated_group(record: dict[str, Any], token: str, grace_seconds: float = 2.0) -> bool:
+              if record.get("token") != token:
+                  return False
+              try:
+                  pid = int(record["pid"])
+                  pgid = int(record["pgid"])
+                  session = int(record["session"])
+              except (KeyError, TypeError, ValueError):
+                  return False
+              if pid <= 1 or pgid != pid or session != pid:
+                  return False
+              expected_start = record.get("process_start", record.get("observer_process_start"))
+              run_dir = pathlib.Path(record["run_dir"]) if isinstance(record.get("run_dir"), str) else None
+              children = read_json(run_dir / "owned-children.json") or {} if run_dir is not None else {}
+              child_records = children.get("processes", []) if children.get("token") == token else []
+              identities = process_identities([pid] + [int(child.get("pid", -1)) for child in child_records if isinstance(child, dict)])
+
+              def matches_owned_group(identity: dict[str, Any] | None, expected: dict[str, Any]) -> bool:
+                  return bool(
+                      identity
+                      and not identity["state"].startswith("Z")
+                      and identity["start"] == expected.get("process_start")
+                      and identity["pgid"] == pgid
+                      and identity["session"] == session
+                  )
+
+              group_is_owned = matches_owned_group(identities.get(pid), {"process_start": expected_start})
+              if not group_is_owned:
+                  group_is_owned = any(
+                      isinstance(child, dict)
+                      and matches_owned_group(identities.get(int(child.get("pid", -1))), child)
+                      for child in child_records
+                  )
+              if not group_is_owned:
+                  return False
+
+              def has_live_owned_member() -> bool:
+                  current = process_identity(pid)
+                  if matches_owned_group(current, {"process_start": expected_start}):
+                      return True
+                  current_identities = process_identities([int(child.get("pid", -1)) for child in child_records if isinstance(child, dict)])
+                  return any(
+                      isinstance(child, dict)
+                      and matches_owned_group(current_identities.get(int(child.get("pid", -1))), child)
+                      for child in child_records
+                  )
+
+              try:
+                  os.killpg(pgid, signal.SIGTERM)
+              except ProcessLookupError:
+                  return True
+              except PermissionError:
+                  return False
+              deadline = time.monotonic() + grace_seconds
+              while time.monotonic() < deadline:
+                  if not has_live_owned_member():
+                      return True
+                  time.sleep(0.05)
+              if not has_live_owned_member():
+                  return True
+              try:
+                  os.killpg(pgid, signal.SIGKILL)
+              except ProcessLookupError:
+                  return True
+              except PermissionError:
+                  return False
+              deadline = time.monotonic() + grace_seconds
+              while time.monotonic() < deadline:
+                  if not has_live_owned_member():
+                      return True
+                  time.sleep(0.05)
+              return not has_live_owned_member()
+
+
+          def read_gate_status(manifest_path: pathlib.Path) -> tuple[str | None, str | None]:
+              manifest = read_json(manifest_path, 4 * MIB)
+              if manifest is None:
+                  return None, None
+              gate = manifest.get("gates", {}).get("enumerate_Modules", {})
+              if not isinstance(gate, dict):
+                  return None, None
+              status = gate.get("status")
+              started = gate.get("startedAt")
+              return (status if isinstance(status, str) else None, started if isinstance(started, str) else None)
+
+
+          def write_invocation(run_dir: pathlib.Path, token: str, verifier_pid: int, shell_pid: int) -> dict[str, Any]:
+              identity = process_identity(verifier_pid)
+              if identity is None or identity["ppid"] != shell_pid:
+                  raise RuntimeError("verifier child identity could not be verified")
+              record = {
+                  "token": token,
+                  "verifier_pid": verifier_pid,
+                  "shell_pid": shell_pid,
+                  "process_start": identity["start"],
+                  "process_group": identity["pgid"],
+                  "process_session": identity["session"],
+                  "process_parent_pid": identity["ppid"],
+                  "recorded_at_utc": utc_now(),
+                  "recorded_at_monotonic": time.monotonic(),
+              }
+              atomic_json(run_dir / "verifier-start.json", record)
+              return record
+
+
+          def write_completion(run_dir: pathlib.Path, token: str, shell_pid: int, exit_status: int) -> None:
+              if not 0 <= exit_status <= 255:
+                  raise ValueError("verifier exit status is outside the shell range")
+              record = {
+                  "token": token,
+                  "shell_pid": shell_pid,
+                  "exit_status": exit_status,
+                  "completed_at_utc": utc_now(),
+                  "completed_at_monotonic": time.monotonic(),
+              }
+              atomic_json(run_dir / "verifier-complete.json", record)
+
+
+          def safe_owner(run_dir: pathlib.Path, token: str) -> dict[str, Any] | None:
+              owner = read_json(run_dir / "observer-owner.json")
+              return owner if owner and owner.get("token") == token else None
+
+
+          def worker_status(run_dir: pathlib.Path, token: str, **updates: Any) -> dict[str, Any]:
+              path = run_dir / "observer-status.json"
+              previous = read_json(path) or {}
+              previous.update(updates)
+              previous["token"] = token
+              previous["updated_at_utc"] = utc_now()
+              previous["heartbeat_monotonic"] = time.monotonic()
+              atomic_json(path, previous)
+              return previous
+
+
+          def owned_worker_alive(run_dir: pathlib.Path, token: str) -> bool:
+              owner = safe_owner(run_dir, token)
+              if not owner:
+                  return False
+              identity = process_identity(int(owner["pid"]))
+              return bool(
+                  identity
+                  and not identity["state"].startswith("Z")
+                  and identity["start"] == owner.get("process_start")
+                  and identity["pgid"] == int(owner["pgid"])
+                  and identity["session"] == int(owner["session"])
+              )
+
+
+          def terminate_run_group(run_dir: pathlib.Path, token: str, grace_seconds: float = 2.0) -> bool:
+              owner = safe_owner(run_dir, token)
+              if not owner:
+                  return False
+              return terminate_isolated_group(owner, token, grace_seconds)
+
+
+          def bounded_file_write(path: pathlib.Path, data: bytes, limit: int) -> tuple[int, bool]:
+              if path.is_symlink():
+                  return 0, True
+              current = path.stat().st_size if path.exists() else 0
+              allowed = max(0, min(len(data), limit - current))
+              if allowed:
+                  path.parent.mkdir(parents=True, exist_ok=True)
+                  fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_APPEND | getattr(os, "O_NOFOLLOW", 0), 0o600)
+                  with os.fdopen(fd, "ab") as output:
+                      output.write(data[:allowed])
+              return allowed, allowed < len(data)
+
+
+          def worker(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              token = run_dir.name
+              stop_requested = False
+
+              def request_stop(_signum: int, _frame: Any) -> None:
+                  nonlocal stop_requested
+                  stop_requested = True
+
+              signal.signal(signal.SIGTERM, request_stop)
+              signal.signal(signal.SIGINT, request_stop)
+              signal.signal(signal.SIGHUP, request_stop)
+              run_dir.mkdir(parents=True, exist_ok=True)
+              status: dict[str, Any] = {
+                  "schema_version": 1,
+                  "state": "starting",
+                  "started_at_utc": utc_now(),
+                  "started_monotonic": time.monotonic(),
+                  "gate_state": "not_observed",
+                  "gate_outcome": "pending",
+                  "logger_state": "starting",
+                  "incomplete_reasons": [],
+                  "post_gate_tail_seconds": 300,
+                  "owned_children": [],
+              }
+              atomic_json(
+                  run_dir / "observer-status.json",
+                  {**status, "token": token, "heartbeat_monotonic": time.monotonic()},
+              )
+              owner_deadline = time.monotonic() + 5
+              owner = None
+              while time.monotonic() < owner_deadline and not stop_requested:
+                  owner = safe_owner(run_dir, token)
+                  if owner:
+                      break
+                  time.sleep(0.05)
+              if not owner:
+                  status["state"] = "incomplete"
+                  status["gate_outcome"] = "invocation_record_missing"
+                  add_reason(status, "observer owner record missing")
+                  worker_status(run_dir, token, **status)
+                  return 2
+
+              command = shutil.which("log")
+              if command is None:
+                  status["state"] = "incomplete"
+                  status["logger_state"] = "unavailable"
+                  add_reason(status, "host log command unavailable")
+                  worker_status(run_dir, token, **status)
+                  return 2
+
+              argv = [command, "stream", "--style", "json", "--level", "debug", "--predicate", LOG_PREDICATE, "--timeout", "5400"]
+              try:
+                  logger = subprocess.Popen(
+                      argv,
+                      stdin=subprocess.DEVNULL,
+                      stdout=subprocess.PIPE,
+                      stderr=subprocess.PIPE,
+                      env=command_env(),
+                      close_fds=True,
+                  )
+              except OSError as error:
+                  status["state"] = "incomplete"
+                  status["logger_state"] = "startup_failed"
+                  add_reason(status, redact_text(str(error)))
+                  worker_status(run_dir, token, **status)
+                  return 2
+              register_owned_child(run_dir, token, logger, "unified-log-stream")
+
+              logger_identity = process_identity(logger.pid)
+              status["logger_state"] = "ready" if logger.poll() is None else "exited_at_start"
+              status["logger_pid"] = logger.pid
+              status["logger_process_start"] = logger_identity["start"] if logger_identity else None
+              status["logger_process_group"] = logger_identity["pgid"] if logger_identity else None
+              status["logger_process_session"] = logger_identity["session"] if logger_identity else None
+              status["ready_at_utc"] = utc_now()
+              status["logger_command"] = argv
+              status["capture_source"] = "host_unified_log"
+              worker_status(run_dir, token, **status)
+
+              selector = selectors.DefaultSelector()
+              assert logger.stdout is not None and logger.stderr is not None
+              selector.register(logger.stdout, selectors.EVENT_READ, "stdout")
+              selector.register(logger.stderr, selectors.EVENT_READ, "stderr")
+              ring = RingBuffer(LOG_LIMITS["prelude"])
+              phase = "prelude"
+              writers: dict[str, SegmentWriter] = {}
+              log_root = run_dir / "events"
+              stderr_writer = BoundedWriter(run_dir / "observer-stderr.log", MIB, METADATA_LIMIT)
+              pending = bytearray()
+              process_writer = BoundedWriter(run_dir / "processes.ndjson", PROCESS_SAMPLE_LIMIT, PROCESS_SAMPLE_LIMIT)
+              resource_writer = BoundedWriter(run_dir / "resource-samples.ndjson", RESOURCE_LIMIT, RESOURCE_LIMIT)
+              seen_pids: set[int] = set()
+              started_phase_mono: float | None = None
+              tail_started: float | None = None
+              invocation: dict[str, Any] | None = None
+              identity_lost_at: float | None = None
+              gate_seen_running = False
+              last_process_sample = 0.0
+              last_resource_sample = 0.0
+              last_identity_check = 0.0
+              last_heartbeat = 0.0
+              started = time.monotonic()
+              hard_deadline = started + 5400
+              outcome = "pending"
+              stop_reason = "unknown"
+              max_record = 256 * 1024
+
+              def set_phase(new_phase: str) -> None:
+                  nonlocal phase, started_phase_mono
+                  phase = new_phase
+                  started_phase_mono = time.monotonic()
+                  if new_phase not in writers:
+                      writers[new_phase] = SegmentWriter(log_root, f"host-{new_phase}", LOG_LIMITS[new_phase])
+                  worker_status(run_dir, token, capture_phase=new_phase, phase_started_at_utc=utc_now())
+
+              def emit_log(data: bytes) -> None:
+                  nonlocal pending, phase
+                  pending.extend(data)
+                  while b"\n" in pending:
+                      line, _, rest = pending.partition(b"\n")
+                      pending = bytearray(rest)
+                      safe_line = redact_bytes(bytes(line) + b"\n")
+                      if phase == "prelude":
+                          ring.append(safe_line)
+                      else:
+                          writer = writers.get(phase)
+                          if writer:
+                              writer.write(safe_line)
+                              if writer.truncated and not status.get("log_budget_notice"):
+                                  add_reason(status, f"{phase} unified-log budget reached")
+                                  status["log_budget_notice"] = True
+                  if len(pending) > max_record:
+                      add_reason(status, "oversized unified-log record truncated")
+                      safe = redact_bytes(bytes(pending[:max_record])) + b" [record truncated]\n"
+                      if phase == "prelude":
+                          ring.append(safe)
+                      elif phase in writers:
+                          writers[phase].write(safe)
+                      pending.clear()
+
+              def write_process_row(value: dict[str, Any]) -> None:
+                  payload = redact_bytes((json.dumps(value, sort_keys=True) + "\n").encode())
+                  written, truncated = bounded_file_write(process_writer.path, payload, PROCESS_SAMPLE_LIMIT)
+                  process_writer.written += written
+                  process_writer.truncated = process_writer.truncated or truncated
+                  if truncated:
+                      add_reason(status, "process snapshot budget reached")
+
+              def sample_processes() -> None:
+                  ps = shutil.which("ps")
+                  if not ps:
+                      add_reason(status, "process sampling commands unavailable")
+                      return
+                  result = bounded_command(
+                      [ps, "-A", "-o", "pid=,ppid=,pgid=,lstart=,stat=,etime=,%cpu=,%mem=,rss=,comm="],
+                      1,
+                      MIB,
+                      run_dir,
+                      token,
+                  )
+                  if result["timed_out"] or result["returncode"] != 0:
+                      add_reason(status, "process table snapshot failed or exceeded its one-second limit")
+                      return
+                  if result["capped"]:
+                      add_reason(status, "process table snapshot reached its one-megabyte limit")
+                  for line in result["output"].decode("utf-8", "replace").splitlines():
+                      fields = line.split(None, 13)
+                      if len(fields) < 14:
+                          continue
+                      try:
+                          pid, parent_pid, process_group = (int(value) for value in fields[:3])
+                          process_session = os.getsid(pid)
+                          if os.getpgid(pid) != process_group:
+                              continue
+                      except (OSError, ValueError):
+                          continue
+                      name = pathlib.Path(fields[13]).name
+                      if name not in PROCESS_NAMES:
+                          continue
+                      if pid not in seen_pids and len(seen_pids) >= 64:
+                          add_reason(status, "process identity cap reached")
+                          return
+                      seen_pids.add(pid)
+                      write_process_row(
+                          {
+                              "timestamp_utc": utc_now(),
+                              "monotonic": time.monotonic(),
+                              "name": name,
+                              "process_identity": {
+                                  "pid": pid,
+                                  "ppid": parent_pid,
+                                  "pgid": process_group,
+                                  "session": process_session,
+                                  "start": " ".join(fields[3:8]),
+                                  "state": fields[8],
+                              },
+                              "elapsed": fields[9],
+                              "cpu_percent": fields[10],
+                              "memory_percent": fields[11],
+                              "resident_kib": fields[12],
+                          }
+                      )
+
+              def sample_resources() -> None:
+                  for label, args in (
+                      ("vm_stat", [shutil.which("vm_stat") or "vm_stat"]),
+                      ("memory_pressure", [shutil.which("memory_pressure") or "memory_pressure", "-Q"]),
+                      ("disk", [shutil.which("df") or "df", "-k", os.environ.get("RUNNER_TEMP", "/tmp")]),
+                  ):
+                      result = bounded_command(args, 2, 64 * 1024, run_dir, token)
+                      payload = {
+                          "timestamp_utc": utc_now(),
+                          "monotonic": time.monotonic(),
+                          "source": label,
+                          "returncode": result["returncode"],
+                          "timed_out": result["timed_out"],
+                          "output": result["output"].decode("utf-8", "replace"),
+                      }
+                      data = redact_bytes((json.dumps(payload, sort_keys=True) + "\n").encode())
+                      amount, capped = bounded_file_write(resource_writer.path, data, RESOURCE_LIMIT)
+                      resource_writer.written += amount
+                      resource_writer.truncated = resource_writer.truncated or capped
+                      if capped:
+                          add_reason(status, "resource sampling budget reached")
+                          return
+
+              def invocation_state() -> tuple[dict[str, Any] | None, dict[str, Any] | None]:
+                  nonlocal invocation
+                  start_record = read_json(run_dir / "verifier-start.json")
+                  if start_record and invocation is None:
+                      expected_owner = int(owner["parent_shell_pid"])
+                      if validate_invocation_record(start_record, token, expected_parent_pid=expected_owner):
+                          invocation = start_record
+                          worker_status(run_dir, token, verifier_pid=invocation["verifier_pid"], verifier_process_start=invocation["process_start"])
+                      else:
+                          add_reason(status, "invocation record failed token or process-owner validation")
+                          return None, {"token": "invalid"}
+                  completion = read_json(run_dir / "verifier-complete.json")
+                  return invocation, completion
+
+              try:
+                  while time.monotonic() < hard_deadline and not stop_requested:
+                      now = time.monotonic()
+                      current_invocation, completion = invocation_state()
+                      gate_status, gate_started_at = read_gate_status(pathlib.Path(args.manifest))
+                      if gate_status == "running" and not gate_seen_running:
+                          gate_seen_running = True
+                          ring.flush_to(writers.setdefault("prelude", SegmentWriter(log_root, "host-prelude", LOG_LIMITS["prelude"])))
+                          set_phase("gate")
+                          status["gate_started_at_utc"] = gate_started_at or utc_now()
+                          status["gate_started_observed_at_utc"] = utc_now()
+                          worker_status(run_dir, token, **status)
+                      if gate_status in ("passed", "failed") and gate_seen_running and tail_started is None:
+                          tail_started = now
+                          status["modules_gate_status"] = gate_status
+                          status["gate_outcome"] = gate_status
+                          status["gate_completed_at_utc"] = utc_now()
+                          set_phase("tail")
+                          worker_status(run_dir, token, **status)
+                      if gate_status in ("passed", "failed") and not gate_seen_running and tail_started is None:
+                          gate_seen_running = True
+                          ring.flush_to(writers.setdefault("prelude", SegmentWriter(log_root, "host-prelude", LOG_LIMITS["prelude"])))
+                          add_reason(status, "Modules terminal state observed without running transition")
+                          status["modules_gate_status"] = gate_status
+                          status["gate_outcome"] = gate_status
+                          set_phase("tail")
+                          tail_started = now
+                      if completion is not None:
+                          if not validate_completion_record(completion, token, int(owner["parent_shell_pid"])):
+                              outcome = "completion_token_mismatch"
+                              add_reason(status, "completion record token/status invalid")
+                              break
+                          status["verifier_exit_status"] = completion["exit_status"]
+                          status["verifier_completed_at_utc"] = completion.get("completed_at_utc")
+                          if gate_status in (None, "", "not_run", "pending"):
+                              outcome = "not_reached"
+                          elif gate_status == "running":
+                              outcome = "interrupted"
+                          elif gate_status in ("passed", "failed"):
+                              outcome = "gate_completed"
+                          else:
+                              outcome = "unknown_gate_at_completion"
+                          if tail_started is not None:
+                              status["tail_early_stop"] = "verifier_completed"
+                              status["tail_seconds"] = round(max(0.0, now - tail_started), 3)
+                          break
+                      if current_invocation is None:
+                          if now - started > 5:
+                              outcome = "invocation_missing"
+                              add_reason(status, "verifier invocation record did not arrive within five seconds")
+                              break
+                      elif now - last_identity_check >= 1:
+                          last_identity_check = now
+                          identity = process_identity(int(current_invocation["verifier_pid"]))
+                          if not identity or identity["start"] != current_invocation["process_start"] or identity["ppid"] != current_invocation["shell_pid"]:
+                              if identity_lost_at is None:
+                                  identity_lost_at = now
+                              elif now - identity_lost_at >= 5:
+                                  outcome = "completion_signal_missing"
+                                  add_reason(status, "verifier identity disappeared without completion record")
+                                  break
+                          else:
+                              identity_lost_at = None
+                      if tail_started is not None:
+                          tail = tail_decision(False, now - tail_started)
+                          if tail == "stop_tail_complete":
+                              outcome = "gate_completed"
+                              status["tail_seconds"] = round(now - tail_started, 3)
+                              break
+                      if gate_status == "running" or tail_started is not None:
+                          if now - last_process_sample >= 1:
+                              sample_processes()
+                              last_process_sample = now
+                          if now - last_resource_sample >= 10:
+                              sample_resources()
+                              last_resource_sample = now
+                      for key, _ in selector.select(timeout=0.1):
+                          chunk = os.read(key.fileobj.fileno(), 65536)
+                          if not chunk:
+                              try:
+                                  selector.unregister(key.fileobj)
+                              except KeyError:
+                                  pass
+                              continue
+                          if key.data == "stdout":
+                              emit_log(chunk)
+                          else:
+                              amount, capped = bounded_file_write(stderr_writer.path, redact_bytes(chunk), MIB)
+                              stderr_writer.written += amount
+                              if capped:
+                                  add_reason(status, "logger stderr budget reached")
+                      if logger.poll() is not None and status["logger_state"] == "ready":
+                          status["logger_state"] = "exited"
+                          status["logger_exit_status"] = logger.returncode
+                          if logger.returncode != 0:
+                              add_reason(status, "host unified-log stream exited nonzero")
+                          worker_status(run_dir, token, **status)
+                      if now - last_heartbeat >= 2:
+                          status["state"] = "capturing"
+                          worker_status(run_dir, token, **status)
+                          last_heartbeat = now
+                  else:
+                      if not stop_requested:
+                          outcome = "observer_lifetime_limit"
+                          add_reason(status, "90-minute observer lifetime reached")
+              except Exception as error:
+                  outcome = "observer_error"
+                  add_reason(status, redact_text(f"{type(error).__name__}: {error}")[:2048])
+              finally:
+                  if pending:
+                      if phase == "prelude":
+                          ring.append(redact_bytes(bytes(pending)))
+                      elif phase in writers:
+                          writers[phase].write(redact_bytes(bytes(pending)))
+                  if phase == "prelude" and ring.size:
+                      ring.flush_to(writers.setdefault("prelude", SegmentWriter(log_root, "host-prelude", LOG_LIMITS["prelude"])))
+                  try:
+                      selector.close()
+                  except Exception:
+                      pass
+                  if logger.poll() is None:
+                      logger.terminate()
+                      try:
+                          logger.wait(timeout=2)
+                      except subprocess.TimeoutExpired:
+                          logger.kill()
+                          logger.wait(timeout=2)
+                  status["state"] = "cancelled" if stop_requested else ("incomplete" if status["incomplete_reasons"] else "complete")
+                  status["gate_outcome"] = outcome
+                  status["stopped_at_utc"] = utc_now()
+                  status["elapsed_seconds"] = round(time.monotonic() - started, 3)
+                  status["log_bytes"] = {name: writer.total for name, writer in writers.items()}
+                  status["prelude_bytes"] = ring.size
+                  status["process_bytes"] = process_writer.written
+                  status["resource_bytes"] = resource_writer.written
+                  status["process_snapshot_truncated"] = process_writer.truncated
+                  status["resource_truncated"] = resource_writer.truncated
+                  status["logger_exit_status"] = logger.poll()
+                  if stop_requested:
+                      add_reason(status, "observer received cancellation signal")
+                  worker_status(run_dir, token, **status)
+              return 0 if status["state"] == "complete" else 2
+
+
+          def start_worker(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              if run_dir.is_symlink() or not run_dir.is_dir():
+                  raise RuntimeError("run directory must be a newly created, non-symlink directory")
+              if args.shell_pid <= 1 or process_identity(args.shell_pid) is None:
+                  raise RuntimeError("calling shell identity could not be verified")
+              token = run_dir.name
+              if read_json(run_dir / "observer-owner.json") is not None:
+                  raise RuntimeError("observer owner record already exists")
+              worker_command = [
+                  sys.executable,
+                  str(pathlib.Path(__file__).resolve()),
+                  "worker",
+                  "--run-dir",
+                  str(run_dir),
+                  "--manifest",
+                  args.manifest,
+              ]
+              process, owner = spawn_isolated_group(worker_command, token)
+              if owner["parent_pid"] != os.getpid():
+                  terminate_isolated_group({**owner, "run_dir": str(run_dir)}, token, 0.25)
+                  raise RuntimeError("observer starter identity did not match its parent")
+              owner["parent_shell_pid"] = args.shell_pid
+              owner["starter_pid"] = os.getpid()
+              owner["observer_process_start"] = owner["process_start"]
+              owner["run_dir"] = str(run_dir)
+              try:
+                  atomic_json(run_dir / "observer-owner.json", owner)
+              except BaseException:
+                  terminate_isolated_group({**owner, "run_dir": str(run_dir)}, token, 0.25)
+                  raise
+              print(f"{process.pid} {owner['pgid']}")
+              return 0
+
+
+          def command_record_start(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              token = run_dir.name
+              owner = safe_owner(run_dir, token)
+              if not owner or int(owner.get("parent_shell_pid", -1)) != args.shell_pid:
+                  raise RuntimeError("observer owner record missing or mismatched")
+              write_invocation(run_dir, token, args.verifier_pid, args.shell_pid)
+              return 0
+
+
+          def command_record_complete(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              token = run_dir.name
+              owner = safe_owner(run_dir, token)
+              if not owner or int(owner.get("parent_shell_pid", -1)) != args.shell_pid:
+                  raise RuntimeError("observer owner record missing or mismatched")
+              write_completion(run_dir, token, args.shell_pid, args.exit_status)
+              return 0
+
+
+          def command_record_child(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              token = run_dir.name
+              if not safe_owner(run_dir, token):
+                  raise RuntimeError("observer owner record missing or mismatched")
+              identity = process_identity(args.pid)
+              if identity is None or identity["ppid"] != args.shell_pid:
+                  raise RuntimeError("diagnostic child identity could not be verified")
+              path = run_dir / "owned-shell-children.json"
+              current = read_json(path) or {"token": token, "processes": []}
+              if current.get("token") != token:
+                  raise RuntimeError("diagnostic child record token mismatch")
+              current["processes"].append(
+                  {
+                      "pid": identity["pid"],
+                      "process_start": identity["start"],
+                      "ppid": identity["ppid"],
+                      "label": args.label[:128],
+                  }
+              )
+              current["processes"] = current["processes"][-16:]
+              atomic_json(path, current)
+              return 0
+
+
+          def command_supervise(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              token = run_dir.name
+              owner = safe_owner(run_dir, token)
+              if not owner:
+                  worker_status(run_dir, token, state="incomplete", gate_outcome="owner_record_missing", incomplete_reasons=["owner record missing"])
+                  return 1
+              status = read_json(run_dir / "observer-status.json") or {}
+              if status.get("state") in ("complete", "incomplete", "cancelled"):
+                  terminate_run_group(run_dir, token, 0.25)
+                  return 1
+              heartbeat = status.get("heartbeat_monotonic")
+              if (
+                  owned_worker_alive(run_dir, token)
+                  and not isinstance(heartbeat, (int, float))
+                  and time.monotonic() - float(owner.get("started_monotonic", 0)) < 5
+              ):
+                  return 0
+              if not owned_worker_alive(run_dir, token) or not isinstance(heartbeat, (int, float)) or time.monotonic() - heartbeat > 5:
+                  status["state"] = "incomplete"
+                  status["gate_outcome"] = "observer_terminated"
+                  status.setdefault("incomplete_reasons", []).append("observer exited or missed its heartbeat")
+                  for field in ("token", "updated_at_utc", "heartbeat_monotonic"):
+                      status.pop(field, None)
+                  worker_status(run_dir, token, **status)
+                  terminate_run_group(run_dir, token, 2)
+                  return 1
+              return 0
+
+
+          def command_stop(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              token = run_dir.name
+              owner = safe_owner(run_dir, token)
+              if not owner or int(owner.get("parent_shell_pid", -1)) != args.shell_pid:
+                  raise RuntimeError("observer owner record missing or mismatched")
+              atomic_json(
+                  run_dir / "observer-stop-requested.json",
+                  {"token": token, "reason": args.reason[:128], "requested_at_utc": utc_now()},
+              )
+              deadline = time.monotonic() + min(max(args.wait_seconds, 0.0), 1.0)
+              while time.monotonic() < deadline and owned_worker_alive(run_dir, token):
+                  status = read_json(run_dir / "observer-status.json") or {}
+                  if status.get("state") in ("complete", "incomplete", "cancelled"):
+                      break
+                  time.sleep(0.05)
+              if owned_worker_alive(run_dir, token):
+                  terminate_run_group(run_dir, token, 0.5)
+              else:
+                  terminate_run_group(run_dir, token, 0.1)
+              return 0
+
+
+          def command_cancel(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              token = run_dir.name
+              owner = safe_owner(run_dir, token)
+              if owner and int(owner.get("parent_shell_pid", -1)) != args.shell_pid:
+                  raise RuntimeError("observer owner record missing or mismatched")
+              if not owner and (not run_dir.is_dir() or run_dir.is_symlink()):
+                  raise RuntimeError("diagnostic run directory is unavailable or unsafe")
+
+              roots: list[dict[str, Any]] = []
+              start = read_json(run_dir / "verifier-start.json")
+              verifier_pid = args.verifier_pid
+              if verifier_pid > 1:
+                  identity = process_identity(verifier_pid)
+                  expected_start = None
+                  if start and validate_invocation_record(start, token, args.shell_pid, verifier_pid):
+                      expected_start = str(start.get("process_start", ""))
+                  elif identity and identity.get("ppid") == args.shell_pid:
+                      expected_start = str(identity.get("start", ""))
+                  roots.append(
+                      {
+                          "pid": verifier_pid,
+                          "start": expected_start or "",
+                          "label": "canonical-verifier",
+                          "ownership_verified": bool(expected_start),
+                      }
+                  )
+
+              children = read_json(run_dir / "owned-shell-children.json") or {}
+              if children.get("token") == token:
+                  for child in children.get("processes", []):
+                      try:
+                          pid = int(child["pid"])
+                          identity = process_identity(pid)
+                      except (KeyError, TypeError, ValueError):
+                          continue
+                      if (
+                          identity
+                          and identity["start"] == child.get("process_start")
+                          and identity["ppid"] == child.get("ppid") == args.shell_pid
+                          and child.get("label") == "enumeration-result-observer"
+                          and (not args.observer_pid or pid == args.observer_pid)
+                      ):
+                          roots.append({"pid": pid, "start": str(child["process_start"]), "label": child["label"]})
+
+              if args.observer_pid > 1 and not any(root["pid"] == args.observer_pid for root in roots):
+                  identity = process_identity(args.observer_pid)
+                  child = next(
+                      (
+                          item
+                          for item in children.get("processes", [])
+                          if isinstance(item, dict)
+                          and item.get("pid") == args.observer_pid
+                          and item.get("ppid") == args.shell_pid
+                          and item.get("label") == "enumeration-result-observer"
+                      ),
+                      None,
+                  )
+                  if child:
+                      verified = bool(
+                          identity
+                          and identity.get("ppid") == args.shell_pid
+                          and identity.get("start") == child.get("process_start")
+                      )
+                      expected_start = str(child.get("process_start", ""))
+                  else:
+                      verified = bool(identity and identity.get("ppid") == args.shell_pid)
+                      expected_start = str(identity.get("start", "")) if verified else ""
+                  roots.append(
+                      {
+                          "pid": args.observer_pid,
+                          "start": expected_start,
+                          "label": "enumeration-result-observer",
+                          "ownership_verified": bool(expected_start),
+                      }
+                  )
+
+              atomic_json(
+                  run_dir / "verifier-cancelled.json",
+                  {
+                      "token": token,
+                      "cancelled_at_utc": utc_now(),
+                      "reason": args.reason,
+                      "process_tree_cleanup": {"state": "started", "roots": roots},
+                  },
+              )
+              cleanup_results = terminate_owned_process_trees(roots, args.shell_pid, grace_seconds=0.5)
+              observer_stopped = terminate_run_group(run_dir, token, 1) if owner else True
+              atomic_json(
+                  run_dir / "verifier-cancelled.json",
+                  {
+                      "token": token,
+                      "cancelled_at_utc": utc_now(),
+                      "reason": args.reason,
+                      "process_tree_cleanup": {
+                          "state": "complete" if all(item["terminated"] for item in cleanup_results) and observer_stopped else "incomplete",
+                          "roots": cleanup_results,
+                          "observer_worker_stopped": observer_stopped,
+                      },
+                  },
+              )
+              return 0 if all(item["terminated"] for item in cleanup_results) and observer_stopped else 1
+
+
+          def sha256_file(path: pathlib.Path) -> str:
+              digest = hashlib.sha256()
+              with path.open("rb") as source:
+                  for block in iter(lambda: source.read(1024 * 1024), b""):
+                      digest.update(block)
+              return digest.hexdigest()
+
+
+          def run_capture(argv: list[str], timeout: int, limit: int = MIB) -> dict[str, Any]:
+              return bounded_command(argv, timeout, limit)
+
+
+          def package_lock_evidence(source_root: pathlib.Path) -> list[dict[str, Any]]:
+              command = shutil.which("git")
+              if not command:
+                  return []
+              result = run_capture([command, "-C", str(source_root), "ls-files", "--", "*Package.resolved"], 5, 64 * 1024)
+              entries = []
+              for item in result["output"].decode("utf-8", "replace").splitlines():
+                  path = source_root / item
+                  if path.is_file() and not path.is_symlink():
+                      entries.append({"path": item, "sha256": sha256_file(path), "bytes": path.stat().st_size})
+              return entries
+
+
+          def xcresult_bundles(evidence_root: pathlib.Path) -> list[pathlib.Path]:
+              found: list[pathlib.Path] = []
+              for current, directories, _files in os.walk(evidence_root, followlinks=False):
+                  directories.sort()
+                  descend = []
+                  for name in directories:
+                      path = pathlib.Path(current) / name
+                      if path.is_symlink():
+                          continue
+                      if name.endswith(".xcresult"):
+                          found.append(path)
+                          if len(found) >= 64:
+                              break
+                      else:
+                          descend.append(name)
+                  directories[:] = descend
+                  if len(found) >= 64:
+                      break
+              modules = [p for p in found if "module" in p.name.lower() or "enumerate" in p.name.lower()]
+              return modules or found
+
+
+          def directory_bytes(root: pathlib.Path) -> int:
+              total = 0
+              for path in root.rglob("*"):
+                  if path.is_symlink():
+                      continue
+                  try:
+                      if path.is_file():
+                          total += path.stat().st_size
+                  except OSError:
+                      continue
+              return total
+
+
+          def export_xcresult(run_dir: pathlib.Path, build_root: pathlib.Path, byte_budget: int) -> list[dict[str, Any]]:
+              evidence_root = build_root / "evidence"
+              output_root = run_dir / "xcresult"
+              output_root.mkdir(parents=True, exist_ok=True)
+              bundle_list = xcresult_bundles(evidence_root) if evidence_root.is_dir() and not evidence_root.is_symlink() else []
+              results: list[dict[str, Any]] = []
+              help_commands = [
+                  ["xcrun", "xcresulttool", "help"],
+                  ["xcrun", "xcresulttool", "help", "get", "test-results"],
+                  ["xcrun", "xcresulttool", "help", "get", "log"],
+                  ["xcrun", "xcresulttool", "help", "export"],
+              ]
+              export_budget = max(0, min(EXPORT_LIMIT, byte_budget))
+              for index, command in enumerate(help_commands):
+                  limit = min(512 * 1024, export_budget)
+                  if limit <= 0:
+                      break
+                  result = run_capture(command, 5, limit)
+                  target = output_root / f"help-{index:02d}.txt"
+                  BoundedWriter(target, limit, export_budget).write(result["output"])
+                  written = target.stat().st_size
+                  export_budget -= written
+                  results.append({"command": command, "returncode": result["returncode"], "timed_out": result["timed_out"], "bytes": target.stat().st_size})
+              if not bundle_list:
+                  results.append({"status": "no xcresult bundle found under canonical evidence"})
+                  return results
+
+              for index, bundle in enumerate(bundle_list[:2]):
+                  bundle_root = output_root / f"bundle-{index:02d}"
+                  bundle_root.mkdir(parents=True, exist_ok=True)
+                  commands = [
+                      ("summary.json", ["xcrun", "xcresulttool", "get", "test-results", "summary", "--path", str(bundle), "--compact"], 2 * MIB),
+                      ("tests.json", ["xcrun", "xcresulttool", "get", "test-results", "tests", "--path", str(bundle), "--compact"], 4 * MIB),
+                      ("action-log.json", ["xcrun", "xcresulttool", "get", "log", "--path", str(bundle), "--type", "action", "--compact"], 6 * MIB),
+                      ("console-log.json", ["xcrun", "xcresulttool", "get", "log", "--path", str(bundle), "--type", "console", "--compact"], 6 * MIB),
+                  ]
+                  for filename, command, per_file_limit in commands:
+                      limit = min(per_file_limit, export_budget)
+                      if limit <= 0:
+                          break
+                      result = run_capture(command, 25, limit)
+                      payload = result["output"][:limit]
+                      target = bundle_root / filename
+                      BoundedWriter(target, limit, export_budget).write(payload)
+                      payload = payload[:target.stat().st_size]
+                      export_budget -= len(payload)
+                      results.append(
+                          {"bundle": str(bundle), "command": command, "returncode": result["returncode"], "timed_out": result["timed_out"], "capped": result["capped"], "bytes": len(payload)}
+                      )
+                      if export_budget <= 0:
+                          break
+                  if export_budget <= 0:
+                      break
+              results.append(
+                  {
+                      "status": "full diagnostics and attachment export omitted; original xcresult bundles remain in canonical evidence",
+                      "bundle_count_inspected": min(len(bundle_list), 2),
+                  }
+              )
+              return results
+
+
+          def finalize(args: argparse.Namespace) -> int:
+              run_dir = pathlib.Path(args.run_dir)
+              build_root = pathlib.Path(args.build_root)
+              source_root = pathlib.Path(args.source_root)
+              evidence_root = build_root / "evidence"
+              manifest_path = evidence_root / "manifest.json"
+              manifest = read_json(manifest_path, 4 * MIB) or {}
+              provenance = read_json(evidence_root / "provenance.json", 4 * MIB) or {}
+              toolchain = read_json(evidence_root / "toolchain.json", 4 * MIB) or {}
+              env = command_env()
+              git = shutil.which("git")
+              source_sha = source_tree = None
+              if git:
+                  for name, args_git in (
+                      ("sha", [git, "-C", str(source_root), "rev-parse", "HEAD"]),
+                      ("tree", [git, "-C", str(source_root), "rev-parse", "HEAD^{tree}"]),
+                  ):
+                      result = run_capture(args_git, 5, 4096)
+                      value = result["output"].decode("utf-8", "replace").strip()
+                      if result["returncode"] == 0:
+                          if name == "sha":
+                              source_sha = value
+                          else:
+                              source_tree = value
+              xcode = run_capture(["xcodebuild", "-version"], 5, 4096)
+              gate = manifest.get("gates", {}).get("enumerate_Modules", {})
+              suites = manifest.get("suites", {})
+              module_suite = next(
+                  (value for key, value in suites.items() if "module" in str(key).lower()),
+                  None,
+              ) if isinstance(suites, dict) else None
+              candidate = provenance.get("candidateDatabase", {})
+              package_lock = provenance.get("packageLock", {})
+              run_metadata = {
+                  "schema_version": 1,
+                  "captured_at_utc": utc_now(),
+                  "workflow": {
+                      "event": env.get("PIKADEX_EVENT_NAME"),
+                      "workflow_ref": env.get("PIKADEX_WORKFLOW_REF"),
+                      "workflow_sha": env.get("PIKADEX_WORKFLOW_SHA"),
+                      "workflow_file_commit_sha": env.get("GITHUB_WORKFLOW_SHA"),
+                      "expected_workflow_sha": env.get("PIKADEX_EXPECTED_WORKFLOW_SHA"),
+                      "workflow_sha_matches_dispatch_guard": env.get("PIKADEX_WORKFLOW_SHA") == env.get("PIKADEX_EXPECTED_WORKFLOW_SHA"),
+                      "dispatch_sha": env.get("GITHUB_SHA"),
+                      "dispatch_ref": env.get("GITHUB_REF"),
+                      "run_id": env.get("GITHUB_RUN_ID"),
+                      "run_attempt": env.get("GITHUB_RUN_ATTEMPT"),
+                      "tested_source_sha_input": env.get("PIKADEX_TESTED_SOURCE_SHA"),
+                      "expected_workflow_sha_input": env.get("PIKADEX_EXPECTED_WORKFLOW_SHA"),
+                  },
+                  "tested_source": {
+                      "sha": source_sha,
+                      "tree": source_tree,
+                      "expected_sha": env.get("PIKADEX_TESTED_SOURCE_SHA"),
+                      "sha_matches_dispatch_guard": source_sha == env.get("PIKADEX_TESTED_SOURCE_SHA"),
+                      "expected_tree": env.get("PIKADEX_EXPECTED_SOURCE_TREE_SHA"),
+                      "tree_matches_dispatch_guard": source_tree == env.get("PIKADEX_EXPECTED_SOURCE_TREE_SHA"),
+                  },
+                  "runner": {
+                      "name": env.get("RUNNER_NAME"),
+                      "os": env.get("RUNNER_OS"),
+                      "image_os": env.get("ImageOS"),
+                      "image_version": env.get("ImageVersion"),
+                      "label": "xcode-27",
+                  },
+                  "toolchain": {
+                      "developer_dir": env.get("DEVELOPER_DIR"),
+                      "xcode_output": redact_text(xcode["output"].decode("utf-8", "replace")),
+                      "simulator_destination": env.get("PIKADEX_SIMULATOR_DESTINATION"),
+                      "simulator_from_verifier": toolchain.get("simulator"),
+                  },
+                  "package_inputs": {
+                      "verifier_provenance": package_lock,
+                      "tracked_lockfiles": package_lock_evidence(source_root),
+                      "pipeline_manifest": provenance.get("pipelineManifest"),
+                  },
+                  "candidate_database": candidate,
+                  "canonical": {
+                      "manifest_sha256": sha256_file(manifest_path) if manifest_path.is_file() and not manifest_path.is_symlink() else None,
+                      "run_state": manifest.get("runState"),
+                      "modules_gate": gate,
+                      "modules_suite": module_suite,
+                      "required_suites": manifest.get("requiredSuites"),
+                      "first_failure": manifest.get("firstFailure"),
+                      "verifier_exit_status": (read_json(run_dir / "verifier-complete.json") or {}).get("exit_status"),
+                  },
+                  "observer_process": read_json(run_dir / "observer-owner.json"),
+                  "verifier_invocation": read_json(run_dir / "verifier-start.json"),
+                  "verifier_completion": read_json(run_dir / "verifier-complete.json"),
+                  "observer_status": read_json(run_dir / "observer-status.json") or {
+                      "state": "incomplete",
+                      "gate_outcome": "not_recorded",
+                      "incomplete_reasons": ["observer status file is missing"],
+                  },
+                  "capture_limits": {
+                      "aggregate_bytes": 192 * MIB,
+                      "host_prelude_bytes": LOG_LIMITS["prelude"],
+                      "host_gate_bytes": LOG_LIMITS["gate"],
+                      "host_tail_bytes": LOG_LIMITS["tail"],
+                      "process_rows_bytes": PROCESS_SAMPLE_LIMIT,
+                      "process_identity_limit": 64,
+                      "process_snapshot_interval_seconds": 1,
+                      "launchctl_procinfo": "not used; process session and group IDs come from the host process table and kernel queries",
+                      "resource_rows_bytes": RESOURCE_LIMIT,
+                      "xcresult_exports_bytes": EXPORT_LIMIT,
+                      "full_attachment_export": "omitted; original bundles are retained by canonical verification evidence",
+                      "simulator_side_capture": "not available; instrumentation observes host processes and unified logs only",
+                      "host_interference": "no simulator commands, boot ownership changes, daemon restarts, or lifecycle controls are issued",
+                  },
+              }
+              atomic_json(run_dir / "run-metadata.json", run_metadata)
+              available_export_bytes = max(0, 192 * MIB - directory_bytes(run_dir) - 2 * MIB)
+              export_results = export_xcresult(run_dir, build_root, available_export_bytes) if available_export_bytes else [
+                  {"status": "xcresult extraction skipped to preserve the aggregate evidence cap"}
+              ]
+              if not available_export_bytes:
+                  previous = read_json(run_dir / "observer-status.json") or {}
+                  previous.setdefault("incomplete_reasons", []).append("no retained capacity remained for xcresult extraction")
+                  for field in ("token", "updated_at_utc", "heartbeat_monotonic"):
+                      previous.pop(field, None)
+                  previous["state"] = "incomplete"
+                  worker_status(run_dir, run_dir.name, **previous)
+              atomic_json(run_dir / "xcresult" / "export-status.json", {"results": export_results, "completed_at_utc": utc_now()})
+              index = []
+              total = 0
+              for path in sorted(run_dir.rglob("*")):
+                  if path.is_symlink() or not path.is_file() or path.name == "sha256sums.txt":
+                      continue
+                  try:
+                      size = path.stat().st_size
+                      total += size
+                      index.append({"path": path.relative_to(run_dir).as_posix(), "bytes": size, "sha256": sha256_file(path)})
+                  except OSError:
+                      continue
+              atomic_json(run_dir / "evidence-index.json", {"files": index, "retained_bytes_before_index": total, "cap_bytes": 192 * MIB})
+              retained_total = directory_bytes(run_dir)
+              if retained_total > 192 * MIB:
+                  worker_status(
+                      run_dir,
+                      run_dir.name,
+                      state="incomplete",
+                      gate_outcome="aggregate_cap_exceeded",
+                      retained_bytes=retained_total,
+                  )
+                  return 2
+              return 0
+
+
+          def cli() -> int:
+              parser = argparse.ArgumentParser(description=__doc__)
+              sub = parser.add_subparsers(dest="command", required=True)
+              start_parser = sub.add_parser("start")
+              start_parser.add_argument("--run-dir", required=True)
+              start_parser.add_argument("--manifest", required=True)
+              start_parser.add_argument("--shell-pid", type=int, required=True)
+              worker_parser = sub.add_parser("worker")
+              worker_parser.add_argument("--run-dir", required=True)
+              worker_parser.add_argument("--manifest", required=True)
+              start_record = sub.add_parser("record-start")
+              start_record.add_argument("--run-dir", required=True)
+              start_record.add_argument("--verifier-pid", type=int, required=True)
+              start_record.add_argument("--shell-pid", type=int, required=True)
+              complete_record = sub.add_parser("record-complete")
+              complete_record.add_argument("--run-dir", required=True)
+              complete_record.add_argument("--shell-pid", type=int, required=True)
+              complete_record.add_argument("--exit-status", type=int, required=True)
+              child_record = sub.add_parser("record-child")
+              child_record.add_argument("--run-dir", required=True)
+              child_record.add_argument("--pid", type=int, required=True)
+              child_record.add_argument("--shell-pid", type=int, required=True)
+              child_record.add_argument("--label", required=True)
+              supervise_parser = sub.add_parser("supervise")
+              supervise_parser.add_argument("--run-dir", required=True)
+              stop_parser = sub.add_parser("stop")
+              stop_parser.add_argument("--run-dir", required=True)
+              stop_parser.add_argument("--shell-pid", type=int, required=True)
+              stop_parser.add_argument("--reason", required=True)
+              stop_parser.add_argument("--wait-seconds", type=float, default=0.5)
+              cancel_parser = sub.add_parser("cancel")
+              cancel_parser.add_argument("--run-dir", required=True)
+              cancel_parser.add_argument("--reason", required=True)
+              cancel_parser.add_argument("--shell-pid", type=int, required=True)
+              cancel_parser.add_argument("--verifier-pid", type=int, default=0)
+              cancel_parser.add_argument("--observer-pid", type=int, default=0)
+              finalize_parser = sub.add_parser("finalize")
+              finalize_parser.add_argument("--run-dir", required=True)
+              finalize_parser.add_argument("--build-root", required=True)
+              finalize_parser.add_argument("--source-root", required=True)
+              args = parser.parse_args()
+
+              try:
+                  if args.command == "start":
+                      return start_worker(args)
+                  if args.command == "worker":
+                      return worker(args)
+                  if args.command == "record-start":
+                      return command_record_start(args)
+                  if args.command == "record-complete":
+                      return command_record_complete(args)
+                  if args.command == "record-child":
+                      return command_record_child(args)
+                  if args.command == "supervise":
+                      return command_supervise(args)
+                  if args.command == "stop":
+                      return command_stop(args)
+                  if args.command == "cancel":
+                      return command_cancel(args)
+                  if args.command == "finalize":
+                      return finalize(args)
+              except Exception as error:
+                  print(redact_text(f"{type(error).__name__}: {error}")[:2048], file=sys.stderr)
+                  return 2
+              return 2
+
+
+          if __name__ == "__main__":
+              raise SystemExit(cli())
+          PIKADEX_LIFECYCLE_PYTHON
+          if [ "$?" -ne 0 ] || [ -L "$lifecycle_script" ]; then
+            printf '::warning::Lifecycle observer helper could not be written; canonical verification will continue without it\n'
+            exit 0
+          fi
+          if ! python3 -c 'import ast, pathlib, sys; ast.parse(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8"))' "$lifecycle_script"; then
+            printf '::warning::Lifecycle observer helper failed syntax validation; canonical verification will continue without it\n'
+            exit 0
+          fi
+          chmod 700 "$lifecycle_script" || exit 0
+          lifecycle_digest="$(shasum -a 256 "$lifecycle_script" | awk '{print $1}')"
+          printf '%s\n' "$lifecycle_digest" > "$lifecycle_dir/observer-script.sha256"
+          printf 'PIKADEX_LIFECYCLE_SCRIPT=%s\n' "$lifecycle_script" >> "$GITHUB_ENV"
+          printf 'PIKADEX_LIFECYCLE_READY=true\n' >> "$GITHUB_ENV"
+          exit 0
+
       - name: Run canonical release verification
         id: verification
         env:
           PIKADEX_RELEASE_BUILD_ROOT: ${{ runner.temp }}/PikaDex-A2
           PIKADEX_SIMULATOR_DESTINATION: platform=iOS Simulator,name=iPhone 17,OS=27.0
+          PIKADEX_SIMULATOR_LIFECYCLE_DIAGNOSTICS: ${{ inputs.diagnostic_mode }}
         shell: bash
         run: |
+          if [ "${PIKADEX_SIMULATOR_LIFECYCLE_DIAGNOSTICS:-false}" != true ]; then
           set +e
           Scripts/pokedex-release-verification &
           verifier_pid=$!
@@ -61,6 +2002,137 @@ jobs:
           observer_status=$?
           if [ "$observer_status" -ne 0 ]; then
             printf '::error::Enumeration result observer failed with status %s; canonical verifier status is %s\n' "$observer_status" "$verifier_status"
+          fi
+          exit "$verifier_status"
+          fi
+
+          set +e
+          lifecycle_enabled=false
+          lifecycle_pid=""
+          verifier_pid=""
+          enumeration_observer_pid=""
+          verifier_done=false
+          enumeration_observer_done=false
+          cleanup_started=false
+          lifecycle_script="${PIKADEX_LIFECYCLE_SCRIPT:-}"
+          lifecycle_dir="${PIKADEX_LIFECYCLE_DIR:-}"
+
+          cleanup_owned_processes() {
+            cleanup_reason="$1"
+            if [ "$cleanup_started" = true ]; then
+              return 0
+            fi
+            cleanup_started=true
+            cleanup_verifier_pid="$verifier_pid"
+            cleanup_observer_pid="$enumeration_observer_pid"
+            if [ "$verifier_done" = true ]; then
+              cleanup_verifier_pid=""
+            fi
+            if [ "$enumeration_observer_done" = true ]; then
+              cleanup_observer_pid=""
+            fi
+            if [ -n "$lifecycle_script" ] && [ -n "$lifecycle_dir" ]; then
+              python3 "$lifecycle_script" cancel \
+                --run-dir "$lifecycle_dir" \
+                --shell-pid "$$" \
+                --verifier-pid "${cleanup_verifier_pid:-0}" \
+                --observer-pid "${cleanup_observer_pid:-0}" \
+                --reason "$cleanup_reason" >/dev/null 2>&1 || true
+            fi
+            for child_pid in "$cleanup_verifier_pid" "$cleanup_observer_pid"; do
+              if [ -n "$child_pid" ]; then
+                kill -TERM "$child_pid" 2>/dev/null || true
+              fi
+            done
+            sleep 0.5
+            for child_pid in "$cleanup_verifier_pid" "$cleanup_observer_pid"; do
+              if [ -n "$child_pid" ]; then
+                kill -KILL "$child_pid" 2>/dev/null || true
+                wait "$child_pid" 2>/dev/null || true
+              fi
+            done
+          }
+
+          on_cancel() {
+            cancel_status="$1"
+            cleanup_owned_processes "signal:$cancel_status"
+            exit "$cancel_status"
+          }
+
+          on_exit() {
+            exit_status=$?
+            trap - EXIT
+            if [ "$cleanup_started" != true ] && { [ "$verifier_done" != true ] || [ "$enumeration_observer_done" != true ]; }; then
+              cleanup_owned_processes "shell-exit:$exit_status"
+            fi
+            exit "$exit_status"
+          }
+
+          # Set these traps before starting either observer or the canonical verifier.
+          trap 'on_exit' EXIT
+          trap 'on_cancel 130' INT
+          trap 'on_cancel 143' TERM
+          trap 'on_cancel 129' HUP
+
+          if [ "${PIKADEX_LIFECYCLE_READY:-false}" = true ] && [ -n "$lifecycle_script" ] && [ -n "$lifecycle_dir" ]; then
+            lifecycle_start="$(python3 "$lifecycle_script" start --run-dir "$lifecycle_dir" --manifest "$PIKADEX_RELEASE_BUILD_ROOT/evidence/manifest.json" --shell-pid "$$" 2>&1)"
+            lifecycle_start_status=$?
+            if [ "$lifecycle_start_status" -eq 0 ]; then
+              lifecycle_pid="${lifecycle_start%% *}"
+              lifecycle_enabled=true
+            else
+              printf '::warning::Lifecycle observer startup failed; canonical verification will continue: %s\n' "$lifecycle_start"
+            fi
+          else
+            printf '::warning::Lifecycle observer unavailable; canonical verification will continue\n'
+          fi
+          Scripts/pokedex-release-verification &
+          verifier_pid=$!
+          if [ "$lifecycle_enabled" = true ]; then
+            python3 "$lifecycle_script" record-start --run-dir "$lifecycle_dir" --verifier-pid "$verifier_pid" --shell-pid "$$" >/dev/null 2>&1
+            if [ "$?" -ne 0 ]; then
+              printf '::warning::Lifecycle observer could not validate the verifier invocation; canonical verification will continue\n'
+            fi
+          fi
+          python3 Scripts/capture_enumeration_xcresult.py "$PIKADEX_RELEASE_BUILD_ROOT" \
+            --watch-verifier-pid "$verifier_pid" \
+            --wait-timeout-seconds 7200 \
+            --max-files 10000 \
+            --max-bytes 536870912 \
+            --copy-timeout-seconds 45 &
+          enumeration_observer_pid=$!
+          if [ "$lifecycle_enabled" = true ]; then
+            python3 "$lifecycle_script" record-child --run-dir "$lifecycle_dir" --pid "$enumeration_observer_pid" --shell-pid "$$" --label enumeration-result-observer >/dev/null 2>&1
+          fi
+
+          while :; do
+            verifier_state="$(ps -p "$verifier_pid" -o stat= 2>/dev/null | tr -d '[:space:]')"
+            case "$verifier_state" in
+              ""|Z*) break ;;
+            esac
+            if [ "$lifecycle_enabled" = true ]; then
+              python3 "$lifecycle_script" supervise --run-dir "$lifecycle_dir" >/dev/null 2>&1
+              if [ "$?" -ne 0 ]; then
+                lifecycle_enabled=false
+              fi
+            fi
+            sleep 1
+          done
+          wait "$verifier_pid"
+          verifier_status=$?
+          verifier_done=true
+          if [ "${PIKADEX_LIFECYCLE_READY:-false}" = true ] && [ -n "$lifecycle_script" ] && [ -n "$lifecycle_dir" ]; then
+            python3 "$lifecycle_script" record-complete --run-dir "$lifecycle_dir" --shell-pid "$$" --exit-status "$verifier_status" >/dev/null 2>&1
+            if [ "$?" -ne 0 ]; then
+              printf '::warning::Lifecycle observer could not record verifier completion status %s\n' "$verifier_status"
+            fi
+            python3 "$lifecycle_script" stop --run-dir "$lifecycle_dir" --shell-pid "$$" --reason verifier-completed --wait-seconds 1 >/dev/null 2>&1
+          fi
+          wait "$enumeration_observer_pid"
+          enumeration_observer_status=$?
+          enumeration_observer_done=true
+          if [ "$enumeration_observer_status" -ne 0 ]; then
+            printf '::error::Enumeration result observer failed with status %s; canonical verifier status is %s\n' "$enumeration_observer_status" "$verifier_status"
           fi
           exit "$verifier_status"
 
@@ -227,4 +2299,37 @@ jobs:
           name: pikadex-a2-verification
           path: ${{ runner.temp }}/PikaDex-A2/evidence/
           if-no-files-found: error
+          retention-days: 14
+
+      - name: Finalize simulator lifecycle evidence
+        if: ${{ always() && inputs.diagnostic_mode == true }}
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          PIKADEX_RELEASE_BUILD_ROOT: ${{ runner.temp }}/PikaDex-A2
+          PIKADEX_SIMULATOR_DESTINATION: platform=iOS Simulator,name=iPhone 17,OS=27.0
+        shell: bash
+        run: |
+          set +e
+          lifecycle_script="${PIKADEX_LIFECYCLE_SCRIPT:-}"
+          lifecycle_dir="${PIKADEX_LIFECYCLE_DIR:-}"
+          if [ -z "$lifecycle_script" ] || [ -z "$lifecycle_dir" ] || [ ! -f "$lifecycle_script" ] || [ -L "$lifecycle_script" ] || [ -L "$lifecycle_dir" ]; then
+            printf '::warning::Lifecycle evidence finalization unavailable; canonical verification evidence remains authoritative\n'
+            exit 0
+          fi
+          python3 "$lifecycle_script" finalize --run-dir "$lifecycle_dir" --build-root "$PIKADEX_RELEASE_BUILD_ROOT" --source-root "$GITHUB_WORKSPACE"
+          finalize_status=$?
+          if [ "$finalize_status" -ne 0 ]; then
+            printf '::warning::Lifecycle evidence finalization was incomplete with status %s\n' "$finalize_status"
+          fi
+          exit 0
+
+      - name: Upload simulator lifecycle evidence
+        if: ${{ always() && inputs.diagnostic_mode == true }}
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: pikadex-simulator-lifecycle-diagnostics
+          path: ${{ runner.temp }}/PikaDex-Simulator-Lifecycle-${{ github.run_id }}-${{ github.run_attempt }}.*/
+          if-no-files-found: warn
           retention-days: 14
