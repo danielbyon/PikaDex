@@ -2256,7 +2256,7 @@ jobs:
             printf '%s\n' "$process_identity"
           }
 
-          # Recheck each launch identity before signaling. Detached workers are matched by PID, process group, and start time because their parent can exit.
+          # Recheck each launch identity before signaling. Detached workers use their isolated process group so diagnostic children cannot outlive cleanup.
           signal_verified_process() {
             local process_pid expected_identity signal_name current_identity identity_mode
             process_pid="$1"
@@ -2273,10 +2273,12 @@ jobs:
               if [ "$current_pid" != "$expected_pid" ] || [ "$current_group_id" != "$expected_group_id" ] || [ "$current_start" != "$expected_start" ] || [ "$expected_group_id" != "$process_pid" ]; then
                 return 1
               fi
+              kill "-$signal_name" -- "-$expected_group_id" 2>/dev/null
             elif [ "$current_identity" != "$expected_identity" ]; then
               return 1
+            else
+              kill "-$signal_name" "$process_pid" 2>/dev/null
             fi
-            kill "-$signal_name" "$process_pid" 2>/dev/null
           }
 
           cleanup_owned_processes() {
