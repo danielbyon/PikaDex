@@ -314,14 +314,14 @@ jobs:
               return {key: os.environ[key] for key in allowed if key in os.environ}
 
 
-          def process_identity(pid: int) -> dict[str, Any] | None:
+          def process_identity(pid: int, timeout: float = PROCESS_IDENTITY_TIMEOUT_SECONDS) -> dict[str, Any] | None:
               try:
                   result = subprocess.run(
                       ["/bin/ps", "-p", str(pid), "-o", "pid=,ppid=,pgid=,lstart=,stat="],
                       check=False,
                       capture_output=True,
                       text=True,
-                      timeout=PROCESS_IDENTITY_TIMEOUT_SECONDS,
+                      timeout=timeout,
                       env=command_env(),
                   )
               except (OSError, subprocess.TimeoutExpired):
@@ -486,16 +486,43 @@ jobs:
               root_order = [int(root["pid"]) for root in roots]
               descendants = [pid for pid in pids if pid not in root_order]
               signal_errors: set[int] = set()
-              for pid in [*root_order, *descendants]:
-                  identity = valid.get(pid)
-                  if not identity or str(identity.get("state", "")).startswith("Z"):
-                      continue
+              term_signal_deadline = time.monotonic() + 5
+
+              def signal_if_identity_matches(pid: int, signum: int, deadline: float) -> None:
+                  expected = valid.get(pid)
+                  if not expected or str(expected.get("state", "")).startswith("Z"):
+                      return
+                  remaining = deadline - time.monotonic()
+                  if remaining <= 0:
+                      signal_errors.add(pid)
+                      return
+                  current = process_identity(pid, timeout=min(PROCESS_IDENTITY_TIMEOUT_SECONDS, remaining))
+                  if current is None:
+                      try:
+                          os.kill(pid, 0)
+                      except ProcessLookupError:
+                          return
+                      except PermissionError:
+                          signal_errors.add(pid)
+                          return
+                      signal_errors.add(pid)
+                      return
+                  if (
+                      current.get("start") != expected.get("start")
+                      or current.get("pgid") != expected.get("pgid")
+                      or current.get("session") != expected.get("session")
+                      or str(current.get("state", "")).startswith("Z")
+                  ):
+                      return
                   try:
-                      os.kill(pid, signal.SIGTERM)
+                      os.kill(pid, signum)
                   except ProcessLookupError:
                       pass
                   except PermissionError:
                       signal_errors.add(pid)
+
+              for pid in [*root_order, *descendants]:
+                  signal_if_identity_matches(pid, signal.SIGTERM, term_signal_deadline)
 
               time.sleep(min(max(grace_seconds, 0.0), 0.5))
               after_term = process_identities(pids, timeout=1)
@@ -505,13 +532,10 @@ jobs:
                   if expected_starts.get(pid) == identity.get("start")
                   and not str(identity.get("state", "")).startswith("Z")
               }
-              for pid in survivors:
-                  try:
-                      os.kill(pid, signal.SIGKILL)
-                  except ProcessLookupError:
-                      pass
-                  except PermissionError:
-                      signal_errors.add(pid)
+              kill_signal_deadline = time.monotonic() + 5
+              for pid in [*root_order, *descendants]:
+                  if pid in survivors:
+                      signal_if_identity_matches(pid, signal.SIGKILL, kill_signal_deadline)
 
               final = process_identities(pids, timeout=1)
               outcomes = []
