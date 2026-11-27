@@ -165,6 +165,9 @@ jobs:
 
           MIB = 1024 * 1024
           PROCESS_IDENTITY_TIMEOUT_SECONDS = 2.0
+          PROCESS_SIGNAL_PHASE_TIMEOUT_SECONDS = 15.0
+          PROCESS_SIGNAL_TARGET_TIMEOUT_SECONDS = 2.0
+          PROCESS_SIGNAL_PROBE_TIMEOUT_SECONDS = 1.0
           PROCESS_SAMPLE_TIMEOUT_SECONDS = 1.0
           RESOURCE_SAMPLE_TIMEOUT_SECONDS = 2.0
           BOUNDED_COMMAND_TERMINATE_WAIT_SECONDS = 2.0
@@ -486,18 +489,23 @@ jobs:
               root_order = [int(root["pid"]) for root in roots]
               descendants = [pid for pid in pids if pid not in root_order]
               signal_errors: set[int] = set()
-              term_signal_deadline = time.monotonic() + 5
+              term_signal_deadline = time.monotonic() + PROCESS_SIGNAL_PHASE_TIMEOUT_SECONDS
 
               def signal_if_identity_matches(pid: int, signum: int, deadline: float) -> None:
                   expected = valid.get(pid)
                   if not expected or str(expected.get("state", "")).startswith("Z"):
                       return
-                  remaining = deadline - time.monotonic()
-                  if remaining <= 0:
-                      signal_errors.add(pid)
-                      return
-                  current = process_identity(pid, timeout=min(PROCESS_IDENTITY_TIMEOUT_SECONDS, remaining))
-                  if current is None:
+                  target_deadline = min(deadline, time.monotonic() + PROCESS_SIGNAL_TARGET_TIMEOUT_SECONDS)
+                  current = None
+                  # Retry transient process-table reads, but do not signal without a current identity match.
+                  while True:
+                      remaining = target_deadline - time.monotonic()
+                      if remaining <= 0:
+                          signal_errors.add(pid)
+                          return
+                      current = process_identity(pid, timeout=min(PROCESS_SIGNAL_PROBE_TIMEOUT_SECONDS, remaining))
+                      if current is not None:
+                          break
                       try:
                           os.kill(pid, 0)
                       except ProcessLookupError:
@@ -505,14 +513,16 @@ jobs:
                       except PermissionError:
                           signal_errors.add(pid)
                           return
-                      signal_errors.add(pid)
-                      return
+                      time.sleep(min(0.05, max(target_deadline - time.monotonic(), 0.0)))
                   if (
                       current.get("start") != expected.get("start")
                       or current.get("pgid") != expected.get("pgid")
                       or current.get("session") != expected.get("session")
                       or str(current.get("state", "")).startswith("Z")
                   ):
+                      return
+                  if time.monotonic() >= target_deadline:
+                      signal_errors.add(pid)
                       return
                   try:
                       os.kill(pid, signum)
@@ -532,7 +542,7 @@ jobs:
                   if expected_starts.get(pid) == identity.get("start")
                   and not str(identity.get("state", "")).startswith("Z")
               }
-              kill_signal_deadline = time.monotonic() + 5
+              kill_signal_deadline = time.monotonic() + PROCESS_SIGNAL_PHASE_TIMEOUT_SECONDS
               for pid in [*root_order, *descendants]:
                   if pid in survivors:
                       signal_if_identity_matches(pid, signal.SIGKILL, kill_signal_deadline)
