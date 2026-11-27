@@ -164,6 +164,33 @@ jobs:
           from typing import Any
 
           MIB = 1024 * 1024
+          PROCESS_IDENTITY_TIMEOUT_SECONDS = 2.0
+          PROCESS_SAMPLE_TIMEOUT_SECONDS = 1.0
+          RESOURCE_SAMPLE_TIMEOUT_SECONDS = 2.0
+          BOUNDED_COMMAND_TERMINATE_WAIT_SECONDS = 2.0
+          BOUNDED_COMMAND_KILL_WAIT_SECONDS = 2.0
+          BOUNDED_COMMAND_REAP_RETRY_WAIT_SECONDS = 2.0
+          RESOURCE_SAMPLE_PROBE_COUNT = 3
+          MAX_RESOURCE_SAMPLE_SECONDS = RESOURCE_SAMPLE_PROBE_COUNT * (
+              PROCESS_IDENTITY_TIMEOUT_SECONDS
+              + RESOURCE_SAMPLE_TIMEOUT_SECONDS
+              + BOUNDED_COMMAND_TERMINATE_WAIT_SECONDS
+              + BOUNDED_COMMAND_KILL_WAIT_SECONDS
+              + BOUNDED_COMMAND_REAP_RETRY_WAIT_SECONDS
+          )
+          MAX_PROCESS_SAMPLE_SECONDS = (
+              PROCESS_IDENTITY_TIMEOUT_SECONDS
+              + PROCESS_SAMPLE_TIMEOUT_SECONDS
+              + BOUNDED_COMMAND_TERMINATE_WAIT_SECONDS
+              + BOUNDED_COMMAND_KILL_WAIT_SECONDS
+              + BOUNDED_COMMAND_REAP_RETRY_WAIT_SECONDS
+          )
+          MAX_PROBE_CYCLE_SECONDS = (
+              MAX_RESOURCE_SAMPLE_SECONDS
+              + MAX_PROCESS_SAMPLE_SECONDS
+              + PROCESS_IDENTITY_TIMEOUT_SECONDS
+          )
+          HEARTBEAT_STALE_SECONDS = MAX_PROBE_CYCLE_SECONDS
           LOG_LIMITS = {"prelude": 8 * MIB, "gate": 96 * MIB, "tail": 24 * MIB}
           PROCESS_SAMPLE_LIMIT = 16 * MIB
           RESOURCE_LIMIT = 4 * MIB
@@ -293,7 +320,7 @@ jobs:
                       check=False,
                       capture_output=True,
                       text=True,
-                      timeout=2,
+                      timeout=PROCESS_IDENTITY_TIMEOUT_SECONDS,
                       env=command_env(),
                   )
               except (OSError, subprocess.TimeoutExpired):
@@ -755,12 +782,12 @@ jobs:
                   if timed_out or capped:
                       process.terminate()
                       try:
-                          process.wait(timeout=2)
+                          process.wait(timeout=BOUNDED_COMMAND_TERMINATE_WAIT_SECONDS)
                       except subprocess.TimeoutExpired:
                           process.kill()
-                          process.wait(timeout=2)
+                          process.wait(timeout=BOUNDED_COMMAND_KILL_WAIT_SECONDS)
                   else:
-                      process.wait(timeout=2)
+                      process.wait(timeout=BOUNDED_COMMAND_REAP_RETRY_WAIT_SECONDS)
                   return {
                       "returncode": process.returncode,
                       "timed_out": timed_out,
@@ -772,7 +799,7 @@ jobs:
                   if process is not None and process.poll() is None:
                       process.kill()
                       try:
-                          process.wait(timeout=2)
+                          process.wait(timeout=BOUNDED_COMMAND_REAP_RETRY_WAIT_SECONDS)
                       except subprocess.TimeoutExpired:
                           pass
                   return {
@@ -954,6 +981,34 @@ jobs:
               return owner if owner and owner.get("token") == token else None
 
 
+          def safe_launch_identity(
+              run_dir: pathlib.Path,
+              token: str,
+              expected_parent_shell_pid: int | None = None,
+          ) -> dict[str, Any] | None:
+              record = read_json(run_dir / "observer-start.json")
+              if not record or record.get("token") != token:
+                  return None
+              try:
+                  pid = int(record["pid"])
+                  pgid = int(record["pgid"])
+                  session = int(record["session"])
+                  parent_shell_pid = int(record["parent_shell_pid"])
+              except (KeyError, TypeError, ValueError):
+                  return None
+              if (
+                  pid <= 1
+                  or pgid != pid
+                  or session != pid
+                  or not isinstance(record.get("process_start"), str)
+                  or not record["process_start"]
+                  or record.get("run_dir") != str(run_dir)
+                  or (expected_parent_shell_pid is not None and parent_shell_pid != expected_parent_shell_pid)
+              ):
+                  return None
+              return record
+
+
           def worker_status(run_dir: pathlib.Path, token: str, **updates: Any) -> dict[str, Any]:
               path = run_dir / "observer-status.json"
               previous = read_json(path) or {}
@@ -965,8 +1020,30 @@ jobs:
               return previous
 
 
-          def owned_worker_alive(run_dir: pathlib.Path, token: str) -> bool:
+          def safe_worker_identity(
+              run_dir: pathlib.Path,
+              token: str,
+              expected_parent_shell_pid: int | None = None,
+          ) -> dict[str, Any] | None:
               owner = safe_owner(run_dir, token)
+              if owner:
+                  try:
+                      if (
+                          expected_parent_shell_pid is None
+                          or int(owner.get("parent_shell_pid", -1)) == expected_parent_shell_pid
+                      ):
+                          return owner
+                  except (TypeError, ValueError):
+                      pass
+              return safe_launch_identity(run_dir, token, expected_parent_shell_pid)
+
+
+          def owned_worker_alive(
+              run_dir: pathlib.Path,
+              token: str,
+              expected_parent_shell_pid: int | None = None,
+          ) -> bool:
+              owner = safe_worker_identity(run_dir, token, expected_parent_shell_pid)
               if not owner:
                   return False
               identity = process_identity(int(owner["pid"]))
@@ -979,11 +1056,25 @@ jobs:
               )
 
 
-          def terminate_run_group(run_dir: pathlib.Path, token: str, grace_seconds: float = 2.0) -> bool:
+          def terminate_run_group(
+              run_dir: pathlib.Path,
+              token: str,
+              grace_seconds: float = 2.0,
+              *,
+              expected_parent_shell_pid: int,
+          ) -> bool:
               owner = safe_owner(run_dir, token)
+              if owner:
+                  try:
+                      if int(owner.get("parent_shell_pid", -1)) != expected_parent_shell_pid:
+                          return False
+                  except (TypeError, ValueError):
+                      return False
+              else:
+                  owner = safe_launch_identity(run_dir, token, expected_parent_shell_pid)
               if not owner:
                   return False
-              return terminate_isolated_group(owner, token, grace_seconds)
+              return terminate_isolated_group({**owner, "run_dir": str(run_dir)}, token, grace_seconds)
 
 
           def bounded_file_write(path: pathlib.Path, data: bytes, limit: int) -> tuple[int, bool]:
@@ -1155,7 +1246,7 @@ jobs:
                       return
                   result = bounded_command(
                       [ps, "-A", "-o", "pid=,ppid=,pgid=,lstart=,stat=,etime=,%cpu=,%mem=,rss=,comm="],
-                      1,
+                      PROCESS_SAMPLE_TIMEOUT_SECONDS,
                       MIB,
                       run_dir,
                       token,
@@ -1209,7 +1300,7 @@ jobs:
                       ("memory_pressure", [shutil.which("memory_pressure") or "memory_pressure", "-Q"]),
                       ("disk", [shutil.which("df") or "df", "-k", os.environ.get("RUNNER_TEMP", "/tmp")]),
                   ):
-                      result = bounded_command(args, 2, 64 * 1024, run_dir, token)
+                      result = bounded_command(args, RESOURCE_SAMPLE_TIMEOUT_SECONDS, 64 * 1024, run_dir, token)
                       payload = {
                           "timestamp_utc": utc_now(),
                           "monotonic": time.monotonic(),
@@ -1391,8 +1482,12 @@ jobs:
               if args.shell_pid <= 1 or process_identity(args.shell_pid) is None:
                   raise RuntimeError("calling shell identity could not be verified")
               token = run_dir.name
-              if read_json(run_dir / "observer-owner.json") is not None:
-                  raise RuntimeError("observer owner record already exists")
+              identity_record_paths = (
+                  run_dir / "observer-owner.json",
+                  run_dir / "observer-start.json",
+              )
+              if any(path.exists() or path.is_symlink() for path in identity_record_paths):
+                  raise RuntimeError("observer identity record path already exists")
               worker_command = [
                   sys.executable,
                   str(pathlib.Path(__file__).resolve()),
@@ -1411,6 +1506,7 @@ jobs:
               owner["observer_process_start"] = owner["process_start"]
               owner["run_dir"] = str(run_dir)
               try:
+                  atomic_json(run_dir / "observer-start.json", owner)
                   atomic_json(run_dir / "observer-owner.json", owner)
               except BaseException:
                   terminate_isolated_group({**owner, "run_dir": str(run_dir)}, token, 0.25)
@@ -1467,30 +1563,105 @@ jobs:
           def command_supervise(args: argparse.Namespace) -> int:
               run_dir = pathlib.Path(args.run_dir)
               token = run_dir.name
-              owner = safe_owner(run_dir, token)
+              shell_pid = os.getppid()
+              primary_owner = safe_owner(run_dir, token)
+              owner = safe_worker_identity(run_dir, token, shell_pid)
+              try:
+                  primary_owner_matches_shell = int(primary_owner.get("parent_shell_pid", -1)) == shell_pid if primary_owner else False
+              except (TypeError, ValueError):
+                  primary_owner_matches_shell = False
+              identity_source = "observer-owner.json" if primary_owner_matches_shell else "observer-start.json"
+              supervisor_record_path = run_dir / "observer-supervisor.json"
               if not owner:
-                  worker_status(run_dir, token, state="incomplete", gate_outcome="owner_record_missing", incomplete_reasons=["owner record missing"])
+                  atomic_json(
+                      supervisor_record_path,
+                      {
+                          "token": token,
+                          "observed_at_utc": utc_now(),
+                          "state": "worker_identity_unverified",
+                          "identity_source": "none",
+                          "termination": "unverified",
+                      },
+                  )
                   return 1
               status = read_json(run_dir / "observer-status.json") or {}
+              if not status:
+                  # Worker status creation can race the launch record publication.
+                  alive = owned_worker_alive(run_dir, token, shell_pid)
+                  if alive:
+                      atomic_json(
+                          supervisor_record_path,
+                          {
+                              "token": token,
+                              "observed_at_utc": utc_now(),
+                              "state": "worker_verified_status_not_yet_published",
+                              "identity_source": identity_source,
+                              "termination": "not_attempted",
+                          },
+                      )
+                      return 0
+                  atomic_json(
+                      supervisor_record_path,
+                      {
+                          "token": token,
+                          "observed_at_utc": utc_now(),
+                          "state": "worker_identity_unverified",
+                          "identity_source": identity_source,
+                          "termination": "unverified",
+                      },
+                  )
+                  return 1
               if status.get("state") in ("complete", "incomplete", "cancelled"):
-                  terminate_run_group(run_dir, token, 0.25)
+                  stopped = terminate_run_group(
+                      run_dir,
+                      token,
+                      0.25,
+                      expected_parent_shell_pid=shell_pid,
+                  )
+                  atomic_json(
+                      supervisor_record_path,
+                      {
+                          "token": token,
+                          "observed_at_utc": utc_now(),
+                          "state": "worker_reported_terminal",
+                          "identity_source": identity_source,
+                          "termination": "verified_stopped" if stopped else "unverified",
+                      },
+                  )
                   return 1
               heartbeat = status.get("heartbeat_monotonic")
-              if (
-                  owned_worker_alive(run_dir, token)
-                  and not isinstance(heartbeat, (int, float))
-                  and time.monotonic() - float(owner.get("started_monotonic", 0)) < 5
-              ):
-                  return 0
-              if not owned_worker_alive(run_dir, token) or not isinstance(heartbeat, (int, float)) or time.monotonic() - heartbeat > 5:
-                  status["state"] = "incomplete"
-                  status["gate_outcome"] = "observer_terminated"
-                  status.setdefault("incomplete_reasons", []).append("observer exited or missed its heartbeat")
-                  for field in ("token", "updated_at_utc", "heartbeat_monotonic"):
-                      status.pop(field, None)
-                  worker_status(run_dir, token, **status)
-                  terminate_run_group(run_dir, token, 2)
+              if not owned_worker_alive(run_dir, token, shell_pid):
+                  atomic_json(
+                      supervisor_record_path,
+                      {
+                          "token": token,
+                          "observed_at_utc": utc_now(),
+                          "state": "worker_identity_unverified",
+                          "identity_source": identity_source,
+                          "termination": "unverified",
+                      },
+                  )
                   return 1
+              if isinstance(heartbeat, (int, float)):
+                  heartbeat_age = max(0.0, time.monotonic() - float(heartbeat))
+                  heartbeat_state = "fresh" if heartbeat_age <= HEARTBEAT_STALE_SECONDS else "stale_but_worker_alive"
+              else:
+                  heartbeat_age = None
+                  heartbeat_state = "missing_but_worker_alive"
+              if heartbeat_state != "fresh" or identity_source != "observer-owner.json" or supervisor_record_path.exists():
+                  atomic_json(
+                      supervisor_record_path,
+                      {
+                          "token": token,
+                          "observed_at_utc": utc_now(),
+                          "state": "worker_alive" if heartbeat_state == "fresh" else heartbeat_state,
+                          "identity_source": identity_source,
+                          "worker_identity": "verified_alive",
+                          "termination": "not_attempted",
+                          "heartbeat_age_seconds": round(heartbeat_age, 3) if heartbeat_age is not None else None,
+                          "maximum_bounded_probe_wait_seconds": MAX_PROBE_CYCLE_SECONDS,
+                      },
+                  )
               return 0
 
 
@@ -1511,9 +1682,9 @@ jobs:
                       break
                   time.sleep(0.05)
               if owned_worker_alive(run_dir, token):
-                  terminate_run_group(run_dir, token, 0.5)
+                  terminate_run_group(run_dir, token, 0.5, expected_parent_shell_pid=args.shell_pid)
               else:
-                  terminate_run_group(run_dir, token, 0.1)
+                  terminate_run_group(run_dir, token, 0.1, expected_parent_shell_pid=args.shell_pid)
               return 0
 
 
@@ -1525,6 +1696,7 @@ jobs:
                   raise RuntimeError("observer owner record missing or mismatched")
               if not owner and (not run_dir.is_dir() or run_dir.is_symlink()):
                   raise RuntimeError("diagnostic run directory is unavailable or unsafe")
+              launch_identity = safe_launch_identity(run_dir, token, args.shell_pid) if not owner else None
 
               roots: list[dict[str, Any]] = []
               start = read_json(run_dir / "verifier-start.json")
@@ -1604,7 +1776,17 @@ jobs:
                   },
               )
               cleanup_results = terminate_owned_process_trees(roots, args.shell_pid, grace_seconds=0.5)
-              observer_stopped = terminate_run_group(run_dir, token, 1) if owner else True
+              if owner:
+                  observer_stopped = terminate_isolated_group({**owner, "run_dir": str(run_dir)}, token, 1)
+                  observer_identity_source = "observer-owner.json"
+              elif launch_identity:
+                  observer_stopped = terminate_isolated_group(
+                      {**launch_identity, "run_dir": str(run_dir)}, token, 1
+                  )
+                  observer_identity_source = "observer-start.json"
+              else:
+                  observer_stopped = False
+                  observer_identity_source = "none"
               atomic_json(
                   run_dir / "verifier-cancelled.json",
                   {
@@ -1615,6 +1797,11 @@ jobs:
                           "state": "complete" if all(item["terminated"] for item in cleanup_results) and observer_stopped else "incomplete",
                           "roots": cleanup_results,
                           "observer_worker_stopped": observer_stopped,
+                          "observer_owner_record_available": owner is not None,
+                          "observer_worker_termination": {
+                              "state": "verified_stopped" if observer_stopped else "unverified",
+                              "identity_source": observer_identity_source,
+                          },
                       },
                   },
               )
@@ -1830,6 +2017,7 @@ jobs:
                       "verifier_exit_status": (read_json(run_dir / "verifier-complete.json") or {}).get("exit_status"),
                   },
                   "observer_process": read_json(run_dir / "observer-owner.json"),
+                  "observer_supervisor": read_json(run_dir / "observer-supervisor.json"),
                   "verifier_invocation": read_json(run_dir / "verifier-start.json"),
                   "verifier_completion": read_json(run_dir / "verifier-complete.json"),
                   "observer_status": read_json(run_dir / "observer-status.json") or {
@@ -1847,6 +2035,14 @@ jobs:
                       "process_snapshot_interval_seconds": 1,
                       "launchctl_procinfo": "not used; process session and group IDs come from the host process table and kernel queries",
                       "resource_rows_bytes": RESOURCE_LIMIT,
+                      "probe_wait_bounds_seconds": {
+                          "resource_sample": MAX_RESOURCE_SAMPLE_SECONDS,
+                          "process_sample": MAX_PROCESS_SAMPLE_SECONDS,
+                          "verifier_identity": PROCESS_IDENTITY_TIMEOUT_SECONDS,
+                          "combined_bounded_waits": MAX_PROBE_CYCLE_SECONDS,
+                      },
+                      "probe_wait_bound_scope": "bounded subprocess and process-identity waits; Python parsing, kernel process queries, and local file writes are not wall-clock bounded",
+                      "heartbeat_policy": "a stale heartbeat is diagnostic only while the worker process identity remains verified; heartbeat age never triggers worker termination",
                       "xcresult_exports_bytes": EXPORT_LIMIT,
                       "full_attachment_export": "omitted; original bundles are retained by canonical verification evidence",
                       "simulator_side_capture": "not available; instrumentation observes host processes and unified logs only",
