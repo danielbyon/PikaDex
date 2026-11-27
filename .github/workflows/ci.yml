@@ -190,6 +190,7 @@ jobs:
               + MAX_PROCESS_SAMPLE_SECONDS
               + PROCESS_IDENTITY_TIMEOUT_SECONDS
           )
+          # Sampling can leave the heartbeat unchanged for one full bounded probe cycle.
           HEARTBEAT_STALE_SECONDS = MAX_PROBE_CYCLE_SECONDS
           LOG_LIMITS = {"prelude": 8 * MIB, "gate": 96 * MIB, "tail": 24 * MIB}
           PROCESS_SAMPLE_LIMIT = 16 * MIB
@@ -2212,6 +2213,71 @@ jobs:
           cleanup_started=false
           lifecycle_script="${PIKADEX_LIFECYCLE_SCRIPT:-}"
           lifecycle_dir="${PIKADEX_LIFECYCLE_DIR:-}"
+          lifecycle_identity=""
+          verifier_identity=""
+          enumeration_observer_identity=""
+
+          snapshot_process_identity() {
+            local process_pid
+            process_pid="$1"
+            case "$process_pid" in
+              ""|*[!0-9]*) return 1 ;;
+            esac
+            /bin/ps -p "$process_pid" -o pid=,ppid=,pgid=,lstart= 2>/dev/null | /usr/bin/awk '{$1=$1; print}'
+          }
+
+          capture_owned_child_identity() {
+            local process_pid expected_parent_pid process_identity observed_pid observed_parent_pid
+            process_pid="$1"
+            expected_parent_pid="$2"
+            process_identity="$(snapshot_process_identity "$process_pid")"
+            if [ -z "$process_identity" ]; then
+              return 1
+            fi
+            read -r observed_pid observed_parent_pid _ <<< "$process_identity"
+            if [ "$observed_pid" != "$process_pid" ] || [ "$observed_parent_pid" != "$expected_parent_pid" ]; then
+              return 1
+            fi
+            printf '%s\n' "$process_identity"
+          }
+
+          capture_isolated_worker_identity() {
+            local process_pid expected_group_id process_identity observed_pid observed_group_id
+            process_pid="$1"
+            expected_group_id="$2"
+            process_identity="$(snapshot_process_identity "$process_pid")"
+            if [ -z "$process_identity" ]; then
+              return 1
+            fi
+            read -r observed_pid _ observed_group_id _ <<< "$process_identity"
+            if [ "$observed_pid" != "$process_pid" ] || [ "$observed_group_id" != "$expected_group_id" ] || [ "$expected_group_id" != "$process_pid" ]; then
+              return 1
+            fi
+            printf '%s\n' "$process_identity"
+          }
+
+          # Recheck each launch identity before signaling. Detached workers are matched by PID, process group, and start time because their parent can exit.
+          signal_verified_process() {
+            local process_pid expected_identity signal_name current_identity identity_mode
+            process_pid="$1"
+            expected_identity="$2"
+            signal_name="$3"
+            identity_mode="${4:-child}"
+            if [ -z "$expected_identity" ]; then
+              return 1
+            fi
+            current_identity="$(snapshot_process_identity "$process_pid")"
+            if [ "$identity_mode" = isolated ]; then
+              read -r expected_pid _ expected_group_id expected_start <<< "$expected_identity"
+              read -r current_pid _ current_group_id current_start <<< "$current_identity"
+              if [ "$current_pid" != "$expected_pid" ] || [ "$current_group_id" != "$expected_group_id" ] || [ "$current_start" != "$expected_start" ] || [ "$expected_group_id" != "$process_pid" ]; then
+                return 1
+              fi
+            elif [ "$current_identity" != "$expected_identity" ]; then
+              return 1
+            fi
+            kill "-$signal_name" "$process_pid" 2>/dev/null
+          }
 
           cleanup_owned_processes() {
             cleanup_reason="$1"
@@ -2219,6 +2285,7 @@ jobs:
               return 0
             fi
             cleanup_started=true
+            cleanup_lifecycle_pid="$lifecycle_pid"
             cleanup_verifier_pid="$verifier_pid"
             cleanup_observer_pid="$enumeration_observer_pid"
             if [ "$verifier_done" = true ]; then
@@ -2227,26 +2294,39 @@ jobs:
             if [ "$enumeration_observer_done" = true ]; then
               cleanup_observer_pid=""
             fi
+            cleanup_helper_status=127
             if [ -n "$lifecycle_script" ] && [ -n "$lifecycle_dir" ]; then
               python3 "$lifecycle_script" cancel \
                 --run-dir "$lifecycle_dir" \
                 --shell-pid "$$" \
                 --verifier-pid "${cleanup_verifier_pid:-0}" \
                 --observer-pid "${cleanup_observer_pid:-0}" \
-                --reason "$cleanup_reason" >/dev/null 2>&1 || true
+                --reason "$cleanup_reason" >/dev/null 2>&1
+              cleanup_helper_status=$?
             fi
-            for child_pid in "$cleanup_verifier_pid" "$cleanup_observer_pid"; do
-              if [ -n "$child_pid" ]; then
-                kill -TERM "$child_pid" 2>/dev/null || true
-              fi
-            done
-            sleep 0.5
-            for child_pid in "$cleanup_verifier_pid" "$cleanup_observer_pid"; do
-              if [ -n "$child_pid" ]; then
-                kill -KILL "$child_pid" 2>/dev/null || true
-                wait "$child_pid" 2>/dev/null || true
-              fi
-            done
+            if [ "$cleanup_helper_status" -eq 0 ]; then
+              for child_pid in "$cleanup_verifier_pid" "$cleanup_observer_pid"; do
+                if [ -n "$child_pid" ]; then
+                  wait "$child_pid" 2>/dev/null || true
+                fi
+              done
+            else
+              for signal_name in TERM KILL; do
+                if [ "$signal_name" = KILL ]; then
+                  sleep 1
+                fi
+                if [ -n "$cleanup_lifecycle_pid" ]; then
+                  signal_verified_process "$cleanup_lifecycle_pid" "$lifecycle_identity" "$signal_name" isolated || true
+                fi
+                if [ -n "$cleanup_verifier_pid" ]; then
+                  signal_verified_process "$cleanup_verifier_pid" "$verifier_identity" "$signal_name" || true
+                fi
+                if [ -n "$cleanup_observer_pid" ]; then
+                  signal_verified_process "$cleanup_observer_pid" "$enumeration_observer_identity" "$signal_name" || true
+                fi
+              done
+              printf '::warning::Cancellation helper failed; fallback signals require exact launch identity matches, and any unmatched termination remains unverified\n'
+            fi
           }
 
           on_cancel() {
@@ -2275,6 +2355,8 @@ jobs:
             lifecycle_start_status=$?
             if [ "$lifecycle_start_status" -eq 0 ]; then
               lifecycle_pid="${lifecycle_start%% *}"
+              lifecycle_pgid="${lifecycle_start##* }"
+              lifecycle_identity="$(capture_isolated_worker_identity "$lifecycle_pid" "$lifecycle_pgid")" || lifecycle_identity=""
               lifecycle_enabled=true
             else
               printf '::warning::Lifecycle observer startup failed; canonical verification will continue: %s\n' "$lifecycle_start"
@@ -2284,6 +2366,7 @@ jobs:
           fi
           Scripts/pokedex-release-verification &
           verifier_pid=$!
+          verifier_identity="$(capture_owned_child_identity "$verifier_pid" "$$")" || verifier_identity=""
           if [ "$lifecycle_enabled" = true ]; then
             python3 "$lifecycle_script" record-start --run-dir "$lifecycle_dir" --verifier-pid "$verifier_pid" --shell-pid "$$" >/dev/null 2>&1
             if [ "$?" -ne 0 ]; then
@@ -2297,6 +2380,7 @@ jobs:
             --max-bytes 536870912 \
             --copy-timeout-seconds 45 &
           enumeration_observer_pid=$!
+          enumeration_observer_identity="$(capture_owned_child_identity "$enumeration_observer_pid" "$$")" || enumeration_observer_identity=""
           if [ "$lifecycle_enabled" = true ]; then
             python3 "$lifecycle_script" record-child --run-dir "$lifecycle_dir" --pid "$enumeration_observer_pid" --shell-pid "$$" --label enumeration-result-observer >/dev/null 2>&1
           fi
