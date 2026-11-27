@@ -308,7 +308,7 @@ jobs:
               "process_group_control": False,
               "heartbeat_liveness_failure": False,
               "native_result_exports": False,
-              "unified_log_query": "Query from 30 seconds before the first observed Modules marker through 30 seconds after completion, with the gate interval capped at five minutes. Include info and debug messages. Use the configured 60-minute range when no start timestamp is available.",
+              "unified_log_query": "For completed enumeration, query the final five minutes ending at the observed completion time, with 30 seconds of padding before and after. For incomplete enumeration, anchor the window at finalized_at_utc. If no trustworthy timestamp is available, use the configured 60-minute range and record the fallback reason. Include info and debug messages.",
               "observation_limits": "Host logs and process/resource samples cannot identify who requested simulator shutdown, whether the simulator released its launch-session claim, or which daemon transition initiated it.",
               "gate_source": str(gate_marker_path),
           }
@@ -658,8 +658,26 @@ jobs:
           log_start_epoch=""
           log_end_epoch=""
           log_query_mode="last_60_minutes_fallback"
-          if [ -f "$lifecycle_status" ] && [ ! -L "$lifecycle_status" ]; then
-            log_bounds="$(python3 - "$lifecycle_status" <<'PY_LOG_WINDOW'
+          log_anchor_source="rolling_60_minutes"
+          log_fallback_reason="observer_status_unavailable"
+          log_window_record_is_valid() {
+            case "${log_query_mode}:${log_anchor_source}:${log_fallback_reason}" in
+              modules_enumeration_completed_window:modules_gate_completion_observed_at_utc:none)
+                ;;
+              modules_incomplete_latest_observation:finalized_at_utc:gate_completion_timestamp_unavailable|modules_incomplete_latest_observation:finalized_at_utc:gate_completion_timestamp_in_future)
+                ;;
+              last_60_minutes_fallback:rolling_60_minutes:*)
+                [ "$log_start_epoch" = "-" ] && [ "$log_end_epoch" = "-" ] && [ -n "$log_fallback_reason" ]
+                return $?
+                ;;
+              *) return 1 ;;
+            esac
+            case "${log_start_epoch}:${log_end_epoch}" in
+              *[!0-9:]*|:*|*:) return 1 ;;
+            esac
+            [ "$log_start_epoch" -lt "$log_end_epoch" ]
+          }
+          log_bounds="$(python3 - "$lifecycle_status" <<'PY_LOG_WINDOW'
           import datetime
           import json
           import pathlib
@@ -676,34 +694,73 @@ jobs:
               except (TypeError, ValueError):
                   return None
 
+          def emit_fallback(reason):
+              print(f"-\t-\tlast_60_minutes_fallback\trolling_60_minutes\t{reason}")
+
           try:
-              status = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8"))
+              status_path = pathlib.Path(sys.argv[1])
+              if status_path.is_symlink() or not status_path.is_file():
+                  emit_fallback("observer_status_unavailable_or_symlinked")
+                  raise SystemExit(0)
+              status = json.loads(status_path.read_text(encoding="utf-8"))
           except (OSError, UnicodeError, json.JSONDecodeError):
-              raise SystemExit(1)
+              emit_fallback("observer_status_unreadable_or_invalid")
+              raise SystemExit(0)
+          if not isinstance(status, dict):
+              emit_fallback("observer_status_not_an_object")
+              raise SystemExit(0)
           start = parse(status.get("modules_gate_first_observed_at_utc"))
-          end = parse(status.get("modules_gate_completion_observed_at_utc"))
-          if start is None:
-              raise SystemExit(1)
-          if end is None:
-              end = start + datetime.timedelta(seconds=300)
-          end = min(max(end, start), start + datetime.timedelta(seconds=300))
-          start = max(datetime.datetime.fromtimestamp(0, datetime.timezone.utc), start - datetime.timedelta(seconds=30))
-          end += datetime.timedelta(seconds=30)
-          print(f"{int(start.timestamp())}\t{int(end.timestamp())}")
+          completion = parse(status.get("modules_gate_completion_observed_at_utc"))
+          finalized = parse(status.get("finalized_at_utc"))
+          now = datetime.datetime.now(datetime.timezone.utc)
+          if completion is not None and completion <= now:
+              anchor = completion
+              mode = "modules_enumeration_completed_window"
+              anchor_source = "modules_gate_completion_observed_at_utc"
+              fallback_reason = "none"
+          elif finalized is not None and finalized <= now:
+              anchor = finalized
+              mode = "modules_incomplete_latest_observation"
+              anchor_source = "finalized_at_utc"
+              fallback_reason = "gate_completion_timestamp_in_future" if completion is not None else "gate_completion_timestamp_unavailable"
+          else:
+              if completion is not None or finalized is not None:
+                  reason = "observation_timestamp_in_future"
+              else:
+                  reason = "incomplete_latest_observation_unavailable" if start is not None else "no_trustworthy_observation_timestamp"
+              emit_fallback(reason)
+              raise SystemExit(0)
+          window_start = anchor - datetime.timedelta(seconds=300)
+          if start is not None and start <= anchor:
+              window_start = max(start, window_start)
+          window_start = max(datetime.datetime.fromtimestamp(0, datetime.timezone.utc), window_start - datetime.timedelta(seconds=30))
+          window_end = anchor + datetime.timedelta(seconds=30)
+          print(f"{int(window_start.timestamp())}\t{int(window_end.timestamp())}\t{mode}\t{anchor_source}\t{fallback_reason}")
           PY_LOG_WINDOW
             )"
-            log_bounds_status=$?
-            if [ "$log_bounds_status" -eq 0 ]; then
-              IFS=$'\t' read -r log_start_epoch log_end_epoch <<< "$log_bounds"
-              case "${log_start_epoch}:${log_end_epoch}" in
-                *[!0-9:]*|:*|*:) log_start_epoch=""; log_end_epoch="" ;;
-                *) log_query_mode="modules_enumeration_window" ;;
-              esac
+          log_bounds_status=$?
+          if [ "$log_bounds_status" -eq 0 ]; then
+            IFS=$'\t' read -r log_start_epoch log_end_epoch log_query_mode log_anchor_source log_fallback_reason <<< "$log_bounds"
+            if ! log_window_record_is_valid; then
+              log_start_epoch=""
+              log_end_epoch=""
+              log_query_mode="last_60_minutes_fallback"
+              log_anchor_source="rolling_60_minutes"
+              log_fallback_reason="invalid_window_record"
+            elif [ "$log_query_mode" = "last_60_minutes_fallback" ]; then
+              log_start_epoch=""
+              log_end_epoch=""
             fi
+          else
+            log_start_epoch=""
+            log_end_epoch=""
+            log_query_mode="last_60_minutes_fallback"
+            log_anchor_source="rolling_60_minutes"
+            log_fallback_reason="window_helper_failed"
           fi
-          printf 'unified_log_query_mode=%s\nunified_log_start_epoch=%s\nunified_log_end_epoch=%s\nunified_log_levels=default,info,debug\n' "$log_query_mode" "${log_start_epoch:-unavailable}" "${log_end_epoch:-unavailable}" >> "$status_file"
+          printf 'unified_log_query_mode=%s\nunified_log_anchor_source=%s\nunified_log_fallback_reason=%s\nunified_log_start_epoch=%s\nunified_log_end_epoch=%s\nunified_log_levels=default,info,debug\n' "$log_query_mode" "$log_anchor_source" "$log_fallback_reason" "${log_start_epoch:-unavailable}" "${log_end_epoch:-unavailable}" >> "$status_file"
           unified_log_predicate='process == "xctest" OR process == "testmanagerd" OR process == "xcodebuild" OR process == "launchd_sim" OR process CONTAINS[c] "Simulator" OR process CONTAINS[c] "Pokedex" OR process == "Modules" OR process == "DatabasePipelineTests" OR process == "PokedexConcurrencyTests"'
-          if [ "$log_query_mode" = "modules_enumeration_window" ]; then
+          if [ "$log_query_mode" != "last_60_minutes_fallback" ]; then
             capture unified-log 45 8388608 log show --start "@${log_start_epoch}" --end "@${log_end_epoch}" --info --debug --style compact --predicate "$unified_log_predicate"
           else
             capture unified-log 45 8388608 log show --last "${DIAGNOSTIC_WINDOW_MINUTES}m" --info --debug --style compact --predicate "$unified_log_predicate"
